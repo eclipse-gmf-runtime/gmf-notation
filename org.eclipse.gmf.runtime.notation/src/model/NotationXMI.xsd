@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/xtools/1.5.0/Notation">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="ecore.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="XMI.xsd"/>
+  <xsd:simpleType name="Sorting">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="Manual"/>
+      <xsd:enumeration value="Automatic"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Filtering">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="Manual"/>
+      <xsd:enumeration value="Automatic"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Routing">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Manual"/>
+      <xsd:enumeration value="Rectilinear"/>
+      <xsd:enumeration value="Tree"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Smoothness">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="Normal"/>
+      <xsd:enumeration value="Less"/>
+      <xsd:enumeration value="More"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="JumpLinkStatus">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="All"/>
+      <xsd:enumeration value="Below"/>
+      <xsd:enumeration value="Above"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="JumpLinkType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Semicircle"/>
+      <xsd:enumeration value="Square"/>
+      <xsd:enumeration value="Chamfered"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Alignment">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Left"/>
+      <xsd:enumeration value="Right"/>
+      <xsd:enumeration value="Center"/>
+      <xsd:enumeration value="Top"/>
+      <xsd:enumeration value="Bottom"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SortingDirection">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Ascending"/>
+      <xsd:enumeration value="Descending"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Edge">
+    <xsd:complexContent>
+      <xsd:extension base="notation:View">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="source" type="notation:View"/>
+          <xsd:element name="target" type="notation:View"/>
+          <xsd:element name="bendpoints" type="notation:Bendpoints"/>
+          <xsd:element name="sourceAnchor" type="notation:Anchor"/>
+          <xsd:element name="targetAnchor" type="notation:Anchor"/>
+        </xsd:choice>
+        <xsd:attribute name="source" type="xsd:string"/>
+        <xsd:attribute name="target" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Edge" type="notation:Edge"/>
+  <xsd:complexType name="Node">
+    <xsd:complexContent>
+      <xsd:extension base="notation:View">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="layoutConstraint" type="notation:LayoutConstraint"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Node" type="notation:Node"/>
+  <xsd:complexType name="Style">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Style" type="notation:Style"/>
+  <xsd:complexType name="FillStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="fillColor" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FillStyle" type="notation:FillStyle"/>
+  <xsd:complexType name="LineStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="lineColor" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LineStyle" type="notation:LineStyle"/>
+  <xsd:complexType name="FontStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="fontColor" type="xsd:int"/>
+        <xsd:attribute name="fontName" type="xsd:string"/>
+        <xsd:attribute name="fontHeight" type="xsd:int"/>
+        <xsd:attribute name="bold" type="xsd:boolean"/>
+        <xsd:attribute name="italic" type="xsd:boolean"/>
+        <xsd:attribute name="underline" type="xsd:boolean"/>
+        <xsd:attribute name="strikeThrough" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FontStyle" type="notation:FontStyle"/>
+  <xsd:complexType name="TitleStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="showTitle" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TitleStyle" type="notation:TitleStyle"/>
+  <xsd:complexType name="SortingStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="sortedObjects" type="ecore:EObject"/>
+        </xsd:choice>
+        <xsd:attribute name="sorting" type="notation:Sorting"/>
+        <xsd:attribute name="sortingKeys" type="xsd:string"/>
+        <xsd:attribute name="sortedObjects" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SortingStyle" type="notation:SortingStyle"/>
+  <xsd:complexType name="DescriptionStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="description" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DescriptionStyle" type="notation:DescriptionStyle"/>
+  <xsd:complexType name="LayoutConstraint">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="LayoutConstraint" type="notation:LayoutConstraint"/>
+  <xsd:complexType name="Size">
+    <xsd:complexContent>
+      <xsd:extension base="notation:LayoutConstraint">
+        <xsd:attribute name="width" type="xsd:int"/>
+        <xsd:attribute name="height" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Size" type="notation:Size"/>
+  <xsd:complexType name="Location">
+    <xsd:complexContent>
+      <xsd:extension base="notation:LayoutConstraint">
+        <xsd:attribute name="x" type="xsd:int"/>
+        <xsd:attribute name="y" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Location" type="notation:Location"/>
+  <xsd:complexType name="Bounds">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Location">
+        <xsd:attribute name="width" type="xsd:int"/>
+        <xsd:attribute name="height" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Bounds" type="notation:Bounds"/>
+  <xsd:complexType name="Ratio">
+    <xsd:complexContent>
+      <xsd:extension base="notation:LayoutConstraint">
+        <xsd:attribute name="value" type="xsd:double"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Ratio" type="notation:Ratio"/>
+  <xsd:complexType name="Anchor">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Anchor" type="notation:Anchor"/>
+  <xsd:complexType name="Bendpoints">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Bendpoints" type="notation:Bendpoints"/>
+  <xsd:complexType name="IdentityAnchor">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Anchor">
+        <xsd:attribute name="id" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IdentityAnchor" type="notation:IdentityAnchor"/>
+  <xsd:complexType name="RoutingStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="routing" type="notation:Routing"/>
+        <xsd:attribute name="smoothness" type="notation:Smoothness"/>
+        <xsd:attribute name="avoidObstructions" type="xsd:boolean"/>
+        <xsd:attribute name="closestDistance" type="xsd:boolean"/>
+        <xsd:attribute name="jumpLinkStatus" type="notation:JumpLinkStatus"/>
+        <xsd:attribute name="jumpLinkType" type="notation:JumpLinkType"/>
+        <xsd:attribute name="jumpLinksReverse" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RoutingStyle" type="notation:RoutingStyle"/>
+  <xsd:complexType name="View">
+    <xsd:complexContent>
+      <xsd:extension base="ecore:EModelElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="sourceEdges" type="notation:Edge"/>
+          <xsd:element name="targetEdges" type="notation:Edge"/>
+          <xsd:element name="persistedChildren" type="notation:Node"/>
+          <xsd:element name="styles" type="notation:Style"/>
+          <xsd:element name="element" nillable="true" type="ecore:EObject"/>
+        </xsd:choice>
+        <xsd:attribute name="visible" type="xsd:boolean"/>
+        <xsd:attribute name="type" type="xsd:string"/>
+        <xsd:attribute name="sourceEdges" type="xsd:string"/>
+        <xsd:attribute name="targetEdges" type="xsd:string"/>
+        <xsd:attribute name="element" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="View" type="notation:View"/>
+  <xsd:complexType name="RelativeBendpoints">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Bendpoints">
+        <xsd:attribute name="points" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RelativeBendpoints" type="notation:RelativeBendpoints"/>
+  <xsd:complexType name="Diagram">
+    <xsd:complexContent>
+      <xsd:extension base="notation:View">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="persistedEdges" type="notation:Edge"/>
+        </xsd:choice>
+        <xsd:attribute name="name" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Diagram" type="notation:Diagram"/>
+  <xsd:complexType name="Image">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="data" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Image" type="notation:Image"/>
+  <xsd:complexType name="CanonicalStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="canonical" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CanonicalStyle" type="notation:CanonicalStyle"/>
+  <xsd:complexType name="ShapeStyle">
+    <xsd:complexContent>
+      <xsd:extension base="ecore:EObject">
+        <xsd:attribute name="fontColor" type="xsd:int"/>
+        <xsd:attribute name="fontName" type="xsd:string"/>
+        <xsd:attribute name="fontHeight" type="xsd:int"/>
+        <xsd:attribute name="bold" type="xsd:boolean"/>
+        <xsd:attribute name="italic" type="xsd:boolean"/>
+        <xsd:attribute name="underline" type="xsd:boolean"/>
+        <xsd:attribute name="strikeThrough" type="xsd:boolean"/>
+        <xsd:attribute name="description" type="xsd:string"/>
+        <xsd:attribute name="fillColor" type="xsd:int"/>
+        <xsd:attribute name="lineColor" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ShapeStyle" type="notation:ShapeStyle"/>
+  <xsd:complexType name="ConnectorStyle">
+    <xsd:complexContent>
+      <xsd:extension base="ecore:EObject">
+        <xsd:attribute name="routing" type="notation:Routing"/>
+        <xsd:attribute name="smoothness" type="notation:Smoothness"/>
+        <xsd:attribute name="avoidObstructions" type="xsd:boolean"/>
+        <xsd:attribute name="closestDistance" type="xsd:boolean"/>
+        <xsd:attribute name="jumpLinkStatus" type="notation:JumpLinkStatus"/>
+        <xsd:attribute name="jumpLinkType" type="notation:JumpLinkType"/>
+        <xsd:attribute name="jumpLinksReverse" type="xsd:boolean"/>
+        <xsd:attribute name="lineColor" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ConnectorStyle" type="notation:ConnectorStyle"/>
+  <xsd:complexType name="PageStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="pageX" type="xsd:int"/>
+        <xsd:attribute name="pageY" type="xsd:int"/>
+        <xsd:attribute name="pageWidth" type="xsd:int"/>
+        <xsd:attribute name="pageHeight" type="xsd:int"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PageStyle" type="notation:PageStyle"/>
+  <xsd:complexType name="DrawerStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:attribute name="collapsed" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DrawerStyle" type="notation:DrawerStyle"/>
+  <xsd:complexType name="GuideStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="horizontalGuides" type="notation:Guide"/>
+          <xsd:element name="verticalGuides" type="notation:Guide"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GuideStyle" type="notation:GuideStyle"/>
+  <xsd:complexType name="Guide">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="nodeMap" type="notation:NodeEntry"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="position" type="xsd:int"/>
+  </xsd:complexType>
+  <xsd:element name="Guide" type="notation:Guide"/>
+  <xsd:complexType name="NodeEntry">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="key" type="notation:Node"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="value" type="notation:Alignment"/>
+    <xsd:attribute name="key" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="NodeEntry" type="notation:NodeEntry"/>
+  <xsd:complexType name="FilteringStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="filteredObjects" type="ecore:EObject"/>
+        </xsd:choice>
+        <xsd:attribute name="filtering" type="notation:Filtering"/>
+        <xsd:attribute name="filteringKeys" type="xsd:string"/>
+        <xsd:attribute name="filteredObjects" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FilteringStyle" type="notation:FilteringStyle"/>
+  <xsd:complexType name="DiagramStyle">
+    <xsd:complexContent>
+      <xsd:extension base="ecore:EObject">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="horizontalGuides" type="notation:Guide"/>
+          <xsd:element name="verticalGuides" type="notation:Guide"/>
+        </xsd:choice>
+        <xsd:attribute name="pageX" type="xsd:int"/>
+        <xsd:attribute name="pageY" type="xsd:int"/>
+        <xsd:attribute name="pageWidth" type="xsd:int"/>
+        <xsd:attribute name="pageHeight" type="xsd:int"/>
+        <xsd:attribute name="description" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DiagramStyle" type="notation:DiagramStyle"/>
+  <xsd:complexType name="ImageStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:Style">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="cropBound" type="notation:Bounds"/>
+        </xsd:choice>
+        <xsd:attribute name="antiAlias" type="xsd:boolean"/>
+        <xsd:attribute name="maintainAspectRatio" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ImageStyle" type="notation:ImageStyle"/>
+  <xsd:complexType name="ImageBufferStyle">
+    <xsd:complexContent>
+      <xsd:extension base="notation:ImageStyle">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="imageBuffer" type="notation:Image"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ImageBufferStyle" type="notation:ImageBufferStyle"/>
+</xsd:schema>
