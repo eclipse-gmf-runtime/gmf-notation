@@ -194,6 +194,16 @@ public interface View extends EModelElement{
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getView_Children()
 	 */
 	EList getChildren();
+	
+	/**
+	 * Returns an <em><b>Unmodifable</b></em> list that contains all the 
+	 * visible children in the Children list.
+	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.View}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return <em><b>Unmodifable</b></em> list of Visible children
+	 */
+	EList getVisibleChildren();
 
 	/**
 	 * Returns the value of the '<em><b>Styles</b></em>' containment reference list.

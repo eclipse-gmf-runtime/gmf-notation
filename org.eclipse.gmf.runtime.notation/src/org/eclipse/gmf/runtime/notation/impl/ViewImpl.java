@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EModelElementImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentsEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -191,6 +192,8 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
 	 * @ordered
 	 */
 	protected EList transientChildren = null;
+	
+	private EContentsEList allChildren = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -316,18 +319,13 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
 	 * <!-- end-user-doc -->
 	 */
 	public EList getChildren() {
-		List children = new ArrayList();	
-		if (persistedChildren!=null &&
-			persistedChildren.size()>0){
-			children.addAll(getPersistedChildren());
+		if (allChildren == null){
+			allChildren =  new EContentsEList(this, 
+				new EStructuralFeature[] {
+					NotationPackage.eINSTANCE.getView_PersistedChildren(),
+					NotationPackage.eINSTANCE.getView_TransientChildren()});
 		}
-		
-		if (transientChildren!=null&&
-			transientChildren.size()>0){
-			children.addAll(getTransientChildren());
-		}
-		
-		return new BasicEList.UnmodifiableEList(children.size(), children.toArray());
+		return allChildren;
 	}
 
 	/**
@@ -785,4 +783,31 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
 			vContainer.persistChildren();
 		}
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public EList getVisibleChildren() {
+		List _children = new ArrayList();	
+		if (persistedChildren!=null &&
+			persistedChildren.size()>0){
+			for (Iterator iter = getPersistedChildren().iterator(); iter.hasNext();) {
+				View view = (View) iter.next();
+				if (view.isVisible())
+					_children.add(view);
+				}
+		}
+		
+		if (transientChildren!=null&&
+			transientChildren.size()>0){
+			for (Iterator iter = getTransientChildren().iterator(); iter.hasNext();) {
+				View view = (View) iter.next();
+				if (view.isVisible())
+					_children.add(view);
+				}
+		}
+		return new BasicEList.UnmodifiableEList(_children.size(), _children.toArray());
+	}
+
 } //ViewImpl
