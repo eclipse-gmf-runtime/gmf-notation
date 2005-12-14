@@ -18,16 +18,15 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentsEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -91,6 +90,9 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 	 * @ordered
 	 */
 	protected EList transientEdges = null;
+	
+
+	private EContentsEList allEdges = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,18 +138,13 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 */
 	public EList getEdges() {
-		List edges = new ArrayList();	
-		if (persistedEdges!=null &&
-			persistedEdges.size()>0){
-			edges.addAll(getPersistedEdges());
+		if (allEdges == null){
+			allEdges =  new EContentsEList(this, 
+				new EStructuralFeature[] {
+					NotationPackage.eINSTANCE.getDiagram_PersistedEdges(),
+					NotationPackage.eINSTANCE.getDiagram_TransientEdges()});
 		}
-		
-		if (transientEdges!=null&&
-			transientEdges.size()>0){
-			edges.addAll(getTransientEdges());
-		}
-		
-		return new BasicEList.UnmodifiableEList(edges.size(), edges.toArray());
+		return allEdges;
 	}
 
 	/**
