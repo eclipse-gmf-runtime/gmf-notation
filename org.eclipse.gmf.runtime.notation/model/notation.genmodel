@@ -7,7 +7,7 @@
     dynamicTemplates="true" forceOverwrite="true" modelName="notation" modelPluginClass="org.eclipse.gmf.runtime.notation.NotationPlugin"
     editPluginClass="org.eclipse.gmf.runtime.notation.NotationEditPlugin" editorPluginClass="org.eclipse.gmf.runtime.notation.NotationEditorPlugin"
     nonNLSMarkers="true" booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.importer.rose"
-    usedGenPackages="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+    usedGenPackages="../../../plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
   <foreignModel>..\rosemodel\notation.mdl</foreignModel>
   <genPackages prefix="Notation" basePackage="org.eclipse.gmf.runtime" disposableProviderFactory="true"
       ecorePackage="notation.ecore#/">

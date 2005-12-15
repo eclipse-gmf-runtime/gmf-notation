@@ -5,13 +5,13 @@
     nsURI="http://www.eclipse.org/gmf/1.5.1/Notation" nsPrefix="notation">
   <eClassifiers xsi:type="ecore:EClass" name="Edge" eSuperTypes="#//View">
     <eOperations name="createBendpoints" eType="#//Bendpoints">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eOperations name="createSourceAnchor" eType="#//Anchor">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eOperations name="createTargetAnchor" eType="#//Anchor">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//View" resolveProxies="false" eOpposite="#//View/sourceEdges"/>
@@ -26,7 +26,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//View">
     <eOperations name="createLayoutConstraint" eType="#//LayoutConstraint">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layoutConstraint" eType="#//LayoutConstraint"
         containment="true"/>
@@ -65,7 +65,7 @@
         defaultValueLiteral="None"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortingKeys" eType="#//SortKeyMap"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sortedObjects" upperBound="-1"
-        eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+        eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DescriptionStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -143,15 +143,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="jumpLinksReverse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true" eSuperTypes="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true" eSuperTypes="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement">
     <eOperations name="getStyle" eType="#//Style">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eOperations name="createChild" eType="#//Node">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eOperations name="createStyle" eType="#//Style">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
@@ -167,7 +167,7 @@
         eType="#//Node" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="styles" upperBound="-1"
         eType="#//Style" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" lowerBound="1"
         eType="#//Diagram" changeable="false" volatile="true" transient="true"/>
@@ -179,7 +179,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" eSuperTypes="#//View">
     <eOperations name="createEdge" eType="#//Edge">
-      <eParameters name="eClass" eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+      <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
@@ -189,14 +189,14 @@
         eType="#//Edge" transient="true" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EByteArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EByteArray"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CanonicalStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="canonical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ShapeStyle" eSuperTypes="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//FontStyle #//DescriptionStyle #//FillStyle #//LineStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectorStyle" eSuperTypes="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//RoutingStyle #//LineStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShapeStyle" eSuperTypes="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//FontStyle #//DescriptionStyle #//FillStyle #//LineStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorStyle" eSuperTypes="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//RoutingStyle #//LineStyle"/>
   <eClassifiers xsi:type="ecore:EDataType" name="RelativeBendpointList" instanceClassName="java.util.List"/>
   <eClassifiers xsi:type="ecore:EClass" name="PageStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -241,7 +241,7 @@
         defaultValueLiteral="None"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filteringKeys" eType="#//FilterKeyList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filteredObjects" upperBound="-1"
-        eType="ecore:EClass ../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+        eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="FilterKeyList" instanceClassName="java.util.List"/>
   <eClassifiers xsi:type="ecore:EDataType" name="SortKeyMap" instanceClassName="java.util.Map"/>
@@ -249,7 +249,7 @@
     <eLiterals name="Ascending"/>
     <eLiterals name="Descending" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiagramStyle" eSuperTypes="../../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//PageStyle #//GuideStyle #//DescriptionStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramStyle" eSuperTypes="../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//PageStyle #//GuideStyle #//DescriptionStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImageStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="antiAlias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>

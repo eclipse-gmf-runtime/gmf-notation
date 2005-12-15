@@ -10,9 +10,7 @@ Export-Package: org.eclipse.gmf.runtime.notation,
  org.eclipse.gmf.runtime.notation.datatype,
  org.eclipse.gmf.runtime.notation.impl,
  org.eclipse.gmf.runtime.notation.stylepooling,
- org.eclipse.gmf.runtime.notation.util,
- model,
- rosemodel
+ org.eclipse.gmf.runtime.notation.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore
 Eclipse-AutoStart: true
