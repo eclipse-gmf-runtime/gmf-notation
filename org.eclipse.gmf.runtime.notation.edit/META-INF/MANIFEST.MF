@@ -12,4 +12,4 @@ Require-Bundle: org.eclipse.gmf.runtime.notation,
  org.eclipse.emf.edit,
  org.eclipse.emf.ecore.edit,
  org.eclipse.core.runtime
-Eclipse-AutoStart: true
+Eclipse-LazyStart: true
