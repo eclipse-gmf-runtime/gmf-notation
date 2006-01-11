@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 
+import org.eclipse.gmf.runtime.notation.*;
+
 import org.eclipse.gmf.runtime.notation.Anchor;
 import org.eclipse.gmf.runtime.notation.Bendpoints;
 import org.eclipse.gmf.runtime.notation.Bounds;

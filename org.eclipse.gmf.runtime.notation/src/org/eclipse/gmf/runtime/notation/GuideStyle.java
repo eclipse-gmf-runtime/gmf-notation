@@ -36,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
 /*
  * @canBeSeenBy %partners
  */
-public interface GuideStyle extends Style {
+public interface GuideStyle extends Style{
 	/**
 	 * Returns the value of the '<em><b>Horizontal Guides</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Guide}.
@@ -47,7 +47,7 @@ public interface GuideStyle extends Style {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Horizontal Guides</em>' containment reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuideStyle_HorizontalGuides()
-	 * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true"
+	 * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true" resolveProxies="false"
 	 * @generated
 	 */
 	EList getHorizontalGuides();
@@ -62,7 +62,7 @@ public interface GuideStyle extends Style {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertical Guides</em>' containment reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuideStyle_VerticalGuides()
-	 * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true"
+	 * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true" resolveProxies="false"
 	 * @generated
 	 */
 	EList getVerticalGuides();

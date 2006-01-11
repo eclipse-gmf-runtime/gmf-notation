@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.gmf.runtime.notation.edit
+Bundle-SymbolicName: org.eclipse.gmf.runtime.notation.edit; singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Activator: org.eclipse.gmf.runtime.notation.NotationEditPlugin$Implementation
 Bundle-Vendor: %providerName

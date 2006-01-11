@@ -19,7 +19,7 @@
 	(object Attribute
 	    tool       	"Ecore"
 	    name       	"nsURI"
-	    value      	(value Text "http://www.eclipse.org/gmf/1.5.1/Notation")))
+	    value      	(value Text "http://www.eclipse.org/gmf/runtime/1.0.0/notation")))
     quid       	"3C753ED90058"
     exportControl 	"Public"
     logical_models 	(list unit_reference_list

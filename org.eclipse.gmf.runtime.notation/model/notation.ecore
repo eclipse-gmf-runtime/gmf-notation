@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="notation"
-    nsURI="http://www.eclipse.org/gmf/1.5.1/Notation" nsPrefix="notation">
+    nsURI="http://www.eclipse.org/gmf/runtime/1.0.0/notation" nsPrefix="notation">
   <eClassifiers xsi:type="ecore:EClass" name="Edge" eSuperTypes="#//View">
     <eOperations name="createBendpoints" eType="#//Bendpoints">
       <eParameters name="eClass" eType="ecore:EClass ../../../plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
@@ -214,9 +214,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GuideStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EReference" name="horizontalGuides" upperBound="-1"
-        eType="#//Guide" containment="true"/>
+        eType="#//Guide" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verticalGuides" upperBound="-1"
-        eType="#//Guide" containment="true"/>
+        eType="#//Guide" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Guide">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"

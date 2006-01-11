@@ -49,7 +49,7 @@ public interface NotationPackage extends EPackage{
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/gmf/1.5.1/Notation"; //$NON-NLS-1$
+	String eNS_URI = "http://www.eclipse.org/gmf/runtime/1.0.0/notation"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.
