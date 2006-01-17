@@ -28,6 +28,7 @@ import java.util.HashMap;
 public class StylePoolContainer extends HashMap {
 
 
+	private static final long serialVersionUID = 1L;
 
 	
 	public StylePoolContainer()
