@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
+import org.eclipse.gmf.runtime.notation.*;
+
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.CanonicalStyle;
@@ -171,6 +173,11 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 				return result;
 			}
+			case NotationPackage.MEASUREMENT_UNIT: {
+				MeasurementUnit result = MeasurementUnit.get(initialValue);
+				if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				return result;
+			}
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return createRelativeBendpointListFromString(eDataType, initialValue);
 			case NotationPackage.FILTER_KEY_LIST:
@@ -204,6 +211,8 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			case NotationPackage.ALIGNMENT:
 				return instanceValue == null ? null : instanceValue.toString();
 			case NotationPackage.SORTING_DIRECTION:
+				return instanceValue == null ? null : instanceValue.toString();
+			case NotationPackage.MEASUREMENT_UNIT:
 				return instanceValue == null ? null : instanceValue.toString();
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return convertRelativeBendpointListToString(eDataType, instanceValue);

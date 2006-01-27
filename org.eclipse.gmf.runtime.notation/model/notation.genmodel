@@ -54,6 +54,10 @@
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//SortingDirection/Ascending"/>
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//SortingDirection/Descending"/>
     </genEnums>
+    <genEnums ecoreEnum="notation.ecore#//MeasurementUnit">
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//MeasurementUnit/Himetric"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//MeasurementUnit/Pixel"/>
+    </genEnums>
     <genDataTypes ecoreDataType="notation.ecore#//RelativeBendpointList"/>
     <genDataTypes ecoreDataType="notation.ecore#//FilterKeyList"/>
     <genDataTypes ecoreDataType="notation.ecore#//SortKeyMap"/>
@@ -159,6 +163,7 @@
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//Diagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//Diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//Diagram/measurementUnit"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference notation.ecore#//Diagram/persistedEdges"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference notation.ecore#//Diagram/TransientEdges"/>
       <genOperations ecoreOperation="notation.ecore#//Diagram/createEdge">

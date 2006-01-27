@@ -1205,13 +1205,22 @@ public interface NotationPackage extends EPackage{
 	int DIAGRAM__NAME = VIEW_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Measurement Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAM__MEASUREMENT_UNIT = VIEW_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Persisted Edges</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM__PERSISTED_EDGES = VIEW_FEATURE_COUNT + 1;
+	int DIAGRAM__PERSISTED_EDGES = VIEW_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient Edges</b></em>' containment reference list.
@@ -1220,7 +1229,7 @@ public interface NotationPackage extends EPackage{
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM__TRANSIENT_EDGES = VIEW_FEATURE_COUNT + 2;
+	int DIAGRAM__TRANSIENT_EDGES = VIEW_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the the '<em>Diagram</em>' class.
@@ -1229,7 +1238,7 @@ public interface NotationPackage extends EPackage{
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_FEATURE_COUNT = VIEW_FEATURE_COUNT + 3;
+	int DIAGRAM_FEATURE_COUNT = VIEW_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ImageImpl <em>Image</em>}' class.
@@ -1991,6 +2000,16 @@ public interface NotationPackage extends EPackage{
 	int SORTING_DIRECTION = 41;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
+	 * @generated
+	 */
+	int MEASUREMENT_UNIT = 42;
+
+	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1998,7 +2017,7 @@ public interface NotationPackage extends EPackage{
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 42;
+	int RELATIVE_BENDPOINT_LIST = 43;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -2008,7 +2027,7 @@ public interface NotationPackage extends EPackage{
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 43;
+	int FILTER_KEY_LIST = 44;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -2018,7 +2037,7 @@ public interface NotationPackage extends EPackage{
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 44;
+	int SORT_KEY_MAP = 45;
 
 
 	/**
@@ -2727,6 +2746,17 @@ public interface NotationPackage extends EPackage{
 	EAttribute getDiagram_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.Diagram#getMeasurementUnit <em>Measurement Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Measurement Unit</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.Diagram#getMeasurementUnit()
+	 * @see #getDiagram()
+	 * @generated
+	 */
+	EAttribute getDiagram_MeasurementUnit();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmf.runtime.notation.Diagram#getPersistedEdges <em>Persisted Edges</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3180,6 +3210,16 @@ public interface NotationPackage extends EPackage{
 	 * @generated
 	 */
 	EEnum getSortingDirection();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Measurement Unit</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
+	 * @generated
+	 */
+	EEnum getMeasurementUnit();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>Relative Bendpoint List</em>}'.

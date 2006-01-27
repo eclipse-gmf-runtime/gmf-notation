@@ -51,6 +51,7 @@ import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.LayoutConstraint;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.Location;
+import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -369,6 +370,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EEnum sortingDirectionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum measurementUnitEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1061,8 +1069,17 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDiagram_MeasurementUnit() {
+		return (EAttribute)diagramEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getDiagram_PersistedEdges() {
-		return (EReference)diagramEClass.getEStructuralFeatures().get(1);
+		return (EReference)diagramEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1071,7 +1088,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	public EReference getDiagram_TransientEdges() {
-		return (EReference)diagramEClass.getEStructuralFeatures().get(2);
+		return (EReference)diagramEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1448,6 +1465,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMeasurementUnit() {
+		return measurementUnitEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRelativeBendpointList() {
 		return relativeBendpointListEDataType;
 	}
@@ -1584,6 +1610,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		diagramEClass = createEClass(DIAGRAM);
 		createEAttribute(diagramEClass, DIAGRAM__NAME);
+		createEAttribute(diagramEClass, DIAGRAM__MEASUREMENT_UNIT);
 		createEReference(diagramEClass, DIAGRAM__PERSISTED_EDGES);
 		createEReference(diagramEClass, DIAGRAM__TRANSIENT_EDGES);
 
@@ -1642,6 +1669,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		jumpLinkTypeEEnum = createEEnum(JUMP_LINK_TYPE);
 		alignmentEEnum = createEEnum(ALIGNMENT);
 		sortingDirectionEEnum = createEEnum(SORTING_DIRECTION);
+		measurementUnitEEnum = createEEnum(MEASUREMENT_UNIT);
 
 		// Create data types
 		relativeBendpointListEDataType = createEDataType(RELATIVE_BENDPOINT_LIST);
@@ -1836,6 +1864,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(diagramEClass, Diagram.class, "Diagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", "", 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getDiagram_MeasurementUnit(), this.getMeasurementUnit(), "measurementUnit", "Himetric", 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 			initEReference(getDiagram_PersistedEdges(), this.getEdge(), null, "edges", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
 			initEReference(getDiagram_TransientEdges(), this.getEdge(), null, "TransientEdges", null, 0, -1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
@@ -1940,6 +1969,10 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEEnum(sortingDirectionEEnum, SortingDirection.class, "SortingDirection"); //$NON-NLS-1$
 		addEEnumLiteral(sortingDirectionEEnum, SortingDirection.ASCENDING_LITERAL);
 		addEEnumLiteral(sortingDirectionEEnum, SortingDirection.DESCENDING_LITERAL);
+
+		initEEnum(measurementUnitEEnum, MeasurementUnit.class, "MeasurementUnit"); //$NON-NLS-1$
+		addEEnumLiteral(measurementUnitEEnum, MeasurementUnit.HIMETRIC_LITERAL);
+		addEEnumLiteral(measurementUnitEEnum, MeasurementUnit.PIXEL_LITERAL);
 
 		// Initialize data types
 		initEDataType(relativeBendpointListEDataType, List.class, "RelativeBendpointList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$

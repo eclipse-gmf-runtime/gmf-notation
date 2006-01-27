@@ -63,6 +63,38 @@ public interface Diagram extends View{
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Measurement Unit</b></em>' attribute.
+	 * The default value is <code>"Himetric"</code>.
+	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.MeasurementUnit}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Measurement Unit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Measurement Unit</em>' attribute.
+	 * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_MeasurementUnit()
+	 * @model default="Himetric" changeable="false"
+	 * @generated
+	 */
+	MeasurementUnit getMeasurementUnit();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * A utililty method to initialize the '<em>Measurement Unit</em>'
+	 * to a value that will be used for the lifetime of the 
+	 * '<em>Diagram</em>' object.  This method can only be called
+	 * once.  Additional calls will be ignored.
+	 * </p>
+	 * @param me the '<em>Measurement Unit</em>' to initialize the
+	 * '<em>Diagram</em>' to.
+	 * @return whether the value of the '<em>MeasurementUnit</em>' variable is set.
+	 */
+	boolean initializeMeasurementUnit(MeasurementUnit mu);
+	
+	/**
 	 * Returns the value of the '<em><b>Edges</b></em>' list.
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
 	 * <!-- begin-user-doc -->

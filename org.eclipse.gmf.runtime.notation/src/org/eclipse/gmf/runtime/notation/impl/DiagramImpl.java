@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.View;
 
@@ -70,6 +71,26 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMeasurementUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final MeasurementUnit MEASUREMENT_UNIT_EDEFAULT = MeasurementUnit.HIMETRIC_LITERAL;
+
+	/**
+	 * The cached value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMeasurementUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected MeasurementUnit measurementUnit = MEASUREMENT_UNIT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPersistedEdges() <em>Persisted Edges</em>}' containment reference list.
@@ -131,6 +152,31 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MeasurementUnit getMeasurementUnit() {
+		return measurementUnit;
+	}
+
+	private boolean measurementUnitInitialized = false;
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.gmf.runtime.notation.Diagram#initializeMeasurementUnit(org.eclipse.gmf.runtime.notation.MeasurementUnit)
+	 */
+	public boolean initializeMeasurementUnit(MeasurementUnit mu) {
+		if (!measurementUnitInitialized) {
+			measurementUnit = mu;
+			measurementUnitInitialized = true;
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
@@ -268,6 +314,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 				return getTransientChildren();
 			case NotationPackage.DIAGRAM__NAME:
 				return getName();
+			case NotationPackage.DIAGRAM__MEASUREMENT_UNIT:
+				return getMeasurementUnit();
 			case NotationPackage.DIAGRAM__PERSISTED_EDGES:
 				return getPersistedEdges();
 			case NotationPackage.DIAGRAM__TRANSIENT_EDGES:
@@ -415,6 +463,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 				return transientChildren != null && !transientChildren.isEmpty();
 			case NotationPackage.DIAGRAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case NotationPackage.DIAGRAM__MEASUREMENT_UNIT:
+				return measurementUnit != MEASUREMENT_UNIT_EDEFAULT;
 			case NotationPackage.DIAGRAM__PERSISTED_EDGES:
 				return persistedEdges != null && !persistedEdges.isEmpty();
 			case NotationPackage.DIAGRAM__TRANSIENT_EDGES:
@@ -434,6 +484,8 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
+		result.append(", measurementUnit: "); //$NON-NLS-1$
+		result.append(measurementUnit);
 		result.append(')');
 		return result.toString();
 	}
