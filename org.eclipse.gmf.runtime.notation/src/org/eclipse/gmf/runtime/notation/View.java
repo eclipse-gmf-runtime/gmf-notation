@@ -146,7 +146,7 @@ public interface View extends EModelElement{
 	 * @return the value of the '<em>Source Edges</em>' reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getView_SourceEdges()
 	 * @see org.eclipse.gmf.runtime.notation.Edge#getSource
-	 * @model type="org.eclipse.gmf.runtime.notation.Edge" opposite="source" resolveProxies="false"
+	 * @model type="org.eclipse.gmf.runtime.notation.Edge" opposite="source" resolveProxies="false" transient="true"
 	 * @generated
 	 */
 	EList getSourceEdges();
@@ -163,7 +163,7 @@ public interface View extends EModelElement{
 	 * @return the value of the '<em>Target Edges</em>' reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getView_TargetEdges()
 	 * @see org.eclipse.gmf.runtime.notation.Edge#getTarget
-	 * @model type="org.eclipse.gmf.runtime.notation.Edge" opposite="target" resolveProxies="false"
+	 * @model type="org.eclipse.gmf.runtime.notation.Edge" opposite="target" resolveProxies="false" transient="true"
 	 * @generated
 	 */
 	EList getTargetEdges();

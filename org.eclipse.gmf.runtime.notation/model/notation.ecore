@@ -160,9 +160,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mutable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         transient="true" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEdges" upperBound="-1"
-        eType="#//Edge" resolveProxies="false" eOpposite="#//Edge/source"/>
+        eType="#//Edge" transient="true" resolveProxies="false" eOpposite="#//Edge/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetEdges" upperBound="-1"
-        eType="#//Edge" resolveProxies="false" eOpposite="#//Edge/target"/>
+        eType="#//Edge" transient="true" resolveProxies="false" eOpposite="#//Edge/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persistedChildren" upperBound="-1"
         eType="#//Node" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="styles" upperBound="-1"
