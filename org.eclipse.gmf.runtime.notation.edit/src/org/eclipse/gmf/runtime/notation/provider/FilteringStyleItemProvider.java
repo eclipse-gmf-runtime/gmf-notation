@@ -47,155 +47,155 @@ public class FilteringStyleItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+    /**
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public FilteringStyleItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public List getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addFilteringPropertyDescriptor(object);
-			addFilteringKeysPropertyDescriptor(object);
-			addFilteredObjectsPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addFilteringPropertyDescriptor(object);
+            addFilteringKeysPropertyDescriptor(object);
+            addFilteredObjectsPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Filtering feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Filtering feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addFilteringPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FilteringStyle_filtering_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filtering_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getFilteringStyle_Filtering(),
-				 true,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FilteringStyle_filtering_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filtering_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.FILTERING_STYLE__FILTERING,
+                 true,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Filtering Keys feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Filtering Keys feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addFilteringKeysPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FilteringStyle_filteringKeys_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteringKeys_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getFilteringStyle_FilteringKeys(),
-				 true,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FilteringStyle_filteringKeys_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteringKeys_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.FILTERING_STYLE__FILTERING_KEYS,
+                 true,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Filtered Objects feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Filtered Objects feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addFilteredObjectsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FilteringStyle_filteredObjects_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteredObjects_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getFilteringStyle_FilteredObjects(),
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_FilteringStyle_filteredObjects_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteredObjects_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.FILTERING_STYLE__FILTERED_OBJECTS,
+                 true,
+                 null,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This returns FilteringStyle.gif.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns FilteringStyle.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Object getImage(Object object) {
-		return getResourceLocator().getImage("full/obj16/FilteringStyle"); //$NON-NLS-1$
-	}
+        return getResourceLocator().getImage("full/obj16/FilteringStyle"); //$NON-NLS-1$
+    }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getText(Object object) {
-		Filtering labelValue = ((FilteringStyle)object).getFiltering();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_FilteringStyle_type") : //$NON-NLS-1$
-			getString("_UI_FilteringStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
-	}
+        Filtering labelValue = ((FilteringStyle)object).getFiltering();
+        String label = labelValue == null ? null : labelValue.toString();
+        return label == null || label.length() == 0 ?
+            getString("_UI_FilteringStyle_type") : //$NON-NLS-1$
+            getString("_UI_FilteringStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(FilteringStyle.class)) {
-			case NotationPackage.FILTERING_STYLE__FILTERING:
-			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(FilteringStyle.class)) {
+            case NotationPackage.FILTERING_STYLE__FILTERING:
+            case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-	 * describing all of the children that can be created under this object.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
+     * describing all of the children that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+    /**
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
-	}
+        return NotationEditPlugin.INSTANCE;
+    }
 
 }

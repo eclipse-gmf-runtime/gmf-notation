@@ -18,9 +18,6 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmf.runtime.notation.*;
-
 import org.eclipse.gmf.runtime.notation.Anchor;
 import org.eclipse.gmf.runtime.notation.Bendpoints;
 import org.eclipse.gmf.runtime.notation.Bounds;
@@ -68,675 +65,675 @@ import org.eclipse.gmf.runtime.notation.View;
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
 public class NotationAdapterFactory extends AdapterFactoryImpl {
-	/**
-	 * The cached model package.
-	 * <!-- begin-user-doc -->
+    /**
+     * The cached model package.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected static NotationPackage modelPackage;
 
-	/**
-	 * Creates an instance of the adapter factory.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates an instance of the adapter factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NotationAdapterFactory() {
-		if (modelPackage == null) {
-			modelPackage = NotationPackage.eINSTANCE;
-		}
-	}
+        if (modelPackage == null) {
+            modelPackage = NotationPackage.eINSTANCE;
+        }
+    }
 
-	/**
-	 * Returns whether this factory is applicable for the type of the object.
-	 * <!-- begin-user-doc -->
+    /**
+     * Returns whether this factory is applicable for the type of the object.
+     * <!-- begin-user-doc -->
 	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
 	 * <!-- end-user-doc -->
-	 * @return whether this factory is applicable for the type of the object.
-	 * @generated
-	 */
+     * @return whether this factory is applicable for the type of the object.
+     * @generated
+     */
 	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
-			return true;
-		}
-		if (object instanceof EObject) {
-			return ((EObject)object).eClass().getEPackage() == modelPackage;
-		}
-		return false;
-	}
+        if (object == modelPackage) {
+            return true;
+        }
+        if (object instanceof EObject) {
+            return ((EObject)object).eClass().getEPackage() == modelPackage;
+        }
+        return false;
+    }
 
-	/**
-	 * The switch the delegates to the <code>createXXX</code> methods.
-	 * <!-- begin-user-doc -->
+    /**
+     * The switch the delegates to the <code>createXXX</code> methods.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NotationSwitch modelSwitch =
-		new NotationSwitch() {
-			public Object caseEdge(Edge object) {
-				return createEdgeAdapter();
-			}
-			public Object caseNode(Node object) {
-				return createNodeAdapter();
-			}
-			public Object caseStyle(Style object) {
-				return createStyleAdapter();
-			}
-			public Object caseFillStyle(FillStyle object) {
-				return createFillStyleAdapter();
-			}
-			public Object caseLineStyle(LineStyle object) {
-				return createLineStyleAdapter();
-			}
-			public Object caseFontStyle(FontStyle object) {
-				return createFontStyleAdapter();
-			}
-			public Object caseTitleStyle(TitleStyle object) {
-				return createTitleStyleAdapter();
-			}
-			public Object caseSortingStyle(SortingStyle object) {
-				return createSortingStyleAdapter();
-			}
-			public Object caseDescriptionStyle(DescriptionStyle object) {
-				return createDescriptionStyleAdapter();
-			}
-			public Object caseLayoutConstraint(LayoutConstraint object) {
-				return createLayoutConstraintAdapter();
-			}
-			public Object caseSize(Size object) {
-				return createSizeAdapter();
-			}
-			public Object caseLocation(Location object) {
-				return createLocationAdapter();
-			}
-			public Object caseBounds(Bounds object) {
-				return createBoundsAdapter();
-			}
-			public Object caseRatio(Ratio object) {
-				return createRatioAdapter();
-			}
-			public Object caseAnchor(Anchor object) {
-				return createAnchorAdapter();
-			}
-			public Object caseBendpoints(Bendpoints object) {
-				return createBendpointsAdapter();
-			}
-			public Object caseIdentityAnchor(IdentityAnchor object) {
-				return createIdentityAnchorAdapter();
-			}
-			public Object caseRoutingStyle(RoutingStyle object) {
-				return createRoutingStyleAdapter();
-			}
-			public Object caseView(View object) {
-				return createViewAdapter();
-			}
-			public Object caseRelativeBendpoints(RelativeBendpoints object) {
-				return createRelativeBendpointsAdapter();
-			}
-			public Object caseDiagram(Diagram object) {
-				return createDiagramAdapter();
-			}
-			public Object caseImage(Image object) {
-				return createImageAdapter();
-			}
-			public Object caseCanonicalStyle(CanonicalStyle object) {
-				return createCanonicalStyleAdapter();
-			}
-			public Object caseShapeStyle(ShapeStyle object) {
-				return createShapeStyleAdapter();
-			}
-			public Object caseConnectorStyle(ConnectorStyle object) {
-				return createConnectorStyleAdapter();
-			}
-			public Object casePageStyle(PageStyle object) {
-				return createPageStyleAdapter();
-			}
-			public Object caseDrawerStyle(DrawerStyle object) {
-				return createDrawerStyleAdapter();
-			}
-			public Object caseGuideStyle(GuideStyle object) {
-				return createGuideStyleAdapter();
-			}
-			public Object caseGuide(Guide object) {
-				return createGuideAdapter();
-			}
-			public Object caseNodeEntry(Map.Entry object) {
-				return createNodeEntryAdapter();
-			}
-			public Object caseFilteringStyle(FilteringStyle object) {
-				return createFilteringStyleAdapter();
-			}
-			public Object caseDiagramStyle(DiagramStyle object) {
-				return createDiagramStyleAdapter();
-			}
-			public Object caseImageStyle(ImageStyle object) {
-				return createImageStyleAdapter();
-			}
-			public Object caseImageBufferStyle(ImageBufferStyle object) {
-				return createImageBufferStyleAdapter();
-			}
-			public Object caseEModelElement(EModelElement object) {
-				return createEModelElementAdapter();
-			}
-			public Object defaultCase(EObject object) {
-				return createEObjectAdapter();
-			}
-		};
+        new NotationSwitch() {
+            public Object caseEdge(Edge object) {
+                return createEdgeAdapter();
+            }
+            public Object caseNode(Node object) {
+                return createNodeAdapter();
+            }
+            public Object caseStyle(Style object) {
+                return createStyleAdapter();
+            }
+            public Object caseFillStyle(FillStyle object) {
+                return createFillStyleAdapter();
+            }
+            public Object caseLineStyle(LineStyle object) {
+                return createLineStyleAdapter();
+            }
+            public Object caseFontStyle(FontStyle object) {
+                return createFontStyleAdapter();
+            }
+            public Object caseTitleStyle(TitleStyle object) {
+                return createTitleStyleAdapter();
+            }
+            public Object caseSortingStyle(SortingStyle object) {
+                return createSortingStyleAdapter();
+            }
+            public Object caseDescriptionStyle(DescriptionStyle object) {
+                return createDescriptionStyleAdapter();
+            }
+            public Object caseLayoutConstraint(LayoutConstraint object) {
+                return createLayoutConstraintAdapter();
+            }
+            public Object caseSize(Size object) {
+                return createSizeAdapter();
+            }
+            public Object caseLocation(Location object) {
+                return createLocationAdapter();
+            }
+            public Object caseBounds(Bounds object) {
+                return createBoundsAdapter();
+            }
+            public Object caseRatio(Ratio object) {
+                return createRatioAdapter();
+            }
+            public Object caseAnchor(Anchor object) {
+                return createAnchorAdapter();
+            }
+            public Object caseBendpoints(Bendpoints object) {
+                return createBendpointsAdapter();
+            }
+            public Object caseIdentityAnchor(IdentityAnchor object) {
+                return createIdentityAnchorAdapter();
+            }
+            public Object caseRoutingStyle(RoutingStyle object) {
+                return createRoutingStyleAdapter();
+            }
+            public Object caseView(View object) {
+                return createViewAdapter();
+            }
+            public Object caseRelativeBendpoints(RelativeBendpoints object) {
+                return createRelativeBendpointsAdapter();
+            }
+            public Object caseDiagram(Diagram object) {
+                return createDiagramAdapter();
+            }
+            public Object caseImage(Image object) {
+                return createImageAdapter();
+            }
+            public Object caseCanonicalStyle(CanonicalStyle object) {
+                return createCanonicalStyleAdapter();
+            }
+            public Object caseShapeStyle(ShapeStyle object) {
+                return createShapeStyleAdapter();
+            }
+            public Object caseConnectorStyle(ConnectorStyle object) {
+                return createConnectorStyleAdapter();
+            }
+            public Object casePageStyle(PageStyle object) {
+                return createPageStyleAdapter();
+            }
+            public Object caseDrawerStyle(DrawerStyle object) {
+                return createDrawerStyleAdapter();
+            }
+            public Object caseGuideStyle(GuideStyle object) {
+                return createGuideStyleAdapter();
+            }
+            public Object caseGuide(Guide object) {
+                return createGuideAdapter();
+            }
+            public Object caseNodeEntry(Map.Entry object) {
+                return createNodeEntryAdapter();
+            }
+            public Object caseFilteringStyle(FilteringStyle object) {
+                return createFilteringStyleAdapter();
+            }
+            public Object caseDiagramStyle(DiagramStyle object) {
+                return createDiagramStyleAdapter();
+            }
+            public Object caseImageStyle(ImageStyle object) {
+                return createImageStyleAdapter();
+            }
+            public Object caseImageBufferStyle(ImageBufferStyle object) {
+                return createImageBufferStyleAdapter();
+            }
+            public Object caseEModelElement(EModelElement object) {
+                return createEModelElementAdapter();
+            }
+            public Object defaultCase(EObject object) {
+                return createEObjectAdapter();
+            }
+        };
 
-	/**
-	 * Creates an adapter for the <code>target</code>.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates an adapter for the <code>target</code>.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param target the object to adapt.
-	 * @return the adapter for the <code>target</code>.
-	 * @generated
-	 */
+     * @param target the object to adapt.
+     * @return the adapter for the <code>target</code>.
+     * @generated
+     */
 	public Adapter createAdapter(Notifier target) {
-		return (Adapter)modelSwitch.doSwitch((EObject)target);
-	}
+        return (Adapter)modelSwitch.doSwitch((EObject)target);
+    }
 
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Edge <em>Edge</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Edge <em>Edge</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Edge
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Edge
+     * @generated
+     */
 	public Adapter createEdgeAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Node <em>Node</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Node <em>Node</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Node
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Node
+     * @generated
+     */
 	public Adapter createNodeAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Style <em>Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Style <em>Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Style
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Style
+     * @generated
+     */
 	public Adapter createStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FillStyle <em>Fill Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FillStyle <em>Fill Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.FillStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.FillStyle
+     * @generated
+     */
 	public Adapter createFillStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.LineStyle <em>Line Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.LineStyle <em>Line Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.LineStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.LineStyle
+     * @generated
+     */
 	public Adapter createLineStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FontStyle <em>Font Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FontStyle <em>Font Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.FontStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.FontStyle
+     * @generated
+     */
 	public Adapter createFontStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.TitleStyle <em>Title Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.TitleStyle <em>Title Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.TitleStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.TitleStyle
+     * @generated
+     */
 	public Adapter createTitleStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.SortingStyle <em>Sorting Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.SortingStyle <em>Sorting Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.SortingStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.SortingStyle
+     * @generated
+     */
 	public Adapter createSortingStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle <em>Description Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle <em>Description Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.DescriptionStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.DescriptionStyle
+     * @generated
+     */
 	public Adapter createDescriptionStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.LayoutConstraint <em>Layout Constraint</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.LayoutConstraint <em>Layout Constraint</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.LayoutConstraint
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.LayoutConstraint
+     * @generated
+     */
 	public Adapter createLayoutConstraintAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Size <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Size <em>Size</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Size
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Size
+     * @generated
+     */
 	public Adapter createSizeAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Location <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Location <em>Location</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Location
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Location
+     * @generated
+     */
 	public Adapter createLocationAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Bounds <em>Bounds</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Bounds <em>Bounds</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Bounds
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Bounds
+     * @generated
+     */
 	public Adapter createBoundsAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Ratio <em>Ratio</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Ratio <em>Ratio</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Ratio
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Ratio
+     * @generated
+     */
 	public Adapter createRatioAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Anchor <em>Anchor</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Anchor <em>Anchor</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Anchor
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Anchor
+     * @generated
+     */
 	public Adapter createAnchorAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Bendpoints <em>Bendpoints</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Bendpoints <em>Bendpoints</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Bendpoints
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Bendpoints
+     * @generated
+     */
 	public Adapter createBendpointsAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.IdentityAnchor <em>Identity Anchor</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.IdentityAnchor <em>Identity Anchor</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.IdentityAnchor
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.IdentityAnchor
+     * @generated
+     */
 	public Adapter createIdentityAnchorAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.RoutingStyle <em>Routing Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.RoutingStyle <em>Routing Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.RoutingStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.RoutingStyle
+     * @generated
+     */
 	public Adapter createRoutingStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.View <em>View</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.View <em>View</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.View
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.View
+     * @generated
+     */
 	public Adapter createViewAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.RelativeBendpoints <em>Relative Bendpoints</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.RelativeBendpoints <em>Relative Bendpoints</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.RelativeBendpoints
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.RelativeBendpoints
+     * @generated
+     */
 	public Adapter createRelativeBendpointsAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.CanonicalStyle <em>Canonical Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.CanonicalStyle <em>Canonical Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.CanonicalStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.CanonicalStyle
+     * @generated
+     */
 	public Adapter createCanonicalStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ShapeStyle <em>Shape Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ShapeStyle <em>Shape Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.ShapeStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.ShapeStyle
+     * @generated
+     */
 	public Adapter createShapeStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ConnectorStyle <em>Connector Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ConnectorStyle <em>Connector Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.ConnectorStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.ConnectorStyle
+     * @generated
+     */
 	public Adapter createConnectorStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Diagram <em>Diagram</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Diagram <em>Diagram</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Diagram
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Diagram
+     * @generated
+     */
 	public Adapter createDiagramAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Image <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Image <em>Image</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Image
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Image
+     * @generated
+     */
 	public Adapter createImageAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.PageStyle <em>Page Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.PageStyle <em>Page Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.PageStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.PageStyle
+     * @generated
+     */
 	public Adapter createPageStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DrawerStyle <em>Drawer Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DrawerStyle <em>Drawer Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.DrawerStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.DrawerStyle
+     * @generated
+     */
 	public Adapter createDrawerStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.GuideStyle <em>Guide Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.GuideStyle <em>Guide Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.GuideStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.GuideStyle
+     * @generated
+     */
 	public Adapter createGuideStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Guide <em>Guide</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Guide <em>Guide</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.Guide
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.Guide
+     * @generated
+     */
 	public Adapter createGuideAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Node Entry</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Node Entry</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see java.util.Map.Entry
+     * @generated
+     */
 	public Adapter createNodeEntryAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FilteringStyle <em>Filtering Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.FilteringStyle <em>Filtering Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.FilteringStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.FilteringStyle
+     * @generated
+     */
 	public Adapter createFilteringStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DiagramStyle <em>Diagram Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DiagramStyle <em>Diagram Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.DiagramStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.DiagramStyle
+     * @generated
+     */
 	public Adapter createDiagramStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ImageStyle <em>Image Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ImageStyle <em>Image Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.ImageStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.ImageStyle
+     * @generated
+     */
 	public Adapter createImageStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ImageBufferStyle <em>Image Buffer Style</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ImageBufferStyle <em>Image Buffer Style</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.gmf.runtime.notation.ImageBufferStyle
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.gmf.runtime.notation.ImageBufferStyle
+     * @generated
+     */
 	public Adapter createImageBufferStyleAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement <em>EModel Element</em>}'.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement <em>EModel Element</em>}'.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecore.EModelElement
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @see org.eclipse.emf.ecore.EModelElement
+     * @generated
+     */
 	public Adapter createEModelElementAdapter() {
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * Creates a new adapter for the default case.
-	 * <!-- begin-user-doc -->
+    /**
+     * Creates a new adapter for the default case.
+     * <!-- begin-user-doc -->
 	 * This default implementation returns null.
 	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @generated
-	 */
+     * @return the new adapter.
+     * @generated
+     */
 	public Adapter createEObjectAdapter() {
-		return null;
-	}
+        return null;
+    }
 
 } //NotationAdapterFactory

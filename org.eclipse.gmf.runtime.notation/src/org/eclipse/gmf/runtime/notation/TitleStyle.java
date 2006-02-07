@@ -34,28 +34,28 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface TitleStyle extends Style{
-	/**
-	 * Returns the value of the '<em><b>Show Title</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
+public interface TitleStyle extends Style {
+    /**
+     * Returns the value of the '<em><b>Show Title</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Show Title</em>' attribute.
-	 * @see #setShowTitle(boolean)
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTitleStyle_ShowTitle()
-	 * @model default="false"
-	 * @generated
-	 */
+     * @return the value of the '<em>Show Title</em>' attribute.
+     * @see #setShowTitle(boolean)
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTitleStyle_ShowTitle()
+     * @model default="false"
+     * @generated
+     */
 	boolean isShowTitle();
 
-	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show Title</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Show Title</em>' attribute.
-	 * @see #isShowTitle()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Show Title</em>' attribute.
+     * @see #isShowTitle()
+     * @generated
+     */
 	void setShowTitle(boolean value);
 
 } // TitleStyle

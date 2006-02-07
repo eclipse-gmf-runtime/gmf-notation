@@ -46,15 +46,15 @@ public class NodeItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+    /**
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NodeItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
 	/**
 	 * This returns the property descriptors for the adapted class.
@@ -70,21 +70,21 @@ public class NodeItemProvider
 		return itemPropertyDescriptors;
 	}
 
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Collection getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(NotationPackage.eINSTANCE.getNode_LayoutConstraint());
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT);
+        }
+        return childrenFeatures;
+    }
 
 	/**
 	 * This adds a property descriptor for the LayoutConstraint feature.
@@ -102,106 +102,106 @@ public class NodeItemProvider
 				 null));
 	}
 
-	/**
-	 * This returns Node.gif.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns Node.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Object getImage(Object object) {
-		return getResourceLocator().getImage("full/obj16/Node"); //$NON-NLS-1$
-	}
+        return getResourceLocator().getImage("full/obj16/Node"); //$NON-NLS-1$
+    }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getText(Object object) {
-		Node node = (Node)object;
-		return getString("_UI_Node_type") + " " + node.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
-	}
+        Node node = (Node)object;
+        return getString("_UI_Node_type") + " " + node.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Node.class)) {
-			case NotationPackage.NODE__LAYOUT_CONSTRAINT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Node.class)) {
+            case NotationPackage.NODE__LAYOUT_CONSTRAINT:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-	 * describing all of the children that can be created under this object.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
+     * describing all of the children that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(NotationPackage.eINSTANCE.getNode_LayoutConstraint(),
-				 NotationFactory.eINSTANCE.createSize()));
+        newChildDescriptors.add
+            (createChildParameter
+                (NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT,
+                 NotationFactory.eINSTANCE.createSize()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(NotationPackage.eINSTANCE.getNode_LayoutConstraint(),
-				 NotationFactory.eINSTANCE.createLocation()));
+        newChildDescriptors.add
+            (createChildParameter
+                (NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT,
+                 NotationFactory.eINSTANCE.createLocation()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(NotationPackage.eINSTANCE.getNode_LayoutConstraint(),
-				 NotationFactory.eINSTANCE.createBounds()));
+        newChildDescriptors.add
+            (createChildParameter
+                (NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT,
+                 NotationFactory.eINSTANCE.createBounds()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(NotationPackage.eINSTANCE.getNode_LayoutConstraint(),
-				 NotationFactory.eINSTANCE.createRatio()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT,
+                 NotationFactory.eINSTANCE.createRatio()));
+    }
 
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getCreateChildText(Object owner, Object feature, Object child, Collection selection) {
-		Object childFeature = feature;
-		Object childObject = child;
+        Object childFeature = feature;
+        Object childObject = child;
 
-		boolean qualify =
-			childFeature == NotationPackage.eINSTANCE.getView_PersistedChildren() ||
-			childFeature == NotationPackage.eINSTANCE.getView_TransientChildren();
+        boolean qualify =
+            childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
+            childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN;
 
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2", //$NON-NLS-1$
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
-	}
+        if (qualify) {
+            return getString
+                ("_UI_CreateChild_text2", //$NON-NLS-1$
+                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+        }
+        return super.getCreateChildText(owner, feature, child, selection);
+    }
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+    /**
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
-	}
+        return NotationEditPlugin.INSTANCE;
+    }
 
 }

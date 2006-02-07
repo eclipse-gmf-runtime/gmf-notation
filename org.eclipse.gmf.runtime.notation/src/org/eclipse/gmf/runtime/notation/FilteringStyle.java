@@ -39,37 +39,37 @@ import org.eclipse.emf.common.util.EList;
 /*
  * @canBeSeenBy %partners
  */
-public interface FilteringStyle extends Style{
-	/**
-	 * Returns the value of the '<em><b>Filtering</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.Filtering}.
-	 * <!-- begin-user-doc -->
+public interface FilteringStyle extends Style {
+    /**
+     * Returns the value of the '<em><b>Filtering</b></em>' attribute.
+     * The default value is <code>"None"</code>.
+     * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.Filtering}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * This is the type of filtering applied to the list represented by the node
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filtering</em>' attribute.
-	 * @see org.eclipse.gmf.runtime.notation.Filtering
-	 * @see #setFiltering(Filtering)
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getFilteringStyle_Filtering()
-	 * @model default="None"
-	 * @generated
-	 */
+     * @return the value of the '<em>Filtering</em>' attribute.
+     * @see org.eclipse.gmf.runtime.notation.Filtering
+     * @see #setFiltering(Filtering)
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getFilteringStyle_Filtering()
+     * @model default="None"
+     * @generated
+     */
 	Filtering getFiltering();
 
-	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.FilteringStyle#getFiltering <em>Filtering</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.FilteringStyle#getFiltering <em>Filtering</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * This is the type of filtering applied to the list represented by the node
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Filtering</em>' attribute.
-	 * @see org.eclipse.gmf.runtime.notation.Filtering
-	 * @see #getFiltering()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Filtering</em>' attribute.
+     * @see org.eclipse.gmf.runtime.notation.Filtering
+     * @see #getFiltering()
+     * @generated
+     */
 	void setFiltering(Filtering value);
 
 	/**
@@ -110,20 +110,20 @@ public interface FilteringStyle extends Style{
 	 */
 	void setFilteringKeys(List value);
 
-	/**
-	 * Returns the value of the '<em><b>Filtered Objects</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
+    /**
+     * Returns the value of the '<em><b>Filtered Objects</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * The property is an unordered list of references to objects be filtered. The property is
 	 * normally used when the <em>Filtering</em> property is set to <em>Manual</em>
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filtered Objects</em>' reference list.
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getFilteringStyle_FilteredObjects()
-	 * @model type="org.eclipse.emf.ecore.EObject"
-	 * @generated
-	 */
+     * @return the value of the '<em>Filtered Objects</em>' reference list.
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getFilteringStyle_FilteredObjects()
+     * @model type="org.eclipse.emf.ecore.EObject"
+     * @generated
+     */
 	EList getFilteredObjects();
 
 } // FilteringStyle

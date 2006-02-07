@@ -46,109 +46,109 @@ public class CanonicalStyleItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+    /**
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public CanonicalStyleItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public List getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addCanonicalPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addCanonicalPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Canonical feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Canonical feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addCanonicalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CanonicalStyle_canonical_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_CanonicalStyle_canonical_feature", "_UI_CanonicalStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getCanonicalStyle_Canonical(),
-				 true,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_CanonicalStyle_canonical_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_CanonicalStyle_canonical_feature", "_UI_CanonicalStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.CANONICAL_STYLE__CANONICAL,
+                 true,
+                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This returns CanonicalStyle.gif.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns CanonicalStyle.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Object getImage(Object object) {
-		return getResourceLocator().getImage("full/obj16/CanonicalStyle"); //$NON-NLS-1$
-	}
+        return getResourceLocator().getImage("full/obj16/CanonicalStyle"); //$NON-NLS-1$
+    }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getText(Object object) {
-		CanonicalStyle canonicalStyle = (CanonicalStyle)object;
-		return getString("_UI_CanonicalStyle_type") + " " + canonicalStyle.isCanonical(); //$NON-NLS-1$ //$NON-NLS-2$
-	}
+        CanonicalStyle canonicalStyle = (CanonicalStyle)object;
+        return getString("_UI_CanonicalStyle_type") + " " + canonicalStyle.isCanonical(); //$NON-NLS-1$ //$NON-NLS-2$
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(CanonicalStyle.class)) {
-			case NotationPackage.CANONICAL_STYLE__CANONICAL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(CanonicalStyle.class)) {
+            case NotationPackage.CANONICAL_STYLE__CANONICAL:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-	 * describing all of the children that can be created under this object.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
+     * describing all of the children that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+    /**
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
-	}
+        return NotationEditPlugin.INSTANCE;
+    }
 
 }

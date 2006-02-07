@@ -38,62 +38,87 @@ import org.eclipse.emf.ecore.EClass;
 /*
  * @canBeSeenBy %partners
  */
-public interface Diagram extends View{
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
+public interface Diagram extends View {
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * The default value is <code>""</code>.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_Name()
-	 * @model default=""
-	 * @generated
-	 */
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_Name()
+     * @model default=""
+     * @generated
+     */
 	String getName();
 
-	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Diagram#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Diagram#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
 	void setName(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Measurement Unit</b></em>' attribute.
-	 * The default value is <code>"Himetric"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.MeasurementUnit}.
-	 * <!-- begin-user-doc -->
+    /**
+     * Returns the value of the '<em><b>Measurement Unit</b></em>' attribute.
+     * The default value is <code>"Himetric"</code>.
+     * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.MeasurementUnit}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Measurement Unit</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Measurement Unit</em>' attribute.
-	 * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_MeasurementUnit()
-	 * @model default="Himetric" changeable="false"
-	 * @generated
-	 */
+     * @return the value of the '<em>Measurement Unit</em>' attribute.
+     * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
+     * @see #isSetMeasurementUnit()
+     * @see #unsetMeasurementUnit()
+     * @see #setMeasurementUnit(MeasurementUnit)
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_MeasurementUnit()
+     * @model default="Himetric" unsettable="true"
+     * @generated
+     */
 	MeasurementUnit getMeasurementUnit();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * A utililty method to initialize the '<em>Measurement Unit</em>'
-	 * to a value that will be used for the lifetime of the 
-	 * '<em>Diagram</em>' object.  This method can only be called
-	 * once.  Additional calls will be ignored.
-	 * </p>
-	 * @param me the '<em>Measurement Unit</em>' to initialize the
-	 * '<em>Diagram</em>' to.
-	 * @return whether the value of the '<em>MeasurementUnit</em>' variable is set.
-	 */
-	boolean initializeMeasurementUnit(MeasurementUnit mu);
-	
+    /**
+     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Diagram#getMeasurementUnit <em>Measurement Unit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Measurement Unit</em>' attribute.
+     * @see org.eclipse.gmf.runtime.notation.MeasurementUnit
+     * @see #isSetMeasurementUnit()
+     * @see #unsetMeasurementUnit()
+     * @see #getMeasurementUnit()
+     * @generated
+     */
+    void setMeasurementUnit(MeasurementUnit value);
+
+    /**
+     * Unsets the value of the '{@link org.eclipse.gmf.runtime.notation.Diagram#getMeasurementUnit <em>Measurement Unit</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isSetMeasurementUnit()
+     * @see #getMeasurementUnit()
+     * @see #setMeasurementUnit(MeasurementUnit)
+     * @generated
+     */
+    void unsetMeasurementUnit();
+
+    /**
+     * Returns whether the value of the '{@link org.eclipse.gmf.runtime.notation.Diagram#getMeasurementUnit <em>Measurement Unit</em>}' attribute is set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return whether the value of the '<em>Measurement Unit</em>' attribute is set.
+     * @see #unsetMeasurementUnit()
+     * @see #getMeasurementUnit()
+     * @see #setMeasurementUnit(MeasurementUnit)
+     * @generated
+     */
+    boolean isSetMeasurementUnit();
+
 	/**
 	 * Returns the value of the '<em><b>Edges</b></em>' list.
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
@@ -108,40 +133,40 @@ public interface Diagram extends View{
 	 */
 	EList getEdges();
 
-	/**
-	 * Returns the value of the '<em><b>Persisted Edges</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
-	 * <!-- begin-user-doc -->
+    /**
+     * Returns the value of the '<em><b>Persisted Edges</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Persisted Edges</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Persisted Edges</em>' containment reference list.
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_PersistedEdges()
-	 * @model type="org.eclipse.gmf.runtime.notation.Edge" containment="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Persisted Edges</em>' containment reference list.
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_PersistedEdges()
+     * @model type="org.eclipse.gmf.runtime.notation.Edge" containment="true"
+     * @generated
+     */
 	EList getPersistedEdges();
 
-	/**
-	 * Returns the value of the '<em><b>Transient Edges</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
-	 * <!-- begin-user-doc -->
+    /**
+     * Returns the value of the '<em><b>Transient Edges</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Edge}.
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transient Edges</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transient Edges</em>' containment reference list.
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_TransientEdges()
-	 * @model type="org.eclipse.gmf.runtime.notation.Edge" containment="true" transient="true"
-	 * @generated
-	 */
+     * @return the value of the '<em>Transient Edges</em>' containment reference list.
+     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagram_TransientEdges()
+     * @model type="org.eclipse.gmf.runtime.notation.Edge" containment="true" transient="true"
+     * @generated
+     */
 	 EList getTransientEdges();
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <p>
 	 * A utililty method to create a new <code>Edge</code> from the given <code>eClass</code> paramter
 	 * and then inserts the object in the diagrams's </em>Edges</em> collection
@@ -149,9 +174,9 @@ public interface Diagram extends View{
 	 * 
 	 * @param eClass the <code>EClass</code> to be used in creating the <code>Edge</code> object
 	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
+     * @model
+     * @generated
+     */
 	Edge createEdge(EClass eClass);
 
 	/**

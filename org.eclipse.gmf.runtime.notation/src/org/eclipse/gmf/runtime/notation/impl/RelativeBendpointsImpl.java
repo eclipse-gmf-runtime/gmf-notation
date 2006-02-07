@@ -18,10 +18,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
@@ -53,33 +51,33 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
 	 */
 	protected static final List POINTS_EDEFAULT = Collections.EMPTY_LIST;
 
-	/**
-	 * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPoints()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getPoints()
+     * @generated
+     * @ordered
+     */
 	protected List points = POINTS_EDEFAULT;
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected RelativeBendpointsImpl() {
-		super();
-	}
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected EClass eStaticClass() {
-		return NotationPackage.eINSTANCE.getRelativeBendpoints();
-	}
+        return NotationPackage.Literals.RELATIVE_BENDPOINTS;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,73 +115,73 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS, Collections.unmodifiableList(oldPoints), Collections.unmodifiableList(points)));
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Object eGet(EStructuralFeature eFeature, boolean resolve) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				return getPoints();
-		}
-		return eDynamicGet(eFeature, resolve);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+                return getPoints();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void eSet(EStructuralFeature eFeature, Object newValue) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				setPoints((List)newValue);
-				return;
-		}
-		eDynamicSet(eFeature, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+                setPoints((List)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void eUnset(EStructuralFeature eFeature) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				setPoints(POINTS_EDEFAULT);
-				return;
-		}
-		eDynamicUnset(eFeature);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void eUnset(int featureID) {
+        switch (featureID) {
+            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+                setPoints(POINTS_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean eIsSet(EStructuralFeature eFeature) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
-		}
-		return eDynamicIsSet(eFeature);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+                return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
+        }
+        return super.eIsSet(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (points: "); //$NON-NLS-1$
-		result.append(points);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (points: "); //$NON-NLS-1$
+        result.append(points);
+        result.append(')');
+        return result.toString();
+    }
 
 } //RelativeBendpointsImpl

@@ -13,10 +13,8 @@ package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Size;
 
@@ -38,185 +36,185 @@ import org.eclipse.gmf.runtime.notation.Size;
  * @canBeSeenBy %partners
  */
 public class SizeImpl extends EObjectImpl implements Size {
-	/**
-	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWidth()
+     * @generated
+     * @ordered
+     */
 	protected static final int WIDTH_EDEFAULT = -1;
 
-	/**
-	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getWidth()
+     * @generated
+     * @ordered
+     */
 	protected int width = WIDTH_EDEFAULT;
 
-	/**
-	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
 	protected static final int HEIGHT_EDEFAULT = -1;
 
-	/**
-	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
+    /**
+     * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
 	protected int height = HEIGHT_EDEFAULT;
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SizeImpl() {
-		super();
-	}
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected EClass eStaticClass() {
-		return NotationPackage.eINSTANCE.getSize();
-	}
+        return NotationPackage.Literals.SIZE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getWidth() {
-		return width;
-	}
+        return width;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setWidth(int newWidth) {
-		int oldWidth = width;
-		width = newWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SIZE__WIDTH, oldWidth, width));
-	}
+        int oldWidth = width;
+        width = newWidth;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SIZE__WIDTH, oldWidth, width));
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public int getHeight() {
-		return height;
-	}
+        return height;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setHeight(int newHeight) {
-		int oldHeight = height;
-		height = newHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SIZE__HEIGHT, oldHeight, height));
-	}
+        int oldHeight = height;
+        height = newHeight;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SIZE__HEIGHT, oldHeight, height));
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Object eGet(EStructuralFeature eFeature, boolean resolve) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.SIZE__WIDTH:
-				return new Integer(getWidth());
-			case NotationPackage.SIZE__HEIGHT:
-				return new Integer(getHeight());
-		}
-		return eDynamicGet(eFeature, resolve);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+            case NotationPackage.SIZE__WIDTH:
+                return new Integer(getWidth());
+            case NotationPackage.SIZE__HEIGHT:
+                return new Integer(getHeight());
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void eSet(EStructuralFeature eFeature, Object newValue) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.SIZE__WIDTH:
-				setWidth(((Integer)newValue).intValue());
-				return;
-			case NotationPackage.SIZE__HEIGHT:
-				setHeight(((Integer)newValue).intValue());
-				return;
-		}
-		eDynamicSet(eFeature, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+            case NotationPackage.SIZE__WIDTH:
+                setWidth(((Integer)newValue).intValue());
+                return;
+            case NotationPackage.SIZE__HEIGHT:
+                setHeight(((Integer)newValue).intValue());
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void eUnset(EStructuralFeature eFeature) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.SIZE__WIDTH:
-				setWidth(WIDTH_EDEFAULT);
-				return;
-			case NotationPackage.SIZE__HEIGHT:
-				setHeight(HEIGHT_EDEFAULT);
-				return;
-		}
-		eDynamicUnset(eFeature);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void eUnset(int featureID) {
+        switch (featureID) {
+            case NotationPackage.SIZE__WIDTH:
+                setWidth(WIDTH_EDEFAULT);
+                return;
+            case NotationPackage.SIZE__HEIGHT:
+                setHeight(HEIGHT_EDEFAULT);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean eIsSet(EStructuralFeature eFeature) {
-		switch (eDerivedStructuralFeatureID(eFeature)) {
-			case NotationPackage.SIZE__WIDTH:
-				return width != WIDTH_EDEFAULT;
-			case NotationPackage.SIZE__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
-		}
-		return eDynamicIsSet(eFeature);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+            case NotationPackage.SIZE__WIDTH:
+                return width != WIDTH_EDEFAULT;
+            case NotationPackage.SIZE__HEIGHT:
+                return height != HEIGHT_EDEFAULT;
+        }
+        return super.eIsSet(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (width: "); //$NON-NLS-1$
-		result.append(width);
-		result.append(", height: "); //$NON-NLS-1$
-		result.append(height);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuffer result = new StringBuffer(super.toString());
+        result.append(" (width: "); //$NON-NLS-1$
+        result.append(width);
+        result.append(", height: "); //$NON-NLS-1$
+        result.append(height);
+        result.append(')');
+        return result.toString();
+    }
 
 } //SizeImpl

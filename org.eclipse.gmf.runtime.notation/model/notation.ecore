@@ -184,7 +184,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementUnit" eType="#//MeasurementUnit"
-        changeable="false" defaultValueLiteral="Himetric"/>
+        defaultValueLiteral="Himetric" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="persistedEdges" upperBound="-1"
         eType="#//Edge" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TransientEdges" upperBound="-1"
@@ -216,9 +216,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GuideStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EReference" name="horizontalGuides" upperBound="-1"
-        eType="#//Guide" containment="true"/>
+        eType="#//Guide" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verticalGuides" upperBound="-1"
-        eType="#//Guide" containment="true"/>
+        eType="#//Guide" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Guide">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"

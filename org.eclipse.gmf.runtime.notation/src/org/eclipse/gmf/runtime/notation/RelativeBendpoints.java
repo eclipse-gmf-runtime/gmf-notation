@@ -41,7 +41,7 @@ public interface RelativeBendpoints extends Bendpoints{
 	 * Returns the value of the '<em><b>Points</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * The value is a non-modifiable list of <code>com.ibm.xtools.datatype.RelativeBendpoint</code> objects
+	 * The value is a non-modifiable list of <code>org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint</code> objects
 	 * Any attempt to change the returned list will result in <code>UnsupportedOperationException</code> thrown;
 	 * instead use <code>setPoints</code> to change the list
 	 * </p>
@@ -57,12 +57,12 @@ public interface RelativeBendpoints extends Bendpoints{
 	/**
 	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.RelativeBendpoints#getPoints <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * The value must be an empty list or one that contains only <code>com.ibm.xtools.datatype.RelativeBendpoint</code> objects
+	 * The value must be an empty list or one that contains only <code>org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint</code> objects
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Points</em>' attribute. The value cannot be <code>null</code>
 	 * @see #getPoints()
 	 * @throws NullPointerException if the passed list is <code>null</code>
-	 * @throws IllegalArgumentException if one or more objects in the passed list is not of type <code>com.ibm.xtools.datatype.RelativeBendpoint</code> 
+	 * @throws IllegalArgumentException if one or more objects in the passed list is not of type <code>corg.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint</code> 
 	 * @generated NOT
 	 */
 	void setPoints(List value);

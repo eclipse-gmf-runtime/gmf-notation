@@ -47,158 +47,158 @@ public class ImageStyleItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+    /**
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ImageStyleItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public List getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addAntiAliasPropertyDescriptor(object);
-			addMaintainAspectRatioPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addAntiAliasPropertyDescriptor(object);
+            addMaintainAspectRatioPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Anti Alias feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Anti Alias feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addAntiAliasPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageStyle_antiAlias_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageStyle_antiAlias_feature", "_UI_ImageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getImageStyle_AntiAlias(),
-				 true,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ImageStyle_antiAlias_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_ImageStyle_antiAlias_feature", "_UI_ImageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.IMAGE_STYLE__ANTI_ALIAS,
+                 true,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Maintain Aspect Ratio feature.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a property descriptor for the Maintain Aspect Ratio feature.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void addMaintainAspectRatioPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImageStyle_maintainAspectRatio_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImageStyle_maintainAspectRatio_feature", "_UI_ImageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getImageStyle_MaintainAspectRatio(),
-				 true,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_ImageStyle_maintainAspectRatio_feature"), //$NON-NLS-1$
+                 getString("_UI_PropertyDescriptor_description", "_UI_ImageStyle_maintainAspectRatio_feature", "_UI_ImageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+                 NotationPackage.Literals.IMAGE_STYLE__MAINTAIN_ASPECT_RATIO,
+                 true,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
 
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Collection getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(NotationPackage.eINSTANCE.getImageStyle_CropBound());
-		}
-		return childrenFeatures;
-	}
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(NotationPackage.Literals.IMAGE_STYLE__CROP_BOUND);
+        }
+        return childrenFeatures;
+    }
 
-	/**
-	 * This returns ImageStyle.gif.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns ImageStyle.gif.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Object getImage(Object object) {
-		return getResourceLocator().getImage("full/obj16/ImageStyle"); //$NON-NLS-1$
-	}
+        return getResourceLocator().getImage("full/obj16/ImageStyle"); //$NON-NLS-1$
+    }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public String getText(Object object) {
-		Boolean labelValue = ((ImageStyle)object).getAntiAlias();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ImageStyle_type") : //$NON-NLS-1$
-			getString("_UI_ImageStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
-	}
+        Boolean labelValue = ((ImageStyle)object).getAntiAlias();
+        String label = labelValue == null ? null : labelValue.toString();
+        return label == null || label.length() == 0 ?
+            getString("_UI_ImageStyle_type") : //$NON-NLS-1$
+            getString("_UI_ImageStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(ImageStyle.class)) {
-			case NotationPackage.IMAGE_STYLE__ANTI_ALIAS:
-			case NotationPackage.IMAGE_STYLE__MAINTAIN_ASPECT_RATIO:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case NotationPackage.IMAGE_STYLE__CROP_BOUND:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(ImageStyle.class)) {
+            case NotationPackage.IMAGE_STYLE__ANTI_ALIAS:
+            case NotationPackage.IMAGE_STYLE__MAINTAIN_ASPECT_RATIO:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case NotationPackage.IMAGE_STYLE__CROP_BOUND:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+                return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-	 * describing all of the children that can be created under this object.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
+     * describing all of the children that can be created under this object.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(NotationPackage.eINSTANCE.getImageStyle_CropBound(),
-				 NotationFactory.eINSTANCE.createBounds()));
-	}
+        newChildDescriptors.add
+            (createChildParameter
+                (NotationPackage.Literals.IMAGE_STYLE__CROP_BOUND,
+                 NotationFactory.eINSTANCE.createBounds()));
+    }
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+    /**
+     * Return the resource locator for this item provider's resources.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
-	}
+        return NotationEditPlugin.INSTANCE;
+    }
 
 }

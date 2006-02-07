@@ -41,807 +41,807 @@ import org.eclipse.gmf.runtime.notation.util.NotationAdapterFactory;
  * @generated
  */
 public class NotationItemProviderAdapterFactory extends NotationAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
-	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the root adapter factory that delegates to this adapter factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ComposedAdapterFactory parentAdapterFactory;
 
-	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
-	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected Collection supportedTypes = new ArrayList();
 
-	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
+    /**
+     * This constructs an instance.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public NotationItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);		
-	}
+        supportedTypes.add(IEditingDomainItemProvider.class);
+        supportedTypes.add(IStructuredItemContentProvider.class);
+        supportedTypes.add(ITreeItemContentProvider.class);
+        supportedTypes.add(IItemLabelProvider.class);
+        supportedTypes.add(IItemPropertySource.class);		
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Edge} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Edge} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected EdgeItemProvider edgeItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Edge}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Edge}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createEdgeAdapter() {
-		if (edgeItemProvider == null) {
-			edgeItemProvider = new EdgeItemProvider(this);
-		}
+        if (edgeItemProvider == null) {
+            edgeItemProvider = new EdgeItemProvider(this);
+        }
 
-		return edgeItemProvider;
-	}
+        return edgeItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Node} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Node} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NodeItemProvider nodeItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Node}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Node}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createNodeAdapter() {
-		if (nodeItemProvider == null) {
-			nodeItemProvider = new NodeItemProvider(this);
-		}
+        if (nodeItemProvider == null) {
+            nodeItemProvider = new NodeItemProvider(this);
+        }
 
-		return nodeItemProvider;
-	}
+        return nodeItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FillStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FillStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FillStyleItemProvider fillStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FillStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FillStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createFillStyleAdapter() {
-		if (fillStyleItemProvider == null) {
-			fillStyleItemProvider = new FillStyleItemProvider(this);
-		}
+        if (fillStyleItemProvider == null) {
+            fillStyleItemProvider = new FillStyleItemProvider(this);
+        }
 
-		return fillStyleItemProvider;
-	}
+        return fillStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.LineStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.LineStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected LineStyleItemProvider lineStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.LineStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.LineStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createLineStyleAdapter() {
-		if (lineStyleItemProvider == null) {
-			lineStyleItemProvider = new LineStyleItemProvider(this);
-		}
+        if (lineStyleItemProvider == null) {
+            lineStyleItemProvider = new LineStyleItemProvider(this);
+        }
 
-		return lineStyleItemProvider;
-	}
+        return lineStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FontStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FontStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FontStyleItemProvider fontStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FontStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FontStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createFontStyleAdapter() {
-		if (fontStyleItemProvider == null) {
-			fontStyleItemProvider = new FontStyleItemProvider(this);
-		}
+        if (fontStyleItemProvider == null) {
+            fontStyleItemProvider = new FontStyleItemProvider(this);
+        }
 
-		return fontStyleItemProvider;
-	}
+        return fontStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.TitleStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.TitleStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected TitleStyleItemProvider titleStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.TitleStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.TitleStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createTitleStyleAdapter() {
-		if (titleStyleItemProvider == null) {
-			titleStyleItemProvider = new TitleStyleItemProvider(this);
-		}
+        if (titleStyleItemProvider == null) {
+            titleStyleItemProvider = new TitleStyleItemProvider(this);
+        }
 
-		return titleStyleItemProvider;
-	}
+        return titleStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.SortingStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.SortingStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SortingStyleItemProvider sortingStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.SortingStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.SortingStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createSortingStyleAdapter() {
-		if (sortingStyleItemProvider == null) {
-			sortingStyleItemProvider = new SortingStyleItemProvider(this);
-		}
+        if (sortingStyleItemProvider == null) {
+            sortingStyleItemProvider = new SortingStyleItemProvider(this);
+        }
 
-		return sortingStyleItemProvider;
-	}
+        return sortingStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DescriptionStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DescriptionStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DescriptionStyleItemProvider descriptionStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DescriptionStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DescriptionStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createDescriptionStyleAdapter() {
-		if (descriptionStyleItemProvider == null) {
-			descriptionStyleItemProvider = new DescriptionStyleItemProvider(this);
-		}
+        if (descriptionStyleItemProvider == null) {
+            descriptionStyleItemProvider = new DescriptionStyleItemProvider(this);
+        }
 
-		return descriptionStyleItemProvider;
-	}
+        return descriptionStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Size} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Size} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected SizeItemProvider sizeItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Size}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Size}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createSizeAdapter() {
-		if (sizeItemProvider == null) {
-			sizeItemProvider = new SizeItemProvider(this);
-		}
+        if (sizeItemProvider == null) {
+            sizeItemProvider = new SizeItemProvider(this);
+        }
 
-		return sizeItemProvider;
-	}
+        return sizeItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Location} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Location} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected LocationItemProvider locationItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Location}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Location}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createLocationAdapter() {
-		if (locationItemProvider == null) {
-			locationItemProvider = new LocationItemProvider(this);
-		}
+        if (locationItemProvider == null) {
+            locationItemProvider = new LocationItemProvider(this);
+        }
 
-		return locationItemProvider;
-	}
+        return locationItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Bounds} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Bounds} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected BoundsItemProvider boundsItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Bounds}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Bounds}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createBoundsAdapter() {
-		if (boundsItemProvider == null) {
-			boundsItemProvider = new BoundsItemProvider(this);
-		}
+        if (boundsItemProvider == null) {
+            boundsItemProvider = new BoundsItemProvider(this);
+        }
 
-		return boundsItemProvider;
-	}
+        return boundsItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Ratio} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Ratio} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected RatioItemProvider ratioItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Ratio}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Ratio}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createRatioAdapter() {
-		if (ratioItemProvider == null) {
-			ratioItemProvider = new RatioItemProvider(this);
-		}
+        if (ratioItemProvider == null) {
+            ratioItemProvider = new RatioItemProvider(this);
+        }
 
-		return ratioItemProvider;
-	}
+        return ratioItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.IdentityAnchor} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.IdentityAnchor} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected IdentityAnchorItemProvider identityAnchorItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.IdentityAnchor}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.IdentityAnchor}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createIdentityAnchorAdapter() {
-		if (identityAnchorItemProvider == null) {
-			identityAnchorItemProvider = new IdentityAnchorItemProvider(this);
-		}
+        if (identityAnchorItemProvider == null) {
+            identityAnchorItemProvider = new IdentityAnchorItemProvider(this);
+        }
 
-		return identityAnchorItemProvider;
-	}
+        return identityAnchorItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.RoutingStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.RoutingStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected RoutingStyleItemProvider routingStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.RoutingStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.RoutingStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createRoutingStyleAdapter() {
-		if (routingStyleItemProvider == null) {
-			routingStyleItemProvider = new RoutingStyleItemProvider(this);
-		}
+        if (routingStyleItemProvider == null) {
+            routingStyleItemProvider = new RoutingStyleItemProvider(this);
+        }
 
-		return routingStyleItemProvider;
-	}
+        return routingStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.RelativeBendpoints} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.RelativeBendpoints} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected RelativeBendpointsItemProvider relativeBendpointsItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.RelativeBendpoints}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.RelativeBendpoints}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createRelativeBendpointsAdapter() {
-		if (relativeBendpointsItemProvider == null) {
-			relativeBendpointsItemProvider = new RelativeBendpointsItemProvider(this);
-		}
+        if (relativeBendpointsItemProvider == null) {
+            relativeBendpointsItemProvider = new RelativeBendpointsItemProvider(this);
+        }
 
-		return relativeBendpointsItemProvider;
-	}
+        return relativeBendpointsItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.CanonicalStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.CanonicalStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CanonicalStyleItemProvider canonicalStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.CanonicalStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.CanonicalStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createCanonicalStyleAdapter() {
-		if (canonicalStyleItemProvider == null) {
-			canonicalStyleItemProvider = new CanonicalStyleItemProvider(this);
-		}
+        if (canonicalStyleItemProvider == null) {
+            canonicalStyleItemProvider = new CanonicalStyleItemProvider(this);
+        }
 
-		return canonicalStyleItemProvider;
-	}
+        return canonicalStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ShapeStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ShapeStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ShapeStyleItemProvider shapeStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ShapeStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ShapeStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createShapeStyleAdapter() {
-		if (shapeStyleItemProvider == null) {
-			shapeStyleItemProvider = new ShapeStyleItemProvider(this);
-		}
+        if (shapeStyleItemProvider == null) {
+            shapeStyleItemProvider = new ShapeStyleItemProvider(this);
+        }
 
-		return shapeStyleItemProvider;
-	}
+        return shapeStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ConnectorStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ConnectorStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ConnectorStyleItemProvider connectorStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ConnectorStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ConnectorStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createConnectorStyleAdapter() {
-		if (connectorStyleItemProvider == null) {
-			connectorStyleItemProvider = new ConnectorStyleItemProvider(this);
-		}
+        if (connectorStyleItemProvider == null) {
+            connectorStyleItemProvider = new ConnectorStyleItemProvider(this);
+        }
 
-		return connectorStyleItemProvider;
-	}
+        return connectorStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Diagram} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Diagram} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DiagramItemProvider diagramItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Diagram}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Diagram}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createDiagramAdapter() {
-		if (diagramItemProvider == null) {
-			diagramItemProvider = new DiagramItemProvider(this);
-		}
+        if (diagramItemProvider == null) {
+            diagramItemProvider = new DiagramItemProvider(this);
+        }
 
-		return diagramItemProvider;
-	}
+        return diagramItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Image} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Image} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ImageItemProvider imageItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Image}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Image}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createImageAdapter() {
-		if (imageItemProvider == null) {
-			imageItemProvider = new ImageItemProvider(this);
-		}
+        if (imageItemProvider == null) {
+            imageItemProvider = new ImageItemProvider(this);
+        }
 
-		return imageItemProvider;
-	}
+        return imageItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.PageStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.PageStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected PageStyleItemProvider pageStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.PageStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.PageStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createPageStyleAdapter() {
-		if (pageStyleItemProvider == null) {
-			pageStyleItemProvider = new PageStyleItemProvider(this);
-		}
+        if (pageStyleItemProvider == null) {
+            pageStyleItemProvider = new PageStyleItemProvider(this);
+        }
 
-		return pageStyleItemProvider;
-	}
+        return pageStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DrawerStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DrawerStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DrawerStyleItemProvider drawerStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DrawerStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DrawerStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createDrawerStyleAdapter() {
-		if (drawerStyleItemProvider == null) {
-			drawerStyleItemProvider = new DrawerStyleItemProvider(this);
-		}
+        if (drawerStyleItemProvider == null) {
+            drawerStyleItemProvider = new DrawerStyleItemProvider(this);
+        }
 
-		return drawerStyleItemProvider;
-	}
+        return drawerStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.GuideStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.GuideStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GuideStyleItemProvider guideStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.GuideStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.GuideStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createGuideStyleAdapter() {
-		if (guideStyleItemProvider == null) {
-			guideStyleItemProvider = new GuideStyleItemProvider(this);
-		}
+        if (guideStyleItemProvider == null) {
+            guideStyleItemProvider = new GuideStyleItemProvider(this);
+        }
 
-		return guideStyleItemProvider;
-	}
+        return guideStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Guide} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Guide} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected GuideItemProvider guideItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Guide}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Guide}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createGuideAdapter() {
-		if (guideItemProvider == null) {
-			guideItemProvider = new GuideItemProvider(this);
-		}
+        if (guideItemProvider == null) {
+            guideItemProvider = new GuideItemProvider(this);
+        }
 
-		return guideItemProvider;
-	}
+        return guideItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected NodeEntryItemProvider nodeEntryItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link java.util.Map.Entry}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link java.util.Map.Entry}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createNodeEntryAdapter() {
-		if (nodeEntryItemProvider == null) {
-			nodeEntryItemProvider = new NodeEntryItemProvider(this);
-		}
+        if (nodeEntryItemProvider == null) {
+            nodeEntryItemProvider = new NodeEntryItemProvider(this);
+        }
 
-		return nodeEntryItemProvider;
-	}
+        return nodeEntryItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FilteringStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FilteringStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected FilteringStyleItemProvider filteringStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FilteringStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.FilteringStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createFilteringStyleAdapter() {
-		if (filteringStyleItemProvider == null) {
-			filteringStyleItemProvider = new FilteringStyleItemProvider(this);
-		}
+        if (filteringStyleItemProvider == null) {
+            filteringStyleItemProvider = new FilteringStyleItemProvider(this);
+        }
 
-		return filteringStyleItemProvider;
-	}
+        return filteringStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DiagramStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DiagramStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected DiagramStyleItemProvider diagramStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DiagramStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DiagramStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createDiagramStyleAdapter() {
-		if (diagramStyleItemProvider == null) {
-			diagramStyleItemProvider = new DiagramStyleItemProvider(this);
-		}
+        if (diagramStyleItemProvider == null) {
+            diagramStyleItemProvider = new DiagramStyleItemProvider(this);
+        }
 
-		return diagramStyleItemProvider;
-	}
+        return diagramStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ImageStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ImageStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ImageStyleItemProvider imageStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ImageStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ImageStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createImageStyleAdapter() {
-		if (imageStyleItemProvider == null) {
-			imageStyleItemProvider = new ImageStyleItemProvider(this);
-		}
+        if (imageStyleItemProvider == null) {
+            imageStyleItemProvider = new ImageStyleItemProvider(this);
+        }
 
-		return imageStyleItemProvider;
-	}
+        return imageStyleItemProvider;
+    }
 
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ImageBufferStyle} instances.
-	 * <!-- begin-user-doc -->
+    /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ImageBufferStyle} instances.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ImageBufferStyleItemProvider imageBufferStyleItemProvider;
 
-	/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ImageBufferStyle}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ImageBufferStyle}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter createImageBufferStyleAdapter() {
-		if (imageBufferStyleItemProvider == null) {
-			imageBufferStyleItemProvider = new ImageBufferStyleItemProvider(this);
-		}
+        if (imageBufferStyleItemProvider == null) {
+            imageBufferStyleItemProvider = new ImageBufferStyleItemProvider(this);
+        }
 
-		return imageBufferStyleItemProvider;
-	}
+        return imageBufferStyleItemProvider;
+    }
 
-	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+    /**
+     * This returns the root adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
+        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+    }
 
-	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+    /**
+     * This sets the composed adapter factory that contains this factory.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
+        this.parentAdapterFactory = parentAdapterFactory;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
+        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    }
 
-	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
+    /**
+     * This implementation substitutes the factory itself as the key for the adapter.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
+        return super.adapt(notifier, this);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class) || (((Class)type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
+        if (isFactoryForType(type)) {
+            Object adapter = super.adapt(object, type);
+            if (!(type instanceof Class) || (((Class)type).isInstance(adapter))) {
+                return adapter;
+            }
+        }
 
-		return null;
-	}
+        return null;
+    }
 
-	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
+    /**
+     * This adds a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
+        changeNotifier.addListener(notifyChangedListener);
+    }
 
-	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
+    /**
+     * This removes a listener.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
+        changeNotifier.removeListener(notifyChangedListener);
+    }
 
-	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
+    /**
+     * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
+        changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
+        if (parentAdapterFactory != null) {
+            parentAdapterFactory.fireNotifyChanged(notification);
+        }
+    }
 
-	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
+    /**
+     * This disposes all of the item providers created by this factory. 
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public void dispose() {
-		if (edgeItemProvider != null) edgeItemProvider.dispose();
-		if (nodeItemProvider != null) nodeItemProvider.dispose();
-		if (fillStyleItemProvider != null) fillStyleItemProvider.dispose();
-		if (lineStyleItemProvider != null) lineStyleItemProvider.dispose();
-		if (fontStyleItemProvider != null) fontStyleItemProvider.dispose();
-		if (titleStyleItemProvider != null) titleStyleItemProvider.dispose();
-		if (sortingStyleItemProvider != null) sortingStyleItemProvider.dispose();
-		if (descriptionStyleItemProvider != null) descriptionStyleItemProvider.dispose();
-		if (sizeItemProvider != null) sizeItemProvider.dispose();
-		if (locationItemProvider != null) locationItemProvider.dispose();
-		if (boundsItemProvider != null) boundsItemProvider.dispose();
-		if (ratioItemProvider != null) ratioItemProvider.dispose();
-		if (identityAnchorItemProvider != null) identityAnchorItemProvider.dispose();
-		if (routingStyleItemProvider != null) routingStyleItemProvider.dispose();
-		if (relativeBendpointsItemProvider != null) relativeBendpointsItemProvider.dispose();
-		if (diagramItemProvider != null) diagramItemProvider.dispose();
-		if (imageItemProvider != null) imageItemProvider.dispose();
-		if (canonicalStyleItemProvider != null) canonicalStyleItemProvider.dispose();
-		if (shapeStyleItemProvider != null) shapeStyleItemProvider.dispose();
-		if (connectorStyleItemProvider != null) connectorStyleItemProvider.dispose();
-		if (pageStyleItemProvider != null) pageStyleItemProvider.dispose();
-		if (drawerStyleItemProvider != null) drawerStyleItemProvider.dispose();
-		if (guideStyleItemProvider != null) guideStyleItemProvider.dispose();
-		if (guideItemProvider != null) guideItemProvider.dispose();
-		if (nodeEntryItemProvider != null) nodeEntryItemProvider.dispose();
-		if (filteringStyleItemProvider != null) filteringStyleItemProvider.dispose();
-		if (diagramStyleItemProvider != null) diagramStyleItemProvider.dispose();
-		if (imageStyleItemProvider != null) imageStyleItemProvider.dispose();
-		if (imageBufferStyleItemProvider != null) imageBufferStyleItemProvider.dispose();
-	}
+        if (edgeItemProvider != null) edgeItemProvider.dispose();
+        if (nodeItemProvider != null) nodeItemProvider.dispose();
+        if (fillStyleItemProvider != null) fillStyleItemProvider.dispose();
+        if (lineStyleItemProvider != null) lineStyleItemProvider.dispose();
+        if (fontStyleItemProvider != null) fontStyleItemProvider.dispose();
+        if (titleStyleItemProvider != null) titleStyleItemProvider.dispose();
+        if (sortingStyleItemProvider != null) sortingStyleItemProvider.dispose();
+        if (descriptionStyleItemProvider != null) descriptionStyleItemProvider.dispose();
+        if (sizeItemProvider != null) sizeItemProvider.dispose();
+        if (locationItemProvider != null) locationItemProvider.dispose();
+        if (boundsItemProvider != null) boundsItemProvider.dispose();
+        if (ratioItemProvider != null) ratioItemProvider.dispose();
+        if (identityAnchorItemProvider != null) identityAnchorItemProvider.dispose();
+        if (routingStyleItemProvider != null) routingStyleItemProvider.dispose();
+        if (relativeBendpointsItemProvider != null) relativeBendpointsItemProvider.dispose();
+        if (diagramItemProvider != null) diagramItemProvider.dispose();
+        if (imageItemProvider != null) imageItemProvider.dispose();
+        if (canonicalStyleItemProvider != null) canonicalStyleItemProvider.dispose();
+        if (shapeStyleItemProvider != null) shapeStyleItemProvider.dispose();
+        if (connectorStyleItemProvider != null) connectorStyleItemProvider.dispose();
+        if (pageStyleItemProvider != null) pageStyleItemProvider.dispose();
+        if (drawerStyleItemProvider != null) drawerStyleItemProvider.dispose();
+        if (guideStyleItemProvider != null) guideStyleItemProvider.dispose();
+        if (guideItemProvider != null) guideItemProvider.dispose();
+        if (nodeEntryItemProvider != null) nodeEntryItemProvider.dispose();
+        if (filteringStyleItemProvider != null) filteringStyleItemProvider.dispose();
+        if (diagramStyleItemProvider != null) diagramStyleItemProvider.dispose();
+        if (imageStyleItemProvider != null) imageStyleItemProvider.dispose();
+        if (imageBufferStyleItemProvider != null) imageBufferStyleItemProvider.dispose();
+    }
 
 }
