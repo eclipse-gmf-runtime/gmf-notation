@@ -250,7 +250,7 @@ public class DiagramImpl extends ViewImpl implements Diagram {
 	 */
 	public Edge createEdge(EClass eClass) {
 		Edge newEdge = (Edge) eClass.getEPackage().getEFactoryInstance().create(eClass);
-		getEdges().add(newEdge);
+		getPersistedEdges().add(newEdge);
 		return newEdge;
 	}
 
