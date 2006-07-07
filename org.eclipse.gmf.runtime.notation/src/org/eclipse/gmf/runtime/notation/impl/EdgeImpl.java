@@ -14,6 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.gmf.runtime.notation.Anchor;
@@ -123,9 +124,18 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated Not
      */
 	public NotificationChain basicSetSource(View newSource, NotificationChain msgs) {
+        if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
+            if (newSource!=null && newSource.eContainingFeature() == NotationPackage.eINSTANCE.getView_TransientChildren()){
+                EObject container = newSource.eContainer();
+                if (container!=null && container instanceof View){
+                    View parent = (View)container;
+                    parent.persistChildren();
+                }
+            }
+        }
         View oldSource = source;
         source = newSource;
         if (eNotificationRequired()) {
@@ -166,9 +176,18 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated Not
      */
 	public NotificationChain basicSetTarget(View newTarget, NotificationChain msgs) {
+        if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
+            if (newTarget!=null && newTarget.eContainingFeature() == NotationPackage.eINSTANCE.getView_TransientChildren()){
+                EObject container = newTarget.eContainer();
+                if (container!=null && container instanceof View){
+                    View parent = (View)container;
+                    parent.persistChildren();
+                }
+            }
+        }
         View oldTarget = target;
         target = newTarget;
         if (eNotificationRequired()) {
