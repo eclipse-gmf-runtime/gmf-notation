@@ -87,6 +87,8 @@ public class NodeEntryItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_NodeEntry_value_feature", "_UI_NodeEntry_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.NODE_ENTRY__VALUE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -107,6 +109,8 @@ public class NodeEntryItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_NodeEntry_key_feature", "_UI_NodeEntry_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.NODE_ENTRY__KEY,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -119,7 +123,7 @@ public class NodeEntryItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/NodeEntry"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/NodeEntry")); //$NON-NLS-1$
     }
 
     /**

@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -44,7 +44,7 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class RoutingStyleImpl extends EObjectImpl implements RoutingStyle {
+public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
     /**
      * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -372,7 +372,7 @@ public class RoutingStyleImpl extends EObjectImpl implements RoutingStyle {
             case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
                 return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -404,7 +404,7 @@ public class RoutingStyleImpl extends EObjectImpl implements RoutingStyle {
                 setJumpLinksReverse(((Boolean)newValue).booleanValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -436,7 +436,7 @@ public class RoutingStyleImpl extends EObjectImpl implements RoutingStyle {
                 setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -461,7 +461,7 @@ public class RoutingStyleImpl extends EObjectImpl implements RoutingStyle {
             case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
                 return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

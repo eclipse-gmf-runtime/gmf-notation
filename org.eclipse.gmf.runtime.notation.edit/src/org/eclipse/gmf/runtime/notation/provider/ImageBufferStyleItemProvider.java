@@ -91,7 +91,7 @@ public class ImageBufferStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/ImageBufferStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/ImageBufferStyle")); //$NON-NLS-1$
     }
 
     /**

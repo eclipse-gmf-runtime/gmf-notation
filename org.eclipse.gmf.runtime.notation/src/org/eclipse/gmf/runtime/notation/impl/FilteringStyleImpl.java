@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.Filtering;
 import org.eclipse.gmf.runtime.notation.FilteringStyle;
@@ -46,7 +46,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class FilteringStyleImpl extends EObjectImpl implements FilteringStyle {
+public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyle {
     /**
      * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -198,7 +198,7 @@ public class FilteringStyleImpl extends EObjectImpl implements FilteringStyle {
             case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
                 return getFilteredObjects();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -219,7 +219,7 @@ public class FilteringStyleImpl extends EObjectImpl implements FilteringStyle {
                 getFilteredObjects().addAll((Collection)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -239,7 +239,7 @@ public class FilteringStyleImpl extends EObjectImpl implements FilteringStyle {
                 getFilteredObjects().clear();
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -256,7 +256,7 @@ public class FilteringStyleImpl extends EObjectImpl implements FilteringStyle {
             case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
                 return filteredObjects != null && !filteredObjects.isEmpty();
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

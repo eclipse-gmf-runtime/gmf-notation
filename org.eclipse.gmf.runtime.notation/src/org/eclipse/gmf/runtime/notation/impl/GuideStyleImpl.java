@@ -17,7 +17,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Guide;
@@ -41,7 +41,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
+public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
     /**
      * The cached value of the '{@link #getHorizontalGuides() <em>Horizontal Guides</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -116,7 +116,7 @@ public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
             case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
                 return ((InternalEList)getVerticalGuides()).basicRemove(otherEnd, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -131,7 +131,7 @@ public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
             case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
                 return getVerticalGuides();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -150,7 +150,7 @@ public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
                 getVerticalGuides().addAll((Collection)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -167,7 +167,7 @@ public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
                 getVerticalGuides().clear();
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -182,7 +182,7 @@ public class GuideStyleImpl extends EObjectImpl implements GuideStyle {
             case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
                 return verticalGuides != null && !verticalGuides.isEmpty();
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
 } //GuideStyleImpl

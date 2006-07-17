@@ -86,6 +86,8 @@ public class ImageItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Image_data_feature", "_UI_Image_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.IMAGE__DATA,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class ImageItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Image"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Image")); //$NON-NLS-1$
     }
 
     /**

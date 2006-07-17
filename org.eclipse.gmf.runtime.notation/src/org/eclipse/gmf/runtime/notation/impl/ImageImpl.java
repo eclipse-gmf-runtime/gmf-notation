@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Image;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class ImageImpl extends EObjectImpl implements Image {
+public class ImageImpl extends FlatEObjectImpl implements Image {
     /**
      * The default value of the '{@link #getData() <em>Data</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class ImageImpl extends EObjectImpl implements Image {
             case NotationPackage.IMAGE__DATA:
                 return getData();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -118,7 +118,7 @@ public class ImageImpl extends EObjectImpl implements Image {
                 setData((byte[])newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -132,7 +132,7 @@ public class ImageImpl extends EObjectImpl implements Image {
                 setData(DATA_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -145,7 +145,7 @@ public class ImageImpl extends EObjectImpl implements Image {
             case NotationPackage.IMAGE__DATA:
                 return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

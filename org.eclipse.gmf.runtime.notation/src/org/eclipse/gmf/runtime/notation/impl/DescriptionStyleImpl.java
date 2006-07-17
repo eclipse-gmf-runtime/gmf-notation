@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class DescriptionStyleImpl extends EObjectImpl implements DescriptionStyle {
+public class DescriptionStyleImpl extends FlatEObjectImpl implements DescriptionStyle {
     /**
      * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class DescriptionStyleImpl extends EObjectImpl implements DescriptionStyl
             case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
                 return getDescription();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -118,7 +118,7 @@ public class DescriptionStyleImpl extends EObjectImpl implements DescriptionStyl
                 setDescription((String)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -132,7 +132,7 @@ public class DescriptionStyleImpl extends EObjectImpl implements DescriptionStyl
                 setDescription(DESCRIPTION_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -145,7 +145,7 @@ public class DescriptionStyleImpl extends EObjectImpl implements DescriptionStyl
             case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
                 return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

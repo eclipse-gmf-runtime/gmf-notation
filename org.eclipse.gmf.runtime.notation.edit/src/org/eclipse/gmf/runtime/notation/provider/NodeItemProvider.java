@@ -97,7 +97,7 @@ public class NodeItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getString("_UI_Node_layoutConstraint_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_layoutConstraint_feature", "_UI_Node_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getNode_LayoutConstraint(),
+				 NotationPackage.Literals.NODE__LAYOUT_CONSTRAINT,
 				 false,
 				 null));
 	}
@@ -109,7 +109,7 @@ public class NodeItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Node"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Node")); //$NON-NLS-1$
     }
 
     /**

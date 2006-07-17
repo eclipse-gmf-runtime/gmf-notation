@@ -95,6 +95,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontName_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_NAME,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -115,6 +117,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontHeight_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_HEIGHT,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -135,6 +139,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_bold_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__BOLD,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -155,6 +161,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_italic_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__ITALIC,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -175,6 +183,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_underline_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__UNDERLINE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -195,6 +205,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_strikeThrough_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__STRIKE_THROUGH,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -215,6 +227,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontColor_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -235,6 +249,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_DescriptionStyle_description_feature", "_UI_DescriptionStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.DESCRIPTION_STYLE__DESCRIPTION,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -255,6 +271,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FillStyle_fillColor_feature", "_UI_FillStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FILL_STYLE__FILL_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -275,6 +293,8 @@ public class ShapeStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineColor_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.LINE_STYLE__LINE_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -287,7 +307,7 @@ public class ShapeStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/ShapeStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/ShapeStyle")); //$NON-NLS-1$
     }
 
     /**

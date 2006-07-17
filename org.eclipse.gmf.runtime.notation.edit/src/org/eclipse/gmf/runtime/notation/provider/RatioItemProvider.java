@@ -86,6 +86,8 @@ public class RatioItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Ratio_value_feature", "_UI_Ratio_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.RATIO__VALUE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.REAL_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class RatioItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Ratio"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Ratio")); //$NON-NLS-1$
     }
 
     /**

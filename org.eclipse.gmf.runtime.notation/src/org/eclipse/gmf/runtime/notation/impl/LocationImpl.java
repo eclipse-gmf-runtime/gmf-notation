@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -35,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class LocationImpl extends EObjectImpl implements Location {
+public class LocationImpl extends FlatEObjectImpl implements Location {
     /**
      * The default value of the '{@link #getX() <em>X</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -148,7 +148,7 @@ public class LocationImpl extends EObjectImpl implements Location {
             case NotationPackage.LOCATION__Y:
                 return new Integer(getY());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -165,7 +165,7 @@ public class LocationImpl extends EObjectImpl implements Location {
                 setY(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -182,7 +182,7 @@ public class LocationImpl extends EObjectImpl implements Location {
                 setY(Y_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -197,7 +197,7 @@ public class LocationImpl extends EObjectImpl implements Location {
             case NotationPackage.LOCATION__Y:
                 return y != Y_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

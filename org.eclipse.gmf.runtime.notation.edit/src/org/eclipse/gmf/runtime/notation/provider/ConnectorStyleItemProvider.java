@@ -94,6 +94,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_routing_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__ROUTING,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -114,6 +116,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_smoothness_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__SMOOTHNESS,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -134,6 +138,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_avoidObstructions_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__AVOID_OBSTRUCTIONS,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -154,6 +160,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_closestDistance_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__CLOSEST_DISTANCE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -174,6 +182,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinkStatus_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__JUMP_LINK_STATUS,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -194,6 +204,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinkType_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__JUMP_LINK_TYPE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -214,6 +226,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinksReverse_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.ROUTING_STYLE__JUMP_LINKS_REVERSE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -234,6 +248,8 @@ public class ConnectorStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineColor_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.LINE_STYLE__LINE_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -246,7 +262,7 @@ public class ConnectorStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/ConnectorStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/ConnectorStyle")); //$NON-NLS-1$
     }
 
     /**

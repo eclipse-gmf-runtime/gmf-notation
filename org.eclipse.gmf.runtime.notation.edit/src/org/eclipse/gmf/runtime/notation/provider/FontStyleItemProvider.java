@@ -92,6 +92,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontName_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_NAME,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -112,6 +114,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontHeight_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_HEIGHT,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -132,6 +136,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_bold_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__BOLD,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -152,6 +158,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_italic_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__ITALIC,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -172,6 +180,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_underline_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__UNDERLINE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -192,6 +202,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_strikeThrough_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__STRIKE_THROUGH,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -212,6 +224,8 @@ public class FontStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FontStyle_fontColor_feature", "_UI_FontStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FONT_STYLE__FONT_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -224,7 +238,7 @@ public class FontStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/FontStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/FontStyle")); //$NON-NLS-1$
     }
 
     /**

@@ -16,6 +16,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.Image;
 import org.eclipse.gmf.runtime.notation.ImageBufferStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -115,10 +116,12 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
      */
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case NotationPackage.IMAGE_BUFFER_STYLE__CROP_BOUND:
+                return basicSetCropBound(null, msgs);
             case NotationPackage.IMAGE_BUFFER_STYLE__IMAGE_BUFFER:
                 return basicSetImageBuffer(null, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -128,10 +131,16 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
      */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
+                return getAntiAlias();
+            case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:
+                return getMaintainAspectRatio();
+            case NotationPackage.IMAGE_BUFFER_STYLE__CROP_BOUND:
+                return getCropBound();
             case NotationPackage.IMAGE_BUFFER_STYLE__IMAGE_BUFFER:
                 return getImageBuffer();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -141,11 +150,20 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
      */
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
+                setAntiAlias((Boolean)newValue);
+                return;
+            case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:
+                setMaintainAspectRatio((Boolean)newValue);
+                return;
+            case NotationPackage.IMAGE_BUFFER_STYLE__CROP_BOUND:
+                setCropBound((Bounds)newValue);
+                return;
             case NotationPackage.IMAGE_BUFFER_STYLE__IMAGE_BUFFER:
                 setImageBuffer((Image)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -155,11 +173,20 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
      */
     public void eUnset(int featureID) {
         switch (featureID) {
+            case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
+                setAntiAlias(ANTI_ALIAS_EDEFAULT);
+                return;
+            case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:
+                setMaintainAspectRatio(MAINTAIN_ASPECT_RATIO_EDEFAULT);
+                return;
+            case NotationPackage.IMAGE_BUFFER_STYLE__CROP_BOUND:
+                setCropBound((Bounds)null);
+                return;
             case NotationPackage.IMAGE_BUFFER_STYLE__IMAGE_BUFFER:
                 setImageBuffer((Image)null);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -169,10 +196,16 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
      */
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
+                return ANTI_ALIAS_EDEFAULT == null ? antiAlias != null : !ANTI_ALIAS_EDEFAULT.equals(antiAlias);
+            case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:
+                return MAINTAIN_ASPECT_RATIO_EDEFAULT == null ? maintainAspectRatio != null : !MAINTAIN_ASPECT_RATIO_EDEFAULT.equals(maintainAspectRatio);
+            case NotationPackage.IMAGE_BUFFER_STYLE__CROP_BOUND:
+                return cropBound != null;
             case NotationPackage.IMAGE_BUFFER_STYLE__IMAGE_BUFFER:
                 return imageBuffer != null;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
 } //ImageBufferStyleImpl

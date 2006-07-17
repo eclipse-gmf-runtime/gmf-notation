@@ -86,6 +86,8 @@ public class DrawerStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_DrawerStyle_collapsed_feature", "_UI_DrawerStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.DRAWER_STYLE__COLLAPSED,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class DrawerStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/DrawerStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/DrawerStyle")); //$NON-NLS-1$
     }
 
     /**

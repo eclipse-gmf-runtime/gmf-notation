@@ -88,6 +88,8 @@ public class DiagramItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Diagram_name_feature", "_UI_Diagram_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.DIAGRAM__NAME,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -106,7 +108,7 @@ public class DiagramItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Diagram_measurementUnit_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_measurementUnit_feature", "_UI_Diagram_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getDiagram_MeasurementUnit(),
+				 NotationPackage.Literals.DIAGRAM__MEASUREMENT_UNIT,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -149,7 +151,7 @@ public class DiagramItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Diagram"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Diagram")); //$NON-NLS-1$
     }
 
     /**

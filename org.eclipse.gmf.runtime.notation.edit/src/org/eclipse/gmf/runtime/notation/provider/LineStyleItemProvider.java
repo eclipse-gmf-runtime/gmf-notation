@@ -86,6 +86,8 @@ public class LineStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineColor_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.LINE_STYLE__LINE_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class LineStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/LineStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/LineStyle")); //$NON-NLS-1$
     }
 
     /**

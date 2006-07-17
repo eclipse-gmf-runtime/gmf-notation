@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -40,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class NodeEntryImpl extends EObjectImpl implements BasicEMap.Entry {
+public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
     /**
      * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -141,7 +141,7 @@ public class NodeEntryImpl extends EObjectImpl implements BasicEMap.Entry {
                 if (resolve) return getTypedKey();
                 return basicGetTypedKey();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -158,7 +158,7 @@ public class NodeEntryImpl extends EObjectImpl implements BasicEMap.Entry {
                 setTypedKey((Node)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -175,7 +175,7 @@ public class NodeEntryImpl extends EObjectImpl implements BasicEMap.Entry {
                 setTypedKey((Node)null);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -190,7 +190,7 @@ public class NodeEntryImpl extends EObjectImpl implements BasicEMap.Entry {
             case NotationPackage.NODE_ENTRY__KEY:
                 return key != null;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

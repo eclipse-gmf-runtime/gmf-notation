@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class FillStyleImpl extends EObjectImpl implements FillStyle {
+public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
     /**
      * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class FillStyleImpl extends EObjectImpl implements FillStyle {
             case NotationPackage.FILL_STYLE__FILL_COLOR:
                 return new Integer(getFillColor());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -118,7 +118,7 @@ public class FillStyleImpl extends EObjectImpl implements FillStyle {
                 setFillColor(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -132,7 +132,7 @@ public class FillStyleImpl extends EObjectImpl implements FillStyle {
                 setFillColor(FILL_COLOR_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -145,7 +145,7 @@ public class FillStyleImpl extends EObjectImpl implements FillStyle {
             case NotationPackage.FILL_STYLE__FILL_COLOR:
                 return fillColor != FILL_COLOR_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

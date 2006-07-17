@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
@@ -52,7 +52,7 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
+public class DiagramStyleImpl extends FlatEObjectImpl implements DiagramStyle {
     /**
      * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -332,7 +332,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
             case NotationPackage.DIAGRAM_STYLE__VERTICAL_GUIDES:
                 return ((InternalEList)getVerticalGuides()).basicRemove(otherEnd, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -357,7 +357,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
             case NotationPackage.DIAGRAM_STYLE__DESCRIPTION:
                 return getDescription();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -391,7 +391,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
                 setDescription((String)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -423,7 +423,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
                 setDescription(DESCRIPTION_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -448,7 +448,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
             case NotationPackage.DIAGRAM_STYLE__DESCRIPTION:
                 return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

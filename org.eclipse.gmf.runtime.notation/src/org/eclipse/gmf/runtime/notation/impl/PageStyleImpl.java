@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PageStyle;
 
@@ -37,7 +37,7 @@ import org.eclipse.gmf.runtime.notation.PageStyle;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class PageStyleImpl extends EObjectImpl implements PageStyle {
+public class PageStyleImpl extends FlatEObjectImpl implements PageStyle {
     /**
      * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -236,7 +236,7 @@ public class PageStyleImpl extends EObjectImpl implements PageStyle {
             case NotationPackage.PAGE_STYLE__PAGE_HEIGHT:
                 return new Integer(getPageHeight());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -259,7 +259,7 @@ public class PageStyleImpl extends EObjectImpl implements PageStyle {
                 setPageHeight(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -282,7 +282,7 @@ public class PageStyleImpl extends EObjectImpl implements PageStyle {
                 setPageHeight(PAGE_HEIGHT_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -301,7 +301,7 @@ public class PageStyleImpl extends EObjectImpl implements PageStyle {
             case NotationPackage.PAGE_STYLE__PAGE_HEIGHT:
                 return pageHeight != PAGE_HEIGHT_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

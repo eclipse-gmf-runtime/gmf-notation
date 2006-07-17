@@ -16,7 +16,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.ImageStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -39,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
+public class ImageStyleImpl extends FlatEObjectImpl implements ImageStyle {
     /**
      * The default value of the '{@link #getAntiAlias() <em>Anti Alias</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -203,7 +203,7 @@ public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
             case NotationPackage.IMAGE_STYLE__CROP_BOUND:
                 return basicSetCropBound(null, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -220,7 +220,7 @@ public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
             case NotationPackage.IMAGE_STYLE__CROP_BOUND:
                 return getCropBound();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -240,7 +240,7 @@ public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
                 setCropBound((Bounds)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -260,7 +260,7 @@ public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
                 setCropBound((Bounds)null);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -277,7 +277,7 @@ public class ImageStyleImpl extends EObjectImpl implements ImageStyle {
             case NotationPackage.IMAGE_STYLE__CROP_BOUND:
                 return cropBound != null;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

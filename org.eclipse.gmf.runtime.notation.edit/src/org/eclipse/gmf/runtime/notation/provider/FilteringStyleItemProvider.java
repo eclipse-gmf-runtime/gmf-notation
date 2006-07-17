@@ -89,6 +89,8 @@ public class FilteringStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filtering_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FILTERING_STYLE__FILTERING,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -109,6 +111,8 @@ public class FilteringStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteringKeys_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FILTERING_STYLE__FILTERING_KEYS,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -129,6 +133,8 @@ public class FilteringStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FilteringStyle_filteredObjects_feature", "_UI_FilteringStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FILTERING_STYLE__FILTERED_OBJECTS,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -141,7 +147,7 @@ public class FilteringStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/FilteringStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/FilteringStyle")); //$NON-NLS-1$
     }
 
     /**

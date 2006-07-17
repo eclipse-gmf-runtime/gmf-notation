@@ -87,6 +87,8 @@ public class LocationItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Location_x_feature", "_UI_Location_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.LOCATION__X,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -107,6 +109,8 @@ public class LocationItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Location_y_feature", "_UI_Location_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.LOCATION__Y,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -119,7 +123,7 @@ public class LocationItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Location"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Location")); //$NON-NLS-1$
     }
 
     /**

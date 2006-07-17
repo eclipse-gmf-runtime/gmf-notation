@@ -86,6 +86,8 @@ public class FillStyleItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_FillStyle_fillColor_feature", "_UI_FillStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.FILL_STYLE__FILL_COLOR,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class FillStyleItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/FillStyle"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/FillStyle")); //$NON-NLS-1$
     }
 
     /**
