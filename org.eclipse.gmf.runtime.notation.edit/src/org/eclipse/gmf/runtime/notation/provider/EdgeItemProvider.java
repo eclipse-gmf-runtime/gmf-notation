@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -85,6 +85,8 @@ public class EdgeItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.EDGE__SOURCE,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -105,6 +107,8 @@ public class EdgeItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.EDGE__TARGET,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -151,7 +155,7 @@ public class EdgeItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getString("_UI_Edge_sourceAnchor_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_Edge_sourceAnchor_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getEdge_SourceAnchor(),
+				 NotationPackage.Literals.EDGE__SOURCE_ANCHOR,
 				 true));
 	}
 
@@ -166,7 +170,7 @@ public class EdgeItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getString("_UI_Edge_targetAnchor_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_Edge_targetAnchor_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getEdge_TargetAnchor(),
+				 NotationPackage.Literals.EDGE__TARGET_ANCHOR,
 				 true));
 	}
 
@@ -181,7 +185,7 @@ public class EdgeItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getString("_UI_Edge_bendpoints_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_Edge_bendpoints_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getEdge_Bendpoints(),
+				 NotationPackage.Literals.EDGE__BENDPOINTS,
 				 false));
 	}
 
@@ -192,7 +196,7 @@ public class EdgeItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/Edge"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/Edge")); //$NON-NLS-1$
     }
 
     /**

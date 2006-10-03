@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Size;
 
@@ -35,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.Size;
 /*
  * @canBeSeenBy %partners
  */
-public class SizeImpl extends EObjectImpl implements Size {
+public class SizeImpl extends FlatEObjectImpl implements Size {
     /**
      * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -148,7 +148,7 @@ public class SizeImpl extends EObjectImpl implements Size {
             case NotationPackage.SIZE__HEIGHT:
                 return new Integer(getHeight());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -165,7 +165,7 @@ public class SizeImpl extends EObjectImpl implements Size {
                 setHeight(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -182,7 +182,7 @@ public class SizeImpl extends EObjectImpl implements Size {
                 setHeight(HEIGHT_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -197,7 +197,7 @@ public class SizeImpl extends EObjectImpl implements Size {
             case NotationPackage.SIZE__HEIGHT:
                 return height != HEIGHT_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

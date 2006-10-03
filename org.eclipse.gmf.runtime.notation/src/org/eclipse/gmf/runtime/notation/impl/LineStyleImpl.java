@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class LineStyleImpl extends EObjectImpl implements LineStyle {
+public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
     /**
      * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class LineStyleImpl extends EObjectImpl implements LineStyle {
             case NotationPackage.LINE_STYLE__LINE_COLOR:
                 return new Integer(getLineColor());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -118,7 +118,7 @@ public class LineStyleImpl extends EObjectImpl implements LineStyle {
                 setLineColor(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -132,7 +132,7 @@ public class LineStyleImpl extends EObjectImpl implements LineStyle {
                 setLineColor(LINE_COLOR_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -145,7 +145,7 @@ public class LineStyleImpl extends EObjectImpl implements LineStyle {
             case NotationPackage.LINE_STYLE__LINE_COLOR:
                 return lineColor != LINE_COLOR_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

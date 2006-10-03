@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -86,6 +86,8 @@ public class IdentityAnchorItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_IdentityAnchor_id_feature", "_UI_IdentityAnchor_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.IDENTITY_ANCHOR__ID,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -98,7 +100,7 @@ public class IdentityAnchorItemProvider
      * @generated
      */
 	public Object getImage(Object object) {
-        return getResourceLocator().getImage("full/obj16/IdentityAnchor"); //$NON-NLS-1$
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/IdentityAnchor")); //$NON-NLS-1$
     }
 
     /**

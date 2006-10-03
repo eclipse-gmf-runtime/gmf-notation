@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Guide;
@@ -41,7 +41,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class GuideImpl extends EObjectImpl implements Guide {
+public class GuideImpl extends FlatEObjectImpl implements Guide {
     /**
      * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public class GuideImpl extends EObjectImpl implements Guide {
             case NotationPackage.GUIDE__NODE_MAP:
                 return ((InternalEList)getNodeMap()).basicRemove(otherEnd, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -149,7 +149,7 @@ public class GuideImpl extends EObjectImpl implements Guide {
                 if (coreType) return getNodeMap();
                 else return getNodeMap().map();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -166,7 +166,7 @@ public class GuideImpl extends EObjectImpl implements Guide {
                 ((EStructuralFeature.Setting)getNodeMap()).set(newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -183,7 +183,7 @@ public class GuideImpl extends EObjectImpl implements Guide {
                 getNodeMap().clear();
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -198,7 +198,7 @@ public class GuideImpl extends EObjectImpl implements Guide {
             case NotationPackage.GUIDE__NODE_MAP:
                 return nodeMap != null && !nodeMap.isEmpty();
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

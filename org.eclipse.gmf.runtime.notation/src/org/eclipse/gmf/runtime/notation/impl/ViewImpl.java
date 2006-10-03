@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -19,6 +19,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -38,196 +39,186 @@ import org.eclipse.gmf.runtime.notation.Style;
 import org.eclipse.gmf.runtime.notation.View;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>View</b></em>'.
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>View</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isMutable <em>Mutable</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getSourceEdges <em>Source Edges</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getTargetEdges <em>Target Edges</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getPersistedChildren <em>Persisted Children</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getStyles <em>Styles</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getElement <em>Element</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getDiagram <em>Diagram</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getTransientChildren <em>Transient Children</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isVisible <em>Visible</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getType <em>Type</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isMutable <em>Mutable</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getSourceEdges <em>Source Edges</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getTargetEdges <em>Target Edges</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getPersistedChildren <em>Persisted Children</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getStyles <em>Styles</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getElement <em>Element</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getDiagram <em>Diagram</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getTransientChildren <em>Transient Children</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public abstract class ViewImpl extends EModelElementImpl implements View {
+public abstract class ViewImpl
+    extends EModelElementImpl
+    implements View {
+
     /**
      * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #isVisible()
      * @generated
      * @ordered
      */
-	protected static final boolean VISIBLE_EDEFAULT = true;
+    protected static final boolean VISIBLE_EDEFAULT = true;
 
     /**
      * The flag representing the value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #isVisible()
      * @generated
      * @ordered
      */
-	protected static final int VISIBLE_EFLAG = 1 << 8;
+    protected static final int VISIBLE_EFLAG = 1 << 8;
 
     /**
      * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getType()
      * @generated
      * @ordered
      */
-	protected static final String TYPE_EDEFAULT = ""; //$NON-NLS-1$
+    protected static final String TYPE_EDEFAULT = ""; //$NON-NLS-1$
 
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getType()
      * @generated
      * @ordered
      */
-	protected String type = TYPE_EDEFAULT;
+    protected String type = TYPE_EDEFAULT;
 
     /**
      * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #isMutable()
      * @generated
      * @ordered
      */
-	protected static final boolean MUTABLE_EDEFAULT = false;
+    protected static final boolean MUTABLE_EDEFAULT = false;
 
     /**
      * The flag representing the value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #isMutable()
      * @generated
      * @ordered
      */
-	protected static final int MUTABLE_EFLAG = 1 << 9;
+    protected static final int MUTABLE_EFLAG = 1 << 9;
 
     /**
      * The cached value of the '{@link #getSourceEdges() <em>Source Edges</em>}' reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getSourceEdges()
      * @generated
      * @ordered
      */
-	protected EList sourceEdges = null;
+    protected EList sourceEdges = null;
 
     /**
      * The cached value of the '{@link #getTargetEdges() <em>Target Edges</em>}' reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTargetEdges()
      * @generated
      * @ordered
      */
-	protected EList targetEdges = null;
+    protected EList targetEdges = null;
 
     /**
      * The cached value of the '{@link #getPersistedChildren() <em>Persisted Children</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getPersistedChildren()
      * @generated
      * @ordered
      */
-	protected EList persistedChildren = null;
+    protected EList persistedChildren = null;
 
     /**
      * The cached value of the '{@link #getStyles() <em>Styles</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getStyles()
      * @generated
      * @ordered
      */
-	protected EList styles = null;
+    protected EList styles = null;
 
     /**
      * The cached value of the '{@link #getElement() <em>Element</em>}' reference.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getElement()
      * @generated
      * @ordered
      */
-	protected EObject element = null;
+    protected EObject element = null;
 
     /**
-     * The flag representing whether the Element reference has been set.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * The flag representing whether the Element reference has been set. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
-	protected static final int ELEMENT_ESETFLAG = 1 << 10;
+    protected static final int ELEMENT_ESETFLAG = 1 << 10;
 
     /**
      * The cached value of the '{@link #getTransientChildren() <em>Transient Children</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTransientChildren()
      * @generated
      * @ordered
      */
-	protected EList transientChildren = null;
-	
-	private EContentsEList allChildren = null;
+    protected EList transientChildren = null;
+
+    private EContentsEList allChildren = null;
+
+    protected static final EStructuralFeature[] childrenFeatures = new EStructuralFeature[] {
+        NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+        NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN};
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	protected ViewImpl() {
+    protected ViewImpl() {
         super();
         eFlags |= VISIBLE_EFLAG;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	protected EClass eStaticClass() {
+    protected EClass eStaticClass() {
         return NotationPackage.Literals.VIEW;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public boolean isVisible() {
+    public boolean isVisible() {
         return (eFlags & VISIBLE_EFLAG) != 0;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setVisible(boolean newVisible) {
+    public void setVisible(boolean newVisible) {
         boolean oldVisible = (eFlags & VISIBLE_EFLAG) != 0;
         if (newVisible) eFlags |= VISIBLE_EFLAG; else eFlags &= ~VISIBLE_EFLAG;
         if (eNotificationRequired())
@@ -235,42 +226,40 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String getType() {
+    public String getType() {
         return type;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = (newType == null)?null:newType.intern();
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.VIEW__TYPE, oldType, type));
-	}
-
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated NOT
+     */
+    public void setType(String newType) {
+        String oldType = type;
+        type = (newType == null) ? null
+            : newType.intern();
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                NotationPackage.VIEW__TYPE, oldType, type));
+    }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public boolean isMutable() {
+    public boolean isMutable() {
         return (eFlags & MUTABLE_EFLAG) != 0;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setMutable(boolean newMutable) {
+    public void setMutable(boolean newMutable) {
         boolean oldMutable = (eFlags & MUTABLE_EFLAG) != 0;
         if (newMutable) eFlags |= MUTABLE_EFLAG; else eFlags &= ~MUTABLE_EFLAG;
         if (eNotificationRequired())
@@ -278,11 +267,10 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList getSourceEdges() {
+    public EList getSourceEdges() {
         if (sourceEdges == null) {
             sourceEdges = new EObjectWithInverseEList(Edge.class, this, NotationPackage.VIEW__SOURCE_EDGES, NotationPackage.EDGE__SOURCE);
         }
@@ -290,11 +278,10 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList getTargetEdges() {
+    public EList getTargetEdges() {
         if (targetEdges == null) {
             targetEdges = new EObjectWithInverseEList(Edge.class, this, NotationPackage.VIEW__TARGET_EDGES, NotationPackage.EDGE__TARGET);
         }
@@ -302,83 +289,76 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList getPersistedChildren() {
+    public EList getPersistedChildren() {
         if (persistedChildren == null) {
             persistedChildren = new EObjectContainmentEList(Node.class, this, NotationPackage.VIEW__PERSISTED_CHILDREN);
         }
         return persistedChildren;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public EList getChildren() {
-		if (allChildren == null){
-			allChildren =  new EContentsEList(this, 
-				new EStructuralFeature[] {
-					NotationPackage.eINSTANCE.getView_PersistedChildren(),
-					NotationPackage.eINSTANCE.getView_TransientChildren()});
-		}
-		return allChildren;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public EList getChildren() {
+        if (allChildren == null) {
+            allChildren = new EContentsEList(this, childrenFeatures);
+        }
+        return allChildren;
+    }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList getStyles() {
+    public EList getStyles() {
         if (styles == null) {
             styles = new EObjectContainmentEList(Style.class, this, NotationPackage.VIEW__STYLES);
         }
         return styles;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EObject getElement() {
-		if (!isSetElement()){
-			EObject container = eContainer();
-			if (container instanceof View){
-				View view = (View)container;
-				element = view.getElement();
-			}
-		}
-		if (element != null && element.eIsProxy()) {
-			EObject oldElement = element;
-			element = eResolveProxy((InternalEObject)element);
-			if (element != oldElement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.VIEW__ELEMENT, oldElement, element));
-			}
-		}
-		
-		return element;
-	}
-
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated NOT
      */
-	public EObject basicGetElement() {
+    public EObject getElement() {
+        if (!isSetElement()) {
+            EObject container = eContainer();
+            if (container instanceof View) {
+                View view = (View) container;
+                element = view.getElement();
+            }
+        }
+        if (element != null && element.eIsProxy()) {
+            EObject oldElement = element;
+            element = eResolveProxy((InternalEObject) element);
+            if (element != oldElement) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                        NotationPackage.VIEW__ELEMENT, oldElement, element));
+            }
+        }
+
         return element;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setElement(EObject newElement) {
+    public EObject basicGetElement() {
+        return element;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public void setElement(EObject newElement) {
         EObject oldElement = element;
         element = newElement;
         boolean oldElementESet = (eFlags & ELEMENT_ESETFLAG) != 0;
@@ -388,11 +368,10 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void unsetElement() {
+    public void unsetElement() {
         EObject oldElement = element;
         boolean oldElementESet = (eFlags & ELEMENT_ESETFLAG) != 0;
         element = null;
@@ -402,104 +381,104 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public boolean isSetElement() {
+    public boolean isSetElement() {
         return (eFlags & ELEMENT_ESETFLAG) != 0;
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public Diagram getDiagram() {
+    public Diagram getDiagram() {
         Diagram diagram = basicGetDiagram();
         return diagram != null && diagram.eIsProxy() ? (Diagram)eResolveProxy((InternalEObject)diagram) : diagram;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public Diagram basicGetDiagram() {
-		for (EObject parent = this; parent != null; parent = parent.eContainer())
-			if (NotationPackage.eINSTANCE.getDiagram().isSuperTypeOf(parent.eClass()))
-				return (Diagram) parent;
-		return null;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public Diagram basicGetDiagram() {
+        for (EObject parent = this; parent != null; parent = parent
+            .eContainer())
+            if (NotationPackage.Literals.DIAGRAM.isSuperTypeOf(
+                parent.eClass()))
+                return (Diagram) parent;
+        return null;
+    }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList getTransientChildren() {
+    public EList getTransientChildren() {
         if (transientChildren == null) {
             transientChildren = new EObjectContainmentEList(Node.class, this, NotationPackage.VIEW__TRANSIENT_CHILDREN);
         }
         return transientChildren;
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public Style getStyle(EClass eClass) {
-		if (eClass != null && eIsSet(NotationPackage.eINSTANCE.getView_Styles())) {
-			for (Iterator i = getStyles().iterator(); i.hasNext();) {
-				Style style = (Style) i.next();
-				if (style.eClass() == eClass || eClass.isInstance(style))
-					return style;
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public Node createChild(EClass eClass) {
-		Node newChild = (Node) eClass.getEPackage().getEFactoryInstance().create(eClass);
-		getPersistedChildren().add(newChild);
-		return newChild;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public Style createStyle(EClass eClass) {
-		Style newStyle = (Style) eClass.getEPackage().getEFactoryInstance().create(eClass);
-		getStyles().add(newStyle);
-		return newStyle;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public Style getStyle(EClass eClass) {
+        if (eClass != null
+            && eIsSet(NotationPackage.Literals.VIEW__STYLES)) {
+            for (Iterator i = getStyles().iterator(); i.hasNext();) {
+                Style style = (Style) i.next();
+                if (style.eClass() == eClass || eClass.isInstance(style))
+                    return style;
+            }
+        }
+        return null;
+    }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public Node createChild(EClass eClass) {
+        Node newChild = (Node) eClass.getEPackage().getEFactoryInstance()
+            .create(eClass);
+        getPersistedChildren().add(newChild);
+        return newChild;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public Style createStyle(EClass eClass) {
+        Style newStyle = (Style) eClass.getEPackage().getEFactoryInstance()
+            .create(eClass);
+        getStyles().add(newStyle);
+        return newStyle;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                return ((InternalEList)getEAnnotations()).basicAdd(otherEnd, msgs);
             case NotationPackage.VIEW__SOURCE_EDGES:
                 return ((InternalEList)getSourceEdges()).basicAdd(otherEnd, msgs);
             case NotationPackage.VIEW__TARGET_EDGES:
                 return ((InternalEList)getTargetEdges()).basicAdd(otherEnd, msgs);
         }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
+        return eDynamicInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                return ((InternalEList)getEAnnotations()).basicRemove(otherEnd, msgs);
             case NotationPackage.VIEW__SOURCE_EDGES:
                 return ((InternalEList)getSourceEdges()).basicRemove(otherEnd, msgs);
             case NotationPackage.VIEW__TARGET_EDGES:
@@ -511,16 +490,17 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
             case NotationPackage.VIEW__TRANSIENT_CHILDREN:
                 return ((InternalEList)getTransientChildren()).basicRemove(otherEnd, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                return getEAnnotations();
             case NotationPackage.VIEW__VISIBLE:
                 return isVisible() ? Boolean.TRUE : Boolean.FALSE;
             case NotationPackage.VIEW__TYPE:
@@ -544,16 +524,19 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
             case NotationPackage.VIEW__TRANSIENT_CHILDREN:
                 return getTransientChildren();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                getEAnnotations().clear();
+                getEAnnotations().addAll((Collection)newValue);
+                return;
             case NotationPackage.VIEW__VISIBLE:
                 setVisible(((Boolean)newValue).booleanValue());
                 return;
@@ -587,16 +570,18 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
                 getTransientChildren().addAll((Collection)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public void eUnset(int featureID) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                getEAnnotations().clear();
+                return;
             case NotationPackage.VIEW__VISIBLE:
                 setVisible(VISIBLE_EDEFAULT);
                 return;
@@ -625,16 +610,17 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
                 getTransientChildren().clear();
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case NotationPackage.VIEW__EANNOTATIONS:
+                return eAnnotations != null && !eAnnotations.isEmpty();
             case NotationPackage.VIEW__VISIBLE:
                 return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
             case NotationPackage.VIEW__TYPE:
@@ -656,15 +642,14 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
             case NotationPackage.VIEW__TRANSIENT_CHILDREN:
                 return transientChildren != null && !transientChildren.isEmpty();
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String toString() {
+    public String toString() {
         if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
@@ -678,110 +663,104 @@ public abstract class ViewImpl extends EModelElementImpl implements View {
         return result.toString();
     }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void persistChildren(){
-		if (transientChildren!=null &&
-			transientChildren.size()>0){
-			getPersistedChildren().addAll(transientChildren);
-		}
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void insertChild(View child){
-		persistChildren();
-		getPersistedChildren().add(child);
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void insertChildAt(View child, int index){
-		persistChildren();
-		if (getPersistedChildren().size()>=index){
-			getPersistedChildren().add(index,child);
-		}
-	}
-	
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void insertChild(View child,boolean persisted){
-		List children = null;
-		if (persisted)
-			children = getPersistedChildren();
-		else
-			children = getTransientChildren();
-		children.add(child);	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void removeChild(View child){
-		if (child.eContainingFeature() == 
-			NotationPackage.eINSTANCE.getView_TransientChildren()){
-			if (transientChildren!=null && 
-			    transientChildren.size()>0){
-				transientChildren.remove(child);
-			}
-		} else if (child.eContainingFeature() == 
-			NotationPackage.eINSTANCE.getView_PersistedChildren()){
-			if (persistedChildren!=null && 
-				persistedChildren.size()>0){
-				persistedChildren.remove(child);
-			}
-		}
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void persist(){
-		EStructuralFeature eContaingFeature = eContainingFeature();
-		if (eContainer!=null &&
-			eContaingFeature!=null &&
-			eContainer instanceof View &&
-			eContaingFeature.isTransient()){
-			View vContainer = (View)eContainer;
-			vContainer.persistChildren();
-		}
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public EList getVisibleChildren() {
-		List _children = new ArrayList();	
-		if (persistedChildren!=null &&
-			persistedChildren.size()>0){
-			for (Iterator iter = getPersistedChildren().iterator(); iter.hasNext();) {
-				View view = (View) iter.next();
-				if (view.isVisible())
-					_children.add(view);
-				}
-		}
-		
-		if (transientChildren!=null&&
-			transientChildren.size()>0){
-			for (Iterator iter = getTransientChildren().iterator(); iter.hasNext();) {
-				View view = (View) iter.next();
-				if (view.isVisible())
-					_children.add(view);
-				}
-		}
-		return new BasicEList.UnmodifiableEList(_children.size(), _children.toArray());
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void persistChildren() {
+        if (transientChildren != null && transientChildren.size() > 0) {
+            getPersistedChildren().addAll(transientChildren);
+        }
+    }
 
-} //ViewImpl
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void insertChild(View child) {
+        persistChildren();
+        getPersistedChildren().add(child);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void insertChildAt(View child, int index) {
+        persistChildren();
+        if (getPersistedChildren().size() >= index) {
+            getPersistedChildren().add(index, child);
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void insertChild(View child, boolean persisted) {
+        List children = null;
+        if (persisted)
+            children = getPersistedChildren();
+        else
+            children = getTransientChildren();
+        children.add(child);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void removeChild(View child) {
+        if (child.eContainingFeature() == NotationPackage.Literals
+            .VIEW__TRANSIENT_CHILDREN) {
+            if (transientChildren != null && transientChildren.size() > 0) {
+                transientChildren.remove(child);
+            }
+        } else if (child.eContainingFeature() == NotationPackage.Literals
+            .VIEW__PERSISTED_CHILDREN) {
+            if (persistedChildren != null && persistedChildren.size() > 0) {
+                persistedChildren.remove(child);
+            }
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public void persist() {
+        EStructuralFeature eContaingFeature = eContainingFeature();
+        if (eContainer != null && eContaingFeature != null
+            && eContainer instanceof View && eContaingFeature.isTransient()) {
+            View vContainer = (View) eContainer;
+            vContainer.persistChildren();
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     */
+    public EList getVisibleChildren() {
+        if ((persistedChildren == null || persistedChildren.isEmpty())
+            && (transientChildren == null || transientChildren.isEmpty())) {
+            return ECollections.EMPTY_ELIST;
+        }
+
+        List _children = new ArrayList();
+        if (persistedChildren != null && persistedChildren.size() > 0) {
+            for (Iterator iter = persistedChildren.iterator(); iter
+                .hasNext();) {
+                View view = (View) iter.next();
+                if (view.isVisible())
+                    _children.add(view);
+            }
+        }
+
+        if (transientChildren != null && transientChildren.size() > 0) {
+            for (Iterator iter = transientChildren.iterator(); iter
+                .hasNext();) {
+                View view = (View) iter.next();
+                if (view.isVisible())
+                    _children.add(view);
+            }
+        }       
+        
+        return new BasicEList.UnmodifiableEList(_children.size(), _children
+            .toArray());
+    }
+
+} // ViewImpl

@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -11,11 +11,15 @@
 
 package org.eclipse.gmf.runtime.notation.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Anchor;
 import org.eclipse.gmf.runtime.notation.Bendpoints;
 import org.eclipse.gmf.runtime.notation.Edge;
@@ -123,9 +127,18 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+      * @generated Not
      */
 	public NotificationChain basicSetSource(View newSource, NotificationChain msgs) {
+        if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
+            if (newSource!=null && newSource.eContainingFeature() == NotationPackage.eINSTANCE.getView_TransientChildren()){
+                EObject container = newSource.eContainer();
+                if (container!=null && container instanceof View){
+                    View parent = (View)container;
+                    parent.persistChildren();
+                }
+            }
+        }
         View oldSource = source;
         source = newSource;
         if (eNotificationRequired()) {
@@ -134,7 +147,6 @@ public class EdgeImpl extends ViewImpl implements Edge {
         }
         return msgs;
     }
-
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,9 +178,18 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
+     * @generated Not
      */
 	public NotificationChain basicSetTarget(View newTarget, NotificationChain msgs) {
+        if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
+            if (newTarget!=null && newTarget.eContainingFeature() == NotationPackage.eINSTANCE.getView_TransientChildren()){
+                EObject container = newTarget.eContainer();
+                if (container!=null && container instanceof View){
+                    View parent = (View)container;
+                    parent.persistChildren();
+                }
+            }
+        }
         View oldTarget = target;
         target = newTarget;
         if (eNotificationRequired()) {
@@ -364,6 +385,12 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                return ((InternalEList)getEAnnotations()).basicAdd(otherEnd, msgs);
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                return ((InternalEList)getSourceEdges()).basicAdd(otherEnd, msgs);
+            case NotationPackage.EDGE__TARGET_EDGES:
+                return ((InternalEList)getTargetEdges()).basicAdd(otherEnd, msgs);
             case NotationPackage.EDGE__SOURCE:
                 if (source != null)
                     msgs = ((InternalEObject)source).eInverseRemove(this, NotationPackage.VIEW__SOURCE_EDGES, View.class, msgs);
@@ -373,7 +400,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
                     msgs = ((InternalEObject)target).eInverseRemove(this, NotationPackage.VIEW__TARGET_EDGES, View.class, msgs);
                 return basicSetTarget((View)otherEnd, msgs);
         }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
+        return eDynamicInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
@@ -383,6 +410,18 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                return ((InternalEList)getEAnnotations()).basicRemove(otherEnd, msgs);
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                return ((InternalEList)getSourceEdges()).basicRemove(otherEnd, msgs);
+            case NotationPackage.EDGE__TARGET_EDGES:
+                return ((InternalEList)getTargetEdges()).basicRemove(otherEnd, msgs);
+            case NotationPackage.EDGE__PERSISTED_CHILDREN:
+                return ((InternalEList)getPersistedChildren()).basicRemove(otherEnd, msgs);
+            case NotationPackage.EDGE__STYLES:
+                return ((InternalEList)getStyles()).basicRemove(otherEnd, msgs);
+            case NotationPackage.EDGE__TRANSIENT_CHILDREN:
+                return ((InternalEList)getTransientChildren()).basicRemove(otherEnd, msgs);
             case NotationPackage.EDGE__SOURCE:
                 return basicSetSource(null, msgs);
             case NotationPackage.EDGE__TARGET:
@@ -394,7 +433,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
             case NotationPackage.EDGE__TARGET_ANCHOR:
                 return basicSetTargetAnchor(null, msgs);
         }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        return eDynamicInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -404,6 +443,30 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                return getEAnnotations();
+            case NotationPackage.EDGE__VISIBLE:
+                return isVisible() ? Boolean.TRUE : Boolean.FALSE;
+            case NotationPackage.EDGE__TYPE:
+                return getType();
+            case NotationPackage.EDGE__MUTABLE:
+                return isMutable() ? Boolean.TRUE : Boolean.FALSE;
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                return getSourceEdges();
+            case NotationPackage.EDGE__TARGET_EDGES:
+                return getTargetEdges();
+            case NotationPackage.EDGE__PERSISTED_CHILDREN:
+                return getPersistedChildren();
+            case NotationPackage.EDGE__STYLES:
+                return getStyles();
+            case NotationPackage.EDGE__ELEMENT:
+                if (resolve) return getElement();
+                return basicGetElement();
+            case NotationPackage.EDGE__DIAGRAM:
+                if (resolve) return getDiagram();
+                return basicGetDiagram();
+            case NotationPackage.EDGE__TRANSIENT_CHILDREN:
+                return getTransientChildren();
             case NotationPackage.EDGE__SOURCE:
                 return getSource();
             case NotationPackage.EDGE__TARGET:
@@ -415,7 +478,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
             case NotationPackage.EDGE__TARGET_ANCHOR:
                 return getTargetAnchor();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -425,6 +488,42 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                getEAnnotations().clear();
+                getEAnnotations().addAll((Collection)newValue);
+                return;
+            case NotationPackage.EDGE__VISIBLE:
+                setVisible(((Boolean)newValue).booleanValue());
+                return;
+            case NotationPackage.EDGE__TYPE:
+                setType((String)newValue);
+                return;
+            case NotationPackage.EDGE__MUTABLE:
+                setMutable(((Boolean)newValue).booleanValue());
+                return;
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                getSourceEdges().clear();
+                getSourceEdges().addAll((Collection)newValue);
+                return;
+            case NotationPackage.EDGE__TARGET_EDGES:
+                getTargetEdges().clear();
+                getTargetEdges().addAll((Collection)newValue);
+                return;
+            case NotationPackage.EDGE__PERSISTED_CHILDREN:
+                getPersistedChildren().clear();
+                getPersistedChildren().addAll((Collection)newValue);
+                return;
+            case NotationPackage.EDGE__STYLES:
+                getStyles().clear();
+                getStyles().addAll((Collection)newValue);
+                return;
+            case NotationPackage.EDGE__ELEMENT:
+                setElement((EObject)newValue);
+                return;
+            case NotationPackage.EDGE__TRANSIENT_CHILDREN:
+                getTransientChildren().clear();
+                getTransientChildren().addAll((Collection)newValue);
+                return;
             case NotationPackage.EDGE__SOURCE:
                 setSource((View)newValue);
                 return;
@@ -441,7 +540,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
                 setTargetAnchor((Anchor)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -451,6 +550,36 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public void eUnset(int featureID) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                getEAnnotations().clear();
+                return;
+            case NotationPackage.EDGE__VISIBLE:
+                setVisible(VISIBLE_EDEFAULT);
+                return;
+            case NotationPackage.EDGE__TYPE:
+                setType(TYPE_EDEFAULT);
+                return;
+            case NotationPackage.EDGE__MUTABLE:
+                setMutable(MUTABLE_EDEFAULT);
+                return;
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                getSourceEdges().clear();
+                return;
+            case NotationPackage.EDGE__TARGET_EDGES:
+                getTargetEdges().clear();
+                return;
+            case NotationPackage.EDGE__PERSISTED_CHILDREN:
+                getPersistedChildren().clear();
+                return;
+            case NotationPackage.EDGE__STYLES:
+                getStyles().clear();
+                return;
+            case NotationPackage.EDGE__ELEMENT:
+                unsetElement();
+                return;
+            case NotationPackage.EDGE__TRANSIENT_CHILDREN:
+                getTransientChildren().clear();
+                return;
             case NotationPackage.EDGE__SOURCE:
                 setSource((View)null);
                 return;
@@ -467,7 +596,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
                 setTargetAnchor((Anchor)null);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -477,6 +606,28 @@ public class EdgeImpl extends ViewImpl implements Edge {
      */
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case NotationPackage.EDGE__EANNOTATIONS:
+                return eAnnotations != null && !eAnnotations.isEmpty();
+            case NotationPackage.EDGE__VISIBLE:
+                return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
+            case NotationPackage.EDGE__TYPE:
+                return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+            case NotationPackage.EDGE__MUTABLE:
+                return ((eFlags & MUTABLE_EFLAG) != 0) != MUTABLE_EDEFAULT;
+            case NotationPackage.EDGE__SOURCE_EDGES:
+                return sourceEdges != null && !sourceEdges.isEmpty();
+            case NotationPackage.EDGE__TARGET_EDGES:
+                return targetEdges != null && !targetEdges.isEmpty();
+            case NotationPackage.EDGE__PERSISTED_CHILDREN:
+                return persistedChildren != null && !persistedChildren.isEmpty();
+            case NotationPackage.EDGE__STYLES:
+                return styles != null && !styles.isEmpty();
+            case NotationPackage.EDGE__ELEMENT:
+                return isSetElement();
+            case NotationPackage.EDGE__DIAGRAM:
+                return basicGetDiagram() != null;
+            case NotationPackage.EDGE__TRANSIENT_CHILDREN:
+                return transientChildren != null && !transientChildren.isEmpty();
             case NotationPackage.EDGE__SOURCE:
                 return source != null;
             case NotationPackage.EDGE__TARGET:
@@ -488,7 +639,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
             case NotationPackage.EDGE__TARGET_ANCHOR:
                 return targetAnchor != null;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
 } //EdgeImpl

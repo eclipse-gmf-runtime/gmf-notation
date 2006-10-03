@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Sorting;
@@ -47,7 +47,7 @@ import org.eclipse.gmf.runtime.notation.SortingStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class SortingStyleImpl extends EObjectImpl implements SortingStyle {
+public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
     /**
      * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -202,7 +202,7 @@ public class SortingStyleImpl extends EObjectImpl implements SortingStyle {
             case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
                 return getSortedObjects();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -223,7 +223,7 @@ public class SortingStyleImpl extends EObjectImpl implements SortingStyle {
                 getSortedObjects().addAll((Collection)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -243,7 +243,7 @@ public class SortingStyleImpl extends EObjectImpl implements SortingStyle {
                 getSortedObjects().clear();
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -260,7 +260,7 @@ public class SortingStyleImpl extends EObjectImpl implements SortingStyle {
             case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
                 return sortedObjects != null && !sortedObjects.isEmpty();
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

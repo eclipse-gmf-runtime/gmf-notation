@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -47,7 +47,7 @@ public interface GuideStyle extends Style {
 	 * <!-- end-user-doc -->
      * @return the value of the '<em>Horizontal Guides</em>' containment reference list.
      * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuideStyle_HorizontalGuides()
-     * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true" resolveProxies="false"
+     * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true"
      * @generated
      */
 	EList getHorizontalGuides();
@@ -62,7 +62,7 @@ public interface GuideStyle extends Style {
 	 * <!-- end-user-doc -->
      * @return the value of the '<em>Vertical Guides</em>' containment reference list.
      * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuideStyle_VerticalGuides()
-     * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true" resolveProxies="false"
+     * @model type="org.eclipse.gmf.runtime.notation.Guide" containment="true"
      * @generated
      */
 	EList getVerticalGuides();

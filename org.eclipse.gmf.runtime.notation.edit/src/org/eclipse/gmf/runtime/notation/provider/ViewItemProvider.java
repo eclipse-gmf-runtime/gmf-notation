@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -86,6 +86,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_visible_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__VISIBLE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -106,6 +108,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_type_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__TYPE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
@@ -126,6 +130,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_mutable_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__MUTABLE,
                  true,
+                 false,
+                 false,
                  ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
                  null,
                  null));
@@ -146,6 +152,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_sourceEdges_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__SOURCE_EDGES,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -166,6 +174,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_targetEdges_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__TARGET_EDGES,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -186,6 +196,8 @@ public class ViewItemProvider
                  getString("_UI_PropertyDescriptor_description", "_UI_View_element_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__ELEMENT,
                  true,
+                 false,
+                 false,
                  null,
                  null,
                  null));
@@ -205,6 +217,8 @@ public class ViewItemProvider
                  getString("_UI_View_diagram_feature"), //$NON-NLS-1$
                  getString("_UI_PropertyDescriptor_description", "_UI_View_diagram_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                  NotationPackage.Literals.VIEW__DIAGRAM,
+                 false,
+                 false,
                  false,
                  null,
                  null,
@@ -252,7 +266,7 @@ public class ViewItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getString("_UI_View_styles_feature"), //$NON-NLS-1$
 				 getString("_UI_PropertyDescriptor_description", "_UI_View_styles_feature", "_UI_View_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.eINSTANCE.getView_Styles(),
+				 NotationPackage.Literals.VIEW__STYLES,
 				 false));
 	}
 

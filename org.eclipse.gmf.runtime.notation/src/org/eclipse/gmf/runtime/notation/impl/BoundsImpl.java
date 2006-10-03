@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -143,12 +143,16 @@ public class BoundsImpl extends LocationImpl implements Bounds {
      */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+            case NotationPackage.BOUNDS__X:
+                return new Integer(getX());
+            case NotationPackage.BOUNDS__Y:
+                return new Integer(getY());
             case NotationPackage.BOUNDS__WIDTH:
                 return new Integer(getWidth());
             case NotationPackage.BOUNDS__HEIGHT:
                 return new Integer(getHeight());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -158,6 +162,12 @@ public class BoundsImpl extends LocationImpl implements Bounds {
      */
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+            case NotationPackage.BOUNDS__X:
+                setX(((Integer)newValue).intValue());
+                return;
+            case NotationPackage.BOUNDS__Y:
+                setY(((Integer)newValue).intValue());
+                return;
             case NotationPackage.BOUNDS__WIDTH:
                 setWidth(((Integer)newValue).intValue());
                 return;
@@ -165,7 +175,7 @@ public class BoundsImpl extends LocationImpl implements Bounds {
                 setHeight(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -175,6 +185,12 @@ public class BoundsImpl extends LocationImpl implements Bounds {
      */
     public void eUnset(int featureID) {
         switch (featureID) {
+            case NotationPackage.BOUNDS__X:
+                setX(X_EDEFAULT);
+                return;
+            case NotationPackage.BOUNDS__Y:
+                setY(Y_EDEFAULT);
+                return;
             case NotationPackage.BOUNDS__WIDTH:
                 setWidth(WIDTH_EDEFAULT);
                 return;
@@ -182,7 +198,7 @@ public class BoundsImpl extends LocationImpl implements Bounds {
                 setHeight(HEIGHT_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -192,12 +208,16 @@ public class BoundsImpl extends LocationImpl implements Bounds {
      */
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+            case NotationPackage.BOUNDS__X:
+                return x != X_EDEFAULT;
+            case NotationPackage.BOUNDS__Y:
+                return y != Y_EDEFAULT;
             case NotationPackage.BOUNDS__WIDTH:
                 return width != WIDTH_EDEFAULT;
             case NotationPackage.BOUNDS__HEIGHT:
                 return height != HEIGHT_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

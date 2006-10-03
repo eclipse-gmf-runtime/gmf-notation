@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -19,7 +19,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
@@ -40,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 /*
  * @canBeSeenBy %partners
  */
-public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendpoints {
+public class RelativeBendpointsImpl extends FlatEObjectImpl implements RelativeBendpoints {
 	/**
 	 * The default value of the '{@link #getPoints() <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -125,7 +125,7 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
             case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
                 return getPoints();
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -139,7 +139,7 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
                 setPoints((List)newValue);
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -153,7 +153,7 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
                 setPoints(POINTS_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -166,7 +166,7 @@ public class RelativeBendpointsImpl extends EObjectImpl implements RelativeBendp
             case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
                 return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**

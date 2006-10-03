@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,7 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.FontStyle;
@@ -48,7 +48,7 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
+public class ShapeStyleImpl extends FlatEObjectImpl implements ShapeStyle {
     /**
      * The default value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -505,7 +505,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
             case NotationPackage.SHAPE_STYLE__LINE_COLOR:
                 return new Integer(getLineColor());
         }
-        return super.eGet(featureID, resolve, coreType);
+        return eDynamicGet(featureID, resolve, coreType);
     }
 
     /**
@@ -546,7 +546,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
                 setLineColor(((Integer)newValue).intValue());
                 return;
         }
-        super.eSet(featureID, newValue);
+        eDynamicSet(featureID, newValue);
     }
 
     /**
@@ -587,7 +587,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
                 setLineColor(LINE_COLOR_EDEFAULT);
                 return;
         }
-        super.eUnset(featureID);
+        eDynamicUnset(featureID);
     }
 
     /**
@@ -618,7 +618,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
             case NotationPackage.SHAPE_STYLE__LINE_COLOR:
                 return lineColor != LINE_COLOR_EDEFAULT;
         }
-        return super.eIsSet(featureID);
+        return eDynamicIsSet(featureID);
     }
 
     /**
