@@ -28,7 +28,7 @@ package org.eclipse.gmf.runtime.notation;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDrawerStyle()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -36,26 +36,26 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface DrawerStyle extends Style {
     /**
-     * Returns the value of the '<em><b>Collapsed</b></em>' attribute.
-     * The default value is <code>"false"</code>.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Collapsed</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Collapsed</em>' attribute.
-     * @see #setCollapsed(boolean)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDrawerStyle_Collapsed()
-     * @model default="false"
-     * @generated
-     */
+	 * @return the value of the '<em>Collapsed</em>' attribute.
+	 * @see #setCollapsed(boolean)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDrawerStyle_Collapsed()
+	 * @model default="false"
+	 * @generated
+	 */
 	boolean isCollapsed();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DrawerStyle#isCollapsed <em>Collapsed</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DrawerStyle#isCollapsed <em>Collapsed</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Collapsed</em>' attribute.
-     * @see #isCollapsed()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Collapsed</em>' attribute.
+	 * @see #isCollapsed()
+	 * @generated
+	 */
 	void setCollapsed(boolean value);
 
 } // DrawerStyle

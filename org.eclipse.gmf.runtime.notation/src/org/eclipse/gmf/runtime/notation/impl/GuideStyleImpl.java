@@ -43,146 +43,146 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
     /**
-     * The cached value of the '{@link #getHorizontalGuides() <em>Horizontal Guides</em>}' containment reference list.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getHorizontalGuides() <em>Horizontal Guides</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getHorizontalGuides()
-     * @generated
-     * @ordered
-     */
-	protected EList horizontalGuides = null;
+	 * @see #getHorizontalGuides()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList horizontalGuides;
 
     /**
-     * The cached value of the '{@link #getVerticalGuides() <em>Vertical Guides</em>}' containment reference list.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVerticalGuides() <em>Vertical Guides</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getVerticalGuides()
-     * @generated
-     * @ordered
-     */
-	protected EList verticalGuides = null;
+	 * @see #getVerticalGuides()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList verticalGuides;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected GuideStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.GUIDE_STYLE;
-    }
+		return NotationPackage.Literals.GUIDE_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EList getHorizontalGuides() {
-        if (horizontalGuides == null) {
-            horizontalGuides = new EObjectContainmentEList(Guide.class, this, NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES);
-        }
-        return horizontalGuides;
-    }
+		if (horizontalGuides == null) {
+			horizontalGuides = new EObjectContainmentEList(Guide.class, this, NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES);
+		}
+		return horizontalGuides;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EList getVerticalGuides() {
-        if (verticalGuides == null) {
-            verticalGuides = new EObjectContainmentEList(Guide.class, this, NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES);
-        }
-        return verticalGuides;
-    }
+		if (verticalGuides == null) {
+			verticalGuides = new EObjectContainmentEList(Guide.class, this, NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES);
+		}
+		return verticalGuides;
+	}
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-        switch (featureID) {
-            case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
-                return ((InternalEList)getHorizontalGuides()).basicRemove(otherEnd, msgs);
-            case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
-                return ((InternalEList)getVerticalGuides()).basicRemove(otherEnd, msgs);
-        }
-        return eDynamicInverseRemove(otherEnd, featureID, msgs);
-    }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
+				return ((InternalEList)getHorizontalGuides()).basicRemove(otherEnd, msgs);
+			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
+				return ((InternalEList)getVerticalGuides()).basicRemove(otherEnd, msgs);
+		}
+		return eDynamicInverseRemove(otherEnd, featureID, msgs);
+	}
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
-                return getHorizontalGuides();
-            case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
-                return getVerticalGuides();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
+				return getHorizontalGuides();
+			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
+				return getVerticalGuides();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
-                getHorizontalGuides().clear();
-                getHorizontalGuides().addAll((Collection)newValue);
-                return;
-            case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
-                getVerticalGuides().clear();
-                getVerticalGuides().addAll((Collection)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
+				getHorizontalGuides().clear();
+				getHorizontalGuides().addAll((Collection)newValue);
+				return;
+			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
+				getVerticalGuides().clear();
+				getVerticalGuides().addAll((Collection)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
-                getHorizontalGuides().clear();
-                return;
-            case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
-                getVerticalGuides().clear();
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
+				getHorizontalGuides().clear();
+				return;
+			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
+				getVerticalGuides().clear();
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
-                return horizontalGuides != null && !horizontalGuides.isEmpty();
-            case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
-                return verticalGuides != null && !verticalGuides.isEmpty();
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
+				return horizontalGuides != null && !horizontalGuides.isEmpty();
+			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
+				return verticalGuides != null && !verticalGuides.isEmpty();
+		}
+		return eDynamicIsSet(featureID);
+	}
 
 } //GuideStyleImpl

@@ -48,52 +48,52 @@ public class DiagramItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
     /**
-     * This constructs an instance from a factory and a notifier.
-     * <!-- begin-user-doc -->
+	 * This constructs an instance from a factory and a notifier.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public DiagramItemProvider(AdapterFactory adapterFactory) {
-        super(adapterFactory);
-    }
+		super(adapterFactory);
+	}
 
     /**
-     * This returns the property descriptors for the adapted class.
-     * <!-- begin-user-doc -->
+	 * This returns the property descriptors for the adapted class.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public List getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
-            super.getPropertyDescriptors(object);
+		if (itemPropertyDescriptors == null) {
+			super.getPropertyDescriptors(object);
 
-            addNamePropertyDescriptor(object);
-            addMeasurementUnitPropertyDescriptor(object);
-        }
-        return itemPropertyDescriptors;
-    }
+			addNamePropertyDescriptor(object);
+			addMeasurementUnitPropertyDescriptor(object);
+		}
+		return itemPropertyDescriptors;
+	}
 
     /**
-     * This adds a property descriptor for the Name feature.
-     * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Diagram_name_feature"), //$NON-NLS-1$
-                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_name_feature", "_UI_Diagram_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                 NotationPackage.Literals.DIAGRAM__NAME,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
-    }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Diagram_name_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_name_feature", "_UI_Diagram_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.DIAGRAM__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
 	/**
 	 * This adds a property descriptor for the Measurement Unit feature.
@@ -116,133 +116,133 @@ public class DiagramItemProvider
 	}
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-     * <!-- begin-user-doc -->
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Collection getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES);
-            childrenFeatures.add(NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES);
-        }
-        return childrenFeatures;
-    }
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES);
+			childrenFeatures.add(NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES);
+		}
+		return childrenFeatures;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
 
-        return super.getChildFeature(object, child);
-    }
+		return super.getChildFeature(object, child);
+	}
 
     /**
-     * This returns Diagram.gif.
-     * <!-- begin-user-doc -->
+	 * This returns Diagram.gif.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Diagram")); //$NON-NLS-1$
-    }
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Diagram")); //$NON-NLS-1$
+	}
 
     /**
-     * This returns the label text for the adapted class.
-     * <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String getText(Object object) {
-        String label = ((Diagram)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_Diagram_type") : //$NON-NLS-1$
-            getString("_UI_Diagram_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
-    }
+		String label = ((Diagram)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Diagram_type") : //$NON-NLS-1$
+			getString("_UI_Diagram_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+	}
 
     /**
-     * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-     * <!-- begin-user-doc -->
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+		updateChildren(notification);
 
-        switch (notification.getFeatureID(Diagram.class)) {
-            case NotationPackage.DIAGRAM__NAME:
-            case NotationPackage.DIAGRAM__MEASUREMENT_UNIT:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case NotationPackage.DIAGRAM__PERSISTED_EDGES:
-            case NotationPackage.DIAGRAM__TRANSIENT_EDGES:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
-        }
-        super.notifyChanged(notification);
-    }
+		switch (notification.getFeatureID(Diagram.class)) {
+			case NotationPackage.DIAGRAM__NAME:
+			case NotationPackage.DIAGRAM__MEASUREMENT_UNIT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case NotationPackage.DIAGRAM__PERSISTED_EDGES:
+			case NotationPackage.DIAGRAM__TRANSIENT_EDGES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
+		super.notifyChanged(notification);
+	}
 
     /**
-     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-     * describing all of the children that can be created under this object.
-     * <!-- begin-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+	 * that can be created under this object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-        super.collectNewChildDescriptors(newChildDescriptors, object);
+		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-            (createChildParameter
-                (NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES,
-                 NotationFactory.eINSTANCE.createEdge()));
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES,
+				 NotationFactory.eINSTANCE.createEdge()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES,
-                 NotationFactory.eINSTANCE.createEdge()));
-    }
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES,
+				 NotationFactory.eINSTANCE.createEdge()));
+	}
 
     /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-     * <!-- begin-user-doc -->
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String getCreateChildText(Object owner, Object feature, Object child, Collection selection) {
-        Object childFeature = feature;
-        Object childObject = child;
+		Object childFeature = feature;
+		Object childObject = child;
 
-        boolean qualify =
-            childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
-            childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
-            childFeature == NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES ||
-            childFeature == NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES;
+		boolean qualify =
+			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
+			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
+			childFeature == NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES ||
+			childFeature == NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES;
 
-        if (qualify) {
-            return getString
-                ("_UI_CreateChild_text2", //$NON-NLS-1$
-                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
-    }
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2", //$NON-NLS-1$
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
+	}
 
     /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ResourceLocator getResourceLocator() {
-        return NotationEditPlugin.INSTANCE;
-    }
+		return NotationEditPlugin.INSTANCE;
+	}
 
 }

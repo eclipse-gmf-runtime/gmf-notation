@@ -36,131 +36,131 @@ import org.eclipse.gmf.runtime.notation.Ratio;
  */
 public class RatioImpl extends FlatEObjectImpl implements Ratio {
     /**
-     * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final double VALUE_EDEFAULT = -1.0;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getValue()
-     * @generated
-     * @ordered
-     */
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
 	protected double value = VALUE_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected RatioImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.RATIO;
-    }
+		return NotationPackage.Literals.RATIO;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public double getValue() {
-        return value;
-    }
+		return value;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setValue(double newValue) {
-        double oldValue = value;
-        value = newValue;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RATIO__VALUE, oldValue, value));
-    }
+		double oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RATIO__VALUE, oldValue, value));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.RATIO__VALUE:
-                return new Double(getValue());
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.RATIO__VALUE:
+				return new Double(getValue());
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.RATIO__VALUE:
-                setValue(((Double)newValue).doubleValue());
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.RATIO__VALUE:
+				setValue(((Double)newValue).doubleValue());
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.RATIO__VALUE:
-                setValue(VALUE_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.RATIO__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.RATIO__VALUE:
-                return value != VALUE_EDEFAULT;
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.RATIO__VALUE:
+				return value != VALUE_EDEFAULT;
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: "); //$NON-NLS-1$
-        result.append(value);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (value: "); //$NON-NLS-1$
+		result.append(value);
+		result.append(')');
+		return result.toString();
+	}
 
 } //RatioImpl

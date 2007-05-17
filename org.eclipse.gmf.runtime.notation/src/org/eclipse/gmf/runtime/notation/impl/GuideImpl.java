@@ -43,177 +43,177 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class GuideImpl extends FlatEObjectImpl implements Guide {
     /**
-     * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getPosition()
-     * @generated
-     * @ordered
-     */
+	 * @see #getPosition()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int POSITION_EDEFAULT = 0;
 
     /**
-     * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getPosition()
-     * @generated
-     * @ordered
-     */
+	 * @see #getPosition()
+	 * @generated
+	 * @ordered
+	 */
 	protected int position = POSITION_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getNodeMap() <em>Node Map</em>}' map.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getNodeMap() <em>Node Map</em>}' map.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getNodeMap()
-     * @generated
-     * @ordered
-     */
-	protected EMap nodeMap = null;
+	 * @see #getNodeMap()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap nodeMap;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected GuideImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.GUIDE;
-    }
+		return NotationPackage.Literals.GUIDE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public int getPosition() {
-        return position;
-    }
+		return position;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setPosition(int newPosition) {
-        int oldPosition = position;
-        position = newPosition;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.GUIDE__POSITION, oldPosition, position));
-    }
+		int oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.GUIDE__POSITION, oldPosition, position));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EMap getNodeMap() {
-        if (nodeMap == null) {
-            nodeMap = new EcoreEMap(NotationPackage.Literals.NODE_ENTRY, NodeEntryImpl.class, this, NotationPackage.GUIDE__NODE_MAP);
-        }
-        return nodeMap;
-    }
+		if (nodeMap == null) {
+			nodeMap = new EcoreEMap(NotationPackage.Literals.NODE_ENTRY, NodeEntryImpl.class, this, NotationPackage.GUIDE__NODE_MAP);
+		}
+		return nodeMap;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-        switch (featureID) {
-            case NotationPackage.GUIDE__NODE_MAP:
-                return ((InternalEList)getNodeMap()).basicRemove(otherEnd, msgs);
-        }
-        return eDynamicInverseRemove(otherEnd, featureID, msgs);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE__NODE_MAP:
+				return ((InternalEList)getNodeMap()).basicRemove(otherEnd, msgs);
+		}
+		return eDynamicInverseRemove(otherEnd, featureID, msgs);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.GUIDE__POSITION:
-                return new Integer(getPosition());
-            case NotationPackage.GUIDE__NODE_MAP:
-                if (coreType) return getNodeMap();
-                else return getNodeMap().map();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE__POSITION:
+				return new Integer(getPosition());
+			case NotationPackage.GUIDE__NODE_MAP:
+				if (coreType) return getNodeMap();
+				else return getNodeMap().map();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.GUIDE__POSITION:
-                setPosition(((Integer)newValue).intValue());
-                return;
-            case NotationPackage.GUIDE__NODE_MAP:
-                ((EStructuralFeature.Setting)getNodeMap()).set(newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE__POSITION:
+				setPosition(((Integer)newValue).intValue());
+				return;
+			case NotationPackage.GUIDE__NODE_MAP:
+				((EStructuralFeature.Setting)getNodeMap()).set(newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.GUIDE__POSITION:
-                setPosition(POSITION_EDEFAULT);
-                return;
-            case NotationPackage.GUIDE__NODE_MAP:
-                getNodeMap().clear();
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE__POSITION:
+				setPosition(POSITION_EDEFAULT);
+				return;
+			case NotationPackage.GUIDE__NODE_MAP:
+				getNodeMap().clear();
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.GUIDE__POSITION:
-                return position != POSITION_EDEFAULT;
-            case NotationPackage.GUIDE__NODE_MAP:
-                return nodeMap != null && !nodeMap.isEmpty();
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.GUIDE__POSITION:
+				return position != POSITION_EDEFAULT;
+			case NotationPackage.GUIDE__NODE_MAP:
+				return nodeMap != null && !nodeMap.isEmpty();
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (position: "); //$NON-NLS-1$
-        result.append(position);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (position: "); //$NON-NLS-1$
+		result.append(position);
+		result.append(')');
+		return result.toString();
+	}
 
 } //GuideImpl

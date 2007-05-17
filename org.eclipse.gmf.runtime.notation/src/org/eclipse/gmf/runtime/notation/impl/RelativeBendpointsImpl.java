@@ -52,32 +52,32 @@ public class RelativeBendpointsImpl extends FlatEObjectImpl implements RelativeB
 	protected static final List POINTS_EDEFAULT = Collections.EMPTY_LIST;
 
     /**
-     * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getPoints()
-     * @generated
-     * @ordered
-     */
+	 * @see #getPoints()
+	 * @generated
+	 * @ordered
+	 */
 	protected List points = POINTS_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected RelativeBendpointsImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.RELATIVE_BENDPOINTS;
-    }
+		return NotationPackage.Literals.RELATIVE_BENDPOINTS;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,72 +116,72 @@ public class RelativeBendpointsImpl extends FlatEObjectImpl implements RelativeB
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-                return getPoints();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+				return getPoints();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-                setPoints((List)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+				setPoints((List)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-                setPoints(POINTS_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+				setPoints(POINTS_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-                return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+				return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (points: "); //$NON-NLS-1$
-        result.append(points);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (points: "); //$NON-NLS-1$
+		result.append(points);
+		result.append(')');
+		return result.toString();
+	}
 
 } //RelativeBendpointsImpl

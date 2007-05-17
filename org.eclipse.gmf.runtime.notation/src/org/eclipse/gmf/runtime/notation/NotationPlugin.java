@@ -43,35 +43,35 @@ public final class NotationPlugin
 	private static Implementation plugin;
 
     /**
-     * Create the instance.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
+	 * Create the instance.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
 	public NotationPlugin() {
-        super(new ResourceLocator [] {});
-    }
+		super(new ResourceLocator [] {});
+	}
 
     /**
-     * Returns the singleton instance of the Eclipse plugin.
-     * <!-- begin-user-doc
+	 * Returns the singleton instance of the Eclipse plugin.
+	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-     * @return the singleton instance.
-     * @generated
-     */
+	 * @return the singleton instance.
+	 * @generated
+	 */
 	public ResourceLocator getPluginResourceLocator() {
-        return plugin;
-    }
+		return plugin;
+	}
 
     /**
-     * Returns the singleton instance of the Eclipse plugin.
-     * <!-- begin-user-doc
+	 * Returns the singleton instance of the Eclipse plugin.
+	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-     * @return the singleton instance.
-     * @generated
-     */
+	 * @return the singleton instance.
+	 * @generated
+	 */
 	public static Implementation getPlugin() {
-        return plugin;
-    }
+		return plugin;
+	}
 
 	/**
 	 * The actual implementation of the Eclipse <b>Plugin </b>. <!--
@@ -83,17 +83,17 @@ public final class NotationPlugin
 		extends EclipsePlugin {
 
         /**
-         * Creates an instance.
-         * <!-- begin-user-doc -->
+		 * Creates an instance.
+		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
 		public Implementation() {
-            super();
+			super();
 
-            // Remember the static instance.
-            //
-            plugin = this;
-        }
+			// Remember the static instance.
+			//
+			plugin = this;
+		}
     }
 }

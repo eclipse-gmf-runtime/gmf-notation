@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.gmf.runtime.notation.*;
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.CanonicalStyle;
@@ -76,616 +77,847 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
  */
 public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory {
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public static NotationFactory init() {
-        try {
-            NotationFactory theNotationFactory = (NotationFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/gmf/runtime/1.0.0/notation"); //$NON-NLS-1$ 
-            if (theNotationFactory != null) {
-                return theNotationFactory;
-            }
-        }
-        catch (Exception exception) {
-            EcorePlugin.INSTANCE.log(exception);
-        }
-        return new NotationFactoryImpl();
-    }
+		try {
+			NotationFactory theNotationFactory = (NotationFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/gmf/runtime/1.0.1/notation"); //$NON-NLS-1$ 
+			if (theNotationFactory != null) {
+				return theNotationFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new NotationFactoryImpl();
+	}
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public NotationFactoryImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EObject create(EClass eClass) {
-        switch (eClass.getClassifierID()) {
-            case NotationPackage.EDGE: return createEdge();
-            case NotationPackage.NODE: return createNode();
-            case NotationPackage.FILL_STYLE: return createFillStyle();
-            case NotationPackage.LINE_STYLE: return createLineStyle();
-            case NotationPackage.FONT_STYLE: return createFontStyle();
-            case NotationPackage.TITLE_STYLE: return createTitleStyle();
-            case NotationPackage.SORTING_STYLE: return createSortingStyle();
-            case NotationPackage.DESCRIPTION_STYLE: return createDescriptionStyle();
-            case NotationPackage.SIZE: return createSize();
-            case NotationPackage.LOCATION: return createLocation();
-            case NotationPackage.BOUNDS: return createBounds();
-            case NotationPackage.RATIO: return createRatio();
-            case NotationPackage.IDENTITY_ANCHOR: return createIdentityAnchor();
-            case NotationPackage.ROUTING_STYLE: return createRoutingStyle();
-            case NotationPackage.RELATIVE_BENDPOINTS: return createRelativeBendpoints();
-            case NotationPackage.DIAGRAM: return createDiagram();
-            case NotationPackage.IMAGE: return createImage();
-            case NotationPackage.CANONICAL_STYLE: return createCanonicalStyle();
-            case NotationPackage.SHAPE_STYLE: return createShapeStyle();
-            case NotationPackage.CONNECTOR_STYLE: return createConnectorStyle();
-            case NotationPackage.PAGE_STYLE: return createPageStyle();
-            case NotationPackage.DRAWER_STYLE: return createDrawerStyle();
-            case NotationPackage.GUIDE_STYLE: return createGuideStyle();
-            case NotationPackage.GUIDE: return createGuide();
-            case NotationPackage.NODE_ENTRY: return (EObject)createNodeEntry();
-            case NotationPackage.FILTERING_STYLE: return createFilteringStyle();
-            case NotationPackage.DIAGRAM_STYLE: return createDiagramStyle();
-            case NotationPackage.IMAGE_STYLE: return createImageStyle();
-            case NotationPackage.IMAGE_BUFFER_STYLE: return createImageBufferStyle();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
-        }
-    }
+		switch (eClass.getClassifierID()) {
+			case NotationPackage.EDGE: return createEdge();
+			case NotationPackage.NODE: return createNode();
+			case NotationPackage.FILL_STYLE: return createFillStyle();
+			case NotationPackage.LINE_STYLE: return createLineStyle();
+			case NotationPackage.FONT_STYLE: return createFontStyle();
+			case NotationPackage.TITLE_STYLE: return createTitleStyle();
+			case NotationPackage.SORTING_STYLE: return createSortingStyle();
+			case NotationPackage.DESCRIPTION_STYLE: return createDescriptionStyle();
+			case NotationPackage.SIZE: return createSize();
+			case NotationPackage.LOCATION: return createLocation();
+			case NotationPackage.BOUNDS: return createBounds();
+			case NotationPackage.RATIO: return createRatio();
+			case NotationPackage.IDENTITY_ANCHOR: return createIdentityAnchor();
+			case NotationPackage.ROUTING_STYLE: return createRoutingStyle();
+			case NotationPackage.RELATIVE_BENDPOINTS: return createRelativeBendpoints();
+			case NotationPackage.DIAGRAM: return createDiagram();
+			case NotationPackage.IMAGE: return createImage();
+			case NotationPackage.CANONICAL_STYLE: return createCanonicalStyle();
+			case NotationPackage.SHAPE_STYLE: return createShapeStyle();
+			case NotationPackage.CONNECTOR_STYLE: return createConnectorStyle();
+			case NotationPackage.PAGE_STYLE: return createPageStyle();
+			case NotationPackage.DRAWER_STYLE: return createDrawerStyle();
+			case NotationPackage.GUIDE_STYLE: return createGuideStyle();
+			case NotationPackage.GUIDE: return createGuide();
+			case NotationPackage.NODE_ENTRY: return (EObject)createNodeEntry();
+			case NotationPackage.FILTERING_STYLE: return createFilteringStyle();
+			case NotationPackage.DIAGRAM_STYLE: return createDiagramStyle();
+			case NotationPackage.IMAGE_STYLE: return createImageStyle();
+			case NotationPackage.IMAGE_BUFFER_STYLE: return createImageBufferStyle();
+			case NotationPackage.PROPERTIES_SET_STYLE: return createPropertiesSetStyle();
+			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY: return (EObject)createStringToPropertyValueMapEntry();
+			case NotationPackage.PROPERTY_VALUE: return createPropertyValue();
+			case NotationPackage.SINGLE_VALUE_STYLE: return createSingleValueStyle();
+			case NotationPackage.LIST_VALUE_STYLE: return createListValueStyle();
+			case NotationPackage.NAMED_STYLE: return createNamedStyle();
+			case NotationPackage.DATA_TYPE_STYLE: return createDataTypeStyle();
+			case NotationPackage.INT_VALUE_STYLE: return createIntValueStyle();
+			case NotationPackage.INT_LIST_VALUE_STYLE: return createIntListValueStyle();
+			case NotationPackage.BOOLEAN_VALUE_STYLE: return createBooleanValueStyle();
+			case NotationPackage.DOUBLE_VALUE_STYLE: return createDoubleValueStyle();
+			case NotationPackage.DOUBLE_LIST_VALUE_STYLE: return createDoubleListValueStyle();
+			case NotationPackage.STRING_VALUE_STYLE: return createStringValueStyle();
+			case NotationPackage.STRING_LIST_VALUE_STYLE: return createStringListValueStyle();
+			case NotationPackage.EOBJECT_VALUE_STYLE: return createEObjectValueStyle();
+			case NotationPackage.EOBJECT_LIST_VALUE_STYLE: return createEObjectListValueStyle();
+			case NotationPackage.BYTE_ARRAY_VALUE_STYLE: return createByteArrayValueStyle();
+			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE: return createBooleanListValueStyle();
+			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE: return createHintedDiagramLinkStyle();
+			case NotationPackage.DIAGRAM_LINK_STYLE: return createDiagramLinkStyle();
+			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE: return createMultiDiagramLinkStyle();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object createFromString(EDataType eDataType, String initialValue) {
-        switch (eDataType.getClassifierID()) {
-            case NotationPackage.SORTING:
-                return createSortingFromString(eDataType, initialValue);
-            case NotationPackage.FILTERING:
-                return createFilteringFromString(eDataType, initialValue);
-            case NotationPackage.ROUTING:
-                return createRoutingFromString(eDataType, initialValue);
-            case NotationPackage.SMOOTHNESS:
-                return createSmoothnessFromString(eDataType, initialValue);
-            case NotationPackage.JUMP_LINK_STATUS:
-                return createJumpLinkStatusFromString(eDataType, initialValue);
-            case NotationPackage.JUMP_LINK_TYPE:
-                return createJumpLinkTypeFromString(eDataType, initialValue);
-            case NotationPackage.ALIGNMENT:
-                return createAlignmentFromString(eDataType, initialValue);
-            case NotationPackage.SORTING_DIRECTION:
-                return createSortingDirectionFromString(eDataType, initialValue);
-            case NotationPackage.MEASUREMENT_UNIT:
-                return createMeasurementUnitFromString(eDataType, initialValue);
-            case NotationPackage.RELATIVE_BENDPOINT_LIST:
-                return createRelativeBendpointListFromString(eDataType, initialValue);
-            case NotationPackage.FILTER_KEY_LIST:
-                return createFilterKeyListFromString(eDataType, initialValue);
-            case NotationPackage.SORT_KEY_MAP:
-                return createSortKeyMapFromString(eDataType, initialValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
-        }
-    }
+		switch (eDataType.getClassifierID()) {
+			case NotationPackage.SORTING:
+				return createSortingFromString(eDataType, initialValue);
+			case NotationPackage.FILTERING:
+				return createFilteringFromString(eDataType, initialValue);
+			case NotationPackage.ROUTING:
+				return createRoutingFromString(eDataType, initialValue);
+			case NotationPackage.SMOOTHNESS:
+				return createSmoothnessFromString(eDataType, initialValue);
+			case NotationPackage.JUMP_LINK_STATUS:
+				return createJumpLinkStatusFromString(eDataType, initialValue);
+			case NotationPackage.JUMP_LINK_TYPE:
+				return createJumpLinkTypeFromString(eDataType, initialValue);
+			case NotationPackage.ALIGNMENT:
+				return createAlignmentFromString(eDataType, initialValue);
+			case NotationPackage.SORTING_DIRECTION:
+				return createSortingDirectionFromString(eDataType, initialValue);
+			case NotationPackage.MEASUREMENT_UNIT:
+				return createMeasurementUnitFromString(eDataType, initialValue);
+			case NotationPackage.RELATIVE_BENDPOINT_LIST:
+				return createRelativeBendpointListFromString(eDataType, initialValue);
+			case NotationPackage.FILTER_KEY_LIST:
+				return createFilterKeyListFromString(eDataType, initialValue);
+			case NotationPackage.SORT_KEY_MAP:
+				return createSortKeyMapFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String convertToString(EDataType eDataType, Object instanceValue) {
-        switch (eDataType.getClassifierID()) {
-            case NotationPackage.SORTING:
-                return convertSortingToString(eDataType, instanceValue);
-            case NotationPackage.FILTERING:
-                return convertFilteringToString(eDataType, instanceValue);
-            case NotationPackage.ROUTING:
-                return convertRoutingToString(eDataType, instanceValue);
-            case NotationPackage.SMOOTHNESS:
-                return convertSmoothnessToString(eDataType, instanceValue);
-            case NotationPackage.JUMP_LINK_STATUS:
-                return convertJumpLinkStatusToString(eDataType, instanceValue);
-            case NotationPackage.JUMP_LINK_TYPE:
-                return convertJumpLinkTypeToString(eDataType, instanceValue);
-            case NotationPackage.ALIGNMENT:
-                return convertAlignmentToString(eDataType, instanceValue);
-            case NotationPackage.SORTING_DIRECTION:
-                return convertSortingDirectionToString(eDataType, instanceValue);
-            case NotationPackage.MEASUREMENT_UNIT:
-                return convertMeasurementUnitToString(eDataType, instanceValue);
-            case NotationPackage.RELATIVE_BENDPOINT_LIST:
-                return convertRelativeBendpointListToString(eDataType, instanceValue);
-            case NotationPackage.FILTER_KEY_LIST:
-                return convertFilterKeyListToString(eDataType, instanceValue);
-            case NotationPackage.SORT_KEY_MAP:
-                return convertSortKeyMapToString(eDataType, instanceValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
-        }
-    }
+		switch (eDataType.getClassifierID()) {
+			case NotationPackage.SORTING:
+				return convertSortingToString(eDataType, instanceValue);
+			case NotationPackage.FILTERING:
+				return convertFilteringToString(eDataType, instanceValue);
+			case NotationPackage.ROUTING:
+				return convertRoutingToString(eDataType, instanceValue);
+			case NotationPackage.SMOOTHNESS:
+				return convertSmoothnessToString(eDataType, instanceValue);
+			case NotationPackage.JUMP_LINK_STATUS:
+				return convertJumpLinkStatusToString(eDataType, instanceValue);
+			case NotationPackage.JUMP_LINK_TYPE:
+				return convertJumpLinkTypeToString(eDataType, instanceValue);
+			case NotationPackage.ALIGNMENT:
+				return convertAlignmentToString(eDataType, instanceValue);
+			case NotationPackage.SORTING_DIRECTION:
+				return convertSortingDirectionToString(eDataType, instanceValue);
+			case NotationPackage.MEASUREMENT_UNIT:
+				return convertMeasurementUnitToString(eDataType, instanceValue);
+			case NotationPackage.RELATIVE_BENDPOINT_LIST:
+				return convertRelativeBendpointListToString(eDataType, instanceValue);
+			case NotationPackage.FILTER_KEY_LIST:
+				return convertFilterKeyListToString(eDataType, instanceValue);
+			case NotationPackage.SORT_KEY_MAP:
+				return convertSortKeyMapToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Edge createEdge() {
-        EdgeImpl edge = new EdgeImpl();
-        return edge;
-    }
+		EdgeImpl edge = new EdgeImpl();
+		return edge;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Node createNode() {
-        NodeImpl node = new NodeImpl();
-        return node;
-    }
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public FillStyle createFillStyle() {
-        FillStyleImpl fillStyle = new FillStyleImpl();
-        return fillStyle;
-    }
+		FillStyleImpl fillStyle = new FillStyleImpl();
+		return fillStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public LineStyle createLineStyle() {
-        LineStyleImpl lineStyle = new LineStyleImpl();
-        return lineStyle;
-    }
+		LineStyleImpl lineStyle = new LineStyleImpl();
+		return lineStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public FontStyle createFontStyle() {
-        FontStyleImpl fontStyle = new FontStyleImpl();
-        return fontStyle;
-    }
+		FontStyleImpl fontStyle = new FontStyleImpl();
+		return fontStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public TitleStyle createTitleStyle() {
-        TitleStyleImpl titleStyle = new TitleStyleImpl();
-        return titleStyle;
-    }
+		TitleStyleImpl titleStyle = new TitleStyleImpl();
+		return titleStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public SortingStyle createSortingStyle() {
-        SortingStyleImpl sortingStyle = new SortingStyleImpl();
-        return sortingStyle;
-    }
+		SortingStyleImpl sortingStyle = new SortingStyleImpl();
+		return sortingStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public DescriptionStyle createDescriptionStyle() {
-        DescriptionStyleImpl descriptionStyle = new DescriptionStyleImpl();
-        return descriptionStyle;
-    }
+		DescriptionStyleImpl descriptionStyle = new DescriptionStyleImpl();
+		return descriptionStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Size createSize() {
-        SizeImpl size = new SizeImpl();
-        return size;
-    }
+		SizeImpl size = new SizeImpl();
+		return size;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Location createLocation() {
-        LocationImpl location = new LocationImpl();
-        return location;
-    }
+		LocationImpl location = new LocationImpl();
+		return location;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Bounds createBounds() {
-        BoundsImpl bounds = new BoundsImpl();
-        return bounds;
-    }
+		BoundsImpl bounds = new BoundsImpl();
+		return bounds;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Ratio createRatio() {
-        RatioImpl ratio = new RatioImpl();
-        return ratio;
-    }
+		RatioImpl ratio = new RatioImpl();
+		return ratio;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public IdentityAnchor createIdentityAnchor() {
-        IdentityAnchorImpl identityAnchor = new IdentityAnchorImpl();
-        return identityAnchor;
-    }
+		IdentityAnchorImpl identityAnchor = new IdentityAnchorImpl();
+		return identityAnchor;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public RoutingStyle createRoutingStyle() {
-        RoutingStyleImpl routingStyle = new RoutingStyleImpl();
-        return routingStyle;
-    }
+		RoutingStyleImpl routingStyle = new RoutingStyleImpl();
+		return routingStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public RelativeBendpoints createRelativeBendpoints() {
-        RelativeBendpointsImpl relativeBendpoints = new RelativeBendpointsImpl();
-        return relativeBendpoints;
-    }
+		RelativeBendpointsImpl relativeBendpoints = new RelativeBendpointsImpl();
+		return relativeBendpoints;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public CanonicalStyle createCanonicalStyle() {
-        CanonicalStyleImpl canonicalStyle = new CanonicalStyleImpl();
-        return canonicalStyle;
-    }
+		CanonicalStyleImpl canonicalStyle = new CanonicalStyleImpl();
+		return canonicalStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ShapeStyle createShapeStyle() {
-        ShapeStyleImpl shapeStyle = new ShapeStyleImpl();
-        return shapeStyle;
-    }
+		ShapeStyleImpl shapeStyle = new ShapeStyleImpl();
+		return shapeStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ConnectorStyle createConnectorStyle() {
-        ConnectorStyleImpl connectorStyle = new ConnectorStyleImpl();
-        return connectorStyle;
-    }
+		ConnectorStyleImpl connectorStyle = new ConnectorStyleImpl();
+		return connectorStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Diagram createDiagram() {
-        DiagramImpl diagram = new DiagramImpl();
-        return diagram;
-    }
+		DiagramImpl diagram = new DiagramImpl();
+		return diagram;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Image createImage() {
-        ImageImpl image = new ImageImpl();
-        return image;
-    }
+		ImageImpl image = new ImageImpl();
+		return image;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public PageStyle createPageStyle() {
-        PageStyleImpl pageStyle = new PageStyleImpl();
-        return pageStyle;
-    }
+		PageStyleImpl pageStyle = new PageStyleImpl();
+		return pageStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public DrawerStyle createDrawerStyle() {
-        DrawerStyleImpl drawerStyle = new DrawerStyleImpl();
-        return drawerStyle;
-    }
+		DrawerStyleImpl drawerStyle = new DrawerStyleImpl();
+		return drawerStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public GuideStyle createGuideStyle() {
-        GuideStyleImpl guideStyle = new GuideStyleImpl();
-        return guideStyle;
-    }
+		GuideStyleImpl guideStyle = new GuideStyleImpl();
+		return guideStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Guide createGuide() {
-        GuideImpl guide = new GuideImpl();
-        return guide;
-    }
+		GuideImpl guide = new GuideImpl();
+		return guide;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Map.Entry createNodeEntry() {
-        NodeEntryImpl nodeEntry = new NodeEntryImpl();
-        return nodeEntry;
-    }
+		NodeEntryImpl nodeEntry = new NodeEntryImpl();
+		return nodeEntry;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public FilteringStyle createFilteringStyle() {
-        FilteringStyleImpl filteringStyle = new FilteringStyleImpl();
-        return filteringStyle;
-    }
+		FilteringStyleImpl filteringStyle = new FilteringStyleImpl();
+		return filteringStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public DiagramStyle createDiagramStyle() {
-        DiagramStyleImpl diagramStyle = new DiagramStyleImpl();
-        return diagramStyle;
-    }
+		DiagramStyleImpl diagramStyle = new DiagramStyleImpl();
+		return diagramStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ImageStyle createImageStyle() {
-        ImageStyleImpl imageStyle = new ImageStyleImpl();
-        return imageStyle;
-    }
+		ImageStyleImpl imageStyle = new ImageStyleImpl();
+		return imageStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ImageBufferStyle createImageBufferStyle() {
-        ImageBufferStyleImpl imageBufferStyle = new ImageBufferStyleImpl();
-        return imageBufferStyle;
-    }
+		ImageBufferStyleImpl imageBufferStyle = new ImageBufferStyleImpl();
+		return imageBufferStyle;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PropertiesSetStyle createPropertiesSetStyle() {
+		PropertiesSetStyleImpl propertiesSetStyle = new PropertiesSetStyleImpl();
+		return propertiesSetStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry createStringToPropertyValueMapEntry() {
+		StringToPropertyValueMapEntryImpl stringToPropertyValueMapEntry = new StringToPropertyValueMapEntryImpl();
+		return stringToPropertyValueMapEntry;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PropertyValue createPropertyValue() {
+		PropertyValueImpl propertyValue = new PropertyValueImpl();
+		return propertyValue;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SingleValueStyle createSingleValueStyle() {
+		SingleValueStyleImpl singleValueStyle = new SingleValueStyleImpl();
+		return singleValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListValueStyle createListValueStyle() {
+		ListValueStyleImpl listValueStyle = new ListValueStyleImpl();
+		return listValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NamedStyle createNamedStyle() {
+		NamedStyleImpl namedStyle = new NamedStyleImpl();
+		return namedStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataTypeStyle createDataTypeStyle() {
+		DataTypeStyleImpl dataTypeStyle = new DataTypeStyleImpl();
+		return dataTypeStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntValueStyle createIntValueStyle() {
+		IntValueStyleImpl intValueStyle = new IntValueStyleImpl();
+		return intValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntListValueStyle createIntListValueStyle() {
+		IntListValueStyleImpl intListValueStyle = new IntListValueStyleImpl();
+		return intListValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanValueStyle createBooleanValueStyle() {
+		BooleanValueStyleImpl booleanValueStyle = new BooleanValueStyleImpl();
+		return booleanValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DoubleValueStyle createDoubleValueStyle() {
+		DoubleValueStyleImpl doubleValueStyle = new DoubleValueStyleImpl();
+		return doubleValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DoubleListValueStyle createDoubleListValueStyle() {
+		DoubleListValueStyleImpl doubleListValueStyle = new DoubleListValueStyleImpl();
+		return doubleListValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringValueStyle createStringValueStyle() {
+		StringValueStyleImpl stringValueStyle = new StringValueStyleImpl();
+		return stringValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringListValueStyle createStringListValueStyle() {
+		StringListValueStyleImpl stringListValueStyle = new StringListValueStyleImpl();
+		return stringListValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectValueStyle createEObjectValueStyle() {
+		EObjectValueStyleImpl eObjectValueStyle = new EObjectValueStyleImpl();
+		return eObjectValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectListValueStyle createEObjectListValueStyle() {
+		EObjectListValueStyleImpl eObjectListValueStyle = new EObjectListValueStyleImpl();
+		return eObjectListValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ByteArrayValueStyle createByteArrayValueStyle() {
+		ByteArrayValueStyleImpl byteArrayValueStyle = new ByteArrayValueStyleImpl();
+		return byteArrayValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanListValueStyle createBooleanListValueStyle() {
+		BooleanListValueStyleImpl booleanListValueStyle = new BooleanListValueStyleImpl();
+		return booleanListValueStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HintedDiagramLinkStyle createHintedDiagramLinkStyle() {
+		HintedDiagramLinkStyleImpl hintedDiagramLinkStyle = new HintedDiagramLinkStyleImpl();
+		return hintedDiagramLinkStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DiagramLinkStyle createDiagramLinkStyle() {
+		DiagramLinkStyleImpl diagramLinkStyle = new DiagramLinkStyleImpl();
+		return diagramLinkStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultiDiagramLinkStyle createMultiDiagramLinkStyle() {
+		MultiDiagramLinkStyleImpl multiDiagramLinkStyle = new MultiDiagramLinkStyleImpl();
+		return multiDiagramLinkStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Sorting createSortingFromString(EDataType eDataType, String initialValue) {
-        Sorting result = Sorting.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		Sorting result = Sorting.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertSortingToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Filtering createFilteringFromString(EDataType eDataType, String initialValue) {
-        Filtering result = Filtering.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		Filtering result = Filtering.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertFilteringToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Routing createRoutingFromString(EDataType eDataType, String initialValue) {
-        Routing result = Routing.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		Routing result = Routing.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertRoutingToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Smoothness createSmoothnessFromString(EDataType eDataType, String initialValue) {
-        Smoothness result = Smoothness.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		Smoothness result = Smoothness.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertSmoothnessToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public JumpLinkStatus createJumpLinkStatusFromString(EDataType eDataType, String initialValue) {
-        JumpLinkStatus result = JumpLinkStatus.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		JumpLinkStatus result = JumpLinkStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertJumpLinkStatusToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public JumpLinkType createJumpLinkTypeFromString(EDataType eDataType, String initialValue) {
-        JumpLinkType result = JumpLinkType.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		JumpLinkType result = JumpLinkType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertJumpLinkTypeToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Alignment createAlignmentFromString(EDataType eDataType, String initialValue) {
-        Alignment result = Alignment.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		Alignment result = Alignment.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertAlignmentToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public SortingDirection createSortingDirectionFromString(EDataType eDataType, String initialValue) {
-        SortingDirection result = SortingDirection.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		SortingDirection result = SortingDirection.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertSortingDirectionToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public MeasurementUnit createMeasurementUnitFromString(EDataType eDataType, String initialValue) {
-        MeasurementUnit result = MeasurementUnit.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-        return result;
-    }
+		MeasurementUnit result = MeasurementUnit.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertMeasurementUnitToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -779,22 +1011,22 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public NotationPackage getNotationPackage() {
-        return (NotationPackage)getEPackage();
-    }
+		return (NotationPackage)getEPackage();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @deprecated
-     * @generated
-     */
+	 * @deprecated
+	 * @generated
+	 */
 	public static NotationPackage getPackage() {
-        return NotationPackage.eINSTANCE;
-    }
+		return NotationPackage.eINSTANCE;
+	}
 
 } //NotationFactoryImpl

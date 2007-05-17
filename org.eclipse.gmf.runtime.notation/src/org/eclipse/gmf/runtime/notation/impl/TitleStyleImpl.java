@@ -36,131 +36,131 @@ import org.eclipse.gmf.runtime.notation.TitleStyle;
  */
 public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
     /**
-     * The default value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isShowTitle()
-     * @generated
-     * @ordered
-     */
+	 * @see #isShowTitle()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final boolean SHOW_TITLE_EDEFAULT = false;
 
     /**
-     * The flag representing the value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The flag representing the value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isShowTitle()
-     * @generated
-     * @ordered
-     */
+	 * @see #isShowTitle()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int SHOW_TITLE_EFLAG = 1 << 8;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected TitleStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.TITLE_STYLE;
-    }
+		return NotationPackage.Literals.TITLE_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public boolean isShowTitle() {
-        return (eFlags & SHOW_TITLE_EFLAG) != 0;
-    }
+		return (eFlags & SHOW_TITLE_EFLAG) != 0;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setShowTitle(boolean newShowTitle) {
-        boolean oldShowTitle = (eFlags & SHOW_TITLE_EFLAG) != 0;
-        if (newShowTitle) eFlags |= SHOW_TITLE_EFLAG; else eFlags &= ~SHOW_TITLE_EFLAG;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.TITLE_STYLE__SHOW_TITLE, oldShowTitle, newShowTitle));
-    }
+		boolean oldShowTitle = (eFlags & SHOW_TITLE_EFLAG) != 0;
+		if (newShowTitle) eFlags |= SHOW_TITLE_EFLAG; else eFlags &= ~SHOW_TITLE_EFLAG;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.TITLE_STYLE__SHOW_TITLE, oldShowTitle, newShowTitle));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.TITLE_STYLE__SHOW_TITLE:
-                return isShowTitle() ? Boolean.TRUE : Boolean.FALSE;
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
+				return isShowTitle() ? Boolean.TRUE : Boolean.FALSE;
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.TITLE_STYLE__SHOW_TITLE:
-                setShowTitle(((Boolean)newValue).booleanValue());
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
+				setShowTitle(((Boolean)newValue).booleanValue());
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.TITLE_STYLE__SHOW_TITLE:
-                setShowTitle(SHOW_TITLE_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
+				setShowTitle(SHOW_TITLE_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.TITLE_STYLE__SHOW_TITLE:
-                return ((eFlags & SHOW_TITLE_EFLAG) != 0) != SHOW_TITLE_EDEFAULT;
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
+				return ((eFlags & SHOW_TITLE_EFLAG) != 0) != SHOW_TITLE_EDEFAULT;
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (showTitle: "); //$NON-NLS-1$
-        result.append((eFlags & SHOW_TITLE_EFLAG) != 0);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (showTitle: "); //$NON-NLS-1$
+		result.append((eFlags & SHOW_TITLE_EFLAG) != 0);
+		result.append(')');
+		return result.toString();
+	}
 
 } //TitleStyleImpl

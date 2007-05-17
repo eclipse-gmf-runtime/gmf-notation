@@ -30,7 +30,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRelativeBendpoints()
- * @model 
+ * @model
  * @generated
  */
 /*

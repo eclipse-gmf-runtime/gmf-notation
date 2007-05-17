@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getShapeStyle()
- * @model 
+ * @model
  * @generated
  */
 /*

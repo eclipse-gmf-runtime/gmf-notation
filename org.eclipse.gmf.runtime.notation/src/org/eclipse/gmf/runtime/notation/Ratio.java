@@ -28,7 +28,7 @@ package org.eclipse.gmf.runtime.notation;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRatio()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -36,30 +36,30 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface Ratio extends LayoutConstraint {
     /**
-     * Returns the value of the '<em><b>Value</b></em>' attribute.
-     * The default value is <code>"-1"</code>.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The value is the ratio of the view to its container
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Value</em>' attribute.
-     * @see #setValue(double)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRatio_Value()
-     * @model default="-1"
-     * @generated
-     */
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(double)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRatio_Value()
+	 * @model default="-1"
+	 * @generated
+	 */
 	double getValue();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Ratio#getValue <em>Value</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Ratio#getValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * The value is the ratio of the view to its container
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Value</em>' attribute.
-     * @see #getValue()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #getValue()
+	 * @generated
+	 */
 	void setValue(double value);
 
 } // Ratio

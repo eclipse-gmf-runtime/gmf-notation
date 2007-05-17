@@ -29,7 +29,7 @@ package org.eclipse.gmf.runtime.notation;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getCanonicalStyle()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -37,26 +37,26 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface CanonicalStyle extends Style {
     /**
-     * Returns the value of the '<em><b>Canonical</b></em>' attribute.
-     * The default value is <code>"true"</code>.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Canonical</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Canonical</em>' attribute.
-     * @see #setCanonical(boolean)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getCanonicalStyle_Canonical()
-     * @model default="true"
-     * @generated
-     */
+	 * @return the value of the '<em>Canonical</em>' attribute.
+	 * @see #setCanonical(boolean)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getCanonicalStyle_Canonical()
+	 * @model default="true"
+	 * @generated
+	 */
 	boolean isCanonical();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.CanonicalStyle#isCanonical <em>Canonical</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.CanonicalStyle#isCanonical <em>Canonical</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Canonical</em>' attribute.
-     * @see #isCanonical()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Canonical</em>' attribute.
+	 * @see #isCanonical()
+	 * @generated
+	 */
 	void setCanonical(boolean value);
 
 } // CanonicalStyle

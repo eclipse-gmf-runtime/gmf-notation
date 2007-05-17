@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuide()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -41,48 +41,48 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Guide extends EObject {
     /**
-     * Returns the value of the '<em><b>Position</b></em>' attribute.
-     * The default value is <code>"0"</code>.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Position</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The position is the distance along the diagram ruler of the guide
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Position</em>' attribute.
-     * @see #setPosition(int)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuide_Position()
-     * @model default="0"
-     * @generated
-     */
+	 * @return the value of the '<em>Position</em>' attribute.
+	 * @see #setPosition(int)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuide_Position()
+	 * @model default="0"
+	 * @generated
+	 */
 	int getPosition();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Guide#getPosition <em>Position</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Guide#getPosition <em>Position</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The position is the distance along the diagram ruler of the guide
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Position</em>' attribute.
-     * @see #getPosition()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Position</em>' attribute.
+	 * @see #getPosition()
+	 * @generated
+	 */
 	void setPosition(int value);
 
     /**
-     * Returns the value of the '<em><b>Node Map</b></em>' map.
-     * The key is of type {@link org.eclipse.gmf.runtime.notation.Node},
-     * and the value is of type {@link org.eclipse.gmf.runtime.notation.Alignment},
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Node Map</b></em>' map.
+	 * The key is of type {@link org.eclipse.gmf.runtime.notation.Node},
+	 * and the value is of type {@link org.eclipse.gmf.runtime.notation.Alignment},
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The map is an unordered map from nodes to their alignment in respect to the guide.
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Node Map</em>' map.
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuide_NodeMap()
-     * @model mapType="org.eclipse.gmf.runtime.notation.NodeEntry" keyType="org.eclipse.gmf.runtime.notation.Node" valueType="org.eclipse.gmf.runtime.notation.Alignment"
-     * @generated
-     */
+	 * @return the value of the '<em>Node Map</em>' map.
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getGuide_NodeMap()
+	 * @model mapType="org.eclipse.gmf.runtime.notation.NodeEntry" keyType="org.eclipse.gmf.runtime.notation.Node" valueType="org.eclipse.gmf.runtime.notation.Alignment"
+	 * @generated
+	 */
 	EMap getNodeMap();
 
 } // Guide

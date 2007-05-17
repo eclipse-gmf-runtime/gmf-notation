@@ -49,23 +49,23 @@ import org.eclipse.gmf.runtime.notation.SortingStyle;
  */
 public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
     /**
-     * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSorting()
-     * @generated
-     * @ordered
-     */
+	 * @see #getSorting()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final Sorting SORTING_EDEFAULT = Sorting.NONE_LITERAL;
 
     /**
-     * The cached value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSorting()
-     * @generated
-     * @ordered
-     */
+	 * @see #getSorting()
+	 * @generated
+	 * @ordered
+	 */
 	protected Sorting sorting = SORTING_EDEFAULT;
 
 	/**
@@ -79,63 +79,63 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	protected static final Map SORTING_KEYS_EDEFAULT = Collections.EMPTY_MAP;
 
     /**
-     * The cached value of the '{@link #getSortingKeys() <em>Sorting Keys</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSortingKeys() <em>Sorting Keys</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSortingKeys()
-     * @generated
-     * @ordered
-     */
+	 * @see #getSortingKeys()
+	 * @generated
+	 * @ordered
+	 */
 	protected Map sortingKeys = SORTING_KEYS_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getSortedObjects() <em>Sorted Objects</em>}' reference list.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSortedObjects() <em>Sorted Objects</em>}' reference list.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSortedObjects()
-     * @generated
-     * @ordered
-     */
-	protected EList sortedObjects = null;
+	 * @see #getSortedObjects()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList sortedObjects;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected SortingStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.SORTING_STYLE;
-    }
+		return NotationPackage.Literals.SORTING_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Sorting getSorting() {
-        return sorting;
-    }
+		return sorting;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setSorting(Sorting newSorting) {
-        Sorting oldSorting = sorting;
-        sorting = newSorting == null ? SORTING_EDEFAULT : newSorting;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SORTING_STYLE__SORTING, oldSorting, sorting));
-    }
+		Sorting oldSorting = sorting;
+		sorting = newSorting == null ? SORTING_EDEFAULT : newSorting;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SORTING_STYLE__SORTING, oldSorting, sorting));
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,107 +177,107 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EList getSortedObjects() {
-        if (sortedObjects == null) {
-            sortedObjects = new EObjectResolvingEList(EObject.class, this, NotationPackage.SORTING_STYLE__SORTED_OBJECTS);
-        }
-        return sortedObjects;
-    }
+		if (sortedObjects == null) {
+			sortedObjects = new EObjectResolvingEList(EObject.class, this, NotationPackage.SORTING_STYLE__SORTED_OBJECTS);
+		}
+		return sortedObjects;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.SORTING_STYLE__SORTING:
-                return getSorting();
-            case NotationPackage.SORTING_STYLE__SORTING_KEYS:
-                return getSortingKeys();
-            case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
-                return getSortedObjects();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__SORTING:
+				return getSorting();
+			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
+				return getSortingKeys();
+			case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
+				return getSortedObjects();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.SORTING_STYLE__SORTING:
-                setSorting((Sorting)newValue);
-                return;
-            case NotationPackage.SORTING_STYLE__SORTING_KEYS:
-                setSortingKeys((Map)newValue);
-                return;
-            case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
-                getSortedObjects().clear();
-                getSortedObjects().addAll((Collection)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__SORTING:
+				setSorting((Sorting)newValue);
+				return;
+			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
+				setSortingKeys((Map)newValue);
+				return;
+			case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
+				getSortedObjects().clear();
+				getSortedObjects().addAll((Collection)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.SORTING_STYLE__SORTING:
-                setSorting(SORTING_EDEFAULT);
-                return;
-            case NotationPackage.SORTING_STYLE__SORTING_KEYS:
-                setSortingKeys(SORTING_KEYS_EDEFAULT);
-                return;
-            case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
-                getSortedObjects().clear();
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__SORTING:
+				setSorting(SORTING_EDEFAULT);
+				return;
+			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
+				setSortingKeys(SORTING_KEYS_EDEFAULT);
+				return;
+			case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
+				getSortedObjects().clear();
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.SORTING_STYLE__SORTING:
-                return sorting != SORTING_EDEFAULT;
-            case NotationPackage.SORTING_STYLE__SORTING_KEYS:
-                return SORTING_KEYS_EDEFAULT == null ? sortingKeys != null : !SORTING_KEYS_EDEFAULT.equals(sortingKeys);
-            case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
-                return sortedObjects != null && !sortedObjects.isEmpty();
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__SORTING:
+				return sorting != SORTING_EDEFAULT;
+			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
+				return SORTING_KEYS_EDEFAULT == null ? sortingKeys != null : !SORTING_KEYS_EDEFAULT.equals(sortingKeys);
+			case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
+				return sortedObjects != null && !sortedObjects.isEmpty();
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (sorting: "); //$NON-NLS-1$
-        result.append(sorting);
-        result.append(", sortingKeys: "); //$NON-NLS-1$
-        result.append(sortingKeys);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (sorting: "); //$NON-NLS-1$
+		result.append(sorting);
+		result.append(", sortingKeys: "); //$NON-NLS-1$
+		result.append(sortingKeys);
+		result.append(')');
+		return result.toString();
+	}
 
 } //SortingStyleImpl

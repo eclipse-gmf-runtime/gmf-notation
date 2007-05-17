@@ -48,14 +48,14 @@ public class EdgeItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
     /**
-     * This constructs an instance from a factory and a notifier.
-     * <!-- begin-user-doc -->
+	 * This constructs an instance from a factory and a notifier.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EdgeItemProvider(AdapterFactory adapterFactory) {
-        super(adapterFactory);
-    }
+		super(adapterFactory);
+	}
 
 	/**
 	 * This returns the property descriptors for the adapted class.
@@ -71,78 +71,78 @@ public class EdgeItemProvider
 	}
 
     /**
-     * This adds a property descriptor for the Source feature.
-     * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Source feature.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected void addSourcePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Edge_source_feature"), //$NON-NLS-1$
-                 getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                 NotationPackage.Literals.EDGE__SOURCE,
-                 true,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
-    }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Edge_source_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.EDGE__SOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
 
     /**
-     * This adds a property descriptor for the Target feature.
-     * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected void addTargetPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Edge_target_feature"), //$NON-NLS-1$
-                 getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                 NotationPackage.Literals.EDGE__TARGET,
-                 true,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
-    }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Edge_target_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature", "_UI_Edge_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.EDGE__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-     * <!-- begin-user-doc -->
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Collection getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(NotationPackage.Literals.EDGE__BENDPOINTS);
-            childrenFeatures.add(NotationPackage.Literals.EDGE__SOURCE_ANCHOR);
-            childrenFeatures.add(NotationPackage.Literals.EDGE__TARGET_ANCHOR);
-        }
-        return childrenFeatures;
-    }
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(NotationPackage.Literals.EDGE__BENDPOINTS);
+			childrenFeatures.add(NotationPackage.Literals.EDGE__SOURCE_ANCHOR);
+			childrenFeatures.add(NotationPackage.Literals.EDGE__TARGET_ANCHOR);
+		}
+		return childrenFeatures;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
 
-        return super.getChildFeature(object, child);
-    }
+		return super.getChildFeature(object, child);
+	}
 
 	/**
 	 * This adds a property descriptor for the Source Anchor feature.
@@ -190,104 +190,104 @@ public class EdgeItemProvider
 	}
 
     /**
-     * This returns Edge.gif.
-     * <!-- begin-user-doc -->
+	 * This returns Edge.gif.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Edge")); //$NON-NLS-1$
-    }
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Edge")); //$NON-NLS-1$
+	}
 
     /**
-     * This returns the label text for the adapted class.
-     * <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String getText(Object object) {
-        Edge edge = (Edge)object;
-        return getString("_UI_Edge_type") + " " + edge.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
-    }
+		Edge edge = (Edge)object;
+		return getString("_UI_Edge_type") + " " + edge.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
+	}
 
     /**
-     * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-     * <!-- begin-user-doc -->
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+		updateChildren(notification);
 
-        switch (notification.getFeatureID(Edge.class)) {
-            case NotationPackage.EDGE__BENDPOINTS:
-            case NotationPackage.EDGE__SOURCE_ANCHOR:
-            case NotationPackage.EDGE__TARGET_ANCHOR:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-                return;
-        }
-        super.notifyChanged(notification);
-    }
+		switch (notification.getFeatureID(Edge.class)) {
+			case NotationPackage.EDGE__BENDPOINTS:
+			case NotationPackage.EDGE__SOURCE_ANCHOR:
+			case NotationPackage.EDGE__TARGET_ANCHOR:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
+		super.notifyChanged(notification);
+	}
 
     /**
-     * This adds to the collection of {@link org.eclipse.emf.edit.command.CommandParameter}s
-     * describing all of the children that can be created under this object.
-     * <!-- begin-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+	 * that can be created under this object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
-        super.collectNewChildDescriptors(newChildDescriptors, object);
+		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-            (createChildParameter
-                (NotationPackage.Literals.EDGE__BENDPOINTS,
-                 NotationFactory.eINSTANCE.createRelativeBendpoints()));
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.EDGE__BENDPOINTS,
+				 NotationFactory.eINSTANCE.createRelativeBendpoints()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (NotationPackage.Literals.EDGE__SOURCE_ANCHOR,
-                 NotationFactory.eINSTANCE.createIdentityAnchor()));
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.EDGE__SOURCE_ANCHOR,
+				 NotationFactory.eINSTANCE.createIdentityAnchor()));
 
-        newChildDescriptors.add
-            (createChildParameter
-                (NotationPackage.Literals.EDGE__TARGET_ANCHOR,
-                 NotationFactory.eINSTANCE.createIdentityAnchor()));
-    }
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.EDGE__TARGET_ANCHOR,
+				 NotationFactory.eINSTANCE.createIdentityAnchor()));
+	}
 
     /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-     * <!-- begin-user-doc -->
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String getCreateChildText(Object owner, Object feature, Object child, Collection selection) {
-        Object childFeature = feature;
-        Object childObject = child;
+		Object childFeature = feature;
+		Object childObject = child;
 
-        boolean qualify =
-            childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
-            childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
-            childFeature == NotationPackage.Literals.EDGE__SOURCE_ANCHOR ||
-            childFeature == NotationPackage.Literals.EDGE__TARGET_ANCHOR;
+		boolean qualify =
+			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
+			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
+			childFeature == NotationPackage.Literals.EDGE__SOURCE_ANCHOR ||
+			childFeature == NotationPackage.Literals.EDGE__TARGET_ANCHOR;
 
-        if (qualify) {
-            return getString
-                ("_UI_CreateChild_text2", //$NON-NLS-1$
-                 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
-    }
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2", //$NON-NLS-1$
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
+	}
 
     /**
-     * Return the resource locator for this item provider's resources.
-     * <!-- begin-user-doc -->
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public ResourceLocator getResourceLocator() {
-        return NotationEditPlugin.INSTANCE;
-    }
+		return NotationEditPlugin.INSTANCE;
+	}
 
 }

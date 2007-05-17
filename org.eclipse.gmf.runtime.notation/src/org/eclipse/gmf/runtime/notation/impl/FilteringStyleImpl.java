@@ -48,23 +48,23 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyle {
     /**
-     * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFiltering()
-     * @generated
-     * @ordered
-     */
+	 * @see #getFiltering()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final Filtering FILTERING_EDEFAULT = Filtering.NONE_LITERAL;
 
     /**
-     * The cached value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFiltering()
-     * @generated
-     * @ordered
-     */
+	 * @see #getFiltering()
+	 * @generated
+	 * @ordered
+	 */
 	protected Filtering filtering = FILTERING_EDEFAULT;
 
 	/**
@@ -78,63 +78,63 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	protected static final List FILTERING_KEYS_EDEFAULT = Collections.EMPTY_LIST;
 
     /**
-     * The cached value of the '{@link #getFilteringKeys() <em>Filtering Keys</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFilteringKeys() <em>Filtering Keys</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFilteringKeys()
-     * @generated
-     * @ordered
-     */
+	 * @see #getFilteringKeys()
+	 * @generated
+	 * @ordered
+	 */
 	protected List filteringKeys = FILTERING_KEYS_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getFilteredObjects() <em>Filtered Objects</em>}' reference list.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFilteredObjects() <em>Filtered Objects</em>}' reference list.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getFilteredObjects()
-     * @generated
-     * @ordered
-     */
-	protected EList filteredObjects = null;
+	 * @see #getFilteredObjects()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList filteredObjects;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected FilteringStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.FILTERING_STYLE;
-    }
+		return NotationPackage.Literals.FILTERING_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Filtering getFiltering() {
-        return filtering;
-    }
+		return filtering;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setFiltering(Filtering newFiltering) {
-        Filtering oldFiltering = filtering;
-        filtering = newFiltering == null ? FILTERING_EDEFAULT : newFiltering;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FILTERING_STYLE__FILTERING, oldFiltering, filtering));
-    }
+		Filtering oldFiltering = filtering;
+		filtering = newFiltering == null ? FILTERING_EDEFAULT : newFiltering;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FILTERING_STYLE__FILTERING, oldFiltering, filtering));
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,107 +173,107 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EList getFilteredObjects() {
-        if (filteredObjects == null) {
-            filteredObjects = new EObjectResolvingEList(EObject.class, this, NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS);
-        }
-        return filteredObjects;
-    }
+		if (filteredObjects == null) {
+			filteredObjects = new EObjectResolvingEList(EObject.class, this, NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS);
+		}
+		return filteredObjects;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.FILTERING_STYLE__FILTERING:
-                return getFiltering();
-            case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
-                return getFilteringKeys();
-            case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
-                return getFilteredObjects();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__FILTERING:
+				return getFiltering();
+			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
+				return getFilteringKeys();
+			case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
+				return getFilteredObjects();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.FILTERING_STYLE__FILTERING:
-                setFiltering((Filtering)newValue);
-                return;
-            case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
-                setFilteringKeys((List)newValue);
-                return;
-            case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
-                getFilteredObjects().clear();
-                getFilteredObjects().addAll((Collection)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__FILTERING:
+				setFiltering((Filtering)newValue);
+				return;
+			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
+				setFilteringKeys((List)newValue);
+				return;
+			case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
+				getFilteredObjects().clear();
+				getFilteredObjects().addAll((Collection)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.FILTERING_STYLE__FILTERING:
-                setFiltering(FILTERING_EDEFAULT);
-                return;
-            case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
-                setFilteringKeys(FILTERING_KEYS_EDEFAULT);
-                return;
-            case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
-                getFilteredObjects().clear();
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__FILTERING:
+				setFiltering(FILTERING_EDEFAULT);
+				return;
+			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
+				setFilteringKeys(FILTERING_KEYS_EDEFAULT);
+				return;
+			case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
+				getFilteredObjects().clear();
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.FILTERING_STYLE__FILTERING:
-                return filtering != FILTERING_EDEFAULT;
-            case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
-                return FILTERING_KEYS_EDEFAULT == null ? filteringKeys != null : !FILTERING_KEYS_EDEFAULT.equals(filteringKeys);
-            case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
-                return filteredObjects != null && !filteredObjects.isEmpty();
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__FILTERING:
+				return filtering != FILTERING_EDEFAULT;
+			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
+				return FILTERING_KEYS_EDEFAULT == null ? filteringKeys != null : !FILTERING_KEYS_EDEFAULT.equals(filteringKeys);
+			case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
+				return filteredObjects != null && !filteredObjects.isEmpty();
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (filtering: "); //$NON-NLS-1$
-        result.append(filtering);
-        result.append(", filteringKeys: "); //$NON-NLS-1$
-        result.append(filteringKeys);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (filtering: "); //$NON-NLS-1$
+		result.append(filtering);
+		result.append(", filteringKeys: "); //$NON-NLS-1$
+		result.append(filteringKeys);
+		result.append(')');
+		return result.toString();
+	}
 
 } //FilteringStyleImpl

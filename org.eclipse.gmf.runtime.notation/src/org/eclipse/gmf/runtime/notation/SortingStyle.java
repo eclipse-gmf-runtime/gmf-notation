@@ -33,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getSortingStyle()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -41,35 +41,35 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface SortingStyle extends Style {
     /**
-     * Returns the value of the '<em><b>Sorting</b></em>' attribute.
-     * The default value is <code>"None"</code>.
-     * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.Sorting}.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Sorting</b></em>' attribute.
+	 * The default value is <code>"None"</code>.
+	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.Sorting}.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * This is the type of sorting applied to the list represented by the node
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Sorting</em>' attribute.
-     * @see org.eclipse.gmf.runtime.notation.Sorting
-     * @see #setSorting(Sorting)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getSortingStyle_Sorting()
-     * @model default="None"
-     * @generated
-     */
+	 * @return the value of the '<em>Sorting</em>' attribute.
+	 * @see org.eclipse.gmf.runtime.notation.Sorting
+	 * @see #setSorting(Sorting)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getSortingStyle_Sorting()
+	 * @model default="None"
+	 * @generated
+	 */
 	Sorting getSorting();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.SortingStyle#getSorting <em>Sorting</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.SortingStyle#getSorting <em>Sorting</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * This is the type of sorting applied to the list represented by the node
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Sorting</em>' attribute.
-     * @see org.eclipse.gmf.runtime.notation.Sorting
-     * @see #getSorting()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Sorting</em>' attribute.
+	 * @see org.eclipse.gmf.runtime.notation.Sorting
+	 * @see #getSorting()
+	 * @generated
+	 */
 	void setSorting(Sorting value);
 
 	/**
@@ -111,19 +111,19 @@ public interface SortingStyle extends Style {
 	void setSortingKeys(Map value);
 
     /**
-     * Returns the value of the '<em><b>Sorted Objects</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Sorted Objects</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The property is an ordered list of references to objects be sorted. The property is
 	 * normally used when the <em>Sorting</em> property is set to <em>Manual</em>
 	 * </p>
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Sorted Objects</em>' reference list.
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getSortingStyle_SortedObjects()
-     * @model type="org.eclipse.emf.ecore.EObject"
-     * @generated
-     */
+	 * @return the value of the '<em>Sorted Objects</em>' reference list.
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getSortingStyle_SortedObjects()
+	 * @model type="org.eclipse.emf.ecore.EObject"
+	 * @generated
+	 */
 	EList getSortedObjects();
 
 } // SortingStyle

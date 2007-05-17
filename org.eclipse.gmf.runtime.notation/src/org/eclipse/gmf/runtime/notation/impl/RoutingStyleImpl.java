@@ -46,449 +46,449 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
  */
 public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
     /**
-     * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getRouting()
-     * @generated
-     * @ordered
-     */
+	 * @see #getRouting()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final Routing ROUTING_EDEFAULT = Routing.MANUAL_LITERAL;
 
     /**
-     * The cached value of the '{@link #getRouting() <em>Routing</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getRouting() <em>Routing</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getRouting()
-     * @generated
-     * @ordered
-     */
+	 * @see #getRouting()
+	 * @generated
+	 * @ordered
+	 */
 	protected Routing routing = ROUTING_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSmoothness()
-     * @generated
-     * @ordered
-     */
+	 * @see #getSmoothness()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final Smoothness SMOOTHNESS_EDEFAULT = Smoothness.NONE_LITERAL;
 
     /**
-     * The cached value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getSmoothness()
-     * @generated
-     * @ordered
-     */
+	 * @see #getSmoothness()
+	 * @generated
+	 * @ordered
+	 */
 	protected Smoothness smoothness = SMOOTHNESS_EDEFAULT;
 
     /**
-     * The default value of the '{@link #isAvoidObstructions() <em>Avoid Obstructions</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isAvoidObstructions() <em>Avoid Obstructions</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isAvoidObstructions()
-     * @generated
-     * @ordered
-     */
+	 * @see #isAvoidObstructions()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final boolean AVOID_OBSTRUCTIONS_EDEFAULT = false;
 
     /**
-     * The flag representing the value of the '{@link #isAvoidObstructions() <em>Avoid Obstructions</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The flag representing the value of the '{@link #isAvoidObstructions() <em>Avoid Obstructions</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isAvoidObstructions()
-     * @generated
-     * @ordered
-     */
+	 * @see #isAvoidObstructions()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int AVOID_OBSTRUCTIONS_EFLAG = 1 << 8;
 
     /**
-     * The default value of the '{@link #isClosestDistance() <em>Closest Distance</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isClosestDistance() <em>Closest Distance</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isClosestDistance()
-     * @generated
-     * @ordered
-     */
+	 * @see #isClosestDistance()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final boolean CLOSEST_DISTANCE_EDEFAULT = false;
 
     /**
-     * The flag representing the value of the '{@link #isClosestDistance() <em>Closest Distance</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The flag representing the value of the '{@link #isClosestDistance() <em>Closest Distance</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isClosestDistance()
-     * @generated
-     * @ordered
-     */
+	 * @see #isClosestDistance()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int CLOSEST_DISTANCE_EFLAG = 1 << 9;
 
     /**
-     * The default value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getJumpLinkStatus()
-     * @generated
-     * @ordered
-     */
+	 * @see #getJumpLinkStatus()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final JumpLinkStatus JUMP_LINK_STATUS_EDEFAULT = JumpLinkStatus.NONE_LITERAL;
 
     /**
-     * The cached value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getJumpLinkStatus()
-     * @generated
-     * @ordered
-     */
+	 * @see #getJumpLinkStatus()
+	 * @generated
+	 * @ordered
+	 */
 	protected JumpLinkStatus jumpLinkStatus = JUMP_LINK_STATUS_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getJumpLinkType()
-     * @generated
-     * @ordered
-     */
+	 * @see #getJumpLinkType()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final JumpLinkType JUMP_LINK_TYPE_EDEFAULT = JumpLinkType.SEMICIRCLE_LITERAL;
 
     /**
-     * The cached value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getJumpLinkType()
-     * @generated
-     * @ordered
-     */
+	 * @see #getJumpLinkType()
+	 * @generated
+	 * @ordered
+	 */
 	protected JumpLinkType jumpLinkType = JUMP_LINK_TYPE_EDEFAULT;
 
     /**
-     * The default value of the '{@link #isJumpLinksReverse() <em>Jump Links Reverse</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isJumpLinksReverse() <em>Jump Links Reverse</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isJumpLinksReverse()
-     * @generated
-     * @ordered
-     */
+	 * @see #isJumpLinksReverse()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final boolean JUMP_LINKS_REVERSE_EDEFAULT = false;
 
     /**
-     * The flag representing the value of the '{@link #isJumpLinksReverse() <em>Jump Links Reverse</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The flag representing the value of the '{@link #isJumpLinksReverse() <em>Jump Links Reverse</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #isJumpLinksReverse()
-     * @generated
-     * @ordered
-     */
+	 * @see #isJumpLinksReverse()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int JUMP_LINKS_REVERSE_EFLAG = 1 << 10;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected RoutingStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.ROUTING_STYLE;
-    }
+		return NotationPackage.Literals.ROUTING_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Routing getRouting() {
-        return routing;
-    }
+		return routing;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setRouting(Routing newRouting) {
-        Routing oldRouting = routing;
-        routing = newRouting == null ? ROUTING_EDEFAULT : newRouting;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__ROUTING, oldRouting, routing));
-    }
+		Routing oldRouting = routing;
+		routing = newRouting == null ? ROUTING_EDEFAULT : newRouting;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__ROUTING, oldRouting, routing));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Smoothness getSmoothness() {
-        return smoothness;
-    }
+		return smoothness;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setSmoothness(Smoothness newSmoothness) {
-        Smoothness oldSmoothness = smoothness;
-        smoothness = newSmoothness == null ? SMOOTHNESS_EDEFAULT : newSmoothness;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__SMOOTHNESS, oldSmoothness, smoothness));
-    }
+		Smoothness oldSmoothness = smoothness;
+		smoothness = newSmoothness == null ? SMOOTHNESS_EDEFAULT : newSmoothness;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__SMOOTHNESS, oldSmoothness, smoothness));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public boolean isAvoidObstructions() {
-        return (eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0;
-    }
+		return (eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setAvoidObstructions(boolean newAvoidObstructions) {
-        boolean oldAvoidObstructions = (eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0;
-        if (newAvoidObstructions) eFlags |= AVOID_OBSTRUCTIONS_EFLAG; else eFlags &= ~AVOID_OBSTRUCTIONS_EFLAG;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS, oldAvoidObstructions, newAvoidObstructions));
-    }
+		boolean oldAvoidObstructions = (eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0;
+		if (newAvoidObstructions) eFlags |= AVOID_OBSTRUCTIONS_EFLAG; else eFlags &= ~AVOID_OBSTRUCTIONS_EFLAG;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS, oldAvoidObstructions, newAvoidObstructions));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public boolean isClosestDistance() {
-        return (eFlags & CLOSEST_DISTANCE_EFLAG) != 0;
-    }
+		return (eFlags & CLOSEST_DISTANCE_EFLAG) != 0;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setClosestDistance(boolean newClosestDistance) {
-        boolean oldClosestDistance = (eFlags & CLOSEST_DISTANCE_EFLAG) != 0;
-        if (newClosestDistance) eFlags |= CLOSEST_DISTANCE_EFLAG; else eFlags &= ~CLOSEST_DISTANCE_EFLAG;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE, oldClosestDistance, newClosestDistance));
-    }
+		boolean oldClosestDistance = (eFlags & CLOSEST_DISTANCE_EFLAG) != 0;
+		if (newClosestDistance) eFlags |= CLOSEST_DISTANCE_EFLAG; else eFlags &= ~CLOSEST_DISTANCE_EFLAG;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE, oldClosestDistance, newClosestDistance));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public JumpLinkStatus getJumpLinkStatus() {
-        return jumpLinkStatus;
-    }
+		return jumpLinkStatus;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setJumpLinkStatus(JumpLinkStatus newJumpLinkStatus) {
-        JumpLinkStatus oldJumpLinkStatus = jumpLinkStatus;
-        jumpLinkStatus = newJumpLinkStatus == null ? JUMP_LINK_STATUS_EDEFAULT : newJumpLinkStatus;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS, oldJumpLinkStatus, jumpLinkStatus));
-    }
+		JumpLinkStatus oldJumpLinkStatus = jumpLinkStatus;
+		jumpLinkStatus = newJumpLinkStatus == null ? JUMP_LINK_STATUS_EDEFAULT : newJumpLinkStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS, oldJumpLinkStatus, jumpLinkStatus));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public JumpLinkType getJumpLinkType() {
-        return jumpLinkType;
-    }
+		return jumpLinkType;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setJumpLinkType(JumpLinkType newJumpLinkType) {
-        JumpLinkType oldJumpLinkType = jumpLinkType;
-        jumpLinkType = newJumpLinkType == null ? JUMP_LINK_TYPE_EDEFAULT : newJumpLinkType;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE, oldJumpLinkType, jumpLinkType));
-    }
+		JumpLinkType oldJumpLinkType = jumpLinkType;
+		jumpLinkType = newJumpLinkType == null ? JUMP_LINK_TYPE_EDEFAULT : newJumpLinkType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE, oldJumpLinkType, jumpLinkType));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public boolean isJumpLinksReverse() {
-        return (eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0;
-    }
+		return (eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setJumpLinksReverse(boolean newJumpLinksReverse) {
-        boolean oldJumpLinksReverse = (eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0;
-        if (newJumpLinksReverse) eFlags |= JUMP_LINKS_REVERSE_EFLAG; else eFlags &= ~JUMP_LINKS_REVERSE_EFLAG;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE, oldJumpLinksReverse, newJumpLinksReverse));
-    }
+		boolean oldJumpLinksReverse = (eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0;
+		if (newJumpLinksReverse) eFlags |= JUMP_LINKS_REVERSE_EFLAG; else eFlags &= ~JUMP_LINKS_REVERSE_EFLAG;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE, oldJumpLinksReverse, newJumpLinksReverse));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.ROUTING_STYLE__ROUTING:
-                return getRouting();
-            case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
-                return getSmoothness();
-            case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
-                return isAvoidObstructions() ? Boolean.TRUE : Boolean.FALSE;
-            case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
-                return isClosestDistance() ? Boolean.TRUE : Boolean.FALSE;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
-                return getJumpLinkStatus();
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
-                return getJumpLinkType();
-            case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
-                return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__ROUTING:
+				return getRouting();
+			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
+				return getSmoothness();
+			case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
+				return isAvoidObstructions() ? Boolean.TRUE : Boolean.FALSE;
+			case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
+				return isClosestDistance() ? Boolean.TRUE : Boolean.FALSE;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
+				return getJumpLinkStatus();
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
+				return getJumpLinkType();
+			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
+				return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.ROUTING_STYLE__ROUTING:
-                setRouting((Routing)newValue);
-                return;
-            case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
-                setSmoothness((Smoothness)newValue);
-                return;
-            case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
-                setAvoidObstructions(((Boolean)newValue).booleanValue());
-                return;
-            case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
-                setClosestDistance(((Boolean)newValue).booleanValue());
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
-                setJumpLinkStatus((JumpLinkStatus)newValue);
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
-                setJumpLinkType((JumpLinkType)newValue);
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
-                setJumpLinksReverse(((Boolean)newValue).booleanValue());
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__ROUTING:
+				setRouting((Routing)newValue);
+				return;
+			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
+				setSmoothness((Smoothness)newValue);
+				return;
+			case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
+				setAvoidObstructions(((Boolean)newValue).booleanValue());
+				return;
+			case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
+				setClosestDistance(((Boolean)newValue).booleanValue());
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
+				setJumpLinkStatus((JumpLinkStatus)newValue);
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
+				setJumpLinkType((JumpLinkType)newValue);
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
+				setJumpLinksReverse(((Boolean)newValue).booleanValue());
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.ROUTING_STYLE__ROUTING:
-                setRouting(ROUTING_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
-                setSmoothness(SMOOTHNESS_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
-                setAvoidObstructions(AVOID_OBSTRUCTIONS_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
-                setClosestDistance(CLOSEST_DISTANCE_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
-                setJumpLinkStatus(JUMP_LINK_STATUS_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
-                setJumpLinkType(JUMP_LINK_TYPE_EDEFAULT);
-                return;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
-                setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__ROUTING:
+				setRouting(ROUTING_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
+				setSmoothness(SMOOTHNESS_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
+				setAvoidObstructions(AVOID_OBSTRUCTIONS_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
+				setClosestDistance(CLOSEST_DISTANCE_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
+				setJumpLinkStatus(JUMP_LINK_STATUS_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
+				setJumpLinkType(JUMP_LINK_TYPE_EDEFAULT);
+				return;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
+				setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.ROUTING_STYLE__ROUTING:
-                return routing != ROUTING_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
-                return smoothness != SMOOTHNESS_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
-                return ((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0) != AVOID_OBSTRUCTIONS_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
-                return ((eFlags & CLOSEST_DISTANCE_EFLAG) != 0) != CLOSEST_DISTANCE_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
-                return jumpLinkStatus != JUMP_LINK_STATUS_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
-                return jumpLinkType != JUMP_LINK_TYPE_EDEFAULT;
-            case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
-                return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__ROUTING:
+				return routing != ROUTING_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
+				return smoothness != SMOOTHNESS_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__AVOID_OBSTRUCTIONS:
+				return ((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0) != AVOID_OBSTRUCTIONS_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__CLOSEST_DISTANCE:
+				return ((eFlags & CLOSEST_DISTANCE_EFLAG) != 0) != CLOSEST_DISTANCE_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS:
+				return jumpLinkStatus != JUMP_LINK_STATUS_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE:
+				return jumpLinkType != JUMP_LINK_TYPE_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
+				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (routing: "); //$NON-NLS-1$
-        result.append(routing);
-        result.append(", smoothness: "); //$NON-NLS-1$
-        result.append(smoothness);
-        result.append(", avoidObstructions: "); //$NON-NLS-1$
-        result.append((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0);
-        result.append(", closestDistance: "); //$NON-NLS-1$
-        result.append((eFlags & CLOSEST_DISTANCE_EFLAG) != 0);
-        result.append(", jumpLinkStatus: "); //$NON-NLS-1$
-        result.append(jumpLinkStatus);
-        result.append(", jumpLinkType: "); //$NON-NLS-1$
-        result.append(jumpLinkType);
-        result.append(", jumpLinksReverse: "); //$NON-NLS-1$
-        result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (routing: "); //$NON-NLS-1$
+		result.append(routing);
+		result.append(", smoothness: "); //$NON-NLS-1$
+		result.append(smoothness);
+		result.append(", avoidObstructions: "); //$NON-NLS-1$
+		result.append((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0);
+		result.append(", closestDistance: "); //$NON-NLS-1$
+		result.append((eFlags & CLOSEST_DISTANCE_EFLAG) != 0);
+		result.append(", jumpLinkStatus: "); //$NON-NLS-1$
+		result.append(jumpLinkStatus);
+		result.append(", jumpLinkType: "); //$NON-NLS-1$
+		result.append(jumpLinkType);
+		result.append(", jumpLinksReverse: "); //$NON-NLS-1$
+		result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
+		result.append(')');
+		return result.toString();
+	}
 
 } //RoutingStyleImpl

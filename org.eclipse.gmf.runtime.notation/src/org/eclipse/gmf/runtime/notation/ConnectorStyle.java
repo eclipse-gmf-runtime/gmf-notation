@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getConnectorStyle()
- * @model 
+ * @model
  * @generated
  */
 /*

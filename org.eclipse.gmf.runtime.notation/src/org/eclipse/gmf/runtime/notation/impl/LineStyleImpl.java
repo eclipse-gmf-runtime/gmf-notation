@@ -36,131 +36,131 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
     /**
-     * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getLineColor()
-     * @generated
-     * @ordered
-     */
+	 * @see #getLineColor()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final int LINE_COLOR_EDEFAULT = 11579568;
 
     /**
-     * The cached value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getLineColor()
-     * @generated
-     * @ordered
-     */
+	 * @see #getLineColor()
+	 * @generated
+	 * @ordered
+	 */
 	protected int lineColor = LINE_COLOR_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected LineStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.LINE_STYLE;
-    }
+		return NotationPackage.Literals.LINE_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public int getLineColor() {
-        return lineColor;
-    }
+		return lineColor;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setLineColor(int newLineColor) {
-        int oldLineColor = lineColor;
-        lineColor = newLineColor;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_STYLE__LINE_COLOR, oldLineColor, lineColor));
-    }
+		int oldLineColor = lineColor;
+		lineColor = newLineColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_STYLE__LINE_COLOR, oldLineColor, lineColor));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.LINE_STYLE__LINE_COLOR:
-                return new Integer(getLineColor());
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.LINE_STYLE__LINE_COLOR:
+				return new Integer(getLineColor());
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.LINE_STYLE__LINE_COLOR:
-                setLineColor(((Integer)newValue).intValue());
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.LINE_STYLE__LINE_COLOR:
+				setLineColor(((Integer)newValue).intValue());
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.LINE_STYLE__LINE_COLOR:
-                setLineColor(LINE_COLOR_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.LINE_STYLE__LINE_COLOR:
+				setLineColor(LINE_COLOR_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.LINE_STYLE__LINE_COLOR:
-                return lineColor != LINE_COLOR_EDEFAULT;
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.LINE_STYLE__LINE_COLOR:
+				return lineColor != LINE_COLOR_EDEFAULT;
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (lineColor: "); //$NON-NLS-1$
-        result.append(lineColor);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (lineColor: "); //$NON-NLS-1$
+		result.append(lineColor);
+		result.append(')');
+		return result.toString();
+	}
 
 } //LineStyleImpl

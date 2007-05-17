@@ -28,7 +28,7 @@ package org.eclipse.gmf.runtime.notation;
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDescriptionStyle()
- * @model 
+ * @model
  * @generated
  */
 /*
@@ -36,26 +36,26 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface DescriptionStyle extends Style {
     /**
-     * Returns the value of the '<em><b>Description</b></em>' attribute.
-     * The default value is <code>""</code>.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @return the value of the '<em>Description</em>' attribute.
-     * @see #setDescription(String)
-     * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDescriptionStyle_Description()
-     * @model default=""
-     * @generated
-     */
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDescriptionStyle_Description()
+	 * @model default=""
+	 * @generated
+	 */
 	String getDescription();
 
     /**
-     * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription <em>Description</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Description</em>' attribute.
-     * @see #getDescription()
-     * @generated
-     */
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
 	void setDescription(String value);
 
 } // DescriptionStyle

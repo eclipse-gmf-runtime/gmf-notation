@@ -36,131 +36,131 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class ImageImpl extends FlatEObjectImpl implements Image {
     /**
-     * The default value of the '{@link #getData() <em>Data</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getData()
-     * @generated
-     * @ordered
-     */
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final byte[] DATA_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getData()
-     * @generated
-     * @ordered
-     */
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
 	protected byte[] data = DATA_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected ImageImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.IMAGE;
-    }
+		return NotationPackage.Literals.IMAGE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public byte[] getData() {
-        return data;
-    }
+		return data;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setData(byte[] newData) {
-        byte[] oldData = data;
-        data = newData;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.IMAGE__DATA, oldData, data));
-    }
+		byte[] oldData = data;
+		data = newData;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.IMAGE__DATA, oldData, data));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.IMAGE__DATA:
-                return getData();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.IMAGE__DATA:
+				return getData();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.IMAGE__DATA:
-                setData((byte[])newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.IMAGE__DATA:
+				setData((byte[])newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.IMAGE__DATA:
-                setData(DATA_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.IMAGE__DATA:
+				setData(DATA_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.IMAGE__DATA:
-                return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.IMAGE__DATA:
+				return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (data: "); //$NON-NLS-1$
-        result.append(data);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (data: "); //$NON-NLS-1$
+		result.append(data);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ImageImpl

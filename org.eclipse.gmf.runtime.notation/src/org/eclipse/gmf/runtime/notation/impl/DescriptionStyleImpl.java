@@ -36,131 +36,131 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class DescriptionStyleImpl extends FlatEObjectImpl implements DescriptionStyle {
     /**
-     * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getDescription()
-     * @generated
-     * @ordered
-     */
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final String DESCRIPTION_EDEFAULT = ""; //$NON-NLS-1$
 
     /**
-     * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getDescription()
-     * @generated
-     * @ordered
-     */
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
 	protected String description = DESCRIPTION_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected DescriptionStyleImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.DESCRIPTION_STYLE;
-    }
+		return NotationPackage.Literals.DESCRIPTION_STYLE;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String getDescription() {
-        return description;
-    }
+		return description;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setDescription(String newDescription) {
-        String oldDescription = description;
-        description = newDescription;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DESCRIPTION_STYLE__DESCRIPTION, oldDescription, description));
-    }
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DESCRIPTION_STYLE__DESCRIPTION, oldDescription, description));
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
-                return getDescription();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
+				return getDescription();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
-                setDescription((String)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
-                setDescription(DESCRIPTION_EDEFAULT);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
-                return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (description: "); //$NON-NLS-1$
-        result.append(description);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (description: "); //$NON-NLS-1$
+		result.append(description);
+		result.append(')');
+		return result.toString();
+	}
 
 } //DescriptionStyleImpl

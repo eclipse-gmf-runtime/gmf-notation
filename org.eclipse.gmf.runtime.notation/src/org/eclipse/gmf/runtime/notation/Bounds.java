@@ -22,7 +22,7 @@ package org.eclipse.gmf.runtime.notation;
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getBounds()
- * @model 
+ * @model
  * @generated
  */
 /*

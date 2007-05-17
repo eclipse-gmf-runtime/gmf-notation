@@ -42,52 +42,73 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  */
 public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
     /**
-     * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getTypedValue()
-     * @generated
-     * @ordered
-     */
+	 * @see #getTypedValue()
+	 * @generated
+	 * @ordered
+	 */
 	protected static final Alignment VALUE_EDEFAULT = Alignment.CENTER_LITERAL;
 
     /**
-     * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getTypedValue()
-     * @generated
-     * @ordered
-     */
+	 * @see #getTypedValue()
+	 * @generated
+	 * @ordered
+	 */
 	protected Alignment value = VALUE_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getTypedKey() <em>Key</em>}' reference.
-     * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' reference.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #getTypedKey()
-     * @generated
-     * @ordered
-     */
-	protected Node key = null;
+	 * @see #getTypedKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected Node key;
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected NodeEntryImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected EClass eStaticClass() {
-        return NotationPackage.Literals.NODE_ENTRY;
-    }
+		return NotationPackage.Literals.NODE_ENTRY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Alignment getTypedValue() {
+		return value;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypedValue(Alignment newValue) {
+		Alignment oldValue = value;
+		value = newValue == null ? VALUE_EDEFAULT : newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue, value));
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,15 +128,15 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Node basicGetTypedKey() {
-        return key;
-    }
+		return key;
+	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -129,181 +150,160 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-            case NotationPackage.NODE_ENTRY__VALUE:
-                return getTypedValue();
-            case NotationPackage.NODE_ENTRY__KEY:
-                if (resolve) return getTypedKey();
-                return basicGetTypedKey();
-        }
-        return eDynamicGet(featureID, resolve, coreType);
-    }
+		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__VALUE:
+				return getTypedValue();
+			case NotationPackage.NODE_ENTRY__KEY:
+				if (resolve) return getTypedKey();
+				return basicGetTypedKey();
+		}
+		return eDynamicGet(featureID, resolve, coreType);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-            case NotationPackage.NODE_ENTRY__VALUE:
-                setTypedValue((Alignment)newValue);
-                return;
-            case NotationPackage.NODE_ENTRY__KEY:
-                setTypedKey((Node)newValue);
-                return;
-        }
-        eDynamicSet(featureID, newValue);
-    }
+		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__VALUE:
+				setTypedValue((Alignment)newValue);
+				return;
+			case NotationPackage.NODE_ENTRY__KEY:
+				setTypedKey((Node)newValue);
+				return;
+		}
+		eDynamicSet(featureID, newValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void eUnset(int featureID) {
-        switch (featureID) {
-            case NotationPackage.NODE_ENTRY__VALUE:
-                setTypedValue(VALUE_EDEFAULT);
-                return;
-            case NotationPackage.NODE_ENTRY__KEY:
-                setTypedKey((Node)null);
-                return;
-        }
-        eDynamicUnset(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__VALUE:
+				setTypedValue(VALUE_EDEFAULT);
+				return;
+			case NotationPackage.NODE_ENTRY__KEY:
+				setTypedKey((Node)null);
+				return;
+		}
+		eDynamicUnset(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public boolean eIsSet(int featureID) {
-        switch (featureID) {
-            case NotationPackage.NODE_ENTRY__VALUE:
-                return value != VALUE_EDEFAULT;
-            case NotationPackage.NODE_ENTRY__KEY:
-                return key != null;
-        }
-        return eDynamicIsSet(featureID);
-    }
+		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__VALUE:
+				return value != VALUE_EDEFAULT;
+			case NotationPackage.NODE_ENTRY__KEY:
+				return key != null;
+		}
+		return eDynamicIsSet(featureID);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public Alignment getTypedValue() {
-        return value;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
-	public void setTypedValue(Alignment newValue) {
-        Alignment oldValue = value;
-        value = newValue == null ? VALUE_EDEFAULT : newValue;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue, value));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public String toString() {
-        if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (value: "); //$NON-NLS-1$
-        result.append(value);
-        result.append(')');
-        return result.toString();
-    }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (value: "); //$NON-NLS-1$
+		result.append(value);
+		result.append(')');
+		return result.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	protected int hash = -1;
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public int getHash() {
-        if (hash == -1) {
-            Object theKey = getKey();
-            hash = (theKey == null ? 0 : theKey.hashCode());
-        }
-        return hash;
-    }
+		if (hash == -1) {
+			Object theKey = getKey();
+			hash = (theKey == null ? 0 : theKey.hashCode());
+		}
+		return hash;
+	}
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setHash(int hash) {
-        this.hash = hash;
-    }
+		this.hash = hash;
+	}
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object getKey() {
-        return getTypedKey();
-    }
+		return getTypedKey();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public void setKey(Object key) {
-        setTypedKey((Node)key);
-    }
+		setTypedKey((Node)key);
+	}
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object getValue() {
-        return getTypedValue();
-    }
+		return getTypedValue();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public Object setValue(Object value) {
-        Object oldValue = getValue();
-        setTypedValue((Alignment)value);
-        return oldValue;
-    }
+		Object oldValue = getValue();
+		setTypedValue((Alignment)value);
+		return oldValue;
+	}
 
-    /**
-     * <!-- begin-user-doc -->
+				/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public EMap getEMap() {
-        EObject container = eContainer();
-        return container == null ? null : (EMap)container.eGet(eContainmentFeature());
-    }
+		EObject container = eContainer();
+		return container == null ? null : (EMap)container.eGet(eContainmentFeature());
+	}
 
 } //NodeEntryImpl

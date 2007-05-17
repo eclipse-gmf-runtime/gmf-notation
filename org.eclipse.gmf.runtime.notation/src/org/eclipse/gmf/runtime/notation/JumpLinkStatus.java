@@ -31,167 +31,167 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  */
 public final class JumpLinkStatus extends AbstractEnumerator {
     /**
-     * The '<em><b>None</b></em>' literal value.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>None</b></em>' literal value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #NONE_LITERAL
-     * @model name="None"
-     * @generated
-     * @ordered
-     */
+	 * @see #NONE_LITERAL
+	 * @model name="None"
+	 * @generated
+	 * @ordered
+	 */
 	public static final int NONE = 0;
 
     /**
-     * The '<em><b>All</b></em>' literal value.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>All</b></em>' literal value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #ALL_LITERAL
-     * @model name="All"
-     * @generated
-     * @ordered
-     */
+	 * @see #ALL_LITERAL
+	 * @model name="All"
+	 * @generated
+	 * @ordered
+	 */
 	public static final int ALL = 1;
 
     /**
-     * The '<em><b>Below</b></em>' literal value.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>Below</b></em>' literal value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #BELOW_LITERAL
-     * @model name="Below"
-     * @generated
-     * @ordered
-     */
+	 * @see #BELOW_LITERAL
+	 * @model name="Below"
+	 * @generated
+	 * @ordered
+	 */
 	public static final int BELOW = 2;
 
     /**
-     * The '<em><b>Above</b></em>' literal value.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>Above</b></em>' literal value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #ABOVE_LITERAL
-     * @model name="Above"
-     * @generated
-     * @ordered
-     */
+	 * @see #ABOVE_LITERAL
+	 * @model name="Above"
+	 * @generated
+	 * @ordered
+	 */
 	public static final int ABOVE = 3;
 
     /**
-     * The '<em><b>None</b></em>' literal object.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>None</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #NONE
-     * @generated
-     * @ordered
-     */
+	 * @see #NONE
+	 * @generated
+	 * @ordered
+	 */
 	public static final JumpLinkStatus NONE_LITERAL = new JumpLinkStatus(NONE, "None", "None"); //$NON-NLS-2$//$NON-NLS-1$
 
     /**
-     * The '<em><b>All</b></em>' literal object.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>All</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #ALL
-     * @generated
-     * @ordered
-     */
+	 * @see #ALL
+	 * @generated
+	 * @ordered
+	 */
 	public static final JumpLinkStatus ALL_LITERAL = new JumpLinkStatus(ALL, "All", "All"); //$NON-NLS-2$//$NON-NLS-1$
 
     /**
-     * The '<em><b>Below</b></em>' literal object.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>Below</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #BELOW
-     * @generated
-     * @ordered
-     */
+	 * @see #BELOW
+	 * @generated
+	 * @ordered
+	 */
 	public static final JumpLinkStatus BELOW_LITERAL = new JumpLinkStatus(BELOW, "Below", "Below"); //$NON-NLS-2$//$NON-NLS-1$
 
     /**
-     * The '<em><b>Above</b></em>' literal object.
-     * <!-- begin-user-doc -->
+	 * The '<em><b>Above</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @see #ABOVE
-     * @generated
-     * @ordered
-     */
+	 * @see #ABOVE
+	 * @generated
+	 * @ordered
+	 */
 	public static final JumpLinkStatus ABOVE_LITERAL = new JumpLinkStatus(ABOVE, "Above", "Above"); //$NON-NLS-2$//$NON-NLS-1$
 
     /**
-     * An array of all the '<em><b>Jump Link Status</b></em>' enumerators.
-     * <!-- begin-user-doc -->
+	 * An array of all the '<em><b>Jump Link Status</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	private static final JumpLinkStatus[] VALUES_ARRAY =
         new JumpLinkStatus[] {
-            NONE_LITERAL,
-            ALL_LITERAL,
-            BELOW_LITERAL,
-            ABOVE_LITERAL,
-        };
+			NONE_LITERAL,
+			ALL_LITERAL,
+			BELOW_LITERAL,
+			ABOVE_LITERAL,
+		};
 
     /**
-     * A public read-only list of all the '<em><b>Jump Link Status</b></em>' enumerators.
-     * <!-- begin-user-doc -->
+	 * A public read-only list of all the '<em><b>Jump Link Status</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
-     * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified literal value.
-     * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public static JumpLinkStatus get(String literal) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            JumpLinkStatus result = VALUES_ARRAY[i];
-            if (result.toString().equals(literal)) {
-                return result;
-            }
-        }
-        return null;
-    }
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			JumpLinkStatus result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
 
     /**
-     * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified name.
-     * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public static JumpLinkStatus getByName(String name) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            JumpLinkStatus result = VALUES_ARRAY[i];
-            if (result.getName().equals(name)) {
-                return result;
-            }
-        }
-        return null;
-    }
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			JumpLinkStatus result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
 
     /**
-     * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified integer value.
-     * <!-- begin-user-doc -->
+	 * Returns the '<em><b>Jump Link Status</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
 	public static JumpLinkStatus get(int value) {
-        switch (value) {
-            case NONE: return NONE_LITERAL;
-            case ALL: return ALL_LITERAL;
-            case BELOW: return BELOW_LITERAL;
-            case ABOVE: return ABOVE_LITERAL;
-        }
-        return null;	
-    }
+		switch (value) {
+			case NONE: return NONE_LITERAL;
+			case ALL: return ALL_LITERAL;
+			case BELOW: return BELOW_LITERAL;
+			case ABOVE: return ABOVE_LITERAL;
+		}
+		return null;
+	}
 
     /**
-     * Only this class can construct instances.
-     * <!-- begin-user-doc -->
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     private JumpLinkStatus(int value, String name, String literal) {
-        super(value, name, literal);
-    }
+		super(value, name, literal);
+	}
 
 } //JumpLinkStatus
