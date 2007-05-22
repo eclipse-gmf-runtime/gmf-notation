@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: DiagramLinkStyle.java,v 1.1 2007/05/17 16:26:50 aboyko Exp $
+ * $Id: DiagramLinkStyle.java,v 1.2 2007/05/22 19:10:13 aboyko Exp $
  */
 package org.eclipse.gmf.runtime.notation;
 
@@ -35,7 +35,7 @@ public interface DiagramLinkStyle extends Style {
 	 * @return the value of the '<em>Diagram Link</em>' reference.
 	 * @see #setDiagramLink(Diagram)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagramLinkStyle_DiagramLink()
-	 * @model
+	 * @model resolveProxies="false"
 	 * @generated
 	 */
 	Diagram getDiagramLink();

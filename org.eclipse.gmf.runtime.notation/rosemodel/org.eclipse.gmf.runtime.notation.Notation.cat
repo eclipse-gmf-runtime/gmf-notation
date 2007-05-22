@@ -1809,6 +1809,11 @@
 	    quid       	"4649D8FA000F"
 	    roles      	(list role_list
 		(object Role "diagramLink"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Ecore"
+			    name       	"isResolveProxies"
+			    value      	FALSE))
 		    quid       	"4649D8FB01F4"
 		    label      	"diagramLink"
 		    supplier   	"Logical View::notation::Diagram"
@@ -1825,6 +1830,11 @@
 	    quid       	"4649D93E0128"
 	    roles      	(list role_list
 		(object Role "diagramLinks"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"Ecore"
+			    name       	"isResolveProxies"
+			    value      	FALSE))
 		    quid       	"4649D93F0119"
 		    label      	"diagramLinks"
 		    supplier   	"Logical View::notation::Diagram"
@@ -1844,7 +1854,7 @@
 	    zoom       	75
 	    max_height 	28350
 	    max_width  	21600
-	    origin_x   	0
+	    origin_x   	5266
 	    origin_y   	4876
 	    items      	(list diagram_item_list
 		(object ClassView "Class" "Logical View::ecore::EModelElement" @1
@@ -5858,10 +5868,10 @@
 			    supplier   	@138
 			    vertices   	(list Points
 				(2541, 698)
-				(2541, 1110))
+				(2541, 1109))
 			    line_style 	3
 			    origin_attachment 	(2541, 698)
-			    terminal_attachment 	(2541, 1110))))
+			    terminal_attachment 	(2541, 1109))))
 		(object AssociationViewNew "$UNNAMED$2" @150
 		    location   	(1260, 1204)
 		    font       	(object Font
@@ -6552,10 +6562,10 @@
 			    supplier   	@160
 			    vertices   	(list Points
 				(2978, 1250)
-				(2978, 1649))
+				(2978, 1648))
 			    line_style 	3
 			    origin_attachment 	(2978, 1250)
-			    terminal_attachment 	(2978, 1649)
+			    terminal_attachment 	(2978, 1648)
 			    label      	(object SegLabel @186
 				Parent_View 	@184
 				location   	(3037, 1609)
@@ -6745,10 +6755,10 @@
 			    supplier   	@190
 			    vertices   	(list Points
 				(1577, 1333)
-				(1577, 1668))
+				(1577, 1667))
 			    line_style 	3
 			    origin_attachment 	(1577, 1333)
-			    terminal_attachment 	(1577, 1668)
+			    terminal_attachment 	(1577, 1667)
 			    label      	(object SegLabel @194
 				Parent_View 	@192
 				location   	(1534, 1614)

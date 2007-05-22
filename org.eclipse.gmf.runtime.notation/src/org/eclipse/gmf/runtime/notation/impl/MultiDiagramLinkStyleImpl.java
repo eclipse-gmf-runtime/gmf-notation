@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: MultiDiagramLinkStyleImpl.java,v 1.1 2007/05/17 16:26:50 aboyko Exp $
+ * $Id: MultiDiagramLinkStyleImpl.java,v 1.2 2007/05/22 19:10:13 aboyko Exp $
  */
 package org.eclipse.gmf.runtime.notation.impl;
 
@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.gmf.runtime.notation.Diagram;
@@ -69,7 +70,7 @@ public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiD
 	 */
 	public EList getDiagramLinks() {
 		if (diagramLinks == null) {
-			diagramLinks = new EObjectResolvingEList(Diagram.class, this, NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
+			diagramLinks = new EObjectEList(Diagram.class, this, NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
 		}
 		return diagramLinks;
 	}

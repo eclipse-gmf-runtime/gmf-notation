@@ -379,10 +379,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hint" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiagramLinkStyle" eSuperTypes="#//Style">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" eType="#//Diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" eType="#//Diagram"
+        resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiDiagramLinkStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLinks" upperBound="-1"
-        eType="#//Diagram"/>
+        eType="#//Diagram" resolveProxies="false"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: MultiDiagramLinkStyle.java,v 1.1 2007/05/17 16:26:50 aboyko Exp $
+ * $Id: MultiDiagramLinkStyle.java,v 1.2 2007/05/22 19:10:13 aboyko Exp $
  */
 package org.eclipse.gmf.runtime.notation;
 
@@ -36,7 +36,7 @@ public interface MultiDiagramLinkStyle extends Style {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Diagram Links</em>' reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getMultiDiagramLinkStyle_DiagramLinks()
-	 * @model type="org.eclipse.gmf.runtime.notation.Diagram"
+	 * @model type="org.eclipse.gmf.runtime.notation.Diagram" resolveProxies="false"
 	 * @generated
 	 */
 	EList getDiagramLinks();

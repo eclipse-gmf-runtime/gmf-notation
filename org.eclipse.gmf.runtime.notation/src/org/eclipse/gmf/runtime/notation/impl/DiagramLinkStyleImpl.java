@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: DiagramLinkStyleImpl.java,v 1.1 2007/05/17 16:26:50 aboyko Exp $
+ * $Id: DiagramLinkStyleImpl.java,v 1.2 2007/05/22 19:10:13 aboyko Exp $
  */
 package org.eclipse.gmf.runtime.notation.impl;
 
@@ -66,23 +66,6 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	 * @generated
 	 */
 	public Diagram getDiagramLink() {
-		if (diagramLink != null && diagramLink.eIsProxy()) {
-			InternalEObject oldDiagramLink = (InternalEObject)diagramLink;
-			diagramLink = (Diagram)eResolveProxy(oldDiagramLink);
-			if (diagramLink != oldDiagramLink) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK, oldDiagramLink, diagramLink));
-			}
-		}
-		return diagramLink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Diagram basicGetDiagramLink() {
 		return diagramLink;
 	}
 
@@ -106,8 +89,7 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
-				if (resolve) return getDiagramLink();
-				return basicGetDiagramLink();
+				return getDiagramLink();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
