@@ -40,7 +40,7 @@ public interface StringListValueStyle extends NamedStyle {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String List Value</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getStringListValueStyle_StringListValue()
-	 * @model type="java.lang.String" unique="false"
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList getStringListValue();
