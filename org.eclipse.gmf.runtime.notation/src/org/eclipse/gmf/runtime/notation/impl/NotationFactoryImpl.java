@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -162,6 +162,7 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE: return createHintedDiagramLinkStyle();
 			case NotationPackage.DIAGRAM_LINK_STYLE: return createDiagramLinkStyle();
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE: return createMultiDiagramLinkStyle();
+			case NotationPackage.TEXT_STYLE: return createTextStyle();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -192,6 +193,8 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return createSortingDirectionFromString(eDataType, initialValue);
 			case NotationPackage.MEASUREMENT_UNIT:
 				return createMeasurementUnitFromString(eDataType, initialValue);
+			case NotationPackage.TEXT_ALIGNMENT:
+				return createTextAlignmentFromString(eDataType, initialValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return createRelativeBendpointListFromString(eDataType, initialValue);
 			case NotationPackage.FILTER_KEY_LIST:
@@ -228,6 +231,8 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return convertSortingDirectionToString(eDataType, instanceValue);
 			case NotationPackage.MEASUREMENT_UNIT:
 				return convertMeasurementUnitToString(eDataType, instanceValue);
+			case NotationPackage.TEXT_ALIGNMENT:
+				return convertTextAlignmentToString(eDataType, instanceValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return convertRelativeBendpointListToString(eDataType, instanceValue);
 			case NotationPackage.FILTER_KEY_LIST:
@@ -741,6 +746,16 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 
 				/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextStyle createTextStyle() {
+		TextStyleImpl textStyle = new TextStyleImpl();
+		return textStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -916,6 +931,26 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * @generated
 	 */
     public String convertMeasurementUnitToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextAlignment createTextAlignmentFromString(EDataType eDataType, String initialValue) {
+		TextAlignment result = TextAlignment.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTextAlignmentToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

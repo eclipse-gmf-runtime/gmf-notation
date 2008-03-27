@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -279,6 +279,9 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseMultiDiagramLinkStyle(MultiDiagramLinkStyle object) {
 				return createMultiDiagramLinkStyleAdapter();
+			}
+			public Object caseTextStyle(TextStyle object) {
+				return createTextStyleAdapter();
 			}
 			public Object caseEModelElement(EModelElement object) {
 				return createEModelElementAdapter();
@@ -1082,6 +1085,20 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMultiDiagramLinkStyleAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.TextStyle <em>Text Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.TextStyle
+	 * @generated
+	 */
+	public Adapter createTextStyleAdapter() {
 		return null;
 	}
 

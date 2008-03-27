@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -2707,6 +2707,34 @@ public interface NotationPackage extends EPackage {
 	int MULTI_DIAGRAM_LINK_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.TextStyleImpl <em>Text Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.TextStyleImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextStyle()
+	 * @generated
+	 */
+	int TEXT_STYLE = 56;
+
+	/**
+	 * The feature id for the '<em><b>Text Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_STYLE__TEXT_ALIGNMENT = STYLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2714,7 +2742,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
 	 */
-	int SORTING = 56;
+	int SORTING = 57;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Filtering <em>Filtering</em>}' enum.
@@ -2724,7 +2752,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFiltering()
 	 * @generated
 	 */
-	int FILTERING = 57;
+	int FILTERING = 58;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Routing <em>Routing</em>}' enum.
@@ -2734,7 +2762,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRouting()
 	 * @generated
 	 */
-	int ROUTING = 58;
+	int ROUTING = 59;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Smoothness <em>Smoothness</em>}' enum.
@@ -2744,7 +2772,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSmoothness()
 	 * @generated
 	 */
-	int SMOOTHNESS = 59;
+	int SMOOTHNESS = 60;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkStatus <em>Jump Link Status</em>}' enum.
@@ -2754,7 +2782,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkStatus()
 	 * @generated
 	 */
-	int JUMP_LINK_STATUS = 60;
+	int JUMP_LINK_STATUS = 61;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkType <em>Jump Link Type</em>}' enum.
@@ -2764,7 +2792,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkType()
 	 * @generated
 	 */
-	int JUMP_LINK_TYPE = 61;
+	int JUMP_LINK_TYPE = 62;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Alignment <em>Alignment</em>}' enum.
@@ -2774,7 +2802,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getAlignment()
 	 * @generated
 	 */
-	int ALIGNMENT = 62;
+	int ALIGNMENT = 63;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.SortingDirection <em>Sorting Direction</em>}' enum.
@@ -2784,7 +2812,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortingDirection()
 	 * @generated
 	 */
-	int SORTING_DIRECTION = 63;
+	int SORTING_DIRECTION = 64;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
@@ -2794,7 +2822,17 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
 	 * @generated
 	 */
-	int MEASUREMENT_UNIT = 64;
+	int MEASUREMENT_UNIT = 65;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.TextAlignment
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
+	 * @generated
+	 */
+	int TEXT_ALIGNMENT = 66;
 
 	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
@@ -2804,7 +2842,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 65;
+	int RELATIVE_BENDPOINT_LIST = 67;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -2814,7 +2852,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 66;
+	int FILTER_KEY_LIST = 68;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -2824,7 +2862,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 67;
+	int SORT_KEY_MAP = 69;
 
 
 	/**
@@ -4394,6 +4432,27 @@ public interface NotationPackage extends EPackage {
 	EReference getMultiDiagramLinkStyle_DiagramLinks();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.TextStyle <em>Text Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Style</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.TextStyle
+	 * @generated
+	 */
+	EClass getTextStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment <em>Text Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Alignment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextAlignment();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4482,6 +4541,16 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getMeasurementUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Text Alignment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.TextAlignment
+	 * @generated
+	 */
+	EEnum getTextAlignment();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>Relative Bendpoint List</em>}'.
@@ -5827,6 +5896,24 @@ public interface NotationPackage extends EPackage {
 		EReference MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS = eINSTANCE.getMultiDiagramLinkStyle_DiagramLinks();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.TextStyleImpl <em>Text Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.TextStyleImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextStyle()
+		 * @generated
+		 */
+		EClass TEXT_STYLE = eINSTANCE.getTextStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_ALIGNMENT = eINSTANCE.getTextStyle_TextAlignment();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5915,6 +6002,16 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum MEASUREMENT_UNIT = eINSTANCE.getMeasurementUnit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.TextAlignment
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
+		 * @generated
+		 */
+		EEnum TEXT_ALIGNMENT = eINSTANCE.getTextAlignment();
 
 		/**
 		 * The meta object literal for the '<em>Relative Bendpoint List</em>' data type.

@@ -76,6 +76,11 @@
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//MeasurementUnit/Himetric"/>
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//MeasurementUnit/Pixel"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="notation.ecore#//TextAlignment">
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//TextAlignment/Left"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//TextAlignment/Right"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//TextAlignment/Center"/>
+    </genEnums>
     <genDataTypes ecoreDataType="notation.ecore#//RelativeBendpointList"/>
     <genDataTypes ecoreDataType="notation.ecore#//FilterKeyList"/>
     <genDataTypes ecoreDataType="notation.ecore#//SortKeyMap"/>
@@ -337,6 +342,9 @@
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//MultiDiagramLinkStyle">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference notation.ecore#//MultiDiagramLinkStyle/diagramLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="notation.ecore#//TextStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//TextStyle/textAlignment"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

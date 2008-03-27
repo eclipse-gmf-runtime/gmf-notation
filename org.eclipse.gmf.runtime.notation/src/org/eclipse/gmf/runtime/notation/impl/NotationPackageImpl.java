@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -88,6 +88,8 @@ import org.eclipse.gmf.runtime.notation.StringListValueStyle;
 import org.eclipse.gmf.runtime.notation.StringObjectConverter;
 import org.eclipse.gmf.runtime.notation.StringValueStyle;
 import org.eclipse.gmf.runtime.notation.Style;
+import org.eclipse.gmf.runtime.notation.TextAlignment;
+import org.eclipse.gmf.runtime.notation.TextStyle;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
 
@@ -495,6 +497,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass textStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum sortingEEnum = null;
 
 	/**
@@ -552,6 +561,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EEnum measurementUnitEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum textAlignmentEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1973,6 +1989,24 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTextStyle() {
+		return textStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTextStyle_TextAlignment() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSorting() {
 		return sortingEEnum;
 	}
@@ -2047,6 +2081,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 */
 	public EEnum getMeasurementUnit() {
 		return measurementUnitEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTextAlignment() {
+		return textAlignmentEEnum;
 	}
 
 	/**
@@ -2307,6 +2350,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		multiDiagramLinkStyleEClass = createEClass(MULTI_DIAGRAM_LINK_STYLE);
 		createEReference(multiDiagramLinkStyleEClass, MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
 
+		textStyleEClass = createEClass(TEXT_STYLE);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_ALIGNMENT);
+
 		// Create enums
 		sortingEEnum = createEEnum(SORTING);
 		filteringEEnum = createEEnum(FILTERING);
@@ -2317,6 +2363,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		alignmentEEnum = createEEnum(ALIGNMENT);
 		sortingDirectionEEnum = createEEnum(SORTING_DIRECTION);
 		measurementUnitEEnum = createEEnum(MEASUREMENT_UNIT);
+		textAlignmentEEnum = createEEnum(TEXT_ALIGNMENT);
 
 		// Create data types
 		relativeBendpointListEDataType = createEDataType(RELATIVE_BENDPOINT_LIST);
@@ -2410,6 +2457,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		hintedDiagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
 		diagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
 		multiDiagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
+		textStyleEClass.getESuperTypes().add(this.getStyle());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
@@ -2715,6 +2763,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		  
 		initEReference(getMultiDiagramLinkStyle_DiagramLinks(), this.getDiagram(), null, "diagramLinks", null, 0, -1, MultiDiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
+		initEClass(textStyleEClass, TextStyle.class, "TextStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEAttribute(getTextStyle_TextAlignment(), this.getTextAlignment(), "textAlignment", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$
 		addEEnumLiteral(sortingEEnum, Sorting.NONE_LITERAL);
@@ -2762,6 +2813,11 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEEnum(measurementUnitEEnum, MeasurementUnit.class, "MeasurementUnit"); //$NON-NLS-1$
 		addEEnumLiteral(measurementUnitEEnum, MeasurementUnit.HIMETRIC_LITERAL);
 		addEEnumLiteral(measurementUnitEEnum, MeasurementUnit.PIXEL_LITERAL);
+
+		initEEnum(textAlignmentEEnum, TextAlignment.class, "TextAlignment"); //$NON-NLS-1$
+		addEEnumLiteral(textAlignmentEEnum, TextAlignment.LEFT_LITERAL);
+		addEEnumLiteral(textAlignmentEEnum, TextAlignment.RIGHT_LITERAL);
+		addEEnumLiteral(textAlignmentEEnum, TextAlignment.CENTER_LITERAL);
 
 		// Initialize data types
 		initEDataType(relativeBendpointListEDataType, List.class, "RelativeBendpointList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$

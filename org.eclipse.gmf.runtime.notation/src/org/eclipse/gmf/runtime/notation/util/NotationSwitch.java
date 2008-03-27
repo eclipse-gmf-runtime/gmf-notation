@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -546,6 +546,13 @@ public class NotationSwitch {
 				MultiDiagramLinkStyle multiDiagramLinkStyle = (MultiDiagramLinkStyle)theEObject;
 				Object result = caseMultiDiagramLinkStyle(multiDiagramLinkStyle);
 				if (result == null) result = caseStyle(multiDiagramLinkStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.TEXT_STYLE: {
+				TextStyle textStyle = (TextStyle)theEObject;
+				Object result = caseTextStyle(textStyle);
+				if (result == null) result = caseStyle(textStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1390,6 +1397,21 @@ public class NotationSwitch {
 	 * @generated
 	 */
 	public Object caseMultiDiagramLinkStyle(MultiDiagramLinkStyle object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseTextStyle(TextStyle object) {
 		return null;
 	}
 

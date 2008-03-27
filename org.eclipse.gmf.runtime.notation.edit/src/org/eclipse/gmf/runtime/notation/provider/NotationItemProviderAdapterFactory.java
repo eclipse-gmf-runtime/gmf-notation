@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -1180,6 +1180,28 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
 				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.TextStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextStyleItemProvider textStyleItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.TextStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createTextStyleAdapter() {
+		if (textStyleItemProvider == null) {
+			textStyleItemProvider = new TextStyleItemProvider(this);
+		}
+
+		return textStyleItemProvider;
+	}
+
+				/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1325,6 +1347,7 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 		if (hintedDiagramLinkStyleItemProvider != null) hintedDiagramLinkStyleItemProvider.dispose();
 		if (diagramLinkStyleItemProvider != null) diagramLinkStyleItemProvider.dispose();
 		if (multiDiagramLinkStyleItemProvider != null) multiDiagramLinkStyleItemProvider.dispose();
+		if (textStyleItemProvider != null) textStyleItemProvider.dispose();
 	}
 
 }
