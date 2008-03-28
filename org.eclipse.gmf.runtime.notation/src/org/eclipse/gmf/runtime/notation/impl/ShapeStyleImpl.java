@@ -302,12 +302,16 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFontName(String newFontName) {
+	public void setFontNameGen(String newFontName) {
 		String oldFontName = fontName;
 		fontName = newFontName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_NAME, oldFontName, fontName));
 	}
+	
+	public void setFontName(String newFontName) {
+        setFontNameGen(newFontName == null ? newFontName : newFontName.intern());
+    }
 
 				/**
 	 * <!-- begin-user-doc -->
