@@ -542,13 +542,22 @@ public interface NotationPackage extends EPackage {
 	int LINE_STYLE__LINE_COLOR = STYLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STYLE__LINE_WIDTH = STYLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Line Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int LINE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.FontStyleImpl <em>Font Style</em>}' class.
@@ -1397,13 +1406,22 @@ public interface NotationPackage extends EPackage {
 	int SHAPE_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Shape Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
+	int SHAPE_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl <em>Connector Style</em>}' class.
@@ -1488,13 +1506,22 @@ public interface NotationPackage extends EPackage {
 	int CONNECTOR_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Connector Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int CONNECTOR_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.PageStyleImpl <em>Page Style</em>}' class.
@@ -2735,6 +2762,71 @@ public interface NotationPackage extends EPackage {
 	int TEXT_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl <em>Line Type Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineTypeStyle()
+	 * @generated
+	 */
+	int LINE_TYPE_STYLE = 57;
+
+	/**
+	 * The feature id for the '<em><b>Line Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_TYPE_STYLE__LINE_TYPE = STYLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Line Type Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_TYPE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ArrowStyleImpl <em>Arrow Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.ArrowStyleImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowStyle()
+	 * @generated
+	 */
+	int ARROW_STYLE = 58;
+
+	/**
+	 * The feature id for the '<em><b>Arrow Source</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_STYLE__ARROW_SOURCE = STYLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Arrow Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_STYLE__ARROW_TARGET = STYLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Arrow Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2742,7 +2834,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
 	 */
-	int SORTING = 57;
+	int SORTING = 59;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Filtering <em>Filtering</em>}' enum.
@@ -2752,7 +2844,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFiltering()
 	 * @generated
 	 */
-	int FILTERING = 58;
+	int FILTERING = 60;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Routing <em>Routing</em>}' enum.
@@ -2762,7 +2854,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRouting()
 	 * @generated
 	 */
-	int ROUTING = 59;
+	int ROUTING = 61;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Smoothness <em>Smoothness</em>}' enum.
@@ -2772,7 +2864,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSmoothness()
 	 * @generated
 	 */
-	int SMOOTHNESS = 60;
+	int SMOOTHNESS = 62;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkStatus <em>Jump Link Status</em>}' enum.
@@ -2782,7 +2874,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkStatus()
 	 * @generated
 	 */
-	int JUMP_LINK_STATUS = 61;
+	int JUMP_LINK_STATUS = 63;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkType <em>Jump Link Type</em>}' enum.
@@ -2792,7 +2884,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkType()
 	 * @generated
 	 */
-	int JUMP_LINK_TYPE = 62;
+	int JUMP_LINK_TYPE = 64;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Alignment <em>Alignment</em>}' enum.
@@ -2802,7 +2894,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getAlignment()
 	 * @generated
 	 */
-	int ALIGNMENT = 63;
+	int ALIGNMENT = 65;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.SortingDirection <em>Sorting Direction</em>}' enum.
@@ -2812,7 +2904,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortingDirection()
 	 * @generated
 	 */
-	int SORTING_DIRECTION = 64;
+	int SORTING_DIRECTION = 66;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
@@ -2822,7 +2914,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
 	 * @generated
 	 */
-	int MEASUREMENT_UNIT = 65;
+	int MEASUREMENT_UNIT = 67;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
@@ -2832,7 +2924,27 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
 	 * @generated
 	 */
-	int TEXT_ALIGNMENT = 66;
+	int TEXT_ALIGNMENT = 68;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.LineType
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineType()
+	 * @generated
+	 */
+	int LINE_TYPE = 69;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.ArrowType
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowType()
+	 * @generated
+	 */
+	int ARROW_TYPE = 70;
 
 	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
@@ -2842,7 +2954,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 67;
+	int RELATIVE_BENDPOINT_LIST = 71;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -2852,7 +2964,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 68;
+	int FILTER_KEY_LIST = 72;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -2862,7 +2974,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 69;
+	int SORT_KEY_MAP = 73;
 
 
 	/**
@@ -3002,6 +3114,17 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLineStyle_LineColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth <em>Line Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Width</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth()
+	 * @see #getLineStyle()
+	 * @generated
+	 */
+	EAttribute getLineStyle_LineWidth();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.FontStyle <em>Font Style</em>}'.
@@ -4453,6 +4576,59 @@ public interface NotationPackage extends EPackage {
 	EAttribute getTextStyle_TextAlignment();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.LineTypeStyle <em>Line Type Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Line Type Style</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.LineTypeStyle
+	 * @generated
+	 */
+	EClass getLineTypeStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.LineTypeStyle#getLineType <em>Line Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Type</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.LineTypeStyle#getLineType()
+	 * @see #getLineTypeStyle()
+	 * @generated
+	 */
+	EAttribute getLineTypeStyle_LineType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.ArrowStyle <em>Arrow Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arrow Style</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.ArrowStyle
+	 * @generated
+	 */
+	EClass getArrowStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource <em>Arrow Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Arrow Source</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource()
+	 * @see #getArrowStyle()
+	 * @generated
+	 */
+	EAttribute getArrowStyle_ArrowSource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget <em>Arrow Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Arrow Target</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget()
+	 * @see #getArrowStyle()
+	 * @generated
+	 */
+	EAttribute getArrowStyle_ArrowTarget();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4551,6 +4727,26 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getTextAlignment();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Line Type</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.LineType
+	 * @generated
+	 */
+	EEnum getLineType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Arrow Type</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.ArrowType
+	 * @generated
+	 */
+	EEnum getArrowType();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>Relative Bendpoint List</em>}'.
@@ -4720,6 +4916,14 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LINE_STYLE__LINE_COLOR = eINSTANCE.getLineStyle_LineColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Line Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINE_STYLE__LINE_WIDTH = eINSTANCE.getLineStyle_LineWidth();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.FontStyleImpl <em>Font Style</em>}' class.
@@ -5914,6 +6118,50 @@ public interface NotationPackage extends EPackage {
 		EAttribute TEXT_STYLE__TEXT_ALIGNMENT = eINSTANCE.getTextStyle_TextAlignment();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl <em>Line Type Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineTypeStyle()
+		 * @generated
+		 */
+		EClass LINE_TYPE_STYLE = eINSTANCE.getLineTypeStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Line Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINE_TYPE_STYLE__LINE_TYPE = eINSTANCE.getLineTypeStyle_LineType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ArrowStyleImpl <em>Arrow Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.ArrowStyleImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowStyle()
+		 * @generated
+		 */
+		EClass ARROW_STYLE = eINSTANCE.getArrowStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Arrow Source</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARROW_STYLE__ARROW_SOURCE = eINSTANCE.getArrowStyle_ArrowSource();
+
+		/**
+		 * The meta object literal for the '<em><b>Arrow Target</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARROW_STYLE__ARROW_TARGET = eINSTANCE.getArrowStyle_ArrowTarget();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6012,6 +6260,26 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TEXT_ALIGNMENT = eINSTANCE.getTextAlignment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.LineType
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineType()
+		 * @generated
+		 */
+		EEnum LINE_TYPE = eINSTANCE.getLineType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.ArrowType
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowType()
+		 * @generated
+		 */
+		EEnum ARROW_TYPE = eINSTANCE.getArrowType();
 
 		/**
 		 * The meta object literal for the '<em>Relative Bendpoint List</em>' data type.

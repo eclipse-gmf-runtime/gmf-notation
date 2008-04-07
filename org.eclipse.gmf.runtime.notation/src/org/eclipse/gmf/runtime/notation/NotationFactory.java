@@ -475,6 +475,24 @@ public interface NotationFactory extends EFactory {
 	TextStyle createTextStyle();
 
 				/**
+	 * Returns a new object of class '<em>Line Type Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Line Type Style</em>'.
+	 * @generated
+	 */
+	LineTypeStyle createLineTypeStyle();
+
+				/**
+	 * Returns a new object of class '<em>Arrow Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arrow Style</em>'.
+	 * @generated
+	 */
+	ArrowStyle createArrowStyle();
+
+				/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -168,6 +168,28 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
     /**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ArrowStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArrowStyleItemProvider arrowStyleItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ArrowStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createArrowStyleAdapter() {
+		if (arrowStyleItemProvider == null) {
+			arrowStyleItemProvider = new ArrowStyleItemProvider(this);
+		}
+
+		return arrowStyleItemProvider;
+	}
+
+				/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FontStyle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,6 +278,50 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
     /**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.TextStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextStyleItemProvider textStyleItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.TextStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createTextStyleAdapter() {
+		if (textStyleItemProvider == null) {
+			textStyleItemProvider = new TextStyleItemProvider(this);
+		}
+
+		return textStyleItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.LineTypeStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LineTypeStyleItemProvider lineTypeStyleItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.LineTypeStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createLineTypeStyleAdapter() {
+		if (lineTypeStyleItemProvider == null) {
+			lineTypeStyleItemProvider = new LineTypeStyleItemProvider(this);
+		}
+
+		return lineTypeStyleItemProvider;
+	}
+
+				/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Size} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1180,28 +1246,6 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
 				/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.TextStyle} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TextStyleItemProvider textStyleItemProvider;
-
-				/**
-	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.TextStyle}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Adapter createTextStyleAdapter() {
-		if (textStyleItemProvider == null) {
-			textStyleItemProvider = new TextStyleItemProvider(this);
-		}
-
-		return textStyleItemProvider;
-	}
-
-				/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1348,6 +1392,8 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 		if (diagramLinkStyleItemProvider != null) diagramLinkStyleItemProvider.dispose();
 		if (multiDiagramLinkStyleItemProvider != null) multiDiagramLinkStyleItemProvider.dispose();
 		if (textStyleItemProvider != null) textStyleItemProvider.dispose();
+		if (lineTypeStyleItemProvider != null) lineTypeStyleItemProvider.dispose();
+		if (arrowStyleItemProvider != null) arrowStyleItemProvider.dispose();
 	}
 
 }

@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -26,6 +26,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.LineStyleImpl#getLineColor <em>Line Color</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.LineStyleImpl#getLineWidth <em>Line Width</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,6 +57,26 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 	protected int lineColor = LINE_COLOR_EDEFAULT;
 
     /**
+	 * The default value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LINE_WIDTH_EDEFAULT = 1;
+
+				/**
+	 * The cached value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected int lineWidth = LINE_WIDTH_EDEFAULT;
+
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,6 +117,27 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLineWidth() {
+		return lineWidth;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLineWidth(int newLineWidth) {
+		int oldLineWidth = lineWidth;
+		lineWidth = newLineWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_STYLE__LINE_WIDTH, oldLineWidth, lineWidth));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -103,6 +145,8 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 		switch (featureID) {
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				return new Integer(getLineColor());
+			case NotationPackage.LINE_STYLE__LINE_WIDTH:
+				return new Integer(getLineWidth());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -116,6 +160,9 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 		switch (featureID) {
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
+				return;
+			case NotationPackage.LINE_STYLE__LINE_WIDTH:
+				setLineWidth(((Integer)newValue).intValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -131,6 +178,9 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
+			case NotationPackage.LINE_STYLE__LINE_WIDTH:
+				setLineWidth(LINE_WIDTH_EDEFAULT);
+				return;
 		}
 		eDynamicUnset(featureID);
 	}
@@ -144,6 +194,8 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 		switch (featureID) {
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
+			case NotationPackage.LINE_STYLE__LINE_WIDTH:
+				return lineWidth != LINE_WIDTH_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -159,6 +211,8 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (lineColor: "); //$NON-NLS-1$
 		result.append(lineColor);
+		result.append(", lineWidth: "); //$NON-NLS-1$
+		result.append(lineWidth);
 		result.append(')');
 		return result.toString();
 	}

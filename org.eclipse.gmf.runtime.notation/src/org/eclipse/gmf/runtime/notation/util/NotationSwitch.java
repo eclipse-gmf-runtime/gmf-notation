@@ -556,6 +556,20 @@ public class NotationSwitch {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case NotationPackage.LINE_TYPE_STYLE: {
+				LineTypeStyle lineTypeStyle = (LineTypeStyle)theEObject;
+				Object result = caseLineTypeStyle(lineTypeStyle);
+				if (result == null) result = caseStyle(lineTypeStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.ARROW_STYLE: {
+				ArrowStyle arrowStyle = (ArrowStyle)theEObject;
+				Object result = caseArrowStyle(arrowStyle);
+				if (result == null) result = caseStyle(arrowStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1412,6 +1426,36 @@ public class NotationSwitch {
 	 * @generated
 	 */
 	public Object caseTextStyle(TextStyle object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Line Type Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Line Type Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseLineTypeStyle(LineTypeStyle object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arrow Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arrow Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseArrowStyle(ArrowStyle object) {
 		return null;
 	}
 

@@ -508,6 +508,16 @@ public class ViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createLineTypeStyle()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createArrowStyle()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
 				 NotationFactory.eINSTANCE.createNode()));
 	}

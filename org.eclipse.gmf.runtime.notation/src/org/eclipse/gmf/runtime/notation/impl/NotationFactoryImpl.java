@@ -163,6 +163,8 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			case NotationPackage.DIAGRAM_LINK_STYLE: return createDiagramLinkStyle();
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE: return createMultiDiagramLinkStyle();
 			case NotationPackage.TEXT_STYLE: return createTextStyle();
+			case NotationPackage.LINE_TYPE_STYLE: return createLineTypeStyle();
+			case NotationPackage.ARROW_STYLE: return createArrowStyle();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -195,6 +197,10 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return createMeasurementUnitFromString(eDataType, initialValue);
 			case NotationPackage.TEXT_ALIGNMENT:
 				return createTextAlignmentFromString(eDataType, initialValue);
+			case NotationPackage.LINE_TYPE:
+				return createLineTypeFromString(eDataType, initialValue);
+			case NotationPackage.ARROW_TYPE:
+				return createArrowTypeFromString(eDataType, initialValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return createRelativeBendpointListFromString(eDataType, initialValue);
 			case NotationPackage.FILTER_KEY_LIST:
@@ -233,6 +239,10 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return convertMeasurementUnitToString(eDataType, instanceValue);
 			case NotationPackage.TEXT_ALIGNMENT:
 				return convertTextAlignmentToString(eDataType, instanceValue);
+			case NotationPackage.LINE_TYPE:
+				return convertLineTypeToString(eDataType, instanceValue);
+			case NotationPackage.ARROW_TYPE:
+				return convertArrowTypeToString(eDataType, instanceValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return convertRelativeBendpointListToString(eDataType, instanceValue);
 			case NotationPackage.FILTER_KEY_LIST:
@@ -756,6 +766,26 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 
 				/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LineTypeStyle createLineTypeStyle() {
+		LineTypeStyleImpl lineTypeStyle = new LineTypeStyleImpl();
+		return lineTypeStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrowStyle createArrowStyle() {
+		ArrowStyleImpl arrowStyle = new ArrowStyleImpl();
+		return arrowStyle;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -951,6 +981,46 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * @generated
 	 */
 	public String convertTextAlignmentToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LineType createLineTypeFromString(EDataType eDataType, String initialValue) {
+		LineType result = LineType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLineTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrowType createArrowTypeFromString(EDataType eDataType, String initialValue) {
+		ArrowType result = ArrowType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertArrowTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

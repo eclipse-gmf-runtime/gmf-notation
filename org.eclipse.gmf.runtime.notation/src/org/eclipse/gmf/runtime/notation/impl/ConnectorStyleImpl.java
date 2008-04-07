@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -40,6 +40,7 @@ import org.eclipse.gmf.runtime.notation.Style;
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getJumpLinkType <em>Jump Link Type</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#isJumpLinksReverse <em>Jump Links Reverse</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getLineColor <em>Line Color</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getLineWidth <em>Line Width</em>}</li>
  * </ul>
  * </p>
  *
@@ -210,6 +211,26 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	protected int lineColor = LINE_COLOR_EDEFAULT;
 
     /**
+	 * The default value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LINE_WIDTH_EDEFAULT = 1;
+
+				/**
+	 * The cached value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected int lineWidth = LINE_WIDTH_EDEFAULT;
+
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -397,6 +418,27 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLineWidth() {
+		return lineWidth;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLineWidth(int newLineWidth) {
+		int oldLineWidth = lineWidth;
+		lineWidth = newLineWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__LINE_WIDTH, oldLineWidth, lineWidth));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -418,6 +460,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 				return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				return new Integer(getLineColor());
+			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
+				return new Integer(getLineWidth());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -452,6 +496,9 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 				return;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
+				return;
+			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
+				setLineWidth(((Integer)newValue).intValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -488,6 +535,9 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
+			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
+				setLineWidth(LINE_WIDTH_EDEFAULT);
+				return;
 		}
 		eDynamicUnset(featureID);
 	}
@@ -515,6 +565,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
+			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
+				return lineWidth != LINE_WIDTH_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -545,6 +597,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 		if (baseClass == LineStyle.class) {
 			switch (derivedFeatureID) {
 				case NotationPackage.CONNECTOR_STYLE__LINE_COLOR: return NotationPackage.LINE_STYLE__LINE_COLOR;
+				case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH: return NotationPackage.LINE_STYLE__LINE_WIDTH;
 				default: return -1;
 			}
 		}
@@ -577,6 +630,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 		if (baseClass == LineStyle.class) {
 			switch (baseFeatureID) {
 				case NotationPackage.LINE_STYLE__LINE_COLOR: return NotationPackage.CONNECTOR_STYLE__LINE_COLOR;
+				case NotationPackage.LINE_STYLE__LINE_WIDTH: return NotationPackage.CONNECTOR_STYLE__LINE_WIDTH;
 				default: return -1;
 			}
 		}
@@ -608,6 +662,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 		result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
 		result.append(", lineColor: "); //$NON-NLS-1$
 		result.append(lineColor);
+		result.append(", lineWidth: "); //$NON-NLS-1$
+		result.append(lineWidth);
 		result.append(')');
 		return result.toString();
 	}

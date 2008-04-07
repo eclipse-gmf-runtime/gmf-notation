@@ -40,6 +40,7 @@ import org.eclipse.gmf.runtime.notation.Style;
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFillColor <em>Fill Color</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getLineColor <em>Line Color</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getLineWidth <em>Line Width</em>}</li>
  * </ul>
  * </p>
  *
@@ -250,6 +251,26 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	protected int lineColor = LINE_COLOR_EDEFAULT;
 
     /**
+	 * The default value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LINE_WIDTH_EDEFAULT = 1;
+
+				/**
+	 * The cached value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected int lineWidth = LINE_WIDTH_EDEFAULT;
+
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -483,6 +504,27 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLineWidth() {
+		return lineWidth;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLineWidth(int newLineWidth) {
+		int oldLineWidth = lineWidth;
+		lineWidth = newLineWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__LINE_WIDTH, oldLineWidth, lineWidth));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -508,6 +550,8 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 				return new Integer(getFillColor());
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
 				return new Integer(getLineColor());
+			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
+				return new Integer(getLineWidth());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -548,6 +592,9 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 				return;
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
+				return;
+			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
+				setLineWidth(((Integer)newValue).intValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -590,6 +637,9 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
+			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
+				setLineWidth(LINE_WIDTH_EDEFAULT);
+				return;
 		}
 		eDynamicUnset(featureID);
 	}
@@ -621,6 +671,8 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 				return fillColor != FILL_COLOR_EDEFAULT;
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
+			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
+				return lineWidth != LINE_WIDTH_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -663,6 +715,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 		if (baseClass == LineStyle.class) {
 			switch (derivedFeatureID) {
 				case NotationPackage.SHAPE_STYLE__LINE_COLOR: return NotationPackage.LINE_STYLE__LINE_COLOR;
+				case NotationPackage.SHAPE_STYLE__LINE_WIDTH: return NotationPackage.LINE_STYLE__LINE_WIDTH;
 				default: return -1;
 			}
 		}
@@ -707,6 +760,7 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 		if (baseClass == LineStyle.class) {
 			switch (baseFeatureID) {
 				case NotationPackage.LINE_STYLE__LINE_COLOR: return NotationPackage.SHAPE_STYLE__LINE_COLOR;
+				case NotationPackage.LINE_STYLE__LINE_WIDTH: return NotationPackage.SHAPE_STYLE__LINE_WIDTH;
 				default: return -1;
 			}
 		}
@@ -742,6 +796,8 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 		result.append(fillColor);
 		result.append(", lineColor: "); //$NON-NLS-1$
 		result.append(lineColor);
+		result.append(", lineWidth: "); //$NON-NLS-1$
+		result.append(lineWidth);
 		result.append(')');
 		return result.toString();
 	}

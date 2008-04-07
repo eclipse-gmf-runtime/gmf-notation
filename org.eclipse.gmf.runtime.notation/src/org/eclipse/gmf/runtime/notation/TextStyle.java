@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2008 IBM Corporation and others.
+ * Copyright (c) 2008, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -30,6 +30,7 @@ package org.eclipse.gmf.runtime.notation;
 public interface TextStyle extends Style {
 	/**
 	 * Returns the value of the '<em><b>Text Alignment</b></em>' attribute.
+	 * The default value is <code>"Left"</code>.
 	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.TextAlignment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -41,7 +42,7 @@ public interface TextStyle extends Style {
 	 * @see org.eclipse.gmf.runtime.notation.TextAlignment
 	 * @see #setTextAlignment(TextAlignment)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTextStyle_TextAlignment()
-	 * @model
+	 * @model default="Left"
 	 * @generated
 	 */
 	TextAlignment getTextAlignment();

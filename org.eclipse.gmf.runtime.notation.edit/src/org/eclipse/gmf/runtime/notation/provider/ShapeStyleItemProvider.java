@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -76,6 +76,7 @@ public class ShapeStyleItemProvider
 			addDescriptionPropertyDescriptor(object);
 			addFillColorPropertyDescriptor(object);
 			addLineColorPropertyDescriptor(object);
+			addLineWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -301,6 +302,28 @@ public class ShapeStyleItemProvider
 	}
 
     /**
+	 * This adds a property descriptor for the Line Width feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLineWidthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LineStyle_lineWidth_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineWidth_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.LINE_STYLE__LINE_WIDTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+				/**
 	 * This returns ShapeStyle.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -344,6 +367,7 @@ public class ShapeStyleItemProvider
 			case NotationPackage.SHAPE_STYLE__DESCRIPTION:
 			case NotationPackage.SHAPE_STYLE__FILL_COLOR:
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
+			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

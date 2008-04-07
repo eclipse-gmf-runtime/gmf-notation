@@ -27,6 +27,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Anchor;
+import org.eclipse.gmf.runtime.notation.ArrowStyle;
+import org.eclipse.gmf.runtime.notation.ArrowType;
 import org.eclipse.gmf.runtime.notation.Bendpoints;
 import org.eclipse.gmf.runtime.notation.BooleanListValueStyle;
 import org.eclipse.gmf.runtime.notation.BooleanValueStyle;
@@ -62,6 +64,8 @@ import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.LayoutConstraint;
 import org.eclipse.gmf.runtime.notation.LineStyle;
+import org.eclipse.gmf.runtime.notation.LineType;
+import org.eclipse.gmf.runtime.notation.LineTypeStyle;
 import org.eclipse.gmf.runtime.notation.ListValueStyle;
 import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
@@ -504,6 +508,20 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass lineTypeStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrowStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum sortingEEnum = null;
 
 	/**
@@ -568,6 +586,20 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EEnum textAlignmentEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum lineTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum arrowTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -776,6 +808,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 */
 	public EAttribute getLineStyle_LineColor() {
 		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLineStyle_LineWidth() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2007,6 +2048,51 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLineTypeStyle() {
+		return lineTypeStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLineTypeStyle_LineType() {
+		return (EAttribute)lineTypeStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArrowStyle() {
+		return arrowStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrowStyle_ArrowSource() {
+		return (EAttribute)arrowStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrowStyle_ArrowTarget() {
+		return (EAttribute)arrowStyleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSorting() {
 		return sortingEEnum;
 	}
@@ -2097,6 +2183,24 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getLineType() {
+		return lineTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getArrowType() {
+		return arrowTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRelativeBendpointList() {
 		return relativeBendpointListEDataType;
 	}
@@ -2164,6 +2268,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		lineStyleEClass = createEClass(LINE_STYLE);
 		createEAttribute(lineStyleEClass, LINE_STYLE__LINE_COLOR);
+		createEAttribute(lineStyleEClass, LINE_STYLE__LINE_WIDTH);
 
 		fontStyleEClass = createEClass(FONT_STYLE);
 		createEAttribute(fontStyleEClass, FONT_STYLE__FONT_COLOR);
@@ -2353,6 +2458,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		textStyleEClass = createEClass(TEXT_STYLE);
 		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_ALIGNMENT);
 
+		lineTypeStyleEClass = createEClass(LINE_TYPE_STYLE);
+		createEAttribute(lineTypeStyleEClass, LINE_TYPE_STYLE__LINE_TYPE);
+
+		arrowStyleEClass = createEClass(ARROW_STYLE);
+		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_SOURCE);
+		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_TARGET);
+
 		// Create enums
 		sortingEEnum = createEEnum(SORTING);
 		filteringEEnum = createEEnum(FILTERING);
@@ -2364,6 +2476,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		sortingDirectionEEnum = createEEnum(SORTING_DIRECTION);
 		measurementUnitEEnum = createEEnum(MEASUREMENT_UNIT);
 		textAlignmentEEnum = createEEnum(TEXT_ALIGNMENT);
+		lineTypeEEnum = createEEnum(LINE_TYPE);
+		arrowTypeEEnum = createEEnum(ARROW_TYPE);
 
 		// Create data types
 		relativeBendpointListEDataType = createEDataType(RELATIVE_BENDPOINT_LIST);
@@ -2458,6 +2572,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		diagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
 		multiDiagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
 		textStyleEClass.getESuperTypes().add(this.getStyle());
+		lineTypeStyleEClass.getESuperTypes().add(this.getStyle());
+		arrowStyleEClass.getESuperTypes().add(this.getStyle());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
@@ -2495,6 +2611,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(lineStyleEClass, LineStyle.class, "LineStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getLineStyle_LineColor(), ecorePackage.getEInt(), "lineColor", "11579568", 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getLineStyle_LineWidth(), theEcorePackage.getEInt(), "lineWidth", "1", 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
 		initEClass(fontStyleEClass, FontStyle.class, "FontStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getFontStyle_FontColor(), ecorePackage.getEInt(), "fontColor", "0", 0, 1, FontStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
@@ -2764,7 +2881,14 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEReference(getMultiDiagramLinkStyle_DiagramLinks(), this.getDiagram(), null, "diagramLinks", null, 0, -1, MultiDiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(textStyleEClass, TextStyle.class, "TextStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-		initEAttribute(getTextStyle_TextAlignment(), this.getTextAlignment(), "textAlignment", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+		initEAttribute(getTextStyle_TextAlignment(), this.getTextAlignment(), "textAlignment", "Left", 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+
+		initEClass(lineTypeStyleEClass, LineTypeStyle.class, "LineTypeStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEAttribute(getLineTypeStyle_LineType(), this.getLineType(), "lineType", "Solid", 0, 1, LineTypeStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+
+		initEClass(arrowStyleEClass, ArrowStyle.class, "ArrowStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEAttribute(getArrowStyle_ArrowSource(), this.getArrowType(), "arrowSource", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getArrowStyle_ArrowTarget(), this.getArrowType(), "arrowTarget", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$
@@ -2818,6 +2942,19 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		addEEnumLiteral(textAlignmentEEnum, TextAlignment.LEFT_LITERAL);
 		addEEnumLiteral(textAlignmentEEnum, TextAlignment.RIGHT_LITERAL);
 		addEEnumLiteral(textAlignmentEEnum, TextAlignment.CENTER_LITERAL);
+
+		initEEnum(lineTypeEEnum, LineType.class, "LineType"); //$NON-NLS-1$
+		addEEnumLiteral(lineTypeEEnum, LineType.SOLID_LITERAL);
+		addEEnumLiteral(lineTypeEEnum, LineType.DASH_LITERAL);
+		addEEnumLiteral(lineTypeEEnum, LineType.DOT_LITERAL);
+		addEEnumLiteral(lineTypeEEnum, LineType.DASH_DOT_LITERAL);
+		addEEnumLiteral(lineTypeEEnum, LineType.DASH_DOT_DOT_LITERAL);
+		addEEnumLiteral(lineTypeEEnum, LineType.DOUBLE_LITERAL);
+
+		initEEnum(arrowTypeEEnum, ArrowType.class, "ArrowType"); //$NON-NLS-1$
+		addEEnumLiteral(arrowTypeEEnum, ArrowType.NONE_LITERAL);
+		addEEnumLiteral(arrowTypeEEnum, ArrowType.OPEN_ARROW_LITERAL);
+		addEEnumLiteral(arrowTypeEEnum, ArrowType.SOLID_ARROW_LITERAL);
 
 		// Initialize data types
 		initEDataType(relativeBendpointListEDataType, List.class, "RelativeBendpointList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$

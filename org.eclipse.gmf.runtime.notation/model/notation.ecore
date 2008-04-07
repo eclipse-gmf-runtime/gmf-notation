@@ -39,6 +39,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="LineStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="11579568"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineWidth" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
+        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FontStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -392,6 +394,30 @@
     <eLiterals name="Center" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextStyle" eSuperTypes="#//Style">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAlignment" eType="#//TextAlignment"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAlignment" eType="#//TextAlignment"
+        defaultValueLiteral="Left"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LineType">
+    <eLiterals name="Solid"/>
+    <eLiterals name="Dash" value="1"/>
+    <eLiterals name="Dot" value="2"/>
+    <eLiterals name="DashDot" value="3"/>
+    <eLiterals name="DashDotDot" value="4"/>
+    <eLiterals name="Double" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LineTypeStyle" eSuperTypes="#//Style">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineType" eType="#//LineType"
+        defaultValueLiteral="Solid"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArrowType">
+    <eLiterals name="None"/>
+    <eLiterals name="OpenArrow" value="1"/>
+    <eLiterals name="SolidArrow" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrowStyle" eSuperTypes="#//Style">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrowSource" eType="#//ArrowType"
+        defaultValueLiteral="None"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrowTarget" eType="#//ArrowType"
+        defaultValueLiteral="None"/>
   </eClassifiers>
 </ecore:EPackage>

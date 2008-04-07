@@ -81,6 +81,19 @@
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//TextAlignment/Right"/>
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//TextAlignment/Center"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="notation.ecore#//LineType">
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/Solid"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/Dash"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/Dot"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/DashDot"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/DashDotDot"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//LineType/Double"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="notation.ecore#//ArrowType">
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//ArrowType/None"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//ArrowType/OpenArrow"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//ArrowType/SolidArrow"/>
+    </genEnums>
     <genDataTypes ecoreDataType="notation.ecore#//RelativeBendpointList"/>
     <genDataTypes ecoreDataType="notation.ecore#//FilterKeyList"/>
     <genDataTypes ecoreDataType="notation.ecore#//SortKeyMap"/>
@@ -112,6 +125,7 @@
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//LineStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//LineStyle/lineColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//LineStyle/lineWidth"/>
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//FontStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//FontStyle/fontColor"/>
@@ -345,6 +359,13 @@
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//TextStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//TextStyle/textAlignment"/>
+    </genClasses>
+    <genClasses ecoreClass="notation.ecore#//LineTypeStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//LineTypeStyle/lineType"/>
+    </genClasses>
+    <genClasses ecoreClass="notation.ecore#//ArrowStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//ArrowStyle/arrowSource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//ArrowStyle/arrowTarget"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

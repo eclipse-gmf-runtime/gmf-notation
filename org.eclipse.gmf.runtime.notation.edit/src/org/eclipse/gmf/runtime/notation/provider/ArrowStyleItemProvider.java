@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,7 +8,6 @@
  * Contributors:
  *    IBM Corporation - initial API and implementation 
  ****************************************************************************/
-
 package org.eclipse.gmf.runtime.notation.provider;
 
 
@@ -17,7 +16,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,17 +29,18 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.gmf.runtime.notation.LineStyle;
+import org.eclipse.gmf.runtime.notation.ArrowStyle;
+import org.eclipse.gmf.runtime.notation.ArrowType;
 import org.eclipse.gmf.runtime.notation.NotationEditPlugin;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.gmf.runtime.notation.LineStyle} object.
+ * This is the item provider adapter for a {@link org.eclipse.gmf.runtime.notation.ArrowStyle} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LineStyleItemProvider
+public class ArrowStyleItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -46,17 +48,17 @@ public class LineStyleItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-    /**
+	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LineStyleItemProvider(AdapterFactory adapterFactory) {
+	public ArrowStyleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
-    /**
+	/**
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,78 +68,81 @@ public class LineStyleItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addLineColorPropertyDescriptor(object);
-			addLineWidthPropertyDescriptor(object);
+			addArrowSourcePropertyDescriptor(object);
+			addArrowTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
-    /**
-	 * This adds a property descriptor for the Line Color feature.
+	/**
+	 * This adds a property descriptor for the Arrow Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLineColorPropertyDescriptor(Object object) {
+	protected void addArrowSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LineStyle_lineColor_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineColor_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.LINE_STYLE__LINE_COLOR,
+				 getString("_UI_ArrowStyle_arrowSource_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArrowStyle_arrowSource_feature", "_UI_ArrowStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ARROW_STYLE__ARROW_SOURCE,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
-    /**
-	 * This adds a property descriptor for the Line Width feature.
+	/**
+	 * This adds a property descriptor for the Arrow Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLineWidthPropertyDescriptor(Object object) {
+	protected void addArrowTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LineStyle_lineWidth_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_LineStyle_lineWidth_feature", "_UI_LineStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.LINE_STYLE__LINE_WIDTH,
+				 getString("_UI_ArrowStyle_arrowTarget_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArrowStyle_arrowTarget_feature", "_UI_ArrowStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ARROW_STYLE__ARROW_TARGET,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
-				/**
-	 * This returns LineStyle.gif.
+	/**
+	 * This returns ArrowStyle.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LineStyle")); //$NON-NLS-1$
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ArrowStyle")); //$NON-NLS-1$
 	}
 
-    /**
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getText(Object object) {
-		LineStyle lineStyle = (LineStyle)object;
-		return getString("_UI_LineStyle_type") + " " + lineStyle.getLineColor(); //$NON-NLS-1$ //$NON-NLS-2$
+		ArrowType labelValue = ((ArrowStyle)object).getArrowSource();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ArrowStyle_type") : //$NON-NLS-1$
+			getString("_UI_ArrowStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
-    /**
+	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
@@ -147,16 +152,16 @@ public class LineStyleItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(LineStyle.class)) {
-			case NotationPackage.LINE_STYLE__LINE_COLOR:
-			case NotationPackage.LINE_STYLE__LINE_WIDTH:
+		switch (notification.getFeatureID(ArrowStyle.class)) {
+			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
+			case NotationPackage.ARROW_STYLE__ARROW_TARGET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
 	}
 
-    /**
+	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
@@ -167,7 +172,7 @@ public class LineStyleItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
-    /**
+	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
