@@ -67,7 +67,7 @@ public interface LineStyle extends NotationObject, Style {
 
 				/**
 	 * Returns the value of the '<em><b>Line Width</b></em>' attribute.
-	 * The default value is <code>"1"</code>.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Line Width</em>' attribute isn't clear,
@@ -77,7 +77,7 @@ public interface LineStyle extends NotationObject, Style {
 	 * @return the value of the '<em>Line Width</em>' attribute.
 	 * @see #setLineWidth(int)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getLineStyle_LineWidth()
-	 * @model default="1"
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getLineWidth();

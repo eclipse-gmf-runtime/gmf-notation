@@ -240,7 +240,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int LINE_WIDTH_EDEFAULT = 1;
+	protected static final int LINE_WIDTH_EDEFAULT = -1;
 
 				/**
 	 * The cached value of the '{@link #getLineWidth() <em>Line Width</em>}' attribute.
