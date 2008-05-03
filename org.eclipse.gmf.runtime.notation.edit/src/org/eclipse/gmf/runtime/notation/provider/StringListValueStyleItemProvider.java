@@ -145,14 +145,4 @@ public class StringListValueStyleItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
-	}
-
 }

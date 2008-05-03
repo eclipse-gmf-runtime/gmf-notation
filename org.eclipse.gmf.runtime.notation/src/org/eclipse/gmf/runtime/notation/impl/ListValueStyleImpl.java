@@ -96,6 +96,8 @@ public class ListValueStyleImpl extends DataTypeStyleImpl implements ListValueSt
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.LIST_VALUE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.LIST_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.LIST_VALUE_STYLE__INSTANCE_TYPE:
@@ -114,6 +116,9 @@ public class ListValueStyleImpl extends DataTypeStyleImpl implements ListValueSt
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.LIST_VALUE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.LIST_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -135,6 +140,9 @@ public class ListValueStyleImpl extends DataTypeStyleImpl implements ListValueSt
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LIST_VALUE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.LIST_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -155,6 +163,8 @@ public class ListValueStyleImpl extends DataTypeStyleImpl implements ListValueSt
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LIST_VALUE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.LIST_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.LIST_VALUE_STYLE__INSTANCE_TYPE:

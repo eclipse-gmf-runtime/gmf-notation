@@ -35,7 +35,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface LineStyle extends Style {
+public interface LineStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Line Color</b></em>' attribute.
 	 * The default value is <code>"11579568"</code>.

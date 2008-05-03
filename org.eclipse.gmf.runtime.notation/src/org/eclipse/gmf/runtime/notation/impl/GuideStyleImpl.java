@@ -13,11 +13,12 @@ package org.eclipse.gmf.runtime.notation.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Guide;
@@ -41,7 +42,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
+public class GuideStyleImpl extends NotationObjectImpl implements GuideStyle {
     /**
 	 * The cached value of the '{@link #getHorizontalGuides() <em>Horizontal Guides</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -126,6 +127,8 @@ public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
 				return getHorizontalGuides();
 			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:
@@ -141,6 +144,9 @@ public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
 				getHorizontalGuides().clear();
 				getHorizontalGuides().addAll((Collection)newValue);
@@ -160,6 +166,9 @@ public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
 				getHorizontalGuides().clear();
 				return;
@@ -177,6 +186,8 @@ public class GuideStyleImpl extends FlatEObjectImpl implements GuideStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.GUIDE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES:
 				return horizontalGuides != null && !horizontalGuides.isEmpty();
 			case NotationPackage.GUIDE_STYLE__VERTICAL_GUIDES:

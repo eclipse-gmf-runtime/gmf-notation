@@ -27,7 +27,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  */
-public interface LineTypeStyle extends Style {
+public interface LineTypeStyle extends NotationObject, Style {
 	/**
 	 * Returns the value of the '<em><b>Line Type</b></em>' attribute.
 	 * The default value is <code>"Solid"</code>.

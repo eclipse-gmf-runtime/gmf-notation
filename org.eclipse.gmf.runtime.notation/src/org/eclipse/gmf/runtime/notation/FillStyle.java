@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface FillStyle extends Style {
+public interface FillStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Fill Color</b></em>' attribute.
 	 * The default value is <code>"16777215"</code>.

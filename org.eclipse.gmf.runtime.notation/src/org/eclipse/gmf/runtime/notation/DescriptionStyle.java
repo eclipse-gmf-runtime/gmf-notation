@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface DescriptionStyle extends Style {
+public interface DescriptionStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * The default value is <code>""</code>.

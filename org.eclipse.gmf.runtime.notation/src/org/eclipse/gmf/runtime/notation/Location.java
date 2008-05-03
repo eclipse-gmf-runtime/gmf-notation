@@ -35,7 +35,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface Location extends LayoutConstraint {
+public interface Location extends NotationObject, LayoutConstraint {
     /**
 	 * Returns the value of the '<em><b>X</b></em>' attribute.
 	 * The default value is <code>"0"</code>.

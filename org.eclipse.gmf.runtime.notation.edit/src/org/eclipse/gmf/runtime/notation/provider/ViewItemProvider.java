@@ -18,6 +18,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.provider.EModelElementItemProvider;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -277,8 +278,11 @@ public class ViewItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		View view = (View)object;
-		return getString("_UI_View_type") + " " + view.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
+		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_View_type") : //$NON-NLS-1$
+			getString("_UI_View_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -292,6 +296,7 @@ public class ViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(View.class)) {
+			case NotationPackage.VIEW__UUID:
 			case NotationPackage.VIEW__VISIBLE:
 			case NotationPackage.VIEW__TYPE:
 			case NotationPackage.VIEW__MUTABLE:

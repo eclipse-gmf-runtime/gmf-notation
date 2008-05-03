@@ -289,6 +289,9 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 			public Object caseArrowStyle(ArrowStyle object) {
 				return createArrowStyleAdapter();
 			}
+			public Object caseNotationObject(NotationObject object) {
+				return createNotationObjectAdapter();
+			}
 			public Object caseEModelElement(EModelElement object) {
 				return createEModelElementAdapter();
 			}
@@ -1133,6 +1136,20 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArrowStyleAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.NotationObject <em>Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.NotationObject
+	 * @generated
+	 */
+	public Adapter createNotationObjectAdapter() {
 		return null;
 	}
 

@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 
@@ -34,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.TitleStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
+public class TitleStyleImpl extends NotationObjectImpl implements TitleStyle {
     /**
 	 * The default value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +100,8 @@ public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
 				return isShowTitle() ? Boolean.TRUE : Boolean.FALSE;
 		}
@@ -114,6 +115,9 @@ public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
 				setShowTitle(((Boolean)newValue).booleanValue());
 				return;
@@ -128,6 +132,9 @@ public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
 				setShowTitle(SHOW_TITLE_EDEFAULT);
 				return;
@@ -142,6 +149,8 @@ public class TitleStyleImpl extends FlatEObjectImpl implements TitleStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.TITLE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.TITLE_STYLE__SHOW_TITLE:
 				return ((eFlags & SHOW_TITLE_EFLAG) != 0) != SHOW_TITLE_EDEFAULT;
 		}

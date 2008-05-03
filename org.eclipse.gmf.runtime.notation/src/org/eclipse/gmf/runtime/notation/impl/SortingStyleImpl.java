@@ -22,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Sorting;
@@ -47,7 +46,7 @@ import org.eclipse.gmf.runtime.notation.SortingStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
+public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle {
     /**
 	 * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -195,6 +194,8 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.SORTING_STYLE__SORTING:
 				return getSorting();
 			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
@@ -212,6 +213,9 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.SORTING_STYLE__SORTING:
 				setSorting((Sorting)newValue);
 				return;
@@ -233,6 +237,9 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.SORTING_STYLE__SORTING:
 				setSorting(SORTING_EDEFAULT);
 				return;
@@ -253,6 +260,8 @@ public class SortingStyleImpl extends FlatEObjectImpl implements SortingStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SORTING_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.SORTING_STYLE__SORTING:
 				return sorting != SORTING_EDEFAULT;
 			case NotationPackage.SORTING_STYLE__SORTING_KEYS:

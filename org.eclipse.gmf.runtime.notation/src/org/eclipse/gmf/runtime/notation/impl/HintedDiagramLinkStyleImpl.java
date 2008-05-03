@@ -100,6 +100,8 @@ public class HintedDiagramLinkStyleImpl extends DiagramLinkStyleImpl implements 
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return getDiagramLink();
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__HINT:
@@ -115,6 +117,9 @@ public class HintedDiagramLinkStyleImpl extends DiagramLinkStyleImpl implements 
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)newValue);
 				return;
@@ -132,6 +137,9 @@ public class HintedDiagramLinkStyleImpl extends DiagramLinkStyleImpl implements 
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)null);
 				return;
@@ -149,6 +157,8 @@ public class HintedDiagramLinkStyleImpl extends DiagramLinkStyleImpl implements 
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return diagramLink != null;
 			case NotationPackage.HINTED_DIAGRAM_LINK_STYLE__HINT:

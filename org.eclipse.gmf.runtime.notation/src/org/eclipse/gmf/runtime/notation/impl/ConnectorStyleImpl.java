@@ -19,6 +19,7 @@ import org.eclipse.gmf.runtime.notation.ConnectorStyle;
 import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.LineStyle;
+import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.RoutingStyle;
@@ -32,6 +33,7 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getUUID <em>UUID</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getRouting <em>Routing</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getSmoothness <em>Smoothness</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#isAvoidObstructions <em>Avoid Obstructions</em>}</li>
@@ -51,6 +53,26 @@ import org.eclipse.gmf.runtime.notation.Style;
  */
 public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
     /**
+	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final byte[] UUID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected byte[] uUID = UUID_EDEFAULT;
+
+				/**
 	 * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +275,27 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public byte[] getUUID() {
+		return uUID;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUUID(byte[] newUUID) {
+		byte[] oldUUID = uUID;
+		uUID = newUUID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__UUID, oldUUID, uUID));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Routing getRouting() {
 		return routing;
 	}
@@ -444,6 +487,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.CONNECTOR_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				return getRouting();
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
@@ -473,6 +518,9 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.CONNECTOR_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				setRouting((Routing)newValue);
 				return;
@@ -511,6 +559,9 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.CONNECTOR_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				setRouting(ROUTING_EDEFAULT);
 				return;
@@ -549,6 +600,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.CONNECTOR_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				return routing != ROUTING_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
@@ -577,6 +630,12 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (derivedFeatureID) {
+				case NotationPackage.CONNECTOR_STYLE__UUID: return NotationPackage.NOTATION_OBJECT__UUID;
+				default: return -1;
+			}
+		}
 		if (baseClass == Style.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -610,6 +669,12 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (baseFeatureID) {
+				case NotationPackage.NOTATION_OBJECT__UUID: return NotationPackage.CONNECTOR_STYLE__UUID;
+				default: return -1;
+			}
+		}
 		if (baseClass == Style.class) {
 			switch (baseFeatureID) {
 				default: return -1;
@@ -646,7 +711,9 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (routing: "); //$NON-NLS-1$
+		result.append(" (uUID: "); //$NON-NLS-1$
+		result.append(uUID);
+		result.append(", routing: "); //$NON-NLS-1$
 		result.append(routing);
 		result.append(", smoothness: "); //$NON-NLS-1$
 		result.append(smoothness);

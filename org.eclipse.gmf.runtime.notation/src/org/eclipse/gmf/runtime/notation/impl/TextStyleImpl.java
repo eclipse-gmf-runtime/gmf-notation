@@ -11,12 +11,8 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.TextAlignment;
 import org.eclipse.gmf.runtime.notation.TextStyle;
@@ -34,7 +30,7 @@ import org.eclipse.gmf.runtime.notation.TextStyle;
  *
  * @generated
  */
-public class TextStyleImpl extends FlatEObjectImpl implements TextStyle {
+public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	/**
 	 * The default value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +97,8 @@ public class TextStyleImpl extends FlatEObjectImpl implements TextStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.TEXT_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				return getTextAlignment();
 		}
@@ -114,6 +112,9 @@ public class TextStyleImpl extends FlatEObjectImpl implements TextStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.TEXT_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				setTextAlignment((TextAlignment)newValue);
 				return;
@@ -128,6 +129,9 @@ public class TextStyleImpl extends FlatEObjectImpl implements TextStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.TEXT_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				setTextAlignment(TEXT_ALIGNMENT_EDEFAULT);
 				return;
@@ -142,6 +146,8 @@ public class TextStyleImpl extends FlatEObjectImpl implements TextStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.TEXT_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				return textAlignment != TEXT_ALIGNMENT_EDEFAULT;
 		}

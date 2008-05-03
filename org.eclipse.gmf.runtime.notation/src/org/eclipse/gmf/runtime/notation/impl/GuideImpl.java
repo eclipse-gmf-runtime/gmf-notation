@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.Guide;
@@ -41,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class GuideImpl extends FlatEObjectImpl implements Guide {
+public class GuideImpl extends NotationObjectImpl implements Guide {
     /**
 	 * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +142,8 @@ public class GuideImpl extends FlatEObjectImpl implements Guide {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.GUIDE__UUID:
+				return getUUID();
 			case NotationPackage.GUIDE__POSITION:
 				return new Integer(getPosition());
 			case NotationPackage.GUIDE__NODE_MAP:
@@ -159,6 +160,9 @@ public class GuideImpl extends FlatEObjectImpl implements Guide {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.GUIDE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.GUIDE__POSITION:
 				setPosition(((Integer)newValue).intValue());
 				return;
@@ -176,6 +180,9 @@ public class GuideImpl extends FlatEObjectImpl implements Guide {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.GUIDE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.GUIDE__POSITION:
 				setPosition(POSITION_EDEFAULT);
 				return;
@@ -193,6 +200,8 @@ public class GuideImpl extends FlatEObjectImpl implements Guide {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.GUIDE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.GUIDE__POSITION:
 				return position != POSITION_EDEFAULT;
 			case NotationPackage.GUIDE__NODE_MAP:

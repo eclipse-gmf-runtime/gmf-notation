@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
+public class FillStyleImpl extends NotationObjectImpl implements FillStyle {
     /**
 	 * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +100,8 @@ public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.FILL_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.FILL_STYLE__FILL_COLOR:
 				return new Integer(getFillColor());
 		}
@@ -114,6 +115,9 @@ public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.FILL_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.FILL_STYLE__FILL_COLOR:
 				setFillColor(((Integer)newValue).intValue());
 				return;
@@ -128,6 +132,9 @@ public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.FILL_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.FILL_STYLE__FILL_COLOR:
 				setFillColor(FILL_COLOR_EDEFAULT);
 				return;
@@ -142,6 +149,8 @@ public class FillStyleImpl extends FlatEObjectImpl implements FillStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.FILL_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.FILL_STYLE__FILL_COLOR:
 				return fillColor != FILL_COLOR_EDEFAULT;
 		}

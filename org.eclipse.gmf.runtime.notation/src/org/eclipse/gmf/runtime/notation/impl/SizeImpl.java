@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Size;
 
@@ -35,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.Size;
 /*
  * @canBeSeenBy %partners
  */
-public class SizeImpl extends FlatEObjectImpl implements Size {
+public class SizeImpl extends NotationObjectImpl implements Size {
     /**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +142,8 @@ public class SizeImpl extends FlatEObjectImpl implements Size {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.SIZE__UUID:
+				return getUUID();
 			case NotationPackage.SIZE__WIDTH:
 				return new Integer(getWidth());
 			case NotationPackage.SIZE__HEIGHT:
@@ -158,6 +159,9 @@ public class SizeImpl extends FlatEObjectImpl implements Size {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.SIZE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.SIZE__WIDTH:
 				setWidth(((Integer)newValue).intValue());
 				return;
@@ -175,6 +179,9 @@ public class SizeImpl extends FlatEObjectImpl implements Size {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SIZE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.SIZE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
@@ -192,6 +199,8 @@ public class SizeImpl extends FlatEObjectImpl implements Size {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SIZE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.SIZE__WIDTH:
 				return width != WIDTH_EDEFAULT;
 			case NotationPackage.SIZE__HEIGHT:

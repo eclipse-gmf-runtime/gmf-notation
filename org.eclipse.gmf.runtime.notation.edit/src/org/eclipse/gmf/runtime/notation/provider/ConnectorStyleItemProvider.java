@@ -18,6 +18,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.provider.EObjectItemProvider;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -295,7 +296,7 @@ public class ConnectorStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Routing labelValue = ((ConnectorStyle)object).getRouting();
+		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ConnectorStyle_type") : //$NON-NLS-1$
@@ -313,6 +314,7 @@ public class ConnectorStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectorStyle.class)) {
+			case NotationPackage.CONNECTOR_STYLE__UUID:
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
 			case NotationPackage.CONNECTOR_STYLE__AVOID_OBSTRUCTIONS:

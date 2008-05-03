@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -44,7 +43,7 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
+public class RoutingStyleImpl extends NotationObjectImpl implements RoutingStyle {
     /**
 	 * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -357,6 +356,8 @@ public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.ROUTING_STYLE__ROUTING:
 				return getRouting();
 			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:
@@ -382,6 +383,9 @@ public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.ROUTING_STYLE__ROUTING:
 				setRouting((Routing)newValue);
 				return;
@@ -414,6 +418,9 @@ public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.ROUTING_STYLE__ROUTING:
 				setRouting(ROUTING_EDEFAULT);
 				return;
@@ -446,6 +453,8 @@ public class RoutingStyleImpl extends FlatEObjectImpl implements RoutingStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.ROUTING_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.ROUTING_STYLE__ROUTING:
 				return routing != ROUTING_EDEFAULT;
 			case NotationPackage.ROUTING_STYLE__SMOOTHNESS:

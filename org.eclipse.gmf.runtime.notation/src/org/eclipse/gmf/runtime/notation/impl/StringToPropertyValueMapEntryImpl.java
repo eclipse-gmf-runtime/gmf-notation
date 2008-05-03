@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
 
@@ -36,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.PropertyValue;
  *
  * @generated
  */
-public class StringToPropertyValueMapEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
+public class StringToPropertyValueMapEntryImpl extends NotationObjectImpl implements BasicEMap.Entry {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -169,6 +168,8 @@ public class StringToPropertyValueMapEntryImpl extends FlatEObjectImpl implement
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__UUID:
+				return getUUID();
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
 				return getTypedKey();
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
@@ -184,6 +185,9 @@ public class StringToPropertyValueMapEntryImpl extends FlatEObjectImpl implement
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
 				setTypedKey((String)newValue);
 				return;
@@ -201,6 +205,9 @@ public class StringToPropertyValueMapEntryImpl extends FlatEObjectImpl implement
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
@@ -218,6 +225,8 @@ public class StringToPropertyValueMapEntryImpl extends FlatEObjectImpl implement
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:

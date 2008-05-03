@@ -40,7 +40,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface FontStyle extends Style {
+public interface FontStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Font Name</b></em>' attribute.
 	 * The default value is <code>"Tahoma"</code>.

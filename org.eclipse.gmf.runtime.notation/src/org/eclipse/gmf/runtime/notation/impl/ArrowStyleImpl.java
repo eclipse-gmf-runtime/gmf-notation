@@ -35,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class ArrowStyleImpl extends FlatEObjectImpl implements ArrowStyle {
+public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	/**
 	 * The default value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +143,8 @@ public class ArrowStyleImpl extends FlatEObjectImpl implements ArrowStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.ARROW_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				return getArrowSource();
 			case NotationPackage.ARROW_STYLE__ARROW_TARGET:
@@ -158,6 +160,9 @@ public class ArrowStyleImpl extends FlatEObjectImpl implements ArrowStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.ARROW_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				setArrowSource((ArrowType)newValue);
 				return;
@@ -175,6 +180,9 @@ public class ArrowStyleImpl extends FlatEObjectImpl implements ArrowStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.ARROW_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				setArrowSource(ARROW_SOURCE_EDEFAULT);
 				return;
@@ -192,6 +200,8 @@ public class ArrowStyleImpl extends FlatEObjectImpl implements ArrowStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.ARROW_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				return arrowSource != ARROW_SOURCE_EDEFAULT;
 			case NotationPackage.ARROW_STYLE__ARROW_TARGET:

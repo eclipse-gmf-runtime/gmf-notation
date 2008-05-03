@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Ratio;
 
@@ -34,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.Ratio;
 /*
  * @canBeSeenBy %partners
  */
-public class RatioImpl extends FlatEObjectImpl implements Ratio {
+public class RatioImpl extends NotationObjectImpl implements Ratio {
     /**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +100,8 @@ public class RatioImpl extends FlatEObjectImpl implements Ratio {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.RATIO__UUID:
+				return getUUID();
 			case NotationPackage.RATIO__VALUE:
 				return new Double(getValue());
 		}
@@ -114,6 +115,9 @@ public class RatioImpl extends FlatEObjectImpl implements Ratio {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.RATIO__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.RATIO__VALUE:
 				setValue(((Double)newValue).doubleValue());
 				return;
@@ -128,6 +132,9 @@ public class RatioImpl extends FlatEObjectImpl implements Ratio {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.RATIO__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.RATIO__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -142,6 +149,8 @@ public class RatioImpl extends FlatEObjectImpl implements Ratio {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.RATIO__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.RATIO__VALUE:
 				return value != VALUE_EDEFAULT;
 		}

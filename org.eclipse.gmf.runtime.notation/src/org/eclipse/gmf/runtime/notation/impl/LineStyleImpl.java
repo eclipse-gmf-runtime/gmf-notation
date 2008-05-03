@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -35,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
+public class LineStyleImpl extends NotationObjectImpl implements LineStyle {
     /**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +142,8 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.LINE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				return new Integer(getLineColor());
 			case NotationPackage.LINE_STYLE__LINE_WIDTH:
@@ -158,6 +159,9 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.LINE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
 				return;
@@ -175,6 +179,9 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LINE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
@@ -192,6 +199,8 @@ public class LineStyleImpl extends FlatEObjectImpl implements LineStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LINE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.LINE_STYLE__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
 			case NotationPackage.LINE_STYLE__LINE_WIDTH:

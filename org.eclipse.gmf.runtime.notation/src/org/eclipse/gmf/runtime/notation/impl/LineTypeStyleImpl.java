@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class LineTypeStyleImpl extends FlatEObjectImpl implements LineTypeStyle {
+public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeStyle {
 	/**
 	 * The default value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +101,8 @@ public class LineTypeStyleImpl extends FlatEObjectImpl implements LineTypeStyle 
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.LINE_TYPE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				return getLineType();
 		}
@@ -114,6 +116,9 @@ public class LineTypeStyleImpl extends FlatEObjectImpl implements LineTypeStyle 
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.LINE_TYPE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				setLineType((LineType)newValue);
 				return;
@@ -128,6 +133,9 @@ public class LineTypeStyleImpl extends FlatEObjectImpl implements LineTypeStyle 
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LINE_TYPE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				setLineType(LINE_TYPE_EDEFAULT);
 				return;
@@ -142,6 +150,8 @@ public class LineTypeStyleImpl extends FlatEObjectImpl implements LineTypeStyle 
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LINE_TYPE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				return lineType != LINE_TYPE_EDEFAULT;
 		}

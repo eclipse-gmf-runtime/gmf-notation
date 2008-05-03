@@ -33,7 +33,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public interface ImageStyle extends Style {
+public interface ImageStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Anti Alias</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

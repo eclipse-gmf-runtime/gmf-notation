@@ -87,13 +87,22 @@ public interface NotationPackage extends EPackage {
 	int VIEW__EANNOTATIONS = EcorePackage.EMODEL_ELEMENT__EANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__UUID = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__VISIBLE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 0;
+	int VIEW__VISIBLE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -102,7 +111,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__TYPE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 1;
+	int VIEW__TYPE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
@@ -111,7 +120,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__MUTABLE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 2;
+	int VIEW__MUTABLE = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
@@ -120,7 +129,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__SOURCE_EDGES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 3;
+	int VIEW__SOURCE_EDGES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
@@ -129,7 +138,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__TARGET_EDGES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 4;
+	int VIEW__TARGET_EDGES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
@@ -138,7 +147,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__PERSISTED_CHILDREN = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 5;
+	int VIEW__PERSISTED_CHILDREN = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
@@ -147,7 +156,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__STYLES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 6;
+	int VIEW__STYLES = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
@@ -156,7 +165,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__ELEMENT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 7;
+	int VIEW__ELEMENT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Diagram</b></em>' reference.
@@ -165,7 +174,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__DIAGRAM = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 8;
+	int VIEW__DIAGRAM = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
@@ -174,7 +183,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__TRANSIENT_CHILDREN = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 9;
+	int VIEW__TRANSIENT_CHILDREN = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>View</em>' class.
@@ -183,7 +192,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 10;
+	int VIEW_FEATURE_COUNT = EcorePackage.EMODEL_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.EdgeImpl <em>Edge</em>}' class.
@@ -203,6 +212,15 @@ public interface NotationPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDGE__EANNOTATIONS = VIEW__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__UUID = VIEW__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -368,6 +386,15 @@ public interface NotationPackage extends EPackage {
 	int NODE__EANNOTATIONS = VIEW__EANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__UUID = VIEW__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -476,6 +503,16 @@ public interface NotationPackage extends EPackage {
 	int NODE_FEATURE_COUNT = VIEW_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.NotationObjectImpl <em>Object</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationObjectImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getNotationObject()
+	 * @generated
+	 */
+	int NOTATION_OBJECT = 59;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Style <em>Style</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -495,6 +532,24 @@ public interface NotationPackage extends EPackage {
 	int STYLE_FEATURE_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTATION_OBJECT__UUID = 0;
+
+	/**
+	 * The number of structural features of the '<em>Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTATION_OBJECT_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.FillStyleImpl <em>Fill Style</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -505,13 +560,22 @@ public interface NotationPackage extends EPackage {
 	int FILL_STYLE = 3;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILL_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Fill Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILL_STYLE__FILL_COLOR = STYLE_FEATURE_COUNT + 0;
+	int FILL_STYLE__FILL_COLOR = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Fill Style</em>' class.
@@ -520,7 +584,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILL_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int FILL_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.LineStyleImpl <em>Line Style</em>}' class.
@@ -533,13 +597,22 @@ public interface NotationPackage extends EPackage {
 	int LINE_STYLE = 4;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STYLE__LINE_COLOR = STYLE_FEATURE_COUNT + 0;
+	int LINE_STYLE__LINE_COLOR = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -548,7 +621,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STYLE__LINE_WIDTH = STYLE_FEATURE_COUNT + 1;
+	int LINE_STYLE__LINE_WIDTH = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Line Style</em>' class.
@@ -557,7 +630,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
+	int LINE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.FontStyleImpl <em>Font Style</em>}' class.
@@ -570,13 +643,22 @@ public interface NotationPackage extends EPackage {
 	int FONT_STYLE = 5;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FONT_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Font Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__FONT_COLOR = STYLE_FEATURE_COUNT + 0;
+	int FONT_STYLE__FONT_COLOR = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Font Name</b></em>' attribute.
@@ -585,7 +667,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__FONT_NAME = STYLE_FEATURE_COUNT + 1;
+	int FONT_STYLE__FONT_NAME = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Font Height</b></em>' attribute.
@@ -594,7 +676,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__FONT_HEIGHT = STYLE_FEATURE_COUNT + 2;
+	int FONT_STYLE__FONT_HEIGHT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
@@ -603,7 +685,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__BOLD = STYLE_FEATURE_COUNT + 3;
+	int FONT_STYLE__BOLD = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Italic</b></em>' attribute.
@@ -612,7 +694,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__ITALIC = STYLE_FEATURE_COUNT + 4;
+	int FONT_STYLE__ITALIC = NOTATION_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Underline</b></em>' attribute.
@@ -621,7 +703,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__UNDERLINE = STYLE_FEATURE_COUNT + 5;
+	int FONT_STYLE__UNDERLINE = NOTATION_OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Strike Through</b></em>' attribute.
@@ -630,7 +712,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE__STRIKE_THROUGH = STYLE_FEATURE_COUNT + 6;
+	int FONT_STYLE__STRIKE_THROUGH = NOTATION_OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Font Style</em>' class.
@@ -639,7 +721,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FONT_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 7;
+	int FONT_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.TitleStyleImpl <em>Title Style</em>}' class.
@@ -652,13 +734,22 @@ public interface NotationPackage extends EPackage {
 	int TITLE_STYLE = 6;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Show Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_STYLE__SHOW_TITLE = STYLE_FEATURE_COUNT + 0;
+	int TITLE_STYLE__SHOW_TITLE = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Title Style</em>' class.
@@ -667,7 +758,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int TITLE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.SortingStyleImpl <em>Sorting Style</em>}' class.
@@ -680,13 +771,22 @@ public interface NotationPackage extends EPackage {
 	int SORTING_STYLE = 7;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTING_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Sorting</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SORTING_STYLE__SORTING = STYLE_FEATURE_COUNT + 0;
+	int SORTING_STYLE__SORTING = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Keys</b></em>' attribute.
@@ -695,7 +795,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SORTING_STYLE__SORTING_KEYS = STYLE_FEATURE_COUNT + 1;
+	int SORTING_STYLE__SORTING_KEYS = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Sorted Objects</b></em>' reference list.
@@ -704,7 +804,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SORTING_STYLE__SORTED_OBJECTS = STYLE_FEATURE_COUNT + 2;
+	int SORTING_STYLE__SORTED_OBJECTS = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Sorting Style</em>' class.
@@ -713,7 +813,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SORTING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 3;
+	int SORTING_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.DescriptionStyleImpl <em>Description Style</em>}' class.
@@ -726,13 +826,22 @@ public interface NotationPackage extends EPackage {
 	int DESCRIPTION_STYLE = 8;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTION_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIPTION_STYLE__DESCRIPTION = STYLE_FEATURE_COUNT + 0;
+	int DESCRIPTION_STYLE__DESCRIPTION = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Description Style</em>' class.
@@ -741,7 +850,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIPTION_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int DESCRIPTION_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.LayoutConstraint <em>Layout Constraint</em>}' class.
@@ -773,13 +882,22 @@ public interface NotationPackage extends EPackage {
 	int SIZE = 10;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIZE__WIDTH = LAYOUT_CONSTRAINT_FEATURE_COUNT + 0;
+	int SIZE__WIDTH = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -788,7 +906,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIZE__HEIGHT = LAYOUT_CONSTRAINT_FEATURE_COUNT + 1;
+	int SIZE__HEIGHT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Size</em>' class.
@@ -797,7 +915,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIZE_FEATURE_COUNT = LAYOUT_CONSTRAINT_FEATURE_COUNT + 2;
+	int SIZE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.LocationImpl <em>Location</em>}' class.
@@ -810,13 +928,22 @@ public interface NotationPackage extends EPackage {
 	int LOCATION = 11;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__X = LAYOUT_CONSTRAINT_FEATURE_COUNT + 0;
+	int LOCATION__X = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -825,7 +952,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__Y = LAYOUT_CONSTRAINT_FEATURE_COUNT + 1;
+	int LOCATION__Y = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Location</em>' class.
@@ -834,7 +961,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = LAYOUT_CONSTRAINT_FEATURE_COUNT + 2;
+	int LOCATION_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.BoundsImpl <em>Bounds</em>}' class.
@@ -845,6 +972,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int BOUNDS = 12;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDS__UUID = LOCATION__UUID;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -902,13 +1038,22 @@ public interface NotationPackage extends EPackage {
 	int RATIO = 13;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIO__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RATIO__VALUE = LAYOUT_CONSTRAINT_FEATURE_COUNT + 0;
+	int RATIO__VALUE = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Ratio</em>' class.
@@ -917,7 +1062,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RATIO_FEATURE_COUNT = LAYOUT_CONSTRAINT_FEATURE_COUNT + 1;
+	int RATIO_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Anchor <em>Anchor</em>}' class.
@@ -968,13 +1113,22 @@ public interface NotationPackage extends EPackage {
 	int IDENTITY_ANCHOR = 16;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTITY_ANCHOR__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTITY_ANCHOR__ID = ANCHOR_FEATURE_COUNT + 0;
+	int IDENTITY_ANCHOR__ID = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Identity Anchor</em>' class.
@@ -983,7 +1137,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTITY_ANCHOR_FEATURE_COUNT = ANCHOR_FEATURE_COUNT + 1;
+	int IDENTITY_ANCHOR_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl <em>Routing Style</em>}' class.
@@ -996,13 +1150,22 @@ public interface NotationPackage extends EPackage {
 	int ROUTING_STYLE = 17;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTING_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Routing</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__ROUTING = STYLE_FEATURE_COUNT + 0;
+	int ROUTING_STYLE__ROUTING = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
@@ -1011,7 +1174,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__SMOOTHNESS = STYLE_FEATURE_COUNT + 1;
+	int ROUTING_STYLE__SMOOTHNESS = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
@@ -1020,7 +1183,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__AVOID_OBSTRUCTIONS = STYLE_FEATURE_COUNT + 2;
+	int ROUTING_STYLE__AVOID_OBSTRUCTIONS = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
@@ -1029,7 +1192,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__CLOSEST_DISTANCE = STYLE_FEATURE_COUNT + 3;
+	int ROUTING_STYLE__CLOSEST_DISTANCE = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
@@ -1038,7 +1201,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINK_STATUS = STYLE_FEATURE_COUNT + 4;
+	int ROUTING_STYLE__JUMP_LINK_STATUS = NOTATION_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
@@ -1047,7 +1210,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINK_TYPE = STYLE_FEATURE_COUNT + 5;
+	int ROUTING_STYLE__JUMP_LINK_TYPE = NOTATION_OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
@@ -1056,7 +1219,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINKS_REVERSE = STYLE_FEATURE_COUNT + 6;
+	int ROUTING_STYLE__JUMP_LINKS_REVERSE = NOTATION_OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Routing Style</em>' class.
@@ -1065,7 +1228,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 7;
+	int ROUTING_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl <em>Relative Bendpoints</em>}' class.
@@ -1078,13 +1241,22 @@ public interface NotationPackage extends EPackage {
 	int RELATIVE_BENDPOINTS = 19;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIVE_BENDPOINTS__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIVE_BENDPOINTS__POINTS = BENDPOINTS_FEATURE_COUNT + 0;
+	int RELATIVE_BENDPOINTS__POINTS = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Relative Bendpoints</em>' class.
@@ -1093,7 +1265,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIVE_BENDPOINTS_FEATURE_COUNT = BENDPOINTS_FEATURE_COUNT + 1;
+	int RELATIVE_BENDPOINTS_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.DiagramImpl <em>Diagram</em>}' class.
@@ -1113,6 +1285,15 @@ public interface NotationPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIAGRAM__EANNOTATIONS = VIEW__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAM__UUID = VIEW__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1260,13 +1441,22 @@ public interface NotationPackage extends EPackage {
 	int IMAGE = 21;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__DATA = 0;
+	int IMAGE__DATA = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Image</em>' class.
@@ -1275,7 +1465,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = 1;
+	int IMAGE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.CanonicalStyleImpl <em>Canonical Style</em>}' class.
@@ -1288,13 +1478,22 @@ public interface NotationPackage extends EPackage {
 	int CANONICAL_STYLE = 22;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANONICAL_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Canonical</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CANONICAL_STYLE__CANONICAL = STYLE_FEATURE_COUNT + 0;
+	int CANONICAL_STYLE__CANONICAL = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Canonical Style</em>' class.
@@ -1303,7 +1502,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CANONICAL_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int CANONICAL_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl <em>Shape Style</em>}' class.
@@ -1316,13 +1515,22 @@ public interface NotationPackage extends EPackage {
 	int SHAPE_STYLE = 23;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_STYLE__UUID = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Font Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int SHAPE_STYLE__FONT_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Font Name</b></em>' attribute.
@@ -1331,7 +1539,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_NAME = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int SHAPE_STYLE__FONT_NAME = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Font Height</b></em>' attribute.
@@ -1340,7 +1548,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int SHAPE_STYLE__FONT_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
@@ -1349,7 +1557,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__BOLD = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int SHAPE_STYLE__BOLD = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Italic</b></em>' attribute.
@@ -1358,7 +1566,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__ITALIC = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int SHAPE_STYLE__ITALIC = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Underline</b></em>' attribute.
@@ -1367,7 +1575,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__UNDERLINE = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int SHAPE_STYLE__UNDERLINE = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Strike Through</b></em>' attribute.
@@ -1376,7 +1584,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__STRIKE_THROUGH = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int SHAPE_STYLE__STRIKE_THROUGH = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1385,7 +1593,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int SHAPE_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Fill Color</b></em>' attribute.
@@ -1394,7 +1602,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FILL_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int SHAPE_STYLE__FILL_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -1403,7 +1611,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
+	int SHAPE_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -1412,7 +1620,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
+	int SHAPE_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Shape Style</em>' class.
@@ -1421,7 +1629,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 11;
+	int SHAPE_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl <em>Connector Style</em>}' class.
@@ -1434,13 +1642,22 @@ public interface NotationPackage extends EPackage {
 	int CONNECTOR_STYLE = 24;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR_STYLE__UUID = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Routing</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__ROUTING = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int CONNECTOR_STYLE__ROUTING = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
@@ -1449,7 +1666,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__SMOOTHNESS = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int CONNECTOR_STYLE__SMOOTHNESS = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
@@ -1458,7 +1675,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__AVOID_OBSTRUCTIONS = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int CONNECTOR_STYLE__AVOID_OBSTRUCTIONS = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
@@ -1467,7 +1684,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__CLOSEST_DISTANCE = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int CONNECTOR_STYLE__CLOSEST_DISTANCE = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
@@ -1476,7 +1693,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINK_STATUS = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int CONNECTOR_STYLE__JUMP_LINK_STATUS = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
@@ -1485,7 +1702,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINK_TYPE = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int CONNECTOR_STYLE__JUMP_LINK_TYPE = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
@@ -1494,7 +1711,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -1503,7 +1720,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int CONNECTOR_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -1512,7 +1729,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int CONNECTOR_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Connector Style</em>' class.
@@ -1521,7 +1738,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
+	int CONNECTOR_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.PageStyleImpl <em>Page Style</em>}' class.
@@ -1534,13 +1751,22 @@ public interface NotationPackage extends EPackage {
 	int PAGE_STYLE = 25;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAGE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Page X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_STYLE__PAGE_X = STYLE_FEATURE_COUNT + 0;
+	int PAGE_STYLE__PAGE_X = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Page Y</b></em>' attribute.
@@ -1549,7 +1775,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_STYLE__PAGE_Y = STYLE_FEATURE_COUNT + 1;
+	int PAGE_STYLE__PAGE_Y = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Page Width</b></em>' attribute.
@@ -1558,7 +1784,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_STYLE__PAGE_WIDTH = STYLE_FEATURE_COUNT + 2;
+	int PAGE_STYLE__PAGE_WIDTH = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Page Height</b></em>' attribute.
@@ -1567,7 +1793,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_STYLE__PAGE_HEIGHT = STYLE_FEATURE_COUNT + 3;
+	int PAGE_STYLE__PAGE_HEIGHT = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Page Style</em>' class.
@@ -1576,7 +1802,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 4;
+	int PAGE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.DrawerStyleImpl <em>Drawer Style</em>}' class.
@@ -1589,13 +1815,22 @@ public interface NotationPackage extends EPackage {
 	int DRAWER_STYLE = 26;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAWER_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRAWER_STYLE__COLLAPSED = STYLE_FEATURE_COUNT + 0;
+	int DRAWER_STYLE__COLLAPSED = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Drawer Style</em>' class.
@@ -1604,7 +1839,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DRAWER_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int DRAWER_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.GuideStyleImpl <em>Guide Style</em>}' class.
@@ -1617,13 +1852,22 @@ public interface NotationPackage extends EPackage {
 	int GUIDE_STYLE = 27;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUIDE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Horizontal Guides</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE_STYLE__HORIZONTAL_GUIDES = STYLE_FEATURE_COUNT + 0;
+	int GUIDE_STYLE__HORIZONTAL_GUIDES = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Guides</b></em>' containment reference list.
@@ -1632,7 +1876,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE_STYLE__VERTICAL_GUIDES = STYLE_FEATURE_COUNT + 1;
+	int GUIDE_STYLE__VERTICAL_GUIDES = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Guide Style</em>' class.
@@ -1641,7 +1885,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
+	int GUIDE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.GuideImpl <em>Guide</em>}' class.
@@ -1654,13 +1898,22 @@ public interface NotationPackage extends EPackage {
 	int GUIDE = 28;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUIDE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE__POSITION = 0;
+	int GUIDE__POSITION = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Node Map</b></em>' map.
@@ -1669,7 +1922,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE__NODE_MAP = 1;
+	int GUIDE__NODE_MAP = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Guide</em>' class.
@@ -1678,7 +1931,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDE_FEATURE_COUNT = 2;
+	int GUIDE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.NodeEntryImpl <em>Node Entry</em>}' class.
@@ -1691,13 +1944,22 @@ public interface NotationPackage extends EPackage {
 	int NODE_ENTRY = 29;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ENTRY__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_ENTRY__VALUE = 0;
+	int NODE_ENTRY__VALUE = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' reference.
@@ -1706,7 +1968,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_ENTRY__KEY = 1;
+	int NODE_ENTRY__KEY = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Node Entry</em>' class.
@@ -1715,7 +1977,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_ENTRY_FEATURE_COUNT = 2;
+	int NODE_ENTRY_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.FilteringStyleImpl <em>Filtering Style</em>}' class.
@@ -1728,13 +1990,22 @@ public interface NotationPackage extends EPackage {
 	int FILTERING_STYLE = 30;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILTERING_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Filtering</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILTERING_STYLE__FILTERING = STYLE_FEATURE_COUNT + 0;
+	int FILTERING_STYLE__FILTERING = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Filtering Keys</b></em>' attribute.
@@ -1743,7 +2014,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTERING_STYLE__FILTERING_KEYS = STYLE_FEATURE_COUNT + 1;
+	int FILTERING_STYLE__FILTERING_KEYS = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Filtered Objects</b></em>' reference list.
@@ -1752,7 +2023,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTERING_STYLE__FILTERED_OBJECTS = STYLE_FEATURE_COUNT + 2;
+	int FILTERING_STYLE__FILTERED_OBJECTS = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Filtering Style</em>' class.
@@ -1761,7 +2032,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILTERING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 3;
+	int FILTERING_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl <em>Diagram Style</em>}' class.
@@ -1774,13 +2045,22 @@ public interface NotationPackage extends EPackage {
 	int DIAGRAM_STYLE = 31;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAM_STYLE__UUID = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Page X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_X = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int DIAGRAM_STYLE__PAGE_X = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Page Y</b></em>' attribute.
@@ -1789,7 +2069,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_Y = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int DIAGRAM_STYLE__PAGE_Y = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Page Width</b></em>' attribute.
@@ -1798,7 +2078,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int DIAGRAM_STYLE__PAGE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Page Height</b></em>' attribute.
@@ -1807,7 +2087,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int DIAGRAM_STYLE__PAGE_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Horizontal Guides</b></em>' containment reference list.
@@ -1816,7 +2096,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__HORIZONTAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int DIAGRAM_STYLE__HORIZONTAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Guides</b></em>' containment reference list.
@@ -1825,7 +2105,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__VERTICAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int DIAGRAM_STYLE__VERTICAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1834,7 +2114,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int DIAGRAM_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Diagram Style</em>' class.
@@ -1843,7 +2123,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int DIAGRAM_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ImageStyleImpl <em>Image Style</em>}' class.
@@ -1856,13 +2136,22 @@ public interface NotationPackage extends EPackage {
 	int IMAGE_STYLE = 32;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Anti Alias</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_STYLE__ANTI_ALIAS = STYLE_FEATURE_COUNT + 0;
+	int IMAGE_STYLE__ANTI_ALIAS = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Maintain Aspect Ratio</b></em>' attribute.
@@ -1871,7 +2160,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_STYLE__MAINTAIN_ASPECT_RATIO = STYLE_FEATURE_COUNT + 1;
+	int IMAGE_STYLE__MAINTAIN_ASPECT_RATIO = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Crop Bound</b></em>' containment reference.
@@ -1880,7 +2169,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_STYLE__CROP_BOUND = STYLE_FEATURE_COUNT + 2;
+	int IMAGE_STYLE__CROP_BOUND = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Image Style</em>' class.
@@ -1889,7 +2178,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 3;
+	int IMAGE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ImageBufferStyleImpl <em>Image Buffer Style</em>}' class.
@@ -1900,6 +2189,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int IMAGE_BUFFER_STYLE = 33;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_BUFFER_STYLE__UUID = IMAGE_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Anti Alias</b></em>' attribute.
@@ -1957,13 +2255,22 @@ public interface NotationPackage extends EPackage {
 	int NAMED_STYLE = 39;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_STYLE__NAME = STYLE_FEATURE_COUNT + 0;
+	int NAMED_STYLE__NAME = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Named Style</em>' class.
@@ -1972,7 +2279,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int NAMED_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.PropertiesSetStyleImpl <em>Properties Set Style</em>}' class.
@@ -1983,6 +2290,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int PROPERTIES_SET_STYLE = 34;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTIES_SET_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2022,13 +2338,22 @@ public interface NotationPackage extends EPackage {
 	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY = 35;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY = 0;
+	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2037,7 +2362,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE = 1;
+	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>String To Property Value Map Entry</em>' class.
@@ -2046,7 +2371,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY_FEATURE_COUNT = 2;
+	int STRING_TO_PROPERTY_VALUE_MAP_ENTRY_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.StringObjectConverter <em>String Object Converter</em>}' class.
@@ -2059,13 +2384,22 @@ public interface NotationPackage extends EPackage {
 	int STRING_OBJECT_CONVERTER = 40;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_OBJECT_CONVERTER__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The number of structural features of the '<em>String Object Converter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_OBJECT_CONVERTER_FEATURE_COUNT = 0;
+	int STRING_OBJECT_CONVERTER_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.PropertyValueImpl <em>Property Value</em>}' class.
@@ -2076,6 +2410,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int PROPERTY_VALUE = 36;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_VALUE__UUID = STRING_OBJECT_CONVERTER__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Raw Value</b></em>' attribute.
@@ -2115,6 +2458,15 @@ public interface NotationPackage extends EPackage {
 	int DATA_TYPE_STYLE = 41;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2150,6 +2502,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int SINGLE_VALUE_STYLE = 37;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_VALUE_STYLE__UUID = DATA_TYPE_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2198,6 +2559,15 @@ public interface NotationPackage extends EPackage {
 	int LIST_VALUE_STYLE = 38;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VALUE_STYLE__UUID = DATA_TYPE_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2244,6 +2614,15 @@ public interface NotationPackage extends EPackage {
 	int INT_VALUE_STYLE = 42;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2279,6 +2658,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int INT_LIST_VALUE_STYLE = 43;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_LIST_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2318,6 +2706,15 @@ public interface NotationPackage extends EPackage {
 	int BOOLEAN_VALUE_STYLE = 44;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2353,6 +2750,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int DOUBLE_VALUE_STYLE = 45;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2392,6 +2798,15 @@ public interface NotationPackage extends EPackage {
 	int DOUBLE_LIST_VALUE_STYLE = 46;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_LIST_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2427,6 +2842,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int STRING_VALUE_STYLE = 47;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2466,6 +2890,15 @@ public interface NotationPackage extends EPackage {
 	int STRING_LIST_VALUE_STYLE = 48;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LIST_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2501,6 +2934,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int EOBJECT_VALUE_STYLE = 49;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EOBJECT_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2540,6 +2982,15 @@ public interface NotationPackage extends EPackage {
 	int EOBJECT_LIST_VALUE_STYLE = 50;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EOBJECT_LIST_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2575,6 +3026,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int BYTE_ARRAY_VALUE_STYLE = 51;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BYTE_ARRAY_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2614,6 +3074,15 @@ public interface NotationPackage extends EPackage {
 	int BOOLEAN_LIST_VALUE_STYLE = 52;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LIST_VALUE_STYLE__UUID = NAMED_STYLE__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2651,13 +3120,22 @@ public interface NotationPackage extends EPackage {
 	int DIAGRAM_LINK_STYLE = 54;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAM_LINK_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Diagram Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_LINK_STYLE__DIAGRAM_LINK = STYLE_FEATURE_COUNT + 0;
+	int DIAGRAM_LINK_STYLE__DIAGRAM_LINK = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Diagram Link Style</em>' class.
@@ -2666,7 +3144,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_LINK_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int DIAGRAM_LINK_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.HintedDiagramLinkStyleImpl <em>Hinted Diagram Link Style</em>}' class.
@@ -2677,6 +3155,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int HINTED_DIAGRAM_LINK_STYLE = 53;
+
+	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HINTED_DIAGRAM_LINK_STYLE__UUID = DIAGRAM_LINK_STYLE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Diagram Link</b></em>' reference.
@@ -2716,13 +3203,22 @@ public interface NotationPackage extends EPackage {
 	int MULTI_DIAGRAM_LINK_STYLE = 55;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_DIAGRAM_LINK_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Diagram Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS = STYLE_FEATURE_COUNT + 0;
+	int MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Multi Diagram Link Style</em>' class.
@@ -2731,7 +3227,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_DIAGRAM_LINK_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int MULTI_DIAGRAM_LINK_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.TextStyleImpl <em>Text Style</em>}' class.
@@ -2744,13 +3240,22 @@ public interface NotationPackage extends EPackage {
 	int TEXT_STYLE = 56;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Text Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_ALIGNMENT = STYLE_FEATURE_COUNT + 0;
+	int TEXT_STYLE__TEXT_ALIGNMENT = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text Style</em>' class.
@@ -2759,7 +3264,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int TEXT_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl <em>Line Type Style</em>}' class.
@@ -2772,13 +3277,22 @@ public interface NotationPackage extends EPackage {
 	int LINE_TYPE_STYLE = 57;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_TYPE_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Line Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_TYPE_STYLE__LINE_TYPE = STYLE_FEATURE_COUNT + 0;
+	int LINE_TYPE_STYLE__LINE_TYPE = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Line Type Style</em>' class.
@@ -2787,7 +3301,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_TYPE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int LINE_TYPE_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ArrowStyleImpl <em>Arrow Style</em>}' class.
@@ -2800,13 +3314,22 @@ public interface NotationPackage extends EPackage {
 	int ARROW_STYLE = 58;
 
 	/**
+	 * The feature id for the '<em><b>UUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_STYLE__UUID = NOTATION_OBJECT__UUID;
+
+	/**
 	 * The feature id for the '<em><b>Arrow Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARROW_STYLE__ARROW_SOURCE = STYLE_FEATURE_COUNT + 0;
+	int ARROW_STYLE__ARROW_SOURCE = NOTATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Arrow Target</b></em>' attribute.
@@ -2815,7 +3338,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARROW_STYLE__ARROW_TARGET = STYLE_FEATURE_COUNT + 1;
+	int ARROW_STYLE__ARROW_TARGET = NOTATION_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Arrow Style</em>' class.
@@ -2824,7 +3347,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARROW_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
+	int ARROW_STYLE_FEATURE_COUNT = NOTATION_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
@@ -2834,7 +3357,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
 	 */
-	int SORTING = 59;
+	int SORTING = 60;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Filtering <em>Filtering</em>}' enum.
@@ -2844,7 +3367,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFiltering()
 	 * @generated
 	 */
-	int FILTERING = 60;
+	int FILTERING = 61;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Routing <em>Routing</em>}' enum.
@@ -2854,7 +3377,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRouting()
 	 * @generated
 	 */
-	int ROUTING = 61;
+	int ROUTING = 62;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Smoothness <em>Smoothness</em>}' enum.
@@ -2864,7 +3387,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSmoothness()
 	 * @generated
 	 */
-	int SMOOTHNESS = 62;
+	int SMOOTHNESS = 63;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkStatus <em>Jump Link Status</em>}' enum.
@@ -2874,7 +3397,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkStatus()
 	 * @generated
 	 */
-	int JUMP_LINK_STATUS = 63;
+	int JUMP_LINK_STATUS = 64;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkType <em>Jump Link Type</em>}' enum.
@@ -2884,7 +3407,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkType()
 	 * @generated
 	 */
-	int JUMP_LINK_TYPE = 64;
+	int JUMP_LINK_TYPE = 65;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Alignment <em>Alignment</em>}' enum.
@@ -2894,7 +3417,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getAlignment()
 	 * @generated
 	 */
-	int ALIGNMENT = 65;
+	int ALIGNMENT = 66;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.SortingDirection <em>Sorting Direction</em>}' enum.
@@ -2904,7 +3427,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortingDirection()
 	 * @generated
 	 */
-	int SORTING_DIRECTION = 66;
+	int SORTING_DIRECTION = 67;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
@@ -2914,7 +3437,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
 	 * @generated
 	 */
-	int MEASUREMENT_UNIT = 67;
+	int MEASUREMENT_UNIT = 68;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
@@ -2924,7 +3447,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
 	 * @generated
 	 */
-	int TEXT_ALIGNMENT = 68;
+	int TEXT_ALIGNMENT = 69;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}' enum.
@@ -2934,7 +3457,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineType()
 	 * @generated
 	 */
-	int LINE_TYPE = 69;
+	int LINE_TYPE = 70;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}' enum.
@@ -2944,7 +3467,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowType()
 	 * @generated
 	 */
-	int ARROW_TYPE = 70;
+	int ARROW_TYPE = 71;
 
 	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
@@ -2954,7 +3477,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 71;
+	int RELATIVE_BENDPOINT_LIST = 72;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -2964,7 +3487,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 72;
+	int FILTER_KEY_LIST = 73;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -2974,7 +3497,17 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 73;
+	int SORT_KEY_MAP = 74;
+
+
+	/**
+	 * The meta object id for the '<em>UUID</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getUUID()
+	 * @generated
+	 */
+	int UUID = 75;
 
 
 	/**
@@ -4629,6 +5162,27 @@ public interface NotationPackage extends EPackage {
 	EAttribute getArrowStyle_ArrowTarget();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.NotationObject <em>Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Object</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.NotationObject
+	 * @generated
+	 */
+	EClass getNotationObject();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.NotationObject <em>UUID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>UUID</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.NotationObject
+	 * @see #getNotationObject()
+	 * @generated
+	 */
+	EAttribute getNotationObject_UUID();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4780,6 +5334,16 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSortKeyMap();
+
+	/**
+	 * Returns the meta object for data type '<em>UUID</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>UUID</em>'.
+	 * @model instanceClass="byte[]"
+	 * @generated
+	 */
+	EDataType getUUID();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -6162,6 +6726,24 @@ public interface NotationPackage extends EPackage {
 		EAttribute ARROW_STYLE__ARROW_TARGET = eINSTANCE.getArrowStyle_ArrowTarget();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.NotationObjectImpl <em>Object</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationObjectImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getNotationObject()
+		 * @generated
+		 */
+		EClass NOTATION_OBJECT = eINSTANCE.getNotationObject();
+
+		/**
+		 * The meta object literal for the '<em><b>UUID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NOTATION_OBJECT__UUID = eINSTANCE.getNotationObject_UUID();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6310,6 +6892,15 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SORT_KEY_MAP = eINSTANCE.getSortKeyMap();
+
+		/**
+		 * The meta object literal for the '<em>UUID</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getUUID()
+		 * @generated
+		 */
+		EDataType UUID = eINSTANCE.getUUID();
 
 	}
 

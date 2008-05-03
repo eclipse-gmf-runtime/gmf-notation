@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -40,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
+public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry {
     /**
 	 * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -156,6 +155,8 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__UUID:
+				return getUUID();
 			case NotationPackage.NODE_ENTRY__VALUE:
 				return getTypedValue();
 			case NotationPackage.NODE_ENTRY__KEY:
@@ -172,6 +173,9 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.NODE_ENTRY__VALUE:
 				setTypedValue((Alignment)newValue);
 				return;
@@ -189,6 +193,9 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.NODE_ENTRY__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
@@ -206,6 +213,8 @@ public class NodeEntryImpl extends FlatEObjectImpl implements BasicEMap.Entry {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.NODE_ENTRY__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.NODE_ENTRY__VALUE:
 				return value != VALUE_EDEFAULT;
 			case NotationPackage.NODE_ENTRY__KEY:

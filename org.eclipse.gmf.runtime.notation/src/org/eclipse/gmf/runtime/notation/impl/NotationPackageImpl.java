@@ -16,15 +16,14 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Anchor;
 import org.eclipse.gmf.runtime.notation.ArrowStyle;
@@ -73,6 +72,7 @@ import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
+import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PageStyle;
 import org.eclipse.gmf.runtime.notation.PropertiesSetStyle;
@@ -522,6 +522,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass notationObjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum sortingEEnum = null;
 
 	/**
@@ -621,6 +628,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EDataType sortKeyMapEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType uuidEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2093,6 +2107,24 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNotationObject() {
+		return notationObjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNotationObject_UUID() {
+		return (EAttribute)notationObjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSorting() {
 		return sortingEEnum;
 	}
@@ -2221,6 +2253,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 */
 	public EDataType getSortKeyMap() {
 		return sortKeyMapEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getUUID() {
+		return uuidEDataType;
 	}
 
 	/**
@@ -2465,6 +2506,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_SOURCE);
 		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_TARGET);
 
+		notationObjectEClass = createEClass(NOTATION_OBJECT);
+		createEAttribute(notationObjectEClass, NOTATION_OBJECT__UUID);
+
 		// Create enums
 		sortingEEnum = createEEnum(SORTING);
 		filteringEEnum = createEEnum(FILTERING);
@@ -2483,6 +2527,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		relativeBendpointListEDataType = createEDataType(RELATIVE_BENDPOINT_LIST);
 		filterKeyListEDataType = createEDataType(FILTER_KEY_LIST);
 		sortKeyMapEDataType = createEDataType(SORT_KEY_MAP);
+		uuidEDataType = createEDataType(UUID);
 	}
 
 	/**
@@ -2514,22 +2559,37 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		// Add supertypes to classes
 		edgeEClass.getESuperTypes().add(this.getView());
 		nodeEClass.getESuperTypes().add(this.getView());
+		fillStyleEClass.getESuperTypes().add(this.getNotationObject());
 		fillStyleEClass.getESuperTypes().add(this.getStyle());
+		lineStyleEClass.getESuperTypes().add(this.getNotationObject());
 		lineStyleEClass.getESuperTypes().add(this.getStyle());
+		fontStyleEClass.getESuperTypes().add(this.getNotationObject());
 		fontStyleEClass.getESuperTypes().add(this.getStyle());
+		titleStyleEClass.getESuperTypes().add(this.getNotationObject());
 		titleStyleEClass.getESuperTypes().add(this.getStyle());
+		sortingStyleEClass.getESuperTypes().add(this.getNotationObject());
 		sortingStyleEClass.getESuperTypes().add(this.getStyle());
+		descriptionStyleEClass.getESuperTypes().add(this.getNotationObject());
 		descriptionStyleEClass.getESuperTypes().add(this.getStyle());
+		sizeEClass.getESuperTypes().add(this.getNotationObject());
 		sizeEClass.getESuperTypes().add(this.getLayoutConstraint());
+		locationEClass.getESuperTypes().add(this.getNotationObject());
 		locationEClass.getESuperTypes().add(this.getLayoutConstraint());
 		boundsEClass.getESuperTypes().add(this.getLocation());
 		boundsEClass.getESuperTypes().add(this.getSize());
+		ratioEClass.getESuperTypes().add(this.getNotationObject());
 		ratioEClass.getESuperTypes().add(this.getLayoutConstraint());
+		identityAnchorEClass.getESuperTypes().add(this.getNotationObject());
 		identityAnchorEClass.getESuperTypes().add(this.getAnchor());
+		routingStyleEClass.getESuperTypes().add(this.getNotationObject());
 		routingStyleEClass.getESuperTypes().add(this.getStyle());
 		viewEClass.getESuperTypes().add(theEcorePackage.getEModelElement());
+		viewEClass.getESuperTypes().add(this.getNotationObject());
+		relativeBendpointsEClass.getESuperTypes().add(this.getNotationObject());
 		relativeBendpointsEClass.getESuperTypes().add(this.getBendpoints());
 		diagramEClass.getESuperTypes().add(this.getView());
+		imageEClass.getESuperTypes().add(this.getNotationObject());
+		canonicalStyleEClass.getESuperTypes().add(this.getNotationObject());
 		canonicalStyleEClass.getESuperTypes().add(this.getStyle());
 		shapeStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		shapeStyleEClass.getESuperTypes().add(this.getFontStyle());
@@ -2539,21 +2599,31 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		connectorStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		connectorStyleEClass.getESuperTypes().add(this.getRoutingStyle());
 		connectorStyleEClass.getESuperTypes().add(this.getLineStyle());
+		pageStyleEClass.getESuperTypes().add(this.getNotationObject());
 		pageStyleEClass.getESuperTypes().add(this.getStyle());
+		drawerStyleEClass.getESuperTypes().add(this.getNotationObject());
 		drawerStyleEClass.getESuperTypes().add(this.getStyle());
+		guideStyleEClass.getESuperTypes().add(this.getNotationObject());
 		guideStyleEClass.getESuperTypes().add(this.getStyle());
+		guideEClass.getESuperTypes().add(this.getNotationObject());
+		nodeEntryEClass.getESuperTypes().add(this.getNotationObject());
+		filteringStyleEClass.getESuperTypes().add(this.getNotationObject());
 		filteringStyleEClass.getESuperTypes().add(this.getStyle());
 		diagramStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		diagramStyleEClass.getESuperTypes().add(this.getPageStyle());
 		diagramStyleEClass.getESuperTypes().add(this.getGuideStyle());
 		diagramStyleEClass.getESuperTypes().add(this.getDescriptionStyle());
+		imageStyleEClass.getESuperTypes().add(this.getNotationObject());
 		imageStyleEClass.getESuperTypes().add(this.getStyle());
 		imageBufferStyleEClass.getESuperTypes().add(this.getImageStyle());
 		propertiesSetStyleEClass.getESuperTypes().add(this.getNamedStyle());
+		stringToPropertyValueMapEntryEClass.getESuperTypes().add(this.getNotationObject());
 		propertyValueEClass.getESuperTypes().add(this.getStringObjectConverter());
 		singleValueStyleEClass.getESuperTypes().add(this.getDataTypeStyle());
 		listValueStyleEClass.getESuperTypes().add(this.getDataTypeStyle());
+		namedStyleEClass.getESuperTypes().add(this.getNotationObject());
 		namedStyleEClass.getESuperTypes().add(this.getStyle());
+		stringObjectConverterEClass.getESuperTypes().add(this.getNotationObject());
 		dataTypeStyleEClass.getESuperTypes().add(this.getNamedStyle());
 		dataTypeStyleEClass.getESuperTypes().add(this.getStringObjectConverter());
 		intValueStyleEClass.getESuperTypes().add(this.getNamedStyle());
@@ -2569,10 +2639,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		booleanListValueStyleEClass.getESuperTypes().add(this.getNamedStyle());
 		hintedDiagramLinkStyleEClass.getESuperTypes().add(this.getDiagramLinkStyle());
 		hintedDiagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
+		diagramLinkStyleEClass.getESuperTypes().add(this.getNotationObject());
 		diagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
+		multiDiagramLinkStyleEClass.getESuperTypes().add(this.getNotationObject());
 		multiDiagramLinkStyleEClass.getESuperTypes().add(this.getStyle());
+		textStyleEClass.getESuperTypes().add(this.getNotationObject());
 		textStyleEClass.getESuperTypes().add(this.getStyle());
+		lineTypeStyleEClass.getESuperTypes().add(this.getNotationObject());
 		lineTypeStyleEClass.getESuperTypes().add(this.getStyle());
+		arrowStyleEClass.getESuperTypes().add(this.getNotationObject());
 		arrowStyleEClass.getESuperTypes().add(this.getStyle());
 
 		// Initialize classes and features; add operations and parameters
@@ -2890,6 +2965,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getArrowStyle_ArrowSource(), this.getArrowType(), "arrowSource", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getArrowStyle_ArrowTarget(), this.getArrowType(), "arrowTarget", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
+		initEClass(notationObjectEClass, NotationObject.class, "NotationObject", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEAttribute(getNotationObject_UUID(), this.getUUID(), "uUID", null, 1, 1, NotationObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED); //$NON-NLS-1$
+
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$
 		addEEnumLiteral(sortingEEnum, Sorting.NONE_LITERAL);
@@ -2960,9 +3038,52 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEDataType(relativeBendpointListEDataType, List.class, "RelativeBendpointList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEDataType(filterKeyListEDataType, List.class, "FilterKeyList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEDataType(sortKeyMapEDataType, Map.class, "SortKeyMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEDataType(uuidEDataType, byte[].class, "UUID", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+	
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$		
+		addAnnotation
+		  (getNotationObject_UUID(), 
+		   source, 
+		   new String[] {
+			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			 "namespace", "http://www.omg.org/XMI", //$NON-NLS-1$ //$NON-NLS-2$
+			 "kind", "attribute" //$NON-NLS-1$ //$NON-NLS-2$
+		   });	
+	}
+
+	void createAnnotations()
+	{
+	  for (EClassifier eClassifier : getEClassifiers())
+	  {
+	    String name = eClassifier.getName();
+        if (name.equals("Node") || name.indexOf("Style") != -1 || name.equals("Location") || name.equals("Size") ||
+             name.indexOf("Anchor") != -1 || name.indexOf("point") != -1 || name.equals("Bounds") || name.indexOf("Edge") != -1 || name.indexOf("Constraint") != -1)
+        {
+  	      String source = "foo";                                                                                   
+  	      addAnnotation
+  	        (eClassifier, 
+  	         source, 
+  	         new String[] 
+  	         {
+  	         "uuid", "false"
+  	         });  
+        }
+	  }
 	}
 
 } //NotationPackageImpl

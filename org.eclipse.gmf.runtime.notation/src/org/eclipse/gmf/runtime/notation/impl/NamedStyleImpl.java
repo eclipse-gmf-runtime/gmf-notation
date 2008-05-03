@@ -11,12 +11,8 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -33,7 +29,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class NamedStyleImpl extends FlatEObjectImpl implements NamedStyle {
+public class NamedStyleImpl extends NotationObjectImpl implements NamedStyle {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,6 +96,8 @@ public class NamedStyleImpl extends FlatEObjectImpl implements NamedStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.NAMED_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.NAMED_STYLE__NAME:
 				return getName();
 		}
@@ -113,6 +111,9 @@ public class NamedStyleImpl extends FlatEObjectImpl implements NamedStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.NAMED_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.NAMED_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -127,6 +128,9 @@ public class NamedStyleImpl extends FlatEObjectImpl implements NamedStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.NAMED_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.NAMED_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -141,6 +145,8 @@ public class NamedStyleImpl extends FlatEObjectImpl implements NamedStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.NAMED_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.NAMED_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

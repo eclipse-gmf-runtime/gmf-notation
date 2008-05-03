@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface Guide extends EObject {
+public interface Guide extends NotationObject {
     /**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
 	 * The default value is <code>"0"</code>.

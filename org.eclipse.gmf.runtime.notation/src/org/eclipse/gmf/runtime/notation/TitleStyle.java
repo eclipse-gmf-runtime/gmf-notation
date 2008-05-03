@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface TitleStyle extends Style {
+public interface TitleStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Show Title</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

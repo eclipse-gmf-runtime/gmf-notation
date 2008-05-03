@@ -22,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.Filtering;
 import org.eclipse.gmf.runtime.notation.FilteringStyle;
@@ -46,7 +45,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyle {
+public class FilteringStyleImpl extends NotationObjectImpl implements FilteringStyle {
     /**
 	 * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -191,6 +190,8 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				return getFiltering();
 			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
@@ -208,6 +209,9 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				setFiltering((Filtering)newValue);
 				return;
@@ -229,6 +233,9 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				setFiltering(FILTERING_EDEFAULT);
 				return;
@@ -249,6 +256,8 @@ public class FilteringStyleImpl extends FlatEObjectImpl implements FilteringStyl
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.FILTERING_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				return filtering != FILTERING_EDEFAULT;
 			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:

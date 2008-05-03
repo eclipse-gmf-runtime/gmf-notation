@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class DescriptionStyleImpl extends FlatEObjectImpl implements DescriptionStyle {
+public class DescriptionStyleImpl extends NotationObjectImpl implements DescriptionStyle {
     /**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +100,8 @@ public class DescriptionStyleImpl extends FlatEObjectImpl implements Description
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				return getDescription();
 		}
@@ -114,6 +115,9 @@ public class DescriptionStyleImpl extends FlatEObjectImpl implements Description
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -128,6 +132,9 @@ public class DescriptionStyleImpl extends FlatEObjectImpl implements Description
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -142,6 +149,8 @@ public class DescriptionStyleImpl extends FlatEObjectImpl implements Description
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DESCRIPTION_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}

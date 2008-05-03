@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Image;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class ImageImpl extends FlatEObjectImpl implements Image {
+public class ImageImpl extends NotationObjectImpl implements Image {
     /**
 	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +100,8 @@ public class ImageImpl extends FlatEObjectImpl implements Image {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.IMAGE__UUID:
+				return getUUID();
 			case NotationPackage.IMAGE__DATA:
 				return getData();
 		}
@@ -114,6 +115,9 @@ public class ImageImpl extends FlatEObjectImpl implements Image {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.IMAGE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.IMAGE__DATA:
 				setData((byte[])newValue);
 				return;
@@ -128,6 +132,9 @@ public class ImageImpl extends FlatEObjectImpl implements Image {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.IMAGE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.IMAGE__DATA:
 				setData(DATA_EDEFAULT);
 				return;
@@ -142,6 +149,8 @@ public class ImageImpl extends FlatEObjectImpl implements Image {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.IMAGE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.IMAGE__DATA:
 				return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
 		}

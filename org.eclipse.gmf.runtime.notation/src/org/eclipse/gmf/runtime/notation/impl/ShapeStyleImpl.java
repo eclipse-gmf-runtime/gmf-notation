@@ -19,6 +19,7 @@ import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.FontStyle;
 import org.eclipse.gmf.runtime.notation.LineStyle;
+import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.ShapeStyle;
 import org.eclipse.gmf.runtime.notation.Style;
@@ -30,6 +31,7 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getUUID <em>UUID</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontColor <em>Font Color</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontName <em>Font Name</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontHeight <em>Font Height</em>}</li>
@@ -51,6 +53,26 @@ import org.eclipse.gmf.runtime.notation.Style;
  */
 public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
     /**
+	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final byte[] UUID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected byte[] uUID = UUID_EDEFAULT;
+
+				/**
 	 * The default value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -293,6 +315,27 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public byte[] getUUID() {
+		return uUID;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUUID(byte[] newUUID) {
+		byte[] oldUUID = uUID;
+		uUID = newUUID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__UUID, oldUUID, uUID));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getFontColor() {
 		return fontColor;
 	}
@@ -530,6 +573,8 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.SHAPE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.SHAPE_STYLE__FONT_COLOR:
 				return new Integer(getFontColor());
 			case NotationPackage.SHAPE_STYLE__FONT_NAME:
@@ -563,6 +608,9 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.SHAPE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.SHAPE_STYLE__FONT_COLOR:
 				setFontColor(((Integer)newValue).intValue());
 				return;
@@ -607,6 +655,9 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SHAPE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.SHAPE_STYLE__FONT_COLOR:
 				setFontColor(FONT_COLOR_EDEFAULT);
 				return;
@@ -651,6 +702,8 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.SHAPE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.SHAPE_STYLE__FONT_COLOR:
 				return fontColor != FONT_COLOR_EDEFAULT;
 			case NotationPackage.SHAPE_STYLE__FONT_NAME:
@@ -683,6 +736,12 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (derivedFeatureID) {
+				case NotationPackage.SHAPE_STYLE__UUID: return NotationPackage.NOTATION_OBJECT__UUID;
+				default: return -1;
+			}
+		}
 		if (baseClass == Style.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -728,6 +787,12 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (baseFeatureID) {
+				case NotationPackage.NOTATION_OBJECT__UUID: return NotationPackage.SHAPE_STYLE__UUID;
+				default: return -1;
+			}
+		}
 		if (baseClass == Style.class) {
 			switch (baseFeatureID) {
 				default: return -1;
@@ -776,7 +841,9 @@ public class ShapeStyleImpl extends EObjectImpl implements ShapeStyle {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (fontColor: "); //$NON-NLS-1$
+		result.append(" (uUID: "); //$NON-NLS-1$
+		result.append(uUID);
+		result.append(", fontColor: "); //$NON-NLS-1$
 		result.append(fontColor);
 		result.append(", fontName: "); //$NON-NLS-1$
 		result.append(fontName);

@@ -12,15 +12,11 @@ package org.eclipse.gmf.runtime.notation.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
-
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -38,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiDiagramLinkStyle {
+public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements MultiDiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLinks() <em>Diagram Links</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -86,6 +82,8 @@ public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiD
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				return getDiagramLinks();
 		}
@@ -99,6 +97,9 @@ public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiD
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				getDiagramLinks().clear();
 				getDiagramLinks().addAll((Collection)newValue);
@@ -114,6 +115,9 @@ public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiD
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				getDiagramLinks().clear();
 				return;
@@ -128,6 +132,8 @@ public class MultiDiagramLinkStyleImpl extends FlatEObjectImpl implements MultiD
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				return diagramLinks != null && !diagramLinks.isEmpty();
 		}

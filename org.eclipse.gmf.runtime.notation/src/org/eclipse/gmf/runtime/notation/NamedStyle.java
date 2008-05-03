@@ -27,7 +27,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  */
-public interface NamedStyle extends Style {
+public interface NamedStyle extends NotationObject, Style {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

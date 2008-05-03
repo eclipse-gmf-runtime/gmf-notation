@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface IdentityAnchor extends Anchor {
+public interface IdentityAnchor extends NotationObject, Anchor {
     /**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * The default value is <code>"anchor"</code>.

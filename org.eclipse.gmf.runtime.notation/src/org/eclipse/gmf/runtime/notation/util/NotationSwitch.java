@@ -135,6 +135,7 @@ public class NotationSwitch {
 				Object result = caseEdge(edge);
 				if (result == null) result = caseView(edge);
 				if (result == null) result = caseEModelElement(edge);
+				if (result == null) result = caseNotationObject(edge);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -143,6 +144,7 @@ public class NotationSwitch {
 				Object result = caseNode(node);
 				if (result == null) result = caseView(node);
 				if (result == null) result = caseEModelElement(node);
+				if (result == null) result = caseNotationObject(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -155,6 +157,7 @@ public class NotationSwitch {
 			case NotationPackage.FILL_STYLE: {
 				FillStyle fillStyle = (FillStyle)theEObject;
 				Object result = caseFillStyle(fillStyle);
+				if (result == null) result = caseNotationObject(fillStyle);
 				if (result == null) result = caseStyle(fillStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -162,6 +165,7 @@ public class NotationSwitch {
 			case NotationPackage.LINE_STYLE: {
 				LineStyle lineStyle = (LineStyle)theEObject;
 				Object result = caseLineStyle(lineStyle);
+				if (result == null) result = caseNotationObject(lineStyle);
 				if (result == null) result = caseStyle(lineStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -169,6 +173,7 @@ public class NotationSwitch {
 			case NotationPackage.FONT_STYLE: {
 				FontStyle fontStyle = (FontStyle)theEObject;
 				Object result = caseFontStyle(fontStyle);
+				if (result == null) result = caseNotationObject(fontStyle);
 				if (result == null) result = caseStyle(fontStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -176,6 +181,7 @@ public class NotationSwitch {
 			case NotationPackage.TITLE_STYLE: {
 				TitleStyle titleStyle = (TitleStyle)theEObject;
 				Object result = caseTitleStyle(titleStyle);
+				if (result == null) result = caseNotationObject(titleStyle);
 				if (result == null) result = caseStyle(titleStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -183,6 +189,7 @@ public class NotationSwitch {
 			case NotationPackage.SORTING_STYLE: {
 				SortingStyle sortingStyle = (SortingStyle)theEObject;
 				Object result = caseSortingStyle(sortingStyle);
+				if (result == null) result = caseNotationObject(sortingStyle);
 				if (result == null) result = caseStyle(sortingStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -190,6 +197,7 @@ public class NotationSwitch {
 			case NotationPackage.DESCRIPTION_STYLE: {
 				DescriptionStyle descriptionStyle = (DescriptionStyle)theEObject;
 				Object result = caseDescriptionStyle(descriptionStyle);
+				if (result == null) result = caseNotationObject(descriptionStyle);
 				if (result == null) result = caseStyle(descriptionStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -203,6 +211,7 @@ public class NotationSwitch {
 			case NotationPackage.SIZE: {
 				Size size = (Size)theEObject;
 				Object result = caseSize(size);
+				if (result == null) result = caseNotationObject(size);
 				if (result == null) result = caseLayoutConstraint(size);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -210,6 +219,7 @@ public class NotationSwitch {
 			case NotationPackage.LOCATION: {
 				Location location = (Location)theEObject;
 				Object result = caseLocation(location);
+				if (result == null) result = caseNotationObject(location);
 				if (result == null) result = caseLayoutConstraint(location);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -219,6 +229,7 @@ public class NotationSwitch {
 				Object result = caseBounds(bounds);
 				if (result == null) result = caseLocation(bounds);
 				if (result == null) result = caseSize(bounds);
+				if (result == null) result = caseNotationObject(bounds);
 				if (result == null) result = caseLayoutConstraint(bounds);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -226,6 +237,7 @@ public class NotationSwitch {
 			case NotationPackage.RATIO: {
 				Ratio ratio = (Ratio)theEObject;
 				Object result = caseRatio(ratio);
+				if (result == null) result = caseNotationObject(ratio);
 				if (result == null) result = caseLayoutConstraint(ratio);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -245,6 +257,7 @@ public class NotationSwitch {
 			case NotationPackage.IDENTITY_ANCHOR: {
 				IdentityAnchor identityAnchor = (IdentityAnchor)theEObject;
 				Object result = caseIdentityAnchor(identityAnchor);
+				if (result == null) result = caseNotationObject(identityAnchor);
 				if (result == null) result = caseAnchor(identityAnchor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -252,6 +265,7 @@ public class NotationSwitch {
 			case NotationPackage.ROUTING_STYLE: {
 				RoutingStyle routingStyle = (RoutingStyle)theEObject;
 				Object result = caseRoutingStyle(routingStyle);
+				if (result == null) result = caseNotationObject(routingStyle);
 				if (result == null) result = caseStyle(routingStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -260,12 +274,14 @@ public class NotationSwitch {
 				View view = (View)theEObject;
 				Object result = caseView(view);
 				if (result == null) result = caseEModelElement(view);
+				if (result == null) result = caseNotationObject(view);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.RELATIVE_BENDPOINTS: {
 				RelativeBendpoints relativeBendpoints = (RelativeBendpoints)theEObject;
 				Object result = caseRelativeBendpoints(relativeBendpoints);
+				if (result == null) result = caseNotationObject(relativeBendpoints);
 				if (result == null) result = caseBendpoints(relativeBendpoints);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -275,18 +291,21 @@ public class NotationSwitch {
 				Object result = caseDiagram(diagram);
 				if (result == null) result = caseView(diagram);
 				if (result == null) result = caseEModelElement(diagram);
+				if (result == null) result = caseNotationObject(diagram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.IMAGE: {
 				Image image = (Image)theEObject;
 				Object result = caseImage(image);
+				if (result == null) result = caseNotationObject(image);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.CANONICAL_STYLE: {
 				CanonicalStyle canonicalStyle = (CanonicalStyle)theEObject;
 				Object result = caseCanonicalStyle(canonicalStyle);
+				if (result == null) result = caseNotationObject(canonicalStyle);
 				if (result == null) result = caseStyle(canonicalStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -298,6 +317,7 @@ public class NotationSwitch {
 				if (result == null) result = caseDescriptionStyle(shapeStyle);
 				if (result == null) result = caseFillStyle(shapeStyle);
 				if (result == null) result = caseLineStyle(shapeStyle);
+				if (result == null) result = caseNotationObject(shapeStyle);
 				if (result == null) result = caseStyle(shapeStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -307,6 +327,7 @@ public class NotationSwitch {
 				Object result = caseConnectorStyle(connectorStyle);
 				if (result == null) result = caseRoutingStyle(connectorStyle);
 				if (result == null) result = caseLineStyle(connectorStyle);
+				if (result == null) result = caseNotationObject(connectorStyle);
 				if (result == null) result = caseStyle(connectorStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -314,6 +335,7 @@ public class NotationSwitch {
 			case NotationPackage.PAGE_STYLE: {
 				PageStyle pageStyle = (PageStyle)theEObject;
 				Object result = casePageStyle(pageStyle);
+				if (result == null) result = caseNotationObject(pageStyle);
 				if (result == null) result = caseStyle(pageStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -321,6 +343,7 @@ public class NotationSwitch {
 			case NotationPackage.DRAWER_STYLE: {
 				DrawerStyle drawerStyle = (DrawerStyle)theEObject;
 				Object result = caseDrawerStyle(drawerStyle);
+				if (result == null) result = caseNotationObject(drawerStyle);
 				if (result == null) result = caseStyle(drawerStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -328,6 +351,7 @@ public class NotationSwitch {
 			case NotationPackage.GUIDE_STYLE: {
 				GuideStyle guideStyle = (GuideStyle)theEObject;
 				Object result = caseGuideStyle(guideStyle);
+				if (result == null) result = caseNotationObject(guideStyle);
 				if (result == null) result = caseStyle(guideStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -335,18 +359,21 @@ public class NotationSwitch {
 			case NotationPackage.GUIDE: {
 				Guide guide = (Guide)theEObject;
 				Object result = caseGuide(guide);
+				if (result == null) result = caseNotationObject(guide);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.NODE_ENTRY: {
 				Map.Entry nodeEntry = (Map.Entry)theEObject;
 				Object result = caseNodeEntry(nodeEntry);
+				if (result == null) result = caseNotationObject((NotationObject)nodeEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.FILTERING_STYLE: {
 				FilteringStyle filteringStyle = (FilteringStyle)theEObject;
 				Object result = caseFilteringStyle(filteringStyle);
+				if (result == null) result = caseNotationObject(filteringStyle);
 				if (result == null) result = caseStyle(filteringStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -357,6 +384,7 @@ public class NotationSwitch {
 				if (result == null) result = casePageStyle(diagramStyle);
 				if (result == null) result = caseGuideStyle(diagramStyle);
 				if (result == null) result = caseDescriptionStyle(diagramStyle);
+				if (result == null) result = caseNotationObject(diagramStyle);
 				if (result == null) result = caseStyle(diagramStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -364,6 +392,7 @@ public class NotationSwitch {
 			case NotationPackage.IMAGE_STYLE: {
 				ImageStyle imageStyle = (ImageStyle)theEObject;
 				Object result = caseImageStyle(imageStyle);
+				if (result == null) result = caseNotationObject(imageStyle);
 				if (result == null) result = caseStyle(imageStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -372,6 +401,7 @@ public class NotationSwitch {
 				ImageBufferStyle imageBufferStyle = (ImageBufferStyle)theEObject;
 				Object result = caseImageBufferStyle(imageBufferStyle);
 				if (result == null) result = caseImageStyle(imageBufferStyle);
+				if (result == null) result = caseNotationObject(imageBufferStyle);
 				if (result == null) result = caseStyle(imageBufferStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -380,6 +410,7 @@ public class NotationSwitch {
 				PropertiesSetStyle propertiesSetStyle = (PropertiesSetStyle)theEObject;
 				Object result = casePropertiesSetStyle(propertiesSetStyle);
 				if (result == null) result = caseNamedStyle(propertiesSetStyle);
+				if (result == null) result = caseNotationObject(propertiesSetStyle);
 				if (result == null) result = caseStyle(propertiesSetStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -387,6 +418,7 @@ public class NotationSwitch {
 			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY: {
 				Map.Entry stringToPropertyValueMapEntry = (Map.Entry)theEObject;
 				Object result = caseStringToPropertyValueMapEntry(stringToPropertyValueMapEntry);
+				if (result == null) result = caseNotationObject((NotationObject)stringToPropertyValueMapEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -394,6 +426,7 @@ public class NotationSwitch {
 				PropertyValue propertyValue = (PropertyValue)theEObject;
 				Object result = casePropertyValue(propertyValue);
 				if (result == null) result = caseStringObjectConverter(propertyValue);
+				if (result == null) result = caseNotationObject(propertyValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -403,6 +436,7 @@ public class NotationSwitch {
 				if (result == null) result = caseDataTypeStyle(singleValueStyle);
 				if (result == null) result = caseNamedStyle(singleValueStyle);
 				if (result == null) result = caseStringObjectConverter(singleValueStyle);
+				if (result == null) result = caseNotationObject(singleValueStyle);
 				if (result == null) result = caseStyle(singleValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -413,6 +447,7 @@ public class NotationSwitch {
 				if (result == null) result = caseDataTypeStyle(listValueStyle);
 				if (result == null) result = caseNamedStyle(listValueStyle);
 				if (result == null) result = caseStringObjectConverter(listValueStyle);
+				if (result == null) result = caseNotationObject(listValueStyle);
 				if (result == null) result = caseStyle(listValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -420,6 +455,7 @@ public class NotationSwitch {
 			case NotationPackage.NAMED_STYLE: {
 				NamedStyle namedStyle = (NamedStyle)theEObject;
 				Object result = caseNamedStyle(namedStyle);
+				if (result == null) result = caseNotationObject(namedStyle);
 				if (result == null) result = caseStyle(namedStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -427,6 +463,7 @@ public class NotationSwitch {
 			case NotationPackage.STRING_OBJECT_CONVERTER: {
 				StringObjectConverter stringObjectConverter = (StringObjectConverter)theEObject;
 				Object result = caseStringObjectConverter(stringObjectConverter);
+				if (result == null) result = caseNotationObject(stringObjectConverter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -435,6 +472,7 @@ public class NotationSwitch {
 				Object result = caseDataTypeStyle(dataTypeStyle);
 				if (result == null) result = caseNamedStyle(dataTypeStyle);
 				if (result == null) result = caseStringObjectConverter(dataTypeStyle);
+				if (result == null) result = caseNotationObject(dataTypeStyle);
 				if (result == null) result = caseStyle(dataTypeStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -443,6 +481,7 @@ public class NotationSwitch {
 				IntValueStyle intValueStyle = (IntValueStyle)theEObject;
 				Object result = caseIntValueStyle(intValueStyle);
 				if (result == null) result = caseNamedStyle(intValueStyle);
+				if (result == null) result = caseNotationObject(intValueStyle);
 				if (result == null) result = caseStyle(intValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -451,6 +490,7 @@ public class NotationSwitch {
 				IntListValueStyle intListValueStyle = (IntListValueStyle)theEObject;
 				Object result = caseIntListValueStyle(intListValueStyle);
 				if (result == null) result = caseNamedStyle(intListValueStyle);
+				if (result == null) result = caseNotationObject(intListValueStyle);
 				if (result == null) result = caseStyle(intListValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -459,6 +499,7 @@ public class NotationSwitch {
 				BooleanValueStyle booleanValueStyle = (BooleanValueStyle)theEObject;
 				Object result = caseBooleanValueStyle(booleanValueStyle);
 				if (result == null) result = caseNamedStyle(booleanValueStyle);
+				if (result == null) result = caseNotationObject(booleanValueStyle);
 				if (result == null) result = caseStyle(booleanValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -467,6 +508,7 @@ public class NotationSwitch {
 				DoubleValueStyle doubleValueStyle = (DoubleValueStyle)theEObject;
 				Object result = caseDoubleValueStyle(doubleValueStyle);
 				if (result == null) result = caseNamedStyle(doubleValueStyle);
+				if (result == null) result = caseNotationObject(doubleValueStyle);
 				if (result == null) result = caseStyle(doubleValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -475,6 +517,7 @@ public class NotationSwitch {
 				DoubleListValueStyle doubleListValueStyle = (DoubleListValueStyle)theEObject;
 				Object result = caseDoubleListValueStyle(doubleListValueStyle);
 				if (result == null) result = caseNamedStyle(doubleListValueStyle);
+				if (result == null) result = caseNotationObject(doubleListValueStyle);
 				if (result == null) result = caseStyle(doubleListValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -483,6 +526,7 @@ public class NotationSwitch {
 				StringValueStyle stringValueStyle = (StringValueStyle)theEObject;
 				Object result = caseStringValueStyle(stringValueStyle);
 				if (result == null) result = caseNamedStyle(stringValueStyle);
+				if (result == null) result = caseNotationObject(stringValueStyle);
 				if (result == null) result = caseStyle(stringValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -491,6 +535,7 @@ public class NotationSwitch {
 				StringListValueStyle stringListValueStyle = (StringListValueStyle)theEObject;
 				Object result = caseStringListValueStyle(stringListValueStyle);
 				if (result == null) result = caseNamedStyle(stringListValueStyle);
+				if (result == null) result = caseNotationObject(stringListValueStyle);
 				if (result == null) result = caseStyle(stringListValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -499,6 +544,7 @@ public class NotationSwitch {
 				EObjectValueStyle eObjectValueStyle = (EObjectValueStyle)theEObject;
 				Object result = caseEObjectValueStyle(eObjectValueStyle);
 				if (result == null) result = caseNamedStyle(eObjectValueStyle);
+				if (result == null) result = caseNotationObject(eObjectValueStyle);
 				if (result == null) result = caseStyle(eObjectValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -507,6 +553,7 @@ public class NotationSwitch {
 				EObjectListValueStyle eObjectListValueStyle = (EObjectListValueStyle)theEObject;
 				Object result = caseEObjectListValueStyle(eObjectListValueStyle);
 				if (result == null) result = caseNamedStyle(eObjectListValueStyle);
+				if (result == null) result = caseNotationObject(eObjectListValueStyle);
 				if (result == null) result = caseStyle(eObjectListValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -515,6 +562,7 @@ public class NotationSwitch {
 				ByteArrayValueStyle byteArrayValueStyle = (ByteArrayValueStyle)theEObject;
 				Object result = caseByteArrayValueStyle(byteArrayValueStyle);
 				if (result == null) result = caseNamedStyle(byteArrayValueStyle);
+				if (result == null) result = caseNotationObject(byteArrayValueStyle);
 				if (result == null) result = caseStyle(byteArrayValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -523,6 +571,7 @@ public class NotationSwitch {
 				BooleanListValueStyle booleanListValueStyle = (BooleanListValueStyle)theEObject;
 				Object result = caseBooleanListValueStyle(booleanListValueStyle);
 				if (result == null) result = caseNamedStyle(booleanListValueStyle);
+				if (result == null) result = caseNotationObject(booleanListValueStyle);
 				if (result == null) result = caseStyle(booleanListValueStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -532,12 +581,14 @@ public class NotationSwitch {
 				Object result = caseHintedDiagramLinkStyle(hintedDiagramLinkStyle);
 				if (result == null) result = caseDiagramLinkStyle(hintedDiagramLinkStyle);
 				if (result == null) result = caseStyle(hintedDiagramLinkStyle);
+				if (result == null) result = caseNotationObject(hintedDiagramLinkStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case NotationPackage.DIAGRAM_LINK_STYLE: {
 				DiagramLinkStyle diagramLinkStyle = (DiagramLinkStyle)theEObject;
 				Object result = caseDiagramLinkStyle(diagramLinkStyle);
+				if (result == null) result = caseNotationObject(diagramLinkStyle);
 				if (result == null) result = caseStyle(diagramLinkStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -545,6 +596,7 @@ public class NotationSwitch {
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE: {
 				MultiDiagramLinkStyle multiDiagramLinkStyle = (MultiDiagramLinkStyle)theEObject;
 				Object result = caseMultiDiagramLinkStyle(multiDiagramLinkStyle);
+				if (result == null) result = caseNotationObject(multiDiagramLinkStyle);
 				if (result == null) result = caseStyle(multiDiagramLinkStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -552,6 +604,7 @@ public class NotationSwitch {
 			case NotationPackage.TEXT_STYLE: {
 				TextStyle textStyle = (TextStyle)theEObject;
 				Object result = caseTextStyle(textStyle);
+				if (result == null) result = caseNotationObject(textStyle);
 				if (result == null) result = caseStyle(textStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -559,6 +612,7 @@ public class NotationSwitch {
 			case NotationPackage.LINE_TYPE_STYLE: {
 				LineTypeStyle lineTypeStyle = (LineTypeStyle)theEObject;
 				Object result = caseLineTypeStyle(lineTypeStyle);
+				if (result == null) result = caseNotationObject(lineTypeStyle);
 				if (result == null) result = caseStyle(lineTypeStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -566,7 +620,14 @@ public class NotationSwitch {
 			case NotationPackage.ARROW_STYLE: {
 				ArrowStyle arrowStyle = (ArrowStyle)theEObject;
 				Object result = caseArrowStyle(arrowStyle);
+				if (result == null) result = caseNotationObject(arrowStyle);
 				if (result == null) result = caseStyle(arrowStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.NOTATION_OBJECT: {
+				NotationObject notationObject = (NotationObject)theEObject;
+				Object result = caseNotationObject(notationObject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1456,6 +1517,21 @@ public class NotationSwitch {
 	 * @generated
 	 */
 	public Object caseArrowStyle(ArrowStyle object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseNotationObject(NotationObject object) {
 		return null;
 	}
 

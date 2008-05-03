@@ -175,6 +175,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.PROPERTIES_SET_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
 				return getName();
 			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
@@ -191,6 +193,9 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.PROPERTIES_SET_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -208,6 +213,9 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.PROPERTIES_SET_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -225,6 +233,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.PROPERTIES_SET_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:

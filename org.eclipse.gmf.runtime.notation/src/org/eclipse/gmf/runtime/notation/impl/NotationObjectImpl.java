@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2008 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -16,49 +16,49 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.gmf.runtime.notation.BooleanValueStyle;
+import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Boolean Value Style</b></em>'.
+ * An implementation of the model object '<em><b>Object</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.BooleanValueStyleImpl#isBooleanValue <em>Boolean Value</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.NotationObjectImpl#getUUID <em>UUID</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValueStyle {
+public abstract class NotationObjectImpl extends NotationEObjectImpl implements NotationObject {
 	/**
-	 * The default value of the '{@link #isBooleanValue() <em>Boolean Value</em>}' attribute.
+	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isBooleanValue()
+	 * @see #getUUID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean BOOLEAN_VALUE_EDEFAULT = false;
+	protected static final byte[] UUID_EDEFAULT = null;
 
 	/**
-	 * The flag representing the value of the '{@link #isBooleanValue() <em>Boolean Value</em>}' attribute.
+	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isBooleanValue()
+	 * @see #getUUID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int BOOLEAN_VALUE_EFLAG = 1 << 8;
+	protected byte[] uUID = UUID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BooleanValueStyleImpl() {
+	protected NotationObjectImpl() {
 		super();
 	}
 
@@ -68,7 +68,7 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
-		return NotationPackage.Literals.BOOLEAN_VALUE_STYLE;
+		return NotationPackage.Literals.NOTATION_OBJECT;
 	}
 
 	/**
@@ -76,8 +76,8 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isBooleanValue() {
-		return (eFlags & BOOLEAN_VALUE_EFLAG) != 0;
+	public byte[] getUUID() {
+		return uUID;
 	}
 
 	/**
@@ -85,11 +85,11 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBooleanValue(boolean newBooleanValue) {
-		boolean oldBooleanValue = (eFlags & BOOLEAN_VALUE_EFLAG) != 0;
-		if (newBooleanValue) eFlags |= BOOLEAN_VALUE_EFLAG; else eFlags &= ~BOOLEAN_VALUE_EFLAG;
+	public void setUUID(byte[] newUUID) {
+		byte[] oldUUID = uUID;
+		uUID = newUUID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.BOOLEAN_VALUE_STYLE__BOOLEAN_VALUE, oldBooleanValue, newBooleanValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NOTATION_OBJECT__UUID, oldUUID, uUID));
 	}
 
 	/**
@@ -99,12 +99,8 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_VALUE_STYLE__UUID:
+			case NotationPackage.NOTATION_OBJECT__UUID:
 				return getUUID();
-			case NotationPackage.BOOLEAN_VALUE_STYLE__NAME:
-				return getName();
-			case NotationPackage.BOOLEAN_VALUE_STYLE__BOOLEAN_VALUE:
-				return isBooleanValue() ? Boolean.TRUE : Boolean.FALSE;
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -116,14 +112,8 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_VALUE_STYLE__UUID:
+			case NotationPackage.NOTATION_OBJECT__UUID:
 				setUUID((byte[])newValue);
-				return;
-			case NotationPackage.BOOLEAN_VALUE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.BOOLEAN_VALUE_STYLE__BOOLEAN_VALUE:
-				setBooleanValue(((Boolean)newValue).booleanValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -136,14 +126,8 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_VALUE_STYLE__UUID:
+			case NotationPackage.NOTATION_OBJECT__UUID:
 				setUUID(UUID_EDEFAULT);
-				return;
-			case NotationPackage.BOOLEAN_VALUE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.BOOLEAN_VALUE_STYLE__BOOLEAN_VALUE:
-				setBooleanValue(BOOLEAN_VALUE_EDEFAULT);
 				return;
 		}
 		eDynamicUnset(featureID);
@@ -156,12 +140,8 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_VALUE_STYLE__UUID:
+			case NotationPackage.NOTATION_OBJECT__UUID:
 				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
-			case NotationPackage.BOOLEAN_VALUE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.BOOLEAN_VALUE_STYLE__BOOLEAN_VALUE:
-				return ((eFlags & BOOLEAN_VALUE_EFLAG) != 0) != BOOLEAN_VALUE_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -175,10 +155,10 @@ public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValu
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (booleanValue: "); //$NON-NLS-1$
-		result.append((eFlags & BOOLEAN_VALUE_EFLAG) != 0);
+		result.append(" (uUID: "); //$NON-NLS-1$
+		result.append(uUID);
 		result.append(')');
 		return result.toString();
 	}
 
-} //BooleanValueStyleImpl
+} //NotationObjectImpl

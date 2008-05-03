@@ -40,7 +40,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface RoutingStyle extends Style {
+public interface RoutingStyle extends NotationObject, Style {
 
     /**
 	 * Returns the value of the '<em><b>Routing</b></em>' attribute.

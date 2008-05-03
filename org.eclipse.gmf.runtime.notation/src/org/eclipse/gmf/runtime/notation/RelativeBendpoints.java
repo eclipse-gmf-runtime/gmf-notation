@@ -36,7 +36,7 @@ import java.util.List;
 /*
  * @canBeSeenBy %partners
  */
-public interface RelativeBendpoints extends Bendpoints{
+public interface RelativeBendpoints extends NotationObject, Bendpoints{
 	/**
 	 * Returns the value of the '<em><b>Points</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -11,15 +11,11 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
 
@@ -37,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.PropertyValue;
  *
  * @generated
  */
-public class PropertyValueImpl extends FlatEObjectImpl implements PropertyValue {
+public class PropertyValueImpl extends NotationObjectImpl implements PropertyValue {
 	/**
 	 * The default value of the '{@link #getRawValue() <em>Raw Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -201,6 +197,8 @@ public class PropertyValueImpl extends FlatEObjectImpl implements PropertyValue 
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.PROPERTY_VALUE__UUID:
+				return getUUID();
 			case NotationPackage.PROPERTY_VALUE__RAW_VALUE:
 				return getRawValue();
 			case NotationPackage.PROPERTY_VALUE__INSTANCE_TYPE:
@@ -217,6 +215,9 @@ public class PropertyValueImpl extends FlatEObjectImpl implements PropertyValue 
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.PROPERTY_VALUE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.PROPERTY_VALUE__RAW_VALUE:
 				setRawValue((String)newValue);
 				return;
@@ -234,6 +235,9 @@ public class PropertyValueImpl extends FlatEObjectImpl implements PropertyValue 
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.PROPERTY_VALUE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.PROPERTY_VALUE__RAW_VALUE:
 				setRawValue(RAW_VALUE_EDEFAULT);
 				return;
@@ -251,6 +255,8 @@ public class PropertyValueImpl extends FlatEObjectImpl implements PropertyValue 
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.PROPERTY_VALUE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.PROPERTY_VALUE__RAW_VALUE:
 				return RAW_VALUE_EDEFAULT == null ? rawValue != null : !RAW_VALUE_EDEFAULT.equals(rawValue);
 			case NotationPackage.PROPERTY_VALUE__INSTANCE_TYPE:

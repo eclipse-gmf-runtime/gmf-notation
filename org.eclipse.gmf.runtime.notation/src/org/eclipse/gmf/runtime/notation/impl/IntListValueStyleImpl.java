@@ -79,6 +79,8 @@ public class IntListValueStyleImpl extends NamedStyleImpl implements IntListValu
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.INT_LIST_VALUE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.INT_LIST_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.INT_LIST_VALUE_STYLE__INT_LIST_VALUE:
@@ -94,6 +96,9 @@ public class IntListValueStyleImpl extends NamedStyleImpl implements IntListValu
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.INT_LIST_VALUE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.INT_LIST_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -112,6 +117,9 @@ public class IntListValueStyleImpl extends NamedStyleImpl implements IntListValu
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.INT_LIST_VALUE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.INT_LIST_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -129,6 +137,8 @@ public class IntListValueStyleImpl extends NamedStyleImpl implements IntListValu
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.INT_LIST_VALUE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.INT_LIST_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.INT_LIST_VALUE_STYLE__INT_LIST_VALUE:

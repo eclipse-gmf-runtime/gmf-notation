@@ -39,7 +39,7 @@ import org.eclipse.emf.common.util.EList;
 /*
  * @canBeSeenBy %partners
  */
-public interface SortingStyle extends Style {
+public interface SortingStyle extends NotationObject, Style {
     /**
 	 * Returns the value of the '<em><b>Sorting</b></em>' attribute.
 	 * The default value is <code>"None"</code>.

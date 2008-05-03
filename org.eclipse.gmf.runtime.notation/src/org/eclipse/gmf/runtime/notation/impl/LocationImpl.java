@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -35,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class LocationImpl extends FlatEObjectImpl implements Location {
+public class LocationImpl extends NotationObjectImpl implements Location {
     /**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +142,8 @@ public class LocationImpl extends FlatEObjectImpl implements Location {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.LOCATION__UUID:
+				return getUUID();
 			case NotationPackage.LOCATION__X:
 				return new Integer(getX());
 			case NotationPackage.LOCATION__Y:
@@ -158,6 +159,9 @@ public class LocationImpl extends FlatEObjectImpl implements Location {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.LOCATION__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.LOCATION__X:
 				setX(((Integer)newValue).intValue());
 				return;
@@ -175,6 +179,9 @@ public class LocationImpl extends FlatEObjectImpl implements Location {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LOCATION__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.LOCATION__X:
 				setX(X_EDEFAULT);
 				return;
@@ -192,6 +199,8 @@ public class LocationImpl extends FlatEObjectImpl implements Location {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LOCATION__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.LOCATION__X:
 				return x != X_EDEFAULT;
 			case NotationPackage.LOCATION__Y:

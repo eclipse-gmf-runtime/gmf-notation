@@ -156,6 +156,8 @@ public class NodeImpl extends ViewImpl implements Node {
 		switch (featureID) {
 			case NotationPackage.NODE__EANNOTATIONS:
 				return getEAnnotations();
+			case NotationPackage.NODE__UUID:
+				return getUUID();
 			case NotationPackage.NODE__VISIBLE:
 				return isVisible() ? Boolean.TRUE : Boolean.FALSE;
 			case NotationPackage.NODE__TYPE:
@@ -194,6 +196,9 @@ public class NodeImpl extends ViewImpl implements Node {
 			case NotationPackage.NODE__EANNOTATIONS:
 				getEAnnotations().clear();
 				getEAnnotations().addAll((Collection)newValue);
+				return;
+			case NotationPackage.NODE__UUID:
+				setUUID((byte[])newValue);
 				return;
 			case NotationPackage.NODE__VISIBLE:
 				setVisible(((Boolean)newValue).booleanValue());
@@ -244,6 +249,9 @@ public class NodeImpl extends ViewImpl implements Node {
 			case NotationPackage.NODE__EANNOTATIONS:
 				getEAnnotations().clear();
 				return;
+			case NotationPackage.NODE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.NODE__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
@@ -287,6 +295,8 @@ public class NodeImpl extends ViewImpl implements Node {
 		switch (featureID) {
 			case NotationPackage.NODE__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
+			case NotationPackage.NODE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.NODE__VISIBLE:
 				return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
 			case NotationPackage.NODE__TYPE:

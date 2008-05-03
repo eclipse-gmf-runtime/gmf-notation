@@ -18,6 +18,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.provider.EObjectItemProvider;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -233,8 +234,11 @@ public class DiagramStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		DiagramStyle diagramStyle = (DiagramStyle)object;
-		return getString("_UI_DiagramStyle_type") + " " + diagramStyle.getPageX(); //$NON-NLS-1$ //$NON-NLS-2$
+		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DiagramStyle_type") : //$NON-NLS-1$
+			getString("_UI_DiagramStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -248,6 +252,7 @@ public class DiagramStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DiagramStyle.class)) {
+			case NotationPackage.DIAGRAM_STYLE__UUID:
 			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
 			case NotationPackage.DIAGRAM_STYLE__PAGE_Y:
 			case NotationPackage.DIAGRAM_STYLE__PAGE_WIDTH:

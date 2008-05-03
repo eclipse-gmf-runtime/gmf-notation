@@ -27,7 +27,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  */
-public interface DiagramLinkStyle extends Style {
+public interface DiagramLinkStyle extends NotationObject, Style {
 	/**
 	 * Returns the value of the '<em><b>Diagram Link</b></em>' reference.
 	 * <!-- begin-user-doc -->

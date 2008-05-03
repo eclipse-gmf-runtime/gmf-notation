@@ -42,7 +42,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class StringToPropertyValueMapEntryItemProvider
-	extends ItemProviderAdapter
+	extends NotationObjectItemProvider
 	implements	
 		IEditingDomainItemProvider,	
 		IStructuredItemContentProvider,	
@@ -180,16 +180,6 @@ public class StringToPropertyValueMapEntryItemProvider
 			(createChildParameter
 				(NotationPackage.Literals.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE,
 				 NotationFactory.eINSTANCE.createPropertyValue()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

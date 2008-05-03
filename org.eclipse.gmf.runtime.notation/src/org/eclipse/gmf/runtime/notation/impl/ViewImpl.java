@@ -21,6 +21,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EModelElementImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentsEList;
+import org.eclipse.emf.ecore.util.ECrossReferenceEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -35,6 +37,7 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Style;
 import org.eclipse.gmf.runtime.notation.View;
@@ -45,6 +48,7 @@ import org.eclipse.gmf.runtime.notation.View;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getUUID <em>UUID</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl#isMutable <em>Mutable</em>}</li>
@@ -67,6 +71,68 @@ public abstract class ViewImpl
     extends EModelElementImpl
     implements View {
 
+  /**
+	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final byte[] UUID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUUID()
+	 * @generated
+	 * @ordered
+	 */
+	protected byte[] uUID = UUID_EDEFAULT;
+
+		protected URI eProxyURI;
+
+  @Override
+  protected EPropertiesHolder eProperties()
+  {
+    if (eProperties == null)
+    {
+      eProperties = new EPropertiesHolderBaseImpl() {};
+    }
+    return eProperties;
+  }
+
+  @Override
+  public boolean eIsProxy()
+  {
+    return eProxyURI != null;
+  }
+  
+  @Override
+  public URI eProxyURI()
+  {
+    return eProxyURI;
+  }
+
+  @Override
+  public void eSetProxyURI(URI uri)
+  {
+    eProxyURI = uri;
+  }
+
+  @Override
+  public EList<EObject> eContents()
+  {
+    return EContentsEList.createEContentsEList(this);
+  }
+
+  @Override
+  public EList<EObject> eCrossReferences()
+  {
+    return ECrossReferenceEList.createECrossReferenceEList(this);
+  }
+  
     /**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -184,7 +250,8 @@ public abstract class ViewImpl
 	 */
     protected EList transientChildren;
 
-    private EContentsEList allChildren = null;
+    // EATM
+    // private EContentsEList allChildren = null;
 
     protected static final EStructuralFeature[] childrenFeatures = new EStructuralFeature[] {
         NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
@@ -208,6 +275,27 @@ public abstract class ViewImpl
 	}
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public byte[] getUUID() {
+		return uUID;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUUID(byte[] newUUID) {
+		byte[] oldUUID = uUID;
+		uUID = newUUID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.VIEW__UUID, oldUUID, uUID));
+	}
+
+				/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -304,10 +392,11 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public EList getChildren() {
-        if (allChildren == null) {
-            allChildren = new EContentsEList(this, childrenFeatures);
-        }
-        return allChildren;
+        return new EContentsEList(this, childrenFeatures);
+        // if (allChildren == null) {
+        //     allChildren = new EContentsEList(this, childrenFeatures);
+        // }
+        // return allChildren;
     }
 
     /**
@@ -523,6 +612,8 @@ public abstract class ViewImpl
 		switch (featureID) {
 			case NotationPackage.VIEW__EANNOTATIONS:
 				return getEAnnotations();
+			case NotationPackage.VIEW__UUID:
+				return getUUID();
 			case NotationPackage.VIEW__VISIBLE:
 				return isVisible() ? Boolean.TRUE : Boolean.FALSE;
 			case NotationPackage.VIEW__TYPE:
@@ -558,6 +649,9 @@ public abstract class ViewImpl
 			case NotationPackage.VIEW__EANNOTATIONS:
 				getEAnnotations().clear();
 				getEAnnotations().addAll((Collection)newValue);
+				return;
+			case NotationPackage.VIEW__UUID:
+				setUUID((byte[])newValue);
 				return;
 			case NotationPackage.VIEW__VISIBLE:
 				setVisible(((Boolean)newValue).booleanValue());
@@ -604,6 +698,9 @@ public abstract class ViewImpl
 			case NotationPackage.VIEW__EANNOTATIONS:
 				getEAnnotations().clear();
 				return;
+			case NotationPackage.VIEW__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.VIEW__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
@@ -643,6 +740,8 @@ public abstract class ViewImpl
 		switch (featureID) {
 			case NotationPackage.VIEW__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
+			case NotationPackage.VIEW__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.VIEW__VISIBLE:
 				return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
 			case NotationPackage.VIEW__TYPE:
@@ -668,6 +767,36 @@ public abstract class ViewImpl
 	}
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (derivedFeatureID) {
+				case NotationPackage.VIEW__UUID: return NotationPackage.NOTATION_OBJECT__UUID;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+		if (baseClass == NotationObject.class) {
+			switch (baseFeatureID) {
+				case NotationPackage.NOTATION_OBJECT__UUID: return NotationPackage.VIEW__UUID;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+				/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -675,7 +804,9 @@ public abstract class ViewImpl
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (visible: "); //$NON-NLS-1$
+		result.append(" (uUID: "); //$NON-NLS-1$
+		result.append(uUID);
+		result.append(", visible: "); //$NON-NLS-1$
 		result.append((eFlags & VISIBLE_EFLAG) != 0);
 		result.append(", type: "); //$NON-NLS-1$
 		result.append(type);

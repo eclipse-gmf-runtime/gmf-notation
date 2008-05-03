@@ -99,6 +99,8 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.DOUBLE_VALUE_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
@@ -114,6 +116,9 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.DOUBLE_VALUE_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -131,6 +136,9 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DOUBLE_VALUE_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -148,6 +156,8 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DOUBLE_VALUE_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:

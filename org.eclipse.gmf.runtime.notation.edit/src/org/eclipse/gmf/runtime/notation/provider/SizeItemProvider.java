@@ -17,6 +17,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -39,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.Size;
  * @generated
  */
 public class SizeItemProvider
-	extends ItemProviderAdapter
+	extends NotationObjectItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -133,8 +134,11 @@ public class SizeItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Size size = (Size)object;
-		return getString("_UI_Size_type") + " " + size.getWidth(); //$NON-NLS-1$ //$NON-NLS-2$
+		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Size_type") : //$NON-NLS-1$
+			getString("_UI_Size_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -165,16 +169,6 @@ public class SizeItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-    /**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

@@ -11,13 +11,8 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.FlatEObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.DiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -35,7 +30,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLinkStyle {
+public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLink() <em>Diagram Link</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -92,6 +87,8 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
+				return getUUID();
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return getDiagramLink();
 		}
@@ -105,6 +102,9 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
+				setUUID((byte[])newValue);
+				return;
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)newValue);
 				return;
@@ -119,6 +119,9 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
+				setUUID(UUID_EDEFAULT);
+				return;
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)null);
 				return;
@@ -133,6 +136,8 @@ public class DiagramLinkStyleImpl extends FlatEObjectImpl implements DiagramLink
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
+				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return diagramLink != null;
 		}

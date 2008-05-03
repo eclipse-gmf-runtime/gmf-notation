@@ -35,7 +35,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface Size extends LayoutConstraint {
+public interface Size extends NotationObject, LayoutConstraint {
     /**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
