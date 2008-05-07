@@ -33,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class DrawerStyleImpl extends NotationObjectImpl implements DrawerStyle {
+public class DrawerStyleImpl extends NotationEObjectImpl implements DrawerStyle {
     /**
 	 * The default value of the '{@link #isCollapsed() <em>Collapsed</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,8 +100,6 @@ public class DrawerStyleImpl extends NotationObjectImpl implements DrawerStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.DRAWER_STYLE__COLLAPSED:
 				return isCollapsed() ? Boolean.TRUE : Boolean.FALSE;
 		}
@@ -115,9 +113,6 @@ public class DrawerStyleImpl extends NotationObjectImpl implements DrawerStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.DRAWER_STYLE__COLLAPSED:
 				setCollapsed(((Boolean)newValue).booleanValue());
 				return;
@@ -132,9 +127,6 @@ public class DrawerStyleImpl extends NotationObjectImpl implements DrawerStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DRAWER_STYLE__COLLAPSED:
 				setCollapsed(COLLAPSED_EDEFAULT);
 				return;
@@ -149,8 +141,6 @@ public class DrawerStyleImpl extends NotationObjectImpl implements DrawerStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DRAWER_STYLE__COLLAPSED:
 				return ((eFlags & COLLAPSED_EFLAG) != 0) != COLLAPSED_EDEFAULT;
 		}

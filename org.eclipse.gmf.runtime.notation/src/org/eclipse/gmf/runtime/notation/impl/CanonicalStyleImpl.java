@@ -33,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class CanonicalStyleImpl extends NotationObjectImpl implements CanonicalStyle {
+public class CanonicalStyleImpl extends NotationEObjectImpl implements CanonicalStyle {
     /**
 	 * The default value of the '{@link #isCanonical() <em>Canonical</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,8 +101,6 @@ public class CanonicalStyleImpl extends NotationObjectImpl implements CanonicalS
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.CANONICAL_STYLE__CANONICAL:
 				return isCanonical() ? Boolean.TRUE : Boolean.FALSE;
 		}
@@ -116,9 +114,6 @@ public class CanonicalStyleImpl extends NotationObjectImpl implements CanonicalS
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.CANONICAL_STYLE__CANONICAL:
 				setCanonical(((Boolean)newValue).booleanValue());
 				return;
@@ -133,9 +128,6 @@ public class CanonicalStyleImpl extends NotationObjectImpl implements CanonicalS
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.CANONICAL_STYLE__CANONICAL:
 				setCanonical(CANONICAL_EDEFAULT);
 				return;
@@ -150,8 +142,6 @@ public class CanonicalStyleImpl extends NotationObjectImpl implements CanonicalS
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.CANONICAL_STYLE__CANONICAL:
 				return ((eFlags & CANONICAL_EFLAG) != 0) != CANONICAL_EDEFAULT;
 		}

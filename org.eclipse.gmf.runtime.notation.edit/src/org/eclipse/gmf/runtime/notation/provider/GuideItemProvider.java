@@ -42,7 +42,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class GuideItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -141,11 +141,8 @@ public class GuideItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Guide_type") : //$NON-NLS-1$
-			getString("_UI_Guide_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		Guide guide = (Guide)object;
+		return getString("_UI_Guide_type") + " " + guide.getPosition(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -183,6 +180,16 @@ public class GuideItemProvider
 			(createChildParameter
 				(NotationPackage.Literals.GUIDE__NODE_MAP,
 				 NotationFactory.eINSTANCE.create(NotationPackage.Literals.NODE_ENTRY)));
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

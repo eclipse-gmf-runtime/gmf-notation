@@ -30,7 +30,7 @@ import org.eclipse.gmf.runtime.notation.TextStyle;
  *
  * @generated
  */
-public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
+public class TextStyleImpl extends NotationEObjectImpl implements TextStyle {
 	/**
 	 * The default value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,14 +42,41 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	protected static final TextAlignment TEXT_ALIGNMENT_EDEFAULT = TextAlignment.LEFT_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEXT_ALIGNMENT_EFLAG_OFFSET = 8;
+
+	/**
+	 * The flags representing the default value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEXT_ALIGNMENT_EFLAG_DEFAULT = TextAlignment.VALUES.indexOf(TEXT_ALIGNMENT_EDEFAULT) << TEXT_ALIGNMENT_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link TextAlignment Text Alignment}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final TextAlignment[] TEXT_ALIGNMENT_EFLAG_VALUES = (TextAlignment[])TextAlignment.VALUES.toArray(new TextAlignment[TextAlignment.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTextAlignment()
 	 * @generated
 	 * @ordered
 	 */
-	protected TextAlignment textAlignment = TEXT_ALIGNMENT_EDEFAULT;
+	protected static final int TEXT_ALIGNMENT_EFLAG = 0x3 << TEXT_ALIGNMENT_EFLAG_OFFSET;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,7 +102,7 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 * @generated
 	 */
 	public TextAlignment getTextAlignment() {
-		return textAlignment;
+		return TEXT_ALIGNMENT_EFLAG_VALUES[(eFlags & TEXT_ALIGNMENT_EFLAG) >>> TEXT_ALIGNMENT_EFLAG_OFFSET];
 	}
 
 	/**
@@ -84,10 +111,11 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 * @generated
 	 */
 	public void setTextAlignment(TextAlignment newTextAlignment) {
-		TextAlignment oldTextAlignment = textAlignment;
-		textAlignment = newTextAlignment == null ? TEXT_ALIGNMENT_EDEFAULT : newTextAlignment;
+		TextAlignment oldTextAlignment = TEXT_ALIGNMENT_EFLAG_VALUES[(eFlags & TEXT_ALIGNMENT_EFLAG) >>> TEXT_ALIGNMENT_EFLAG_OFFSET];
+		if (newTextAlignment == null) newTextAlignment = TEXT_ALIGNMENT_EDEFAULT;
+		eFlags = eFlags & ~TEXT_ALIGNMENT_EFLAG | TextAlignment.VALUES.indexOf(newTextAlignment) << TEXT_ALIGNMENT_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT, oldTextAlignment, textAlignment));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT, oldTextAlignment, newTextAlignment));
 	}
 
 	/**
@@ -97,8 +125,6 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.TEXT_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				return getTextAlignment();
 		}
@@ -112,9 +138,6 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.TEXT_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				setTextAlignment((TextAlignment)newValue);
 				return;
@@ -129,9 +152,6 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.TEXT_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
 				setTextAlignment(TEXT_ALIGNMENT_EDEFAULT);
 				return;
@@ -146,10 +166,8 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.TEXT_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.TEXT_STYLE__TEXT_ALIGNMENT:
-				return textAlignment != TEXT_ALIGNMENT_EDEFAULT;
+				return (eFlags & TEXT_ALIGNMENT_EFLAG) != TEXT_ALIGNMENT_EFLAG_DEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -164,7 +182,7 @@ public class TextStyleImpl extends NotationObjectImpl implements TextStyle {
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (textAlignment: "); //$NON-NLS-1$
-		result.append(textAlignment);
+		result.append(TEXT_ALIGNMENT_EFLAG_VALUES[(eFlags & TEXT_ALIGNMENT_EFLAG) >>> TEXT_ALIGNMENT_EFLAG_OFFSET]);
 		result.append(')');
 		return result.toString();
 	}

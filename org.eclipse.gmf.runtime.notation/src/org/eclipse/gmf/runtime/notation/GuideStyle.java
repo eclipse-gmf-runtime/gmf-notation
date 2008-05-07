@@ -36,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
 /*
  * @canBeSeenBy %partners
  */
-public interface GuideStyle extends NotationObject, Style {
+public interface GuideStyle extends Style {
     /**
 	 * Returns the value of the '<em><b>Horizontal Guides</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Guide}.

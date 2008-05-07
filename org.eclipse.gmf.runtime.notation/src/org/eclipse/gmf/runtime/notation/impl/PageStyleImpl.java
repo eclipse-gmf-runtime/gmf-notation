@@ -36,7 +36,7 @@ import org.eclipse.gmf.runtime.notation.PageStyle;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class PageStyleImpl extends NotationObjectImpl implements PageStyle {
+public class PageStyleImpl extends NotationEObjectImpl implements PageStyle {
     /**
 	 * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -226,8 +226,6 @@ public class PageStyleImpl extends NotationObjectImpl implements PageStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.PAGE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.PAGE_STYLE__PAGE_X:
 				return new Integer(getPageX());
 			case NotationPackage.PAGE_STYLE__PAGE_Y:
@@ -247,9 +245,6 @@ public class PageStyleImpl extends NotationObjectImpl implements PageStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.PAGE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.PAGE_STYLE__PAGE_X:
 				setPageX(((Integer)newValue).intValue());
 				return;
@@ -273,9 +268,6 @@ public class PageStyleImpl extends NotationObjectImpl implements PageStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.PAGE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.PAGE_STYLE__PAGE_X:
 				setPageX(PAGE_X_EDEFAULT);
 				return;
@@ -299,8 +291,6 @@ public class PageStyleImpl extends NotationObjectImpl implements PageStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.PAGE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.PAGE_STYLE__PAGE_X:
 				return pageX != PAGE_X_EDEFAULT;
 			case NotationPackage.PAGE_STYLE__PAGE_Y:

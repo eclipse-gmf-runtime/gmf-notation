@@ -46,7 +46,7 @@ import org.eclipse.gmf.runtime.notation.SortingStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle {
+public class SortingStyleImpl extends NotationEObjectImpl implements SortingStyle {
     /**
 	 * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,16 +58,43 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	protected static final Sorting SORTING_EDEFAULT = Sorting.NONE_LITERAL;
 
     /**
-	 * The cached value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SORTING_EFLAG_OFFSET = 8;
+
+				/**
+	 * The flags representing the default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SORTING_EFLAG_DEFAULT = Sorting.VALUES.indexOf(SORTING_EDEFAULT) << SORTING_EFLAG_OFFSET;
+
+				/**
+	 * The array of enumeration values for '{@link Sorting Sorting}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final Sorting[] SORTING_EFLAG_VALUES = (Sorting[])Sorting.VALUES.toArray(new Sorting[Sorting.VALUES.size()]);
+
+				/**
+	 * The flags representing the value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSorting()
 	 * @generated
 	 * @ordered
 	 */
-	protected Sorting sorting = SORTING_EDEFAULT;
+	protected static final int SORTING_EFLAG = 0x3 << SORTING_EFLAG_OFFSET;
 
-	/**
+				/**
 	 * The default value of the '{@link #getSortingKeys() <em>Sorting Keys</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,7 +148,7 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 * @generated
 	 */
 	public Sorting getSorting() {
-		return sorting;
+		return SORTING_EFLAG_VALUES[(eFlags & SORTING_EFLAG) >>> SORTING_EFLAG_OFFSET];
 	}
 
     /**
@@ -130,10 +157,11 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 * @generated
 	 */
 	public void setSorting(Sorting newSorting) {
-		Sorting oldSorting = sorting;
-		sorting = newSorting == null ? SORTING_EDEFAULT : newSorting;
+		Sorting oldSorting = SORTING_EFLAG_VALUES[(eFlags & SORTING_EFLAG) >>> SORTING_EFLAG_OFFSET];
+		if (newSorting == null) newSorting = SORTING_EDEFAULT;
+		eFlags = eFlags & ~SORTING_EFLAG | Sorting.VALUES.indexOf(newSorting) << SORTING_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SORTING_STYLE__SORTING, oldSorting, sorting));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SORTING_STYLE__SORTING, oldSorting, newSorting));
 	}
 
 	/**
@@ -194,8 +222,6 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.SORTING_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.SORTING_STYLE__SORTING:
 				return getSorting();
 			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
@@ -213,9 +239,6 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.SORTING_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.SORTING_STYLE__SORTING:
 				setSorting((Sorting)newValue);
 				return;
@@ -237,9 +260,6 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.SORTING_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.SORTING_STYLE__SORTING:
 				setSorting(SORTING_EDEFAULT);
 				return;
@@ -260,10 +280,8 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.SORTING_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.SORTING_STYLE__SORTING:
-				return sorting != SORTING_EDEFAULT;
+				return (eFlags & SORTING_EFLAG) != SORTING_EFLAG_DEFAULT;
 			case NotationPackage.SORTING_STYLE__SORTING_KEYS:
 				return SORTING_KEYS_EDEFAULT == null ? sortingKeys != null : !SORTING_KEYS_EDEFAULT.equals(sortingKeys);
 			case NotationPackage.SORTING_STYLE__SORTED_OBJECTS:
@@ -282,7 +300,7 @@ public class SortingStyleImpl extends NotationObjectImpl implements SortingStyle
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (sorting: "); //$NON-NLS-1$
-		result.append(sorting);
+		result.append(SORTING_EFLAG_VALUES[(eFlags & SORTING_EFLAG) >>> SORTING_EFLAG_OFFSET]);
 		result.append(", sortingKeys: "); //$NON-NLS-1$
 		result.append(sortingKeys);
 		result.append(')');

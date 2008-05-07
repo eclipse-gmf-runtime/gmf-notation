@@ -45,7 +45,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class FilteringStyleImpl extends NotationObjectImpl implements FilteringStyle {
+public class FilteringStyleImpl extends NotationEObjectImpl implements FilteringStyle {
     /**
 	 * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,16 +57,43 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	protected static final Filtering FILTERING_EDEFAULT = Filtering.NONE_LITERAL;
 
     /**
-	 * The cached value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int FILTERING_EFLAG_OFFSET = 8;
+
+				/**
+	 * The flags representing the default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int FILTERING_EFLAG_DEFAULT = Filtering.VALUES.indexOf(FILTERING_EDEFAULT) << FILTERING_EFLAG_OFFSET;
+
+				/**
+	 * The array of enumeration values for '{@link Filtering Filtering}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final Filtering[] FILTERING_EFLAG_VALUES = (Filtering[])Filtering.VALUES.toArray(new Filtering[Filtering.VALUES.size()]);
+
+				/**
+	 * The flags representing the value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFiltering()
 	 * @generated
 	 * @ordered
 	 */
-	protected Filtering filtering = FILTERING_EDEFAULT;
+	protected static final int FILTERING_EFLAG = 0x3 << FILTERING_EFLAG_OFFSET;
 
-	/**
+				/**
 	 * The default value of the '{@link #getFilteringKeys() <em>Filtering Keys</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,7 +147,7 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 * @generated
 	 */
 	public Filtering getFiltering() {
-		return filtering;
+		return FILTERING_EFLAG_VALUES[(eFlags & FILTERING_EFLAG) >>> FILTERING_EFLAG_OFFSET];
 	}
 
     /**
@@ -129,10 +156,11 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 * @generated
 	 */
 	public void setFiltering(Filtering newFiltering) {
-		Filtering oldFiltering = filtering;
-		filtering = newFiltering == null ? FILTERING_EDEFAULT : newFiltering;
+		Filtering oldFiltering = FILTERING_EFLAG_VALUES[(eFlags & FILTERING_EFLAG) >>> FILTERING_EFLAG_OFFSET];
+		if (newFiltering == null) newFiltering = FILTERING_EDEFAULT;
+		eFlags = eFlags & ~FILTERING_EFLAG | Filtering.VALUES.indexOf(newFiltering) << FILTERING_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FILTERING_STYLE__FILTERING, oldFiltering, filtering));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FILTERING_STYLE__FILTERING, oldFiltering, newFiltering));
 	}
 
 	/**
@@ -190,8 +218,6 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.FILTERING_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				return getFiltering();
 			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
@@ -209,9 +235,6 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.FILTERING_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				setFiltering((Filtering)newValue);
 				return;
@@ -233,9 +256,6 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.FILTERING_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.FILTERING_STYLE__FILTERING:
 				setFiltering(FILTERING_EDEFAULT);
 				return;
@@ -256,10 +276,8 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.FILTERING_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.FILTERING_STYLE__FILTERING:
-				return filtering != FILTERING_EDEFAULT;
+				return (eFlags & FILTERING_EFLAG) != FILTERING_EFLAG_DEFAULT;
 			case NotationPackage.FILTERING_STYLE__FILTERING_KEYS:
 				return FILTERING_KEYS_EDEFAULT == null ? filteringKeys != null : !FILTERING_KEYS_EDEFAULT.equals(filteringKeys);
 			case NotationPackage.FILTERING_STYLE__FILTERED_OBJECTS:
@@ -278,7 +296,7 @@ public class FilteringStyleImpl extends NotationObjectImpl implements FilteringS
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (filtering: "); //$NON-NLS-1$
-		result.append(filtering);
+		result.append(FILTERING_EFLAG_VALUES[(eFlags & FILTERING_EFLAG) >>> FILTERING_EFLAG_OFFSET]);
 		result.append(", filteringKeys: "); //$NON-NLS-1$
 		result.append(filteringKeys);
 		result.append(')');

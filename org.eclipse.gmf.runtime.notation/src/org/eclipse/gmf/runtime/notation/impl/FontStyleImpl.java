@@ -39,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class FontStyleImpl extends NotationObjectImpl implements FontStyle {
+public class FontStyleImpl extends NotationEObjectImpl implements FontStyle {
     /**
 	 * The default value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -331,8 +331,6 @@ public class FontStyleImpl extends NotationObjectImpl implements FontStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.FONT_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.FONT_STYLE__FONT_COLOR:
 				return new Integer(getFontColor());
 			case NotationPackage.FONT_STYLE__FONT_NAME:
@@ -358,9 +356,6 @@ public class FontStyleImpl extends NotationObjectImpl implements FontStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.FONT_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.FONT_STYLE__FONT_COLOR:
 				setFontColor(((Integer)newValue).intValue());
 				return;
@@ -393,9 +388,6 @@ public class FontStyleImpl extends NotationObjectImpl implements FontStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.FONT_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.FONT_STYLE__FONT_COLOR:
 				setFontColor(FONT_COLOR_EDEFAULT);
 				return;
@@ -428,8 +420,6 @@ public class FontStyleImpl extends NotationObjectImpl implements FontStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.FONT_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.FONT_STYLE__FONT_COLOR:
 				return fontColor != FONT_COLOR_EDEFAULT;
 			case NotationPackage.FONT_STYLE__FONT_NAME:

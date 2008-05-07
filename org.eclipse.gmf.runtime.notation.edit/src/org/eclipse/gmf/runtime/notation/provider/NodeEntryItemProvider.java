@@ -39,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class NodeEntryItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -164,6 +164,16 @@ public class NodeEntryItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

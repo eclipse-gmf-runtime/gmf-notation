@@ -115,7 +115,7 @@ public class ImageBufferStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		Boolean labelValue = ((ImageBufferStyle)object).getAntiAlias();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ImageBufferStyle_type") : //$NON-NLS-1$

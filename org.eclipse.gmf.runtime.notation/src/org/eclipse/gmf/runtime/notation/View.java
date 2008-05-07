@@ -50,7 +50,7 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface View extends EModelElement, NotationObject {
+public interface View extends EModelElement {
     /**
 	 * Returns the value of the '<em><b>Visible</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

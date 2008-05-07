@@ -169,8 +169,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return createFilterKeyListFromString(eDataType, initialValue);
 			case NotationPackage.SORT_KEY_MAP:
 				return createSortKeyMapFromString(eDataType, initialValue);
-			case NotationPackage.UUID:
-				return createUUIDFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -213,8 +211,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return convertFilterKeyListToString(eDataType, instanceValue);
 			case NotationPackage.SORT_KEY_MAP:
 				return convertSortKeyMapToString(eDataType, instanceValue);
-			case NotationPackage.UUID:
-				return convertUUIDToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}

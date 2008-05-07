@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface DrawerStyle extends NotationObject, Style {
+public interface DrawerStyle extends Style {
     /**
 	 * Returns the value of the '<em><b>Collapsed</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

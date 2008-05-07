@@ -27,7 +27,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  */
-public interface TextStyle extends NotationObject, Style {
+public interface TextStyle extends Style {
 	/**
 	 * Returns the value of the '<em><b>Text Alignment</b></em>' attribute.
 	 * The default value is <code>"Left"</code>.

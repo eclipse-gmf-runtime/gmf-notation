@@ -40,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.PageStyle;
  * @generated
  */
 public class PageStyleItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -180,11 +180,8 @@ public class PageStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_PageStyle_type") : //$NON-NLS-1$
-			getString("_UI_PageStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		PageStyle pageStyle = (PageStyle)object;
+		return getString("_UI_PageStyle_type") + " " + pageStyle.getPageX(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -217,6 +214,16 @@ public class PageStyleItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

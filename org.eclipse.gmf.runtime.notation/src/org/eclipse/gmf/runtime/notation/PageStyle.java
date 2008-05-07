@@ -37,7 +37,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface PageStyle extends NotationObject, Style {
+public interface PageStyle extends Style {
     /**
 	 * Returns the value of the '<em><b>Page X</b></em>' attribute.
 	 * The default value is <code>"0"</code>.

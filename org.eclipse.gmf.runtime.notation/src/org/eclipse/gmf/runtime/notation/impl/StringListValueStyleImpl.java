@@ -79,8 +79,6 @@ public class StringListValueStyleImpl extends NamedStyleImpl implements StringLi
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.STRING_LIST_VALUE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.STRING_LIST_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.STRING_LIST_VALUE_STYLE__STRING_LIST_VALUE:
@@ -96,9 +94,6 @@ public class StringListValueStyleImpl extends NamedStyleImpl implements StringLi
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.STRING_LIST_VALUE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.STRING_LIST_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -117,9 +112,6 @@ public class StringListValueStyleImpl extends NamedStyleImpl implements StringLi
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_LIST_VALUE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.STRING_LIST_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -137,8 +129,6 @@ public class StringListValueStyleImpl extends NamedStyleImpl implements StringLi
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_LIST_VALUE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.STRING_LIST_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.STRING_LIST_VALUE_STYLE__STRING_LIST_VALUE:

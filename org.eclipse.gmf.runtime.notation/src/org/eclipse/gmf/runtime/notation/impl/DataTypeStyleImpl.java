@@ -128,8 +128,6 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.DATA_TYPE_STYLE__NAME:
 				return getName();
 			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
@@ -146,9 +144,6 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.DATA_TYPE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -166,9 +161,6 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DATA_TYPE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -186,8 +178,6 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DATA_TYPE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:

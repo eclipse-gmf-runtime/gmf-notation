@@ -28,7 +28,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  */
-public interface ArrowStyle extends NotationObject, Style {
+public interface ArrowStyle extends Style {
 	/**
 	 * Returns the value of the '<em><b>Arrow Source</b></em>' attribute.
 	 * The default value is <code>"None"</code>.

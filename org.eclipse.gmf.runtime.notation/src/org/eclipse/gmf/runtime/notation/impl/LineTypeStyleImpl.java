@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeStyle {
+public class LineTypeStyleImpl extends NotationEObjectImpl implements LineTypeStyle {
 	/**
 	 * The default value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,14 +46,41 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	protected static final LineType LINE_TYPE_EDEFAULT = LineType.SOLID_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LINE_TYPE_EFLAG_OFFSET = 8;
+
+	/**
+	 * The flags representing the default value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LINE_TYPE_EFLAG_DEFAULT = LineType.VALUES.indexOf(LINE_TYPE_EDEFAULT) << LINE_TYPE_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link LineType Line Type}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final LineType[] LINE_TYPE_EFLAG_VALUES = (LineType[])LineType.VALUES.toArray(new LineType[LineType.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLineType()
 	 * @generated
 	 * @ordered
 	 */
-	protected LineType lineType = LINE_TYPE_EDEFAULT;
+	protected static final int LINE_TYPE_EFLAG = 0x7 << LINE_TYPE_EFLAG_OFFSET;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,7 +106,7 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 * @generated
 	 */
 	public LineType getLineType() {
-		return lineType;
+		return LINE_TYPE_EFLAG_VALUES[(eFlags & LINE_TYPE_EFLAG) >>> LINE_TYPE_EFLAG_OFFSET];
 	}
 
 	/**
@@ -88,10 +115,11 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 * @generated
 	 */
 	public void setLineType(LineType newLineType) {
-		LineType oldLineType = lineType;
-		lineType = newLineType == null ? LINE_TYPE_EDEFAULT : newLineType;
+		LineType oldLineType = LINE_TYPE_EFLAG_VALUES[(eFlags & LINE_TYPE_EFLAG) >>> LINE_TYPE_EFLAG_OFFSET];
+		if (newLineType == null) newLineType = LINE_TYPE_EDEFAULT;
+		eFlags = eFlags & ~LINE_TYPE_EFLAG | LineType.VALUES.indexOf(newLineType) << LINE_TYPE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_TYPE_STYLE__LINE_TYPE, oldLineType, lineType));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_TYPE_STYLE__LINE_TYPE, oldLineType, newLineType));
 	}
 
 	/**
@@ -101,8 +129,6 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				return getLineType();
 		}
@@ -116,9 +142,6 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				setLineType((LineType)newValue);
 				return;
@@ -133,9 +156,6 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
 				setLineType(LINE_TYPE_EDEFAULT);
 				return;
@@ -150,10 +170,8 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
-				return lineType != LINE_TYPE_EDEFAULT;
+				return (eFlags & LINE_TYPE_EFLAG) != LINE_TYPE_EFLAG_DEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -168,7 +186,7 @@ public class LineTypeStyleImpl extends NotationObjectImpl implements LineTypeSty
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (lineType: "); //$NON-NLS-1$
-		result.append(lineType);
+		result.append(LINE_TYPE_EFLAG_VALUES[(eFlags & LINE_TYPE_EFLAG) >>> LINE_TYPE_EFLAG_OFFSET]);
 		result.append(')');
 		return result.toString();
 	}

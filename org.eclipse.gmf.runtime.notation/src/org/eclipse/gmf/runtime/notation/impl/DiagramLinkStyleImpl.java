@@ -30,7 +30,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramLinkStyle {
+public class DiagramLinkStyleImpl extends NotationEObjectImpl implements DiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLink() <em>Diagram Link</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -87,8 +87,6 @@ public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramL
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return getDiagramLink();
 		}
@@ -102,9 +100,6 @@ public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramL
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)newValue);
 				return;
@@ -119,9 +114,6 @@ public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramL
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				setDiagramLink((Diagram)null);
 				return;
@@ -136,8 +128,6 @@ public class DiagramLinkStyleImpl extends NotationObjectImpl implements DiagramL
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_LINK_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
 				return diagramLink != null;
 		}

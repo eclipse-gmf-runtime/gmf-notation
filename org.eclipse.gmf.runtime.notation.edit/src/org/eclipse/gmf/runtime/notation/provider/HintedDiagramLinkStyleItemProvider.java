@@ -111,8 +111,7 @@ public class HintedDiagramLinkStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((HintedDiagramLinkStyle)object).getHint();
 		return label == null || label.length() == 0 ?
 			getString("_UI_HintedDiagramLinkStyle_type") : //$NON-NLS-1$
 			getString("_UI_HintedDiagramLinkStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$

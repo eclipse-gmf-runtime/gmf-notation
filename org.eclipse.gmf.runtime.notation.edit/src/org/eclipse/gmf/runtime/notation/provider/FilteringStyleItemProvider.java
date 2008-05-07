@@ -41,7 +41,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class FilteringStyleItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -158,7 +158,7 @@ public class FilteringStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		Filtering labelValue = ((FilteringStyle)object).getFiltering();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_FilteringStyle_type") : //$NON-NLS-1$
@@ -193,6 +193,16 @@ public class FilteringStyleItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

@@ -39,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 /*
  * @canBeSeenBy %partners
  */
-public class RelativeBendpointsImpl extends NotationObjectImpl implements RelativeBendpoints {
+public class RelativeBendpointsImpl extends NotationEObjectImpl implements RelativeBendpoints {
 	/**
 	 * The default value of the '{@link #getPoints() <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -121,8 +121,6 @@ public class RelativeBendpointsImpl extends NotationObjectImpl implements Relati
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__UUID:
-				return getUUID();
 			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
 				return getPoints();
 		}
@@ -136,9 +134,6 @@ public class RelativeBendpointsImpl extends NotationObjectImpl implements Relati
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
 				setPoints((List)newValue);
 				return;
@@ -153,9 +148,6 @@ public class RelativeBendpointsImpl extends NotationObjectImpl implements Relati
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
 				setPoints(POINTS_EDEFAULT);
 				return;
@@ -170,8 +162,6 @@ public class RelativeBendpointsImpl extends NotationObjectImpl implements Relati
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
 				return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
 		}

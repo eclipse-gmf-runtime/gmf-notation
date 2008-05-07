@@ -35,7 +35,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface CanonicalStyle extends NotationObject, Style {
+public interface CanonicalStyle extends Style {
     /**
 	 * Returns the value of the '<em><b>Canonical</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

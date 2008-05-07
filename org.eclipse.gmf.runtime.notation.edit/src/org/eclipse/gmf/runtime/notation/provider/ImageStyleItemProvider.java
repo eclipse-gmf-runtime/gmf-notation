@@ -42,7 +42,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class ImageStyleItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -164,7 +164,7 @@ public class ImageStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		Boolean labelValue = ((ImageStyle)object).getAntiAlias();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ImageStyle_type") : //$NON-NLS-1$
@@ -207,6 +207,16 @@ public class ImageStyleItemProvider
 			(createChildParameter
 				(NotationPackage.Literals.IMAGE_STYLE__CROP_BOUND,
 				 NotationFactory.eINSTANCE.createBounds()));
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

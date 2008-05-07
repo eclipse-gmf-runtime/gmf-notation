@@ -33,7 +33,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getUUID <em>UUID</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getRouting <em>Routing</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#getSmoothness <em>Smoothness</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl#isAvoidObstructions <em>Avoid Obstructions</em>}</li>
@@ -53,26 +52,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  */
 public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
     /**
-	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final byte[] UUID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected byte[] uUID = UUID_EDEFAULT;
-
-				/**
 	 * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,14 +62,41 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	protected static final Routing ROUTING_EDEFAULT = Routing.MANUAL_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getRouting() <em>Routing</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getRouting() <em>Routing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROUTING_EFLAG_OFFSET = 8;
+
+				/**
+	 * The flags representing the default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROUTING_EFLAG_DEFAULT = Routing.VALUES.indexOf(ROUTING_EDEFAULT) << ROUTING_EFLAG_OFFSET;
+
+				/**
+	 * The array of enumeration values for '{@link Routing Routing}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final Routing[] ROUTING_EFLAG_VALUES = (Routing[])Routing.VALUES.toArray(new Routing[Routing.VALUES.size()]);
+
+				/**
+	 * The flags representing the value of the '{@link #getRouting() <em>Routing</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRouting()
 	 * @generated
 	 * @ordered
 	 */
-	protected Routing routing = ROUTING_EDEFAULT;
+	protected static final int ROUTING_EFLAG = 0x3 << ROUTING_EFLAG_OFFSET;
 
 	/**
 	 * The default value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
@@ -103,14 +109,41 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	protected static final Smoothness SMOOTHNESS_EDEFAULT = Smoothness.NONE_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SMOOTHNESS_EFLAG_OFFSET = 10;
+
+	/**
+	 * The flags representing the default value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SMOOTHNESS_EFLAG_DEFAULT = Smoothness.VALUES.indexOf(SMOOTHNESS_EDEFAULT) << SMOOTHNESS_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link Smoothness Smoothness}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final Smoothness[] SMOOTHNESS_EFLAG_VALUES = (Smoothness[])Smoothness.VALUES.toArray(new Smoothness[Smoothness.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getSmoothness() <em>Smoothness</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSmoothness()
 	 * @generated
 	 * @ordered
 	 */
-	protected Smoothness smoothness = SMOOTHNESS_EDEFAULT;
+	protected static final int SMOOTHNESS_EFLAG = 0x3 << SMOOTHNESS_EFLAG_OFFSET;
 
 	/**
 	 * The default value of the '{@link #isAvoidObstructions() <em>Avoid Obstructions</em>}' attribute.
@@ -130,7 +163,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int AVOID_OBSTRUCTIONS_EFLAG = 1 << 8;
+	protected static final int AVOID_OBSTRUCTIONS_EFLAG = 1 << 12;
 
 	/**
 	 * The default value of the '{@link #isClosestDistance() <em>Closest Distance</em>}' attribute.
@@ -150,7 +183,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CLOSEST_DISTANCE_EFLAG = 1 << 9;
+	protected static final int CLOSEST_DISTANCE_EFLAG = 1 << 13;
 
 	/**
 	 * The default value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
@@ -163,14 +196,41 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	protected static final JumpLinkStatus JUMP_LINK_STATUS_EDEFAULT = JumpLinkStatus.NONE_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int JUMP_LINK_STATUS_EFLAG_OFFSET = 14;
+
+	/**
+	 * The flags representing the default value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int JUMP_LINK_STATUS_EFLAG_DEFAULT = JumpLinkStatus.VALUES.indexOf(JUMP_LINK_STATUS_EDEFAULT) << JUMP_LINK_STATUS_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link JumpLinkStatus Jump Link Status}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final JumpLinkStatus[] JUMP_LINK_STATUS_EFLAG_VALUES = (JumpLinkStatus[])JumpLinkStatus.VALUES.toArray(new JumpLinkStatus[JumpLinkStatus.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getJumpLinkStatus() <em>Jump Link Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getJumpLinkStatus()
 	 * @generated
 	 * @ordered
 	 */
-	protected JumpLinkStatus jumpLinkStatus = JUMP_LINK_STATUS_EDEFAULT;
+	protected static final int JUMP_LINK_STATUS_EFLAG = 0x3 << JUMP_LINK_STATUS_EFLAG_OFFSET;
 
 	/**
 	 * The default value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
@@ -183,14 +243,41 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	protected static final JumpLinkType JUMP_LINK_TYPE_EDEFAULT = JumpLinkType.SEMICIRCLE_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int JUMP_LINK_TYPE_EFLAG_OFFSET = 16;
+
+	/**
+	 * The flags representing the default value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int JUMP_LINK_TYPE_EFLAG_DEFAULT = JumpLinkType.VALUES.indexOf(JUMP_LINK_TYPE_EDEFAULT) << JUMP_LINK_TYPE_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link JumpLinkType Jump Link Type}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final JumpLinkType[] JUMP_LINK_TYPE_EFLAG_VALUES = (JumpLinkType[])JumpLinkType.VALUES.toArray(new JumpLinkType[JumpLinkType.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getJumpLinkType() <em>Jump Link Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getJumpLinkType()
 	 * @generated
 	 * @ordered
 	 */
-	protected JumpLinkType jumpLinkType = JUMP_LINK_TYPE_EDEFAULT;
+	protected static final int JUMP_LINK_TYPE_EFLAG = 0x3 << JUMP_LINK_TYPE_EFLAG_OFFSET;
 
 	/**
 	 * The default value of the '{@link #isJumpLinksReverse() <em>Jump Links Reverse</em>}' attribute.
@@ -210,7 +297,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int JUMP_LINKS_REVERSE_EFLAG = 1 << 10;
+	protected static final int JUMP_LINKS_REVERSE_EFLAG = 1 << 18;
 
 				/**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
@@ -275,29 +362,8 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public byte[] getUUID() {
-		return uUID;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUUID(byte[] newUUID) {
-		byte[] oldUUID = uUID;
-		uUID = newUUID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__UUID, oldUUID, uUID));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Routing getRouting() {
-		return routing;
+		return ROUTING_EFLAG_VALUES[(eFlags & ROUTING_EFLAG) >>> ROUTING_EFLAG_OFFSET];
 	}
 
 				/**
@@ -306,10 +372,11 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public void setRouting(Routing newRouting) {
-		Routing oldRouting = routing;
-		routing = newRouting == null ? ROUTING_EDEFAULT : newRouting;
+		Routing oldRouting = ROUTING_EFLAG_VALUES[(eFlags & ROUTING_EFLAG) >>> ROUTING_EFLAG_OFFSET];
+		if (newRouting == null) newRouting = ROUTING_EDEFAULT;
+		eFlags = eFlags & ~ROUTING_EFLAG | Routing.VALUES.indexOf(newRouting) << ROUTING_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__ROUTING, oldRouting, routing));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__ROUTING, oldRouting, newRouting));
 	}
 
 				/**
@@ -318,7 +385,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public Smoothness getSmoothness() {
-		return smoothness;
+		return SMOOTHNESS_EFLAG_VALUES[(eFlags & SMOOTHNESS_EFLAG) >>> SMOOTHNESS_EFLAG_OFFSET];
 	}
 
 				/**
@@ -327,10 +394,11 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public void setSmoothness(Smoothness newSmoothness) {
-		Smoothness oldSmoothness = smoothness;
-		smoothness = newSmoothness == null ? SMOOTHNESS_EDEFAULT : newSmoothness;
+		Smoothness oldSmoothness = SMOOTHNESS_EFLAG_VALUES[(eFlags & SMOOTHNESS_EFLAG) >>> SMOOTHNESS_EFLAG_OFFSET];
+		if (newSmoothness == null) newSmoothness = SMOOTHNESS_EDEFAULT;
+		eFlags = eFlags & ~SMOOTHNESS_EFLAG | Smoothness.VALUES.indexOf(newSmoothness) << SMOOTHNESS_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__SMOOTHNESS, oldSmoothness, smoothness));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__SMOOTHNESS, oldSmoothness, newSmoothness));
 	}
 
 				/**
@@ -381,7 +449,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public JumpLinkStatus getJumpLinkStatus() {
-		return jumpLinkStatus;
+		return JUMP_LINK_STATUS_EFLAG_VALUES[(eFlags & JUMP_LINK_STATUS_EFLAG) >>> JUMP_LINK_STATUS_EFLAG_OFFSET];
 	}
 
 				/**
@@ -390,10 +458,11 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public void setJumpLinkStatus(JumpLinkStatus newJumpLinkStatus) {
-		JumpLinkStatus oldJumpLinkStatus = jumpLinkStatus;
-		jumpLinkStatus = newJumpLinkStatus == null ? JUMP_LINK_STATUS_EDEFAULT : newJumpLinkStatus;
+		JumpLinkStatus oldJumpLinkStatus = JUMP_LINK_STATUS_EFLAG_VALUES[(eFlags & JUMP_LINK_STATUS_EFLAG) >>> JUMP_LINK_STATUS_EFLAG_OFFSET];
+		if (newJumpLinkStatus == null) newJumpLinkStatus = JUMP_LINK_STATUS_EDEFAULT;
+		eFlags = eFlags & ~JUMP_LINK_STATUS_EFLAG | JumpLinkStatus.VALUES.indexOf(newJumpLinkStatus) << JUMP_LINK_STATUS_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__JUMP_LINK_STATUS, oldJumpLinkStatus, jumpLinkStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__JUMP_LINK_STATUS, oldJumpLinkStatus, newJumpLinkStatus));
 	}
 
 				/**
@@ -402,7 +471,7 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public JumpLinkType getJumpLinkType() {
-		return jumpLinkType;
+		return JUMP_LINK_TYPE_EFLAG_VALUES[(eFlags & JUMP_LINK_TYPE_EFLAG) >>> JUMP_LINK_TYPE_EFLAG_OFFSET];
 	}
 
 				/**
@@ -411,10 +480,11 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public void setJumpLinkType(JumpLinkType newJumpLinkType) {
-		JumpLinkType oldJumpLinkType = jumpLinkType;
-		jumpLinkType = newJumpLinkType == null ? JUMP_LINK_TYPE_EDEFAULT : newJumpLinkType;
+		JumpLinkType oldJumpLinkType = JUMP_LINK_TYPE_EFLAG_VALUES[(eFlags & JUMP_LINK_TYPE_EFLAG) >>> JUMP_LINK_TYPE_EFLAG_OFFSET];
+		if (newJumpLinkType == null) newJumpLinkType = JUMP_LINK_TYPE_EDEFAULT;
+		eFlags = eFlags & ~JUMP_LINK_TYPE_EFLAG | JumpLinkType.VALUES.indexOf(newJumpLinkType) << JUMP_LINK_TYPE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__JUMP_LINK_TYPE, oldJumpLinkType, jumpLinkType));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR_STYLE__JUMP_LINK_TYPE, oldJumpLinkType, newJumpLinkType));
 	}
 
 				/**
@@ -487,8 +557,6 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.CONNECTOR_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				return getRouting();
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
@@ -518,9 +586,6 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.CONNECTOR_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				setRouting((Routing)newValue);
 				return;
@@ -559,9 +624,6 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CONNECTOR_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 				setRouting(ROUTING_EDEFAULT);
 				return;
@@ -600,20 +662,18 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CONNECTOR_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
-				return routing != ROUTING_EDEFAULT;
+				return (eFlags & ROUTING_EFLAG) != ROUTING_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
-				return smoothness != SMOOTHNESS_EDEFAULT;
+				return (eFlags & SMOOTHNESS_EFLAG) != SMOOTHNESS_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__AVOID_OBSTRUCTIONS:
 				return ((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0) != AVOID_OBSTRUCTIONS_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__CLOSEST_DISTANCE:
 				return ((eFlags & CLOSEST_DISTANCE_EFLAG) != 0) != CLOSEST_DISTANCE_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINK_STATUS:
-				return jumpLinkStatus != JUMP_LINK_STATUS_EDEFAULT;
+				return (eFlags & JUMP_LINK_STATUS_EFLAG) != JUMP_LINK_STATUS_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINK_TYPE:
-				return jumpLinkType != JUMP_LINK_TYPE_EDEFAULT;
+				return (eFlags & JUMP_LINK_TYPE_EFLAG) != JUMP_LINK_TYPE_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
@@ -630,12 +690,6 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == NotationObject.class) {
-			switch (derivedFeatureID) {
-				case NotationPackage.CONNECTOR_STYLE__UUID: return NotationPackage.NOTATION_OBJECT__UUID;
-				default: return -1;
-			}
-		}
 		if (baseClass == Style.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -669,12 +723,6 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == NotationObject.class) {
-			switch (baseFeatureID) {
-				case NotationPackage.NOTATION_OBJECT__UUID: return NotationPackage.CONNECTOR_STYLE__UUID;
-				default: return -1;
-			}
-		}
 		if (baseClass == Style.class) {
 			switch (baseFeatureID) {
 				default: return -1;
@@ -711,20 +759,18 @@ public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (uUID: "); //$NON-NLS-1$
-		result.append(uUID);
-		result.append(", routing: "); //$NON-NLS-1$
-		result.append(routing);
+		result.append(" (routing: "); //$NON-NLS-1$
+		result.append(ROUTING_EFLAG_VALUES[(eFlags & ROUTING_EFLAG) >>> ROUTING_EFLAG_OFFSET]);
 		result.append(", smoothness: "); //$NON-NLS-1$
-		result.append(smoothness);
+		result.append(SMOOTHNESS_EFLAG_VALUES[(eFlags & SMOOTHNESS_EFLAG) >>> SMOOTHNESS_EFLAG_OFFSET]);
 		result.append(", avoidObstructions: "); //$NON-NLS-1$
 		result.append((eFlags & AVOID_OBSTRUCTIONS_EFLAG) != 0);
 		result.append(", closestDistance: "); //$NON-NLS-1$
 		result.append((eFlags & CLOSEST_DISTANCE_EFLAG) != 0);
 		result.append(", jumpLinkStatus: "); //$NON-NLS-1$
-		result.append(jumpLinkStatus);
+		result.append(JUMP_LINK_STATUS_EFLAG_VALUES[(eFlags & JUMP_LINK_STATUS_EFLAG) >>> JUMP_LINK_STATUS_EFLAG_OFFSET]);
 		result.append(", jumpLinkType: "); //$NON-NLS-1$
-		result.append(jumpLinkType);
+		result.append(JUMP_LINK_TYPE_EFLAG_VALUES[(eFlags & JUMP_LINK_TYPE_EFLAG) >>> JUMP_LINK_TYPE_EFLAG_OFFSET]);
 		result.append(", jumpLinksReverse: "); //$NON-NLS-1$
 		result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
 		result.append(", lineColor: "); //$NON-NLS-1$

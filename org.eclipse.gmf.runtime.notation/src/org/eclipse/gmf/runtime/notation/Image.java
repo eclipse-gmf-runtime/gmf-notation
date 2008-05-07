@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface Image extends NotationObject {
+public interface Image extends EObject {
     /**
 	 * Returns the value of the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->

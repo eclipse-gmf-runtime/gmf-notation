@@ -445,8 +445,6 @@ public class EdgeImpl extends ViewImpl implements Edge {
 		switch (featureID) {
 			case NotationPackage.EDGE__EANNOTATIONS:
 				return getEAnnotations();
-			case NotationPackage.EDGE__UUID:
-				return getUUID();
 			case NotationPackage.EDGE__VISIBLE:
 				return isVisible() ? Boolean.TRUE : Boolean.FALSE;
 			case NotationPackage.EDGE__TYPE:
@@ -493,9 +491,6 @@ public class EdgeImpl extends ViewImpl implements Edge {
 			case NotationPackage.EDGE__EANNOTATIONS:
 				getEAnnotations().clear();
 				getEAnnotations().addAll((Collection)newValue);
-				return;
-			case NotationPackage.EDGE__UUID:
-				setUUID((byte[])newValue);
 				return;
 			case NotationPackage.EDGE__VISIBLE:
 				setVisible(((Boolean)newValue).booleanValue());
@@ -558,9 +553,6 @@ public class EdgeImpl extends ViewImpl implements Edge {
 			case NotationPackage.EDGE__EANNOTATIONS:
 				getEAnnotations().clear();
 				return;
-			case NotationPackage.EDGE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.EDGE__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
@@ -616,8 +608,6 @@ public class EdgeImpl extends ViewImpl implements Edge {
 		switch (featureID) {
 			case NotationPackage.EDGE__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
-			case NotationPackage.EDGE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.EDGE__VISIBLE:
 				return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
 			case NotationPackage.EDGE__TYPE:

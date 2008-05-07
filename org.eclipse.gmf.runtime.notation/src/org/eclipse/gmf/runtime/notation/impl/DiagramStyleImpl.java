@@ -38,7 +38,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getUUID <em>UUID</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageX <em>Page X</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageY <em>Page Y</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageWidth <em>Page Width</em>}</li>
@@ -56,26 +55,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  */
 public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
     /**
-	 * The default value of the '{@link #getUUID() <em>UUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final byte[] UUID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUUID() <em>UUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected byte[] uUID = UUID_EDEFAULT;
-
-				/**
 	 * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,27 +193,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	}
 
     /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public byte[] getUUID() {
-		return uUID;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUUID(byte[] newUUID) {
-		byte[] oldUUID = uUID;
-		uUID = newUUID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM_STYLE__UUID, oldUUID, uUID));
-	}
-
-				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -385,8 +343,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
 				return new Integer(getPageX());
 			case NotationPackage.DIAGRAM_STYLE__PAGE_Y:
@@ -412,9 +368,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
 				setPageX(((Integer)newValue).intValue());
 				return;
@@ -449,9 +402,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
 				setPageX(PAGE_X_EDEFAULT);
 				return;
@@ -484,8 +434,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DIAGRAM_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
 				return pageX != PAGE_X_EDEFAULT;
 			case NotationPackage.DIAGRAM_STYLE__PAGE_Y:
@@ -510,12 +458,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == NotationObject.class) {
-			switch (derivedFeatureID) {
-				case NotationPackage.DIAGRAM_STYLE__UUID: return NotationPackage.NOTATION_OBJECT__UUID;
-				default: return -1;
-			}
-		}
 		if (baseClass == Style.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -552,12 +494,6 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == NotationObject.class) {
-			switch (baseFeatureID) {
-				case NotationPackage.NOTATION_OBJECT__UUID: return NotationPackage.DIAGRAM_STYLE__UUID;
-				default: return -1;
-			}
-		}
 		if (baseClass == Style.class) {
 			switch (baseFeatureID) {
 				default: return -1;
@@ -597,9 +533,7 @@ public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (uUID: "); //$NON-NLS-1$
-		result.append(uUID);
-		result.append(", pageX: "); //$NON-NLS-1$
+		result.append(" (pageX: "); //$NON-NLS-1$
 		result.append(pageX);
 		result.append(", pageY: "); //$NON-NLS-1$
 		result.append(pageY);

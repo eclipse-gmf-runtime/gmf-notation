@@ -131,8 +131,6 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.IMAGE_BUFFER_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
 				return getAntiAlias();
 			case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:
@@ -152,9 +150,6 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.IMAGE_BUFFER_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
 				setAntiAlias((Boolean)newValue);
 				return;
@@ -178,9 +173,6 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.IMAGE_BUFFER_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
 				setAntiAlias(ANTI_ALIAS_EDEFAULT);
 				return;
@@ -204,8 +196,6 @@ public class ImageBufferStyleImpl extends ImageStyleImpl implements ImageBufferS
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.IMAGE_BUFFER_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.IMAGE_BUFFER_STYLE__ANTI_ALIAS:
 				return ANTI_ALIAS_EDEFAULT == null ? antiAlias != null : !ANTI_ALIAS_EDEFAULT.equals(antiAlias);
 			case NotationPackage.IMAGE_BUFFER_STYLE__MAINTAIN_ASPECT_RATIO:

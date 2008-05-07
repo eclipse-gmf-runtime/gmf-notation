@@ -39,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry {
+public class NodeEntryImpl extends NotationEObjectImpl implements BasicEMap.Entry {
     /**
 	 * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,16 +51,43 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	protected static final Alignment VALUE_EDEFAULT = Alignment.CENTER_LITERAL;
 
     /**
-	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int VALUE_EFLAG_OFFSET = 8;
+
+				/**
+	 * The flags representing the default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int VALUE_EFLAG_DEFAULT = Alignment.VALUES.indexOf(VALUE_EDEFAULT) << VALUE_EFLAG_OFFSET;
+
+				/**
+	 * The array of enumeration values for '{@link Alignment Alignment}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final Alignment[] VALUE_EFLAG_VALUES = (Alignment[])Alignment.VALUES.toArray(new Alignment[Alignment.VALUES.size()]);
+
+				/**
+	 * The flags representing the value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected Alignment value = VALUE_EDEFAULT;
+	protected static final int VALUE_EFLAG = 0x7 << VALUE_EFLAG_OFFSET;
 
-    /**
+				/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,6 +104,7 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 */
 	protected NodeEntryImpl() {
 		super();
+		eFlags |= VALUE_EFLAG_DEFAULT;
 	}
 
     /**
@@ -94,7 +122,7 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 * @generated
 	 */
 	public Alignment getTypedValue() {
-		return value;
+		return VALUE_EFLAG_VALUES[(eFlags & VALUE_EFLAG) >>> VALUE_EFLAG_OFFSET];
 	}
 
 				/**
@@ -103,10 +131,11 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 * @generated
 	 */
 	public void setTypedValue(Alignment newValue) {
-		Alignment oldValue = value;
-		value = newValue == null ? VALUE_EDEFAULT : newValue;
+		Alignment oldValue = VALUE_EFLAG_VALUES[(eFlags & VALUE_EFLAG) >>> VALUE_EFLAG_OFFSET];
+		if (newValue == null) newValue = VALUE_EDEFAULT;
+		eFlags = eFlags & ~VALUE_EFLAG | Alignment.VALUES.indexOf(newValue) << VALUE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue, newValue));
 	}
 
 	/**
@@ -155,8 +184,6 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__UUID:
-				return getUUID();
 			case NotationPackage.NODE_ENTRY__VALUE:
 				return getTypedValue();
 			case NotationPackage.NODE_ENTRY__KEY:
@@ -173,9 +200,6 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.NODE_ENTRY__VALUE:
 				setTypedValue((Alignment)newValue);
 				return;
@@ -193,9 +217,6 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.NODE_ENTRY__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
@@ -213,10 +234,8 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.NODE_ENTRY__VALUE:
-				return value != VALUE_EDEFAULT;
+				return (eFlags & VALUE_EFLAG) != VALUE_EFLAG_DEFAULT;
 			case NotationPackage.NODE_ENTRY__KEY:
 				return key != null;
 		}
@@ -233,7 +252,7 @@ public class NodeEntryImpl extends NotationObjectImpl implements BasicEMap.Entry
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: "); //$NON-NLS-1$
-		result.append(value);
+		result.append(VALUE_EFLAG_VALUES[(eFlags & VALUE_EFLAG) >>> VALUE_EFLAG_OFFSET]);
 		result.append(')');
 		return result.toString();
 	}

@@ -143,8 +143,6 @@ public class BoundsImpl extends LocationImpl implements Bounds {
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.BOUNDS__UUID:
-				return getUUID();
 			case NotationPackage.BOUNDS__X:
 				return new Integer(getX());
 			case NotationPackage.BOUNDS__Y:
@@ -164,9 +162,6 @@ public class BoundsImpl extends LocationImpl implements Bounds {
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.BOUNDS__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.BOUNDS__X:
 				setX(((Integer)newValue).intValue());
 				return;
@@ -190,9 +185,6 @@ public class BoundsImpl extends LocationImpl implements Bounds {
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOUNDS__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.BOUNDS__X:
 				setX(X_EDEFAULT);
 				return;
@@ -216,8 +208,6 @@ public class BoundsImpl extends LocationImpl implements Bounds {
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOUNDS__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.BOUNDS__X:
 				return x != X_EDEFAULT;
 			case NotationPackage.BOUNDS__Y:

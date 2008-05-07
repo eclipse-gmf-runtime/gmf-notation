@@ -34,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements MultiDiagramLinkStyle {
+public class MultiDiagramLinkStyleImpl extends NotationEObjectImpl implements MultiDiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLinks() <em>Diagram Links</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -82,8 +82,6 @@ public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements Mul
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				return getDiagramLinks();
 		}
@@ -97,9 +95,6 @@ public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements Mul
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				getDiagramLinks().clear();
 				getDiagramLinks().addAll((Collection)newValue);
@@ -115,9 +110,6 @@ public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements Mul
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				getDiagramLinks().clear();
 				return;
@@ -132,8 +124,6 @@ public class MultiDiagramLinkStyleImpl extends NotationObjectImpl implements Mul
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
 				return diagramLinks != null && !diagramLinks.isEmpty();
 		}

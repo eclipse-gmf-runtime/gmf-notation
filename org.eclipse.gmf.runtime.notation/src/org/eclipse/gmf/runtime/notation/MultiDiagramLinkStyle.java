@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MultiDiagramLinkStyle extends NotationObject, Style {
+public interface MultiDiagramLinkStyle extends Style {
 	/**
 	 * Returns the value of the '<em><b>Diagram Links</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Diagram}.

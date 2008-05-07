@@ -296,7 +296,7 @@ public class ConnectorStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
+		Routing labelValue = ((ConnectorStyle)object).getRouting();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ConnectorStyle_type") : //$NON-NLS-1$
@@ -314,7 +314,6 @@ public class ConnectorStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectorStyle.class)) {
-			case NotationPackage.CONNECTOR_STYLE__UUID:
 			case NotationPackage.CONNECTOR_STYLE__ROUTING:
 			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
 			case NotationPackage.CONNECTOR_STYLE__AVOID_OBSTRUCTIONS:

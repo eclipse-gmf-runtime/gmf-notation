@@ -78,8 +78,6 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
@@ -95,9 +93,6 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -116,9 +111,6 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -136,8 +128,6 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:

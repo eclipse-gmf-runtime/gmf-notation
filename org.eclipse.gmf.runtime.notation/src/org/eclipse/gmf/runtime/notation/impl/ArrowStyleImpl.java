@@ -35,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
+public class ArrowStyleImpl extends NotationEObjectImpl implements ArrowStyle {
 	/**
 	 * The default value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,14 +47,41 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	protected static final ArrowType ARROW_SOURCE_EDEFAULT = ArrowType.NONE_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ARROW_SOURCE_EFLAG_OFFSET = 8;
+
+	/**
+	 * The flags representing the default value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ARROW_SOURCE_EFLAG_DEFAULT = ArrowType.VALUES.indexOf(ARROW_SOURCE_EDEFAULT) << ARROW_SOURCE_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link ArrowType Arrow Type}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final ArrowType[] ARROW_SOURCE_EFLAG_VALUES = (ArrowType[])ArrowType.VALUES.toArray(new ArrowType[ArrowType.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArrowSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected ArrowType arrowSource = ARROW_SOURCE_EDEFAULT;
+	protected static final int ARROW_SOURCE_EFLAG = 0x3 << ARROW_SOURCE_EFLAG_OFFSET;
 
 	/**
 	 * The default value of the '{@link #getArrowTarget() <em>Arrow Target</em>}' attribute.
@@ -67,14 +94,41 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	protected static final ArrowType ARROW_TARGET_EDEFAULT = ArrowType.NONE_LITERAL;
 
 	/**
-	 * The cached value of the '{@link #getArrowTarget() <em>Arrow Target</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getArrowTarget() <em>Arrow Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ARROW_TARGET_EFLAG_OFFSET = 10;
+
+	/**
+	 * The flags representing the default value of the '{@link #getArrowTarget() <em>Arrow Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ARROW_TARGET_EFLAG_DEFAULT = ArrowType.VALUES.indexOf(ARROW_TARGET_EDEFAULT) << ARROW_TARGET_EFLAG_OFFSET;
+
+	/**
+	 * The array of enumeration values for '{@link ArrowType Arrow Type}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final ArrowType[] ARROW_TARGET_EFLAG_VALUES = (ArrowType[])ArrowType.VALUES.toArray(new ArrowType[ArrowType.VALUES.size()]);
+
+	/**
+	 * The flags representing the value of the '{@link #getArrowTarget() <em>Arrow Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArrowTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected ArrowType arrowTarget = ARROW_TARGET_EDEFAULT;
+	protected static final int ARROW_TARGET_EFLAG = 0x3 << ARROW_TARGET_EFLAG_OFFSET;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,7 +154,7 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 * @generated
 	 */
 	public ArrowType getArrowSource() {
-		return arrowSource;
+		return ARROW_SOURCE_EFLAG_VALUES[(eFlags & ARROW_SOURCE_EFLAG) >>> ARROW_SOURCE_EFLAG_OFFSET];
 	}
 
 	/**
@@ -109,10 +163,11 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 * @generated
 	 */
 	public void setArrowSource(ArrowType newArrowSource) {
-		ArrowType oldArrowSource = arrowSource;
-		arrowSource = newArrowSource == null ? ARROW_SOURCE_EDEFAULT : newArrowSource;
+		ArrowType oldArrowSource = ARROW_SOURCE_EFLAG_VALUES[(eFlags & ARROW_SOURCE_EFLAG) >>> ARROW_SOURCE_EFLAG_OFFSET];
+		if (newArrowSource == null) newArrowSource = ARROW_SOURCE_EDEFAULT;
+		eFlags = eFlags & ~ARROW_SOURCE_EFLAG | ArrowType.VALUES.indexOf(newArrowSource) << ARROW_SOURCE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ARROW_STYLE__ARROW_SOURCE, oldArrowSource, arrowSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ARROW_STYLE__ARROW_SOURCE, oldArrowSource, newArrowSource));
 	}
 
 	/**
@@ -121,7 +176,7 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 * @generated
 	 */
 	public ArrowType getArrowTarget() {
-		return arrowTarget;
+		return ARROW_TARGET_EFLAG_VALUES[(eFlags & ARROW_TARGET_EFLAG) >>> ARROW_TARGET_EFLAG_OFFSET];
 	}
 
 	/**
@@ -130,10 +185,11 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 * @generated
 	 */
 	public void setArrowTarget(ArrowType newArrowTarget) {
-		ArrowType oldArrowTarget = arrowTarget;
-		arrowTarget = newArrowTarget == null ? ARROW_TARGET_EDEFAULT : newArrowTarget;
+		ArrowType oldArrowTarget = ARROW_TARGET_EFLAG_VALUES[(eFlags & ARROW_TARGET_EFLAG) >>> ARROW_TARGET_EFLAG_OFFSET];
+		if (newArrowTarget == null) newArrowTarget = ARROW_TARGET_EDEFAULT;
+		eFlags = eFlags & ~ARROW_TARGET_EFLAG | ArrowType.VALUES.indexOf(newArrowTarget) << ARROW_TARGET_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ARROW_STYLE__ARROW_TARGET, oldArrowTarget, arrowTarget));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ARROW_STYLE__ARROW_TARGET, oldArrowTarget, newArrowTarget));
 	}
 
 	/**
@@ -143,8 +199,6 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.ARROW_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				return getArrowSource();
 			case NotationPackage.ARROW_STYLE__ARROW_TARGET:
@@ -160,9 +214,6 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.ARROW_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				setArrowSource((ArrowType)newValue);
 				return;
@@ -180,9 +231,6 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.ARROW_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
 				setArrowSource(ARROW_SOURCE_EDEFAULT);
 				return;
@@ -200,12 +248,10 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.ARROW_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.ARROW_STYLE__ARROW_SOURCE:
-				return arrowSource != ARROW_SOURCE_EDEFAULT;
+				return (eFlags & ARROW_SOURCE_EFLAG) != ARROW_SOURCE_EFLAG_DEFAULT;
 			case NotationPackage.ARROW_STYLE__ARROW_TARGET:
-				return arrowTarget != ARROW_TARGET_EDEFAULT;
+				return (eFlags & ARROW_TARGET_EFLAG) != ARROW_TARGET_EFLAG_DEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -220,9 +266,9 @@ public class ArrowStyleImpl extends NotationObjectImpl implements ArrowStyle {
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (arrowSource: "); //$NON-NLS-1$
-		result.append(arrowSource);
+		result.append(ARROW_SOURCE_EFLAG_VALUES[(eFlags & ARROW_SOURCE_EFLAG) >>> ARROW_SOURCE_EFLAG_OFFSET]);
 		result.append(", arrowTarget: "); //$NON-NLS-1$
-		result.append(arrowTarget);
+		result.append(ARROW_TARGET_EFLAG_VALUES[(eFlags & ARROW_TARGET_EFLAG) >>> ARROW_TARGET_EFLAG_OFFSET]);
 		result.append(')');
 		return result.toString();
 	}

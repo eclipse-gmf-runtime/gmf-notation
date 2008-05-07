@@ -33,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class IdentityAnchorImpl extends NotationObjectImpl implements IdentityAnchor {
+public class IdentityAnchorImpl extends NotationEObjectImpl implements IdentityAnchor {
     /**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,8 +100,6 @@ public class IdentityAnchorImpl extends NotationObjectImpl implements IdentityAn
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.IDENTITY_ANCHOR__UUID:
-				return getUUID();
 			case NotationPackage.IDENTITY_ANCHOR__ID:
 				return getId();
 		}
@@ -115,9 +113,6 @@ public class IdentityAnchorImpl extends NotationObjectImpl implements IdentityAn
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.IDENTITY_ANCHOR__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.IDENTITY_ANCHOR__ID:
 				setId((String)newValue);
 				return;
@@ -132,9 +127,6 @@ public class IdentityAnchorImpl extends NotationObjectImpl implements IdentityAn
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.IDENTITY_ANCHOR__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.IDENTITY_ANCHOR__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -149,8 +141,6 @@ public class IdentityAnchorImpl extends NotationObjectImpl implements IdentityAn
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.IDENTITY_ANCHOR__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.IDENTITY_ANCHOR__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}

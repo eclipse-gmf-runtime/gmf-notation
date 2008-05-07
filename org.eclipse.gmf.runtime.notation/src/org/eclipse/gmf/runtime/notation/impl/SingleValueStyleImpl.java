@@ -124,8 +124,6 @@ public class SingleValueStyleImpl extends DataTypeStyleImpl implements SingleVal
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.SINGLE_VALUE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.SINGLE_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.SINGLE_VALUE_STYLE__INSTANCE_TYPE:
@@ -144,9 +142,6 @@ public class SingleValueStyleImpl extends DataTypeStyleImpl implements SingleVal
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.SINGLE_VALUE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.SINGLE_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -167,9 +162,6 @@ public class SingleValueStyleImpl extends DataTypeStyleImpl implements SingleVal
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.SINGLE_VALUE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.SINGLE_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -190,8 +182,6 @@ public class SingleValueStyleImpl extends DataTypeStyleImpl implements SingleVal
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.SINGLE_VALUE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.SINGLE_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.SINGLE_VALUE_STYLE__INSTANCE_TYPE:

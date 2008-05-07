@@ -283,8 +283,6 @@ public class DiagramImpl
 		switch (featureID) {
 			case NotationPackage.DIAGRAM__EANNOTATIONS:
 				return getEAnnotations();
-			case NotationPackage.DIAGRAM__UUID:
-				return getUUID();
 			case NotationPackage.DIAGRAM__VISIBLE:
 				return isVisible() ? Boolean.TRUE : Boolean.FALSE;
 			case NotationPackage.DIAGRAM__TYPE:
@@ -328,9 +326,6 @@ public class DiagramImpl
 			case NotationPackage.DIAGRAM__EANNOTATIONS:
 				getEAnnotations().clear();
 				getEAnnotations().addAll((Collection)newValue);
-				return;
-			case NotationPackage.DIAGRAM__UUID:
-				setUUID((byte[])newValue);
 				return;
 			case NotationPackage.DIAGRAM__VISIBLE:
 				setVisible(((Boolean)newValue).booleanValue());
@@ -391,9 +386,6 @@ public class DiagramImpl
 			case NotationPackage.DIAGRAM__EANNOTATIONS:
 				getEAnnotations().clear();
 				return;
-			case NotationPackage.DIAGRAM__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DIAGRAM__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
@@ -445,8 +437,6 @@ public class DiagramImpl
 		switch (featureID) {
 			case NotationPackage.DIAGRAM__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
-			case NotationPackage.DIAGRAM__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DIAGRAM__VISIBLE:
 				return ((eFlags & VISIBLE_EFLAG) != 0) != VISIBLE_EDEFAULT;
 			case NotationPackage.DIAGRAM__TYPE:

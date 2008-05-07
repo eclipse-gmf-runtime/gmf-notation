@@ -39,7 +39,7 @@ import org.eclipse.emf.common.util.EList;
 /*
  * @canBeSeenBy %partners
  */
-public interface FilteringStyle extends NotationObject, Style {
+public interface FilteringStyle extends Style {
     /**
 	 * Returns the value of the '<em><b>Filtering</b></em>' attribute.
 	 * The default value is <code>"None"</code>.

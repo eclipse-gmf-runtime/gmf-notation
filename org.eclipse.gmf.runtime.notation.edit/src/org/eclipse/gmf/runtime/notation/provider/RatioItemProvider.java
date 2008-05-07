@@ -40,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.Ratio;
  * @generated
  */
 public class RatioItemProvider
-	extends NotationObjectItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -111,11 +111,8 @@ public class RatioItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Object labelValue = ((EObject)object).eGet(NotationPackage.Literals.NOTATION_OBJECT__UUID);
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Ratio_type") : //$NON-NLS-1$
-			getString("_UI_Ratio_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		Ratio ratio = (Ratio)object;
+		return getString("_UI_Ratio_type") + " " + ratio.getValue(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**
@@ -145,6 +142,16 @@ public class RatioItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+				/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

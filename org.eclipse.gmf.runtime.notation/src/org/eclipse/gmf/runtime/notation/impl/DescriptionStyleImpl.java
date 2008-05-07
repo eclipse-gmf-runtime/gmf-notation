@@ -33,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class DescriptionStyleImpl extends NotationObjectImpl implements DescriptionStyle {
+public class DescriptionStyleImpl extends NotationEObjectImpl implements DescriptionStyle {
     /**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,8 +100,6 @@ public class DescriptionStyleImpl extends NotationObjectImpl implements Descript
 	 */
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DESCRIPTION_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				return getDescription();
 		}
@@ -115,9 +113,6 @@ public class DescriptionStyleImpl extends NotationObjectImpl implements Descript
 	 */
     public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DESCRIPTION_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -132,9 +127,6 @@ public class DescriptionStyleImpl extends NotationObjectImpl implements Descript
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DESCRIPTION_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -149,8 +141,6 @@ public class DescriptionStyleImpl extends NotationObjectImpl implements Descript
 	 */
     public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DESCRIPTION_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}

@@ -357,7 +357,6 @@ public class ShapeStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ShapeStyle.class)) {
-			case NotationPackage.SHAPE_STYLE__UUID:
 			case NotationPackage.SHAPE_STYLE__FONT_COLOR:
 			case NotationPackage.SHAPE_STYLE__FONT_NAME:
 			case NotationPackage.SHAPE_STYLE__FONT_HEIGHT:

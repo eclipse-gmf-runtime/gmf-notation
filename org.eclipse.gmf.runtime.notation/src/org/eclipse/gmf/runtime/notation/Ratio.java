@@ -34,7 +34,7 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface Ratio extends NotationObject, LayoutConstraint {
+public interface Ratio extends LayoutConstraint {
     /**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.

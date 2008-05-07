@@ -99,8 +99,6 @@ public class StringValueStyleImpl extends NamedStyleImpl implements StringValueS
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.STRING_VALUE_STYLE__UUID:
-				return getUUID();
 			case NotationPackage.STRING_VALUE_STYLE__NAME:
 				return getName();
 			case NotationPackage.STRING_VALUE_STYLE__STRING_VALUE:
@@ -116,9 +114,6 @@ public class StringValueStyleImpl extends NamedStyleImpl implements StringValueS
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.STRING_VALUE_STYLE__UUID:
-				setUUID((byte[])newValue);
-				return;
 			case NotationPackage.STRING_VALUE_STYLE__NAME:
 				setName((String)newValue);
 				return;
@@ -136,9 +131,6 @@ public class StringValueStyleImpl extends NamedStyleImpl implements StringValueS
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_VALUE_STYLE__UUID:
-				setUUID(UUID_EDEFAULT);
-				return;
 			case NotationPackage.STRING_VALUE_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -156,8 +148,6 @@ public class StringValueStyleImpl extends NamedStyleImpl implements StringValueS
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_VALUE_STYLE__UUID:
-				return UUID_EDEFAULT == null ? uUID != null : !UUID_EDEFAULT.equals(uUID);
 			case NotationPackage.STRING_VALUE_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case NotationPackage.STRING_VALUE_STYLE__STRING_VALUE:
