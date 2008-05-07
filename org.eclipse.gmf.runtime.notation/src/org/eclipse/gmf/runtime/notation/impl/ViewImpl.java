@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EModelElementImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentsEList;
-import org.eclipse.emf.ecore.util.ECrossReferenceEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -37,7 +36,6 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Node;
-import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Style;
 import org.eclipse.gmf.runtime.notation.View;
@@ -70,48 +68,6 @@ public abstract class ViewImpl
     extends EModelElementImpl
     implements View {
 
-  protected URI eProxyURI;
-
-  @Override
-  protected EPropertiesHolder eProperties()
-  {
-    if (eProperties == null)
-    {
-      eProperties = new EPropertiesHolderBaseImpl() {};
-    }
-    return eProperties;
-  }
-
-  @Override
-  public boolean eIsProxy()
-  {
-    return eProxyURI != null;
-  }
-  
-  @Override
-  public URI eProxyURI()
-  {
-    return eProxyURI;
-  }
-
-  @Override
-  public void eSetProxyURI(URI uri)
-  {
-    eProxyURI = uri;
-  }
-
-  @Override
-  public EList<EObject> eContents()
-  {
-    return EContentsEList.createEContentsEList(this);
-  }
-
-  @Override
-  public EList<EObject> eCrossReferences()
-  {
-    return ECrossReferenceEList.createECrossReferenceEList(this);
-  }
-  
     /**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -19,7 +19,6 @@ import org.eclipse.gmf.runtime.notation.ConnectorStyle;
 import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.LineStyle;
-import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.RoutingStyle;
@@ -50,7 +49,7 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class ConnectorStyleImpl extends EObjectImpl implements ConnectorStyle {
+public class ConnectorStyleImpl extends NotationEObjectImpl implements ConnectorStyle {
     /**
 	 * The default value of the '{@link #getRouting() <em>Routing</em>}' attribute.
 	 * <!-- begin-user-doc -->

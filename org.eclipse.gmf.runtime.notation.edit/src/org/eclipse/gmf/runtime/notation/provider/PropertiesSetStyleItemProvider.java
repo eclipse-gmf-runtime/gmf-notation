@@ -156,4 +156,14 @@ public class PropertiesSetStyleItemProvider
 				 NotationFactory.eINSTANCE.create(NotationPackage.Literals.STRING_TO_PROPERTY_VALUE_MAP_ENTRY)));
 	}
 
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
+	}
+
 }

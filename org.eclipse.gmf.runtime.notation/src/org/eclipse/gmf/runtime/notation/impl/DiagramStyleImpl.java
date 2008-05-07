@@ -26,7 +26,6 @@ import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.DiagramStyle;
 import org.eclipse.gmf.runtime.notation.Guide;
 import org.eclipse.gmf.runtime.notation.GuideStyle;
-import org.eclipse.gmf.runtime.notation.NotationObject;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PageStyle;
 import org.eclipse.gmf.runtime.notation.Style;
@@ -53,7 +52,7 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class DiagramStyleImpl extends EObjectImpl implements DiagramStyle {
+public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyle {
     /**
 	 * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
 	 * <!-- begin-user-doc -->

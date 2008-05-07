@@ -24,9 +24,72 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.gmf.runtime.notation.*;
+import org.eclipse.gmf.runtime.notation.Alignment;
+import org.eclipse.gmf.runtime.notation.ArrowStyle;
+import org.eclipse.gmf.runtime.notation.ArrowType;
+import org.eclipse.gmf.runtime.notation.BooleanListValueStyle;
+import org.eclipse.gmf.runtime.notation.BooleanValueStyle;
+import org.eclipse.gmf.runtime.notation.Bounds;
+import org.eclipse.gmf.runtime.notation.ByteArrayValueStyle;
+import org.eclipse.gmf.runtime.notation.CanonicalStyle;
+import org.eclipse.gmf.runtime.notation.ConnectorStyle;
+import org.eclipse.gmf.runtime.notation.DataTypeStyle;
+import org.eclipse.gmf.runtime.notation.DescriptionStyle;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.DiagramLinkStyle;
+import org.eclipse.gmf.runtime.notation.DiagramStyle;
+import org.eclipse.gmf.runtime.notation.DoubleListValueStyle;
+import org.eclipse.gmf.runtime.notation.DoubleValueStyle;
+import org.eclipse.gmf.runtime.notation.DrawerStyle;
+import org.eclipse.gmf.runtime.notation.EObjectListValueStyle;
+import org.eclipse.gmf.runtime.notation.EObjectValueStyle;
+import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.FillStyle;
+import org.eclipse.gmf.runtime.notation.Filtering;
+import org.eclipse.gmf.runtime.notation.FilteringStyle;
+import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Guide;
+import org.eclipse.gmf.runtime.notation.GuideStyle;
+import org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle;
+import org.eclipse.gmf.runtime.notation.IdentityAnchor;
+import org.eclipse.gmf.runtime.notation.Image;
+import org.eclipse.gmf.runtime.notation.ImageBufferStyle;
+import org.eclipse.gmf.runtime.notation.ImageStyle;
+import org.eclipse.gmf.runtime.notation.IntListValueStyle;
+import org.eclipse.gmf.runtime.notation.IntValueStyle;
+import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
+import org.eclipse.gmf.runtime.notation.JumpLinkType;
+import org.eclipse.gmf.runtime.notation.LineStyle;
+import org.eclipse.gmf.runtime.notation.LineType;
+import org.eclipse.gmf.runtime.notation.LineTypeStyle;
+import org.eclipse.gmf.runtime.notation.ListValueStyle;
+import org.eclipse.gmf.runtime.notation.Location;
+import org.eclipse.gmf.runtime.notation.MeasurementUnit;
+import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
+import org.eclipse.gmf.runtime.notation.NamedStyle;
+import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.gmf.runtime.notation.NotationFactory;
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.PageStyle;
+import org.eclipse.gmf.runtime.notation.PropertiesSetStyle;
+import org.eclipse.gmf.runtime.notation.PropertyValue;
+import org.eclipse.gmf.runtime.notation.Ratio;
+import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
+import org.eclipse.gmf.runtime.notation.Routing;
+import org.eclipse.gmf.runtime.notation.RoutingStyle;
+import org.eclipse.gmf.runtime.notation.ShapeStyle;
+import org.eclipse.gmf.runtime.notation.SingleValueStyle;
+import org.eclipse.gmf.runtime.notation.Size;
+import org.eclipse.gmf.runtime.notation.Smoothness;
+import org.eclipse.gmf.runtime.notation.Sorting;
+import org.eclipse.gmf.runtime.notation.SortingDirection;
+import org.eclipse.gmf.runtime.notation.SortingStyle;
+import org.eclipse.gmf.runtime.notation.StringListValueStyle;
+import org.eclipse.gmf.runtime.notation.StringValueStyle;
+import org.eclipse.gmf.runtime.notation.TextAlignment;
+import org.eclipse.gmf.runtime.notation.TextStyle;
+import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
-import org.eclipse.gmf.runtime.notation.util.StringPacker;
 
 /**
  * <!-- begin-user-doc -->
@@ -1076,32 +1139,8 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 		}
 		return sb.toString();
 	}
-	
-	protected StringPacker stringPacker = new StringPacker();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public byte[] createUUIDFromString(EDataType eDataType, String initialValue) {
-		// TODO: Ed's more efficient algorithm: https://bugs.eclipse.org/206267
-		return stringPacker.getByteArray(initialValue);
-		//return initialValue.getBytes();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String convertUUIDToString(EDataType eDataType, Object instanceValue) {
-		// TODO: Ed's more efficient algorithm: https://bugs.eclipse.org/206267
-		return stringPacker.getString((byte[]) instanceValue);
-		//return new String((byte[]) instanceValue);
-	}
-
-				/**
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

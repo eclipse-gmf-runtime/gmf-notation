@@ -145,7 +145,7 @@ public class IdentityAnchorItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
-				/**
+    /**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
