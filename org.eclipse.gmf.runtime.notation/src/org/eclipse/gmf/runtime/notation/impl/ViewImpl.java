@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -406,8 +406,8 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public Diagram basicGetDiagram() {
-        for (EObject parent = this; parent != null; parent = parent
-            .eContainer())
+        for (EObject parent = this; parent != null; parent = ((InternalEObject)parent)
+            .eInternalContainer())
             if (NotationPackage.Literals.DIAGRAM.isSuperTypeOf(
                 parent.eClass()))
                 return (Diagram) parent;
