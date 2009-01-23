@@ -11,11 +11,9 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.ArrowStyle;
 import org.eclipse.gmf.runtime.notation.ArrowType;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -34,7 +32,14 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class ArrowStyleImpl extends NotationEObjectImpl implements ArrowStyle {
+public class ArrowStyleImpl extends MinimalEObjectImpl.Container implements ArrowStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0;
+	
 	/**
 	 * The default value of the '{@link #getArrowSource() <em>Arrow Source</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -13,6 +13,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.TextAlignment;
 import org.eclipse.gmf.runtime.notation.TextStyle;
@@ -30,7 +31,14 @@ import org.eclipse.gmf.runtime.notation.TextStyle;
  *
  * @generated
  */
-public class TextStyleImpl extends NotationEObjectImpl implements TextStyle {
+public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0;
+	
 	/**
 	 * The default value of the '{@link #getTextAlignment() <em>Text Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->

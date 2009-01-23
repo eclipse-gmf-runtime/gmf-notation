@@ -14,6 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -34,7 +35,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class LineStyleImpl extends NotationEObjectImpl implements LineStyle {
+public class LineStyleImpl extends MinimalEObjectImpl.Container implements LineStyle {
     /**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->

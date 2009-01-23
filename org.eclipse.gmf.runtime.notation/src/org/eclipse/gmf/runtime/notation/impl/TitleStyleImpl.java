@@ -14,6 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 
@@ -33,7 +34,14 @@ import org.eclipse.gmf.runtime.notation.TitleStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class TitleStyleImpl extends NotationEObjectImpl implements TitleStyle {
+public class TitleStyleImpl extends MinimalEObjectImpl.Container implements TitleStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags;
+	
     /**
 	 * The default value of the '{@link #isShowTitle() <em>Show Title</em>}' attribute.
 	 * <!-- begin-user-doc -->

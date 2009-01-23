@@ -14,6 +14,8 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.FontStyle;
@@ -29,13 +31,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontColor <em>Font Color</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontName <em>Font Name</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFontHeight <em>Font Height</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#isBold <em>Bold</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#isItalic <em>Italic</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#isUnderline <em>Underline</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#isStrikeThrough <em>Strike Through</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getFillColor <em>Fill Color</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getLineColor <em>Line Color</em>}</li>
@@ -48,148 +43,9 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class ShapeStyleImpl extends NotationEObjectImpl implements ShapeStyle {
+public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
+	
     /**
-	 * The default value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontColor()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int FONT_COLOR_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontColor()
-	 * @generated
-	 * @ordered
-	 */
-	protected int fontColor = FONT_COLOR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFontName() <em>Font Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FONT_NAME_EDEFAULT = "Tahoma"; //$NON-NLS-1$
-
-	/**
-	 * The cached value of the '{@link #getFontName() <em>Font Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fontName = FONT_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFontHeight() <em>Font Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int FONT_HEIGHT_EDEFAULT = 9;
-
-	/**
-	 * The cached value of the '{@link #getFontHeight() <em>Font Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFontHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected int fontHeight = FONT_HEIGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isBold() <em>Bold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isBold()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean BOLD_EDEFAULT = false;
-
-	/**
-	 * The flag representing the value of the '{@link #isBold() <em>Bold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isBold()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int BOLD_EFLAG = 1 << 8;
-
-	/**
-	 * The default value of the '{@link #isItalic() <em>Italic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isItalic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean ITALIC_EDEFAULT = false;
-
-	/**
-	 * The flag representing the value of the '{@link #isItalic() <em>Italic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isItalic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ITALIC_EFLAG = 1 << 9;
-
-	/**
-	 * The default value of the '{@link #isUnderline() <em>Underline</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isUnderline()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean UNDERLINE_EDEFAULT = false;
-
-	/**
-	 * The flag representing the value of the '{@link #isUnderline() <em>Underline</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isUnderline()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int UNDERLINE_EFLAG = 1 << 10;
-
-	/**
-	 * The default value of the '{@link #isStrikeThrough() <em>Strike Through</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStrikeThrough()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean STRIKE_THROUGH_EDEFAULT = false;
-
-	/**
-	 * The flag representing the value of the '{@link #isStrikeThrough() <em>Strike Through</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isStrikeThrough()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int STRIKE_THROUGH_EFLAG = 1 << 11;
-
-	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,155 +143,16 @@ public class ShapeStyleImpl extends NotationEObjectImpl implements ShapeStyle {
 		return NotationPackage.Literals.SHAPE_STYLE;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int getFontColor() {
-		return fontColor;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFontColor(int newFontColor) {
-		int oldFontColor = fontColor;
-		fontColor = newFontColor;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_COLOR, oldFontColor, fontColor));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFontName() {
-		return fontName;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFontNameGen(String newFontName) {
+	public void setFontName(String newFontName) {
 		String oldFontName = fontName;
-		fontName = newFontName;
+		fontName = newFontName == null ? null : newFontName.intern();
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_NAME, oldFontName, fontName));
-	}
-	
-	public void setFontName(String newFontName) {
-        setFontNameGen(newFontName == null ? newFontName : newFontName.intern());
-    }
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getFontHeight() {
-		return fontHeight;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFontHeight(int newFontHeight) {
-		int oldFontHeight = fontHeight;
-		fontHeight = newFontHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_HEIGHT, oldFontHeight, fontHeight));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isBold() {
-		return (eFlags & BOLD_EFLAG) != 0;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBold(boolean newBold) {
-		boolean oldBold = (eFlags & BOLD_EFLAG) != 0;
-		if (newBold) eFlags |= BOLD_EFLAG; else eFlags &= ~BOLD_EFLAG;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__BOLD, oldBold, newBold));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isItalic() {
-		return (eFlags & ITALIC_EFLAG) != 0;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setItalic(boolean newItalic) {
-		boolean oldItalic = (eFlags & ITALIC_EFLAG) != 0;
-		if (newItalic) eFlags |= ITALIC_EFLAG; else eFlags &= ~ITALIC_EFLAG;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__ITALIC, oldItalic, newItalic));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isUnderline() {
-		return (eFlags & UNDERLINE_EFLAG) != 0;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnderline(boolean newUnderline) {
-		boolean oldUnderline = (eFlags & UNDERLINE_EFLAG) != 0;
-		if (newUnderline) eFlags |= UNDERLINE_EFLAG; else eFlags &= ~UNDERLINE_EFLAG;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__UNDERLINE, oldUnderline, newUnderline));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isStrikeThrough() {
-		return (eFlags & STRIKE_THROUGH_EFLAG) != 0;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStrikeThrough(boolean newStrikeThrough) {
-		boolean oldStrikeThrough = (eFlags & STRIKE_THROUGH_EFLAG) != 0;
-		if (newStrikeThrough) eFlags |= STRIKE_THROUGH_EFLAG; else eFlags &= ~STRIKE_THROUGH_EFLAG;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__STRIKE_THROUGH, oldStrikeThrough, newStrikeThrough));
 	}
 
 				/**
@@ -682,23 +399,6 @@ public class ShapeStyleImpl extends NotationEObjectImpl implements ShapeStyle {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == Style.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == FontStyle.class) {
-			switch (derivedFeatureID) {
-				case NotationPackage.SHAPE_STYLE__FONT_COLOR: return NotationPackage.FONT_STYLE__FONT_COLOR;
-				case NotationPackage.SHAPE_STYLE__FONT_NAME: return NotationPackage.FONT_STYLE__FONT_NAME;
-				case NotationPackage.SHAPE_STYLE__FONT_HEIGHT: return NotationPackage.FONT_STYLE__FONT_HEIGHT;
-				case NotationPackage.SHAPE_STYLE__BOLD: return NotationPackage.FONT_STYLE__BOLD;
-				case NotationPackage.SHAPE_STYLE__ITALIC: return NotationPackage.FONT_STYLE__ITALIC;
-				case NotationPackage.SHAPE_STYLE__UNDERLINE: return NotationPackage.FONT_STYLE__UNDERLINE;
-				case NotationPackage.SHAPE_STYLE__STRIKE_THROUGH: return NotationPackage.FONT_STYLE__STRIKE_THROUGH;
-				default: return -1;
-			}
-		}
 		if (baseClass == DescriptionStyle.class) {
 			switch (derivedFeatureID) {
 				case NotationPackage.SHAPE_STYLE__DESCRIPTION: return NotationPackage.DESCRIPTION_STYLE__DESCRIPTION;
@@ -727,23 +427,6 @@ public class ShapeStyleImpl extends NotationEObjectImpl implements ShapeStyle {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == Style.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == FontStyle.class) {
-			switch (baseFeatureID) {
-				case NotationPackage.FONT_STYLE__FONT_COLOR: return NotationPackage.SHAPE_STYLE__FONT_COLOR;
-				case NotationPackage.FONT_STYLE__FONT_NAME: return NotationPackage.SHAPE_STYLE__FONT_NAME;
-				case NotationPackage.FONT_STYLE__FONT_HEIGHT: return NotationPackage.SHAPE_STYLE__FONT_HEIGHT;
-				case NotationPackage.FONT_STYLE__BOLD: return NotationPackage.SHAPE_STYLE__BOLD;
-				case NotationPackage.FONT_STYLE__ITALIC: return NotationPackage.SHAPE_STYLE__ITALIC;
-				case NotationPackage.FONT_STYLE__UNDERLINE: return NotationPackage.SHAPE_STYLE__UNDERLINE;
-				case NotationPackage.FONT_STYLE__STRIKE_THROUGH: return NotationPackage.SHAPE_STYLE__STRIKE_THROUGH;
-				default: return -1;
-			}
-		}
 		if (baseClass == DescriptionStyle.class) {
 			switch (baseFeatureID) {
 				case NotationPackage.DESCRIPTION_STYLE__DESCRIPTION: return NotationPackage.SHAPE_STYLE__DESCRIPTION;
@@ -775,21 +458,7 @@ public class ShapeStyleImpl extends NotationEObjectImpl implements ShapeStyle {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (fontColor: "); //$NON-NLS-1$
-		result.append(fontColor);
-		result.append(", fontName: "); //$NON-NLS-1$
-		result.append(fontName);
-		result.append(", fontHeight: "); //$NON-NLS-1$
-		result.append(fontHeight);
-		result.append(", bold: "); //$NON-NLS-1$
-		result.append((eFlags & BOLD_EFLAG) != 0);
-		result.append(", italic: "); //$NON-NLS-1$
-		result.append((eFlags & ITALIC_EFLAG) != 0);
-		result.append(", underline: "); //$NON-NLS-1$
-		result.append((eFlags & UNDERLINE_EFLAG) != 0);
-		result.append(", strikeThrough: "); //$NON-NLS-1$
-		result.append((eFlags & STRIKE_THROUGH_EFLAG) != 0);
-		result.append(", description: "); //$NON-NLS-1$
+		result.append(" (description: "); //$NON-NLS-1$
 		result.append(description);
 		result.append(", fillColor: "); //$NON-NLS-1$
 		result.append(fillColor);

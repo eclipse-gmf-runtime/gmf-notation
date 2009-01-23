@@ -207,8 +207,18 @@ public class DiagramItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES,
+				 NotationFactory.eINSTANCE.createConnector()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES,
 				 NotationFactory.eINSTANCE.createEdge()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES,
+				 NotationFactory.eINSTANCE.createConnector()));
 	}
 
     /**
@@ -224,6 +234,7 @@ public class DiagramItemProvider
 		boolean qualify =
 			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
 			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
+			childFeature == NotationPackage.Literals.VIEW__STYLES ||
 			childFeature == NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES ||
 			childFeature == NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES;
 
@@ -233,16 +244,6 @@ public class DiagramItemProvider
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-    /**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

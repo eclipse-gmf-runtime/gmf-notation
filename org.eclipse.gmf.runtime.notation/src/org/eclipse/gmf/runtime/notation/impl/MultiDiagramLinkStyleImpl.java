@@ -14,6 +14,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
@@ -32,7 +33,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class MultiDiagramLinkStyleImpl extends NotationEObjectImpl implements MultiDiagramLinkStyle {
+public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container implements MultiDiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLinks() <em>Diagram Links</em>}' reference list.
 	 * <!-- begin-user-doc -->

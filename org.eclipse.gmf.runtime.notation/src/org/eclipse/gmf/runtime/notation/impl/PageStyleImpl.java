@@ -14,6 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PageStyle;
 
@@ -36,7 +37,7 @@ import org.eclipse.gmf.runtime.notation.PageStyle;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class PageStyleImpl extends NotationEObjectImpl implements PageStyle {
+public class PageStyleImpl extends MinimalEObjectImpl.Container implements PageStyle {
     /**
 	 * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
 	 * <!-- begin-user-doc -->

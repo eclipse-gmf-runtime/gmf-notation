@@ -200,7 +200,7 @@ public abstract class ViewImpl
 		eFlags |= VISIBLE_EFLAG;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -241,13 +241,20 @@ public abstract class ViewImpl
      * @generated NOT
      */
     public void setType(String newType) {
-        String oldType = type;
-        type = (newType == null) ? null
-            : newType.intern();
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                NotationPackage.VIEW__TYPE, oldType, type));
+        setTypeGen(newType == null ? null : newType.intern());
     }
+    
+    /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+     * @since 1.2
+	 */
+    public void setTypeGen(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.VIEW__TYPE, oldType, type));
+	}
 
     /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -429,14 +436,18 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public Style getStyle(EClass eClass) {
-        if (eClass != null
-            && eIsSet(NotationPackage.Literals.VIEW__STYLES)) {
-            for (Iterator i = getStyles().iterator(); i.hasNext();) {
-                Style style = (Style) i.next();
-                if (style.eClass() == eClass || eClass.isInstance(style))
-                    return style;
-            }
-        }
+    	if (eClass != null && NotationPackage.eINSTANCE.getStyle().isSuperTypeOf(eClass)) {
+    		if (eClass.isSuperTypeOf(eClass())) {
+    			return (Style) this;
+    		}
+            if (eIsSet(NotationPackage.Literals.VIEW__STYLES)) {
+                for (Iterator i = getStyles().iterator(); i.hasNext();) {
+                    Style style = (Style) i.next();
+                    if (style.eClass() == eClass || eClass.isInstance(style))
+                        return style;
+                }
+            }    		
+    	}
         return null;
     }
 

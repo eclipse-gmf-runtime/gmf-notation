@@ -190,6 +190,236 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
 				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Shape} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected ShapeItemProvider shapeItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Shape}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createShapeAdapter() {
+		if (shapeItemProvider == null) {
+			shapeItemProvider = new ShapeItemProvider(this);
+		}
+
+		return shapeItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Compartment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected CompartmentItemProvider compartmentItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Compartment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createCompartmentAdapter() {
+		if (compartmentItemProvider == null) {
+			compartmentItemProvider = new CompartmentItemProvider(this);
+		}
+
+		return compartmentItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.ListCompartment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected ListCompartmentItemProvider listCompartmentItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.ListCompartment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createListCompartmentAdapter() {
+		if (listCompartmentItemProvider == null) {
+			listCompartmentItemProvider = new ListCompartmentItemProvider(this);
+		}
+
+		return listCompartmentItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.Connector} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected ConnectorItemProvider connectorItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.Connector}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createConnectorAdapter() {
+		if (connectorItemProvider == null) {
+			connectorItemProvider = new ConnectorItemProvider(this);
+		}
+
+		return connectorItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.StandardDiagram} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected StandardDiagramItemProvider standardDiagramItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.StandardDiagram}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createStandardDiagramAdapter() {
+		if (standardDiagramItemProvider == null) {
+			standardDiagramItemProvider = new StandardDiagramItemProvider(this);
+		}
+
+		return standardDiagramItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.DecorationNode} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected DecorationNodeItemProvider decorationNodeItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.DecorationNode}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createDecorationNodeAdapter() {
+		if (decorationNodeItemProvider == null) {
+			decorationNodeItemProvider = new DecorationNodeItemProvider(this);
+		}
+
+		return decorationNodeItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.BasicDecorationNode} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected BasicDecorationNodeItemProvider basicDecorationNodeItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.BasicDecorationNode}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createBasicDecorationNodeAdapter() {
+		if (basicDecorationNodeItemProvider == null) {
+			basicDecorationNodeItemProvider = new BasicDecorationNodeItemProvider(this);
+		}
+
+		return basicDecorationNodeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.BasicCompartment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected BasicCompartmentItemProvider basicCompartmentItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.BasicCompartment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createBasicCompartmentAdapter() {
+		if (basicCompartmentItemProvider == null) {
+			basicCompartmentItemProvider = new BasicCompartmentItemProvider(this);
+		}
+
+		return basicCompartmentItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.BasicSemanticCompartment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected BasicSemanticCompartmentItemProvider basicSemanticCompartmentItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.BasicSemanticCompartment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createBasicSemanticCompartmentAdapter() {
+		if (basicSemanticCompartmentItemProvider == null) {
+			basicSemanticCompartmentItemProvider = new BasicSemanticCompartmentItemProvider(this);
+		}
+
+		return basicSemanticCompartmentItemProvider;
+	}
+
+				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.SemanticListCompartment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	protected SemanticListCompartmentItemProvider semanticListCompartmentItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.SemanticListCompartment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createSemanticListCompartmentAdapter() {
+		if (semanticListCompartmentItemProvider == null) {
+			semanticListCompartmentItemProvider = new SemanticListCompartmentItemProvider(this);
+		}
+
+		return semanticListCompartmentItemProvider;
+	}
+
+				/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FontStyle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1394,6 +1624,16 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 		if (textStyleItemProvider != null) textStyleItemProvider.dispose();
 		if (lineTypeStyleItemProvider != null) lineTypeStyleItemProvider.dispose();
 		if (arrowStyleItemProvider != null) arrowStyleItemProvider.dispose();
+		if (shapeItemProvider != null) shapeItemProvider.dispose();
+		if (compartmentItemProvider != null) compartmentItemProvider.dispose();
+		if (listCompartmentItemProvider != null) listCompartmentItemProvider.dispose();
+		if (connectorItemProvider != null) connectorItemProvider.dispose();
+		if (standardDiagramItemProvider != null) standardDiagramItemProvider.dispose();
+		if (decorationNodeItemProvider != null) decorationNodeItemProvider.dispose();
+		if (basicDecorationNodeItemProvider != null) basicDecorationNodeItemProvider.dispose();
+		if (basicCompartmentItemProvider != null) basicCompartmentItemProvider.dispose();
+		if (basicSemanticCompartmentItemProvider != null) basicSemanticCompartmentItemProvider.dispose();
+		if (semanticListCompartmentItemProvider != null) semanticListCompartmentItemProvider.dispose();
 	}
 
 }

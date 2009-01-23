@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.Filtering;
 import org.eclipse.gmf.runtime.notation.FilteringStyle;
@@ -45,7 +46,14 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class FilteringStyleImpl extends NotationEObjectImpl implements FilteringStyle {
+public class FilteringStyleImpl extends MinimalEObjectImpl.Container implements FilteringStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0 ;
+	
     /**
 	 * The default value of the '{@link #getFiltering() <em>Filtering</em>}' attribute.
 	 * <!-- begin-user-doc -->

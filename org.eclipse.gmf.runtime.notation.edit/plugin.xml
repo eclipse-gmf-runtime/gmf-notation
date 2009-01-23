@@ -5,7 +5,7 @@
  <copyright>
  </copyright>
 
- $Id: plugin.xml,v 1.4 2007/05/17 16:26:44 aboyko Exp $
+ $Id: plugin.xml,v 1.5 2009/01/23 16:09:58 aboyko Exp $
 -->
 
 <plugin>
@@ -13,7 +13,7 @@
   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
     <factory
           class="org.eclipse.gmf.runtime.notation.provider.NotationItemProviderAdapterFactory"
-          uri="http://www.eclipse.org/gmf/runtime/1.0.1/notation"
+          uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation"
        supportedTypes = 
          "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
           org.eclipse.emf.edit.provider.IStructuredItemContentProvider

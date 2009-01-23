@@ -14,6 +14,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.FontStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
@@ -39,7 +40,14 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy %partners
  */
-public class FontStyleImpl extends NotationEObjectImpl implements FontStyle {
+public class FontStyleImpl extends MinimalEObjectImpl.Container implements FontStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0;
+	
     /**
 	 * The default value of the '{@link #getFontColor() <em>Font Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -213,8 +221,18 @@ public class FontStyleImpl extends NotationEObjectImpl implements FontStyle {
 	 * @generated NOT
 	 */
 	public void setFontName(String newFontName) {
+		setFontNameGen(newFontName == null ? null : newFontName.intern());
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public void setFontNameGen(String newFontName) {
 		String oldFontName = fontName;
-		fontName = (newFontName == null)?null:newFontName;
+		fontName = newFontName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FONT_STYLE__FONT_NAME, oldFontName, fontName));
 	}

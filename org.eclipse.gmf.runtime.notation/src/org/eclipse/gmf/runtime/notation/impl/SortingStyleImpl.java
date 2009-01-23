@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Sorting;
@@ -46,7 +47,14 @@ import org.eclipse.gmf.runtime.notation.SortingStyle;
 /*
  * @canBeSeenBy %partners
  */
-public class SortingStyleImpl extends NotationEObjectImpl implements SortingStyle {
+public class SortingStyleImpl extends MinimalEObjectImpl.Container implements SortingStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0;
+	
     /**
 	 * The default value of the '{@link #getSorting() <em>Sorting</em>}' attribute.
 	 * <!-- begin-user-doc -->

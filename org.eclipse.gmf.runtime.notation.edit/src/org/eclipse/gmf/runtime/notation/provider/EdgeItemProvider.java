@@ -269,6 +269,7 @@ public class EdgeItemProvider
 		boolean qualify =
 			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
 			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
+			childFeature == NotationPackage.Literals.VIEW__STYLES ||
 			childFeature == NotationPackage.Literals.EDGE__SOURCE_ANCHOR ||
 			childFeature == NotationPackage.Literals.EDGE__TARGET_ANCHOR;
 
@@ -278,16 +279,6 @@ public class EdgeItemProvider
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-    /**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

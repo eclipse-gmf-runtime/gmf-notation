@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EcorePackage;
  * @see org.eclipse.gmf.runtime.notation.NotationFactory
  * @model kind="package"
  * @generated
+ * @since 1.2
  */
 public interface NotationPackage extends EPackage {
 	/**
@@ -49,7 +50,7 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/gmf/runtime/1.0.1/notation"; //$NON-NLS-1$
+	String eNS_URI = "http://www.eclipse.org/gmf/runtime/1.0.2/notation"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.
@@ -1322,7 +1323,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int SHAPE_STYLE__FONT_COLOR = FONT_STYLE__FONT_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Font Name</b></em>' attribute.
@@ -1331,7 +1332,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_NAME = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int SHAPE_STYLE__FONT_NAME = FONT_STYLE__FONT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Font Height</b></em>' attribute.
@@ -1340,7 +1341,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FONT_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int SHAPE_STYLE__FONT_HEIGHT = FONT_STYLE__FONT_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Bold</b></em>' attribute.
@@ -1349,7 +1350,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__BOLD = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int SHAPE_STYLE__BOLD = FONT_STYLE__BOLD;
 
 	/**
 	 * The feature id for the '<em><b>Italic</b></em>' attribute.
@@ -1358,7 +1359,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__ITALIC = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int SHAPE_STYLE__ITALIC = FONT_STYLE__ITALIC;
 
 	/**
 	 * The feature id for the '<em><b>Underline</b></em>' attribute.
@@ -1367,7 +1368,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__UNDERLINE = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int SHAPE_STYLE__UNDERLINE = FONT_STYLE__UNDERLINE;
 
 	/**
 	 * The feature id for the '<em><b>Strike Through</b></em>' attribute.
@@ -1376,7 +1377,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__STRIKE_THROUGH = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int SHAPE_STYLE__STRIKE_THROUGH = FONT_STYLE__STRIKE_THROUGH;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1385,7 +1386,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int SHAPE_STYLE__DESCRIPTION = FONT_STYLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fill Color</b></em>' attribute.
@@ -1394,7 +1395,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__FILL_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int SHAPE_STYLE__FILL_COLOR = FONT_STYLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -1403,7 +1404,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
+	int SHAPE_STYLE__LINE_COLOR = FONT_STYLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -1412,7 +1413,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
+	int SHAPE_STYLE__LINE_WIDTH = FONT_STYLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Shape Style</em>' class.
@@ -1421,7 +1422,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 11;
+	int SHAPE_STYLE_FEATURE_COUNT = FONT_STYLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl <em>Connector Style</em>}' class.
@@ -1440,7 +1441,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__ROUTING = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int CONNECTOR_STYLE__ROUTING = ROUTING_STYLE__ROUTING;
 
 	/**
 	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
@@ -1449,7 +1450,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__SMOOTHNESS = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int CONNECTOR_STYLE__SMOOTHNESS = ROUTING_STYLE__SMOOTHNESS;
 
 	/**
 	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
@@ -1458,7 +1459,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__AVOID_OBSTRUCTIONS = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int CONNECTOR_STYLE__AVOID_OBSTRUCTIONS = ROUTING_STYLE__AVOID_OBSTRUCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
@@ -1467,7 +1468,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__CLOSEST_DISTANCE = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int CONNECTOR_STYLE__CLOSEST_DISTANCE = ROUTING_STYLE__CLOSEST_DISTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
@@ -1476,7 +1477,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINK_STATUS = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int CONNECTOR_STYLE__JUMP_LINK_STATUS = ROUTING_STYLE__JUMP_LINK_STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
@@ -1485,7 +1486,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINK_TYPE = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int CONNECTOR_STYLE__JUMP_LINK_TYPE = ROUTING_STYLE__JUMP_LINK_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
@@ -1494,7 +1495,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = ROUTING_STYLE__JUMP_LINKS_REVERSE;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -1503,7 +1504,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__LINE_COLOR = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int CONNECTOR_STYLE__LINE_COLOR = ROUTING_STYLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -1512,7 +1513,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE__LINE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int CONNECTOR_STYLE__LINE_WIDTH = ROUTING_STYLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Connector Style</em>' class.
@@ -1521,7 +1522,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
+	int CONNECTOR_STYLE_FEATURE_COUNT = ROUTING_STYLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.PageStyleImpl <em>Page Style</em>}' class.
@@ -1780,7 +1781,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_X = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int DIAGRAM_STYLE__PAGE_X = PAGE_STYLE__PAGE_X;
 
 	/**
 	 * The feature id for the '<em><b>Page Y</b></em>' attribute.
@@ -1789,7 +1790,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_Y = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int DIAGRAM_STYLE__PAGE_Y = PAGE_STYLE__PAGE_Y;
 
 	/**
 	 * The feature id for the '<em><b>Page Width</b></em>' attribute.
@@ -1798,7 +1799,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_WIDTH = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int DIAGRAM_STYLE__PAGE_WIDTH = PAGE_STYLE__PAGE_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Page Height</b></em>' attribute.
@@ -1807,7 +1808,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__PAGE_HEIGHT = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int DIAGRAM_STYLE__PAGE_HEIGHT = PAGE_STYLE__PAGE_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Horizontal Guides</b></em>' containment reference list.
@@ -1816,7 +1817,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__HORIZONTAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int DIAGRAM_STYLE__HORIZONTAL_GUIDES = PAGE_STYLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Guides</b></em>' containment reference list.
@@ -1825,7 +1826,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__VERTICAL_GUIDES = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int DIAGRAM_STYLE__VERTICAL_GUIDES = PAGE_STYLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1834,7 +1835,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE__DESCRIPTION = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int DIAGRAM_STYLE__DESCRIPTION = PAGE_STYLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Diagram Style</em>' class.
@@ -1843,7 +1844,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAM_STYLE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int DIAGRAM_STYLE_FEATURE_COUNT = PAGE_STYLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ImageStyleImpl <em>Image Style</em>}' class.
@@ -2827,14 +2828,1975 @@ public interface NotationPackage extends EPackage {
 	int ARROW_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ShapeImpl <em>Shape</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.ShapeImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getShape()
+	 * @generated
+	 * @since 1.2
+	 */
+	int SHAPE = 59;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__EANNOTATIONS = NODE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__VISIBLE = NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__TYPE = NODE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__MUTABLE = NODE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__SOURCE_EDGES = NODE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__TARGET_EDGES = NODE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__PERSISTED_CHILDREN = NODE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__STYLES = NODE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__ELEMENT = NODE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__DIAGRAM = NODE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__TRANSIENT_CHILDREN = NODE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__LAYOUT_CONSTRAINT = NODE__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Font Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__FONT_COLOR = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Font Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__FONT_NAME = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Font Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__FONT_HEIGHT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Bold</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__BOLD = NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Italic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__ITALIC = NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Underline</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__UNDERLINE = NODE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Strike Through</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__STRIKE_THROUGH = NODE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__DESCRIPTION = NODE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__FILL_COLOR = NODE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__LINE_COLOR = NODE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE__LINE_WIDTH = NODE_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>Shape</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 11;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.CompartmentImpl <em>Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.CompartmentImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getCompartment()
+	 * @generated
+	 * @since 1.2
+	 */
+	int COMPARTMENT = 60;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl <em>List Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getListCompartment()
+	 * @generated
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT = 61;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl <em>Connector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.ConnectorImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getConnector()
+	 * @generated
+	 * @since 1.2
+	 */
+	int CONNECTOR = 62;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl <em>Standard Diagram</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getStandardDiagram()
+	 * @generated
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM = 63;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl <em>Basic Decoration Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicDecorationNode()
+	 * @generated
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE = 65;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__EANNOTATIONS = NODE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__VISIBLE = NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__TYPE = NODE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__MUTABLE = NODE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__SOURCE_EDGES = NODE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__TARGET_EDGES = NODE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__PERSISTED_CHILDREN = NODE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__STYLES = NODE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__ELEMENT = NODE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__DIAGRAM = NODE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__TRANSIENT_CHILDREN = NODE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT = NODE__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The number of structural features of the '<em>Basic Decoration Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_DECORATION_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl <em>Decoration Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getDecorationNode()
+	 * @generated
+	 * @since 1.2
+	 */
+	int DECORATION_NODE = 64;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__EANNOTATIONS = BASIC_DECORATION_NODE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__VISIBLE = BASIC_DECORATION_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__TYPE = BASIC_DECORATION_NODE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__MUTABLE = BASIC_DECORATION_NODE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 * @ordered
+	 */
+	int DECORATION_NODE__SOURCE_EDGES = BASIC_DECORATION_NODE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__TARGET_EDGES = BASIC_DECORATION_NODE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__PERSISTED_CHILDREN = BASIC_DECORATION_NODE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__STYLES = BASIC_DECORATION_NODE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__ELEMENT = BASIC_DECORATION_NODE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__DIAGRAM = BASIC_DECORATION_NODE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__TRANSIENT_CHILDREN = BASIC_DECORATION_NODE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE__LAYOUT_CONSTRAINT = BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The number of structural features of the '<em>Decoration Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int DECORATION_NODE_FEATURE_COUNT = BASIC_DECORATION_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl <em>Basic Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicCompartment()
+	 * @generated
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT = 66;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__EANNOTATIONS = DECORATION_NODE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__VISIBLE = DECORATION_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__TYPE = DECORATION_NODE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__MUTABLE = DECORATION_NODE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__SOURCE_EDGES = DECORATION_NODE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__TARGET_EDGES = DECORATION_NODE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__PERSISTED_CHILDREN = DECORATION_NODE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__STYLES = DECORATION_NODE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__ELEMENT = DECORATION_NODE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__DIAGRAM = DECORATION_NODE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__TRANSIENT_CHILDREN = DECORATION_NODE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__LAYOUT_CONSTRAINT = DECORATION_NODE__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT__COLLAPSED = DECORATION_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Basic Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_COMPARTMENT_FEATURE_COUNT = DECORATION_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__EANNOTATIONS = BASIC_COMPARTMENT__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__VISIBLE = BASIC_COMPARTMENT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__TYPE = BASIC_COMPARTMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__MUTABLE = BASIC_COMPARTMENT__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__SOURCE_EDGES = BASIC_COMPARTMENT__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__TARGET_EDGES = BASIC_COMPARTMENT__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__PERSISTED_CHILDREN = BASIC_COMPARTMENT__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__STYLES = BASIC_COMPARTMENT__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__ELEMENT = BASIC_COMPARTMENT__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__DIAGRAM = BASIC_COMPARTMENT__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__TRANSIENT_CHILDREN = BASIC_COMPARTMENT__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_COMPARTMENT__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__COLLAPSED = BASIC_COMPARTMENT__COLLAPSED;
+
+	/**
+	 * The feature id for the '<em><b>Canonical</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__CANONICAL = BASIC_COMPARTMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Show Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT__SHOW_TITLE = BASIC_COMPARTMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int COMPARTMENT_FEATURE_COUNT = BASIC_COMPARTMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__EANNOTATIONS = BASIC_COMPARTMENT__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__VISIBLE = BASIC_COMPARTMENT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__TYPE = BASIC_COMPARTMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__MUTABLE = BASIC_COMPARTMENT__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__SOURCE_EDGES = BASIC_COMPARTMENT__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__TARGET_EDGES = BASIC_COMPARTMENT__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__PERSISTED_CHILDREN = BASIC_COMPARTMENT__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__STYLES = BASIC_COMPARTMENT__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__ELEMENT = BASIC_COMPARTMENT__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__DIAGRAM = BASIC_COMPARTMENT__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_COMPARTMENT__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_COMPARTMENT__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__COLLAPSED = BASIC_COMPARTMENT__COLLAPSED;
+
+	/**
+	 * The feature id for the '<em><b>Sorting</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__SORTING = BASIC_COMPARTMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sorting Keys</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__SORTING_KEYS = BASIC_COMPARTMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Sorted Objects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__SORTED_OBJECTS = BASIC_COMPARTMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Filtering</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__FILTERING = BASIC_COMPARTMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Filtering Keys</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__FILTERING_KEYS = BASIC_COMPARTMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Filtered Objects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__FILTERED_OBJECTS = BASIC_COMPARTMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Show Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT__SHOW_TITLE = BASIC_COMPARTMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>List Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int LIST_COMPARTMENT_FEATURE_COUNT = BASIC_COMPARTMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__EANNOTATIONS = EDGE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__VISIBLE = EDGE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__TYPE = EDGE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__MUTABLE = EDGE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__SOURCE_EDGES = EDGE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__TARGET_EDGES = EDGE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__PERSISTED_CHILDREN = EDGE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__STYLES = EDGE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__ELEMENT = EDGE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__DIAGRAM = EDGE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__TRANSIENT_CHILDREN = EDGE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__SOURCE = EDGE__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__TARGET = EDGE__TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Bendpoints</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__BENDPOINTS = EDGE__BENDPOINTS;
+
+	/**
+	 * The feature id for the '<em><b>Source Anchor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__SOURCE_ANCHOR = EDGE__SOURCE_ANCHOR;
+
+	/**
+	 * The feature id for the '<em><b>Target Anchor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__TARGET_ANCHOR = EDGE__TARGET_ANCHOR;
+
+	/**
+	 * The feature id for the '<em><b>Routing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__ROUTING = EDGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__SMOOTHNESS = EDGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__AVOID_OBSTRUCTIONS = EDGE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__CLOSEST_DISTANCE = EDGE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__JUMP_LINK_STATUS = EDGE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__JUMP_LINK_TYPE = EDGE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__JUMP_LINKS_REVERSE = EDGE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__LINE_COLOR = EDGE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR__LINE_WIDTH = EDGE_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of structural features of the '<em>Connector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int CONNECTOR_FEATURE_COUNT = EDGE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__EANNOTATIONS = DIAGRAM__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__VISIBLE = DIAGRAM__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__TYPE = DIAGRAM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__MUTABLE = DIAGRAM__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__SOURCE_EDGES = DIAGRAM__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__TARGET_EDGES = DIAGRAM__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PERSISTED_CHILDREN = DIAGRAM__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__STYLES = DIAGRAM__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__ELEMENT = DIAGRAM__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__DIAGRAM = DIAGRAM__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__TRANSIENT_CHILDREN = DIAGRAM__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__NAME = DIAGRAM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Measurement Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__MEASUREMENT_UNIT = DIAGRAM__MEASUREMENT_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Edges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PERSISTED_EDGES = DIAGRAM__PERSISTED_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Transient Edges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__TRANSIENT_EDGES = DIAGRAM__TRANSIENT_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Page X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PAGE_X = DIAGRAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Page Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PAGE_Y = DIAGRAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Page Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PAGE_WIDTH = DIAGRAM_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Page Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__PAGE_HEIGHT = DIAGRAM_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Horizontal Guides</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__HORIZONTAL_GUIDES = DIAGRAM_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Vertical Guides</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__VERTICAL_GUIDES = DIAGRAM_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM__DESCRIPTION = DIAGRAM_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Standard Diagram</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int STANDARD_DIAGRAM_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl <em>Basic Semantic Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicSemanticCompartment()
+	 * @generated
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT = 67;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__EANNOTATIONS = BASIC_DECORATION_NODE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__VISIBLE = BASIC_DECORATION_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__TYPE = BASIC_DECORATION_NODE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__MUTABLE = BASIC_DECORATION_NODE__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__SOURCE_EDGES = BASIC_DECORATION_NODE__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__TARGET_EDGES = BASIC_DECORATION_NODE__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__PERSISTED_CHILDREN = BASIC_DECORATION_NODE__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__STYLES = BASIC_DECORATION_NODE__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__ELEMENT = BASIC_DECORATION_NODE__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__DIAGRAM = BASIC_DECORATION_NODE__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_DECORATION_NODE__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT__COLLAPSED = BASIC_DECORATION_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Basic Semantic Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT = BASIC_DECORATION_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl <em>Semantic List Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSemanticListCompartment()
+	 * @generated
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT = 68;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__EANNOTATIONS = BASIC_SEMANTIC_COMPARTMENT__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__VISIBLE = BASIC_SEMANTIC_COMPARTMENT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__TYPE = BASIC_SEMANTIC_COMPARTMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__MUTABLE = BASIC_SEMANTIC_COMPARTMENT__MUTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Source Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__SOURCE_EDGES = BASIC_SEMANTIC_COMPARTMENT__SOURCE_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Target Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__TARGET_EDGES = BASIC_SEMANTIC_COMPARTMENT__TARGET_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Persisted Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__PERSISTED_CHILDREN = BASIC_SEMANTIC_COMPARTMENT__PERSISTED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__STYLES = BASIC_SEMANTIC_COMPARTMENT__STYLES;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__ELEMENT = BASIC_SEMANTIC_COMPARTMENT__ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Diagram</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__DIAGRAM = BASIC_SEMANTIC_COMPARTMENT__DIAGRAM;
+
+	/**
+	 * The feature id for the '<em><b>Transient Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_SEMANTIC_COMPARTMENT__TRANSIENT_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Constraint</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_SEMANTIC_COMPARTMENT__LAYOUT_CONSTRAINT;
+
+	/**
+	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__COLLAPSED = BASIC_SEMANTIC_COMPARTMENT__COLLAPSED;
+
+	/**
+	 * The feature id for the '<em><b>Sorting</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__SORTING = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sorting Keys</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__SORTING_KEYS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Sorted Objects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__SORTED_OBJECTS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Filtering</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__FILTERING = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Filtering Keys</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__FILTERING_KEYS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Filtered Objects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__FILTERED_OBJECTS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Show Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT__SHOW_TITLE = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Semantic List Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	int SEMANTIC_LIST_COMPARTMENT_FEATURE_COUNT = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 7;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.gmf.runtime.notation.Sorting
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
+	 * @since 1.2
 	 */
-	int SORTING = 59;
+	int SORTING = 69;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Filtering <em>Filtering</em>}' enum.
@@ -2844,7 +4806,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFiltering()
 	 * @generated
 	 */
-	int FILTERING = 60;
+	int FILTERING = 70;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Routing <em>Routing</em>}' enum.
@@ -2854,7 +4816,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRouting()
 	 * @generated
 	 */
-	int ROUTING = 61;
+	int ROUTING = 71;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Smoothness <em>Smoothness</em>}' enum.
@@ -2864,7 +4826,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSmoothness()
 	 * @generated
 	 */
-	int SMOOTHNESS = 62;
+	int SMOOTHNESS = 72;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkStatus <em>Jump Link Status</em>}' enum.
@@ -2874,7 +4836,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkStatus()
 	 * @generated
 	 */
-	int JUMP_LINK_STATUS = 63;
+	int JUMP_LINK_STATUS = 73;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkType <em>Jump Link Type</em>}' enum.
@@ -2884,7 +4846,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkType()
 	 * @generated
 	 */
-	int JUMP_LINK_TYPE = 64;
+	int JUMP_LINK_TYPE = 74;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Alignment <em>Alignment</em>}' enum.
@@ -2894,7 +4856,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getAlignment()
 	 * @generated
 	 */
-	int ALIGNMENT = 65;
+	int ALIGNMENT = 75;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.SortingDirection <em>Sorting Direction</em>}' enum.
@@ -2904,7 +4866,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortingDirection()
 	 * @generated
 	 */
-	int SORTING_DIRECTION = 66;
+	int SORTING_DIRECTION = 76;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
@@ -2914,7 +4876,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
 	 * @generated
 	 */
-	int MEASUREMENT_UNIT = 67;
+	int MEASUREMENT_UNIT = 77;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
@@ -2924,7 +4886,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
 	 * @generated
 	 */
-	int TEXT_ALIGNMENT = 68;
+	int TEXT_ALIGNMENT = 78;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}' enum.
@@ -2934,7 +4896,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineType()
 	 * @generated
 	 */
-	int LINE_TYPE = 69;
+	int LINE_TYPE = 79;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}' enum.
@@ -2944,7 +4906,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowType()
 	 * @generated
 	 */
-	int ARROW_TYPE = 70;
+	int ARROW_TYPE = 80;
 
 	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
@@ -2954,7 +4916,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 71;
+	int RELATIVE_BENDPOINT_LIST = 81;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -2964,7 +4926,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 72;
+	int FILTER_KEY_LIST = 82;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -2974,7 +4936,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 73;
+	int SORT_KEY_MAP = 83;
 
 
 	/**
@@ -4629,6 +6591,116 @@ public interface NotationPackage extends EPackage {
 	EAttribute getArrowStyle_ArrowTarget();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.Shape <em>Shape</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Shape</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.Shape
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getShape();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.Compartment <em>Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Compartment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.Compartment
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getCompartment();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.ListCompartment <em>List Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Compartment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.ListCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getListCompartment();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.Connector <em>Connector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connector</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.Connector
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getConnector();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.StandardDiagram <em>Standard Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Standard Diagram</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.StandardDiagram
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getStandardDiagram();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.DecorationNode <em>Decoration Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Decoration Node</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.DecorationNode
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getDecorationNode();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.BasicDecorationNode <em>Basic Decoration Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic Decoration Node</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.BasicDecorationNode
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getBasicDecorationNode();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.BasicCompartment <em>Basic Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic Compartment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.BasicCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getBasicCompartment();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.BasicSemanticCompartment <em>Basic Semantic Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic Semantic Compartment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.BasicSemanticCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getBasicSemanticCompartment();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.SemanticListCompartment <em>Semantic List Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Semantic List Compartment</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.SemanticListCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	EClass getSemanticListCompartment();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6160,6 +8232,116 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARROW_STYLE__ARROW_TARGET = eINSTANCE.getArrowStyle_ArrowTarget();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ShapeImpl <em>Shape</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.ShapeImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getShape()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass SHAPE = eINSTANCE.getShape();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.CompartmentImpl <em>Compartment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.CompartmentImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getCompartment()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass COMPARTMENT = eINSTANCE.getCompartment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl <em>List Compartment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getListCompartment()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass LIST_COMPARTMENT = eINSTANCE.getListCompartment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl <em>Connector</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.ConnectorImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getConnector()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass CONNECTOR = eINSTANCE.getConnector();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl <em>Standard Diagram</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getStandardDiagram()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass STANDARD_DIAGRAM = eINSTANCE.getStandardDiagram();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl <em>Decoration Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getDecorationNode()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass DECORATION_NODE = eINSTANCE.getDecorationNode();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl <em>Basic Decoration Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicDecorationNode()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass BASIC_DECORATION_NODE = eINSTANCE.getBasicDecorationNode();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl <em>Basic Compartment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicCompartment()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass BASIC_COMPARTMENT = eINSTANCE.getBasicCompartment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl <em>Basic Semantic Compartment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicSemanticCompartment()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass BASIC_SEMANTIC_COMPARTMENT = eINSTANCE.getBasicSemanticCompartment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl <em>Semantic List Compartment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSemanticListCompartment()
+		 * @generated
+		 * @since 1.2
+		 */
+		EClass SEMANTIC_LIST_COMPARTMENT = eINSTANCE.getSemanticListCompartment();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.

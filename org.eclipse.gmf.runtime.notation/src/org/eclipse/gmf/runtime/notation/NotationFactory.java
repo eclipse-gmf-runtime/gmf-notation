@@ -493,6 +493,106 @@ public interface NotationFactory extends EFactory {
 	ArrowStyle createArrowStyle();
 
 				/**
+	 * Returns a new object of class '<em>Shape</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Shape</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	Shape createShape();
+
+				/**
+	 * Returns a new object of class '<em>Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Compartment</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	Compartment createCompartment();
+
+				/**
+	 * Returns a new object of class '<em>List Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Compartment</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	ListCompartment createListCompartment();
+
+				/**
+	 * Returns a new object of class '<em>Connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connector</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	Connector createConnector();
+
+				/**
+	 * Returns a new object of class '<em>Standard Diagram</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Standard Diagram</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	StandardDiagram createStandardDiagram();
+
+				/**
+	 * Returns a new object of class '<em>Decoration Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Decoration Node</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	DecorationNode createDecorationNode();
+
+				/**
+	 * Returns a new object of class '<em>Basic Decoration Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic Decoration Node</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	BasicDecorationNode createBasicDecorationNode();
+
+				/**
+	 * Returns a new object of class '<em>Basic Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic Compartment</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	BasicCompartment createBasicCompartment();
+
+				/**
+	 * Returns a new object of class '<em>Basic Semantic Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic Semantic Compartment</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	BasicSemanticCompartment createBasicSemanticCompartment();
+
+				/**
+	 * Returns a new object of class '<em>Semantic List Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Semantic List Compartment</em>'.
+	 * @generated
+	 * @since 1.2
+	 */
+	SemanticListCompartment createSemanticListCompartment();
+
+				/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

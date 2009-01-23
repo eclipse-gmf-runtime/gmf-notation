@@ -31,6 +31,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface ShapeStyle extends EObject, FontStyle, DescriptionStyle, FillStyle, LineStyle {
+public interface ShapeStyle extends FontStyle, DescriptionStyle, FillStyle, LineStyle {
 	// no default API
 } // ShapeStyle

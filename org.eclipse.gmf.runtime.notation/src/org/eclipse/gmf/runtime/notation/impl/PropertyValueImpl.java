@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
@@ -33,7 +34,7 @@ import org.eclipse.gmf.runtime.notation.PropertyValue;
  *
  * @generated
  */
-public class PropertyValueImpl extends NotationEObjectImpl implements PropertyValue {
+public class PropertyValueImpl extends MinimalEObjectImpl.Container implements PropertyValue {
 	/**
 	 * The default value of the '{@link #getRawValue() <em>Raw Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

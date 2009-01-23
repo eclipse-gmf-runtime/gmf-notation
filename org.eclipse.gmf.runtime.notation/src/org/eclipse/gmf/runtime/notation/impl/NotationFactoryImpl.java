@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.gmf.runtime.notation.*;
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.ArrowStyle;
 import org.eclipse.gmf.runtime.notation.ArrowType;
@@ -109,7 +110,7 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 */
     public static NotationFactory init() {
 		try {
-			NotationFactory theNotationFactory = (NotationFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/gmf/runtime/1.0.1/notation"); //$NON-NLS-1$ 
+			NotationFactory theNotationFactory = (NotationFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/gmf/runtime/1.0.2/notation"); //$NON-NLS-1$ 
 			if (theNotationFactory != null) {
 				return theNotationFactory;
 			}
@@ -190,6 +191,16 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			case NotationPackage.TEXT_STYLE: return createTextStyle();
 			case NotationPackage.LINE_TYPE_STYLE: return createLineTypeStyle();
 			case NotationPackage.ARROW_STYLE: return createArrowStyle();
+			case NotationPackage.SHAPE: return createShape();
+			case NotationPackage.COMPARTMENT: return createCompartment();
+			case NotationPackage.LIST_COMPARTMENT: return createListCompartment();
+			case NotationPackage.CONNECTOR: return createConnector();
+			case NotationPackage.STANDARD_DIAGRAM: return createStandardDiagram();
+			case NotationPackage.DECORATION_NODE: return createDecorationNode();
+			case NotationPackage.BASIC_DECORATION_NODE: return createBasicDecorationNode();
+			case NotationPackage.BASIC_COMPARTMENT: return createBasicCompartment();
+			case NotationPackage.BASIC_SEMANTIC_COMPARTMENT: return createBasicSemanticCompartment();
+			case NotationPackage.SEMANTIC_LIST_COMPARTMENT: return createSemanticListCompartment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -807,6 +818,116 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	public ArrowStyle createArrowStyle() {
 		ArrowStyleImpl arrowStyle = new ArrowStyleImpl();
 		return arrowStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public Shape createShape() {
+		ShapeImpl shape = new ShapeImpl();
+		return shape;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public Compartment createCompartment() {
+		CompartmentImpl compartment = new CompartmentImpl();
+		return compartment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public ListCompartment createListCompartment() {
+		ListCompartmentImpl listCompartment = new ListCompartmentImpl();
+		return listCompartment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public Connector createConnector() {
+		ConnectorImpl connector = new ConnectorImpl();
+		return connector;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public StandardDiagram createStandardDiagram() {
+		StandardDiagramImpl standardDiagram = new StandardDiagramImpl();
+		return standardDiagram;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public DecorationNode createDecorationNode() {
+		DecorationNodeImpl decorationNode = new DecorationNodeImpl();
+		return decorationNode;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public BasicDecorationNode createBasicDecorationNode() {
+		BasicDecorationNodeImpl basicDecorationNode = new BasicDecorationNodeImpl();
+		return basicDecorationNode;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public BasicCompartment createBasicCompartment() {
+		BasicCompartmentImpl basicCompartment = new BasicCompartmentImpl();
+		return basicCompartment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public BasicSemanticCompartment createBasicSemanticCompartment() {
+		BasicSemanticCompartmentImpl basicSemanticCompartment = new BasicSemanticCompartmentImpl();
+		return basicSemanticCompartment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public SemanticListCompartment createSemanticListCompartment() {
+		SemanticListCompartmentImpl semanticListCompartment = new SemanticListCompartmentImpl();
+		return semanticListCompartment;
 	}
 
 				/**

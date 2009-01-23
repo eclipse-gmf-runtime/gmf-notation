@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="notation"
-    nsURI="http://www.eclipse.org/gmf/runtime/1.0.1/notation" nsPrefix="notation">
+    nsURI="http://www.eclipse.org/gmf/runtime/1.0.2/notation" nsPrefix="notation">
   <eClassifiers xsi:type="ecore:EClass" name="Edge" eSuperTypes="#//View">
     <eOperations name="createBendpoints" eType="#//Bendpoints">
       <eParameters name="eClass" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
@@ -203,8 +203,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="canonical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ShapeStyle" eSuperTypes="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//FontStyle #//DescriptionStyle #//FillStyle #//LineStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectorStyle" eSuperTypes="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//RoutingStyle #//LineStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShapeStyle" eSuperTypes="#//FontStyle #//DescriptionStyle #//FillStyle #//LineStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorStyle" eSuperTypes="#//RoutingStyle #//LineStyle"/>
   <eClassifiers xsi:type="ecore:EDataType" name="RelativeBendpointList" instanceClassName="java.util.List"/>
   <eClassifiers xsi:type="ecore:EClass" name="PageStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -257,7 +257,7 @@
     <eLiterals name="Ascending"/>
     <eLiterals name="Descending" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiagramStyle" eSuperTypes="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject #//PageStyle #//GuideStyle #//DescriptionStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramStyle" eSuperTypes="#//PageStyle #//GuideStyle #//DescriptionStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImageStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="antiAlias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>
@@ -420,4 +420,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrowTarget" eType="#//ArrowType"
         defaultValueLiteral="None"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" eSuperTypes="#//Node #//ShapeStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Compartment" eSuperTypes="#//BasicCompartment #//CanonicalStyle #//TitleStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListCompartment" eSuperTypes="#//BasicCompartment #//SortingStyle #//FilteringStyle #//TitleStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//Edge #//ConnectorStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardDiagram" eSuperTypes="#//Diagram #//DiagramStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DecorationNode" eSuperTypes="#//BasicDecorationNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicDecorationNode" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicCompartment" eSuperTypes="#//DecorationNode #//DrawerStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicSemanticCompartment" eSuperTypes="#//BasicDecorationNode #//DrawerStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticListCompartment" eSuperTypes="#//BasicSemanticCompartment #//SortingStyle #//FilteringStyle #//TitleStyle"/>
 </ecore:EPackage>

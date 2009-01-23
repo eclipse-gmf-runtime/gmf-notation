@@ -142,6 +142,7 @@ public interface View extends EModelElement {
 	 * <p>
 	 * The property is a list of zero or more outgoing edges from the view
 	 * </p>
+	 * <p><b>Must use only for addition/removal purposes. Otherwise check if feature is set first {@link #eIsSet(org.eclipse.emf.ecore.EStructuralFeature)}</b></p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Edges</em>' reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getView_SourceEdges()
@@ -158,6 +159,7 @@ public interface View extends EModelElement {
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * The property is a list of zero or more incoming edges to the view
+	 * <p><b>Must use only for addition/removal purposes. Otherwise check if feature is set firts {@link #eIsSet(org.eclipse.emf.ecore.EStructuralFeature)}</b></p>
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Edges</em>' reference list.
@@ -210,7 +212,8 @@ public interface View extends EModelElement {
 	 * The list contents are of type {@link org.eclipse.gmf.runtime.notation.Style}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * The list contains unique instances of these styles
+	 * The list contains unique instances of these styles.
+	 * <p><b>Must use {@link #getStyle(EClass)} to access specific style</b></p>
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Styles</em>' containment reference list.

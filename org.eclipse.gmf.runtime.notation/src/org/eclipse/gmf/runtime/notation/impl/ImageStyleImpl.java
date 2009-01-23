@@ -16,6 +16,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.ImageStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -38,7 +39,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public class ImageStyleImpl extends NotationEObjectImpl implements ImageStyle {
+public class ImageStyleImpl extends MinimalEObjectImpl.Container implements ImageStyle {
     /**
 	 * The default value of the '{@link #getAntiAlias() <em>Anti Alias</em>}' attribute.
 	 * <!-- begin-user-doc -->

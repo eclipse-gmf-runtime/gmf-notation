@@ -33,6 +33,13 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class BooleanValueStyleImpl extends NamedStyleImpl implements BooleanValueStyle {
+	
+	/**
+	 * int field to store booleans and enums
+	 * @since 1.2 
+	 */
+	protected int eFlags = 0;
+	
 	/**
 	 * The default value of the '{@link #isBooleanValue() <em>Boolean Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

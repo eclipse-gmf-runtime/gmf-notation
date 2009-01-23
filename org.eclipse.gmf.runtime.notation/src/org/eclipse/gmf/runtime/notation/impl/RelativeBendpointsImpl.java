@@ -17,8 +17,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.ArrayDelegatingEList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
@@ -39,7 +41,7 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 /*
  * @canBeSeenBy %partners
  */
-public class RelativeBendpointsImpl extends NotationEObjectImpl implements RelativeBendpoints {
+public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container implements RelativeBendpoints {
 	/**
 	 * The default value of the '{@link #getPoints() <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,17 +50,17 @@ public class RelativeBendpointsImpl extends NotationEObjectImpl implements Relat
 	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final List POINTS_EDEFAULT = Collections.EMPTY_LIST;
+	protected static final RelativeBendpoint[] POINTS_EDEFAULT = null;
 
     /**
 	 * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPoints()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected List points = POINTS_EDEFAULT;
+	protected RelativeBendpoint[] points = null;
 
     /**
 	 * <!-- begin-user-doc -->
@@ -84,7 +86,14 @@ public class RelativeBendpointsImpl extends NotationEObjectImpl implements Relat
 	 * @generated NOT
 	 */
 	public List getPoints() {
-		return Collections.unmodifiableList(points);
+		List<RelativeBendpoint> list = new ArrayDelegatingEList<RelativeBendpoint>() {
+	        private static final long serialVersionUID = 1L;
+			public Object[] data() {
+				return points;
+			}
+			
+		};
+		return Collections.unmodifiableList(list);
 	}
 
 	/**
@@ -93,25 +102,38 @@ public class RelativeBendpointsImpl extends NotationEObjectImpl implements Relat
 	 * @generated NOT
 	 */
 	public void setPoints(List newPoints) {
-		List oldPoints = points;
+		List<RelativeBendpoint> oldPointsList = Collections.emptyList();
+		if (points != null) {
+			final RelativeBendpoint[] oldPoints = new RelativeBendpoint[points.length];
+			System.arraycopy(points, 0, oldPoints, 0, points.length);
+			List<RelativeBendpoint> list = new ArrayDelegatingEList<RelativeBendpoint>() {
+		        private static final long serialVersionUID = 1L;
+				public Object[] data() {
+					return oldPoints;
+				}
+			};
+		}
 		
 		if (newPoints == null )
 			throw new NullPointerException("the 'newPoints' parameter is null"); //$NON-NLS-1$
-		else if (newPoints.isEmpty())
-			points = POINTS_EDEFAULT;
 		else {
-			List tempList = new ArrayList(newPoints.size());
+			List<RelativeBendpoint> tempList = new ArrayList<RelativeBendpoint>(newPoints.size());
 			for (Iterator i = newPoints.iterator(); i.hasNext();) {
 				Object point = i.next();
 				if (!(point instanceof RelativeBendpoint))
 					throw new IllegalArgumentException("One or more objects in the list is not of type org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint"); //$NON-NLS-1$
-				tempList.add(point);
+				tempList.add((RelativeBendpoint)point);
 			}
-			points = tempList;
+			if (tempList.isEmpty()) {
+				points = POINTS_EDEFAULT;
+			} else {
+				points = new RelativeBendpoint[tempList.size()];
+				points = tempList.toArray(points);
+			}
 		}
 
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS, Collections.unmodifiableList(oldPoints), Collections.unmodifiableList(points)));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS, Collections.unmodifiableList(oldPointsList), getPoints()));
 	}
 
     /**
@@ -144,12 +166,12 @@ public class RelativeBendpointsImpl extends NotationEObjectImpl implements Relat
     /**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
     public void eUnset(int featureID) {
 		switch (featureID) {
 			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				setPoints(POINTS_EDEFAULT);
+				points = POINTS_EDEFAULT;
 				return;
 		}
 		eDynamicUnset(featureID);

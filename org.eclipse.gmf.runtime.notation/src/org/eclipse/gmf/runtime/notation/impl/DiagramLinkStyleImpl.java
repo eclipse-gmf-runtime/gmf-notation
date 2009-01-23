@@ -13,6 +13,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.DiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -30,7 +31,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  *
  * @generated
  */
-public class DiagramLinkStyleImpl extends NotationEObjectImpl implements DiagramLinkStyle {
+public class DiagramLinkStyleImpl extends MinimalEObjectImpl.Container implements DiagramLinkStyle {
 	/**
 	 * The cached value of the '{@link #getDiagramLink() <em>Diagram Link</em>}' reference.
 	 * <!-- begin-user-doc -->

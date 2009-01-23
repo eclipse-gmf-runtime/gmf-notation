@@ -41,7 +41,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @generated
  */
 public class DiagramStyleItemProvider
-	extends EObjectItemProvider
+	extends PageStyleItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -68,101 +68,9 @@ public class DiagramStyleItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPageXPropertyDescriptor(object);
-			addPageYPropertyDescriptor(object);
-			addPageWidthPropertyDescriptor(object);
-			addPageHeightPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-    /**
-	 * This adds a property descriptor for the Page X feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPageXPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PageStyle_pageX_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_PageStyle_pageX_feature", "_UI_PageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.PAGE_STYLE__PAGE_X,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Page Y feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPageYPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PageStyle_pageY_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_PageStyle_pageY_feature", "_UI_PageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.PAGE_STYLE__PAGE_Y,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Page Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPageWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PageStyle_pageWidth_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_PageStyle_pageWidth_feature", "_UI_PageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.PAGE_STYLE__PAGE_WIDTH,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Page Height feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPageHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PageStyle_pageHeight_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_PageStyle_pageHeight_feature", "_UI_PageStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.PAGE_STYLE__PAGE_HEIGHT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
     /**
@@ -248,10 +156,6 @@ public class DiagramStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DiagramStyle.class)) {
-			case NotationPackage.DIAGRAM_STYLE__PAGE_X:
-			case NotationPackage.DIAGRAM_STYLE__PAGE_Y:
-			case NotationPackage.DIAGRAM_STYLE__PAGE_WIDTH:
-			case NotationPackage.DIAGRAM_STYLE__PAGE_HEIGHT:
 			case NotationPackage.DIAGRAM_STYLE__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
@@ -304,16 +208,6 @@ public class DiagramStyleItemProvider
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-				/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

@@ -323,6 +323,46 @@ public class ViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createShape()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicDecorationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createDecorationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createListCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicSemanticCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
+				 NotationFactory.eINSTANCE.createSemanticListCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(NotationPackage.Literals.VIEW__STYLES,
 				 NotationFactory.eINSTANCE.createFillStyle()));
 
@@ -518,8 +558,88 @@ public class ViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createShape()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createBasicCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createListCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createConnector()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createStandardDiagram()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createBasicSemanticCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createSemanticListCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
 				 NotationFactory.eINSTANCE.createNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createShape()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicDecorationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createDecorationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createListCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createBasicSemanticCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN,
+				 NotationFactory.eINSTANCE.createSemanticListCompartment()));
 	}
 
     /**
@@ -534,7 +654,8 @@ public class ViewItemProvider
 
 		boolean qualify =
 			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
-			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN;
+			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
+			childFeature == NotationPackage.Literals.VIEW__STYLES;
 
 		if (qualify) {
 			return getString

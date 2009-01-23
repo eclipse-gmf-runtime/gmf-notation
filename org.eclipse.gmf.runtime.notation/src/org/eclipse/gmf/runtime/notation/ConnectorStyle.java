@@ -30,6 +30,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface ConnectorStyle extends EObject, RoutingStyle, LineStyle {
+public interface ConnectorStyle extends RoutingStyle, LineStyle {
 	// no default API
 } // ConnectorStyle

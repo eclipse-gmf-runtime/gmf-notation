@@ -570,6 +570,141 @@ public class NotationSwitch {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case NotationPackage.SHAPE: {
+				Shape shape = (Shape)theEObject;
+				Object result = caseShape(shape);
+				if (result == null) result = caseNode(shape);
+				if (result == null) result = caseShapeStyle(shape);
+				if (result == null) result = caseView(shape);
+				if (result == null) result = caseFontStyle(shape);
+				if (result == null) result = caseDescriptionStyle(shape);
+				if (result == null) result = caseFillStyle(shape);
+				if (result == null) result = caseLineStyle(shape);
+				if (result == null) result = caseEModelElement(shape);
+				if (result == null) result = caseStyle(shape);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.COMPARTMENT: {
+				Compartment compartment = (Compartment)theEObject;
+				Object result = caseCompartment(compartment);
+				if (result == null) result = caseBasicCompartment(compartment);
+				if (result == null) result = caseCanonicalStyle(compartment);
+				if (result == null) result = caseTitleStyle(compartment);
+				if (result == null) result = caseDecorationNode(compartment);
+				if (result == null) result = caseDrawerStyle(compartment);
+				if (result == null) result = caseStyle(compartment);
+				if (result == null) result = caseBasicDecorationNode(compartment);
+				if (result == null) result = caseNode(compartment);
+				if (result == null) result = caseView(compartment);
+				if (result == null) result = caseEModelElement(compartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.LIST_COMPARTMENT: {
+				ListCompartment listCompartment = (ListCompartment)theEObject;
+				Object result = caseListCompartment(listCompartment);
+				if (result == null) result = caseBasicCompartment(listCompartment);
+				if (result == null) result = caseSortingStyle(listCompartment);
+				if (result == null) result = caseFilteringStyle(listCompartment);
+				if (result == null) result = caseTitleStyle(listCompartment);
+				if (result == null) result = caseDecorationNode(listCompartment);
+				if (result == null) result = caseDrawerStyle(listCompartment);
+				if (result == null) result = caseStyle(listCompartment);
+				if (result == null) result = caseBasicDecorationNode(listCompartment);
+				if (result == null) result = caseNode(listCompartment);
+				if (result == null) result = caseView(listCompartment);
+				if (result == null) result = caseEModelElement(listCompartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.CONNECTOR: {
+				Connector connector = (Connector)theEObject;
+				Object result = caseConnector(connector);
+				if (result == null) result = caseEdge(connector);
+				if (result == null) result = caseConnectorStyle(connector);
+				if (result == null) result = caseView(connector);
+				if (result == null) result = caseRoutingStyle(connector);
+				if (result == null) result = caseLineStyle(connector);
+				if (result == null) result = caseEModelElement(connector);
+				if (result == null) result = caseStyle(connector);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.STANDARD_DIAGRAM: {
+				StandardDiagram standardDiagram = (StandardDiagram)theEObject;
+				Object result = caseStandardDiagram(standardDiagram);
+				if (result == null) result = caseDiagram(standardDiagram);
+				if (result == null) result = caseDiagramStyle(standardDiagram);
+				if (result == null) result = caseView(standardDiagram);
+				if (result == null) result = casePageStyle(standardDiagram);
+				if (result == null) result = caseGuideStyle(standardDiagram);
+				if (result == null) result = caseDescriptionStyle(standardDiagram);
+				if (result == null) result = caseEModelElement(standardDiagram);
+				if (result == null) result = caseStyle(standardDiagram);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.DECORATION_NODE: {
+				DecorationNode decorationNode = (DecorationNode)theEObject;
+				Object result = caseDecorationNode(decorationNode);
+				if (result == null) result = caseBasicDecorationNode(decorationNode);
+				if (result == null) result = caseNode(decorationNode);
+				if (result == null) result = caseView(decorationNode);
+				if (result == null) result = caseEModelElement(decorationNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.BASIC_DECORATION_NODE: {
+				BasicDecorationNode basicDecorationNode = (BasicDecorationNode)theEObject;
+				Object result = caseBasicDecorationNode(basicDecorationNode);
+				if (result == null) result = caseNode(basicDecorationNode);
+				if (result == null) result = caseView(basicDecorationNode);
+				if (result == null) result = caseEModelElement(basicDecorationNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.BASIC_COMPARTMENT: {
+				BasicCompartment basicCompartment = (BasicCompartment)theEObject;
+				Object result = caseBasicCompartment(basicCompartment);
+				if (result == null) result = caseDecorationNode(basicCompartment);
+				if (result == null) result = caseDrawerStyle(basicCompartment);
+				if (result == null) result = caseBasicDecorationNode(basicCompartment);
+				if (result == null) result = caseStyle(basicCompartment);
+				if (result == null) result = caseNode(basicCompartment);
+				if (result == null) result = caseView(basicCompartment);
+				if (result == null) result = caseEModelElement(basicCompartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.BASIC_SEMANTIC_COMPARTMENT: {
+				BasicSemanticCompartment basicSemanticCompartment = (BasicSemanticCompartment)theEObject;
+				Object result = caseBasicSemanticCompartment(basicSemanticCompartment);
+				if (result == null) result = caseBasicDecorationNode(basicSemanticCompartment);
+				if (result == null) result = caseDrawerStyle(basicSemanticCompartment);
+				if (result == null) result = caseNode(basicSemanticCompartment);
+				if (result == null) result = caseStyle(basicSemanticCompartment);
+				if (result == null) result = caseView(basicSemanticCompartment);
+				if (result == null) result = caseEModelElement(basicSemanticCompartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.SEMANTIC_LIST_COMPARTMENT: {
+				SemanticListCompartment semanticListCompartment = (SemanticListCompartment)theEObject;
+				Object result = caseSemanticListCompartment(semanticListCompartment);
+				if (result == null) result = caseBasicSemanticCompartment(semanticListCompartment);
+				if (result == null) result = caseSortingStyle(semanticListCompartment);
+				if (result == null) result = caseFilteringStyle(semanticListCompartment);
+				if (result == null) result = caseTitleStyle(semanticListCompartment);
+				if (result == null) result = caseBasicDecorationNode(semanticListCompartment);
+				if (result == null) result = caseDrawerStyle(semanticListCompartment);
+				if (result == null) result = caseStyle(semanticListCompartment);
+				if (result == null) result = caseNode(semanticListCompartment);
+				if (result == null) result = caseView(semanticListCompartment);
+				if (result == null) result = caseEModelElement(semanticListCompartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1456,6 +1591,166 @@ public class NotationSwitch {
 	 * @generated
 	 */
 	public Object caseArrowStyle(ArrowStyle object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Shape</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Shape</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseShape(Shape object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Compartment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseCompartment(Compartment object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Compartment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseListCompartment(ListCompartment object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseConnector(Connector object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Standard Diagram</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Standard Diagram</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseStandardDiagram(StandardDiagram object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Decoration Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Decoration Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseDecorationNode(DecorationNode object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic Decoration Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic Decoration Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseBasicDecorationNode(BasicDecorationNode object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic Compartment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseBasicCompartment(BasicCompartment object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic Semantic Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic Semantic Compartment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseBasicSemanticCompartment(BasicSemanticCompartment object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Semantic List Compartment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Semantic List Compartment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 1.2
+	 */
+	public Object caseSemanticListCompartment(SemanticListCompartment object) {
 		return null;
 	}
 

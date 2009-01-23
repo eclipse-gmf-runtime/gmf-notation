@@ -289,6 +289,36 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 			public Object caseArrowStyle(ArrowStyle object) {
 				return createArrowStyleAdapter();
 			}
+			public Object caseShape(Shape object) {
+				return createShapeAdapter();
+			}
+			public Object caseCompartment(Compartment object) {
+				return createCompartmentAdapter();
+			}
+			public Object caseListCompartment(ListCompartment object) {
+				return createListCompartmentAdapter();
+			}
+			public Object caseConnector(Connector object) {
+				return createConnectorAdapter();
+			}
+			public Object caseStandardDiagram(StandardDiagram object) {
+				return createStandardDiagramAdapter();
+			}
+			public Object caseDecorationNode(DecorationNode object) {
+				return createDecorationNodeAdapter();
+			}
+			public Object caseBasicDecorationNode(BasicDecorationNode object) {
+				return createBasicDecorationNodeAdapter();
+			}
+			public Object caseBasicCompartment(BasicCompartment object) {
+				return createBasicCompartmentAdapter();
+			}
+			public Object caseBasicSemanticCompartment(BasicSemanticCompartment object) {
+				return createBasicSemanticCompartmentAdapter();
+			}
+			public Object caseSemanticListCompartment(SemanticListCompartment object) {
+				return createSemanticListCompartmentAdapter();
+			}
 			public Object caseEModelElement(EModelElement object) {
 				return createEModelElementAdapter();
 			}
@@ -1133,6 +1163,156 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArrowStyleAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Shape <em>Shape</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.Shape
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createShapeAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Compartment <em>Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.Compartment
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createCompartmentAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.ListCompartment <em>List Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.ListCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createListCompartmentAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.Connector <em>Connector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.Connector
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createConnectorAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.StandardDiagram <em>Standard Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.StandardDiagram
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createStandardDiagramAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.DecorationNode <em>Decoration Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.DecorationNode
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createDecorationNodeAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.BasicDecorationNode <em>Basic Decoration Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.BasicDecorationNode
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createBasicDecorationNodeAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.BasicCompartment <em>Basic Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.BasicCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createBasicCompartmentAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.BasicSemanticCompartment <em>Basic Semantic Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.BasicSemanticCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createBasicSemanticCompartmentAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.SemanticListCompartment <em>Semantic List Compartment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.SemanticListCompartment
+	 * @generated
+	 * @since 1.2
+	 */
+	public Adapter createSemanticListCompartmentAdapter() {
 		return null;
 	}
 

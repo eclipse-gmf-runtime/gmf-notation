@@ -26,8 +26,6 @@ import org.eclipse.gmf.runtime.notation.DiagramStyle;
 import org.eclipse.gmf.runtime.notation.Guide;
 import org.eclipse.gmf.runtime.notation.GuideStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
-import org.eclipse.gmf.runtime.notation.PageStyle;
-import org.eclipse.gmf.runtime.notation.Style;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,10 +34,6 @@ import org.eclipse.gmf.runtime.notation.Style;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageX <em>Page X</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageY <em>Page Y</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageWidth <em>Page Width</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getPageHeight <em>Page Height</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getHorizontalGuides <em>Horizontal Guides</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getVerticalGuides <em>Vertical Guides</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DiagramStyleImpl#getDescription <em>Description</em>}</li>
@@ -51,88 +45,9 @@ import org.eclipse.gmf.runtime.notation.Style;
 /*
  * @canBeSeenBy %partners
  */
-public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyle {
-    /**
-	 * The default value of the '{@link #getPageX() <em>Page X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PAGE_X_EDEFAULT = 0;
-
+public class DiagramStyleImpl extends PageStyleImpl implements DiagramStyle {
+	
 	/**
-	 * The cached value of the '{@link #getPageX() <em>Page X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageX()
-	 * @generated
-	 * @ordered
-	 */
-	protected int pageX = PAGE_X_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPageY() <em>Page Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PAGE_Y_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPageY() <em>Page Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageY()
-	 * @generated
-	 * @ordered
-	 */
-	protected int pageY = PAGE_Y_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPageWidth() <em>Page Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageWidth()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PAGE_WIDTH_EDEFAULT = 100;
-
-	/**
-	 * The cached value of the '{@link #getPageWidth() <em>Page Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageWidth()
-	 * @generated
-	 * @ordered
-	 */
-	protected int pageWidth = PAGE_WIDTH_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPageHeight() <em>Page Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PAGE_HEIGHT_EDEFAULT = 100;
-
-	/**
-	 * The cached value of the '{@link #getPageHeight() <em>Page Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPageHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected int pageHeight = PAGE_HEIGHT_EDEFAULT;
-
-				/**
 	 * The cached value of the '{@link #getHorizontalGuides() <em>Horizontal Guides</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,90 +106,6 @@ public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyl
 	}
 
     /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPageX() {
-		return pageX;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPageX(int newPageX) {
-		int oldPageX = pageX;
-		pageX = newPageX;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM_STYLE__PAGE_X, oldPageX, pageX));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPageY() {
-		return pageY;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPageY(int newPageY) {
-		int oldPageY = pageY;
-		pageY = newPageY;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM_STYLE__PAGE_Y, oldPageY, pageY));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPageWidth() {
-		return pageWidth;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPageWidth(int newPageWidth) {
-		int oldPageWidth = pageWidth;
-		pageWidth = newPageWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM_STYLE__PAGE_WIDTH, oldPageWidth, pageWidth));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPageHeight() {
-		return pageHeight;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPageHeight(int newPageHeight) {
-		int oldPageHeight = pageHeight;
-		pageHeight = newPageHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM_STYLE__PAGE_HEIGHT, oldPageHeight, pageHeight));
-	}
-
-				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -456,20 +287,6 @@ public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyl
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == Style.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == PageStyle.class) {
-			switch (derivedFeatureID) {
-				case NotationPackage.DIAGRAM_STYLE__PAGE_X: return NotationPackage.PAGE_STYLE__PAGE_X;
-				case NotationPackage.DIAGRAM_STYLE__PAGE_Y: return NotationPackage.PAGE_STYLE__PAGE_Y;
-				case NotationPackage.DIAGRAM_STYLE__PAGE_WIDTH: return NotationPackage.PAGE_STYLE__PAGE_WIDTH;
-				case NotationPackage.DIAGRAM_STYLE__PAGE_HEIGHT: return NotationPackage.PAGE_STYLE__PAGE_HEIGHT;
-				default: return -1;
-			}
-		}
 		if (baseClass == GuideStyle.class) {
 			switch (derivedFeatureID) {
 				case NotationPackage.DIAGRAM_STYLE__HORIZONTAL_GUIDES: return NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES;
@@ -492,20 +309,6 @@ public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyl
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == Style.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == PageStyle.class) {
-			switch (baseFeatureID) {
-				case NotationPackage.PAGE_STYLE__PAGE_X: return NotationPackage.DIAGRAM_STYLE__PAGE_X;
-				case NotationPackage.PAGE_STYLE__PAGE_Y: return NotationPackage.DIAGRAM_STYLE__PAGE_Y;
-				case NotationPackage.PAGE_STYLE__PAGE_WIDTH: return NotationPackage.DIAGRAM_STYLE__PAGE_WIDTH;
-				case NotationPackage.PAGE_STYLE__PAGE_HEIGHT: return NotationPackage.DIAGRAM_STYLE__PAGE_HEIGHT;
-				default: return -1;
-			}
-		}
 		if (baseClass == GuideStyle.class) {
 			switch (baseFeatureID) {
 				case NotationPackage.GUIDE_STYLE__HORIZONTAL_GUIDES: return NotationPackage.DIAGRAM_STYLE__HORIZONTAL_GUIDES;
@@ -531,15 +334,7 @@ public class DiagramStyleImpl extends NotationEObjectImpl implements DiagramStyl
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (pageX: "); //$NON-NLS-1$
-		result.append(pageX);
-		result.append(", pageY: "); //$NON-NLS-1$
-		result.append(pageY);
-		result.append(", pageWidth: "); //$NON-NLS-1$
-		result.append(pageWidth);
-		result.append(", pageHeight: "); //$NON-NLS-1$
-		result.append(pageHeight);
-		result.append(", description: "); //$NON-NLS-1$
+		result.append(" (description: "); //$NON-NLS-1$
 		result.append(description);
 		result.append(')');
 		return result.toString();

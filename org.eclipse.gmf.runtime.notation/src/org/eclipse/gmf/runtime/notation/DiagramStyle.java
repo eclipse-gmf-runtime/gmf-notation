@@ -26,6 +26,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface DiagramStyle extends EObject, PageStyle, GuideStyle, DescriptionStyle {
+public interface DiagramStyle extends PageStyle, GuideStyle, DescriptionStyle {
 	// this style group the PageStyle,GuideStyle and DescriptionStyle
 } // DiagramStyle

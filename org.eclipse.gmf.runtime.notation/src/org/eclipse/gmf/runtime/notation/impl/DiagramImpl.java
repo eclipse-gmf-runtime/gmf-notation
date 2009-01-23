@@ -84,14 +84,44 @@ public class DiagramImpl
 	protected static final MeasurementUnit MEASUREMENT_UNIT_EDEFAULT = MeasurementUnit.HIMETRIC_LITERAL;
 
 				/**
-	 * The cached value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+	 * The offset of the flags representing the value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	protected static final int MEASUREMENT_UNIT_EFLAG_OFFSET = 11;
+
+				/**
+	 * The flags representing the default value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 1.2
+	 */
+	protected static final int MEASUREMENT_UNIT_EFLAG_DEFAULT = MeasurementUnit.VALUES.indexOf(MEASUREMENT_UNIT_EDEFAULT) << MEASUREMENT_UNIT_EFLAG_OFFSET;
+
+				/**
+	 * The array of enumeration values for '{@link MeasurementUnit Measurement Unit}'
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	private static final MeasurementUnit[] MEASUREMENT_UNIT_EFLAG_VALUES = (MeasurementUnit[])MeasurementUnit.VALUES.toArray(new MeasurementUnit[MeasurementUnit.VALUES.size()]);
+
+				/**
+	 * The flag representing the value of the '{@link #getMeasurementUnit() <em>Measurement Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMeasurementUnit()
 	 * @generated
 	 * @ordered
+	 * @since 1.2
 	 */
-	protected MeasurementUnit measurementUnit = MEASUREMENT_UNIT_EDEFAULT;
+	protected static final int MEASUREMENT_UNIT_EFLAG = 1 << MEASUREMENT_UNIT_EFLAG_OFFSET;
 
 				/**
 	 * The flag representing whether the Measurement Unit attribute has been set.
@@ -100,7 +130,7 @@ public class DiagramImpl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MEASUREMENT_UNIT_ESETFLAG = 1 << 11;
+	protected static final int MEASUREMENT_UNIT_ESETFLAG = 1 << 12;
 
 				/**
 	 * The cached value of the '{@link #getPersistedEdges() <em>Persisted Edges</em>}' containment reference list.
@@ -167,7 +197,7 @@ public class DiagramImpl
 	 * @generated
 	 */
 	public MeasurementUnit getMeasurementUnit() {
-		return measurementUnit;
+		return MEASUREMENT_UNIT_EFLAG_VALUES[(eFlags & MEASUREMENT_UNIT_EFLAG) >>> MEASUREMENT_UNIT_EFLAG_OFFSET];
 	}
 
 				/**
@@ -177,8 +207,8 @@ public class DiagramImpl
      */
     public void setMeasurementUnit(MeasurementUnit newMeasurementUnit) {
         if (!isSetMeasurementUnit()) {
-            MeasurementUnit oldMeasurementUnit = measurementUnit;
-            measurementUnit = newMeasurementUnit == null ? MEASUREMENT_UNIT_EDEFAULT
+            MeasurementUnit oldMeasurementUnit = getMeasurementUnit();
+            MeasurementUnit measurementUnit = newMeasurementUnit == null ? MEASUREMENT_UNIT_EDEFAULT
                 : newMeasurementUnit;
             boolean oldMeasurementUnitESet = (eFlags & MEASUREMENT_UNIT_ESETFLAG) != 0;
             eFlags |= MEASUREMENT_UNIT_ESETFLAG;
@@ -187,15 +217,15 @@ public class DiagramImpl
                     NotationPackage.DIAGRAM__MEASUREMENT_UNIT,
                     oldMeasurementUnit, measurementUnit,
                     !oldMeasurementUnitESet));
-        } else
-            throw new UnsupportedOperationException();
+        } /*else
+            throw new UnsupportedOperationException();*/
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void unsetMeasurementUnit() {
-        throw new UnsupportedOperationException();
+        /*throw new UnsupportedOperationException();*/
     }
 
     /**
@@ -480,7 +510,7 @@ public class DiagramImpl
 		result.append(" (name: "); //$NON-NLS-1$
 		result.append(name);
 		result.append(", measurementUnit: "); //$NON-NLS-1$
-		if ((eFlags & MEASUREMENT_UNIT_ESETFLAG) != 0) result.append(measurementUnit); else result.append("<unset>"); //$NON-NLS-1$
+		if ((eFlags & MEASUREMENT_UNIT_ESETFLAG) != 0) result.append(MEASUREMENT_UNIT_EFLAG_VALUES[(eFlags & MEASUREMENT_UNIT_EFLAG) >>> MEASUREMENT_UNIT_EFLAG_OFFSET]); else result.append("<unset>"); //$NON-NLS-1$
 		result.append(')');
 		return result.toString();
 	}

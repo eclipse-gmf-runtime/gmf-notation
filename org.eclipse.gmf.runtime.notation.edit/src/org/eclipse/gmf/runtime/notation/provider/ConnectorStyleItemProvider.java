@@ -40,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.Routing;
  * @generated
  */
 public class ConnectorStyleItemProvider
-	extends EObjectItemProvider
+	extends RoutingStyleItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -67,171 +67,10 @@ public class ConnectorStyleItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRoutingPropertyDescriptor(object);
-			addSmoothnessPropertyDescriptor(object);
-			addAvoidObstructionsPropertyDescriptor(object);
-			addClosestDistancePropertyDescriptor(object);
-			addJumpLinkStatusPropertyDescriptor(object);
-			addJumpLinkTypePropertyDescriptor(object);
-			addJumpLinksReversePropertyDescriptor(object);
 			addLineColorPropertyDescriptor(object);
 			addLineWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-    /**
-	 * This adds a property descriptor for the Routing feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRoutingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_routing_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_routing_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__ROUTING,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Smoothness feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSmoothnessPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_smoothness_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_smoothness_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__SMOOTHNESS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Avoid Obstructions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAvoidObstructionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_avoidObstructions_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_avoidObstructions_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__AVOID_OBSTRUCTIONS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Closest Distance feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addClosestDistancePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_closestDistance_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_closestDistance_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__CLOSEST_DISTANCE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Jump Link Status feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addJumpLinkStatusPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_jumpLinkStatus_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinkStatus_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__JUMP_LINK_STATUS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Jump Link Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addJumpLinkTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_jumpLinkType_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinkType_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__JUMP_LINK_TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-    /**
-	 * This adds a property descriptor for the Jump Links Reverse feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addJumpLinksReversePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_jumpLinksReverse_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_jumpLinksReverse_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__JUMP_LINKS_REVERSE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
     /**
@@ -313,13 +152,6 @@ public class ConnectorStyleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectorStyle.class)) {
-			case NotationPackage.CONNECTOR_STYLE__ROUTING:
-			case NotationPackage.CONNECTOR_STYLE__SMOOTHNESS:
-			case NotationPackage.CONNECTOR_STYLE__AVOID_OBSTRUCTIONS:
-			case NotationPackage.CONNECTOR_STYLE__CLOSEST_DISTANCE:
-			case NotationPackage.CONNECTOR_STYLE__JUMP_LINK_STATUS:
-			case NotationPackage.CONNECTOR_STYLE__JUMP_LINK_TYPE:
-			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -337,16 +169,6 @@ public class ConnectorStyleItemProvider
 	 */
 	protected void collectNewChildDescriptors(Collection newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-    /**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResourceLocator getResourceLocator() {
-		return NotationEditPlugin.INSTANCE;
 	}
 
 }

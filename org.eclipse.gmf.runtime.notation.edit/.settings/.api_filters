@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="org.eclipse.gmf.runtime.notation.edit" version="2">
+    <resource path="src/org/eclipse/gmf/runtime/notation/provider/DiagramStyleItemProvider.java" type="org.eclipse.gmf.runtime.notation.provider.DiagramStyleItemProvider">
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.gmf.runtime.notation.provider.DiagramStyleItemProvider"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/gmf/runtime/notation/provider/ShapeStyleItemProvider.java" type="org.eclipse.gmf.runtime.notation.provider.ShapeStyleItemProvider">
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.gmf.runtime.notation.provider.ShapeStyleItemProvider"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="META-INF/MANIFEST.MF">
+        <filter id="924844039">
+            <message_arguments>
+                <message_argument value="1.2.0.qualifier"/>
+                <message_argument value="1.2.0.v20081119-1650"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/gmf/runtime/notation/provider/ConnectorStyleItemProvider.java" type="org.eclipse.gmf.runtime.notation.provider.ConnectorStyleItemProvider">
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.gmf.runtime.notation.provider.ConnectorStyleItemProvider"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

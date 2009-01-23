@@ -28,14 +28,20 @@ import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.Anchor;
 import org.eclipse.gmf.runtime.notation.ArrowStyle;
 import org.eclipse.gmf.runtime.notation.ArrowType;
+import org.eclipse.gmf.runtime.notation.BasicCompartment;
+import org.eclipse.gmf.runtime.notation.BasicDecorationNode;
+import org.eclipse.gmf.runtime.notation.BasicSemanticCompartment;
 import org.eclipse.gmf.runtime.notation.Bendpoints;
 import org.eclipse.gmf.runtime.notation.BooleanListValueStyle;
 import org.eclipse.gmf.runtime.notation.BooleanValueStyle;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.ByteArrayValueStyle;
 import org.eclipse.gmf.runtime.notation.CanonicalStyle;
+import org.eclipse.gmf.runtime.notation.Compartment;
+import org.eclipse.gmf.runtime.notation.Connector;
 import org.eclipse.gmf.runtime.notation.ConnectorStyle;
 import org.eclipse.gmf.runtime.notation.DataTypeStyle;
+import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.DiagramLinkStyle;
@@ -65,6 +71,7 @@ import org.eclipse.gmf.runtime.notation.LayoutConstraint;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.LineType;
 import org.eclipse.gmf.runtime.notation.LineTypeStyle;
+import org.eclipse.gmf.runtime.notation.ListCompartment;
 import org.eclipse.gmf.runtime.notation.ListValueStyle;
 import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
@@ -80,6 +87,8 @@ import org.eclipse.gmf.runtime.notation.Ratio;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.RoutingStyle;
+import org.eclipse.gmf.runtime.notation.SemanticListCompartment;
+import org.eclipse.gmf.runtime.notation.Shape;
 import org.eclipse.gmf.runtime.notation.ShapeStyle;
 import org.eclipse.gmf.runtime.notation.SingleValueStyle;
 import org.eclipse.gmf.runtime.notation.Size;
@@ -87,6 +96,7 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
 import org.eclipse.gmf.runtime.notation.Sorting;
 import org.eclipse.gmf.runtime.notation.SortingDirection;
 import org.eclipse.gmf.runtime.notation.SortingStyle;
+import org.eclipse.gmf.runtime.notation.StandardDiagram;
 import org.eclipse.gmf.runtime.notation.StringListValueStyle;
 import org.eclipse.gmf.runtime.notation.StringObjectConverter;
 import org.eclipse.gmf.runtime.notation.StringValueStyle;
@@ -515,6 +525,76 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EClass arrowStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass shapeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compartmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listCompartmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass standardDiagramEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass decorationNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicDecorationNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicCompartmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicSemanticCompartmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass semanticListCompartmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2091,6 +2171,106 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getShape() {
+		return shapeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getCompartment() {
+		return compartmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getListCompartment() {
+		return listCompartmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getConnector() {
+		return connectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getStandardDiagram() {
+		return standardDiagramEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getDecorationNode() {
+		return decorationNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getBasicDecorationNode() {
+		return basicDecorationNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getBasicCompartment() {
+		return basicCompartmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getBasicSemanticCompartment() {
+		return basicSemanticCompartmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 1.2
+	 */
+	public EClass getSemanticListCompartment() {
+		return semanticListCompartmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public EEnum getSorting() {
 		return sortingEEnum;
@@ -2464,6 +2644,26 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_SOURCE);
 		createEAttribute(arrowStyleEClass, ARROW_STYLE__ARROW_TARGET);
 
+		shapeEClass = createEClass(SHAPE);
+
+		compartmentEClass = createEClass(COMPARTMENT);
+
+		listCompartmentEClass = createEClass(LIST_COMPARTMENT);
+
+		connectorEClass = createEClass(CONNECTOR);
+
+		standardDiagramEClass = createEClass(STANDARD_DIAGRAM);
+
+		decorationNodeEClass = createEClass(DECORATION_NODE);
+
+		basicDecorationNodeEClass = createEClass(BASIC_DECORATION_NODE);
+
+		basicCompartmentEClass = createEClass(BASIC_COMPARTMENT);
+
+		basicSemanticCompartmentEClass = createEClass(BASIC_SEMANTIC_COMPARTMENT);
+
+		semanticListCompartmentEClass = createEClass(SEMANTIC_LIST_COMPARTMENT);
+
 		// Create enums
 		sortingEEnum = createEEnum(SORTING);
 		filteringEEnum = createEEnum(FILTERING);
@@ -2530,19 +2730,16 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		relativeBendpointsEClass.getESuperTypes().add(this.getBendpoints());
 		diagramEClass.getESuperTypes().add(this.getView());
 		canonicalStyleEClass.getESuperTypes().add(this.getStyle());
-		shapeStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		shapeStyleEClass.getESuperTypes().add(this.getFontStyle());
 		shapeStyleEClass.getESuperTypes().add(this.getDescriptionStyle());
 		shapeStyleEClass.getESuperTypes().add(this.getFillStyle());
 		shapeStyleEClass.getESuperTypes().add(this.getLineStyle());
-		connectorStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		connectorStyleEClass.getESuperTypes().add(this.getRoutingStyle());
 		connectorStyleEClass.getESuperTypes().add(this.getLineStyle());
 		pageStyleEClass.getESuperTypes().add(this.getStyle());
 		drawerStyleEClass.getESuperTypes().add(this.getStyle());
 		guideStyleEClass.getESuperTypes().add(this.getStyle());
 		filteringStyleEClass.getESuperTypes().add(this.getStyle());
-		diagramStyleEClass.getESuperTypes().add(theEcorePackage.getEObject());
 		diagramStyleEClass.getESuperTypes().add(this.getPageStyle());
 		diagramStyleEClass.getESuperTypes().add(this.getGuideStyle());
 		diagramStyleEClass.getESuperTypes().add(this.getDescriptionStyle());
@@ -2573,6 +2770,29 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		textStyleEClass.getESuperTypes().add(this.getStyle());
 		lineTypeStyleEClass.getESuperTypes().add(this.getStyle());
 		arrowStyleEClass.getESuperTypes().add(this.getStyle());
+		shapeEClass.getESuperTypes().add(this.getNode());
+		shapeEClass.getESuperTypes().add(this.getShapeStyle());
+		compartmentEClass.getESuperTypes().add(this.getBasicCompartment());
+		compartmentEClass.getESuperTypes().add(this.getCanonicalStyle());
+		compartmentEClass.getESuperTypes().add(this.getTitleStyle());
+		listCompartmentEClass.getESuperTypes().add(this.getBasicCompartment());
+		listCompartmentEClass.getESuperTypes().add(this.getSortingStyle());
+		listCompartmentEClass.getESuperTypes().add(this.getFilteringStyle());
+		listCompartmentEClass.getESuperTypes().add(this.getTitleStyle());
+		connectorEClass.getESuperTypes().add(this.getEdge());
+		connectorEClass.getESuperTypes().add(this.getConnectorStyle());
+		standardDiagramEClass.getESuperTypes().add(this.getDiagram());
+		standardDiagramEClass.getESuperTypes().add(this.getDiagramStyle());
+		decorationNodeEClass.getESuperTypes().add(this.getBasicDecorationNode());
+		basicDecorationNodeEClass.getESuperTypes().add(this.getNode());
+		basicCompartmentEClass.getESuperTypes().add(this.getDecorationNode());
+		basicCompartmentEClass.getESuperTypes().add(this.getDrawerStyle());
+		basicSemanticCompartmentEClass.getESuperTypes().add(this.getBasicDecorationNode());
+		basicSemanticCompartmentEClass.getESuperTypes().add(this.getDrawerStyle());
+		semanticListCompartmentEClass.getESuperTypes().add(this.getBasicSemanticCompartment());
+		semanticListCompartmentEClass.getESuperTypes().add(this.getSortingStyle());
+		semanticListCompartmentEClass.getESuperTypes().add(this.getFilteringStyle());
+		semanticListCompartmentEClass.getESuperTypes().add(this.getTitleStyle());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
@@ -2888,6 +3108,26 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEClass(arrowStyleEClass, ArrowStyle.class, "ArrowStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getArrowStyle_ArrowSource(), this.getArrowType(), "arrowSource", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getArrowStyle_ArrowTarget(), this.getArrowType(), "arrowTarget", "None", 0, 1, ArrowStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+
+		initEClass(shapeEClass, Shape.class, "Shape", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(compartmentEClass, Compartment.class, "Compartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(listCompartmentEClass, ListCompartment.class, "ListCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(connectorEClass, Connector.class, "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(standardDiagramEClass, StandardDiagram.class, "StandardDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(decorationNodeEClass, DecorationNode.class, "DecorationNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(basicDecorationNodeEClass, BasicDecorationNode.class, "BasicDecorationNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(basicCompartmentEClass, BasicCompartment.class, "BasicCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(basicSemanticCompartmentEClass, BasicSemanticCompartment.class, "BasicSemanticCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(semanticListCompartmentEClass, SemanticListCompartment.class, "SemanticListCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$
