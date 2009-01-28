@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -33,7 +33,6 @@ import org.eclipse.emf.ecore.EcorePackage;
  * @see org.eclipse.gmf.runtime.notation.NotationFactory
  * @model kind="package"
  * @generated
- * @since 1.2
  */
 public interface NotationPackage extends EPackage {
 	/**
@@ -1060,13 +1059,22 @@ public interface NotationPackage extends EPackage {
 	int ROUTING_STYLE__JUMP_LINKS_REVERSE = STYLE_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = STYLE_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Routing Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 7;
+	int ROUTING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl <em>Relative Bendpoints</em>}' class.
@@ -1496,6 +1504,15 @@ public interface NotationPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = ROUTING_STYLE__JUMP_LINKS_REVERSE;
+
+	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS = ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -2834,7 +2851,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.ShapeImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getShape()
 	 * @generated
-	 * @since 1.2
 	 */
 	int SHAPE = 59;
 
@@ -2844,7 +2860,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__EANNOTATIONS = NODE__EANNOTATIONS;
 
@@ -2854,7 +2869,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__VISIBLE = NODE__VISIBLE;
 
@@ -2864,7 +2878,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__TYPE = NODE__TYPE;
 
@@ -2874,7 +2887,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__MUTABLE = NODE__MUTABLE;
 
@@ -2884,7 +2896,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__SOURCE_EDGES = NODE__SOURCE_EDGES;
 
@@ -2894,7 +2905,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__TARGET_EDGES = NODE__TARGET_EDGES;
 
@@ -2904,7 +2914,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__PERSISTED_CHILDREN = NODE__PERSISTED_CHILDREN;
 
@@ -2914,7 +2923,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__STYLES = NODE__STYLES;
 
@@ -2924,7 +2932,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__ELEMENT = NODE__ELEMENT;
 
@@ -2934,7 +2941,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__DIAGRAM = NODE__DIAGRAM;
 
@@ -2944,7 +2950,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__TRANSIENT_CHILDREN = NODE__TRANSIENT_CHILDREN;
 
@@ -2954,7 +2959,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__LAYOUT_CONSTRAINT = NODE__LAYOUT_CONSTRAINT;
 
@@ -2964,7 +2968,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__FONT_COLOR = NODE_FEATURE_COUNT + 0;
 
@@ -2974,7 +2977,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__FONT_NAME = NODE_FEATURE_COUNT + 1;
 
@@ -2984,7 +2986,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__FONT_HEIGHT = NODE_FEATURE_COUNT + 2;
 
@@ -2994,7 +2995,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__BOLD = NODE_FEATURE_COUNT + 3;
 
@@ -3004,7 +3004,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__ITALIC = NODE_FEATURE_COUNT + 4;
 
@@ -3014,7 +3013,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__UNDERLINE = NODE_FEATURE_COUNT + 5;
 
@@ -3024,7 +3022,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__STRIKE_THROUGH = NODE_FEATURE_COUNT + 6;
 
@@ -3034,7 +3031,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__DESCRIPTION = NODE_FEATURE_COUNT + 7;
 
@@ -3044,17 +3040,14 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__FILL_COLOR = NODE_FEATURE_COUNT + 8;
-
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__LINE_COLOR = NODE_FEATURE_COUNT + 9;
 
@@ -3064,7 +3057,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE__LINE_WIDTH = NODE_FEATURE_COUNT + 10;
 
@@ -3074,7 +3066,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 11;
 
@@ -3085,7 +3076,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.CompartmentImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getCompartment()
 	 * @generated
-	 * @since 1.2
 	 */
 	int COMPARTMENT = 60;
 
@@ -3096,7 +3086,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getListCompartment()
 	 * @generated
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT = 61;
 
@@ -3107,7 +3096,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.ConnectorImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getConnector()
 	 * @generated
-	 * @since 1.2
 	 */
 	int CONNECTOR = 62;
 
@@ -3118,7 +3106,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getStandardDiagram()
 	 * @generated
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM = 63;
 
@@ -3129,7 +3116,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicDecorationNode()
 	 * @generated
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE = 65;
 
@@ -3139,7 +3125,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__EANNOTATIONS = NODE__EANNOTATIONS;
 
@@ -3149,7 +3134,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__VISIBLE = NODE__VISIBLE;
 
@@ -3159,7 +3143,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__TYPE = NODE__TYPE;
 
@@ -3169,7 +3152,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__MUTABLE = NODE__MUTABLE;
 
@@ -3179,7 +3161,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__SOURCE_EDGES = NODE__SOURCE_EDGES;
 
@@ -3189,7 +3170,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__TARGET_EDGES = NODE__TARGET_EDGES;
 
@@ -3199,7 +3179,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__PERSISTED_CHILDREN = NODE__PERSISTED_CHILDREN;
 
@@ -3209,7 +3188,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__STYLES = NODE__STYLES;
 
@@ -3219,7 +3197,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__ELEMENT = NODE__ELEMENT;
 
@@ -3229,7 +3206,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__DIAGRAM = NODE__DIAGRAM;
 
@@ -3239,7 +3215,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__TRANSIENT_CHILDREN = NODE__TRANSIENT_CHILDREN;
 
@@ -3249,7 +3224,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT = NODE__LAYOUT_CONSTRAINT;
 
@@ -3259,7 +3233,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_DECORATION_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
@@ -3270,7 +3243,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getDecorationNode()
 	 * @generated
-	 * @since 1.2
 	 */
 	int DECORATION_NODE = 64;
 
@@ -3280,7 +3252,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__EANNOTATIONS = BASIC_DECORATION_NODE__EANNOTATIONS;
 
@@ -3290,7 +3261,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__VISIBLE = BASIC_DECORATION_NODE__VISIBLE;
 
@@ -3300,7 +3270,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__TYPE = BASIC_DECORATION_NODE__TYPE;
 
@@ -3310,7 +3279,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__MUTABLE = BASIC_DECORATION_NODE__MUTABLE;
 
@@ -3319,7 +3287,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 * @ordered
 	 */
 	int DECORATION_NODE__SOURCE_EDGES = BASIC_DECORATION_NODE__SOURCE_EDGES;
@@ -3330,7 +3297,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__TARGET_EDGES = BASIC_DECORATION_NODE__TARGET_EDGES;
 
@@ -3340,7 +3306,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__PERSISTED_CHILDREN = BASIC_DECORATION_NODE__PERSISTED_CHILDREN;
 
@@ -3350,7 +3315,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__STYLES = BASIC_DECORATION_NODE__STYLES;
 
@@ -3360,7 +3324,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__ELEMENT = BASIC_DECORATION_NODE__ELEMENT;
 
@@ -3370,7 +3333,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__DIAGRAM = BASIC_DECORATION_NODE__DIAGRAM;
 
@@ -3380,7 +3342,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__TRANSIENT_CHILDREN = BASIC_DECORATION_NODE__TRANSIENT_CHILDREN;
 
@@ -3390,7 +3351,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE__LAYOUT_CONSTRAINT = BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT;
 
@@ -3400,7 +3360,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int DECORATION_NODE_FEATURE_COUNT = BASIC_DECORATION_NODE_FEATURE_COUNT + 0;
 
@@ -3411,7 +3370,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicCompartment()
 	 * @generated
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT = 66;
 
@@ -3421,7 +3379,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__EANNOTATIONS = DECORATION_NODE__EANNOTATIONS;
 
@@ -3431,7 +3388,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__VISIBLE = DECORATION_NODE__VISIBLE;
 
@@ -3441,7 +3397,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__TYPE = DECORATION_NODE__TYPE;
 
@@ -3451,7 +3406,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__MUTABLE = DECORATION_NODE__MUTABLE;
 
@@ -3461,7 +3415,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__SOURCE_EDGES = DECORATION_NODE__SOURCE_EDGES;
 
@@ -3471,7 +3424,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__TARGET_EDGES = DECORATION_NODE__TARGET_EDGES;
 
@@ -3481,7 +3433,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__PERSISTED_CHILDREN = DECORATION_NODE__PERSISTED_CHILDREN;
 
@@ -3491,7 +3442,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__STYLES = DECORATION_NODE__STYLES;
 
@@ -3501,7 +3451,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__ELEMENT = DECORATION_NODE__ELEMENT;
 
@@ -3511,7 +3460,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__DIAGRAM = DECORATION_NODE__DIAGRAM;
 
@@ -3521,7 +3469,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__TRANSIENT_CHILDREN = DECORATION_NODE__TRANSIENT_CHILDREN;
 
@@ -3531,7 +3478,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__LAYOUT_CONSTRAINT = DECORATION_NODE__LAYOUT_CONSTRAINT;
 
@@ -3541,7 +3487,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT__COLLAPSED = DECORATION_NODE_FEATURE_COUNT + 0;
 
@@ -3551,7 +3496,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_COMPARTMENT_FEATURE_COUNT = DECORATION_NODE_FEATURE_COUNT + 1;
 
@@ -3561,7 +3505,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__EANNOTATIONS = BASIC_COMPARTMENT__EANNOTATIONS;
 
@@ -3571,7 +3514,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__VISIBLE = BASIC_COMPARTMENT__VISIBLE;
 
@@ -3581,7 +3523,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__TYPE = BASIC_COMPARTMENT__TYPE;
 
@@ -3591,7 +3532,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__MUTABLE = BASIC_COMPARTMENT__MUTABLE;
 
@@ -3601,7 +3541,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__SOURCE_EDGES = BASIC_COMPARTMENT__SOURCE_EDGES;
 
@@ -3611,7 +3550,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__TARGET_EDGES = BASIC_COMPARTMENT__TARGET_EDGES;
 
@@ -3621,7 +3559,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__PERSISTED_CHILDREN = BASIC_COMPARTMENT__PERSISTED_CHILDREN;
 
@@ -3631,7 +3568,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__STYLES = BASIC_COMPARTMENT__STYLES;
 
@@ -3641,7 +3577,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__ELEMENT = BASIC_COMPARTMENT__ELEMENT;
 
@@ -3651,7 +3586,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__DIAGRAM = BASIC_COMPARTMENT__DIAGRAM;
 
@@ -3661,7 +3595,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__TRANSIENT_CHILDREN = BASIC_COMPARTMENT__TRANSIENT_CHILDREN;
 
@@ -3671,7 +3604,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_COMPARTMENT__LAYOUT_CONSTRAINT;
 
@@ -3681,7 +3613,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__COLLAPSED = BASIC_COMPARTMENT__COLLAPSED;
 
@@ -3691,7 +3622,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__CANONICAL = BASIC_COMPARTMENT_FEATURE_COUNT + 0;
 
@@ -3701,7 +3631,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT__SHOW_TITLE = BASIC_COMPARTMENT_FEATURE_COUNT + 1;
 
@@ -3711,7 +3640,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int COMPARTMENT_FEATURE_COUNT = BASIC_COMPARTMENT_FEATURE_COUNT + 2;
 
@@ -3721,7 +3649,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__EANNOTATIONS = BASIC_COMPARTMENT__EANNOTATIONS;
 
@@ -3731,7 +3658,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__VISIBLE = BASIC_COMPARTMENT__VISIBLE;
 
@@ -3741,7 +3667,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__TYPE = BASIC_COMPARTMENT__TYPE;
 
@@ -3751,7 +3676,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__MUTABLE = BASIC_COMPARTMENT__MUTABLE;
 
@@ -3761,7 +3685,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__SOURCE_EDGES = BASIC_COMPARTMENT__SOURCE_EDGES;
 
@@ -3771,7 +3694,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__TARGET_EDGES = BASIC_COMPARTMENT__TARGET_EDGES;
 
@@ -3781,7 +3703,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__PERSISTED_CHILDREN = BASIC_COMPARTMENT__PERSISTED_CHILDREN;
 
@@ -3791,7 +3712,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__STYLES = BASIC_COMPARTMENT__STYLES;
 
@@ -3801,7 +3721,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__ELEMENT = BASIC_COMPARTMENT__ELEMENT;
 
@@ -3811,7 +3730,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__DIAGRAM = BASIC_COMPARTMENT__DIAGRAM;
 
@@ -3821,7 +3739,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_COMPARTMENT__TRANSIENT_CHILDREN;
 
@@ -3831,7 +3748,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_COMPARTMENT__LAYOUT_CONSTRAINT;
 
@@ -3841,7 +3757,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__COLLAPSED = BASIC_COMPARTMENT__COLLAPSED;
 
@@ -3851,7 +3766,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__SORTING = BASIC_COMPARTMENT_FEATURE_COUNT + 0;
 
@@ -3861,7 +3775,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__SORTING_KEYS = BASIC_COMPARTMENT_FEATURE_COUNT + 1;
 
@@ -3871,7 +3784,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__SORTED_OBJECTS = BASIC_COMPARTMENT_FEATURE_COUNT + 2;
 
@@ -3881,7 +3793,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__FILTERING = BASIC_COMPARTMENT_FEATURE_COUNT + 3;
 
@@ -3891,7 +3802,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__FILTERING_KEYS = BASIC_COMPARTMENT_FEATURE_COUNT + 4;
 
@@ -3901,7 +3811,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__FILTERED_OBJECTS = BASIC_COMPARTMENT_FEATURE_COUNT + 5;
 
@@ -3911,7 +3820,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT__SHOW_TITLE = BASIC_COMPARTMENT_FEATURE_COUNT + 6;
 
@@ -3921,7 +3829,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int LIST_COMPARTMENT_FEATURE_COUNT = BASIC_COMPARTMENT_FEATURE_COUNT + 7;
 
@@ -3931,7 +3838,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__EANNOTATIONS = EDGE__EANNOTATIONS;
 
@@ -3941,7 +3847,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__VISIBLE = EDGE__VISIBLE;
 
@@ -3951,7 +3856,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__TYPE = EDGE__TYPE;
 
@@ -3961,7 +3865,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__MUTABLE = EDGE__MUTABLE;
 
@@ -3971,7 +3874,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__SOURCE_EDGES = EDGE__SOURCE_EDGES;
 
@@ -3981,7 +3883,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__TARGET_EDGES = EDGE__TARGET_EDGES;
 
@@ -3991,7 +3892,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__PERSISTED_CHILDREN = EDGE__PERSISTED_CHILDREN;
 
@@ -4001,7 +3901,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__STYLES = EDGE__STYLES;
 
@@ -4011,7 +3910,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__ELEMENT = EDGE__ELEMENT;
 
@@ -4021,7 +3919,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__DIAGRAM = EDGE__DIAGRAM;
 
@@ -4031,7 +3928,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__TRANSIENT_CHILDREN = EDGE__TRANSIENT_CHILDREN;
 
@@ -4041,7 +3937,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__SOURCE = EDGE__SOURCE;
 
@@ -4051,7 +3946,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__TARGET = EDGE__TARGET;
 
@@ -4061,7 +3955,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__BENDPOINTS = EDGE__BENDPOINTS;
 
@@ -4071,7 +3964,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__SOURCE_ANCHOR = EDGE__SOURCE_ANCHOR;
 
@@ -4081,7 +3973,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__TARGET_ANCHOR = EDGE__TARGET_ANCHOR;
 
@@ -4091,7 +3982,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__ROUTING = EDGE_FEATURE_COUNT + 0;
 
@@ -4101,7 +3991,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__SMOOTHNESS = EDGE_FEATURE_COUNT + 1;
 
@@ -4111,7 +4000,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__AVOID_OBSTRUCTIONS = EDGE_FEATURE_COUNT + 2;
 
@@ -4121,7 +4009,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__CLOSEST_DISTANCE = EDGE_FEATURE_COUNT + 3;
 
@@ -4131,7 +4018,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__JUMP_LINK_STATUS = EDGE_FEATURE_COUNT + 4;
 
@@ -4141,7 +4027,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__JUMP_LINK_TYPE = EDGE_FEATURE_COUNT + 5;
 
@@ -4151,9 +4036,17 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int CONNECTOR__JUMP_LINKS_REVERSE = EDGE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR__ROUNDED_BENDPOINTS_RADIUS = EDGE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -4161,9 +4054,8 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
-	int CONNECTOR__LINE_COLOR = EDGE_FEATURE_COUNT + 7;
+	int CONNECTOR__LINE_COLOR = EDGE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -4171,9 +4063,8 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
-	int CONNECTOR__LINE_WIDTH = EDGE_FEATURE_COUNT + 8;
+	int CONNECTOR__LINE_WIDTH = EDGE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Connector</em>' class.
@@ -4181,9 +4072,8 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
-	int CONNECTOR_FEATURE_COUNT = EDGE_FEATURE_COUNT + 9;
+	int CONNECTOR_FEATURE_COUNT = EDGE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
@@ -4191,7 +4081,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__EANNOTATIONS = DIAGRAM__EANNOTATIONS;
 
@@ -4201,7 +4090,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__VISIBLE = DIAGRAM__VISIBLE;
 
@@ -4211,7 +4099,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__TYPE = DIAGRAM__TYPE;
 
@@ -4221,7 +4108,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__MUTABLE = DIAGRAM__MUTABLE;
 
@@ -4231,7 +4117,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__SOURCE_EDGES = DIAGRAM__SOURCE_EDGES;
 
@@ -4241,7 +4126,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__TARGET_EDGES = DIAGRAM__TARGET_EDGES;
 
@@ -4251,7 +4135,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PERSISTED_CHILDREN = DIAGRAM__PERSISTED_CHILDREN;
 
@@ -4261,7 +4144,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__STYLES = DIAGRAM__STYLES;
 
@@ -4271,7 +4153,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__ELEMENT = DIAGRAM__ELEMENT;
 
@@ -4281,7 +4162,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__DIAGRAM = DIAGRAM__DIAGRAM;
 
@@ -4291,7 +4171,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__TRANSIENT_CHILDREN = DIAGRAM__TRANSIENT_CHILDREN;
 
@@ -4301,7 +4180,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__NAME = DIAGRAM__NAME;
 
@@ -4311,7 +4189,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__MEASUREMENT_UNIT = DIAGRAM__MEASUREMENT_UNIT;
 
@@ -4321,7 +4198,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PERSISTED_EDGES = DIAGRAM__PERSISTED_EDGES;
 
@@ -4331,7 +4207,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__TRANSIENT_EDGES = DIAGRAM__TRANSIENT_EDGES;
 
@@ -4341,7 +4216,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PAGE_X = DIAGRAM_FEATURE_COUNT + 0;
 
@@ -4351,7 +4225,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PAGE_Y = DIAGRAM_FEATURE_COUNT + 1;
 
@@ -4361,7 +4234,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PAGE_WIDTH = DIAGRAM_FEATURE_COUNT + 2;
 
@@ -4371,7 +4243,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__PAGE_HEIGHT = DIAGRAM_FEATURE_COUNT + 3;
 
@@ -4381,7 +4252,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__HORIZONTAL_GUIDES = DIAGRAM_FEATURE_COUNT + 4;
 
@@ -4391,7 +4261,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__VERTICAL_GUIDES = DIAGRAM_FEATURE_COUNT + 5;
 
@@ -4401,7 +4270,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM__DESCRIPTION = DIAGRAM_FEATURE_COUNT + 6;
 
@@ -4411,7 +4279,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int STANDARD_DIAGRAM_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 7;
 
@@ -4422,7 +4289,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicSemanticCompartment()
 	 * @generated
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT = 67;
 
@@ -4432,7 +4298,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__EANNOTATIONS = BASIC_DECORATION_NODE__EANNOTATIONS;
 
@@ -4442,7 +4307,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__VISIBLE = BASIC_DECORATION_NODE__VISIBLE;
 
@@ -4452,7 +4316,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__TYPE = BASIC_DECORATION_NODE__TYPE;
 
@@ -4462,7 +4325,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__MUTABLE = BASIC_DECORATION_NODE__MUTABLE;
 
@@ -4472,7 +4334,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__SOURCE_EDGES = BASIC_DECORATION_NODE__SOURCE_EDGES;
 
@@ -4482,7 +4343,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__TARGET_EDGES = BASIC_DECORATION_NODE__TARGET_EDGES;
 
@@ -4492,7 +4352,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__PERSISTED_CHILDREN = BASIC_DECORATION_NODE__PERSISTED_CHILDREN;
 
@@ -4502,7 +4361,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__STYLES = BASIC_DECORATION_NODE__STYLES;
 
@@ -4512,7 +4370,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__ELEMENT = BASIC_DECORATION_NODE__ELEMENT;
 
@@ -4522,7 +4379,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__DIAGRAM = BASIC_DECORATION_NODE__DIAGRAM;
 
@@ -4532,7 +4388,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_DECORATION_NODE__TRANSIENT_CHILDREN;
 
@@ -4542,7 +4397,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_DECORATION_NODE__LAYOUT_CONSTRAINT;
 
@@ -4552,7 +4406,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT__COLLAPSED = BASIC_DECORATION_NODE_FEATURE_COUNT + 0;
 
@@ -4562,7 +4415,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT = BASIC_DECORATION_NODE_FEATURE_COUNT + 1;
 
@@ -4573,7 +4425,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSemanticListCompartment()
 	 * @generated
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT = 68;
 
@@ -4583,7 +4434,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__EANNOTATIONS = BASIC_SEMANTIC_COMPARTMENT__EANNOTATIONS;
 
@@ -4593,7 +4443,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__VISIBLE = BASIC_SEMANTIC_COMPARTMENT__VISIBLE;
 
@@ -4603,7 +4452,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__TYPE = BASIC_SEMANTIC_COMPARTMENT__TYPE;
 
@@ -4613,7 +4461,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__MUTABLE = BASIC_SEMANTIC_COMPARTMENT__MUTABLE;
 
@@ -4623,7 +4470,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__SOURCE_EDGES = BASIC_SEMANTIC_COMPARTMENT__SOURCE_EDGES;
 
@@ -4633,7 +4479,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__TARGET_EDGES = BASIC_SEMANTIC_COMPARTMENT__TARGET_EDGES;
 
@@ -4643,7 +4488,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__PERSISTED_CHILDREN = BASIC_SEMANTIC_COMPARTMENT__PERSISTED_CHILDREN;
 
@@ -4653,7 +4497,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__STYLES = BASIC_SEMANTIC_COMPARTMENT__STYLES;
 
@@ -4663,7 +4506,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__ELEMENT = BASIC_SEMANTIC_COMPARTMENT__ELEMENT;
 
@@ -4673,7 +4515,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__DIAGRAM = BASIC_SEMANTIC_COMPARTMENT__DIAGRAM;
 
@@ -4683,7 +4524,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__TRANSIENT_CHILDREN = BASIC_SEMANTIC_COMPARTMENT__TRANSIENT_CHILDREN;
 
@@ -4693,7 +4533,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__LAYOUT_CONSTRAINT = BASIC_SEMANTIC_COMPARTMENT__LAYOUT_CONSTRAINT;
 
@@ -4703,7 +4542,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__COLLAPSED = BASIC_SEMANTIC_COMPARTMENT__COLLAPSED;
 
@@ -4713,7 +4551,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__SORTING = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 0;
 
@@ -4723,7 +4560,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__SORTING_KEYS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 1;
 
@@ -4733,7 +4569,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__SORTED_OBJECTS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 2;
 
@@ -4743,7 +4578,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__FILTERING = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 3;
 
@@ -4753,7 +4587,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__FILTERING_KEYS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 4;
 
@@ -4763,7 +4596,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__FILTERED_OBJECTS = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 5;
 
@@ -4773,7 +4605,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT__SHOW_TITLE = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 6;
 
@@ -4783,7 +4614,6 @@ public interface NotationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 * @since 1.2
 	 */
 	int SEMANTIC_LIST_COMPARTMENT_FEATURE_COUNT = BASIC_SEMANTIC_COMPARTMENT_FEATURE_COUNT + 7;
 
@@ -4794,7 +4624,6 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.Sorting
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
-	 * @since 1.2
 	 */
 	int SORTING = 69;
 
@@ -5492,6 +5321,17 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoutingStyle_JumpLinksReverse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.RoutingStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rounded Bendpoints Radius</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.RoutingStyle#getRoundedBendpointsRadius()
+	 * @see #getRoutingStyle()
+	 * @generated
+	 */
+	EAttribute getRoutingStyle_RoundedBendpointsRadius();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.View <em>View</em>}'.
@@ -6597,7 +6437,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Shape</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.Shape
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getShape();
 
@@ -6608,7 +6447,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Compartment</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.Compartment
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getCompartment();
 
@@ -6619,7 +6457,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>List Compartment</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.ListCompartment
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getListCompartment();
 
@@ -6630,7 +6467,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Connector</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.Connector
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getConnector();
 
@@ -6641,7 +6477,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Standard Diagram</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.StandardDiagram
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getStandardDiagram();
 
@@ -6652,7 +6487,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Decoration Node</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.DecorationNode
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getDecorationNode();
 
@@ -6663,7 +6497,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Basic Decoration Node</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.BasicDecorationNode
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getBasicDecorationNode();
 
@@ -6674,7 +6507,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Basic Compartment</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.BasicCompartment
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getBasicCompartment();
 
@@ -6685,7 +6517,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Basic Semantic Compartment</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.BasicSemanticCompartment
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getBasicSemanticCompartment();
 
@@ -6696,7 +6527,6 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for class '<em>Semantic List Compartment</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.SemanticListCompartment
 	 * @generated
-	 * @since 1.2
 	 */
 	EClass getSemanticListCompartment();
 
@@ -7326,6 +7156,14 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROUTING_STYLE__JUMP_LINKS_REVERSE = eINSTANCE.getRoutingStyle_JumpLinksReverse();
+
+		/**
+		 * The meta object literal for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = eINSTANCE.getRoutingStyle_RoundedBendpointsRadius();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl <em>View</em>}' class.
@@ -8240,7 +8078,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.ShapeImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getShape()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass SHAPE = eINSTANCE.getShape();
 
@@ -8251,7 +8088,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.CompartmentImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getCompartment()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass COMPARTMENT = eINSTANCE.getCompartment();
 
@@ -8262,7 +8098,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.ListCompartmentImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getListCompartment()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass LIST_COMPARTMENT = eINSTANCE.getListCompartment();
 
@@ -8273,7 +8108,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.ConnectorImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getConnector()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass CONNECTOR = eINSTANCE.getConnector();
 
@@ -8284,7 +8118,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.StandardDiagramImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getStandardDiagram()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass STANDARD_DIAGRAM = eINSTANCE.getStandardDiagram();
 
@@ -8295,7 +8128,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.DecorationNodeImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getDecorationNode()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass DECORATION_NODE = eINSTANCE.getDecorationNode();
 
@@ -8306,7 +8138,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.BasicDecorationNodeImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicDecorationNode()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass BASIC_DECORATION_NODE = eINSTANCE.getBasicDecorationNode();
 
@@ -8317,7 +8148,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.BasicCompartmentImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicCompartment()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass BASIC_COMPARTMENT = eINSTANCE.getBasicCompartment();
 
@@ -8328,7 +8158,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.BasicSemanticCompartmentImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getBasicSemanticCompartment()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass BASIC_SEMANTIC_COMPARTMENT = eINSTANCE.getBasicSemanticCompartment();
 
@@ -8339,7 +8168,6 @@ public interface NotationPackage extends EPackage {
 		 * @see org.eclipse.gmf.runtime.notation.impl.SemanticListCompartmentImpl
 		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSemanticListCompartment()
 		 * @generated
-		 * @since 1.2
 		 */
 		EClass SEMANTIC_LIST_COMPARTMENT = eINSTANCE.getSemanticListCompartment();
 

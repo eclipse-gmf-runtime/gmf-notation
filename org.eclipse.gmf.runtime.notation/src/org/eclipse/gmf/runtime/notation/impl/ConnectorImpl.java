@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2008 IBM Corporation and others.
+ * Copyright (c) 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -47,13 +47,13 @@ import org.eclipse.gmf.runtime.notation.View;
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#getJumpLinkStatus <em>Jump Link Status</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#getJumpLinkType <em>Jump Link Type</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#isJumpLinksReverse <em>Jump Links Reverse</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#getLineColor <em>Line Color</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ConnectorImpl#getLineWidth <em>Line Width</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
- * @since 1.2
  */
 public class ConnectorImpl extends EdgeImpl implements Connector {
 	/**
@@ -305,6 +305,26 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 	protected static final int JUMP_LINKS_REVERSE_EFLAG = 1 << 21;
 
 	/**
+	 * The default value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROUNDED_BENDPOINTS_RADIUS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected int roundedBendpointsRadius = ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,6 +538,27 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getRoundedBendpointsRadius() {
+		return roundedBendpointsRadius;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoundedBendpointsRadius(int newRoundedBendpointsRadius) {
+		int oldRoundedBendpointsRadius = roundedBendpointsRadius;
+		roundedBendpointsRadius = newRoundedBendpointsRadius;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS, oldRoundedBendpointsRadius, roundedBendpointsRadius));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getLineColor() {
 		return lineColor;
 	}
@@ -610,6 +651,8 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 				return getJumpLinkType();
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
 				return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
+				return new Integer(getRoundedBendpointsRadius());
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 				return new Integer(getLineColor());
 			case NotationPackage.CONNECTOR__LINE_WIDTH:
@@ -697,6 +740,9 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(((Boolean)newValue).booleanValue());
 				return;
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(((Integer)newValue).intValue());
+				return;
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
 				return;
@@ -780,6 +826,9 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
 				return;
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
+				return;
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
@@ -843,6 +892,8 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 				return (eFlags & JUMP_LINK_TYPE_EFLAG) != JUMP_LINK_TYPE_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
 				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
+				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
 			case NotationPackage.CONNECTOR__LINE_WIDTH:
@@ -871,6 +922,7 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 				case NotationPackage.CONNECTOR__JUMP_LINK_STATUS: return NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS;
 				case NotationPackage.CONNECTOR__JUMP_LINK_TYPE: return NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE;
 				case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE: return NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE;
+				case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS: return NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 				default: return -1;
 			}
 		}
@@ -909,6 +961,7 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 				case NotationPackage.ROUTING_STYLE__JUMP_LINK_STATUS: return NotationPackage.CONNECTOR__JUMP_LINK_STATUS;
 				case NotationPackage.ROUTING_STYLE__JUMP_LINK_TYPE: return NotationPackage.CONNECTOR__JUMP_LINK_TYPE;
 				case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE: return NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE;
+				case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS: return NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS;
 				default: return -1;
 			}
 		}
@@ -950,6 +1003,8 @@ public class ConnectorImpl extends EdgeImpl implements Connector {
 		result.append(JUMP_LINK_TYPE_EFLAG_VALUES[(eFlags & JUMP_LINK_TYPE_EFLAG) >>> JUMP_LINK_TYPE_EFLAG_OFFSET]);
 		result.append(", jumpLinksReverse: "); //$NON-NLS-1$
 		result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
+		result.append(", roundedBendpointsRadius: "); //$NON-NLS-1$
+		result.append(roundedBendpointsRadius);
 		result.append(", lineColor: "); //$NON-NLS-1$
 		result.append(lineColor);
 		result.append(", lineWidth: "); //$NON-NLS-1$

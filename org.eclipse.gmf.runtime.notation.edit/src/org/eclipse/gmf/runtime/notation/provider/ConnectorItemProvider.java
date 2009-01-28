@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2008 IBM Corporation and others.
+ * Copyright (c) 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -34,7 +34,6 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
- * @since 1.2
  */
 public class ConnectorItemProvider
 	extends EdgeItemProvider
@@ -71,6 +70,7 @@ public class ConnectorItemProvider
 			addJumpLinkStatusPropertyDescriptor(object);
 			addJumpLinkTypePropertyDescriptor(object);
 			addJumpLinksReversePropertyDescriptor(object);
+			addRoundedBendpointsRadiusPropertyDescriptor(object);
 			addLineColorPropertyDescriptor(object);
 			addLineWidthPropertyDescriptor(object);
 		}
@@ -232,6 +232,28 @@ public class ConnectorItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Rounded Bendpoints Radius feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRoundedBendpointsRadiusPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoutingStyle_roundedBendpointsRadius_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_roundedBendpointsRadius_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Line Color feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +336,7 @@ public class ConnectorItemProvider
 			case NotationPackage.CONNECTOR__JUMP_LINK_STATUS:
 			case NotationPackage.CONNECTOR__JUMP_LINK_TYPE:
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 			case NotationPackage.CONNECTOR__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

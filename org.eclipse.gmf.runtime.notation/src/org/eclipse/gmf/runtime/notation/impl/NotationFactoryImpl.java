@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -824,7 +824,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public Shape createShape() {
 		ShapeImpl shape = new ShapeImpl();
@@ -835,7 +834,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public Compartment createCompartment() {
 		CompartmentImpl compartment = new CompartmentImpl();
@@ -846,7 +844,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public ListCompartment createListCompartment() {
 		ListCompartmentImpl listCompartment = new ListCompartmentImpl();
@@ -857,7 +854,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public Connector createConnector() {
 		ConnectorImpl connector = new ConnectorImpl();
@@ -868,7 +864,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public StandardDiagram createStandardDiagram() {
 		StandardDiagramImpl standardDiagram = new StandardDiagramImpl();
@@ -879,7 +874,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public DecorationNode createDecorationNode() {
 		DecorationNodeImpl decorationNode = new DecorationNodeImpl();
@@ -890,7 +884,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public BasicDecorationNode createBasicDecorationNode() {
 		BasicDecorationNodeImpl basicDecorationNode = new BasicDecorationNodeImpl();
@@ -901,7 +894,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public BasicCompartment createBasicCompartment() {
 		BasicCompartmentImpl basicCompartment = new BasicCompartmentImpl();
@@ -912,7 +904,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public BasicSemanticCompartment createBasicSemanticCompartment() {
 		BasicSemanticCompartmentImpl basicSemanticCompartment = new BasicSemanticCompartmentImpl();
@@ -923,7 +914,6 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public SemanticListCompartment createSemanticListCompartment() {
 		SemanticListCompartmentImpl semanticListCompartment = new SemanticListCompartmentImpl();
@@ -1261,7 +1251,7 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 		return sb.toString();
 	}
 
-    /**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

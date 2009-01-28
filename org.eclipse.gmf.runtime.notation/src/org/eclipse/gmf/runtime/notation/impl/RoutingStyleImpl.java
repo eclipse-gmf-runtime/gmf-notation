@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2006 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -36,6 +36,7 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl#getJumpLinkStatus <em>Jump Link Status</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl#getJumpLinkType <em>Jump Link Type</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl#isJumpLinksReverse <em>Jump Links Reverse</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
  * </ul>
  * </p>
  *
@@ -301,6 +302,26 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 	protected static final int JUMP_LINKS_REVERSE_EFLAG = 1 << 18;
 
     /**
+	 * The default value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROUNDED_BENDPOINTS_RADIUS_EDEFAULT = 0;
+
+				/**
+	 * The cached value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected int roundedBendpointsRadius = ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
+
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -471,6 +492,27 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getRoundedBendpointsRadius() {
+		return roundedBendpointsRadius;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoundedBendpointsRadius(int newRoundedBendpointsRadius) {
+		int oldRoundedBendpointsRadius = roundedBendpointsRadius;
+		roundedBendpointsRadius = newRoundedBendpointsRadius;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS, oldRoundedBendpointsRadius, roundedBendpointsRadius));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -490,6 +532,8 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 				return getJumpLinkType();
 			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
 				return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
+			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return new Integer(getRoundedBendpointsRadius());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -521,6 +565,9 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 				return;
 			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(((Boolean)newValue).booleanValue());
+				return;
+			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(((Integer)newValue).intValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -554,6 +601,9 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
 				return;
+			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
+				return;
 		}
 		eDynamicUnset(featureID);
 	}
@@ -579,6 +629,8 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 				return (eFlags & JUMP_LINK_TYPE_EFLAG) != JUMP_LINK_TYPE_EFLAG_DEFAULT;
 			case NotationPackage.ROUTING_STYLE__JUMP_LINKS_REVERSE:
 				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
+			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -606,6 +658,8 @@ public class RoutingStyleImpl extends MinimalEObjectImpl.Container implements Ro
 		result.append(JUMP_LINK_TYPE_EFLAG_VALUES[(eFlags & JUMP_LINK_TYPE_EFLAG) >>> JUMP_LINK_TYPE_EFLAG_OFFSET]);
 		result.append(", jumpLinksReverse: "); //$NON-NLS-1$
 		result.append((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0);
+		result.append(", roundedBendpointsRadius: "); //$NON-NLS-1$
+		result.append(roundedBendpointsRadius);
 		result.append(')');
 		return result.toString();
 	}

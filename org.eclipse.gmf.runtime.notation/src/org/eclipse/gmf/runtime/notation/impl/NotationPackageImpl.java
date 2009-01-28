@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -1245,6 +1245,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoutingStyle_RoundedBendpointsRadius() {
+		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getView() {
 		return viewEClass;
 	}
@@ -2171,7 +2180,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getShape() {
 		return shapeEClass;
@@ -2181,7 +2189,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getCompartment() {
 		return compartmentEClass;
@@ -2191,7 +2198,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getListCompartment() {
 		return listCompartmentEClass;
@@ -2201,7 +2207,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getConnector() {
 		return connectorEClass;
@@ -2211,7 +2216,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getStandardDiagram() {
 		return standardDiagramEClass;
@@ -2221,7 +2225,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getDecorationNode() {
 		return decorationNodeEClass;
@@ -2231,7 +2234,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getBasicDecorationNode() {
 		return basicDecorationNodeEClass;
@@ -2241,7 +2243,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getBasicCompartment() {
 		return basicCompartmentEClass;
@@ -2251,7 +2252,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getBasicSemanticCompartment() {
 		return basicSemanticCompartmentEClass;
@@ -2261,7 +2261,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 1.2
 	 */
 	public EClass getSemanticListCompartment() {
 		return semanticListCompartmentEClass;
@@ -2499,6 +2498,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINK_STATUS);
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINK_TYPE);
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINKS_REVERSE);
+		createEAttribute(routingStyleEClass, ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS);
 
 		viewEClass = createEClass(VIEW);
 		createEAttribute(viewEClass, VIEW__VISIBLE);
@@ -2883,6 +2883,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getRoutingStyle_JumpLinkStatus(), this.getJumpLinkStatus(), "jumpLinkStatus", "None", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getRoutingStyle_JumpLinkType(), this.getJumpLinkType(), "jumpLinkType", "Semicircle", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getRoutingStyle_JumpLinksReverse(), ecorePackage.getEBoolean(), "jumpLinksReverse", "false", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getRoutingStyle_RoundedBendpointsRadius(), ecorePackage.getEInt(), "roundedBendpointsRadius", "0", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
 		initEClass(viewEClass, View.class, "View", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getView_Visible(), ecorePackage.getEBoolean(), "visible", "true", 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$

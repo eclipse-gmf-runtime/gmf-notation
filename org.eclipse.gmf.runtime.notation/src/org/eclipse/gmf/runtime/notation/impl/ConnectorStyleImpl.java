@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -168,6 +168,8 @@ public class ConnectorStyleImpl extends RoutingStyleImpl implements ConnectorSty
 				return getJumpLinkType();
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 				return isJumpLinksReverse() ? Boolean.TRUE : Boolean.FALSE;
+			case NotationPackage.CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return new Integer(getRoundedBendpointsRadius());
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				return new Integer(getLineColor());
 			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
@@ -203,6 +205,9 @@ public class ConnectorStyleImpl extends RoutingStyleImpl implements ConnectorSty
 				return;
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(((Boolean)newValue).booleanValue());
+				return;
+			case NotationPackage.CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(((Integer)newValue).intValue());
 				return;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				setLineColor(((Integer)newValue).intValue());
@@ -242,6 +247,9 @@ public class ConnectorStyleImpl extends RoutingStyleImpl implements ConnectorSty
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 				setJumpLinksReverse(JUMP_LINKS_REVERSE_EDEFAULT);
 				return;
+			case NotationPackage.CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
+				return;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				setLineColor(LINE_COLOR_EDEFAULT);
 				return;
@@ -273,6 +281,8 @@ public class ConnectorStyleImpl extends RoutingStyleImpl implements ConnectorSty
 				return (eFlags & JUMP_LINK_TYPE_EFLAG) != JUMP_LINK_TYPE_EFLAG_DEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__JUMP_LINKS_REVERSE:
 				return ((eFlags & JUMP_LINKS_REVERSE_EFLAG) != 0) != JUMP_LINKS_REVERSE_EDEFAULT;
+			case NotationPackage.CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__LINE_COLOR:
 				return lineColor != LINE_COLOR_EDEFAULT;
 			case NotationPackage.CONNECTOR_STYLE__LINE_WIDTH:
