@@ -35,6 +35,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="FillStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="16777215"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transparency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradient" eType="#//GradientData"/>       
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -432,4 +435,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="BasicCompartment" eSuperTypes="#//DecorationNode #//DrawerStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="BasicSemanticCompartment" eSuperTypes="#//BasicDecorationNode #//DrawerStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="SemanticListCompartment" eSuperTypes="#//BasicSemanticCompartment #//SortingStyle #//FilteringStyle #//TitleStyle"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="GradientStyle">
+    <eLiterals name="Vertical"/>
+    <eLiterals name="Horizontal" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="GradientData" instanceClassName="org.eclipse.gmf.runtime.notation.datatype.GradientData"/>  
 </ecore:EPackage>

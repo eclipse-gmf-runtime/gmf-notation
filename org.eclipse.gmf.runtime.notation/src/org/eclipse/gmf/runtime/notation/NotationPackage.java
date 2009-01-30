@@ -514,13 +514,31 @@ public interface NotationPackage extends EPackage {
 	int FILL_STYLE__FILL_COLOR = STYLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILL_STYLE__TRANSPARENCY = STYLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Gradient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILL_STYLE__GRADIENT = STYLE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Fill Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILL_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+	int FILL_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.LineStyleImpl <em>Line Style</em>}' class.
@@ -1406,13 +1424,31 @@ public interface NotationPackage extends EPackage {
 	int SHAPE_STYLE__FILL_COLOR = FONT_STYLE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_STYLE__TRANSPARENCY = FONT_STYLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Gradient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_STYLE__GRADIENT = FONT_STYLE_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_COLOR = FONT_STYLE_FEATURE_COUNT + 2;
+	int SHAPE_STYLE__LINE_COLOR = FONT_STYLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -1421,7 +1457,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE__LINE_WIDTH = FONT_STYLE_FEATURE_COUNT + 3;
+	int SHAPE_STYLE__LINE_WIDTH = FONT_STYLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Shape Style</em>' class.
@@ -1430,7 +1466,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE_FEATURE_COUNT = FONT_STYLE_FEATURE_COUNT + 4;
+	int SHAPE_STYLE_FEATURE_COUNT = FONT_STYLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl <em>Connector Style</em>}' class.
@@ -3043,13 +3079,31 @@ public interface NotationPackage extends EPackage {
 	 */
 	int SHAPE__FILL_COLOR = NODE_FEATURE_COUNT + 8;
 	/**
+	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE__TRANSPARENCY = NODE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Gradient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE__GRADIENT = NODE_FEATURE_COUNT + 10;
+
+	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE__LINE_COLOR = NODE_FEATURE_COUNT + 9;
+	int SHAPE__LINE_COLOR = NODE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Line Width</b></em>' attribute.
@@ -3058,7 +3112,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE__LINE_WIDTH = NODE_FEATURE_COUNT + 10;
+	int SHAPE__LINE_WIDTH = NODE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Shape</em>' class.
@@ -3067,7 +3121,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 11;
+	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 13;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.CompartmentImpl <em>Compartment</em>}' class.
@@ -4738,6 +4792,16 @@ public interface NotationPackage extends EPackage {
 	int ARROW_TYPE = 80;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.GradientStyle <em>Gradient Style</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.GradientStyle
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientStyle()
+	 * @generated
+	 */
+	int GRADIENT_STYLE = 81;
+
+	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4745,7 +4809,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 81;
+	int RELATIVE_BENDPOINT_LIST = 82;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -4755,7 +4819,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 82;
+	int FILTER_KEY_LIST = 83;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -4765,7 +4829,18 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 83;
+	int SORT_KEY_MAP = 84;
+
+
+	/**
+	 * The meta object id for the '<em>Gradient Data</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.datatype.GradientData
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientData()
+	 * @generated
+	 */
+	int GRADIENT_DATA = 85;
 
 
 	/**
@@ -4884,6 +4959,28 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFillStyle_FillColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.FillStyle#getTransparency <em>Transparency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Transparency</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.FillStyle#getTransparency()
+	 * @see #getFillStyle()
+	 * @generated
+	 */
+	EAttribute getFillStyle_Transparency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.FillStyle#getGradient <em>Gradient</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gradient</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.FillStyle#getGradient()
+	 * @see #getFillStyle()
+	 * @generated
+	 */
+	EAttribute getFillStyle_Gradient();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.LineStyle <em>Line Style</em>}'.
@@ -6651,6 +6748,16 @@ public interface NotationPackage extends EPackage {
 	EEnum getArrowType();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.GradientStyle <em>Gradient Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Gradient Style</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.GradientStyle
+	 * @generated
+	 */
+	EEnum getGradientStyle();
+
+	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>Relative Bendpoint List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6682,6 +6789,17 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSortKeyMap();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.gmf.runtime.notation.datatype.GradientData <em>Gradient Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Gradient Data</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.datatype.GradientData
+	 * @model instanceClass="org.eclipse.gmf.runtime.notation.datatype.GradientData"
+	 * @generated
+	 */
+	EDataType getGradientData();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -6800,6 +6918,22 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FILL_STYLE__FILL_COLOR = eINSTANCE.getFillStyle_FillColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Transparency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILL_STYLE__TRANSPARENCY = eINSTANCE.getFillStyle_Transparency();
+
+		/**
+		 * The meta object literal for the '<em><b>Gradient</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILL_STYLE__GRADIENT = eINSTANCE.getFillStyle_Gradient();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.LineStyleImpl <em>Line Style</em>}' class.
@@ -8292,6 +8426,16 @@ public interface NotationPackage extends EPackage {
 		EEnum ARROW_TYPE = eINSTANCE.getArrowType();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.GradientStyle <em>Gradient Style</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.GradientStyle
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientStyle()
+		 * @generated
+		 */
+		EEnum GRADIENT_STYLE = eINSTANCE.getGradientStyle();
+
+		/**
 		 * The meta object literal for the '<em>Relative Bendpoint List</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8320,6 +8464,16 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SORT_KEY_MAP = eINSTANCE.getSortKeyMap();
+
+		/**
+		 * The meta object literal for the '<em>Gradient Data</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.datatype.GradientData
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientData()
+		 * @generated
+		 */
+		EDataType GRADIENT_DATA = eINSTANCE.getGradientData();
 
 	}
 

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.gmf.runtime.notation.*;
+import org.eclipse.gmf.runtime.notation.datatype.GradientData;
 import org.eclipse.gmf.runtime.notation.Alignment;
 import org.eclipse.gmf.runtime.notation.ArrowStyle;
 import org.eclipse.gmf.runtime.notation.ArrowType;
@@ -237,12 +238,16 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return createLineTypeFromString(eDataType, initialValue);
 			case NotationPackage.ARROW_TYPE:
 				return createArrowTypeFromString(eDataType, initialValue);
+			case NotationPackage.GRADIENT_STYLE:
+				return createGradientStyleFromString(eDataType, initialValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return createRelativeBendpointListFromString(eDataType, initialValue);
 			case NotationPackage.FILTER_KEY_LIST:
 				return createFilterKeyListFromString(eDataType, initialValue);
 			case NotationPackage.SORT_KEY_MAP:
 				return createSortKeyMapFromString(eDataType, initialValue);
+			case NotationPackage.GRADIENT_DATA:
+				return createGradientDataFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -279,12 +284,16 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 				return convertLineTypeToString(eDataType, instanceValue);
 			case NotationPackage.ARROW_TYPE:
 				return convertArrowTypeToString(eDataType, instanceValue);
+			case NotationPackage.GRADIENT_STYLE:
+				return convertGradientStyleToString(eDataType, instanceValue);
 			case NotationPackage.RELATIVE_BENDPOINT_LIST:
 				return convertRelativeBendpointListToString(eDataType, instanceValue);
 			case NotationPackage.FILTER_KEY_LIST:
 				return convertFilterKeyListToString(eDataType, instanceValue);
 			case NotationPackage.SORT_KEY_MAP:
 				return convertSortKeyMapToString(eDataType, instanceValue);
+			case NotationPackage.GRADIENT_DATA:
+				return convertGradientDataToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -1163,6 +1172,26 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GradientStyle createGradientStyleFromString(EDataType eDataType, String initialValue) {
+		GradientStyle result = GradientStyle.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return result;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGradientStyleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public List createRelativeBendpointListFromString(EDataType eDataType, String initialValue) {
@@ -1249,6 +1278,60 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			sb.append(key + ":" + direction.getName()); //$NON-NLS-1$
 		}
 		return sb.toString();
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public GradientData createGradientDataFromString(EDataType eDataType, String initialValue) {
+		GradientData gradient = null;
+		if (!initialValue.equals("")) { //$NON-NLS-1$
+			gradient = new GradientData();
+			StringTokenizer st = new StringTokenizer(initialValue, ","); //$NON-NLS-1$
+			String s;
+			if (st.hasMoreTokens()) {
+				s = st.nextToken().trim();
+ 			    try {
+					gradient.setGradientColor1(Integer.parseInt(s));
+				} catch (NumberFormatException e) {}
+			}
+ 		    if (st.hasMoreTokens()) {
+				s = st.nextToken().trim();
+				try {
+					gradient.setGradientColor2(Integer.parseInt(s));
+				} catch (NumberFormatException e) {}
+			}			
+			if (st.hasMoreTokens()) {
+				s = st.nextToken().trim();
+				try {
+					gradient.setGradientStyle(Integer.parseInt(s));
+				} catch (NumberFormatException e) {}
+			}	
+		}
+		return gradient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String convertGradientDataToString(EDataType eDataType,
+			Object instanceValue) {
+		GradientData gradient = (GradientData) instanceValue;
+		if (gradient == null) {
+			return "";
+		} else {
+			StringBuffer sb = new StringBuffer();
+			sb.append(gradient.getGradientColor1());
+			sb.append(", ");
+			sb.append(gradient.getGradientColor2());
+			sb.append(", ");
+			sb.append(gradient.getGradientStyle());
+			return sb.toString();
+		}
 	}
 
 				/**

@@ -56,6 +56,7 @@ import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.Filtering;
 import org.eclipse.gmf.runtime.notation.FilteringStyle;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.GradientStyle;
 import org.eclipse.gmf.runtime.notation.Guide;
 import org.eclipse.gmf.runtime.notation.GuideStyle;
 import org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle;
@@ -105,6 +106,7 @@ import org.eclipse.gmf.runtime.notation.TextAlignment;
 import org.eclipse.gmf.runtime.notation.TextStyle;
 import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.runtime.notation.datatype.GradientData;
 
 /**
  * <!-- begin-user-doc -->
@@ -685,6 +687,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum gradientStyleEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType relativeBendpointListEDataType = null;
 
 	/**
@@ -700,6 +709,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EDataType sortKeyMapEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType gradientDataEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -869,6 +885,24 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 */
 	public EAttribute getFillStyle_FillColor() {
 		return (EAttribute)fillStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFillStyle_Transparency() {
+		return (EAttribute)fillStyleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFillStyle_Gradient() {
+		return (EAttribute)fillStyleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2379,6 +2413,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGradientStyle() {
+		return gradientStyleEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRelativeBendpointList() {
 		return relativeBendpointListEDataType;
 	}
@@ -2399,6 +2442,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 */
 	public EDataType getSortKeyMap() {
 		return sortKeyMapEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getGradientData() {
+		return gradientDataEDataType;
 	}
 
 	/**
@@ -2443,6 +2495,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		fillStyleEClass = createEClass(FILL_STYLE);
 		createEAttribute(fillStyleEClass, FILL_STYLE__FILL_COLOR);
+		createEAttribute(fillStyleEClass, FILL_STYLE__TRANSPARENCY);
+		createEAttribute(fillStyleEClass, FILL_STYLE__GRADIENT);
 
 		lineStyleEClass = createEClass(LINE_STYLE);
 		createEAttribute(lineStyleEClass, LINE_STYLE__LINE_COLOR);
@@ -2677,11 +2731,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		textAlignmentEEnum = createEEnum(TEXT_ALIGNMENT);
 		lineTypeEEnum = createEEnum(LINE_TYPE);
 		arrowTypeEEnum = createEEnum(ARROW_TYPE);
+		gradientStyleEEnum = createEEnum(GRADIENT_STYLE);
 
 		// Create data types
 		relativeBendpointListEDataType = createEDataType(RELATIVE_BENDPOINT_LIST);
 		filterKeyListEDataType = createEDataType(FILTER_KEY_LIST);
 		sortKeyMapEDataType = createEDataType(SORT_KEY_MAP);
+		gradientDataEDataType = createEDataType(GRADIENT_DATA);
 	}
 
 	/**
@@ -2827,6 +2883,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(fillStyleEClass, FillStyle.class, "FillStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getFillStyle_FillColor(), ecorePackage.getEInt(), "fillColor", "16777215", 0, 1, FillStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getFillStyle_Transparency(), ecorePackage.getEInt(), "transparency", "-1", 0, 1, FillStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
+		initEAttribute(getFillStyle_Gradient(), this.getGradientData(), "gradient", null, 0, 1, FillStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(lineStyleEClass, LineStyle.class, "LineStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getLineStyle_LineColor(), ecorePackage.getEInt(), "lineColor", "11579568", 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
@@ -3196,10 +3254,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		addEEnumLiteral(arrowTypeEEnum, ArrowType.OPEN_ARROW_LITERAL);
 		addEEnumLiteral(arrowTypeEEnum, ArrowType.SOLID_ARROW_LITERAL);
 
+		initEEnum(gradientStyleEEnum, GradientStyle.class, "GradientStyle"); //$NON-NLS-1$
+		addEEnumLiteral(gradientStyleEEnum, GradientStyle.VERTICAL_LITERAL);
+		addEEnumLiteral(gradientStyleEEnum, GradientStyle.HORIZONTAL_LITERAL);
+
 		// Initialize data types
 		initEDataType(relativeBendpointListEDataType, List.class, "RelativeBendpointList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEDataType(filterKeyListEDataType, List.class, "FilterKeyList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEDataType(sortKeyMapEDataType, Map.class, "SortKeyMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEDataType(gradientDataEDataType, GradientData.class, "GradientData", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
 		// Create resource
 		createResource(eNS_URI);
