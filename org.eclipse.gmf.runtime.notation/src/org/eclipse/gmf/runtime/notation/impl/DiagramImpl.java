@@ -201,25 +201,24 @@ public class DiagramImpl
 	}
 
 				/**
-     * <!-- begin-user-doc --> Set the Measurement Unit for this Diagram, the
+	 * <!-- begin-user-doc --> Set the Measurement Unit for this Diagram, the
      * Measure ment unit can be set only once, the set method will not set the
      * value if it was already set <!-- end-user-doc -->
-     */
+	 * @generated NOT
+	 */
     public void setMeasurementUnit(MeasurementUnit newMeasurementUnit) {
-        if (!isSetMeasurementUnit()) {
-            MeasurementUnit oldMeasurementUnit = getMeasurementUnit();
-            MeasurementUnit measurementUnit = newMeasurementUnit == null ? MEASUREMENT_UNIT_EDEFAULT
-                : newMeasurementUnit;
-            boolean oldMeasurementUnitESet = (eFlags & MEASUREMENT_UNIT_ESETFLAG) != 0;
-            eFlags |= MEASUREMENT_UNIT_ESETFLAG;
-            if (eNotificationRequired())
-                eNotify(new ENotificationImpl(this, Notification.SET,
-                    NotationPackage.DIAGRAM__MEASUREMENT_UNIT,
-                    oldMeasurementUnit, measurementUnit,
-                    !oldMeasurementUnitESet));
-        } /*else
-            throw new UnsupportedOperationException();*/
-    }
+    	if (!isSetMeasurementUnit()) {
+			MeasurementUnit oldMeasurementUnit = MEASUREMENT_UNIT_EFLAG_VALUES[(eFlags & MEASUREMENT_UNIT_EFLAG) >>> MEASUREMENT_UNIT_EFLAG_OFFSET];
+			if (newMeasurementUnit == null) newMeasurementUnit = MEASUREMENT_UNIT_EDEFAULT;
+			eFlags = eFlags & ~MEASUREMENT_UNIT_EFLAG | MeasurementUnit.VALUES.indexOf(newMeasurementUnit) << MEASUREMENT_UNIT_EFLAG_OFFSET;
+			boolean oldMeasurementUnitESet = (eFlags & MEASUREMENT_UNIT_ESETFLAG) != 0;
+			eFlags |= MEASUREMENT_UNIT_ESETFLAG;
+			if (eNotificationRequired())
+				eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM__MEASUREMENT_UNIT, oldMeasurementUnit, newMeasurementUnit, !oldMeasurementUnitESet));
+    	} /*else {
+    		throw new UnsupportedOperationException();
+    	}*/
+	}
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
