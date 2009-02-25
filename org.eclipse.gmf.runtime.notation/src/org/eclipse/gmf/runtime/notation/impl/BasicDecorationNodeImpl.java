@@ -26,9 +26,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EModelElementImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.gmf.runtime.notation.BasicDecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.LayoutConstraint;
 import org.eclipse.gmf.runtime.notation.NamedStyle;
 import org.eclipse.gmf.runtime.notation.Node;
@@ -62,7 +64,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
 
     protected EObject element;
 
-	protected static final int ELEMENT_ESETFLAG = 1 << 10;
+	protected static final int ELEMENT_ESETFLAG = 1 << 10; 
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,15 +128,15 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
 	}
 
     public EList getSourceEdges() {
-        return ECollections.emptyEList();
+        return new EcoreEList.UnmodifiableEList<Edge>(this, NotationPackage.eINSTANCE.getView_SourceEdges(), 0, null);
 	}
 
     public EList getTargetEdges() {
-        return ECollections.emptyEList();
+        return new EcoreEList.UnmodifiableEList<Edge>(this, NotationPackage.eINSTANCE.getView_TargetEdges(), 0, null);
 	}
 
     public EList getPersistedChildren() {
-        return ECollections.emptyEList();
+        return new EcoreEList.UnmodifiableEList<Node>(this, NotationPackage.eINSTANCE.getView_PersistedChildren(), 0, null);
 	}
 
     public EList getChildren() {
@@ -142,7 +144,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
     }
 
     public EList getStyles() {
-        return ECollections.emptyEList();
+        return new EcoreEList.UnmodifiableEList<Style>(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
 	}
 
     public EObject getElement() {
@@ -207,7 +209,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
     }
 
     public EList getTransientChildren() {
-        return ECollections.emptyEList();
+        return new EcoreEList.UnmodifiableEList<Node>(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
 	}
 
     public Style getStyle(EClass eClass) {
