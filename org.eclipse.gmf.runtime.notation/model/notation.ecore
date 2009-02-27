@@ -37,7 +37,7 @@
         defaultValueLiteral="16777215"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transparency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradient" eType="#//GradientData"/>       
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradient" eType="#//GradientData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -386,12 +386,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hint" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiagramLinkStyle" eSuperTypes="#//Style">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" eType="#//Diagram"
-        resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" eType="#//Diagram"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiDiagramLinkStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLinks" upperBound="-1"
-        eType="#//Diagram" resolveProxies="false"/>
+        eType="#//Diagram"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TextAlignment">
     <eLiterals name="Left"/>
@@ -439,5 +438,5 @@
     <eLiterals name="Vertical"/>
     <eLiterals name="Horizontal" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="GradientData" instanceClassName="org.eclipse.gmf.runtime.notation.datatype.GradientData"/>  
+  <eClassifiers xsi:type="ecore:EDataType" name="GradientData" instanceClassName="org.eclipse.gmf.runtime.notation.datatype.GradientData"/>
 </ecore:EPackage>

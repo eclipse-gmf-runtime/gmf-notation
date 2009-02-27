@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -40,7 +40,7 @@ public interface MultiDiagramLinkStyle extends Style {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Diagram Links</em>' reference list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getMultiDiagramLinkStyle_DiagramLinks()
-	 * @model type="org.eclipse.gmf.runtime.notation.Diagram" resolveProxies="false"
+	 * @model type="org.eclipse.gmf.runtime.notation.Diagram"
 	 * @generated
 	 */
 	EList getDiagramLinks();

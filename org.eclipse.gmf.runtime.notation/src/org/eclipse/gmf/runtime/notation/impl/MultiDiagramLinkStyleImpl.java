@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2007, 2008 IBM Corporation and others.
+ * Copyright (c) 2007, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -15,7 +15,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -69,7 +69,7 @@ public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList getDiagramLinks() {
 		if (diagramLinks == null) {
-			diagramLinks = new EObjectEList(Diagram.class, this, NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
+			diagramLinks = new EObjectResolvingEList(Diagram.class, this, NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
 		}
 		return diagramLinks;
 	}
