@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,6 +12,7 @@ package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.DiagramLinkStyle;
@@ -65,6 +66,23 @@ public class DiagramLinkStyleImpl extends NotationEObjectImpl implements Diagram
 	 * @generated
 	 */
 	public Diagram getDiagramLink() {
+		if (diagramLink != null && diagramLink.eIsProxy()) {
+			InternalEObject oldDiagramLink = (InternalEObject)diagramLink;
+			diagramLink = (Diagram)eResolveProxy(oldDiagramLink);
+			if (diagramLink != oldDiagramLink) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK, oldDiagramLink, diagramLink));
+			}
+		}
+		return diagramLink;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Diagram basicGetDiagramLink() {
 		return diagramLink;
 	}
 
@@ -88,7 +106,8 @@ public class DiagramLinkStyleImpl extends NotationEObjectImpl implements Diagram
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case NotationPackage.DIAGRAM_LINK_STYLE__DIAGRAM_LINK:
-				return getDiagramLink();
+				if (resolve) return getDiagramLink();
+				return basicGetDiagramLink();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}

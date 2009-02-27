@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2007 IBM Corporation and others.
+ * Copyright (c) 2007, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -39,7 +39,7 @@ public interface DiagramLinkStyle extends Style {
 	 * @return the value of the '<em>Diagram Link</em>' reference.
 	 * @see #setDiagramLink(Diagram)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagramLinkStyle_DiagramLink()
-	 * @model resolveProxies="false"
+	 * @model
 	 * @generated
 	 */
 	Diagram getDiagramLink();
