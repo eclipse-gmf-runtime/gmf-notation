@@ -41,12 +41,6 @@ import org.eclipse.gmf.runtime.notation.Smoothness;
  */
 public class ConnectorStyleImpl extends RoutingStyleImpl implements ConnectorStyle {
 	
-	/**
-	 * int field to store booleans and enums
-	 * @since 1.2 
-	 */
-	protected int eFlags = 0;
-	
     /**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
