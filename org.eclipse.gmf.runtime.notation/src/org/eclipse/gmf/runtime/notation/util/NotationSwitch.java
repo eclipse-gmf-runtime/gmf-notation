@@ -554,13 +554,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Edge</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Edge</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Edge</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Edge</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -569,13 +569,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -584,13 +584,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -599,13 +599,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Fill Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Fill Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fill Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Fill Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -614,13 +614,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Line Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Line Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Line Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Line Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -629,13 +629,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Font Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Font Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Font Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Font Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -644,13 +644,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Title Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Title Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Title Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Title Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -659,13 +659,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Sorting Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Sorting Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sorting Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Sorting Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -674,13 +674,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Description Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Description Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Description Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Description Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -689,13 +689,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Layout Constraint</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Layout Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Layout Constraint</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Layout Constraint</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -704,13 +704,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Size</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Size</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Size</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -719,13 +719,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Location</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Location</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Location</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -734,13 +734,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Bounds</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Bounds</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bounds</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Bounds</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -749,13 +749,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Ratio</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Ratio</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ratio</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Ratio</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -764,13 +764,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Anchor</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Anchor</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anchor</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Anchor</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -779,13 +779,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Bendpoints</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Bendpoints</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bendpoints</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Bendpoints</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -794,13 +794,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Identity Anchor</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Identity Anchor</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Identity Anchor</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Identity Anchor</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -809,13 +809,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Routing Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Routing Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Routing Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Routing Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -824,13 +824,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>View</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>View</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>View</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>View</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -839,13 +839,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Relative Bendpoints</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Relative Bendpoints</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Relative Bendpoints</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Relative Bendpoints</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -854,13 +854,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Canonical Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Canonical Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Canonical Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Canonical Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -869,13 +869,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Shape Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Shape Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Shape Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Shape Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -884,13 +884,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Connector Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Connector Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Connector Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Connector Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -899,13 +899,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Diagram</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Diagram</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Diagram</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -914,13 +914,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Image</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Image</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -929,13 +929,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Page Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Page Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Page Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Page Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -944,13 +944,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Drawer Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Drawer Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drawer Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Drawer Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -959,13 +959,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Guide Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Guide Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Guide Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Guide Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -974,13 +974,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Guide</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Guide</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Guide</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Guide</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -989,13 +989,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Node Entry</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Node Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node Entry</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Node Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1004,13 +1004,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Filtering Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Filtering Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Filtering Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Filtering Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1019,13 +1019,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Diagram Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Diagram Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Diagram Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Diagram Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1034,13 +1034,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Image Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Image Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1049,13 +1049,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Buffer Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Image Buffer Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Buffer Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Image Buffer Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1064,13 +1064,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>Properties Set Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Properties Set Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Properties Set Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Properties Set Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1079,13 +1079,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Property Value Map Entry</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>String To Property Value Map Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Property Value Map Entry</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>String To Property Value Map Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1094,13 +1094,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Property Value</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Property Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Property Value</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Property Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1109,13 +1109,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Single Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Single Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Single Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Single Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1124,13 +1124,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1139,13 +1139,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Named Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Named Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Named Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Named Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1154,13 +1154,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>String Object Converter</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>String Object Converter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String Object Converter</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>String Object Converter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1169,13 +1169,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Type Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Data Type Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Type Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Data Type Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1184,13 +1184,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Int Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Int Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Int Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Int Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1199,13 +1199,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Int List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Int List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Int List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Int List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1214,13 +1214,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Boolean Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Boolean Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1229,13 +1229,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Double Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Double Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Double Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Double Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1244,13 +1244,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Double List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Double List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Double List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Double List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1259,13 +1259,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>String Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>String Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>String Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1274,13 +1274,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>String List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>String List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>String List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1289,13 +1289,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>EObject Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>EObject Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1304,13 +1304,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>EObject List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>EObject List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1319,13 +1319,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Byte Array Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Byte Array Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Byte Array Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Byte Array Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1334,13 +1334,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean List Value Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Boolean List Value Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean List Value Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Boolean List Value Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1349,13 +1349,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Hinted Diagram Link Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Hinted Diagram Link Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Hinted Diagram Link Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Hinted Diagram Link Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1364,13 +1364,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Diagram Link Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Diagram Link Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Diagram Link Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Diagram Link Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1379,13 +1379,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multi Diagram Link Style</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>Multi Diagram Link Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multi Diagram Link Style</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>Multi Diagram Link Style</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1394,13 +1394,13 @@ public class NotationSwitch {
 	}
 
 				/**
-	 * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>EModel Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>EModel Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1409,13 +1409,13 @@ public class NotationSwitch {
 	}
 
     /**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
+	 * Returns the result of interpretting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch, but this is the last case anyway.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
+	 * @return the result of interpretting the object as an instance of '<em>EObject</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */

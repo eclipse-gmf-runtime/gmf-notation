@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -98,483 +98,483 @@ import org.eclipse.gmf.runtime.notation.View;
  * @generated
  */
 public class NotationPackageImpl extends EPackageImpl implements NotationPackage {
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass edgeEClass = null;
+    private EClass edgeEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nodeEClass = null;
+    private EClass nodeEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass styleEClass = null;
+    private EClass styleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fillStyleEClass = null;
+    private EClass fillStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass lineStyleEClass = null;
+    private EClass lineStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fontStyleEClass = null;
+    private EClass fontStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass titleStyleEClass = null;
+    private EClass titleStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sortingStyleEClass = null;
+    private EClass sortingStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass descriptionStyleEClass = null;
+    private EClass descriptionStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass layoutConstraintEClass = null;
+    private EClass layoutConstraintEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sizeEClass = null;
+    private EClass sizeEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass locationEClass = null;
+    private EClass locationEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass boundsEClass = null;
+    private EClass boundsEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ratioEClass = null;
+    private EClass ratioEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass anchorEClass = null;
+    private EClass anchorEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass bendpointsEClass = null;
+    private EClass bendpointsEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass identityAnchorEClass = null;
+    private EClass identityAnchorEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass routingStyleEClass = null;
+    private EClass routingStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass viewEClass = null;
+    private EClass viewEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass relativeBendpointsEClass = null;
+    private EClass relativeBendpointsEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass diagramEClass = null;
+    private EClass diagramEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageEClass = null;
+    private EClass imageEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass canonicalStyleEClass = null;
+    private EClass canonicalStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass shapeStyleEClass = null;
+    private EClass shapeStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass connectorStyleEClass = null;
+    private EClass connectorStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pageStyleEClass = null;
+    private EClass pageStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass drawerStyleEClass = null;
+    private EClass drawerStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass guideStyleEClass = null;
+    private EClass guideStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass guideEClass = null;
+    private EClass guideEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nodeEntryEClass = null;
+    private EClass nodeEntryEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass filteringStyleEClass = null;
+    private EClass filteringStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass diagramStyleEClass = null;
+    private EClass diagramStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageStyleEClass = null;
+    private EClass imageStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageBufferStyleEClass = null;
+    private EClass imageBufferStyleEClass = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass propertiesSetStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass stringToPropertyValueMapEntryEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass propertyValueEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass singleValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass listValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass namedStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass stringObjectConverterEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataTypeStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass intValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass intListValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass booleanValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass doubleValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass doubleListValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass stringValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass stringListValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass eObjectValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass eObjectListValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass byteArrayValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass booleanListValueStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass hintedDiagramLinkStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass diagramLinkStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass multiDiagramLinkStyleEClass = null;
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum sortingEEnum = null;
+    private EEnum sortingEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum filteringEEnum = null;
+    private EEnum filteringEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum routingEEnum = null;
+    private EEnum routingEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum smoothnessEEnum = null;
+    private EEnum smoothnessEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum jumpLinkStatusEEnum = null;
+    private EEnum jumpLinkStatusEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum jumpLinkTypeEEnum = null;
+    private EEnum jumpLinkTypeEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum alignmentEEnum = null;
+    private EEnum alignmentEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum sortingDirectionEEnum = null;
+    private EEnum sortingDirectionEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum measurementUnitEEnum = null;
+    private EEnum measurementUnitEEnum = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType relativeBendpointListEDataType = null;
+    private EDataType relativeBendpointListEDataType = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType filterKeyListEDataType = null;
+    private EDataType filterKeyListEDataType = null;
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType sortKeyMapEDataType = null;
+    private EDataType sortKeyMapEDataType = null;
 
-	/**
+    /**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -583,24 +583,24 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private NotationPackageImpl() {
+    private NotationPackageImpl() {
 		super(eNS_URI, NotationFactory.eINSTANCE);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static boolean isInited = false;
+    private static boolean isInited = false;
 
-	/**
+    /**
 	 * Creates, registers, and initializes the <b>Package</b> for this
 	 * model, and for any others upon which it depends.  Simple
 	 * dependencies are satisfied by calling this method on all
@@ -616,13 +616,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <p>Invocation of this method will not affect any packages that have
 	 * already been initialized.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static NotationPackage init() {
+    public static NotationPackage init() {
 		if (isInited) return (NotationPackage)EPackage.Registry.INSTANCE.getEPackage(NotationPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -645,925 +645,925 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return theNotationPackage;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEdge() {
+    public EClass getEdge() {
 		return edgeEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_Source() {
+    public EReference getEdge_Source() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_Target() {
+    public EReference getEdge_Target() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_Bendpoints() {
+    public EReference getEdge_Bendpoints() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_SourceAnchor() {
+    public EReference getEdge_SourceAnchor() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_TargetAnchor() {
+    public EReference getEdge_TargetAnchor() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(4);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNode() {
+    public EClass getNode() {
 		return nodeEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNode_LayoutConstraint() {
+    public EReference getNode_LayoutConstraint() {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStyle() {
+    public EClass getStyle() {
 		return styleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFillStyle() {
+    public EClass getFillStyle() {
 		return fillStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFillStyle_FillColor() {
+    public EAttribute getFillStyle_FillColor() {
 		return (EAttribute)fillStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLineStyle() {
+    public EClass getLineStyle() {
 		return lineStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLineStyle_LineColor() {
+    public EAttribute getLineStyle_LineColor() {
 		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFontStyle() {
+    public EClass getFontStyle() {
 		return fontStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_FontColor() {
+    public EAttribute getFontStyle_FontColor() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_FontName() {
+    public EAttribute getFontStyle_FontName() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_FontHeight() {
+    public EAttribute getFontStyle_FontHeight() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_Bold() {
+    public EAttribute getFontStyle_Bold() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_Italic() {
+    public EAttribute getFontStyle_Italic() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(4);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_Underline() {
+    public EAttribute getFontStyle_Underline() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(5);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFontStyle_StrikeThrough() {
+    public EAttribute getFontStyle_StrikeThrough() {
 		return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(6);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTitleStyle() {
+    public EClass getTitleStyle() {
 		return titleStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTitleStyle_ShowTitle() {
+    public EAttribute getTitleStyle_ShowTitle() {
 		return (EAttribute)titleStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSortingStyle() {
+    public EClass getSortingStyle() {
 		return sortingStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSortingStyle_Sorting() {
+    public EAttribute getSortingStyle_Sorting() {
 		return (EAttribute)sortingStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSortingStyle_SortingKeys() {
+    public EAttribute getSortingStyle_SortingKeys() {
 		return (EAttribute)sortingStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSortingStyle_SortedObjects() {
+    public EReference getSortingStyle_SortedObjects() {
 		return (EReference)sortingStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDescriptionStyle() {
+    public EClass getDescriptionStyle() {
 		return descriptionStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDescriptionStyle_Description() {
+    public EAttribute getDescriptionStyle_Description() {
 		return (EAttribute)descriptionStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLayoutConstraint() {
+    public EClass getLayoutConstraint() {
 		return layoutConstraintEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSize() {
+    public EClass getSize() {
 		return sizeEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSize_Width() {
+    public EAttribute getSize_Width() {
 		return (EAttribute)sizeEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSize_Height() {
+    public EAttribute getSize_Height() {
 		return (EAttribute)sizeEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLocation() {
+    public EClass getLocation() {
 		return locationEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLocation_X() {
+    public EAttribute getLocation_X() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLocation_Y() {
+    public EAttribute getLocation_Y() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBounds() {
+    public EClass getBounds() {
 		return boundsEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRatio() {
+    public EClass getRatio() {
 		return ratioEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRatio_Value() {
+    public EAttribute getRatio_Value() {
 		return (EAttribute)ratioEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAnchor() {
+    public EClass getAnchor() {
 		return anchorEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBendpoints() {
+    public EClass getBendpoints() {
 		return bendpointsEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIdentityAnchor() {
+    public EClass getIdentityAnchor() {
 		return identityAnchorEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIdentityAnchor_Id() {
+    public EAttribute getIdentityAnchor_Id() {
 		return (EAttribute)identityAnchorEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRoutingStyle() {
+    public EClass getRoutingStyle() {
 		return routingStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_Routing() {
+    public EAttribute getRoutingStyle_Routing() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_Smoothness() {
+    public EAttribute getRoutingStyle_Smoothness() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_AvoidObstructions() {
+    public EAttribute getRoutingStyle_AvoidObstructions() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_ClosestDistance() {
+    public EAttribute getRoutingStyle_ClosestDistance() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_JumpLinkStatus() {
+    public EAttribute getRoutingStyle_JumpLinkStatus() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(4);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_JumpLinkType() {
+    public EAttribute getRoutingStyle_JumpLinkType() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(5);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoutingStyle_JumpLinksReverse() {
+    public EAttribute getRoutingStyle_JumpLinksReverse() {
 		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(6);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getView() {
+    public EClass getView() {
 		return viewEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getView_Visible() {
+    public EAttribute getView_Visible() {
 		return (EAttribute)viewEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getView_Type() {
+    public EAttribute getView_Type() {
 		return (EAttribute)viewEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getView_Mutable() {
+    public EAttribute getView_Mutable() {
 		return (EAttribute)viewEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_SourceEdges() {
+    public EReference getView_SourceEdges() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_TargetEdges() {
+    public EReference getView_TargetEdges() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(4);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_PersistedChildren() {
+    public EReference getView_PersistedChildren() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(5);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_Styles() {
+    public EReference getView_Styles() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(6);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_Element() {
+    public EReference getView_Element() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(7);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_Diagram() {
+    public EReference getView_Diagram() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(8);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getView_TransientChildren() {
+    public EReference getView_TransientChildren() {
 		return (EReference)viewEClass.getEStructuralFeatures().get(9);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRelativeBendpoints() {
+    public EClass getRelativeBendpoints() {
 		return relativeBendpointsEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelativeBendpoints_Points() {
+    public EAttribute getRelativeBendpoints_Points() {
 		return (EAttribute)relativeBendpointsEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDiagram() {
+    public EClass getDiagram() {
 		return diagramEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDiagram_Name() {
+    public EAttribute getDiagram_Name() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDiagram_MeasurementUnit() {
+    public EAttribute getDiagram_MeasurementUnit() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDiagram_PersistedEdges() {
+    public EReference getDiagram_PersistedEdges() {
 		return (EReference)diagramEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDiagram_TransientEdges() {
+    public EReference getDiagram_TransientEdges() {
 		return (EReference)diagramEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getImage() {
+    public EClass getImage() {
 		return imageEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImage_Data() {
+    public EAttribute getImage_Data() {
 		return (EAttribute)imageEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCanonicalStyle() {
+    public EClass getCanonicalStyle() {
 		return canonicalStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCanonicalStyle_Canonical() {
+    public EAttribute getCanonicalStyle_Canonical() {
 		return (EAttribute)canonicalStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getShapeStyle() {
+    public EClass getShapeStyle() {
 		return shapeStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConnectorStyle() {
+    public EClass getConnectorStyle() {
 		return connectorStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPageStyle() {
+    public EClass getPageStyle() {
 		return pageStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPageStyle_PageX() {
+    public EAttribute getPageStyle_PageX() {
 		return (EAttribute)pageStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPageStyle_PageY() {
+    public EAttribute getPageStyle_PageY() {
 		return (EAttribute)pageStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPageStyle_PageWidth() {
+    public EAttribute getPageStyle_PageWidth() {
 		return (EAttribute)pageStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPageStyle_PageHeight() {
+    public EAttribute getPageStyle_PageHeight() {
 		return (EAttribute)pageStyleEClass.getEStructuralFeatures().get(3);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDrawerStyle() {
+    public EClass getDrawerStyle() {
 		return drawerStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDrawerStyle_Collapsed() {
+    public EAttribute getDrawerStyle_Collapsed() {
 		return (EAttribute)drawerStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGuideStyle() {
+    public EClass getGuideStyle() {
 		return guideStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGuideStyle_HorizontalGuides() {
+    public EReference getGuideStyle_HorizontalGuides() {
 		return (EReference)guideStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGuideStyle_VerticalGuides() {
+    public EReference getGuideStyle_VerticalGuides() {
 		return (EReference)guideStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGuide() {
+    public EClass getGuide() {
 		return guideEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGuide_Position() {
+    public EAttribute getGuide_Position() {
 		return (EAttribute)guideEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGuide_NodeMap() {
+    public EReference getGuide_NodeMap() {
 		return (EReference)guideEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNodeEntry() {
+    public EClass getNodeEntry() {
 		return nodeEntryEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNodeEntry_Value() {
+    public EAttribute getNodeEntry_Value() {
 		return (EAttribute)nodeEntryEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNodeEntry_Key() {
+    public EReference getNodeEntry_Key() {
 		return (EReference)nodeEntryEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFilteringStyle() {
+    public EClass getFilteringStyle() {
 		return filteringStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFilteringStyle_Filtering() {
+    public EAttribute getFilteringStyle_Filtering() {
 		return (EAttribute)filteringStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFilteringStyle_FilteringKeys() {
+    public EAttribute getFilteringStyle_FilteringKeys() {
 		return (EAttribute)filteringStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFilteringStyle_FilteredObjects() {
+    public EReference getFilteringStyle_FilteredObjects() {
 		return (EReference)filteringStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDiagramStyle() {
+    public EClass getDiagramStyle() {
 		return diagramStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getImageStyle() {
+    public EClass getImageStyle() {
 		return imageStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageStyle_AntiAlias() {
+    public EAttribute getImageStyle_AntiAlias() {
 		return (EAttribute)imageStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImageStyle_MaintainAspectRatio() {
+    public EAttribute getImageStyle_MaintainAspectRatio() {
 		return (EAttribute)imageStyleEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getImageStyle_CropBound() {
+    public EReference getImageStyle_CropBound() {
 		return (EReference)imageStyleEClass.getEStructuralFeatures().get(2);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getImageBufferStyle() {
+    public EClass getImageBufferStyle() {
 		return imageBufferStyleEClass;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getImageBufferStyle_ImageBuffer() {
+    public EReference getImageBufferStyle_ImageBuffer() {
 		return (EReference)imageBufferStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1572,7 +1572,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return propertiesSetStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1581,7 +1581,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)propertiesSetStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1590,7 +1590,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return stringToPropertyValueMapEntryEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1599,7 +1599,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)stringToPropertyValueMapEntryEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1608,7 +1608,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)stringToPropertyValueMapEntryEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1617,7 +1617,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return propertyValueEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1626,7 +1626,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)propertyValueEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1635,7 +1635,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)propertyValueEClass.getEStructuralFeatures().get(1);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1644,7 +1644,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return singleValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1653,7 +1653,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)singleValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1662,7 +1662,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return listValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1671,7 +1671,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)listValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1680,7 +1680,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return namedStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1689,7 +1689,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)namedStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1698,7 +1698,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return stringObjectConverterEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1707,7 +1707,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return dataTypeStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1716,7 +1716,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)dataTypeStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1725,7 +1725,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return intValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1734,7 +1734,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)intValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1743,7 +1743,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return intListValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1752,7 +1752,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)intListValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1761,7 +1761,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return booleanValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1770,7 +1770,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)booleanValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1779,7 +1779,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return doubleValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1788,7 +1788,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)doubleValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1797,7 +1797,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return doubleListValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1806,7 +1806,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)doubleListValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1815,7 +1815,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return stringValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1824,7 +1824,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)stringValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1833,7 +1833,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return stringListValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1842,7 +1842,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)stringListValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1851,7 +1851,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return eObjectValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1860,7 +1860,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)eObjectValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1869,7 +1869,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return eObjectListValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1878,7 +1878,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)eObjectListValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1887,7 +1887,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return byteArrayValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1896,7 +1896,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)byteArrayValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1905,7 +1905,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return booleanListValueStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1914,7 +1914,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)booleanListValueStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1923,7 +1923,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return hintedDiagramLinkStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1932,7 +1932,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EAttribute)hintedDiagramLinkStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1941,7 +1941,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return diagramLinkStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1950,7 +1950,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)diagramLinkStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1959,7 +1959,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return multiDiagramLinkStyleEClass;
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1968,138 +1968,138 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		return (EReference)multiDiagramLinkStyleEClass.getEStructuralFeatures().get(0);
 	}
 
-	/**
+				/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getSorting() {
+    public EEnum getSorting() {
 		return sortingEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getFiltering() {
+    public EEnum getFiltering() {
 		return filteringEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getRouting() {
+    public EEnum getRouting() {
 		return routingEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getSmoothness() {
+    public EEnum getSmoothness() {
 		return smoothnessEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getJumpLinkStatus() {
+    public EEnum getJumpLinkStatus() {
 		return jumpLinkStatusEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getJumpLinkType() {
+    public EEnum getJumpLinkType() {
 		return jumpLinkTypeEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getAlignment() {
+    public EEnum getAlignment() {
 		return alignmentEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getSortingDirection() {
+    public EEnum getSortingDirection() {
 		return sortingDirectionEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getMeasurementUnit() {
+    public EEnum getMeasurementUnit() {
 		return measurementUnitEEnum;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getRelativeBendpointList() {
+    public EDataType getRelativeBendpointList() {
 		return relativeBendpointListEDataType;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getFilterKeyList() {
+    public EDataType getFilterKeyList() {
 		return filterKeyListEDataType;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getSortKeyMap() {
+    public EDataType getSortKeyMap() {
 		return sortKeyMapEDataType;
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotationFactory getNotationFactory() {
+    public NotationFactory getNotationFactory() {
 		return (NotationFactory)getEFactoryInstance();
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private boolean isCreated = false;
+    private boolean isCreated = false;
 
-	/**
+    /**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+    public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
 
@@ -2324,21 +2324,21 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		sortKeyMapEDataType = createEDataType(SORT_KEY_MAP);
 	}
 
-	/**
+    /**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private boolean isInitialized = false;
+    private boolean isInitialized = false;
 
-	/**
+    /**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+    public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -2414,15 +2414,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getEdge_Source(), this.getView(), this.getView_SourceEdges(), "source", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEdge_Source(), this.getView(), this.getView_SourceEdges(), "source", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getEdge_Target(), this.getView(), this.getView_TargetEdges(), "target", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEdge_Target(), this.getView(), this.getView_TargetEdges(), "target", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getEdge_Bendpoints(), this.getBendpoints(), null, "bendpoints", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEdge_Bendpoints(), this.getBendpoints(), null, "bendpoints", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getEdge_SourceAnchor(), this.getAnchor(), null, "sourceAnchor", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEdge_SourceAnchor(), this.getAnchor(), null, "sourceAnchor", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getEdge_TargetAnchor(), this.getAnchor(), null, "targetAnchor", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEdge_TargetAnchor(), this.getAnchor(), null, "targetAnchor", null, 0, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		EOperation op = addEOperation(edgeEClass, this.getBendpoints(), "createBendpoints", 0, 1); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1); //$NON-NLS-1$
@@ -2435,7 +2435,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getNode_LayoutConstraint(), this.getLayoutConstraint(), null, "layoutConstraint", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getNode_LayoutConstraint(), this.getLayoutConstraint(), null, "layoutConstraint", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		op = addEOperation(nodeEClass, this.getLayoutConstraint(), "createLayoutConstraint", 0, 1); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1); //$NON-NLS-1$
@@ -2464,7 +2464,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getSortingStyle_Sorting(), this.getSorting(), "sorting", "None", 0, 1, SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getSortingStyle_SortingKeys(), this.getSortKeyMap(), "sortingKeys", null, 0, 1, SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getSortingStyle_SortedObjects(), theEcorePackage.getEObject(), null, "sortedObjects", null, 0, -1, SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getSortingStyle_SortedObjects(), theEcorePackage.getEObject(), null, "sortedObjects", null, 0, -1, SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(descriptionStyleEClass, DescriptionStyle.class, "DescriptionStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getDescriptionStyle_Description(), ecorePackage.getEString(), "description", "", 0, 1, DescriptionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
@@ -2505,21 +2505,21 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getView_Type(), ecorePackage.getEString(), "type", "", 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getView_Mutable(), ecorePackage.getEBoolean(), "mutable", "false", 0, 1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		  
-		initEReference(getView_SourceEdges(), this.getEdge(), this.getEdge_Source(), "sourceEdges", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_SourceEdges(), this.getEdge(), this.getEdge_Source(), "sourceEdges", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getView_TargetEdges(), this.getEdge(), this.getEdge_Target(), "targetEdges", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_TargetEdges(), this.getEdge(), this.getEdge_Target(), "targetEdges", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
 			initEReference(getView_PersistedChildren(), this.getNode(), null, "children", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 			initEReference(getView_PersistedChildren(), this.getNode(), null, "children", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
 		  
-		initEReference(getView_Styles(), this.getStyle(), null, "styles", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_Styles(), this.getStyle(), null, "styles", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getView_Element(), theEcorePackage.getEObject(), null, "element", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_Element(), theEcorePackage.getEObject(), null, "element", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getView_Diagram(), this.getDiagram(), null, "diagram", null, 1, 1, View.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_Diagram(), this.getDiagram(), null, "diagram", null, 1, 1, View.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getView_TransientChildren(), this.getNode(), null, "transientChildren", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getView_TransientChildren(), this.getNode(), null, "transientChildren", null, 0, -1, View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		op = addEOperation(viewEClass, this.getStyle(), "getStyle", 0, 1); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1); //$NON-NLS-1$
@@ -2544,7 +2544,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 			initEReference(getDiagram_PersistedEdges(), this.getEdge(), null, "edges", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
 		  
-		initEReference(getDiagram_TransientEdges(), this.getEdge(), null, "TransientEdges", null, 0, -1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getDiagram_TransientEdges(), this.getEdge(), null, "TransientEdges", null, 0, -1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		op = addEOperation(diagramEClass, this.getEdge(), "createEdge", 0, 1); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1); //$NON-NLS-1$
@@ -2570,25 +2570,25 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(guideStyleEClass, GuideStyle.class, "GuideStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getGuideStyle_HorizontalGuides(), this.getGuide(), null, "horizontalGuides", null, 0, -1, GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getGuideStyle_HorizontalGuides(), this.getGuide(), null, "horizontalGuides", null, 0, -1, GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getGuideStyle_VerticalGuides(), this.getGuide(), null, "verticalGuides", null, 0, -1, GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getGuideStyle_VerticalGuides(), this.getGuide(), null, "verticalGuides", null, 0, -1, GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(guideEClass, Guide.class, "Guide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getGuide_Position(), ecorePackage.getEInt(), "position", "0", 0, 1, Guide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		  
-		initEReference(getGuide_NodeMap(), this.getNodeEntry(), null, "nodeMap", null, 0, -1, Guide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getGuide_NodeMap(), this.getNodeEntry(), null, "nodeMap", null, 0, -1, Guide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(nodeEntryEClass, Map.Entry.class, "NodeEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getNodeEntry_Value(), this.getAlignment(), "value", "Center", 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		  
-		initEReference(getNodeEntry_Key(), this.getNode(), null, "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getNodeEntry_Key(), this.getNode(), null, "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(filteringStyleEClass, FilteringStyle.class, "FilteringStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getFilteringStyle_Filtering(), this.getFiltering(), "filtering", "None", 0, 1, FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getFilteringStyle_FilteringKeys(), this.getFilterKeyList(), "filteringKeys", null, 0, 1, FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getFilteringStyle_FilteredObjects(), theEcorePackage.getEObject(), null, "filteredObjects", null, 0, -1, FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getFilteringStyle_FilteredObjects(), theEcorePackage.getEObject(), null, "filteredObjects", null, 0, -1, FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(diagramStyleEClass, DiagramStyle.class, "DiagramStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
@@ -2596,15 +2596,15 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getImageStyle_AntiAlias(), ecorePackage.getEBooleanObject(), "antiAlias", "true", 0, 1, ImageStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getImageStyle_MaintainAspectRatio(), ecorePackage.getEBooleanObject(), "maintainAspectRatio", "true", 0, 1, ImageStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		  
-		initEReference(getImageStyle_CropBound(), this.getBounds(), null, "cropBound", null, 1, 1, ImageStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getImageStyle_CropBound(), this.getBounds(), null, "cropBound", null, 1, 1, ImageStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(imageBufferStyleEClass, ImageBufferStyle.class, "ImageBufferStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getImageBufferStyle_ImageBuffer(), this.getImage(), null, "imageBuffer", null, 1, 1, ImageBufferStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getImageBufferStyle_ImageBuffer(), this.getImage(), null, "imageBuffer", null, 1, 1, ImageBufferStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(propertiesSetStyleEClass, PropertiesSetStyle.class, "PropertiesSetStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getPropertiesSetStyle_PropertiesMap(), this.getStringToPropertyValueMapEntry(), null, "propertiesMap", null, 0, -1, PropertiesSetStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getPropertiesSetStyle_PropertiesMap(), this.getStringToPropertyValueMapEntry(), null, "propertiesMap", null, 0, -1, PropertiesSetStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		op = addEOperation(propertiesSetStyleEClass, theEcorePackage.getEJavaObject(), "getProperty", 0, 1); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEString(), "propertyName", 0, 1); //$NON-NLS-1$
@@ -2631,14 +2631,14 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEClass(stringToPropertyValueMapEntryEClass, Map.Entry.class, "StringToPropertyValueMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getStringToPropertyValueMapEntry_Key(), theEcorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getStringToPropertyValueMapEntry_Value(), this.getPropertyValue(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getStringToPropertyValueMapEntry_Value(), this.getPropertyValue(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(propertyValueEClass, PropertyValue.class, "PropertyValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getPropertyValue_RawValue(), ecorePackage.getEString(), "rawValue", null, 0, 1, PropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		  
-		initEReference(getPropertyValue_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, 1, PropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getPropertyValue_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, 1, PropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-		addEOperation(propertyValueEClass, theEcorePackage.getEJavaObject(), "getValue", 0, 1); //$NON-NLS-1$
+		op = addEOperation(propertyValueEClass, theEcorePackage.getEJavaObject(), "getValue", 0, 1); //$NON-NLS-1$
 
 		op = addEOperation(propertyValueEClass, null, "setValue"); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEJavaObject(), "newValue", 0, 1); //$NON-NLS-1$
@@ -2646,7 +2646,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEClass(singleValueStyleEClass, SingleValueStyle.class, "SingleValueStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getSingleValueStyle_RawValue(), ecorePackage.getEString(), "rawValue", null, 0, 1, SingleValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
-		addEOperation(singleValueStyleEClass, theEcorePackage.getEJavaObject(), "getValue", 0, 1); //$NON-NLS-1$
+		op = addEOperation(singleValueStyleEClass, theEcorePackage.getEJavaObject(), "getValue", 0, 1); //$NON-NLS-1$
 
 		op = addEOperation(singleValueStyleEClass, null, "setValue"); //$NON-NLS-1$
 		addEParameter(op, theEcorePackage.getEJavaObject(), "newValue", 0, 1); //$NON-NLS-1$
@@ -2667,7 +2667,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(dataTypeStyleEClass, DataTypeStyle.class, "DataTypeStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getDataTypeStyle_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, 1, DataTypeStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getDataTypeStyle_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, 1, DataTypeStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(intValueStyleEClass, IntValueStyle.class, "IntValueStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getIntValueStyle_IntValue(), theEcorePackage.getEInt(), "intValue", null, 0, 1, IntValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
@@ -2692,11 +2692,11 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(eObjectValueStyleEClass, EObjectValueStyle.class, "EObjectValueStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getEObjectValueStyle_EObjectValue(), theEcorePackage.getEObject(), null, "eObjectValue", null, 0, 1, EObjectValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEObjectValueStyle_EObjectValue(), theEcorePackage.getEObject(), null, "eObjectValue", null, 0, 1, EObjectValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(eObjectListValueStyleEClass, EObjectListValueStyle.class, "EObjectListValueStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getEObjectListValueStyle_EObjectListValue(), theEcorePackage.getEObject(), null, "eObjectListValue", null, 0, -1, EObjectListValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getEObjectListValueStyle_EObjectListValue(), theEcorePackage.getEObject(), null, "eObjectListValue", null, 0, -1, EObjectListValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(byteArrayValueStyleEClass, ByteArrayValueStyle.class, "ByteArrayValueStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getByteArrayValueStyle_ByteArrayValue(), theEcorePackage.getEByteArray(), "byteArrayValue", null, 0, 1, ByteArrayValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
@@ -2709,11 +2709,11 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(diagramLinkStyleEClass, DiagramLinkStyle.class, "DiagramLinkStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getDiagramLinkStyle_DiagramLink(), this.getDiagram(), null, "diagramLink", null, 0, 1, DiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getDiagramLinkStyle_DiagramLink(), this.getDiagram(), null, "diagramLink", null, 0, 1, DiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(multiDiagramLinkStyleEClass, MultiDiagramLinkStyle.class, "MultiDiagramLinkStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		  
-		initEReference(getMultiDiagramLinkStyle_DiagramLinks(), this.getDiagram(), null, "diagramLinks", null, 0, -1, MultiDiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+			initEReference(getMultiDiagramLinkStyle_DiagramLinks(), this.getDiagram(), null, "diagramLinks", null, 0, -1, MultiDiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$

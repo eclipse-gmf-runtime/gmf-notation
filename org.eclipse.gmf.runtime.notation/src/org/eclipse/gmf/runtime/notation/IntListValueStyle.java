@@ -40,7 +40,7 @@ public interface IntListValueStyle extends NamedStyle {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Int List Value</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getIntListValueStyle_IntListValue()
-	 * @model unique="false"
+	 * @model type="int" unique="false"
 	 * @generated
 	 */
 	EList getIntListValue();

@@ -40,7 +40,7 @@ public interface BooleanListValueStyle extends NamedStyle {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Boolean List Value</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getBooleanListValueStyle_BooleanListValue()
-	 * @model unique="false"
+	 * @model type="java.lang.Boolean" unique="false"
 	 * @generated
 	 */
 	EList getBooleanListValue();

@@ -40,7 +40,7 @@ public interface DoubleListValueStyle extends NamedStyle {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Double List Value</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDoubleListValueStyle_DoubleListValue()
-	 * @model unique="false"
+	 * @model type="java.lang.Double" unique="false"
 	 * @generated
 	 */
 	EList getDoubleListValue();

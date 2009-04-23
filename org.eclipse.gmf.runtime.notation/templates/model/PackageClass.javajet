@@ -1,4 +1,4 @@
-<%@ jet package="org.eclipse.emf.codegen.ecore.templates.model" imports="java.util.* org.eclipse.emf.ecore.* org.eclipse.emf.ecore.util.EcoreUtil org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.emf.codegen.ecore.genmodel.impl.Literals" class="PackageClass" version="$Id: PackageClass.javajet,v 1.5 2007/11/23 19:44:57 ahunter Exp $" %>
+<%@ jet package="org.eclipse.emf.codegen.ecore.templates.model" imports="java.util.* org.eclipse.emf.ecore.* org.eclipse.emf.ecore.util.EcoreUtil org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.emf.codegen.ecore.genmodel.impl.Literals" class="PackageClass" version="$Id: PackageClass.javajet,v 1.4 2007/05/17 16:26:51 aboyko Exp $" %>
 <%
 /**
  * <copyright>
@@ -18,8 +18,6 @@
 <%final GenPackage genPackage = (GenPackage)((Object[])argument)[0]; final GenModel genModel=genPackage.getGenModel();%>
 <%boolean isInterface = Boolean.TRUE.equals(((Object[])argument)[1]); boolean isImplementation = Boolean.TRUE.equals(((Object[])argument)[2]);%>
 <%String publicStaticFinalFlag = isImplementation ? "public static final " : "";%>
-<%boolean needsAddEOperation = false;%>
-<%boolean needsAddEParameter = false;%>
 <%@ include file="../Header.javajetinc"%>
 <%if (isImplementation && !genModel.isSuppressInterfaces()) {%>
 package <%=genPackage.getClassPackageName()%>;
@@ -79,13 +77,13 @@ public class <%=genPackage.getPackageClassName()%> extends <%=genModel.getImport
 public interface <%=genPackage.getPackageInterfaceName()%> extends <%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>
 <%}%>
 {
-<%if (genModel.hasCopyrightField()) {%>
+<%if (genModel.getCopyrightText() != null) {%>
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	<%=publicStaticFinalFlag%><%=genModel.getImportedName("java.lang.String")%> copyright = <%=genModel.getCopyrightFieldLiteral()%>;<%=genModel.getNonNLS()%>
+	<%=publicStaticFinalFlag%><%=genModel.getImportedName("java.lang.String")%> copyright = "<%=genModel.getCopyrightText()%>";<%=genModel.getNonNLS()%>
 
 <%}%>
 <%if (isInterface) {%>
@@ -145,7 +143,7 @@ public interface <%=genPackage.getPackageInterfaceName()%> extends <%=genModel.g
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
       <%if (!genDataType.isPrimitiveType() && !genDataType.isArrayType()) {%>
-	 * @see <%=genDataType.getRawInstanceClassName()%>
+	 * @see <%=genDataType.getQualifiedInstanceClassName()%>
       <%}%>
     <%}%>
 	 * @see <%=genPackage.getQualifiedPackageClassName()%>#get<%=genClassifier.getClassifierAccessorName()%>()
@@ -361,13 +359,13 @@ public interface <%=genPackage.getPackageInterfaceName()%> extends <%=genModel.g
       <%if (genDataType.isPrimitiveType() || genDataType.isArrayType()) {%>
 	 * Returns the meta object for data type '<em><%=genDataType.getFormattedName()%></em>'.
       <%} else {%>
-	 * Returns the meta object for data type '{@link <%=genDataType.getRawInstanceClassName()%> <em><%=genDataType.getFormattedName()%></em>}'.
+	 * Returns the meta object for data type '{@link <%=genDataType.getQualifiedInstanceClassName()%> <em><%=genDataType.getFormattedName()%></em>}'.
       <%}%>
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em><%=genDataType.getFormattedName()%></em>'.
       <%if (!genDataType.isPrimitiveType() && !genDataType.isArrayType()) {%>
-	 * @see <%=genDataType.getRawInstanceClassName()%>
+	 * @see <%=genDataType.getQualifiedInstanceClassName()%>
       <%}%>
       <%if (!genModel.isSuppressEMFModelTags()) {boolean first = true; for (StringTokenizer stringTokenizer = new StringTokenizer(genDataType.getModelInfo(), "\n\r"); stringTokenizer.hasMoreTokens(); ) { String modelInfo = stringTokenizer.nextToken(); if (first) { first = false;%>
 	 * @model <%=modelInfo%>
@@ -534,13 +532,13 @@ class InformationIterator
   InformationIterator(EGenericType eGenericType)
   {
     iterator = EcoreUtil.getAllContents(Collections.singleton(eGenericType));
-  }
-
+  } 
+  
   boolean hasNext()
   {
     return iterator.hasNext();
   }
-
+  
   Information next()
   {
     Information information = new Information();
@@ -554,7 +552,7 @@ class InformationIterator
       GenClassifier genClassifier = genModel.findGenClassifier(eGenericType.getEClassifier());
       information.type = genPackage.getPackageInstanceVariable(genClassifier.getGenPackage()) + ".get" + genClassifier.getClassifierAccessorName() + "()";
     }
-    else if (eGenericType.getETypeParameter() != null)
+    else if (eGenericType.getETypeParameter() != null) 
     {
       ETypeParameter eTypeParameter = eGenericType.getETypeParameter();
       if (eTypeParameter.eContainer() instanceof EClass)
@@ -688,25 +686,19 @@ int maxGenericTypeAssignment = 0;
 		  <% } else if (genFeature.getFeatureAccessorName().equals("Diagram_PersistedEdges")){ %>
 			initEReference(get<%=genFeature.getFeatureAccessorName()%>(), <%if (genFeature.hasGenericType()) {%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genFeature.getTypeGenPackage())%>.get<%=genFeature.getTypeClassifierAccessorName()%>()<%}%>, <%=reverse%>, "edges", <%=genFeature.getDefaultValue()%>, <%=genFeature.getLowerBound()%>, <%=genFeature.getUpperBound()%>, <%=genFeature.getContainerClass()%>, <%=genFeature.getTransientFlag()%>, <%=genFeature.getVolatileFlag()%>, <%=genFeature.getChangeableFlag()%>, <%=genFeature.getContainmentFlag()%>, <%=genFeature.getResolveProxiesFlag()%>, <%=genFeature.getUnsettableFlag()%>, <%=genFeature.getUniqueFlag()%>, <%=genFeature.getDerivedFlag()%>, <%=genFeature.getOrderedFlag()%>);<%=genModel.getNonNLS()%><%=genModel.getNonNLS(genFeature.getDefaultValue(), 2)%>
 		  <%} else {%>
-		initEReference(get<%=genFeature.getFeatureAccessorName()%>(), <%if (genFeature.hasGenericType()) {%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genFeature.getTypeGenPackage())%>.get<%=genFeature.getTypeClassifierAccessorName()%>()<%}%>, <%=reverse%>, "<%=genFeature.getName()%>", <%=genFeature.getDefaultValue()%>, <%=genFeature.getLowerBound()%>, <%=genFeature.getUpperBound()%>, <%=genFeature.getContainerClass()%>, <%=genFeature.getTransientFlag()%>, <%=genFeature.getVolatileFlag()%>, <%=genFeature.getChangeableFlag()%>, <%=genFeature.getContainmentFlag()%>, <%=genFeature.getResolveProxiesFlag()%>, <%=genFeature.getUnsettableFlag()%>, <%=genFeature.getUniqueFlag()%>, <%=genFeature.getDerivedFlag()%>, <%=genFeature.getOrderedFlag()%>);<%=genModel.getNonNLS()%><%=genModel.getNonNLS(genFeature.getDefaultValue(), 2)%>
+			initEReference(get<%=genFeature.getFeatureAccessorName()%>(), <%if (genFeature.hasGenericType()) {%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genFeature.getTypeGenPackage())%>.get<%=genFeature.getTypeClassifierAccessorName()%>()<%}%>, <%=reverse%>, "<%=genFeature.getName()%>", <%=genFeature.getDefaultValue()%>, <%=genFeature.getLowerBound()%>, <%=genFeature.getUpperBound()%>, <%=genFeature.getContainerClass()%>, <%=genFeature.getTransientFlag()%>, <%=genFeature.getVolatileFlag()%>, <%=genFeature.getChangeableFlag()%>, <%=genFeature.getContainmentFlag()%>, <%=genFeature.getResolveProxiesFlag()%>, <%=genFeature.getUnsettableFlag()%>, <%=genFeature.getUniqueFlag()%>, <%=genFeature.getDerivedFlag()%>, <%=genFeature.getOrderedFlag()%>);<%=genModel.getNonNLS()%><%=genModel.getNonNLS(genFeature.getDefaultValue(), 2)%>
             <%for (GenFeature keyFeature : genFeature.getKeys()) {%>
-		get<%=genFeature.getFeatureAccessorName()%>().getEKeys().add(<%=genPackage.getPackageInstanceVariable(keyFeature.getGenPackage())%>.get<%=keyFeature.getFeatureAccessorName()%>());
+				get<%=genFeature.getFeatureAccessorName()%>().getEKeys().add(<%=genPackage.getPackageInstanceVariable(keyFeature.getGenPackage())%>.get<%=keyFeature.getFeatureAccessorName()%>());
 			<%}%>
             <%}%>
           <%} else {%>
 		initEAttribute(get<%=genFeature.getFeatureAccessorName()%>(), <%if (genFeature.hasGenericType()) {%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genFeature.getTypeGenPackage())%>.get<%=genFeature.getTypeClassifierAccessorName()%>()<%}%>, "<%=genFeature.getName()%>", <%=genFeature.getDefaultValue()%>, <%=genFeature.getLowerBound()%>, <%=genFeature.getUpperBound()%>, <%=genFeature.getContainerClass()%>, <%=genFeature.getTransientFlag()%>, <%=genFeature.getVolatileFlag()%>, <%=genFeature.getChangeableFlag()%>, <%=genFeature.getUnsettableFlag()%>, <%=genFeature.getIDFlag()%>, <%=genFeature.getUniqueFlag()%>, <%=genFeature.getDerivedFlag()%>, <%=genFeature.getOrderedFlag()%>);<%=genModel.getNonNLS()%><%=genModel.getNonNLS(genFeature.getDefaultValue(), 2)%>
           <%}%>
         <%}%>
-        <%for (GenOperation genOperation : genClass.getGenOperations()) {String prefix = ""; if (genOperation.hasGenericType() || !genOperation.getGenParameters().isEmpty() || !genOperation.getGenExceptions().isEmpty() || !genOperation.getGenTypeParameters().isEmpty()) { if (firstOperationAssignment) { firstOperationAssignment = false; prefix = genModel.getImportedName("org.eclipse.emf.ecore.EOperation") + " op = "; } else { prefix = "op = "; }} %>
+        <%for (GenOperation genOperation : genClass.getGenOperations()) {String prefix = ""; if (!genOperation.isVoid() || !genOperation.getGenParameters().isEmpty() || !genOperation.getGenExceptions().isEmpty() || !genOperation.getGenTypeParameters().isEmpty()) { if (firstOperationAssignment) { firstOperationAssignment = false; prefix = genModel.getImportedName("org.eclipse.emf.ecore.EOperation") + " op = "; } else { prefix = "op = "; }} %>
 
-          <%if (genModel.useGenerics()) {%>
-		<%=prefix%>addEOperation(<%=genClass.getClassifierInstanceName()%>, <%if (genOperation.isVoid() || genOperation.hasGenericType()) {%>null<%} else {%><%=genPackage.getPackageInstanceVariable(genOperation.getTypeGenPackage())%>.get<%=genOperation.getTypeClassifierAccessorName()%>()<%}%>, "<%=genOperation.getName()%>", <%=genOperation.getLowerBound()%>, <%=genOperation.getUpperBound()%>, <%=genOperation.getUniqueFlag()%>, <%=genOperation.getOrderedFlag()%>);<%=genModel.getNonNLS()%>
-          <%} else if (!genOperation.isVoid()) {%>
-            <%if (!genOperation.getEcoreOperation().isOrdered() || !genOperation.getEcoreOperation().isUnique()) { needsAddEOperation = true;%>
-		<%=prefix%>addEOperation(<%=genClass.getClassifierInstanceName()%>, <%=genPackage.getPackageInstanceVariable(genOperation.getTypeGenPackage())%>.get<%=genOperation.getTypeClassifierAccessorName()%>(), "<%=genOperation.getName()%>", <%=genOperation.getLowerBound()%>, <%=genOperation.getUpperBound()%>, <%=genOperation.getUniqueFlag()%>, <%=genOperation.getOrderedFlag()%>);<%=genModel.getNonNLS()%>
-            <%} else {%>
-		<%=prefix%>addEOperation(<%=genClass.getClassifierInstanceName()%>, <%=genPackage.getPackageInstanceVariable(genOperation.getTypeGenPackage())%>.get<%=genOperation.getTypeClassifierAccessorName()%>(), "<%=genOperation.getName()%>", <%=genOperation.getLowerBound()%>, <%=genOperation.getUpperBound()%>);<%=genModel.getNonNLS()%>
-            <%}%>
+          <%if (!genOperation.isVoid()) {%>
+		<%=prefix%>addEOperation(<%=genClass.getClassifierInstanceName()%>, <%if (genOperation.hasGenericType()) {%>null<%} else {%><%=genPackage.getPackageInstanceVariable(genOperation.getTypeGenPackage())%>.get<%=genOperation.getTypeClassifierAccessorName()%>()<%}%>, "<%=genOperation.getName()%>", <%=genOperation.getLowerBound()%>, <%=genOperation.getUpperBound()%>);<%=genModel.getNonNLS()%>
           <%} else {%>
 		<%=prefix%>addEOperation(<%=genClass.getClassifierInstanceName()%>, null, "<%=genOperation.getName()%>");<%=genModel.getNonNLS()%>
           <%}%>
@@ -733,13 +725,7 @@ int maxGenericTypeAssignment = 0;
                 <%}%>
               <%}%>
             <%}%>
-            <%if (genModel.useGenerics()) {%>
-		addEParameter(op, <%if (genParameter.hasGenericType()){%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genParameter.getTypeGenPackage())%>.get<%=genParameter.getTypeClassifierAccessorName()%>()<%}%>, "<%=genParameter.getName()%>", <%=genParameter.getLowerBound()%>, <%=genParameter.getUpperBound()%>, <%=genParameter.getUniqueFlag()%>, <%=genParameter.getOrderedFlag()%>);<%=genModel.getNonNLS()%>
-            <%} else if (!genParameter.getEcoreParameter().isOrdered() || !genParameter.getEcoreParameter().isUnique()) { needsAddEParameter = true;%>
-		addEParameter(op, <%if (genParameter.hasGenericType()){%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genParameter.getTypeGenPackage())%>.get<%=genParameter.getTypeClassifierAccessorName()%>()<%}%>, "<%=genParameter.getName()%>", <%=genParameter.getLowerBound()%>, <%=genParameter.getUpperBound()%>, <%=genParameter.getUniqueFlag()%>, <%=genParameter.getOrderedFlag()%>);<%=genModel.getNonNLS()%>
-            <%} else {%>
 		addEParameter(op, <%if (genParameter.hasGenericType()){%>g1<%} else {%><%=genPackage.getPackageInstanceVariable(genParameter.getTypeGenPackage())%>.get<%=genParameter.getTypeClassifierAccessorName()%>()<%}%>, "<%=genParameter.getName()%>", <%=genParameter.getLowerBound()%>, <%=genParameter.getUpperBound()%>);<%=genModel.getNonNLS()%>
-            <%}%>
           <%}%>
           <%if (genOperation.hasGenericExceptions()) {%>
               <%for (EGenericType genericExceptions : genOperation.getEcoreOperation().getEGenericExceptions()) {%>
@@ -930,67 +916,11 @@ int maxGenericTypeAssignment = 0;
 	{
 		if (eClassifier.getInstanceClassName() == null)
 		{
-    <%ArrayList<GenClass> dynamicGenClasses = new ArrayList<GenClass>(); for (GenClass genClass : genPackage.getGenClasses()) { if (genClass.isDynamic()) { dynamicGenClasses.add(genClass); } }%>
-    <%if (dynamicGenClasses.isEmpty()) {%>
 			eClassifier.setInstanceClassName("<%=genPackage.getInterfacePackageName()%>." + eClassifier.getName());<%=genModel.getNonNLS()%>
 			setGeneratedClassName(eClassifier);
-    <%} else {%>
-			switch (eClassifier.getClassifierID())
-			{
-      <%for (GenClass genClass : dynamicGenClasses) {%>
-        <%if (genClass.isDynamic()) {%>
-				case <%=genPackage.getClassifierID(genClass)%>:
-        <%}%>
-      <%}%>
-				{
-					break;
-				}
-				default:
-				{
-					eClassifier.setInstanceClassName("<%=genPackage.getInterfacePackageName()%>." + eClassifier.getName());<%=genModel.getNonNLS()%>
-					setGeneratedClassName(eClassifier);
-					break;
-				}
-			}
-    <%}%>
 		}
 	}
 
-  <%}%>
-  <%if (needsAddEOperation) {%>
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected <%=genModel.getImportedName("org.eclipse.emf.ecore.EOperation")%> addEOperation(<%=genModel.getImportedName("org.eclipse.emf.ecore.EClass")%> owner, <%=genModel.getImportedName("org.eclipse.emf.ecore.EClassifier")%> type, String name, int lowerBound, int upperBound, boolean isUnique, boolean isOrdered)
-	{
-		<%=genModel.getImportedName("org.eclipse.emf.ecore.EOperation")%> o = addEOperation(owner, type, name, lowerBound, upperBound);
-		o.setUnique(isUnique);
-		o.setOrdered(isOrdered);
-		return o;
-	}
-	
-  <%}%>
-  <%if (needsAddEParameter) {%>
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected <%=genModel.getImportedName("org.eclipse.emf.ecore.EParameter")%> addEParameter(<%=genModel.getImportedName("org.eclipse.emf.ecore.EOperation")%> owner, <%=genModel.getImportedName("org.eclipse.emf.ecore.EClassifier")%> type, String name, int lowerBound, int upperBound, boolean isUnique, boolean isOrdered)
-	{
-		<%=genModel.getImportedName("org.eclipse.emf.ecore.EParameter")%> p = ecoreFactory.createEParameter();
-		p.setEType(type);
-		p.setName(name);
-		p.setLowerBound(lowerBound);
-		p.setUpperBound(upperBound);
-		p.setUnique(isUnique);
-		p.setOrdered(isOrdered);
-		owner.getEParameters().add(p);
-		return p;
-	}
-	
   <%}%>
 <%}%>
 <%if (isInterface && genPackage.isLiteralsInterface()) {%>
@@ -1032,7 +962,7 @@ int maxGenericTypeAssignment = 0;
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
       <%if (!genDataType.isPrimitiveType() && !genDataType.isArrayType()) {%>
-		 * @see <%=genDataType.getRawInstanceClassName()%>
+		 * @see <%=genDataType.getQualifiedInstanceClassName()%>
       <%}%>
     <%}%>
 		 * @see <%=genPackage.getQualifiedPackageClassName()%>#get<%=genClassifier.getClassifierAccessorName()%>()

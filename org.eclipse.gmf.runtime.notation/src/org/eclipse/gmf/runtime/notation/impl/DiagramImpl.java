@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2007 IBM Corporation and others.
+ * Copyright (c) 2004, 2006 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -527,32 +527,10 @@ public class DiagramImpl
                 View sourceView = edge.getSource();
                 View targetView = edge.getTarget();
                 if (sourceView != null)
-                    persistCompleteHierarchy(sourceView);
+                    sourceView.persist();
                 if (targetView != null)
-                    persistCompleteHierarchy(targetView);
+                    targetView.persist();
             }
-        }
-    }
-
-    /**
-     * Persist the view passed in and all its parent views if they are
-     * transient.
-     * 
-     * @param view
-     *            the view to persist
-     */
-    private void persistCompleteHierarchy(View view) {
-        view.persist();
-        EObject container = view.eContainer();
-        while (container instanceof View) {
-            // if already persisted, quit
-            EStructuralFeature sFeature = container.eContainingFeature();
-            if (sFeature != null && !sFeature.isTransient()) {
-                break;
-            }
-
-            ((View) container).persist();
-            container = container.eContainer();
         }
     }
 

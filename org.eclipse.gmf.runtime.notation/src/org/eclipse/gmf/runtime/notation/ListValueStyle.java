@@ -40,7 +40,7 @@ public interface ListValueStyle extends DataTypeStyle {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Raw Values List</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getListValueStyle_RawValuesList()
-	 * @model unique="false"
+	 * @model type="java.lang.String" unique="false"
 	 * @generated
 	 */
 	EList getRawValuesList();
