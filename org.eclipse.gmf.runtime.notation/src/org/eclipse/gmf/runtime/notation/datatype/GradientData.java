@@ -6,7 +6,8 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    IBM Corporation - initial API and implementation 
+ *    IBM Corporation - initial API and implementation
+ *    Mariot Chauvin <mariot.chauvin@obeo.fr> - Bug 270170
  ****************************************************************************/
 
 package org.eclipse.gmf.runtime.notation.datatype;
@@ -19,7 +20,6 @@ import org.eclipse.gmf.runtime.notation.GradientStyle;
  * 
  * @author lgrahek
  * @since 1.2
- *
  */
 public class GradientData {
 	protected static final int GRADIENT_COLOR1_DEFFAULT = 8421504; //dark grey
@@ -112,12 +112,46 @@ public class GradientData {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (gradientColor1: "); //$NON-NLS-1$
 		result.append(gradientColor1);
-		result.append(", gradientColor2: ");
+		result.append(", gradientColor2: "); //$NON-NLS-1$
 		result.append(gradientColor2);
-		result.append(", gradientStyle: ");
+		result.append(", gradientStyle: "); //$NON-NLS-1$
 		result.append(gradientStyle);
 		result.append(')');
 		return result.toString();
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + gradientColor1;
+		result = prime * result + gradientColor2;
+		result = prime * result + gradientStyle;
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GradientData other = (GradientData) obj;
+		if (gradientColor1 != other.gradientColor1)
+			return false;
+		if (gradientColor2 != other.gradientColor2)
+			return false;
+		if (gradientStyle != other.gradientStyle)
+			return false;
+		return true;
+	}
+	
+	
 }
 

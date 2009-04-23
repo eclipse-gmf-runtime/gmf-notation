@@ -1,12 +1,13 @@
 /******************************************************************************
- * Copyright (c) 2004 IBM Corporation and others.
+ * Copyright (c) 2004, 2009 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    IBM Corporation - initial API and implementation 
+ *    IBM Corporation - initial API and implementation
+ *    Mariot Chauvin <mariot.chauvin@obeo.fr> - Bug 270170
  ****************************************************************************/
 
 package org.eclipse.gmf.runtime.notation.datatype;
@@ -293,4 +294,39 @@ public class RelativeBendpoint {
 		return result.toString();
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + sourceX;
+		result = prime * result + sourceY;
+		result = prime * result + targetX;
+		result = prime * result + targetY;
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		RelativeBendpoint other = (RelativeBendpoint) obj;
+		if (sourceX != other.sourceX)
+			return false;
+		if (sourceY != other.sourceY)
+			return false;
+		if (targetX != other.targetX)
+			return false;
+		if (targetY != other.targetY)
+			return false;
+		return true;
+	}
+	
 } //RelativeBendpointImpl
