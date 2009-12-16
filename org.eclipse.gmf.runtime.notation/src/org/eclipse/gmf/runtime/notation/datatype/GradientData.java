@@ -45,10 +45,9 @@ public class GradientData {
 	public GradientData(int color1, int color2, int style) {
 		gradientColor1 = color1;
 		gradientColor2 = color2;
-		//TEMP code: temporarily commented; replace when new notation is in place
-		//if (GradientStyle.get(style) != null) {
+		if (GradientStyle.get(style) != null) {
 			gradientStyle = style;
-		//}
+		}
 	}
 	
 	public GradientData(GradientData data) {

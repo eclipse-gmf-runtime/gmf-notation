@@ -1287,7 +1287,7 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	 */
 	public GradientData createGradientDataFromString(EDataType eDataType, String initialValue) {
 		GradientData gradient = null;
-		if (!initialValue.equals("")) { //$NON-NLS-1$
+		if (initialValue != null && !initialValue.equals("")) { //$NON-NLS-1$
 			gradient = new GradientData();
 			StringTokenizer st = new StringTokenizer(initialValue, ","); //$NON-NLS-1$
 			String s;
@@ -1322,13 +1322,13 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			Object instanceValue) {
 		GradientData gradient = (GradientData) instanceValue;
 		if (gradient == null) {
-			return "";
+			return ""; //$NON-NLS-1$
 		} else {
 			StringBuffer sb = new StringBuffer();
 			sb.append(gradient.getGradientColor1());
-			sb.append(", ");
+			sb.append(", "); //$NON-NLS-1$
 			sb.append(gradient.getGradientColor2());
-			sb.append(", ");
+			sb.append(", "); //$NON-NLS-1$
 			sb.append(gradient.getGradientStyle());
 			return sb.toString();
 		}
