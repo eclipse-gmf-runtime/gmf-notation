@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2009 IBM Corporation and others.
+ * Copyright (c) 2004, 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -3275,16 +3275,16 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	  for (EClassifier eClassifier : getEClassifiers())
 	  {
 	    String name = eClassifier.getName();
-        if (name.equals("Node") || name.indexOf("Style") != -1 || name.equals("Location") || name.equals("Size") ||
-             name.indexOf("Anchor") != -1 || name.indexOf("point") != -1 || name.equals("Bounds") || name.indexOf("Edge") != -1 || name.indexOf("Constraint") != -1)
+        if (name.equals("Node") || name.indexOf("Style") != -1 || name.equals("Location") || name.equals("Size") ||  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$  //$NON-NLS-4$
+             name.indexOf("Anchor") != -1 || name.indexOf("point") != -1 || name.equals("Bounds") || name.indexOf("Edge") != -1 || name.indexOf("Constraint") != -1) //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
         {
-  	      String source = "foo";                                                                                   
+  	      String source = "foo"; //$NON-NLS-1$  
   	      addAnnotation
   	        (eClassifier, 
   	         source, 
   	         new String[] 
   	         {
-  	         "uuid", "false"
+  	         "uuid", "false" //$NON-NLS-1$ //$NON-NLS-2$ 
   	         });  
         }
 	  }
