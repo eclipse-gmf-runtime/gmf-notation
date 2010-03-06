@@ -19,6 +19,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
@@ -39,7 +40,7 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 /*
  * @canBeSeenBy %partners
  */
-public class RelativeBendpointsImpl extends NotationEObjectImpl implements RelativeBendpoints {
+public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container implements RelativeBendpoints {
 	/**
 	 * The default value of the '{@link #getPoints() <em>Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
