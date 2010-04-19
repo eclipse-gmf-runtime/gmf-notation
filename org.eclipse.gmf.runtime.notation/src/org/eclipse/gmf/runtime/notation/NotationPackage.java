@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2009 IBM Corporation and others.
+ * Copyright (c) 2004, 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -1004,6 +1004,34 @@ public interface NotationPackage extends EPackage {
 	int IDENTITY_ANCHOR_FEATURE_COUNT = ANCHOR_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl <em>Rounded Corners Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl
+	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRoundedCornersStyle()
+	 * @generated
+	 */
+	int ROUNDED_CORNERS_STYLE = 69;
+
+	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS = STYLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Rounded Corners Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUNDED_CORNERS_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl <em>Routing Style</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1014,13 +1042,23 @@ public interface NotationPackage extends EPackage {
 	int ROUTING_STYLE = 17;
 
 	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * Left in for backwards compatibility
+	 * @ordered
+	 * @deprecated Use ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS instead
+	 */
+	int ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS;
+
+	/**
 	 * The feature id for the '<em><b>Routing</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__ROUTING = STYLE_FEATURE_COUNT + 0;
+	int ROUTING_STYLE__ROUTING = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
@@ -1029,7 +1067,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__SMOOTHNESS = STYLE_FEATURE_COUNT + 1;
+	int ROUTING_STYLE__SMOOTHNESS = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
@@ -1038,7 +1076,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__AVOID_OBSTRUCTIONS = STYLE_FEATURE_COUNT + 2;
+	int ROUTING_STYLE__AVOID_OBSTRUCTIONS = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
@@ -1047,7 +1085,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__CLOSEST_DISTANCE = STYLE_FEATURE_COUNT + 3;
+	int ROUTING_STYLE__CLOSEST_DISTANCE = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
@@ -1056,7 +1094,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINK_STATUS = STYLE_FEATURE_COUNT + 4;
+	int ROUTING_STYLE__JUMP_LINK_STATUS = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
@@ -1065,7 +1103,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINK_TYPE = STYLE_FEATURE_COUNT + 5;
+	int ROUTING_STYLE__JUMP_LINK_TYPE = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
@@ -1074,16 +1112,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE__JUMP_LINKS_REVERSE = STYLE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = STYLE_FEATURE_COUNT + 7;
+	int ROUTING_STYLE__JUMP_LINKS_REVERSE = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Routing Style</em>' class.
@@ -1092,7 +1121,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTING_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 8;
+	int ROUTING_STYLE_FEATURE_COUNT = ROUNDED_CORNERS_STYLE_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl <em>Relative Bendpoints</em>}' class.
@@ -1460,13 +1489,22 @@ public interface NotationPackage extends EPackage {
 	int SHAPE_STYLE__LINE_WIDTH = FONT_STYLE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS = FONT_STYLE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Shape Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_STYLE_FEATURE_COUNT = FONT_STYLE_FEATURE_COUNT + 6;
+	int SHAPE_STYLE_FEATURE_COUNT = FONT_STYLE_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.ConnectorStyleImpl <em>Connector Style</em>}' class.
@@ -1477,6 +1515,15 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 */
 	int CONNECTOR_STYLE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS = ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 
 	/**
 	 * The feature id for the '<em><b>Routing</b></em>' attribute.
@@ -1540,15 +1587,6 @@ public interface NotationPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONNECTOR_STYLE__JUMP_LINKS_REVERSE = ROUTING_STYLE__JUMP_LINKS_REVERSE;
-
-	/**
-	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTOR_STYLE__ROUNDED_BENDPOINTS_RADIUS = ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -3115,13 +3153,22 @@ public interface NotationPackage extends EPackage {
 	int SHAPE__LINE_WIDTH = NODE_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE__ROUNDED_BENDPOINTS_RADIUS = NODE_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>Shape</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 13;
+	int SHAPE_FEATURE_COUNT = NODE_FEATURE_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.impl.CompartmentImpl <em>Compartment</em>}' class.
@@ -4031,13 +4078,22 @@ public interface NotationPackage extends EPackage {
 	int CONNECTOR__TARGET_ANCHOR = EDGE__TARGET_ANCHOR;
 
 	/**
+	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTOR__ROUNDED_BENDPOINTS_RADIUS = EDGE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Routing</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__ROUTING = EDGE_FEATURE_COUNT + 0;
+	int CONNECTOR__ROUTING = EDGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Smoothness</b></em>' attribute.
@@ -4046,7 +4102,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__SMOOTHNESS = EDGE_FEATURE_COUNT + 1;
+	int CONNECTOR__SMOOTHNESS = EDGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Avoid Obstructions</b></em>' attribute.
@@ -4055,7 +4111,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__AVOID_OBSTRUCTIONS = EDGE_FEATURE_COUNT + 2;
+	int CONNECTOR__AVOID_OBSTRUCTIONS = EDGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Closest Distance</b></em>' attribute.
@@ -4064,7 +4120,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__CLOSEST_DISTANCE = EDGE_FEATURE_COUNT + 3;
+	int CONNECTOR__CLOSEST_DISTANCE = EDGE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Status</b></em>' attribute.
@@ -4073,7 +4129,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__JUMP_LINK_STATUS = EDGE_FEATURE_COUNT + 4;
+	int CONNECTOR__JUMP_LINK_STATUS = EDGE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Jump Link Type</b></em>' attribute.
@@ -4082,7 +4138,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__JUMP_LINK_TYPE = EDGE_FEATURE_COUNT + 5;
+	int CONNECTOR__JUMP_LINK_TYPE = EDGE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Jump Links Reverse</b></em>' attribute.
@@ -4091,16 +4147,7 @@ public interface NotationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTOR__JUMP_LINKS_REVERSE = EDGE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTOR__ROUNDED_BENDPOINTS_RADIUS = EDGE_FEATURE_COUNT + 7;
+	int CONNECTOR__JUMP_LINKS_REVERSE = EDGE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
@@ -4679,7 +4726,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSorting()
 	 * @generated
 	 */
-	int SORTING = 69;
+	int SORTING = 70;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Filtering <em>Filtering</em>}' enum.
@@ -4689,7 +4736,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFiltering()
 	 * @generated
 	 */
-	int FILTERING = 70;
+	int FILTERING = 71;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Routing <em>Routing</em>}' enum.
@@ -4699,7 +4746,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRouting()
 	 * @generated
 	 */
-	int ROUTING = 71;
+	int ROUTING = 72;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Smoothness <em>Smoothness</em>}' enum.
@@ -4709,7 +4756,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSmoothness()
 	 * @generated
 	 */
-	int SMOOTHNESS = 72;
+	int SMOOTHNESS = 73;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkStatus <em>Jump Link Status</em>}' enum.
@@ -4719,7 +4766,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkStatus()
 	 * @generated
 	 */
-	int JUMP_LINK_STATUS = 73;
+	int JUMP_LINK_STATUS = 74;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.JumpLinkType <em>Jump Link Type</em>}' enum.
@@ -4729,7 +4776,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getJumpLinkType()
 	 * @generated
 	 */
-	int JUMP_LINK_TYPE = 74;
+	int JUMP_LINK_TYPE = 75;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.Alignment <em>Alignment</em>}' enum.
@@ -4739,7 +4786,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getAlignment()
 	 * @generated
 	 */
-	int ALIGNMENT = 75;
+	int ALIGNMENT = 76;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.SortingDirection <em>Sorting Direction</em>}' enum.
@@ -4749,7 +4796,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortingDirection()
 	 * @generated
 	 */
-	int SORTING_DIRECTION = 76;
+	int SORTING_DIRECTION = 77;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.MeasurementUnit <em>Measurement Unit</em>}' enum.
@@ -4759,7 +4806,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getMeasurementUnit()
 	 * @generated
 	 */
-	int MEASUREMENT_UNIT = 77;
+	int MEASUREMENT_UNIT = 78;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.TextAlignment <em>Text Alignment</em>}' enum.
@@ -4769,7 +4816,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getTextAlignment()
 	 * @generated
 	 */
-	int TEXT_ALIGNMENT = 78;
+	int TEXT_ALIGNMENT = 79;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.LineType <em>Line Type</em>}' enum.
@@ -4779,7 +4826,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getLineType()
 	 * @generated
 	 */
-	int LINE_TYPE = 79;
+	int LINE_TYPE = 80;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.ArrowType <em>Arrow Type</em>}' enum.
@@ -4789,7 +4836,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getArrowType()
 	 * @generated
 	 */
-	int ARROW_TYPE = 80;
+	int ARROW_TYPE = 81;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.gmf.runtime.notation.GradientStyle <em>Gradient Style</em>}' enum.
@@ -4799,7 +4846,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientStyle()
 	 * @generated
 	 */
-	int GRADIENT_STYLE = 81;
+	int GRADIENT_STYLE = 82;
 
 	/**
 	 * The meta object id for the '<em>Relative Bendpoint List</em>' data type.
@@ -4809,7 +4856,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRelativeBendpointList()
 	 * @generated
 	 */
-	int RELATIVE_BENDPOINT_LIST = 82;
+	int RELATIVE_BENDPOINT_LIST = 83;
 
 	/**
 	 * The meta object id for the '<em>Filter Key List</em>' data type.
@@ -4819,7 +4866,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getFilterKeyList()
 	 * @generated
 	 */
-	int FILTER_KEY_LIST = 83;
+	int FILTER_KEY_LIST = 84;
 
 	/**
 	 * The meta object id for the '<em>Sort Key Map</em>' data type.
@@ -4829,7 +4876,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getSortKeyMap()
 	 * @generated
 	 */
-	int SORT_KEY_MAP = 84;
+	int SORT_KEY_MAP = 85;
 
 
 	/**
@@ -4840,7 +4887,7 @@ public interface NotationPackage extends EPackage {
 	 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getGradientData()
 	 * @generated
 	 */
-	int GRADIENT_DATA = 85;
+	int GRADIENT_DATA = 86;
 
 
 	/**
@@ -5426,7 +5473,8 @@ public interface NotationPackage extends EPackage {
 	 * @return the meta object for the attribute '<em>Rounded Bendpoints Radius</em>'.
 	 * @see org.eclipse.gmf.runtime.notation.RoutingStyle#getRoundedBendpointsRadius()
 	 * @see #getRoutingStyle()
-	 * @generated
+	 * Left in for backwards compatibility
+	 * @deprecated Use getRoundedCornersStyle_RoundedBendpointsRadius() instead
 	 */
 	EAttribute getRoutingStyle_RoundedBendpointsRadius();
 
@@ -6628,6 +6676,27 @@ public interface NotationPackage extends EPackage {
 	EClass getSemanticListCompartment();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle <em>Rounded Corners Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rounded Corners Style</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.RoundedCornersStyle
+	 * @generated
+	 */
+	EClass getRoundedCornersStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rounded Bendpoints Radius</em>'.
+	 * @see org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius()
+	 * @see #getRoundedCornersStyle()
+	 * @generated
+	 */
+	EAttribute getRoundedCornersStyle_RoundedBendpointsRadius();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7292,14 +7361,7 @@ public interface NotationPackage extends EPackage {
 		EAttribute ROUTING_STYLE__JUMP_LINKS_REVERSE = eINSTANCE.getRoutingStyle_JumpLinksReverse();
 
 		/**
-		 * The meta object literal for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = eINSTANCE.getRoutingStyle_RoundedBendpointsRadius();
 
-		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.ViewImpl <em>View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8304,6 +8366,30 @@ public interface NotationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SEMANTIC_LIST_COMPARTMENT = eINSTANCE.getSemanticListCompartment();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl <em>Rounded Corners Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl
+		 * @see org.eclipse.gmf.runtime.notation.impl.NotationPackageImpl#getRoundedCornersStyle()
+		 * @generated
+		 */
+		EClass ROUNDED_CORNERS_STYLE = eINSTANCE.getRoundedCornersStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Rounded Bendpoints Radius</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS = eINSTANCE.getRoundedCornersStyle_RoundedBendpointsRadius();
+		
+		
+		/**
+		 * @generated not For backwards compatibility 
+		 */
+		EAttribute ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS = ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmf.runtime.notation.Sorting <em>Sorting</em>}' enum.

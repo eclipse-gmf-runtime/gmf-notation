@@ -130,11 +130,8 @@ public class ConnectorStyleItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		Routing labelValue = ((ConnectorStyle)object).getRouting();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ConnectorStyle_type") : //$NON-NLS-1$
-			getString("_UI_ConnectorStyle_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		ConnectorStyle connectorStyle = (ConnectorStyle)object;
+		return getString("_UI_ConnectorStyle_type") + " " + connectorStyle.getRoundedBendpointsRadius(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
     /**

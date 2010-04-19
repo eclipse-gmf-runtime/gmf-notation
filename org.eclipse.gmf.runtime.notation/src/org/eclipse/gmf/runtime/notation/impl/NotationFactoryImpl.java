@@ -199,6 +199,7 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 			case NotationPackage.BASIC_COMPARTMENT: return createBasicCompartment();
 			case NotationPackage.BASIC_SEMANTIC_COMPARTMENT: return createBasicSemanticCompartment();
 			case NotationPackage.SEMANTIC_LIST_COMPARTMENT: return createSemanticListCompartment();
+			case NotationPackage.ROUNDED_CORNERS_STYLE: return createRoundedCornersStyle();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -924,6 +925,17 @@ public class NotationFactoryImpl extends EFactoryImpl implements NotationFactory
 	public SemanticListCompartment createSemanticListCompartment() {
 		SemanticListCompartmentImpl semanticListCompartment = new SemanticListCompartmentImpl();
 		return semanticListCompartment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	public RoundedCornersStyle createRoundedCornersStyle() {
+		RoundedCornersStyleImpl roundedCornersStyle = new RoundedCornersStyleImpl();
+		return roundedCornersStyle;
 	}
 
 				/**

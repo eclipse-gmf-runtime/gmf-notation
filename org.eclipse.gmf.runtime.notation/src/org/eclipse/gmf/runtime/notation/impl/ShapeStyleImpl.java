@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.DescriptionStyle;
 import org.eclipse.gmf.runtime.notation.FillStyle;
 import org.eclipse.gmf.runtime.notation.LineStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.RoundedCornersStyle;
 import org.eclipse.gmf.runtime.notation.ShapeStyle;
 import org.eclipse.gmf.runtime.notation.datatype.GradientData;
 
@@ -34,6 +35,7 @@ import org.eclipse.gmf.runtime.notation.datatype.GradientData;
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getGradient <em>Gradient</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getLineColor <em>Line Color</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getLineWidth <em>Line Width</em>}</li>
+ *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
  * </ul>
  * </p>
  *
@@ -163,6 +165,28 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 	 * @ordered
 	 */
 	protected int lineWidth = LINE_WIDTH_EDEFAULT;
+
+				/**
+	 * The default value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+     * @since 1.4
+	 */
+	protected static final int ROUNDED_BENDPOINTS_RADIUS_EDEFAULT = 0;
+
+				/**
+	 * The cached value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundedBendpointsRadius()
+	 * @generated
+	 * @ordered
+     * @since 1.4
+	 */
+	protected int roundedBendpointsRadius = ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 
 				/**
 	 * <!-- begin-user-doc -->
@@ -322,6 +346,29 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 
 				/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	public int getRoundedBendpointsRadius() {
+		return roundedBendpointsRadius;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	public void setRoundedBendpointsRadius(int newRoundedBendpointsRadius) {
+		int oldRoundedBendpointsRadius = roundedBendpointsRadius;
+		roundedBendpointsRadius = newRoundedBendpointsRadius;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS, oldRoundedBendpointsRadius, roundedBendpointsRadius));
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -353,6 +400,8 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 				return new Integer(getLineColor());
 			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
 				return new Integer(getLineWidth());
+			case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return new Integer(getRoundedBendpointsRadius());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
@@ -402,6 +451,9 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 				return;
 			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
 				setLineWidth(((Integer)newValue).intValue());
+				return;
+			case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(((Integer)newValue).intValue());
 				return;
 		}
 		eDynamicSet(featureID, newValue);
@@ -453,6 +505,9 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
 				setLineWidth(LINE_WIDTH_EDEFAULT);
 				return;
+			case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
+				return;
 		}
 		eDynamicUnset(featureID);
 	}
@@ -490,6 +545,8 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 				return lineColor != LINE_COLOR_EDEFAULT;
 			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
 				return lineWidth != LINE_WIDTH_EDEFAULT;
+			case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
@@ -518,6 +575,12 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 			switch (derivedFeatureID) {
 				case NotationPackage.SHAPE_STYLE__LINE_COLOR: return NotationPackage.LINE_STYLE__LINE_COLOR;
 				case NotationPackage.SHAPE_STYLE__LINE_WIDTH: return NotationPackage.LINE_STYLE__LINE_WIDTH;
+				default: return -1;
+			}
+		}
+		if (baseClass == RoundedCornersStyle.class) {
+			switch (derivedFeatureID) {
+				case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS: return NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS;
 				default: return -1;
 			}
 		}
@@ -551,6 +614,12 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 				default: return -1;
 			}
 		}
+		if (baseClass == RoundedCornersStyle.class) {
+			switch (baseFeatureID) {
+				case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS: return NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -575,6 +644,8 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 		result.append(lineColor);
 		result.append(", lineWidth: "); //$NON-NLS-1$
 		result.append(lineWidth);
+		result.append(", roundedBendpointsRadius: "); //$NON-NLS-1$
+		result.append(roundedBendpointsRadius);
 		result.append(')');
 		return result.toString();
 	}

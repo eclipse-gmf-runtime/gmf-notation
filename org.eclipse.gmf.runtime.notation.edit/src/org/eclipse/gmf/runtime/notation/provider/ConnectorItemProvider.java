@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2009 IBM Corporation and others.
+ * Copyright (c) 2009, 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -63,6 +63,7 @@ public class ConnectorItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addRoundedBendpointsRadiusPropertyDescriptor(object);
 			addRoutingPropertyDescriptor(object);
 			addSmoothnessPropertyDescriptor(object);
 			addAvoidObstructionsPropertyDescriptor(object);
@@ -70,7 +71,6 @@ public class ConnectorItemProvider
 			addJumpLinkStatusPropertyDescriptor(object);
 			addJumpLinkTypePropertyDescriptor(object);
 			addJumpLinksReversePropertyDescriptor(object);
-			addRoundedBendpointsRadiusPropertyDescriptor(object);
 			addLineColorPropertyDescriptor(object);
 			addLineWidthPropertyDescriptor(object);
 		}
@@ -242,9 +242,9 @@ public class ConnectorItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RoutingStyle_roundedBendpointsRadius_feature"), //$NON-NLS-1$
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoutingStyle_roundedBendpointsRadius_feature", "_UI_RoutingStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				 NotationPackage.Literals.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS,
+				 getString("_UI_RoundedCornersStyle_roundedBendpointsRadius_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoundedCornersStyle_roundedBendpointsRadius_feature", "_UI_RoundedCornersStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -329,6 +329,7 @@ public class ConnectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Connector.class)) {
+			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
 			case NotationPackage.CONNECTOR__ROUTING:
 			case NotationPackage.CONNECTOR__SMOOTHNESS:
 			case NotationPackage.CONNECTOR__AVOID_OBSTRUCTIONS:
@@ -336,7 +337,6 @@ public class ConnectorItemProvider
 			case NotationPackage.CONNECTOR__JUMP_LINK_STATUS:
 			case NotationPackage.CONNECTOR__JUMP_LINK_TYPE:
 			case NotationPackage.CONNECTOR__JUMP_LINKS_REVERSE:
-			case NotationPackage.CONNECTOR__ROUNDED_BENDPOINTS_RADIUS:
 			case NotationPackage.CONNECTOR__LINE_COLOR:
 			case NotationPackage.CONNECTOR__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

@@ -86,6 +86,7 @@ import org.eclipse.gmf.runtime.notation.PropertiesSetStyle;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
 import org.eclipse.gmf.runtime.notation.Ratio;
 import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
+import org.eclipse.gmf.runtime.notation.RoundedCornersStyle;
 import org.eclipse.gmf.runtime.notation.Routing;
 import org.eclipse.gmf.runtime.notation.RoutingStyle;
 import org.eclipse.gmf.runtime.notation.SemanticListCompartment;
@@ -597,6 +598,14 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * @generated
 	 */
 	private EClass semanticListCompartmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	private EClass roundedCornersStyleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1277,12 +1286,11 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * Left in for backwards compatibility
+	 * @deprecated Use getRoundedCornersStyle_RoundedBendpointsRadius()
 	 */
 	public EAttribute getRoutingStyle_RoundedBendpointsRadius() {
-		return (EAttribute)routingStyleEClass.getEStructuralFeatures().get(7);
+		return getRoundedCornersStyle_RoundedBendpointsRadius();
 	}
 
 	/**
@@ -2306,6 +2314,27 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+     * @since 1.4
+	 */
+	public EClass getRoundedCornersStyle() {
+		return roundedCornersStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	public EAttribute getRoundedCornersStyle_RoundedBendpointsRadius() {
+		return (EAttribute)roundedCornersStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
 	 */
 	public EEnum getSorting() {
 		return sortingEEnum;
@@ -2554,7 +2583,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINK_STATUS);
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINK_TYPE);
 		createEAttribute(routingStyleEClass, ROUTING_STYLE__JUMP_LINKS_REVERSE);
-		createEAttribute(routingStyleEClass, ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS);
 
 		viewEClass = createEClass(VIEW);
 		createEAttribute(viewEClass, VIEW__VISIBLE);
@@ -2720,6 +2748,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		semanticListCompartmentEClass = createEClass(SEMANTIC_LIST_COMPARTMENT);
 
+		roundedCornersStyleEClass = createEClass(ROUNDED_CORNERS_STYLE);
+		createEAttribute(roundedCornersStyleEClass, ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS);
+
 		// Create enums
 		sortingEEnum = createEEnum(SORTING);
 		filteringEEnum = createEEnum(FILTERING);
@@ -2783,7 +2814,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		boundsEClass.getESuperTypes().add(this.getSize());
 		ratioEClass.getESuperTypes().add(this.getLayoutConstraint());
 		identityAnchorEClass.getESuperTypes().add(this.getAnchor());
-		routingStyleEClass.getESuperTypes().add(this.getStyle());
+		routingStyleEClass.getESuperTypes().add(this.getRoundedCornersStyle());
 		viewEClass.getESuperTypes().add(theEcorePackage.getEModelElement());
 		relativeBendpointsEClass.getESuperTypes().add(this.getBendpoints());
 		diagramEClass.getESuperTypes().add(this.getView());
@@ -2792,6 +2823,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		shapeStyleEClass.getESuperTypes().add(this.getDescriptionStyle());
 		shapeStyleEClass.getESuperTypes().add(this.getFillStyle());
 		shapeStyleEClass.getESuperTypes().add(this.getLineStyle());
+		shapeStyleEClass.getESuperTypes().add(this.getRoundedCornersStyle());
 		connectorStyleEClass.getESuperTypes().add(this.getRoutingStyle());
 		connectorStyleEClass.getESuperTypes().add(this.getLineStyle());
 		pageStyleEClass.getESuperTypes().add(this.getStyle());
@@ -2851,6 +2883,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		semanticListCompartmentEClass.getESuperTypes().add(this.getSortingStyle());
 		semanticListCompartmentEClass.getESuperTypes().add(this.getFilteringStyle());
 		semanticListCompartmentEClass.getESuperTypes().add(this.getTitleStyle());
+		roundedCornersStyleEClass.getESuperTypes().add(this.getStyle());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
@@ -2943,7 +2976,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getRoutingStyle_JumpLinkStatus(), this.getJumpLinkStatus(), "jumpLinkStatus", "None", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getRoutingStyle_JumpLinkType(), this.getJumpLinkType(), "jumpLinkType", "Semicircle", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 		initEAttribute(getRoutingStyle_JumpLinksReverse(), ecorePackage.getEBoolean(), "jumpLinksReverse", "false", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
-		initEAttribute(getRoutingStyle_RoundedBendpointsRadius(), ecorePackage.getEInt(), "roundedBendpointsRadius", "0", 0, 1, RoutingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
 		initEClass(viewEClass, View.class, "View", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getView_Visible(), ecorePackage.getEBoolean(), "visible", "true", 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
@@ -3189,6 +3221,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEClass(basicSemanticCompartmentEClass, BasicSemanticCompartment.class, "BasicSemanticCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 
 		initEClass(semanticListCompartmentEClass, SemanticListCompartment.class, "SemanticListCompartment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+
+		initEClass(roundedCornersStyleEClass, RoundedCornersStyle.class, "RoundedCornersStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
+		initEAttribute(getRoundedCornersStyle_RoundedBendpointsRadius(), ecorePackage.getEInt(), "roundedBendpointsRadius", "0", 0, 1, RoundedCornersStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$ //$NON-NLS-2$
 
 		// Initialize enums and add enum literals
 		initEEnum(sortingEEnum, Sorting.class, "Sorting"); //$NON-NLS-1$

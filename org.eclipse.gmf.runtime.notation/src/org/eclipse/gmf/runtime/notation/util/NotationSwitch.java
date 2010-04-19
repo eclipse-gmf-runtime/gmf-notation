@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2008 IBM Corporation and others.
+ * Copyright (c) 2004, 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -252,6 +252,7 @@ public class NotationSwitch {
 			case NotationPackage.ROUTING_STYLE: {
 				RoutingStyle routingStyle = (RoutingStyle)theEObject;
 				Object result = caseRoutingStyle(routingStyle);
+				if (result == null) result = caseRoundedCornersStyle(routingStyle);
 				if (result == null) result = caseStyle(routingStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -298,6 +299,7 @@ public class NotationSwitch {
 				if (result == null) result = caseDescriptionStyle(shapeStyle);
 				if (result == null) result = caseFillStyle(shapeStyle);
 				if (result == null) result = caseLineStyle(shapeStyle);
+				if (result == null) result = caseRoundedCornersStyle(shapeStyle);
 				if (result == null) result = caseStyle(shapeStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -307,6 +309,7 @@ public class NotationSwitch {
 				Object result = caseConnectorStyle(connectorStyle);
 				if (result == null) result = caseRoutingStyle(connectorStyle);
 				if (result == null) result = caseLineStyle(connectorStyle);
+				if (result == null) result = caseRoundedCornersStyle(connectorStyle);
 				if (result == null) result = caseStyle(connectorStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -580,6 +583,7 @@ public class NotationSwitch {
 				if (result == null) result = caseDescriptionStyle(shape);
 				if (result == null) result = caseFillStyle(shape);
 				if (result == null) result = caseLineStyle(shape);
+				if (result == null) result = caseRoundedCornersStyle(shape);
 				if (result == null) result = caseEModelElement(shape);
 				if (result == null) result = caseStyle(shape);
 				if (result == null) result = defaultCase(theEObject);
@@ -627,6 +631,7 @@ public class NotationSwitch {
 				if (result == null) result = caseRoutingStyle(connector);
 				if (result == null) result = caseLineStyle(connector);
 				if (result == null) result = caseEModelElement(connector);
+				if (result == null) result = caseRoundedCornersStyle(connector);
 				if (result == null) result = caseStyle(connector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -702,6 +707,13 @@ public class NotationSwitch {
 				if (result == null) result = caseNode(semanticListCompartment);
 				if (result == null) result = caseView(semanticListCompartment);
 				if (result == null) result = caseEModelElement(semanticListCompartment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NotationPackage.ROUNDED_CORNERS_STYLE: {
+				RoundedCornersStyle roundedCornersStyle = (RoundedCornersStyle)theEObject;
+				Object result = caseRoundedCornersStyle(roundedCornersStyle);
+				if (result == null) result = caseStyle(roundedCornersStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1604,7 +1616,6 @@ public class NotationSwitch {
 	 * @return the result of interpreting the object as an instance of '<em>Shape</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
-	 * @since 1.2
 	 */
 	public Object caseShape(Shape object) {
 		return null;
@@ -1751,6 +1762,21 @@ public class NotationSwitch {
 	 * @since 1.2
 	 */
 	public Object caseSemanticListCompartment(SemanticListCompartment object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rounded Corners Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rounded Corners Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseRoundedCornersStyle(RoundedCornersStyle object) {
 		return null;
 	}
 

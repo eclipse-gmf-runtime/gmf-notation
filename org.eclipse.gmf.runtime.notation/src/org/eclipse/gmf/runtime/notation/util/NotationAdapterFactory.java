@@ -319,6 +319,9 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 			public Object caseSemanticListCompartment(SemanticListCompartment object) {
 				return createSemanticListCompartmentAdapter();
 			}
+			public Object caseRoundedCornersStyle(RoundedCornersStyle object) {
+				return createRoundedCornersStyleAdapter();
+			}
 			public Object caseEModelElement(EModelElement object) {
 				return createEModelElementAdapter();
 			}
@@ -1313,6 +1316,21 @@ public class NotationAdapterFactory extends AdapterFactoryImpl {
 	 * @since 1.2
 	 */
 	public Adapter createSemanticListCompartmentAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle <em>Rounded Corners Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.gmf.runtime.notation.RoundedCornersStyle
+	 * @generated
+     * @since 1.4
+	 */
+	public Adapter createRoundedCornersStyleAdapter() {
 		return null;
 	}
 

@@ -394,6 +394,11 @@ public class ViewItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(NotationPackage.Literals.VIEW__STYLES,
+				 NotationFactory.eINSTANCE.createRoundedCornersStyle()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(NotationPackage.Literals.VIEW__STYLES,
 				 NotationFactory.eINSTANCE.createRoutingStyle()));
 
 		newChildDescriptors.add

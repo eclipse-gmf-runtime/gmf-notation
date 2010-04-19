@@ -68,6 +68,7 @@ public class ShapeStyleItemProvider
 			addGradientPropertyDescriptor(object);
 			addLineColorPropertyDescriptor(object);
 			addLineWidthPropertyDescriptor(object);
+			addRoundedBendpointsRadiusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -205,6 +206,29 @@ public class ShapeStyleItemProvider
 	}
 
 				/**
+	 * This adds a property descriptor for the Rounded Bendpoints Radius feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	protected void addRoundedBendpointsRadiusPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoundedCornersStyle_roundedBendpointsRadius_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoundedCornersStyle_roundedBendpointsRadius_feature", "_UI_RoundedCornersStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+				/**
 	 * This returns ShapeStyle.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -244,6 +268,7 @@ public class ShapeStyleItemProvider
 			case NotationPackage.SHAPE_STYLE__GRADIENT:
 			case NotationPackage.SHAPE_STYLE__LINE_COLOR:
 			case NotationPackage.SHAPE_STYLE__LINE_WIDTH:
+			case NotationPackage.SHAPE_STYLE__ROUNDED_BENDPOINTS_RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

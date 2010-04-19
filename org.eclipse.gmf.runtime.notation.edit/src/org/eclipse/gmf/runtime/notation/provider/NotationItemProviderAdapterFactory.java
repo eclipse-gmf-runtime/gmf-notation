@@ -420,6 +420,30 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 	}
 
 				/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	protected RoundedCornersStyleItemProvider roundedCornersStyleItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+     * @since 1.4
+	 */
+	public Adapter createRoundedCornersStyleAdapter() {
+		if (roundedCornersStyleItemProvider == null) {
+			roundedCornersStyleItemProvider = new RoundedCornersStyleItemProvider(this);
+		}
+
+		return roundedCornersStyleItemProvider;
+	}
+
+				/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.gmf.runtime.notation.FontStyle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1634,6 +1658,7 @@ public class NotationItemProviderAdapterFactory extends NotationAdapterFactory i
 		if (basicCompartmentItemProvider != null) basicCompartmentItemProvider.dispose();
 		if (basicSemanticCompartmentItemProvider != null) basicSemanticCompartmentItemProvider.dispose();
 		if (semanticListCompartmentItemProvider != null) semanticListCompartmentItemProvider.dispose();
+		if (roundedCornersStyleItemProvider != null) roundedCornersStyleItemProvider.dispose();
 	}
 
 }

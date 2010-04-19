@@ -34,7 +34,6 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
- * @since 1.2
  */
 public class ListCompartmentItemProvider
 	extends BasicCompartmentItemProvider

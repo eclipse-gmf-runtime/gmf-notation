@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2004, 2009 IBM Corporation and others.
+ * Copyright (c) 2004, 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -30,18 +30,18 @@ package org.eclipse.gmf.runtime.notation;
  *   <li>{@link org.eclipse.gmf.runtime.notation.RoutingStyle#getJumpLinkStatus <em>Jump Link Status</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.RoutingStyle#getJumpLinkType <em>Jump Link Type</em>}</li>
  *   <li>{@link org.eclipse.gmf.runtime.notation.RoutingStyle#isJumpLinksReverse <em>Jump Links Reverse</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.RoutingStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRoutingStyle()
  * @model
  * @generated
+ * @noimplement This interface is not intended to be implemented by clients.
  */
 /*
  * @canBeSeenBy %partners
  */
-public interface RoutingStyle extends Style {
+public interface RoutingStyle extends RoundedCornersStyle {
 
     /**
 	 * Returns the value of the '<em><b>Routing</b></em>' attribute.
@@ -257,32 +257,5 @@ public interface RoutingStyle extends Style {
 	 * @generated
 	 */
 	void setJumpLinksReverse(boolean value);
-
-				/**
-	 * Returns the value of the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rounded Bendpoints Radius</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rounded Bendpoints Radius</em>' attribute.
-	 * @see #setRoundedBendpointsRadius(int)
-	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRoutingStyle_RoundedBendpointsRadius()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getRoundedBendpointsRadius();
-
-				/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.RoutingStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rounded Bendpoints Radius</em>' attribute.
-	 * @see #getRoundedBendpointsRadius()
-	 * @generated
-	 */
-	void setRoundedBendpointsRadius(int value);
 
 } // RoutingStyle

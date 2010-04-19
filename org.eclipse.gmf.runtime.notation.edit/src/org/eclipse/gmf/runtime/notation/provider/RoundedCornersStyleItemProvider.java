@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2008 IBM Corporation and others.
+ * Copyright (c) 2010 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -17,23 +17,31 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.gmf.runtime.notation.DecorationNode;
+import org.eclipse.gmf.runtime.notation.NotationEditPlugin;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.RoundedCornersStyle;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.gmf.runtime.notation.DecorationNode} object.
+ * This is the item provider adapter for a {@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @since 1.4
  */
-public class DecorationNodeItemProvider
-	extends BasicDecorationNodeItemProvider
+public class RoundedCornersStyleItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -46,7 +54,7 @@ public class DecorationNodeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecorationNodeItemProvider(AdapterFactory adapterFactory) {
+	public RoundedCornersStyleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,18 +68,41 @@ public class DecorationNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addRoundedBendpointsRadiusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns DecorationNode.gif.
+	 * This adds a property descriptor for the Rounded Bendpoints Radius feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRoundedBendpointsRadiusPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoundedCornersStyle_roundedBendpointsRadius_feature"), //$NON-NLS-1$
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoundedCornersStyle_roundedBendpointsRadius_feature", "_UI_RoundedCornersStyle_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+				 NotationPackage.Literals.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns RoundedCornersStyle.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/DecorationNode")); //$NON-NLS-1$
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoundedCornersStyle")); //$NON-NLS-1$
 	}
 
 	/**
@@ -81,8 +112,8 @@ public class DecorationNodeItemProvider
 	 * @generated
 	 */
 	public String getText(Object object) {
-		DecorationNode decorationNode = (DecorationNode)object;
-		return getString("_UI_DecorationNode_type") + " " + decorationNode.isVisible(); //$NON-NLS-1$ //$NON-NLS-2$
+		RoundedCornersStyle roundedCornersStyle = (RoundedCornersStyle)object;
+		return getString("_UI_RoundedCornersStyle_type") + " " + roundedCornersStyle.getRoundedBendpointsRadius(); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
 	/**
@@ -94,6 +125,12 @@ public class DecorationNodeItemProvider
 	 */
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(RoundedCornersStyle.class)) {
+			case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -109,26 +146,13 @@ public class DecorationNodeItemProvider
 	}
 
 	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN ||
-			childFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN ||
-			childFeature == NotationPackage.Literals.VIEW__STYLES;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2", //$NON-NLS-1$
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+	public ResourceLocator getResourceLocator() {
+		return NotationEditPlugin.INSTANCE;
 	}
 
 }

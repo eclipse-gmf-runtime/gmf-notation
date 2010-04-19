@@ -25,10 +25,11 @@ package org.eclipse.gmf.runtime.notation;
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getShapeStyle()
  * @model
  * @generated
+ * @noimplement This interface is not intended to be implemented by clients.
  */
 /*
  * @canBeSeenBy %partners
  */
-public interface ShapeStyle extends FontStyle, DescriptionStyle, FillStyle, LineStyle {
+public interface ShapeStyle extends FontStyle, DescriptionStyle, FillStyle, LineStyle, RoundedCornersStyle {
 	// no default API
 } // ShapeStyle
