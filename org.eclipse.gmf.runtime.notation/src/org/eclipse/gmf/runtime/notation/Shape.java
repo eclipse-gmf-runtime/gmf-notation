@@ -21,6 +21,7 @@ package org.eclipse.gmf.runtime.notation;
  * @model
  * @generated
  * @since 1.2
+ * @noimplement This interface is not intended to be implemented by clients.
  */
 public interface Shape extends Node, ShapeStyle {
 } // Shape

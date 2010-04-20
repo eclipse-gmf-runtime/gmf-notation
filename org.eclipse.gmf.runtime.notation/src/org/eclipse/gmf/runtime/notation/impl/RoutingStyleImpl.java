@@ -14,7 +14,6 @@ package org.eclipse.gmf.runtime.notation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.gmf.runtime.notation.JumpLinkStatus;
 import org.eclipse.gmf.runtime.notation.JumpLinkType;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -474,7 +473,8 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    @SuppressWarnings("deprecation")
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
 				return new Integer(getRoundedBendpointsRadius());
@@ -501,7 +501,8 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+    @SuppressWarnings("deprecation")
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
 				setRoundedBendpointsRadius(((Integer)newValue).intValue());
@@ -536,7 +537,8 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+    @SuppressWarnings("deprecation")
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
 				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
@@ -571,7 +573,8 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+    @SuppressWarnings("deprecation")
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
 				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
