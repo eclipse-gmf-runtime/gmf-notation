@@ -1,6 +1,6 @@
 <project name="Build specific targets and properties" default="noDefault" basedir=".">
 
-	<property name="archiveName" value="gmf-notation-${buildAlias}.zip" />
+	<property name="archiveName" value="gmf-${subprojectName}-${buildAlias}.zip" />
 
 	<!-- ===================================================================== -->
 	<!-- Run a given ${target} on all elements being built -->
@@ -37,7 +37,7 @@
 		<!-- ***  change the repo info -->
 		<property name="mapCvsRoot" value=":${cvsReadProtocol}:${cvsReadUser}@${cvsHost}:${cvsRep}" />
 		<property name="mapVersionTag" value="HEAD" />
-		<property name="packagePath" value="org.eclipse.${projectName}/org.eclipse.${subprojectName}.releng/maps"/>
+		<property name="packagePath" value="org.eclipse.${projectName}/org.eclipse.${projectName}.${subprojectName}.releng/maps"/>
 
 		<cvs cvsRsh="ssh" cvsRoot="${mapCvsRoot}" tag="${mapVersionTag}" 
 			package="${packagePath}" dest="${buildDirectory}/maps" />
@@ -50,8 +50,6 @@
 		<delete dir="${buildDirectory}/maps/org.eclipse.${projectName}" />
 		<!--tag the map files project-->
 		<antcall target="tagMapFiles" />
-		<!-- Downloading Orbit map files -->
-		<get src="${orbitURL}" dest="${buildDirectory}/maps/orbit.map" usetimestamp="true"/>
 	</target>
 
 	<target name="tagMapFiles" if="tagMaps">
@@ -62,7 +60,6 @@
 	<!-- Steps to do before setup -->
 	<!-- ===================================================================== -->
 	<target name="preSetup">
-		<mkdir dir="${buildDirectory}/${buildLabel}" />
 	</target>
 
 	<!-- ===================================================================== -->
