@@ -175,7 +175,7 @@
 		</antcall>
 
 		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
-			<fileset dir="${buildDirectory}/features/org.eclipse.gmf">
+			<fileset dir="${buildDirectory}/features/org.eclipse.gmf.runtime.notation">
 				<include name="*.log.zip" />
 			</fileset>
 		</unzip>
