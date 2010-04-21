@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<topLevel>
+	<zipTypes>
+		<zipType name="Runtime">
+			<platform id="RUN"
+				name="All"
+				fileName='&lt;a href="@base@gmf-notation-@build@.zip">gmf-notation-@build@.zip&lt;/a>'>
+			</platform>
+		</zipType>
+	</zipTypes>
+
+	<logFiles>
+@entries@
+	</logFiles>
+</topLevel>
+
