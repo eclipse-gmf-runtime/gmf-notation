@@ -27,7 +27,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.gmf.runtime.notation.ConnectorStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
-import org.eclipse.gmf.runtime.notation.Routing;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.gmf.runtime.notation.ConnectorStyle} object.
