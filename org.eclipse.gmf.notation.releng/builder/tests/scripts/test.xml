@@ -31,53 +31,8 @@
 			<property name="unpackDest" value="${install}"/>
 		</ant>
 		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${orbitURL}" />
-			<property name="file" value="${orbitFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
 			<property name="url" value="${emfURL}" />
 			<property name="file" value="${emfFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${emfExamplesURL}" />
-			<property name="file" value="${emfExamplesFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${uml2URL}" />
-			<property name="file" value="${uml2File}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${oclURL}" />
-			<property name="file" value="${oclFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${queryURL}" />
-			<property name="file" value="${queryFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${transactionURL}" />
-			<property name="file" value="${transactionFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${validationURL}" />
-			<property name="file" value="${validationFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${gefURL}" />
-			<property name="file" value="${gefFile}" />
-			<property name="unpackDest" value="${install}"/>
-		</ant>
-		<ant target="getTestDependency" antfile="${getTestDependencies.xml}" dir="${common.releng.dir}">
-			<property name="url" value="${qvtoURL}" />
-			<property name="file" value="${qvtoFile}" />
 			<property name="unpackDest" value="${install}"/>
 		</ant>
 		<property name="dir" location="."/>
