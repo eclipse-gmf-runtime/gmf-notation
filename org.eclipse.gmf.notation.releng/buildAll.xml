@@ -86,11 +86,7 @@
 	</target>
 
 	<target name="run" depends="init">
-		<echo message="buildAll and do not run tests"/>
-		<antcall target="buildAll" />
-		<!--ant target="test" antfile="${helper}"/-->
-		<ant target="publish" antfile="${helper}"/>
-		<!--antcall target="runAll" /-->
+		<antcall target="runAll" />
 		<ant target="cleanUp" antfile="${helper}"/>
 	</target>
 
