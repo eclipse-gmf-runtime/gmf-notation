@@ -158,7 +158,7 @@
 	
 	<target name="updateZips" if="sign">
 		<!-- [233486] Update zip content with signed jars (note: temporary, as there must be a better way) -->
-		<zip destfile="${buildDirectory}/${buildLabel}/gmf-notation-${buildAlias}.zip" update="true" duplicate="preserve">
+		<zip destfile="${buildDirectory}/${buildLabel}/gmf-notation-sdk-${buildAlias}.zip" update="true" duplicate="preserve">
 			<zipfileset 
 				src="${buildDirectory}/${buildLabel}/${masterZip}" 
 				dirmode="775" filemode="664" 
@@ -166,6 +166,18 @@
 				excludes="**/*.pack.gz, 
 						  **/pack.properties, 
 						  **/features/*.jar" />
+		</zip>
+		<zip destfile="${buildDirectory}/${buildLabel}/gmf-notation-${buildAlias}.zip" update="true" duplicate="preserve">
+			<zipfileset 
+				src="${buildDirectory}/${buildLabel}/${masterZip}" 
+				dirmode="775" filemode="664" 
+				id="NotationZipFiles" 
+				excludes="**/*.pack.gz, 
+						  **/pack.properties, 
+						  **/features/*.jar,
+						  **/features/*sdk*,
+						  **/plugins/*sdk*.jar,
+						  **/plugins/*.source_*.jar" />
 		</zip>
 	</target>
 	
