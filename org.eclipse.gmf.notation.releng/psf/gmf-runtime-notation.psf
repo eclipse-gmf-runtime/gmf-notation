@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <psf version="2.0">
 	<provider id="org.eclipse.team.cvs.core.cvsnature">
+		<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmf/features/org.eclipse.gmf.runtime.notation.sdk-feature,org.eclipse.gmf.runtime.notation.sdk-feature"/>
 		<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmf/features/org.eclipse.gmf.runtime.notation-feature,org.eclipse.gmf.runtime.notation-feature"/>
+		<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation.sdk,org.eclipse.gmf.runtime.notation.sdk"/>
 		<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation,org.eclipse.gmf.runtime.notation"/>
 		<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation.edit,org.eclipse.gmf.runtime.notation.edit"/>
 	</provider>

@@ -2,10 +2,9 @@
 
 !*** GMF Runtime Notation features **********************************************************
 feature@org.eclipse.gmf.runtime.notation=v20100421-2359,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/features/org.eclipse.gmf.runtime.notation-feature
-feature@org.eclipse.gmf.runtime.notation.sdk=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/features/org.eclipse.gmf.runtime.notation.sdk-feature
+feature@org.eclipse.gmf.runtime.notation.sdk=v20100502-2052,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/features/org.eclipse.gmf.runtime.notation.sdk-feature
 
 !*** GMF Runtime Notation plug-ins **********************************************************
 plugin@org.eclipse.gmf.runtime.notation=v20100420-2359,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation
-plugin@org.eclipse.gmf.runtime.notation.sdk=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation.sdk
+plugin@org.eclipse.gmf.runtime.notation.sdk=v20100502-2052,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation.sdk
 plugin@org.eclipse.gmf.runtime.notation.edit=v20100424-2359,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmf/plugins/org.eclipse.gmf.runtime.notation.edit
-
