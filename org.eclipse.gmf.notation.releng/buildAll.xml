@@ -136,6 +136,7 @@
 		</macrodef>
 		
 		<build component="builder/notation" zip="gmf-notation-${buildAlias}.zip"/>
+		<build component="builder/notation-sdk" zip="gmf-notation-sdk-${buildAlias}.zip"/>
    		<ant target="signMasterZip" antfile="${helper}">
 			<property name="mailStatus" value="nomail" />
 		</ant>	
