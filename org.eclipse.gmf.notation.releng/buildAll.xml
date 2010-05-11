@@ -136,7 +136,7 @@
 		</macrodef>
 		
 		<build component="builder/notation" zip="gmf-notation-${buildAlias}.zip"/>
-		<build component="builder/notation-sdk" zip="gmf-notation-sdk-${buildAlias}.zip"/>
+		<build component="builder/notation-sdk" zip="gmf-sdk-notation-${buildAlias}.zip"/>
    		<ant target="signMasterZip" antfile="${helper}">
 			<property name="mailStatus" value="nomail" />
 		</ant>	
@@ -159,7 +159,7 @@
 	
 	<target name="updateZips" if="sign">
 		<!-- [233486] Update zip content with signed jars (note: temporary, as there must be a better way) -->
-		<zip destfile="${buildDirectory}/${buildLabel}/gmf-notation-sdk-${buildAlias}.zip" update="true" duplicate="preserve">
+		<zip destfile="${buildDirectory}/${buildLabel}/gmf-sdk-notation-${buildAlias}.zip" update="true" duplicate="preserve">
 			<zipfileset 
 				src="${buildDirectory}/${buildLabel}/${masterZip}" 
 				dirmode="775" filemode="664" 
