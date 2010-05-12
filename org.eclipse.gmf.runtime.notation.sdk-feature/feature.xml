@@ -29,12 +29,12 @@ http://www.eclipse.org/legal/epl-v10.html
    <includes
          id="org.eclipse.gmf.runtime.notation"
          version="0.0.0"
-         name="%runtimeFeatureName"/>
+         name="%notationFeatureName"/>
 
    <includes
          id="org.eclipse.gmf.runtime.notation.source"
          version="0.0.0"
-         name="%runtimeSourceFeatureName"/>
+         name="%notationSourceFeatureName"/>
 
    <requires>
       <import feature="org.eclipse.emf" version="2.6.0" match="compatible"/>
