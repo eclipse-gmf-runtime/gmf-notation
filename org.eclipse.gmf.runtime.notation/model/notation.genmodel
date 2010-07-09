@@ -94,9 +94,14 @@
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//ArrowType/OpenArrow"/>
       <genEnumLiterals ecoreEnumLiteral="notation.ecore#//ArrowType/SolidArrow"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="notation.ecore#//GradientStyle">
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//GradientStyle/Vertical"/>
+      <genEnumLiterals ecoreEnumLiteral="notation.ecore#//GradientStyle/Horizontal"/>
+    </genEnums>
     <genDataTypes ecoreDataType="notation.ecore#//RelativeBendpointList"/>
     <genDataTypes ecoreDataType="notation.ecore#//FilterKeyList"/>
     <genDataTypes ecoreDataType="notation.ecore#//SortKeyMap"/>
+    <genDataTypes ecoreDataType="notation.ecore#//GradientData"/>
     <genClasses ecoreClass="notation.ecore#//Edge">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference notation.ecore#//Edge/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference notation.ecore#//Edge/target"/>
@@ -122,6 +127,8 @@
     <genClasses image="false" ecoreClass="notation.ecore#//Style"/>
     <genClasses ecoreClass="notation.ecore#//FillStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//FillStyle/fillColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//FillStyle/transparency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//FillStyle/gradient"/>
     </genClasses>
     <genClasses ecoreClass="notation.ecore#//LineStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//LineStyle/lineColor"/>
@@ -375,5 +382,10 @@
     <genClasses ecoreClass="notation.ecore#//DecorationNode"/>
     <genClasses ecoreClass="notation.ecore#//BasicDecorationNode"/>
     <genClasses ecoreClass="notation.ecore#//BasicCompartment"/>
+    <genClasses ecoreClass="notation.ecore#//BasicSemanticCompartment"/>
+    <genClasses ecoreClass="notation.ecore#//SemanticListCompartment"/>
+    <genClasses ecoreClass="notation.ecore#//RoundedCornersStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute notation.ecore#//RoundedCornersStyle/roundedBendpointsRadius"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
