@@ -1,10 +1,10 @@
 !*** Graphical Modeling Framework (GMF) runtime notation tests map *******************************************
 
 !*** GMF runtime notation tests features *********************************************************************
-feature@org.eclipse.gmf.tests.runtime.notation=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature
+feature@org.eclipse.gmf.tests.runtime.notation=v20100929-1723,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature
 
 !*** GMF runtime notation tests plug-ins *********************************************************************
-plugin@org.eclipse.gmf.tests.runtime.notation=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation,org.eclipse.gmf.tests.runtime.notation
+plugin@org.eclipse.gmf.tests.runtime.notation=v20100929-1723,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation
 
 !*** Special entries from eclipse  
 plugin@org.eclipse.test=v20100118,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,
