@@ -1,6 +1,6 @@
 <project name="Build specific targets and properties" default="noDefault" basedir=".">
 
-	<property name="archiveName" value="gmf-junit-tests-${buildAlias}.zip" />
+	<property name="archiveName" value="gmf-notation-junit-tests-${buildAlias}.zip" />
 
 	<!-- ===================================================================== -->
 	<!-- Run a given ${target} on all elements being built -->
@@ -8,7 +8,7 @@
 	<target name="allElements">
 		<ant antfile="${genericTargets}" target="${target}">
 			<property name="type" value="feature" />
-			<property name="id" value="org.eclipse.gmf.tests" />
+			<property name="id" value="org.eclipse.gmf.tests.runtime.notation" />
 		</ant>
 	</target>
 
@@ -19,7 +19,7 @@
 	<!-- Add one target for each root element and each configuration -->
 	<!-- ===================================================================== -->
 
-	<target name="assemble.org.eclipse.gmf.tests">
+	<target name="assemble.org.eclipse.gmf.tests.runtime.notation">
 		<ant antfile="${assembleScriptName}" />
 		<!-- ADD POST STEPS -->
 	</target>
@@ -182,7 +182,7 @@
 		</antcall>
 
 		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
-			<fileset dir="${buildDirectory}/features/org.eclipse.gmf">
+			<fileset dir="${buildDirectory}/features/org.eclipse.gmf.tests.runtime.notation">
 				<include name="*.log.zip" />
 			</fileset>
 		</unzip>
@@ -217,7 +217,7 @@
 
 	    <generateTestProperties 
 	            buildDirectory="${buildDirectory}" 
-	            featureId="org.eclipse.gmf.tests" 
+	            featureId="org.eclipse.gmf.tests.runtime.notation" 
 	            outputFile="${workingDirectory}/testing/test.properties" 
 	    /> 
 
@@ -236,7 +236,7 @@
 	  	<delete dir="${workingDirectory}/eclipse/plugins/${org.eclipse.test}" includeEmptyDirs="true" />
 		
 	 	<!-- rezip the JUnit plugin tests -->
-		<zip destfile="${workingDirectory}/testing/gmf-junit-tests-${buildAlias}.zip">
+		<zip destfile="${workingDirectory}/testing/gmf-notation-junit-tests-${buildAlias}.zip">
 			 <zipfileset dir="${workingDirectory}/eclipse" prefix="eclipse"/>
 		</zip>
 	 	
@@ -252,11 +252,11 @@
 	    <copy todir="${workingDirectory}/testing" file="${buildDirectory}/../build.cfg" />
 
 		<!--create zip file of the automated testing framework-->	
-		<zip destfile="${buildDirectory}/${buildLabel}/gmf-tests-${buildAlias}.zip">
+		<zip destfile="${buildDirectory}/${buildLabel}/gmf-tests-notation-${buildAlias}.zip">
 			 <zipfileset dir="${workingDirectory}/testing" prefix="testing"/>
 		</zip>
 
-		<delete file="${buildDirectory}/${buildLabel}/gmf-junit-tests-${buildAlias}.zip"  />
+		<delete file="${buildDirectory}/${buildLabel}/gmf-notation-junit-tests-${buildAlias}.zip"  />
 	</target>
 	
 	<!-- ===================================================================== -->
