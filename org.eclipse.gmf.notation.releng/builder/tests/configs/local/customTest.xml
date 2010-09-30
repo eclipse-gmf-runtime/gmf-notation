@@ -22,14 +22,14 @@
 		</ant>
 		
 		<!-- TODO: if your project requires more dependencies for testing, add them here -->
-		<echo message="Copy Eclipse, EMF, UML2, OCL, Query, Transaction, Validation, GEF, and Orbit to ${executionDir}..."/>
+		<echo message="Copy Eclipse and EMF to ${executionDir}..."/>
 		<copy todir="${executionDir}">
-			<fileset dir="${downloadsDir}" includes="${eclipseFile},${orbitFile},${emfFile},${emfExamplesFile},${uml2File},${oclFile},${queryFile},${transactionFile},${validationFile},${gefFile},${qvtoFile}"/>
+			<fileset dir="${downloadsDir}" includes="${eclipseFile},${emfFile}"/>
 		</copy>
 		<property name="shell" value="relengbuildgtk.sh"/>
 		
 		<!--copy in the examples to test-->
-		<copy todir="${executionDir}" file="${dropLocation}/${buildLabel}/${examples}" />
+		<!--copy todir="${executionDir}" file="${dropLocation}/${buildLabel}/${examples}" -->
 	
 		<!--copy the script which invokes the tests -->
 		<copy file="${tester}/${shell}" todir="${executionDir}"/>
