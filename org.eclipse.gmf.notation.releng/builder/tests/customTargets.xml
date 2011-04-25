@@ -1,7 +1,5 @@
 <project name="Build specific targets and properties" default="noDefault" basedir=".">
 
-	<property name="archiveName" value="gmf-notation-junit-tests-${buildAlias}.zip" />
-
 	<!-- ===================================================================== -->
 	<!-- Run a given ${target} on all elements being built -->
 	<!-- ===================================================================== -->
@@ -20,6 +18,7 @@
 	<!-- ===================================================================== -->
 
 	<target name="assemble.org.eclipse.gmf.tests.runtime.notation">
+		<property name="archiveName" value="gmf-notation-junit-tests-${buildAlias}.zip" />
 		<ant antfile="${assembleScriptName}" />
 		<!-- ADD POST STEPS -->
 	</target>
@@ -51,9 +50,6 @@
 
 		<!--tag the map files project-->
 		<antcall target="tagMapFiles" />
-
-		<!-- Downloading Orbit map files -->
-		<get src="${orbitURL}" dest="${buildDirectory}/maps/orbit.map" usetimestamp="true"/>
 	</target>
 
 	<target name="tagMapFiles" if="tagMaps">
@@ -182,9 +178,12 @@
 		</antcall>
 
 		<unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
-			<fileset dir="${buildDirectory}/features/org.eclipse.gmf.tests.runtime.notation">
-				<include name="*.log.zip" />
+			<fileset dir="${buildDirectory}/features">
+				<include name="**/org.eclipse.gmf.tests.runtime.notation*/*.log.zip" />
 			</fileset>
+			<patternset>
+				<exclude name="**/org.eclipse.test*/**"/>
+			</patternset>
 		</unzip>
 	</target>
 	<target name="clean" unless="noclean">
@@ -202,7 +201,7 @@
 		<!--unzip the junit tests-->
 	    <mkdir dir="${workingDirectory}/eclipse" />
 		<unzip dest="${workingDirectory}" overwrite="true">
-			<fileset dir="${buildDirectory}/${buildLabel}"><include name="**/gmf*junit*tests*.zip"/></fileset>
+			<fileset dir="${buildDirectory}/${buildLabel}"><include name="**/gmf-notation-junit-tests*.zip"/></fileset>
 		</unzip>
 		
 		<!-- create top level testing directory-->    
@@ -228,16 +227,16 @@
 	   	     This is so that contributors of test.xml's do not have to update their paths to 
 	   	     library.xml in org.eclipse.test whenever its version is updated.
 	   	 -->
-	   	<move todir="${workingDirectory}/eclipse/plugins/org.eclipse.test">
-	    		<fileset dir="${workingDirectory}/eclipse/plugins/${org.eclipse.test}" />
-	  	</move>
+		<move todir="${workingDirectory}/eclipse/dropins/eclipse/plugins/org.eclipse.test">
+			<fileset dir="${workingDirectory}/eclipse/dropins/eclipse/plugins/${org.eclipse.test}" />
+		</move>
 	  	
 	  	<!--the Ant move task leaves behind an empty directory-->
-	  	<delete dir="${workingDirectory}/eclipse/plugins/${org.eclipse.test}" includeEmptyDirs="true" />
+		<delete dir="${workingDirectory}/eclipse/dropins/eclipse/plugins/${org.eclipse.test}" includeEmptyDirs="true" />
 		
 	 	<!-- rezip the JUnit plugin tests -->
 		<zip destfile="${workingDirectory}/testing/gmf-notation-junit-tests-${buildAlias}.zip">
-			 <zipfileset dir="${workingDirectory}/eclipse" prefix="eclipse"/>
+			<zipfileset dir="${workingDirectory}/eclipse/dropins/eclipse" prefix="eclipse" />
 		</zip>
 	 	
 	 	<!--Copy scripts and doc used in the automated testing to the testing directory-->
