@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<psf version="2.0">
-<provider id="org.eclipse.team.cvs.core.cvsnature">
-<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation,org.eclipse.gmf.tests.runtime.notation"/>
-<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature,org.eclipse.gmf.tests.runtime.notation-feature"/>
-</provider>
-</psf>
