@@ -4,8 +4,8 @@
 feature@org.eclipse.gmf.tests.runtime.notation=v20100929-1723,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature
 
 !*** GMF runtime notation tests plug-ins *********************************************************************
-plugin@org.eclipse.gmf.tests.runtime.notation=v20100929-1723,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation
+plugin@org.eclipse.gmf.tests.runtime.notation=v20110425-1200,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation
 
 !*** Special entries from eclipse  
-plugin@org.eclipse.test=v20100118,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,
+plugin@org.eclipse.test=v20110420,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,
 fragment@org.eclipse.ant.optional.junit=v20080717,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,
