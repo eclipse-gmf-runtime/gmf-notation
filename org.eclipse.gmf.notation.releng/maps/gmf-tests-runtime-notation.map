@@ -1,7 +1,7 @@
 !*** Graphical Modeling Framework (GMF) runtime notation tests map *******************************************
 
 !*** GMF runtime notation tests features *********************************************************************
-feature@org.eclipse.gmf.tests.runtime.notation=v20110426-2159,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature
+feature@org.eclipse.gmf.tests.runtime.notation=v20120327-2213,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/features/org.eclipse.gmf.tests.runtime.notation-feature
 
 !*** GMF runtime notation tests plug-ins *********************************************************************
 plugin@org.eclipse.gmf.tests.runtime.notation=v20110503-2159,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,,org.eclipse.gmp/org.eclipse.gmf.notation/tests/org.eclipse.gmf.tests.runtime.notation
