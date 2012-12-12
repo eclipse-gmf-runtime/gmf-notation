@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gmf.tests.runtime.notation"
       label="%featureName"
-      version="1.6.0.qualifier"
+      version="1.7.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmf.tests.runtime.notation"
       image="eclipse_update_120.jpg">
@@ -27,12 +27,8 @@ http://www.eclipse.org/legal/epl-v10.html
       <update label="%updateSiteName" url="http://download.eclipse.org/modeling/gmf/updates/releases/"/>
    </url>
 
-   <includes
-         id="org.eclipse.gmf.tests.runtime.notation.source"
-         version="0.0.0"/>
-
    <requires>
-      <import feature="org.eclipse.gmf.runtime.notation" version="1.4.0" match="compatible"/>
+      <import feature="org.eclipse.gmf.runtime.notation" version="1.7.0" match="compatible"/>
    </requires>
 
    <plugin
