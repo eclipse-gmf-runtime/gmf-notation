@@ -6,9 +6,6 @@
    <feature url="features/org.eclipse.gmf.runtime.notation.sdk_1.7.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.sdk" version="1.7.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.runtime.notation.sdk.source_1.7.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.sdk.source" version="1.7.0.qualifier">
-      <category name="gmf-notation"/>
-   </feature>
    <feature url="features/org.eclipse.gmf.runtime.notation.source_1.7.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.source" version="1.7.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
