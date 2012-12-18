@@ -162,7 +162,7 @@ if [ "$dropFiles" = y ];
         then
                 echo "Converting update site to runnable form"
                 ./eclipse/eclipse -nosplash -consoleLog -application org.eclipse.equinox.p2.repository.repo2runnable -source file:update-site -destination file:drops/eclipse
-                qualifiedVersion=$(find drops/eclipse/features/ -maxdepth 1 | grep "org.eclipse.gmf_")
+                qualifiedVersion=$(find drops/eclipse/features/ -maxdepth 1 | grep "org.eclipse.gmf.runtime.notation_")
 		echo "qualifiedVersion is $qualifiedVersion"
                 qualifiedVersion=${qualifiedVersion#*_}
 		echo "qualifiedVersion is $qualifiedVersion"
