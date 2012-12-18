@@ -156,20 +156,20 @@
 
 	<repositories>
 		<repository>
-			<id>eclipse-sdk</id>
-			<url>http://download.eclipse.org/eclipse/updates/4.3-I-builds/I20121204-1600</url>
+			<id>emf base</id>
 			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emf/emf/updates/2.9milestones/base/S201212130932</url>
 		</repository>
 		<repository>
-			<id>emf base</id>
-			<url>http://download.eclipse.org/modeling/emf/emf/updates/2.9milestones/base/S201212110524</url>
+			<id>emf core</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emf/emf/updates/2.9milestones/core/S201212170429</url>
+		</repository>
+		<repository>
+			<id>eclipse-sdk</id>
+			<url>http://download.eclipse.org/eclipse/updates/4.3milestones/S-4.3M4-201212140730</url>
 			<layout>p2</layout>
 		</repository>
-                <repository>
-                        <id>emf core</id>
-                        <url>http://download.eclipse.org/modeling/emf/emf/updates/2.9milestones/core/S201211090549</url>
-                        <layout>p2</layout>
-                </repository>
 	</repositories>
 
 	<pluginRepositories>
