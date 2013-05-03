@@ -132,7 +132,8 @@ public class NotationTest extends TestCase {
 		assertNotNull("Workspace file is null", file);
 		IEditorDescriptor defaultEditor = PlatformUI.getWorkbench()
 				.getEditorRegistry().findEditor(DEFAULT_TEXT_EDITOR_ID);
-		assertNotNull("Default editor is null", defaultEditor);
-		page.openEditor(new FileEditorInput(file), defaultEditor.getId());
+		if (defaultEditor != null) {
+			page.openEditor(new FileEditorInput(file), defaultEditor.getId());
+		}
 	}
 }
