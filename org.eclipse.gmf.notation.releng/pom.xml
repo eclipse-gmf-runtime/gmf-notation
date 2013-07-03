@@ -161,11 +161,11 @@
 		<repository>
 			<id>emf nightly</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/emf/emf/updates/nightly</url>
+			<url>http://download.eclipse.org/modeling/emf/emf/updates/releases</url>
 		</repository>
 		<repository>
 			<id>eclipse-sdk</id>
-			<url>http://download.eclipse.org/eclipse/updates/4.3-I-builds</url>
+			<url>http://download.eclipse.org/eclipse/updates/4.3</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
