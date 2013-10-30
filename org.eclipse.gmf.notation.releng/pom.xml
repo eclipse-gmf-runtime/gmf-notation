@@ -197,12 +197,18 @@
 		</profile>
 	</profiles>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>CBI</id>
-			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
-		</pluginRepository>
-	</pluginRepositories>
+	<repositories>
+		<repository>
+			<id>emf nightly</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emf/emf/updates/nightly</url>
+		</repository>
+		<repository>
+			<id>eclipse-sdk</id>
+			<url>http://download.eclipse.org/eclipse/updates/4.4-I-builds</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>../org.eclipse.gmf.notation.target</module>
