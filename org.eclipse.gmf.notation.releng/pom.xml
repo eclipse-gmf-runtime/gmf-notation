@@ -201,23 +201,12 @@
 		</profile>
 	</profiles>
 
-	<repositories>
-		<repository>
-			<id>emf nightly</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/emf/emf/updates/nightly</url>
-		</repository>
-		<repository>
-			<id>eclipse-sdk</id>
-			<url>http://download.eclipse.org/eclipse/updates/4.4milestones</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>repo.eclipse.org</id>
-			<name>Eclipse Repository - Releases</name>
-			<url>https://repo.eclipse.org/content/repositories/eclipse-releases/</url>
-		</repository>
-	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>CBI</id>
+			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<modules>
 		<module>../org.eclipse.gmf.notation.target</module>
