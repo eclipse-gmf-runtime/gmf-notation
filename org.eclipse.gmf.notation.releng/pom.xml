@@ -55,7 +55,8 @@
 										<echo
 											message="Replacing @build@ token within about.mappings with build id" />
 										<replace file="about.mappings">
-											<replacefilter token="@build@" value="${unqualifiedVersion}.${buildQualifier}" />
+											<replacefilter token="@build@"
+												value="${unqualifiedVersion}.${buildQualifier}" />
 										</replace>
 									</then>
 								</if>
@@ -65,7 +66,8 @@
 										<echo
 											message="Replacing @build@ token within javadocOptions.txt with build id" />
 										<replace file="javadocOptions.txt">
-											<replacefilter token="@build@" value="${unqualifiedVersion}.${buildQualifier}" />
+											<replacefilter token="@build@"
+												value="${unqualifiedVersion}.${buildQualifier}" />
 										</replace>
 									</then>
 								</if>
@@ -88,7 +90,8 @@
 										<echo
 											message="Replacing back build id within about.mappings with @build@ token" />
 										<replace file="about.mappings">
-											<replacefilter token="${unqualifiedVersion}.${buildQualifier}" value="@build@" />
+											<replacefilter token="${unqualifiedVersion}.${buildQualifier}"
+												value="@build@" />
 										</replace>
 									</then>
 								</if>
@@ -98,7 +101,8 @@
 										<echo
 											message="Replacing back build id within javadocOptions.txt with @build@ token" />
 										<replace file="javadocOptions.txt">
-											<replacefilter token="${unqualifiedVersion}.${buildQualifier}" value="@build@" />
+											<replacefilter token="${unqualifiedVersion}.${buildQualifier}"
+												value="@build@" />
 										</replace>
 									</then>
 								</if>
@@ -119,7 +123,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<profiles>
 		<profile>
 			<id>luna.target</id>
@@ -207,6 +211,11 @@
 			<id>eclipse-sdk</id>
 			<url>http://download.eclipse.org/eclipse/updates/4.4milestones</url>
 			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>repo.eclipse.org</id>
+			<name>Eclipse Repository - Releases</name>
+			<url>https://repo.eclipse.org/content/repositories/eclipse-releases/</url>
 		</repository>
 	</repositories>
 
