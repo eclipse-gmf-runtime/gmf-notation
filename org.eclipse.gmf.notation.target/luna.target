@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><?pde version="3.8"?><target name="luna" sequenceNumber="10">
+<?xml version="1.0" encoding="UTF-8"?><?pde version="3.8"?><target name="luna" sequenceNumber="17">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.sdk.ide" version="4.4.0.I20131029-1200"/>
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.10.0.v20131028-0959"/>
+<unit id="org.eclipse.sdk.ide" version="4.4.0.I20131030-2000"/>
+<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.10.0.v20131028-0959"/>
 <unit id="org.eclipse.test.feature.group" version="3.6.0.v20131025-1404"/>
-<unit id="org.eclipse.sdk.tests.feature.group" version="4.4.0.v20131029-1728"/>
-<unit id="org.eclipse.platform.ide" version="4.4.0.I20131029-1200"/>
-<repository location="http://download.eclipse.org/eclipse/updates/4.4-I-builds"/>
+<unit id="org.eclipse.sdk.tests.feature.group" version="4.4.0.v20131031-0127"/>
+<unit id="org.eclipse.platform.ide" version="4.4.0.I20131030-2000"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.4milestones"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.edit.feature.group" version="2.10.0.v20131028-1134"/>
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.0.v20131028-1134"/>
-<unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.8.0.v20131028-1134"/>
+<unit id="org.eclipse.emf.edit.feature.group" version="2.10.0.v20131205-0850"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.0.v20131205-0850"/>
+<unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.8.0.v20131205-0850"/>
 <repository location="http://download.eclipse.org/modeling/emf/emf/updates/nightly"/>
 </location>
 </locations>
