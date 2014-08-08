@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?pde version="3.8"?><target name="luna" sequenceNumber="27">
+<?xml version="1.0" encoding="UTF-8"?><?pde version="3.8"?><target name="gmf-notation" sequenceNumber="28">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.sdk.ide" version="4.4.0.I20140606-1215"/>
