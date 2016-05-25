@@ -130,13 +130,10 @@ else
 	echo "`date +%Y-%m-%d-%H:%M:%S` version is now $version"
 fi
 				
-cp eclipse/epl-v10.html drops/eclipse
-cp eclipse/notice.html drops/eclipse
 cd drops
 
 # gmf-notation SDK
 zip -r ../$localDropDir/gmf-sdk-notation-$version.zip \
-	eclipse/epl-v10.html eclipse/notice.html \
 	eclipse/features/org.eclipse.gmf.runtime.notation.sdk_* \
 	eclipse/features/org.eclipse.gmf.runtime.notation.source_* \
 	eclipse/features/org.eclipse.gmf.runtime.notation_* \
@@ -151,7 +148,6 @@ echo "`date +%Y-%m-%d-%H:%M:%S` Created gmf-sdk-notation-$version.zip"
 				
 # gmf-notation runtime
 zip -r ../$localDropDir/gmf-notation-$version.zip \
-	eclipse/epl-v10.html eclipse/notice.html \
 	eclipse/features/org.eclipse.gmf.runtime.notation_* \
 	eclipse/plugins/org.eclipse.gmf.runtime.notation_* \
 	eclipse/plugins/org.eclipse.gmf.runtime.notation.edit_*
@@ -160,7 +156,6 @@ echo "`date +%Y-%m-%d-%H:%M:%S` Created gmf-notation-$version.zip"
 				
 # gmf-notation automated-tests
 zip -r ../$localDropDir/gmf-tests-notation-$version.zip \
-	eclipse/epl-v10.html eclipse/notice.html \
 	eclipse/plugins/org.eclipse.gmf.tests.runtime.notation_* \
 	eclipse/features/org.eclipse.gmf.tests.runtime.notation_*
 md5sum ../$localDropDir/gmf-tests-notation-$version.zip > ../$localDropDir/gmf-tests-notation-$version.zip.md5
