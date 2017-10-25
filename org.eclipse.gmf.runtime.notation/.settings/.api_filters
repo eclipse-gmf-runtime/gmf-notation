@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <component id="org.eclipse.gmf.runtime.notation" version="2">
+    <resource path="src/org/eclipse/gmf/runtime/notation/ConnectorStyle.java" type="org.eclipse.gmf.runtime.notation.ConnectorStyle">
+        <filter id="576720909">
+            <message_arguments>
+                <message_argument value="RoutingStyle"/>
+                <message_argument value="ConnectorStyle"/>
+            </message_arguments>
+        </filter>
+    </resource>
     <resource path="src/org/eclipse/gmf/runtime/notation/impl/RelativeBendpointsImpl.java" type="org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl">
         <filter id="338849923">
             <message_arguments>
                 <message_argument value="org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/gmf/runtime/notation/impl/RoutingStyleImpl.java" type="org.eclipse.gmf.runtime.notation.impl.RoutingStyleImpl">
+        <filter id="576725006">
+            <message_arguments>
+                <message_argument value="RoutingStyle"/>
+                <message_argument value="RoutingStyleImpl"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/gmf/runtime/notation/impl/ShapeImpl.java" type="org.eclipse.gmf.runtime.notation.impl.ShapeImpl">
+        <filter id="576725006">
+            <message_arguments>
+                <message_argument value="Shape"/>
+                <message_argument value="ShapeImpl"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/gmf/runtime/notation/impl/ShapeStyleImpl.java" type="org.eclipse.gmf.runtime.notation.impl.ShapeStyleImpl">
+        <filter id="576725006">
+            <message_arguments>
+                <message_argument value="ShapeStyle"/>
+                <message_argument value="ShapeStyleImpl"/>
             </message_arguments>
         </filter>
     </resource>
