@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="gmf-notation" sequenceNumber="104">
-<locations>
-  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
-    <unit id="org.eclipse.test.feature.group" version="0.0.0"/>
-    <unit id="org.eclipse.sdk.tests.feature.group" version="0.0.0"/>
-    <unit id="org.eclipse.platform.ide" version="0.0.0"/>
-    <repository location="http://download.eclipse.org/eclipse/updates/4.7/R-4.7.1a-201710090410/"/>
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.emf.edit.feature.group" version="2.12.0.v20160526-0356"/>
-    <unit id="org.eclipse.emf.examples.feature.group" version="2.11.0.v20160526-0356"/>
-    <unit id="org.eclipse.emf.sdk.feature.group" version="2.12.0.v20160526-0356"/>
-    <unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.9.0.v20160526-0356"/>
-    <repository location="http://download.eclipse.org/modeling/emf/emf/updates/2.12"/>
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
-    <unit id="org.hamcrest.text.source" version="1.1.0.v20090501071000"/>
-    <unit id="org.hamcrest.text" version="1.1.0.v20090501071000"/>
-    <repository location="http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository"/>
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.license.feature.group" version="1.0.1.v20140414-1359"/>
-    <repository location="http://download.eclipse.org/cbi/updates/license"/>
-  </location>
-</locations>
+<?pde?>
+<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
+<target name="gmf-notation" sequenceNumber="1509017206">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.license.feature.group" version="1.0.1.v20140414-1359"/>
+      <repository id="Eclipse-Shared-License" location="http://download.eclipse.org/cbi/updates/license"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sdk.ide" version="4.7.1.M20171009-0410"/>
+      <unit id="org.eclipse.test.feature.group" version="3.7.200.v20170511-1043"/>
+      <unit id="org.eclipse.sdk.tests.feature.group" version="4.7.1.v20171009-0410"/>
+      <unit id="org.eclipse.platform.ide" version="4.7.1.M20171009-0410"/>
+      <repository id="Eclipse-Oxygen.1a" location="http://download.eclipse.org/eclipse/updates/4.7/R-4.7.1a-201710090410/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.edit.feature.group" version="2.12.0.v20170609-0928"/>
+      <unit id="org.eclipse.emf.examples.feature.group" version="2.12.0.v20170609-0928"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.13.0.v20170609-0928"/>
+      <unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.9.0.v20170609-0928"/>
+      <repository id="EMF-2.13" location="http://download.eclipse.org/modeling/emf/emf/updates/2.13"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
+      <unit id="org.hamcrest.text.source" version="1.1.0.v20090501071000"/>
+      <unit id="org.hamcrest.text" version="1.1.0.v20090501071000"/>
+      <repository id="Orbit-Oxygen.1a" location="http://download.eclipse.org/tools/orbit/downloads/drops/R20170919201930/repository"/>
+    </location>
+  </locations>
 </target>
