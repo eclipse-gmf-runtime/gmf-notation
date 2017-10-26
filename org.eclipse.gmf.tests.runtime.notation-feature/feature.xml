@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gmf.tests.runtime.notation"
       label="%featureName"
-      version="1.11.0.qualifier"
+      version="1.12.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmf.tests.runtime.notation"
       image="modeling32.png"

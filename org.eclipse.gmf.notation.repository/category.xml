@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.gmf.runtime.notation_1.11.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation" version="1.11.0.qualifier">
+   <feature url="features/org.eclipse.gmf.runtime.notation_1.12.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation" version="1.12.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.runtime.notation.sdk_1.11.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.sdk" version="1.11.0.qualifier">
+   <feature url="features/org.eclipse.gmf.runtime.notation.sdk_1.12.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.sdk" version="1.12.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.runtime.notation.source_1.11.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.source" version="1.11.0.qualifier">
+   <feature url="features/org.eclipse.gmf.runtime.notation.source_1.12.0.qualifier.jar" id="org.eclipse.gmf.runtime.notation.source" version="1.12.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
-   <feature url="features/org.eclipse.gmf.tests.runtime.notation_1.11.0.qualifier.jar" id="org.eclipse.gmf.tests.runtime.notation" version="1.11.0.qualifier">
+   <feature url="features/org.eclipse.gmf.tests.runtime.notation_1.12.0.qualifier.jar" id="org.eclipse.gmf.tests.runtime.notation" version="1.12.0.qualifier">
       <category name="gmf-notation"/>
    </feature>
    <category-def name="gmf-notation" label="GMF Notation">
