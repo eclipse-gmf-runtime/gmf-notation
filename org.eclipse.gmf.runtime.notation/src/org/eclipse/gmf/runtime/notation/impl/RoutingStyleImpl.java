@@ -473,7 +473,6 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    @SuppressWarnings("deprecation")
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
@@ -501,7 +500,6 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    @SuppressWarnings("deprecation")
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
@@ -537,7 +535,6 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    @SuppressWarnings("deprecation")
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:
@@ -573,7 +570,6 @@ public class RoutingStyleImpl extends RoundedCornersStyleImpl implements Routing
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    @SuppressWarnings("deprecation")
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case NotationPackage.ROUTING_STYLE__ROUNDED_BENDPOINTS_RADIUS:

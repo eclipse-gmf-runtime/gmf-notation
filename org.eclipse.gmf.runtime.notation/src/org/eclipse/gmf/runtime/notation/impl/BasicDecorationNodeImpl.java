@@ -128,15 +128,15 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
 	}
 
     public EList getSourceEdges() {
-        return new EcoreEList.UnmodifiableEList<Edge>(this, NotationPackage.eINSTANCE.getView_SourceEdges(), 0, null);
+        return new EcoreEList.UnmodifiableEList(this, NotationPackage.eINSTANCE.getView_SourceEdges(), 0, null);
 	}
 
     public EList getTargetEdges() {
-        return new EcoreEList.UnmodifiableEList<Edge>(this, NotationPackage.eINSTANCE.getView_TargetEdges(), 0, null);
+        return new EcoreEList.UnmodifiableEList(this, NotationPackage.eINSTANCE.getView_TargetEdges(), 0, null);
 	}
 
     public EList getPersistedChildren() {
-        return new EcoreEList.UnmodifiableEList<Node>(this, NotationPackage.eINSTANCE.getView_PersistedChildren(), 0, null);
+        return new EcoreEList.UnmodifiableEList(this, NotationPackage.eINSTANCE.getView_PersistedChildren(), 0, null);
 	}
 
     public EList getChildren() {
@@ -144,7 +144,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
     }
 
     public EList getStyles() {
-        return new EcoreEList.UnmodifiableEList<Style>(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
+        return new EcoreEList.UnmodifiableEList(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
 	}
 
     public EObject getElement() {
@@ -209,7 +209,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
     }
 
     public EList getTransientChildren() {
-        return new EcoreEList.UnmodifiableEList<Node>(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
+        return new EcoreEList.UnmodifiableEList(this, NotationPackage.eINSTANCE.getView_TransientChildren(), 0, null);
 	}
 
     public Style getStyle(EClass eClass) {
@@ -463,20 +463,22 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
             return ECollections.EMPTY_ELIST;
         }
 
-        List<Node> _children = new ArrayList<Node>();
+        List _children = new ArrayList();
         
         if (hasPersistedChildren) {
-            for (Node node : (List<Node>) getPersistedChildren()) {
-                if (node.isVisible())
+        	for (Iterator it = getPersistedChildren().iterator(); it.hasNext();) {
+				Node node = (Node) it.next();
+				if (node.isVisible())
                     _children.add(node);
-            }
+			}
         }
 
         if (hasTransientChildren) {
-            for (Node node : (List<Node>) getTransientChildren()) {
-                if (node.isVisible())
+        	for (Iterator it = getTransientChildren().iterator(); it.hasNext();) {
+				Node node = (Node) it.next();
+				if (node.isVisible())
                     _children.add(node);
-            }
+			}
         }       
         
         return new BasicEList.UnmodifiableEList(_children.size(), _children

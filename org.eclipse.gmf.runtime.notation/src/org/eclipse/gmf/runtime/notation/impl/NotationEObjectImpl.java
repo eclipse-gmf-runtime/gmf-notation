@@ -45,7 +45,6 @@ public class NotationEObjectImpl extends EObjectImpl
     super();
   }
 
-  @Override
   protected EPropertiesHolder eProperties()
   {
     if (eProperties == null)
@@ -55,32 +54,27 @@ public class NotationEObjectImpl extends EObjectImpl
     return eProperties;
   }
 
-  @Override
   public boolean eIsProxy()
   {
     return eProxyURI != null;
   }
   
-  @Override
   public URI eProxyURI()
   {
     return eProxyURI;
   }
 
-  @Override
   public void eSetProxyURI(URI uri)
   {
     eProxyURI = uri;
   }
 
-  @Override
-  public EList<EObject> eContents()
+  public EList eContents()
   {
     return EContentsEList.createEContentsEList(this);
   }
 
-  @Override
-  public EList<EObject> eCrossReferences()
+  public EList eCrossReferences()
   {
     return ECrossReferenceEList.createECrossReferenceEList(this);
   }

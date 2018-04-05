@@ -11,6 +11,7 @@
 
 package org.eclipse.gmf.runtime.notation.impl;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -3307,8 +3308,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 	
 	void createAnnotations()
 	{
-	  for (EClassifier eClassifier : getEClassifiers())
-	  {
+		for (Iterator it = getEClassifiers().iterator(); it.hasNext();) {
+			EClassifier eClassifier = (EClassifier) it.next();
 	    String name = eClassifier.getName();
         if (name.equals("Node") || name.indexOf("Style") != -1 || name.equals("Location") || name.equals("Size") ||  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$  //$NON-NLS-4$
              name.indexOf("Anchor") != -1 || name.indexOf("point") != -1 || name.equals("Bounds") || name.indexOf("Edge") != -1 || name.indexOf("Constraint") != -1) //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
