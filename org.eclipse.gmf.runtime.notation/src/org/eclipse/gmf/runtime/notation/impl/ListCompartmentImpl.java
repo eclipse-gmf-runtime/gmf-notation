@@ -613,6 +613,20 @@ public class ListCompartmentImpl extends BasicCompartmentImpl implements ListCom
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case NotationPackage.LIST_COMPARTMENT__SOURCE_EDGES:
+			case NotationPackage.LIST_COMPARTMENT__TARGET_EDGES:
+				return false;
+			default:
+				return eIsSetGen(featureID);
+		}
+	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT_CDO
+	 */
+	public boolean eIsSetGen(int featureID) {
+		switch (featureID) {
 			case NotationPackage.LIST_COMPARTMENT__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
 			case NotationPackage.LIST_COMPARTMENT__VISIBLE:

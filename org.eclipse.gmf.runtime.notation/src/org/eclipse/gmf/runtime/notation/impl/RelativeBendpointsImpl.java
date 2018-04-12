@@ -85,21 +85,29 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List getPoints() {
-		return Collections.unmodifiableList(points);
+		return Collections.unmodifiableList(getPointsGen());
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List getPointsGen() {
+		return points;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void setPoints(List newPoints) {
-		List oldPoints = points;
-		
 		if (newPoints == null )
 			throw new NullPointerException("the 'newPoints' parameter is null"); //$NON-NLS-1$
-		else if (newPoints.isEmpty())
-			points = POINTS_EDEFAULT;
+
+		if (newPoints.isEmpty())
+			setPointsGen(POINTS_EDEFAULT);
 		else {
 			List tempList = new ArrayList(newPoints.size());
 			for (Iterator i = newPoints.iterator(); i.hasNext();) {
@@ -108,13 +116,22 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 					throw new IllegalArgumentException("One or more objects in the list is not of type org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint"); //$NON-NLS-1$
 				tempList.add(point);
 			}
-			points = tempList;
+			setPointsGen(tempList);
 		}
+	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPointsGen(List newPoints) {
+		List oldPoints = points;
+		points = newPoints;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS, Collections.unmodifiableList(oldPoints), Collections.unmodifiableList(points)));
 	}
-
+	
     /**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

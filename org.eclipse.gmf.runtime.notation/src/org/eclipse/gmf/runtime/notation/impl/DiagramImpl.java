@@ -200,14 +200,27 @@ public class DiagramImpl
 		return MEASUREMENT_UNIT_EFLAG_VALUES[(eFlags & MEASUREMENT_UNIT_EFLAG) >>> MEASUREMENT_UNIT_EFLAG_OFFSET];
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc --> Set the Measurement Unit for this Diagram, the
-     * Measure ment unit can be set only once, the set method will not set the
-     * value if it was already set <!-- end-user-doc -->
+	 * Measurement unit can be set only once, the set method will not set the
+	 * value if it was already set <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-    public void setMeasurementUnit(MeasurementUnit newMeasurementUnit) {
-    	if (!isSetMeasurementUnit()) {
+	public void setMeasurementUnit(MeasurementUnit newMeasurementUnit) {
+		if (!isSetMeasurementUnit()) {
+			setMeasurementUnitGen(newMeasurementUnit);
+		} /*else {
+			throw new UnsupportedOperationException();
+		}*/
+	}
+
+	/**
+	 * <!-- begin-user-doc --> Set the Measurement Unit for this Diagram, the
+     * Measurement unit can be set only once, the set method will not set the
+     * value if it was already set <!-- end-user-doc -->
+	 * @generated
+	 */
+    public void setMeasurementUnitGen(MeasurementUnit newMeasurementUnit) {
 			MeasurementUnit oldMeasurementUnit = MEASUREMENT_UNIT_EFLAG_VALUES[(eFlags & MEASUREMENT_UNIT_EFLAG) >>> MEASUREMENT_UNIT_EFLAG_OFFSET];
 			if (newMeasurementUnit == null) newMeasurementUnit = MEASUREMENT_UNIT_EDEFAULT;
 			eFlags = eFlags & ~MEASUREMENT_UNIT_EFLAG | MeasurementUnit.VALUES.indexOf(newMeasurementUnit) << MEASUREMENT_UNIT_EFLAG_OFFSET;
@@ -215,9 +228,6 @@ public class DiagramImpl
 			eFlags |= MEASUREMENT_UNIT_ESETFLAG;
 			if (eNotificationRequired())
 				eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DIAGRAM__MEASUREMENT_UNIT, oldMeasurementUnit, newMeasurementUnit, !oldMeasurementUnitESet));
-    	} /*else {
-    		throw new UnsupportedOperationException();
-    	}*/
 	}
 
     /**
@@ -548,9 +558,9 @@ public class DiagramImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void persistEdges() {
-        if (transientEdges != null && transientEdges.size() > 0) {
-            List edges = new ArrayList(transientEdges);
-            getPersistedEdges().addAll(transientEdges);
+        if (eIsSet(NotationPackage.DIAGRAM__TRANSIENT_EDGES)) {
+            List edges = new ArrayList(getTransientEdges());
+            getPersistedEdges().addAll(edges);
             for (Iterator iterator = edges.iterator(); iterator.hasNext();) {
                 Edge edge = (Edge) iterator.next();
                 View sourceView = edge.getSource();
@@ -589,18 +599,14 @@ public class DiagramImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void removeEdge(Edge edge) {
-        if (edge.eContainingFeature() == NotationPackage.Literals
-            .DIAGRAM__TRANSIENT_EDGES) {
-            if (transientEdges != null && transientEdges.size() > 0) {
-                transientEdges.remove(edge);
-            }
-        } else if (edge.eContainingFeature() == NotationPackage.Literals
-                .DIAGRAM__PERSISTED_EDGES) {
-            if (persistedEdges != null && persistedEdges.size() > 0) {
-                persistedEdges.remove(edge);
-            }
-        }
-
+    	if (edge.eContainer() == this) {
+	        EStructuralFeature eContainingFeature = edge.eContainingFeature();
+			if (eContainingFeature == NotationPackage.Literals.DIAGRAM__TRANSIENT_EDGES) {
+	        	getTransientEdges().remove(edge);
+	        } else if (eContainingFeature == NotationPackage.Literals.DIAGRAM__PERSISTED_EDGES) {
+	        	getPersistedEdges().remove(edge);
+	        }
+    	}
     }
 
 } // DiagramImpl

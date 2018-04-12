@@ -17,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentsEList;
@@ -28,7 +27,6 @@ import org.eclipse.gmf.runtime.notation.LayoutConstraint;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.Style;
-import org.eclipse.gmf.runtime.notation.View;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +38,7 @@ import org.eclipse.gmf.runtime.notation.View;
  * @generated NOT
  * @since 1.2
  */
-public class DecorationNodeImpl extends BasicDecorationNodeImpl implements DecorationNode, View, Node {
+public class DecorationNodeImpl extends BasicDecorationNodeImpl implements DecorationNode {
 
 	protected LayoutConstraint layoutConstraint;
 
@@ -52,10 +50,6 @@ public class DecorationNodeImpl extends BasicDecorationNodeImpl implements Decor
 
     // EATM
     // private EContentsEList allChildren = null;
-
-    protected static final EStructuralFeature[] childrenFeatures = new EStructuralFeature[] {
-        NotationPackage.Literals.VIEW__PERSISTED_CHILDREN,
-        NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN};
 
     protected DecorationNodeImpl() {
 		super();

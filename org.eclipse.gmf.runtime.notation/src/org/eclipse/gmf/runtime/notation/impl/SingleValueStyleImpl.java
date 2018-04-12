@@ -93,12 +93,21 @@ public class SingleValueStyleImpl extends DataTypeStyleImpl implements SingleVal
 						+ getInstanceType().toString() + ">: " + e.getMessage());//$NON-NLS-1$
 			}
 		}
+		setRawValueGen(newRawValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRawValueGen(String newRawValue) {
 		String oldRawValue = rawValue;
 		rawValue = newRawValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SINGLE_VALUE_STYLE__RAW_VALUE, oldRawValue, rawValue));
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

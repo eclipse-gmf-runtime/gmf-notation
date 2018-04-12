@@ -11,10 +11,12 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.util.DelegatingEcoreEList;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.gmf.runtime.notation.ListValueStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -66,25 +68,53 @@ public class ListValueStyleImpl extends DataTypeStyleImpl implements ListValueSt
 	 * @generated NOT
 	 */
 	public EList getRawValuesList() {
-		if (rawValuesList == null) {
-			rawValuesList = new EDataTypeEList(String.class, this, NotationPackage.LIST_VALUE_STYLE__RAW_VALUES_LIST) {
-				
-				private static final long serialVersionUID = -7769354624338385073L;
-				
-				protected Object validate(int index, Object object) {
-					Object validated = super.validate(index, object);
-					if (validated != null && !isInstance(validated))
-						throw new ArrayStoreException();
-					try {
-						getObjectFromString((String)validated);
-					} catch (Exception e) {
-						throw new IllegalArgumentException("Value <" + validated//$NON-NLS-1$
-								+ "> cannot be associated with Data type <"//$NON-NLS-1$
-								+ getInstanceType().toString() + ">: " + e.getMessage());//$NON-NLS-1$
-					}
-					return validated;
+		if (rawValuesList instanceof DelegatingEcoreEList) {
+			return rawValuesList;
+		}
+		final EList delegate = getRawValuesListGen();
+		rawValuesList = new DelegatingEcoreEList(this) {
+			private static final long serialVersionUID = -7769354624338385073L;
+
+			/**
+			 * Overridden as per JavaDoc of {@link DelegatingEcoreEList}.
+			 */
+			public int getFeatureID() {
+				return NotationPackage.LIST_VALUE_STYLE__RAW_VALUES_LIST;
+			}
+			
+			protected boolean isNotificationRequired() {
+				// Never notify. The delegate list does so already.
+				return false;
+			}
+			
+			protected List delegateList() {
+				return delegate;
+			}
+			
+			protected Object validate(int index, Object object) {
+				Object validated = super.validate(index, object);
+				if (validated != null && !isInstance(validated))
+					throw new ArrayStoreException();
+				try {
+					getObjectFromString((String)validated);
+				} catch (Exception e) {
+					throw new IllegalArgumentException("Value <" + validated//$NON-NLS-1$
+							+ "> cannot be associated with Data type <"//$NON-NLS-1$
+							+ getInstanceType().toString() + ">: " + e.getMessage());//$NON-NLS-1$
 				}
-			};
+				return validated;
+			}};
+		return rawValuesList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList getRawValuesListGen() {
+		if (rawValuesList == null) {
+			rawValuesList = new EDataTypeEList(String.class, this, NotationPackage.LIST_VALUE_STYLE__RAW_VALUES_LIST);
 		}
 		return rawValuesList;
 	}

@@ -177,21 +177,29 @@ public class FilteringStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public List getFilteringKeys() {
-		return Collections.unmodifiableList(filteringKeys);
+		return Collections.unmodifiableList(getFilteringKeysGen());
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List getFilteringKeysGen() {
+		return filteringKeys;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void setFilteringKeys(List newFilteringKeys) {
-		List oldFilteringKeys = filteringKeys;
-
 		if (newFilteringKeys == null )
 			throw new NullPointerException("the 'newFilteringKeys' parameter is null"); //$NON-NLS-1$
-		else if (newFilteringKeys.isEmpty())
-			filteringKeys = FILTERING_KEYS_EDEFAULT;
+		
+		if (newFilteringKeys.isEmpty())
+			setFilteringKeysGen(FILTERING_KEYS_EDEFAULT);
 		else {
 			List tempList = new ArrayList(newFilteringKeys.size());
 			for (Iterator i = newFilteringKeys.iterator(); i.hasNext();) {
@@ -200,9 +208,18 @@ public class FilteringStyleImpl extends MinimalEObjectImpl.Container implements 
 					throw new IllegalArgumentException("One or more objects in the list is not of type java.lang.String"); //$NON-NLS-1$
 				tempList.add(key);
 			}
-			filteringKeys = tempList;
+			setFilteringKeysGen(tempList);
 		}
-		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFilteringKeysGen(List newFilteringKeys) {
+		List oldFilteringKeys = filteringKeys;
+		filteringKeys = newFilteringKeys;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.FILTERING_STYLE__FILTERING_KEYS, oldFilteringKeys, filteringKeys));
 	}

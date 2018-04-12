@@ -394,12 +394,21 @@ public class ShapeImpl extends NodeImpl implements Shape {
 	 * @generated NOT
 	 */
 	public void setFontName(String newFontName) {
+		setFontNameGen(newFontName == null ? null : newFontName.intern());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFontNameGen(String newFontName) {
 		String oldFontName = fontName;
-		fontName = newFontName == null ? null : newFontName.intern();
+		fontName = newFontName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE__FONT_NAME, oldFontName, fontName));
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

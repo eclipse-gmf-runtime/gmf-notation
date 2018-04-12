@@ -73,7 +73,7 @@ public class BasicDecorationNodeImpl extends EModelElementImpl implements BasicD
 	 */
 	protected BasicDecorationNodeImpl() {
 		super();
-		eFlags |= VISIBLE_EFLAG;
+		setVisible(VISIBLE_EDEFAULT);
 	}
 
 	/**

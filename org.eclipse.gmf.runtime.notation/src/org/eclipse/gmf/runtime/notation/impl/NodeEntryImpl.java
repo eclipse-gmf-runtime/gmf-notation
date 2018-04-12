@@ -149,7 +149,7 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public Node getTypedKey() {
 		if (key != null && key.eIsProxy()) {
@@ -172,15 +172,14 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 		return key;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public void setTypedKey(Node newKey) {
 		Node oldKey = key;
 		key = newKey;
-		
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__KEY, oldKey, key));
 	}

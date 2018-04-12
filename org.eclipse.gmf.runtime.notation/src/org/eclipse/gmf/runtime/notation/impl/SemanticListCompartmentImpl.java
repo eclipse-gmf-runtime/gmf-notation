@@ -618,6 +618,24 @@ public class SemanticListCompartmentImpl extends BasicSemanticCompartmentImpl im
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case NotationPackage.SEMANTIC_LIST_COMPARTMENT__SOURCE_EDGES:
+		case NotationPackage.SEMANTIC_LIST_COMPARTMENT__TARGET_EDGES:
+		case NotationPackage.SEMANTIC_LIST_COMPARTMENT__PERSISTED_CHILDREN:
+		case NotationPackage.SEMANTIC_LIST_COMPARTMENT__STYLES:
+		case NotationPackage.SEMANTIC_LIST_COMPARTMENT__TRANSIENT_CHILDREN:
+			return false;
+		default:
+			return eIsSetGen(featureID);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT_CDO
+	 */
+	public boolean eIsSetGen(int featureID) {
+		switch (featureID) {
 			case NotationPackage.SEMANTIC_LIST_COMPARTMENT__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
 			case NotationPackage.SEMANTIC_LIST_COMPARTMENT__VISIBLE:

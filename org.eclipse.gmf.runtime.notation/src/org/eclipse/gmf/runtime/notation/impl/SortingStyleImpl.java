@@ -178,21 +178,29 @@ public class SortingStyleImpl extends MinimalEObjectImpl.Container implements So
 	 * @generated NOT
 	 */
 	public Map getSortingKeys() {
-		return Collections.unmodifiableMap(sortingKeys);
+		return Collections.unmodifiableMap(getSortingKeysGen());
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map getSortingKeysGen() {
+		return sortingKeys;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void setSortingKeys(Map newSortingKeys) {
-		Map oldSortingKeys = sortingKeys;
-
 		if (newSortingKeys == null )
 			throw new NullPointerException("the 'newSortingKeys' parameter is null"); //$NON-NLS-1$
-		else if (newSortingKeys.isEmpty())
-			sortingKeys = SORTING_KEYS_EDEFAULT;
+
+		if (newSortingKeys.isEmpty())
+			setSortingKeysGen(SORTING_KEYS_EDEFAULT);
 		else {
 			Map tempMap = new LinkedHashMap(newSortingKeys.size());
 			for (Iterator i = newSortingKeys.keySet().iterator(); i.hasNext();) {
@@ -204,13 +212,22 @@ public class SortingStyleImpl extends MinimalEObjectImpl.Container implements So
 					throw new IllegalArgumentException("One or more values in the map is not of type org.eclipse.gmf.runtime.notation.SortingDirection"); //$NON-NLS-1$
 				tempMap.put(key, value);
 			}
-			sortingKeys = tempMap;
+			setSortingKeysGen(tempMap);
 		}
-		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSortingKeysGen(Map newSortingKeys) {
+		Map oldSortingKeys = sortingKeys;
+		sortingKeys = newSortingKeys;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SORTING_STYLE__SORTING_KEYS, oldSortingKeys, sortingKeys));
 	}
-
+	
     /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

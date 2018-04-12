@@ -82,8 +82,9 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 * @generated NOT
 	 */
 	public Object getProperty(String propertyName) {
-		if (hasProperty(propertyName)) {
-			return ((PropertyValue)getPropertiesMap().get(propertyName)).getValue();
+		PropertyValue propertyValue = (PropertyValue)getPropertiesMap().get(propertyName);
+		if (propertyValue != null) {
+			return propertyValue.getValue();
 		}
 		return null;
 	}
@@ -94,8 +95,9 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	 * @generated NOT
 	 */
 	public boolean setProperty(String propertyName, Object newValue) {
-		if (hasProperty(propertyName)) {
-			((PropertyValue)getPropertiesMap().get(propertyName)).setValue(newValue);
+		PropertyValue propertyValue = (PropertyValue)getPropertiesMap().get(propertyName);
+		if (propertyValue != null) {
+			propertyValue.setValue(newValue);
 			return true;
 		}
 		return false;

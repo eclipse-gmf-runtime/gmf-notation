@@ -127,7 +127,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-      * @generated Not
+      * @generated NOT
      */
 	public NotificationChain basicSetSource(View newSource, NotificationChain msgs) {
         if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
@@ -139,14 +139,24 @@ public class EdgeImpl extends ViewImpl implements Edge {
                 }
             }
         }
-        View oldSource = source;
-        source = newSource;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NotationPackage.EDGE__SOURCE, oldSource, newSource);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
-        }
-        return msgs;
+        return basicSetSourceGen(newSource, msgs);
     }
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSourceGen(View newSource, NotificationChain msgs) {
+		View oldSource = source;
+		source = newSource;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NotationPackage.EDGE__SOURCE, oldSource, newSource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+	
     /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,7 +188,7 @@ public class EdgeImpl extends ViewImpl implements Edge {
     /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-     * @generated Not
+     * @generated NOT
      */
 	public NotificationChain basicSetTarget(View newTarget, NotificationChain msgs) {
         if (eContainingFeature() == NotationPackage.eINSTANCE.getDiagram_PersistedEdges()){
@@ -190,15 +200,24 @@ public class EdgeImpl extends ViewImpl implements Edge {
                 }
             }
         }
-        View oldTarget = target;
-        target = newTarget;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NotationPackage.EDGE__TARGET, oldTarget, newTarget);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
-        }
-        return msgs;
+        return basicSetTargetGen(newTarget, msgs);
     }
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTargetGen(View newTarget, NotificationChain msgs) {
+		View oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NotationPackage.EDGE__TARGET, oldTarget, newTarget);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+	
     /**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

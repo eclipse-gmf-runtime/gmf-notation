@@ -340,22 +340,32 @@ public abstract class ViewImpl
             EObject container = eContainer();
             if (container instanceof View) {
                 View view = (View) container;
-                element = view.getElement();
+                return view.getElement();
             }
         }
-        if (element != null && element.eIsProxy()) {
-            EObject oldElement = element;
-            element = eResolveProxy((InternalEObject) element);
-            if (element != oldElement) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        NotationPackage.VIEW__ELEMENT, oldElement, element));
-            }
-        }
-
-        return element;
+        
+        return getElementGen();
     }
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public EObject getElementGen() {
+    	if (element != null && element.eIsProxy()) {
+    		EObject oldElement = element;
+    		element = eResolveProxy((InternalEObject) element);
+    		if (element != oldElement) {
+    			if (eNotificationRequired())
+    				eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+    						NotationPackage.VIEW__ELEMENT, oldElement, element));
+    		}
+    	}
+    	
+    	return element;
+    }
+    
     /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -702,8 +712,8 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void persistChildren() {
-        if (transientChildren != null && transientChildren.size() > 0) {
-            getPersistedChildren().addAll(transientChildren);
+    	if (eIsSet(NotationPackage.VIEW__TRANSIENT_CHILDREN)) {
+            getPersistedChildren().addAll(getTransientChildren());
         }
     }
 
@@ -741,28 +751,27 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void removeChild(View child) {
-        if (child.eContainingFeature() == NotationPackage.Literals
-            .VIEW__TRANSIENT_CHILDREN) {
-            if (transientChildren != null && transientChildren.size() > 0) {
-                transientChildren.remove(child);
-            }
-        } else if (child.eContainingFeature() == NotationPackage.Literals
-            .VIEW__PERSISTED_CHILDREN) {
-            if (persistedChildren != null && persistedChildren.size() > 0) {
-                persistedChildren.remove(child);
-            }
-        }
+    	if (child.eContainer() == this) {
+	        EStructuralFeature eContainingFeature = child.eContainingFeature();
+			if (eContainingFeature == NotationPackage.Literals.VIEW__TRANSIENT_CHILDREN) {
+	        	getTransientChildren().remove(child);
+	        } else if (eContainingFeature == NotationPackage.Literals.VIEW__PERSISTED_CHILDREN) {
+	        	getPersistedChildren().remove(child);
+	        }
+    	}
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public void persist() {
-        EStructuralFeature eContaingFeature = eContainingFeature();
-        if (eContainer != null && eContaingFeature != null
-            && eContainer instanceof View && eContaingFeature.isTransient()) {
-            View vContainer = (View) eContainer;
-            vContainer.persistChildren();
+    	EObject eContainer = eContainer();
+        if (eContainer instanceof View) {
+        	EStructuralFeature eContaingFeature = eContainingFeature();
+	        if (eContaingFeature != null && eContaingFeature.isTransient()) {
+	            View vContainer = (View) eContainer;
+	            vContainer.persistChildren();
+	        }
         }
     }
 
@@ -770,13 +779,16 @@ public abstract class ViewImpl
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      */
     public EList getVisibleChildren() {
-        if ((persistedChildren == null || persistedChildren.isEmpty())
-            && (transientChildren == null || transientChildren.isEmpty())) {
+    	boolean persistedChildrenSet = eIsSet(NotationPackage.VIEW__PERSISTED_CHILDREN);
+    	boolean transientChildrenSet = eIsSet(NotationPackage.VIEW__TRANSIENT_CHILDREN);
+    	
+        if (persistedChildrenSet && transientChildrenSet) {
             return ECollections.EMPTY_ELIST;
         }
 
         List _children = new ArrayList();
-        if (persistedChildren != null && persistedChildren.size() > 0) {
+        if (persistedChildrenSet) {
+        	EList persistedChildren = getPersistedChildren();
             for (Iterator iter = persistedChildren.iterator(); iter
                 .hasNext();) {
                 View view = (View) iter.next();
@@ -785,7 +797,8 @@ public abstract class ViewImpl
             }
         }
 
-        if (transientChildren != null && transientChildren.size() > 0) {
+        if (transientChildrenSet) {
+        	EList transientChildren = getTransientChildren();
             for (Iterator iter = transientChildren.iterator(); iter
                 .hasNext();) {
                 View view = (View) iter.next();

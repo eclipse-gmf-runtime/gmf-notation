@@ -287,6 +287,24 @@ public class BasicSemanticCompartmentImpl extends BasicDecorationNodeImpl implem
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__SOURCE_EDGES:
+		case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__TARGET_EDGES:
+		case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__PERSISTED_CHILDREN:
+		case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__STYLES:
+		case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__TRANSIENT_CHILDREN:
+			return false;
+		default:
+			return eIsSetGen(featureID);
+		}		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT_CDO
+	 */
+	public boolean eIsSetGen(int featureID) {
+		switch (featureID) {
 			case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__EANNOTATIONS:
 				return eAnnotations != null && !eAnnotations.isEmpty();
 			case NotationPackage.BASIC_SEMANTIC_COMPARTMENT__VISIBLE:
