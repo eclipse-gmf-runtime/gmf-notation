@@ -65,9 +65,17 @@ public final class JumpLinkType extends AbstractEnumerator {
 	public static final int CHAMFERED = 2;
 
 	/**
-	 * The '<em><b>Semicircle</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * The '<em><b>Tunnel</b></em>' literal value. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * 
+	 * @see #TUNNEL_LITERAL
+	 * @model name="Tunnel"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TUNNEL = 3;
+
+	/**
 	 * @see #SEMICIRCLE
 	 * @generated
 	 * @ordered
@@ -95,13 +103,20 @@ public final class JumpLinkType extends AbstractEnumerator {
 	public static final JumpLinkType CHAMFERED_LITERAL = new JumpLinkType(CHAMFERED, "Chamfered", "Chamfered"); //$NON-NLS-2$//$NON-NLS-1$
 
 	/**
-	 * An array of all the '<em><b>Jump Link Type</b></em>' enumerators. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
+	 * The '<em><b>Tunnel</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * 
+	 * @see #TUNNEL
+	 * @generated
+	 * @ordered
+	 */
+	public static final JumpLinkType TUNNEL_LITERAL = new JumpLinkType(TUNNEL, "Tunnel", "Tunnel"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
 	 * @generated
 	 */
 	private static final JumpLinkType[] VALUES_ARRAY = new JumpLinkType[] { SEMICIRCLE_LITERAL, SQUARE_LITERAL,
-			CHAMFERED_LITERAL, };
+			CHAMFERED_LITERAL, TUNNEL_LITERAL };
 
 	/**
 	 * A public read-only list of all the '<em><b>Jump Link Type</b></em>'
@@ -161,6 +176,8 @@ public final class JumpLinkType extends AbstractEnumerator {
 			return SEMICIRCLE_LITERAL;
 		case SQUARE:
 			return SQUARE_LITERAL;
+		case TUNNEL:
+			return TUNNEL_LITERAL;
 		case CHAMFERED:
 			return CHAMFERED_LITERAL;
 		}

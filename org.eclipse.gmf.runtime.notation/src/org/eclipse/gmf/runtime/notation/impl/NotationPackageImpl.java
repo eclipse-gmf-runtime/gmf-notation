@@ -3485,6 +3485,7 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		addEEnumLiteral(jumpLinkTypeEEnum, JumpLinkType.SEMICIRCLE_LITERAL);
 		addEEnumLiteral(jumpLinkTypeEEnum, JumpLinkType.SQUARE_LITERAL);
 		addEEnumLiteral(jumpLinkTypeEEnum, JumpLinkType.CHAMFERED_LITERAL);
+		addEEnumLiteral(jumpLinkTypeEEnum, JumpLinkType.TUNNEL_LITERAL);
 
 		initEEnum(alignmentEEnum, Alignment.class, "Alignment"); //$NON-NLS-1$
 		addEEnumLiteral(alignmentEEnum, Alignment.LEFT_LITERAL);

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="notation"
-    nsURI="http://www.eclipse.org/gmf/runtime/1.0.2/notation" nsPrefix="notation">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="notation" nsURI="http://www.eclipse.org/gmf/runtime/1.0.2/notation"
+    nsPrefix="notation">
   <eClassifiers xsi:type="ecore:EClass" name="Edge" eSuperTypes="#//View">
     <eOperations name="createBendpoints" eType="#//Bendpoints">
       <eParameters name="eClass" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
@@ -131,6 +130,7 @@
     <eLiterals name="Semicircle"/>
     <eLiterals name="Square" value="1"/>
     <eLiterals name="Chamfered" value="2"/>
+    <eLiterals name="Tunnel" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoutingStyle" eSuperTypes="#//RoundedCornersStyle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routing" eType="#//Routing"
