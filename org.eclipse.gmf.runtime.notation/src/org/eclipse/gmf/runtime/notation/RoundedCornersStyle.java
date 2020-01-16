@@ -11,34 +11,33 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rounded Corners Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Rounded
+ * Corners Style</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius
+ * <em>Rounded Bendpoints Radius</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRoundedCornersStyle()
  * @model
  * @generated
- * @since 1.4 
+ * @since 1.4
  */
 public interface RoundedCornersStyle extends Style {
 	/**
-	 * Returns the value of the '<em><b>Rounded Bendpoints Radius</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Rounded Bendpoints Radius</b></em>'
+	 * attribute. The default value is <code>"0"</code>. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Rounded Bendpoints Radius</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Rounded Bendpoints Radius</em>' attribute isn't
+	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Rounded Bendpoints Radius</em>' attribute.
 	 * @see #setRoundedBendpointsRadius(int)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRoundedCornersStyle_RoundedBendpointsRadius()
@@ -48,10 +47,13 @@ public interface RoundedCornersStyle extends Style {
 	int getRoundedBendpointsRadius();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rounded Bendpoints Radius</em>' attribute.
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.RoundedCornersStyle#getRoundedBendpointsRadius
+	 * <em>Rounded Bendpoints Radius</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value the new value of the '<em>Rounded Bendpoints Radius</em>'
+	 *              attribute.
 	 * @see #getRoundedBendpointsRadius()
 	 * @generated
 	 */

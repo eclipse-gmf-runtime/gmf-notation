@@ -12,32 +12,29 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.gmf.runtime.notation.DoubleValueStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Double Value Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Double
+ * Value Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DoubleValueStyleImpl#getDoubleValue <em>Double Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.DoubleValueStyleImpl#getDoubleValue
+ * <em>Double Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueStyle {
 	/**
-	 * The default value of the '{@link #getDoubleValue() <em>Double Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getDoubleValue() <em>Double Value</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getDoubleValue()
 	 * @generated
 	 * @ordered
@@ -45,9 +42,9 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	protected static final double DOUBLE_VALUE_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getDoubleValue() <em>Double Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getDoubleValue() <em>Double Value</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getDoubleValue()
 	 * @generated
 	 * @ordered
@@ -55,8 +52,8 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	protected double doubleValue = DOUBLE_VALUE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected DoubleValueStyleImpl() {
@@ -64,8 +61,8 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -73,8 +70,8 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public double getDoubleValue() {
@@ -82,88 +79,90 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setDoubleValue(double newDoubleValue) {
 		double oldDoubleValue = doubleValue;
 		doubleValue = newDoubleValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE, oldDoubleValue, doubleValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE,
+					oldDoubleValue, doubleValue));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
-				return getName();
-			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
-				return new Double(getDoubleValue());
+		case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
+			return getName();
+		case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
+			return new Double(getDoubleValue());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
-				setDoubleValue(((Double)newValue).doubleValue());
-				return;
+		case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
+			setDoubleValue(((Double) newValue).doubleValue());
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
-				setDoubleValue(DOUBLE_VALUE_EDEFAULT);
-				return;
+		case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
+			setDoubleValue(DOUBLE_VALUE_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
-				return doubleValue != DOUBLE_VALUE_EDEFAULT;
+		case NotationPackage.DOUBLE_VALUE_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.DOUBLE_VALUE_STYLE__DOUBLE_VALUE:
+			return doubleValue != DOUBLE_VALUE_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (doubleValue: "); //$NON-NLS-1$
@@ -172,4 +171,4 @@ public class DoubleValueStyleImpl extends NamedStyleImpl implements DoubleValueS
 		return result.toString();
 	}
 
-} //DoubleValueStyleImpl
+} // DoubleValueStyleImpl

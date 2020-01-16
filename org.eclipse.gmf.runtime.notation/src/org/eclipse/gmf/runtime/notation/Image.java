@@ -15,8 +15,8 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Image</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Image</b></em>'.
  * <p>
  * An image is representing a serialization of an image file
  * </p>
@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.Image#getData <em>Data</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.Image#getData <em>Data</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getImage()
  * @model
@@ -37,14 +37,16 @@ import org.eclipse.emf.ecore.EObject;
  * @canBeSeenBy %partners
  */
 public interface Image extends EObject {
-    /**
-	 * Returns the value of the '<em><b>Data</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Data</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * The data is a blop representing the image data. The returned <code>byte[]</code> is not
-	 * expected to be changed. If a change is requried, it has to be through the <code>setData()</code> API
+	 * The data is a blop representing the image data. The returned
+	 * <code>byte[]</code> is not expected to be changed. If a change is requried,
+	 * it has to be through the <code>setData()</code> API
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Data</em>' attribute.
 	 * @see #setData(byte[])
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getImage_Data()
@@ -53,13 +55,14 @@ public interface Image extends EObject {
 	 */
 	byte[] getData();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Image#getData <em>Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Image#getData
+	 * <em>Data</em>}' attribute. <!-- begin-user-doc -->
 	 * <p>
 	 * The data is a blop representing the image data.
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Data</em>' attribute.
 	 * @see #getData()
 	 * @generated

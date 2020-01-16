@@ -19,10 +19,10 @@ import java.util.List;
 import org.eclipse.emf.common.util.AbstractEnumerator;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Routing</b></em>',
- * and utility methods for working with them.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the literals of the enumeration
+ * '<em><b>Routing</b></em>', and utility methods for working with them. <!--
+ * end-user-doc -->
+ * 
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRouting()
  * @model
  * @generated
@@ -31,10 +31,10 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  * @canBeSeenBy %partners
  */
 public final class Routing extends AbstractEnumerator {
-    /**
-	 * The '<em><b>Manual</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Manual</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #MANUAL_LITERAL
 	 * @model name="Manual"
 	 * @generated
@@ -42,10 +42,10 @@ public final class Routing extends AbstractEnumerator {
 	 */
 	public static final int MANUAL = 0;
 
-    /**
-	 * The '<em><b>Rectilinear</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Rectilinear</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #RECTILINEAR_LITERAL
 	 * @model name="Rectilinear"
 	 * @generated
@@ -53,10 +53,10 @@ public final class Routing extends AbstractEnumerator {
 	 */
 	public static final int RECTILINEAR = 1;
 
-    /**
-	 * The '<em><b>Tree</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Tree</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #TREE_LITERAL
 	 * @model name="Tree"
 	 * @generated
@@ -64,61 +64,58 @@ public final class Routing extends AbstractEnumerator {
 	 */
 	public static final int TREE = 2;
 
-    /**
-	 * The '<em><b>Manual</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Manual</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #MANUAL
 	 * @generated
 	 * @ordered
 	 */
 	public static final Routing MANUAL_LITERAL = new Routing(MANUAL, "Manual", "Manual"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * The '<em><b>Rectilinear</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+	/**
+	 * The '<em><b>Rectilinear</b></em>' literal object. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #RECTILINEAR
 	 * @generated
 	 * @ordered
 	 */
 	public static final Routing RECTILINEAR_LITERAL = new Routing(RECTILINEAR, "Rectilinear", "Rectilinear"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * The '<em><b>Tree</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Tree</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #TREE
 	 * @generated
 	 * @ordered
 	 */
 	public static final Routing TREE_LITERAL = new Routing(TREE, "Tree", "Tree"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * An array of all the '<em><b>Routing</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * An array of all the '<em><b>Routing</b></em>' enumerators. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	private static final Routing[] VALUES_ARRAY =
-        new Routing[] {
-			MANUAL_LITERAL,
-			RECTILINEAR_LITERAL,
-			TREE_LITERAL,
-		};
+	private static final Routing[] VALUES_ARRAY = new Routing[] { MANUAL_LITERAL, RECTILINEAR_LITERAL, TREE_LITERAL, };
 
-    /**
+	/**
 	 * A public read-only list of all the '<em><b>Routing</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-    /**
-	 * Returns the '<em><b>Routing</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Routing</b></em>' literal with the specified literal
+	 * value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static Routing get(String literal) {
@@ -131,13 +128,15 @@ public final class Routing extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
-	 * Returns the '<em><b>Routing</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Routing</b></em>' literal with the specified name. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-    public static Routing getByName(String name) {
+	public static Routing getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			Routing result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
@@ -147,29 +146,34 @@ public final class Routing extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
-	 * Returns the '<em><b>Routing</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Routing</b></em>' literal with the specified integer
+	 * value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static Routing get(int value) {
 		switch (value) {
-			case MANUAL: return MANUAL_LITERAL;
-			case RECTILINEAR: return RECTILINEAR_LITERAL;
-			case TREE: return TREE_LITERAL;
+		case MANUAL:
+			return MANUAL_LITERAL;
+		case RECTILINEAR:
+			return RECTILINEAR_LITERAL;
+		case TREE:
+			return TREE_LITERAL;
 		}
 		return null;
 	}
 
-    /**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * Only this class can construct instances. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    private Routing(int value, String name, String literal) {
+	private Routing(int value, String name, String literal) {
 		super(value, name, literal);
 	}
 
-} //Routing
+} // Routing

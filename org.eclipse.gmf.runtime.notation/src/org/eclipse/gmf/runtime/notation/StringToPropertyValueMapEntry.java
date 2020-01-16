@@ -14,15 +14,16 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>String To Property Value Map Entry</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>String
+ * To Property Value Map Entry</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getKey <em>Key</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getValue <em>Value</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getKey
+ * <em>Key</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getValue
+ * <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,13 +33,14 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface StringToPropertyValueMapEntry extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Key</b></em>' attribute. <!-- begin-user-doc
+	 * -->
 	 * <p>
-	 * If the meaning of the '<em>Key</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Key</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Key</em>' attribute.
 	 * @see #setKey(String)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getStringToPropertyValueMapEntry_Key()
@@ -48,9 +50,10 @@ public interface StringToPropertyValueMapEntry extends EObject {
 	String getKey();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getKey <em>Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getKey
+	 * <em>Key</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Key</em>' attribute.
 	 * @see #getKey()
 	 * @generated
@@ -58,13 +61,14 @@ public interface StringToPropertyValueMapEntry extends EObject {
 	void setKey(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Value</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Value</em>' reference isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Value</em>' reference.
 	 * @see #setValue(PropertyValue)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getStringToPropertyValueMapEntry_Value()
@@ -74,9 +78,10 @@ public interface StringToPropertyValueMapEntry extends EObject {
 	PropertyValue getValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getValue <em>Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.StringToPropertyValueMapEntry#getValue
+	 * <em>Value</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Value</em>' reference.
 	 * @see #getValue()
 	 * @generated

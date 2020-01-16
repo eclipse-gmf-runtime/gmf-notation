@@ -12,15 +12,12 @@
 
 package org.eclipse.gmf.runtime.notation.stylepooling;
 
-
-
 /**
  * Base class for StyleImmutables used with style pooling.
  * 
  * @author affrantz@us.ibm.com
  */
 public abstract class AbstractStyleImmutable {
-	/* Base class for StyleImmutables used with style pooling*/
-
+	/* Base class for StyleImmutables used with style pooling */
 
 }

@@ -25,16 +25,17 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Node Entry</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Node
+ * Entry</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.NodeEntryImpl#getTypedValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.NodeEntryImpl#getTypedKey <em>Key</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.NodeEntryImpl#getTypedValue
+ * <em>Value</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.NodeEntryImpl#getTypedKey
+ * <em>Key</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -42,73 +43,76 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
 public class NodeEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry {
-	
+
 	/**
 	 * int field to store booleans and enums
-	 * @since 1.2 
+	 * 
+	 * @since 1.2
 	 */
 	protected int eFlags = 0;
-	
-    /**
+
+	/**
 	 * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final Alignment VALUE_EDEFAULT = Alignment.CENTER_LITERAL;
 
-    /**
-	 * The offset of the flags representing the value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	/**
+	 * The offset of the flags representing the value of the
+	 * '{@link #getTypedValue() <em>Value</em>}' attribute. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int VALUE_EFLAG_OFFSET = 8;
 
-				/**
-	 * The flags representing the default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The flags representing the default value of the '{@link #getTypedValue()
+	 * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int VALUE_EFLAG_DEFAULT = Alignment.VALUES.indexOf(VALUE_EDEFAULT) << VALUE_EFLAG_OFFSET;
 
-				/**
-	 * The array of enumeration values for '{@link Alignment Alignment}'
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The array of enumeration values for '{@link Alignment Alignment}' <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
-	private static final Alignment[] VALUE_EFLAG_VALUES = (Alignment[])Alignment.VALUES.toArray(new Alignment[Alignment.VALUES.size()]);
+	private static final Alignment[] VALUE_EFLAG_VALUES = (Alignment[]) Alignment.VALUES
+			.toArray(new Alignment[Alignment.VALUES.size()]);
 
-				/**
-	 * The flags representing the value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The flags representing the value of the '{@link #getTypedValue()
+	 * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int VALUE_EFLAG = 0x7 << VALUE_EFLAG_OFFSET;
 
-				/**
-	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' reference. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
 	 */
 	protected Node key;
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected NodeEntryImpl() {
@@ -116,9 +120,9 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 		eFlags |= VALUE_EFLAG_DEFAULT;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -126,47 +130,50 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Alignment getTypedValue() {
 		return VALUE_EFLAG_VALUES[(eFlags & VALUE_EFLAG) >>> VALUE_EFLAG_OFFSET];
 	}
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setTypedValue(Alignment newValue) {
 		Alignment oldValue = VALUE_EFLAG_VALUES[(eFlags & VALUE_EFLAG) >>> VALUE_EFLAG_OFFSET];
-		if (newValue == null) newValue = VALUE_EDEFAULT;
+		if (newValue == null)
+			newValue = VALUE_EDEFAULT;
 		eFlags = eFlags & ~VALUE_EFLAG | Alignment.VALUES.indexOf(newValue) << VALUE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__VALUE, oldValue,
+					newValue));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Node getTypedKey() {
 		if (key != null && key.eIsProxy()) {
-			EObject oldKey = key;
-			key = (Node)eResolveProxy((InternalEObject)key);
+			InternalEObject oldKey = (InternalEObject) key;
+			key = (Node) eResolveProxy(oldKey);
 			if (key != oldKey) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.NODE_ENTRY__KEY, oldKey, key));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.NODE_ENTRY__KEY, oldKey,
+							key));
 			}
 		}
 		return key;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Node basicGetTypedKey() {
@@ -174,8 +181,8 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setTypedKey(Node newKey) {
@@ -185,78 +192,80 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.NODE_ENTRY__KEY, oldKey, key));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__VALUE:
-				return getTypedValue();
-			case NotationPackage.NODE_ENTRY__KEY:
-				if (resolve) return getTypedKey();
-				return basicGetTypedKey();
+		case NotationPackage.NODE_ENTRY__VALUE:
+			return getTypedValue();
+		case NotationPackage.NODE_ENTRY__KEY:
+			if (resolve)
+				return getTypedKey();
+			return basicGetTypedKey();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__VALUE:
-				setTypedValue((Alignment)newValue);
-				return;
-			case NotationPackage.NODE_ENTRY__KEY:
-				setTypedKey((Node)newValue);
-				return;
+		case NotationPackage.NODE_ENTRY__VALUE:
+			setTypedValue((Alignment) newValue);
+			return;
+		case NotationPackage.NODE_ENTRY__KEY:
+			setTypedKey((Node) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__VALUE:
-				setTypedValue(VALUE_EDEFAULT);
-				return;
-			case NotationPackage.NODE_ENTRY__KEY:
-				setTypedKey((Node)null);
-				return;
+		case NotationPackage.NODE_ENTRY__VALUE:
+			setTypedValue(VALUE_EDEFAULT);
+			return;
+		case NotationPackage.NODE_ENTRY__KEY:
+			setTypedKey((Node) null);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.NODE_ENTRY__VALUE:
-				return (eFlags & VALUE_EFLAG) != VALUE_EFLAG_DEFAULT;
-			case NotationPackage.NODE_ENTRY__KEY:
-				return key != null;
+		case NotationPackage.NODE_ENTRY__VALUE:
+			return (eFlags & VALUE_EFLAG) != VALUE_EFLAG_DEFAULT;
+		case NotationPackage.NODE_ENTRY__KEY:
+			return key != null;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: "); //$NON-NLS-1$
@@ -265,16 +274,16 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 		return result.toString();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected int hash = -1;
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getHash() {
@@ -285,61 +294,61 @@ public class NodeEntryImpl extends MinimalEObjectImpl.Container implements Basic
 		return hash;
 	}
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setHash(int hash) {
 		this.hash = hash;
 	}
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object getKey() {
 		return getTypedKey();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setKey(Object key) {
-		setTypedKey((Node)key);
+		setTypedKey((Node) key);
 	}
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object getValue() {
 		return getTypedValue();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object setValue(Object value) {
 		Object oldValue = getValue();
-		setTypedValue((Alignment)value);
+		setTypedValue((Alignment) value);
 		return oldValue;
 	}
 
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EMap getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap) container.eGet(eContainmentFeature());
 	}
 
-} //NodeEntryImpl
+} // NodeEntryImpl

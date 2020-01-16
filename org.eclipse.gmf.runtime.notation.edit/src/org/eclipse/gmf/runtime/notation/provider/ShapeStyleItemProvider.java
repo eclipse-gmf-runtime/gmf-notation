@@ -19,11 +19,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -36,13 +31,7 @@ import org.eclipse.gmf.runtime.notation.ShapeStyle;
  * @generated
  */
 public class ShapeStyleItemProvider
-	extends FontStyleItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends FontStyleItemProvider {
     /**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -211,7 +200,7 @@ public class ShapeStyleItemProvider
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-     * @since 1.4
+	 * @since 1.4
 	 */
 	protected void addRoundedBendpointsRadiusPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add

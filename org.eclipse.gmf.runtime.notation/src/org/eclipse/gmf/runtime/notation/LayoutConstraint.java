@@ -15,10 +15,10 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Layout Constraint</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Layout
+ * Constraint</b></em>'.
  * <p>
- * Layout constraints are installed on nodes and used by layout managers to 
+ * Layout constraints are installed on nodes and used by layout managers to
  * properly set the bounds of node's visuals
  * </p>
  * <!-- end-user-doc -->
@@ -31,6 +31,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface LayoutConstraint extends EObject{
+public interface LayoutConstraint extends EObject {
 	// no default API
 } // LayoutConstraint

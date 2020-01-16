@@ -17,66 +17,58 @@
  */
 package org.eclipse.gmf.runtime.notation.impl;
 
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EContentsEList;
 import org.eclipse.emf.ecore.util.ECrossReferenceEList;
 
-
 /**
- * An implementation of the model object '<em><b>EObject</b></em>'.
- * This implementation flattens the fields for storing 
- * the {@link #eProxyURI}, the {@link #eContents}, and the {@link #eCrossReferences},
- * which in {@link EObjectImpl} are stored in the properties holder.
- * This reduces the likelihood of needing to allocate a properties holder and speeds up the access to these fields.
- * @deprecated use {@link org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container}
+ * An implementation of the model object '<em><b>EObject</b></em>'. This
+ * implementation flattens the fields for storing the {@link #eProxyURI}, the
+ * {@link #eContents}, and the {@link #eCrossReferences}, which in
+ * {@link EObjectImpl} are stored in the properties holder. This reduces the
+ * likelihood of needing to allocate a properties holder and speeds up the
+ * access to these fields.
+ * 
+ * @deprecated use
+ *             {@link org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container}
  */
-public class NotationEObjectImpl extends EObjectImpl
-{
-  protected URI eProxyURI;
+public class NotationEObjectImpl extends EObjectImpl {
+	protected URI eProxyURI;
 
-  /**
-   * Creates an EObject that is faster and more space efficient.
-   */
-  protected NotationEObjectImpl() 
-  {
-    super();
-  }
+	/**
+	 * Creates an EObject that is faster and more space efficient.
+	 */
+	protected NotationEObjectImpl() {
+		super();
+	}
 
-  protected EPropertiesHolder eProperties()
-  {
-    if (eProperties == null)
-    {
-      eProperties = new EPropertiesHolderBaseImpl() {};
-    }
-    return eProperties;
-  }
+	protected EPropertiesHolder eProperties() {
+		if (eProperties == null) {
+			eProperties = new EPropertiesHolderBaseImpl() {
+			};
+		}
+		return eProperties;
+	}
 
-  public boolean eIsProxy()
-  {
-    return eProxyURI != null;
-  }
-  
-  public URI eProxyURI()
-  {
-    return eProxyURI;
-  }
+	public boolean eIsProxy() {
+		return eProxyURI != null;
+	}
 
-  public void eSetProxyURI(URI uri)
-  {
-    eProxyURI = uri;
-  }
+	public URI eProxyURI() {
+		return eProxyURI;
+	}
 
-  public EList eContents()
-  {
-    return EContentsEList.createEContentsEList(this);
-  }
+	public void eSetProxyURI(URI uri) {
+		eProxyURI = uri;
+	}
 
-  public EList eCrossReferences()
-  {
-    return ECrossReferenceEList.createECrossReferenceEList(this);
-  }
+	public EList eContents() {
+		return EContentsEList.createEContentsEList(this);
+	}
+
+	public EList eCrossReferences() {
+		return ECrossReferenceEList.createECrossReferenceEList(this);
+	}
 }

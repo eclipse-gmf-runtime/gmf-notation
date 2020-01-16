@@ -14,16 +14,16 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.common.util.EList;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Int List Value Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Int List
+ * Value Style</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.IntListValueStyle#getIntListValue <em>Int List Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.IntListValueStyle#getIntListValue
+ * <em>Int List Value</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getIntListValueStyle()
  * @model
@@ -31,14 +31,14 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface IntListValueStyle extends NamedStyle {
 	/**
-	 * Returns the value of the '<em><b>Int List Value</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Int List Value</b></em>' attribute list. The
+	 * list contents are of type {@link java.lang.Integer}. <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Int List Value</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Int List Value</em>' attribute list.
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getIntListValueStyle_IntListValue()
 	 * @model unique="false"

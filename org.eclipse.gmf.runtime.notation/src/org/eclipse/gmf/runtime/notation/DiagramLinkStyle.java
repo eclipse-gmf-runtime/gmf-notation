@@ -11,18 +11,17 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Diagram Link Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Diagram
+ * Link Style</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.DiagramLinkStyle#getDiagramLink <em>Diagram Link</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.DiagramLinkStyle#getDiagramLink
+ * <em>Diagram Link</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagramLinkStyle()
  * @model
@@ -30,13 +29,14 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface DiagramLinkStyle extends Style {
 	/**
-	 * Returns the value of the '<em><b>Diagram Link</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Diagram Link</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Diagram Link</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Diagram Link</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Diagram Link</em>' reference.
 	 * @see #setDiagramLink(Diagram)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagramLinkStyle_DiagramLink()
@@ -46,9 +46,11 @@ public interface DiagramLinkStyle extends Style {
 	Diagram getDiagramLink();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DiagramLinkStyle#getDiagramLink <em>Diagram Link</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.DiagramLinkStyle#getDiagramLink
+	 * <em>Diagram Link</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @param value the new value of the '<em>Diagram Link</em>' reference.
 	 * @see #getDiagramLink()
 	 * @generated

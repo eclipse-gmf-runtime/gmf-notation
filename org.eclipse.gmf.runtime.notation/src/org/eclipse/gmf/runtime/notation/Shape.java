@@ -11,18 +11,15 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Shape</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Shape</b></em>'. <!-- end-user-doc -->
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getShape()
  * @model
  * @generated
  * @since 1.2
- * @noimplement This interface is not intended to be implemented by clients.
  */
 public interface Shape extends Node, ShapeStyle {
 } // Shape

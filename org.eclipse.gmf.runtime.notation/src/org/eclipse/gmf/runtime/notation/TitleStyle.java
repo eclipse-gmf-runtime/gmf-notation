@@ -12,10 +12,9 @@
 
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Title Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Title
+ * Style</b></em>'.
  * <p>
  * The title style is a style to be installed on views that have a title
  * </p>
@@ -23,10 +22,11 @@ package org.eclipse.gmf.runtime.notation;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show Title</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show
+ * Title</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTitleStyle()
  * @model
@@ -36,11 +36,10 @@ package org.eclipse.gmf.runtime.notation;
  * @canBeSeenBy %partners
  */
 public interface TitleStyle extends Style {
-    /**
-	 * Returns the value of the '<em><b>Show Title</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Show Title</b></em>' attribute. The default
+	 * value is <code>"false"</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Show Title</em>' attribute.
 	 * @see #setShowTitle(boolean)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTitleStyle_ShowTitle()
@@ -49,10 +48,11 @@ public interface TitleStyle extends Style {
 	 */
 	boolean isShowTitle();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.TitleStyle#isShowTitle <em>Show
+	 * Title</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Show Title</em>' attribute.
 	 * @see #isShowTitle()
 	 * @generated

@@ -12,10 +12,9 @@
 
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Line Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Line
+ * Style</b></em>'.
  * <p>
  * The line style is a style to be installed on views with lines
  * </p>
@@ -23,11 +22,13 @@ package org.eclipse.gmf.runtime.notation;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineColor <em>Line Color</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth <em>Line Width</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineColor <em>Line
+ * Color</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth <em>Line
+ * Width</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getLineStyle()
  * @model
@@ -37,14 +38,15 @@ package org.eclipse.gmf.runtime.notation;
  * @canBeSeenBy %partners
  */
 public interface LineStyle extends Style {
-    /**
-	 * Returns the value of the '<em><b>Line Color</b></em>' attribute.
-	 * The default value is <code>"11579568"</code>.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Line Color</b></em>' attribute. The default
+	 * value is <code>"11579568"</code>. <!-- begin-user-doc -->
 	 * <p>
-	 * The line color is the color used in painting the lines (or foreground) of node visuals
+	 * The line color is the color used in painting the lines (or foreground) of
+	 * node visuals
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Line Color</em>' attribute.
 	 * @see #setLineColor(int)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getLineStyle_LineColor()
@@ -53,28 +55,31 @@ public interface LineStyle extends Style {
 	 */
 	int getLineColor();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineColor <em>Line Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineColor <em>Line
+	 * Color</em>}' attribute. <!-- begin-user-doc -->
 	 * <p>
-	 * The line color is the color used in painting the lines (or foreground) of node visuals
+	 * The line color is the color used in painting the lines (or foreground) of
+	 * node visuals
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Line Color</em>' attribute.
 	 * @see #getLineColor()
 	 * @generated
 	 */
 	void setLineColor(int value);
 
-				/**
-	 * Returns the value of the '<em><b>Line Width</b></em>' attribute.
-	 * The default value is <code>"-1"</code>.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Line Width</b></em>' attribute. The default
+	 * value is <code>"-1"</code>. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Line Width</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Line Width</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Line Width</em>' attribute.
 	 * @see #setLineWidth(int)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getLineStyle_LineWidth()
@@ -83,10 +88,11 @@ public interface LineStyle extends Style {
 	 */
 	int getLineWidth();
 
-				/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth <em>Line Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.LineStyle#getLineWidth <em>Line
+	 * Width</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Line Width</em>' attribute.
 	 * @see #getLineWidth()
 	 * @generated

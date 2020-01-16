@@ -26,15 +26,15 @@ import org.eclipse.gmf.runtime.notation.RelativeBendpoints;
 import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Relative Bendpoints</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Relative Bendpoints</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl#getPoints <em>Points</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointsImpl#getPoints
+ * <em>Points</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -44,36 +44,36 @@ import org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint;
 public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container implements RelativeBendpoints {
 	/**
 	 * The default value of the '{@link #getPoints() <em>Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getPoints()
 	 * @generated NOT
 	 * @ordered
 	 */
 	protected static final List POINTS_EDEFAULT = Collections.EMPTY_LIST;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getPoints()
 	 * @generated
 	 * @ordered
 	 */
 	protected List points = POINTS_EDEFAULT;
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected RelativeBendpointsImpl() {
 		super();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -81,8 +81,8 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public List getPoints() {
@@ -90,21 +90,21 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public List getPointsGen() {
 		return points;
 	}
-	
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public void setPoints(List newPoints) {
-		if (newPoints == null )
+		if (newPoints == null)
 			throw new NullPointerException("the 'newPoints' parameter is null"); //$NON-NLS-1$
 
 		if (newPoints.isEmpty())
@@ -114,7 +114,8 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 			for (Iterator i = newPoints.iterator(); i.hasNext();) {
 				Object point = i.next();
 				if (!(point instanceof RelativeBendpoint))
-					throw new IllegalArgumentException("One or more objects in the list is not of type org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint"); //$NON-NLS-1$
+					throw new IllegalArgumentException(
+							"One or more objects in the list is not of type org.eclipse.gmf.runtime.notation.datatype.RelativeBendpoint"); //$NON-NLS-1$
 				tempList.add(point);
 			}
 			setPointsGen(tempList);
@@ -122,78 +123,80 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setPointsGen(List newPoints) {
 		List oldPoints = points;
 		points = newPoints;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS, Collections.unmodifiableList(oldPoints), Collections.unmodifiableList(points)));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.RELATIVE_BENDPOINTS__POINTS,
+					oldPoints, points));
 	}
-	
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				return getPoints();
+		case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+			return getPoints();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				setPoints((List)newValue);
-				return;
+		case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+			setPoints((List) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				setPoints(POINTS_EDEFAULT);
-				return;
+		case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+			setPoints(POINTS_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
-				return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
+		case NotationPackage.RELATIVE_BENDPOINTS__POINTS:
+			return POINTS_EDEFAULT == null ? points != null : !POINTS_EDEFAULT.equals(points);
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (points: "); //$NON-NLS-1$
@@ -202,4 +205,4 @@ public class RelativeBendpointsImpl extends MinimalEObjectImpl.Container impleme
 		return result.toString();
 	}
 
-} //RelativeBendpointsImpl
+} // RelativeBendpointsImpl

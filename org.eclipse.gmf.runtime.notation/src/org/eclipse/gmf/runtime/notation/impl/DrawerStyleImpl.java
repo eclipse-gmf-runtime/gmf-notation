@@ -20,15 +20,15 @@ import org.eclipse.gmf.runtime.notation.DrawerStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Drawer Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Drawer
+ * Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DrawerStyleImpl#isCollapsed <em>Collapsed</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.DrawerStyleImpl#isCollapsed
+ * <em>Collapsed</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -36,133 +36,139 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
 public class DrawerStyleImpl extends MinimalEObjectImpl.Container implements DrawerStyle {
-	
+
 	/**
 	 * int field to store booleans and enums
-	 * @since 1.2 
+	 * 
+	 * @since 1.2
 	 */
 	protected int eFlags = 0;
-	
-    /**
-	 * The default value of the '{@link #isCollapsed() <em>Collapsed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+
+	/**
+	 * The default value of the '{@link #isCollapsed() <em>Collapsed</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #isCollapsed()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final boolean COLLAPSED_EDEFAULT = false;
 
-    /**
-	 * The flag representing the value of the '{@link #isCollapsed() <em>Collapsed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The flag representing the value of the '{@link #isCollapsed()
+	 * <em>Collapsed</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #isCollapsed()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int COLLAPSED_EFLAG = 1 << 8;
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected DrawerStyleImpl() {
 		super();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
 		return NotationPackage.Literals.DRAWER_STYLE;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean isCollapsed() {
 		return (eFlags & COLLAPSED_EFLAG) != 0;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setCollapsed(boolean newCollapsed) {
 		boolean oldCollapsed = (eFlags & COLLAPSED_EFLAG) != 0;
-		if (newCollapsed) eFlags |= COLLAPSED_EFLAG; else eFlags &= ~COLLAPSED_EFLAG;
+		if (newCollapsed)
+			eFlags |= COLLAPSED_EFLAG;
+		else
+			eFlags &= ~COLLAPSED_EFLAG;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DRAWER_STYLE__COLLAPSED, oldCollapsed, newCollapsed));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DRAWER_STYLE__COLLAPSED, oldCollapsed,
+					newCollapsed));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__COLLAPSED:
-				return isCollapsed() ? Boolean.TRUE : Boolean.FALSE;
+		case NotationPackage.DRAWER_STYLE__COLLAPSED:
+			return isCollapsed() ? Boolean.TRUE : Boolean.FALSE;
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__COLLAPSED:
-				setCollapsed(((Boolean)newValue).booleanValue());
-				return;
+		case NotationPackage.DRAWER_STYLE__COLLAPSED:
+			setCollapsed(((Boolean) newValue).booleanValue());
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__COLLAPSED:
-				setCollapsed(COLLAPSED_EDEFAULT);
-				return;
+		case NotationPackage.DRAWER_STYLE__COLLAPSED:
+			setCollapsed(COLLAPSED_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DRAWER_STYLE__COLLAPSED:
-				return ((eFlags & COLLAPSED_EFLAG) != 0) != COLLAPSED_EDEFAULT;
+		case NotationPackage.DRAWER_STYLE__COLLAPSED:
+			return ((eFlags & COLLAPSED_EFLAG) != 0) != COLLAPSED_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (collapsed: "); //$NON-NLS-1$
@@ -171,4 +177,4 @@ public class DrawerStyleImpl extends MinimalEObjectImpl.Container implements Dra
 		return result.toString();
 	}
 
-} //DrawerStyleImpl
+} // DrawerStyleImpl

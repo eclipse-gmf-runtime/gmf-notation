@@ -13,11 +13,11 @@
 package org.eclipse.gmf.runtime.notation;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Connector Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Connector Style</b></em>'.
  * <p>
  * A connector style is a typical style to be installed on edges. It gives the
- * edge routing and line style properties 
+ * edge routing and line style properties
  * </p>
  * <!-- end-user-doc -->
  *

@@ -15,11 +15,11 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Style</b></em>'.
  * <p>
- * The basic abstraction of a collection of appearance properties 
- * that are usually grouped together
+ * The basic abstraction of a collection of appearance properties that are
+ * usually grouped together
  * </p>
  * <!-- end-user-doc -->
  *
@@ -31,6 +31,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface Style extends EObject{
+public interface Style extends EObject {
 	// no APIs
 } // Style

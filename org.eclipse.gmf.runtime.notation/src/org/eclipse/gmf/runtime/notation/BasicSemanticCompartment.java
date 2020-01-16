@@ -11,12 +11,11 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Basic Semantic Compartment</b></em>'.
- * <p><b>
- * Does not support addition/removal of:
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Basic
+ * Semantic Compartment</b></em>'.
+ * <p>
+ * <b> Does not support addition/removal of:
  * <ul>
  * <li>Source Edges
  * <li>Target Edges
@@ -24,7 +23,8 @@ package org.eclipse.gmf.runtime.notation;
  * <li>Children
  * <li>Styles
  * </ul>
- * </b></p> 
+ * </b>
+ * </p>
  * <!-- end-user-doc -->
  *
  *

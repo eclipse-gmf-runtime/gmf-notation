@@ -20,15 +20,15 @@ import org.eclipse.gmf.runtime.notation.CanonicalStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Canonical Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Canonical Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.CanonicalStyleImpl#isCanonical <em>Canonical</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.CanonicalStyleImpl#isCanonical
+ * <em>Canonical</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -36,36 +36,37 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
 public class CanonicalStyleImpl extends MinimalEObjectImpl.Container implements CanonicalStyle {
-	
+
 	/**
 	 * int field to store booleans and enums
-	 * @since 1.2 
+	 * 
+	 * @since 1.2
 	 */
 	protected int eFlags = 0;
-	
-    /**
-	 * The default value of the '{@link #isCanonical() <em>Canonical</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+
+	/**
+	 * The default value of the '{@link #isCanonical() <em>Canonical</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #isCanonical()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final boolean CANONICAL_EDEFAULT = true;
 
-    /**
-	 * The flag representing the value of the '{@link #isCanonical() <em>Canonical</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The flag representing the value of the '{@link #isCanonical()
+	 * <em>Canonical</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #isCanonical()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int CANONICAL_EFLAG = 1 << 8;
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected CanonicalStyleImpl() {
@@ -73,97 +74,102 @@ public class CanonicalStyleImpl extends MinimalEObjectImpl.Container implements 
 		eFlags |= CANONICAL_EFLAG;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
 		return NotationPackage.Literals.CANONICAL_STYLE;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean isCanonical() {
 		return (eFlags & CANONICAL_EFLAG) != 0;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setCanonical(boolean newCanonical) {
 		boolean oldCanonical = (eFlags & CANONICAL_EFLAG) != 0;
-		if (newCanonical) eFlags |= CANONICAL_EFLAG; else eFlags &= ~CANONICAL_EFLAG;
+		if (newCanonical)
+			eFlags |= CANONICAL_EFLAG;
+		else
+			eFlags &= ~CANONICAL_EFLAG;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CANONICAL_STYLE__CANONICAL, oldCanonical, newCanonical));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.CANONICAL_STYLE__CANONICAL,
+					oldCanonical, newCanonical));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__CANONICAL:
-				return isCanonical() ? Boolean.TRUE : Boolean.FALSE;
+		case NotationPackage.CANONICAL_STYLE__CANONICAL:
+			return isCanonical() ? Boolean.TRUE : Boolean.FALSE;
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__CANONICAL:
-				setCanonical(((Boolean)newValue).booleanValue());
-				return;
+		case NotationPackage.CANONICAL_STYLE__CANONICAL:
+			setCanonical(((Boolean) newValue).booleanValue());
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__CANONICAL:
-				setCanonical(CANONICAL_EDEFAULT);
-				return;
+		case NotationPackage.CANONICAL_STYLE__CANONICAL:
+			setCanonical(CANONICAL_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.CANONICAL_STYLE__CANONICAL:
-				return ((eFlags & CANONICAL_EFLAG) != 0) != CANONICAL_EDEFAULT;
+		case NotationPackage.CANONICAL_STYLE__CANONICAL:
+			return ((eFlags & CANONICAL_EFLAG) != 0) != CANONICAL_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (canonical: "); //$NON-NLS-1$
@@ -172,4 +178,4 @@ public class CanonicalStyleImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
-} //CanonicalStyleImpl
+} // CanonicalStyleImpl

@@ -12,34 +12,32 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.RoundedCornersStyle;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rounded Corners Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Rounded
+ * Corners Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl#getRoundedBendpointsRadius <em>Rounded Bendpoints Radius</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RoundedCornersStyleImpl#getRoundedBendpointsRadius
+ * <em>Rounded Bendpoints Radius</em>}</li>
+ * </ul>
  *
  * @generated
  * @since 1.4
  */
 public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implements RoundedCornersStyle {
 	/**
-	 * The default value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getRoundedBendpointsRadius() <em>Rounded
+	 * Bendpoints Radius</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @see #getRoundedBendpointsRadius()
 	 * @generated
 	 * @ordered
@@ -47,9 +45,10 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 	protected static final int ROUNDED_BENDPOINTS_RADIUS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getRoundedBendpointsRadius() <em>Rounded Bendpoints Radius</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getRoundedBendpointsRadius() <em>Rounded
+	 * Bendpoints Radius</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @see #getRoundedBendpointsRadius()
 	 * @generated
 	 * @ordered
@@ -57,8 +56,8 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 	protected int roundedBendpointsRadius = ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected RoundedCornersStyleImpl() {
@@ -66,8 +65,8 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -75,8 +74,8 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getRoundedBendpointsRadius() {
@@ -84,78 +83,81 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setRoundedBendpointsRadius(int newRoundedBendpointsRadius) {
 		int oldRoundedBendpointsRadius = roundedBendpointsRadius;
 		roundedBendpointsRadius = newRoundedBendpointsRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS, oldRoundedBendpointsRadius, roundedBendpointsRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS, oldRoundedBendpointsRadius,
+					roundedBendpointsRadius));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
-				return new Integer(getRoundedBendpointsRadius());
+		case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+			return new Integer(getRoundedBendpointsRadius());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
-				setRoundedBendpointsRadius(((Integer)newValue).intValue());
-				return;
+		case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+			setRoundedBendpointsRadius(((Integer) newValue).intValue());
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
-				setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
-				return;
+		case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+			setRoundedBendpointsRadius(ROUNDED_BENDPOINTS_RADIUS_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
-				return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
+		case NotationPackage.ROUNDED_CORNERS_STYLE__ROUNDED_BENDPOINTS_RADIUS:
+			return roundedBendpointsRadius != ROUNDED_BENDPOINTS_RADIUS_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (roundedBendpointsRadius: "); //$NON-NLS-1$
@@ -164,4 +166,4 @@ public class RoundedCornersStyleImpl extends MinimalEObjectImpl.Container implem
 		return result.toString();
 	}
 
-} //RoundedCornersStyleImpl
+} // RoundedCornersStyleImpl

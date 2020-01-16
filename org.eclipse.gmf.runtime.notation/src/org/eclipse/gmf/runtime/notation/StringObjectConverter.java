@@ -14,9 +14,8 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>String Object Converter</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>String
+ * Object Converter</b></em>'. <!-- end-user-doc -->
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getStringObjectConverter()
@@ -25,16 +24,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface StringObjectConverter extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @model
 	 * @generated
 	 */
 	String getStringFromObject(Object objectValue);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @model
 	 * @generated
 	 */

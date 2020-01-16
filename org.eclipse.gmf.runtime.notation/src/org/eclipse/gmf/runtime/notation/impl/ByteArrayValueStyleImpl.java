@@ -12,32 +12,29 @@
 package org.eclipse.gmf.runtime.notation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.gmf.runtime.notation.ByteArrayValueStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Byte Array Value Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Byte
+ * Array Value Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.ByteArrayValueStyleImpl#getByteArrayValue <em>Byte Array Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.ByteArrayValueStyleImpl#getByteArrayValue
+ * <em>Byte Array Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArrayValueStyle {
 	/**
-	 * The default value of the '{@link #getByteArrayValue() <em>Byte Array Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getByteArrayValue() <em>Byte Array
+	 * Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getByteArrayValue()
 	 * @generated
 	 * @ordered
@@ -45,9 +42,9 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 	protected static final byte[] BYTE_ARRAY_VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getByteArrayValue() <em>Byte Array Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getByteArrayValue() <em>Byte Array
+	 * Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getByteArrayValue()
 	 * @generated
 	 * @ordered
@@ -55,8 +52,8 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 	protected byte[] byteArrayValue = BYTE_ARRAY_VALUE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected ByteArrayValueStyleImpl() {
@@ -64,8 +61,8 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -73,8 +70,8 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public byte[] getByteArrayValue() {
@@ -82,88 +79,91 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setByteArrayValue(byte[] newByteArrayValue) {
 		byte[] oldByteArrayValue = byteArrayValue;
 		byteArrayValue = newByteArrayValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE, oldByteArrayValue, byteArrayValue));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE, oldByteArrayValue, byteArrayValue));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
-				return getName();
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
-				return getByteArrayValue();
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
+			return getName();
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
+			return getByteArrayValue();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
-				setByteArrayValue((byte[])newValue);
-				return;
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
+			setByteArrayValue((byte[]) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
-				setByteArrayValue(BYTE_ARRAY_VALUE_EDEFAULT);
-				return;
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
+			setByteArrayValue(BYTE_ARRAY_VALUE_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
-				return BYTE_ARRAY_VALUE_EDEFAULT == null ? byteArrayValue != null : !BYTE_ARRAY_VALUE_EDEFAULT.equals(byteArrayValue);
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.BYTE_ARRAY_VALUE_STYLE__BYTE_ARRAY_VALUE:
+			return BYTE_ARRAY_VALUE_EDEFAULT == null ? byteArrayValue != null
+					: !BYTE_ARRAY_VALUE_EDEFAULT.equals(byteArrayValue);
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (byteArrayValue: "); //$NON-NLS-1$
@@ -172,4 +172,4 @@ public class ByteArrayValueStyleImpl extends NamedStyleImpl implements ByteArray
 		return result.toString();
 	}
 
-} //ByteArrayValueStyleImpl
+} // ByteArrayValueStyleImpl

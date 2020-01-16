@@ -20,31 +20,32 @@ import org.eclipse.gmf.runtime.notation.BooleanListValueStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Boolean List Value Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Boolean
+ * List Value Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.BooleanListValueStyleImpl#getBooleanListValue <em>Boolean List Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.BooleanListValueStyleImpl#getBooleanListValue
+ * <em>Boolean List Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class BooleanListValueStyleImpl extends NamedStyleImpl implements BooleanListValueStyle {
 	/**
-	 * The cached value of the '{@link #getBooleanListValue() <em>Boolean List Value</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getBooleanListValue() <em>Boolean List
+	 * Value</em>}' attribute list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getBooleanListValue()
 	 * @generated
 	 * @ordered
 	 */
 	protected EList booleanListValue;
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected BooleanListValueStyleImpl() {
@@ -52,8 +53,8 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -61,89 +62,91 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EList getBooleanListValue() {
 		if (booleanListValue == null) {
-			booleanListValue = new EDataTypeEList(Boolean.class, this, NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE);
+			booleanListValue = new EDataTypeEList(Boolean.class, this,
+					NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE);
 		}
 		return booleanListValue;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
-				return getName();
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
-				return getBooleanListValue();
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
+			return getName();
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
+			return getBooleanListValue();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
-				getBooleanListValue().clear();
-				getBooleanListValue().addAll((Collection)newValue);
-				return;
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
+			getBooleanListValue().clear();
+			getBooleanListValue().addAll((Collection) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
-				getBooleanListValue().clear();
-				return;
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
+			getBooleanListValue().clear();
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
-				return booleanListValue != null && !booleanListValue.isEmpty();
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.BOOLEAN_LIST_VALUE_STYLE__BOOLEAN_LIST_VALUE:
+			return booleanListValue != null && !booleanListValue.isEmpty();
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (booleanListValue: "); //$NON-NLS-1$
@@ -152,4 +155,4 @@ public class BooleanListValueStyleImpl extends NamedStyleImpl implements Boolean
 		return result.toString();
 	}
 
-} //BooleanListValueStyleImpl
+} // BooleanListValueStyleImpl

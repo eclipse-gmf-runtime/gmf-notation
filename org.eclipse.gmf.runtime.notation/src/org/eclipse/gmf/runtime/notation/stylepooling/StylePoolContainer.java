@@ -14,29 +14,25 @@ package org.eclipse.gmf.runtime.notation.stylepooling;
 
 import java.util.HashMap;
 
-
 /**
- * The container type used by the cached styles as part of the style caching performance tuning optimization.
- * Consider having a threshold and when we reach a threshold
- * we could remove infrequently accessed styles, by ovveriding
+ * The container type used by the cached styles as part of the style caching
+ * performance tuning optimization. Consider having a threshold and when we
+ * reach a threshold we could remove infrequently accessed styles, by ovveriding
  * get to increment a cache hit cnt when get succeeds.
- *  
- * 	Remember if we are to use a weakHash the key is weak not the value.
+ * 
+ * Remember if we are to use a weakHash the key is weak not the value.
  * 
  * @author affrantz@us.ibm.com
  *
  */
 public class StylePoolContainer extends HashMap {
 
-
 	private static final long serialVersionUID = 1L;
 
-	
-	public StylePoolContainer()
-	{
+	public StylePoolContainer() {
 		super();
 	}
-	
+
 	/**
 	 * @see java.util.Map#put(java.lang.Object, java.lang.Object)
 	 */

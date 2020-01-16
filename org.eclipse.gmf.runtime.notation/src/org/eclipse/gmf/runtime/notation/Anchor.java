@@ -15,11 +15,11 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Anchor</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Anchor</b></em>'.
  * <p>
- * An anchor is a routing constraint installed on edges to identify 
- * where the source/target views should anchor that edge.
+ * An anchor is a routing constraint installed on edges to identify where the
+ * source/target views should anchor that edge.
  * </p>
  * <!-- end-user-doc -->
  *
@@ -31,6 +31,6 @@ import org.eclipse.emf.ecore.EObject;
 /*
  * @canBeSeenBy %partners
  */
-public interface Anchor extends EObject{
+public interface Anchor extends EObject {
 	// no default API
 } // Anchor

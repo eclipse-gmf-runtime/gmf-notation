@@ -11,18 +11,17 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Text Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Text
+ * Style</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment <em>Text Alignment</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment
+ * <em>Text Alignment</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getTextStyle()
  * @model
@@ -30,15 +29,16 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface TextStyle extends Style {
 	/**
-	 * Returns the value of the '<em><b>Text Alignment</b></em>' attribute.
-	 * The default value is <code>"Left"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.TextAlignment}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Text Alignment</b></em>' attribute. The
+	 * default value is <code>"Left"</code>. The literals are from the enumeration
+	 * {@link org.eclipse.gmf.runtime.notation.TextAlignment}. <!-- begin-user-doc
+	 * -->
 	 * <p>
-	 * If the meaning of the '<em>Text Alignment</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Text Alignment</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Text Alignment</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.TextAlignment
 	 * @see #setTextAlignment(TextAlignment)
@@ -49,9 +49,10 @@ public interface TextStyle extends Style {
 	TextAlignment getTextAlignment();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment <em>Text Alignment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.TextStyle#getTextAlignment <em>Text
+	 * Alignment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Text Alignment</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.TextAlignment
 	 * @see #getTextAlignment()

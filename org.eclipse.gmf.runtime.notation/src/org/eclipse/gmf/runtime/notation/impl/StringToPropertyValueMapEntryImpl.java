@@ -24,24 +24,25 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>String To Property Value Map Entry</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>String
+ * To Property Value Map Entry</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.StringToPropertyValueMapEntryImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.StringToPropertyValueMapEntryImpl#getTypedValue <em>Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.StringToPropertyValueMapEntryImpl#getTypedKey
+ * <em>Key</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.StringToPropertyValueMapEntryImpl#getTypedValue
+ * <em>Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -49,9 +50,9 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	protected static final String KEY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
@@ -59,9 +60,9 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	protected String key = KEY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
@@ -69,8 +70,8 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	protected PropertyValue value;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected StringToPropertyValueMapEntryImpl() {
@@ -78,8 +79,8 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -87,8 +88,8 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String getTypedKey() {
@@ -96,20 +97,21 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setTypedKey(String newKey) {
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY, oldKey, key));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public PropertyValue getTypedValue() {
@@ -117,123 +119,131 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetTypedValue(PropertyValue newValue, NotificationChain msgs) {
 		PropertyValue oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, oldValue, newValue);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, oldValue, newValue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setTypedValue(PropertyValue newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, null, msgs);
+				msgs = ((InternalEObject) value).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, null, msgs);
+				msgs = ((InternalEObject) newValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, null, msgs);
 			msgs = basicSetTypedValue(newValue, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, newValue, newValue));
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE, newValue, newValue));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
-				return basicSetTypedValue(null, msgs);
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
+			return basicSetTypedValue(null, msgs);
 		}
 		return eDynamicInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
-				return getTypedKey();
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
-				return getTypedValue();
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
+			return getTypedKey();
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
+			return getTypedValue();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
-				setTypedKey((String)newValue);
-				return;
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
-				setTypedValue((PropertyValue)newValue);
-				return;
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
+			setTypedKey((String) newValue);
+			return;
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
+			setTypedValue((PropertyValue) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
-				setTypedKey(KEY_EDEFAULT);
-				return;
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
-				setTypedValue((PropertyValue)null);
-				return;
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
+			setTypedKey(KEY_EDEFAULT);
+			return;
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
+			setTypedValue((PropertyValue) null);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
-				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
-				return value != null;
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__KEY:
+			return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
+		case NotationPackage.STRING_TO_PROPERTY_VALUE_MAP_ENTRY__VALUE:
+			return value != null;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (key: "); //$NON-NLS-1$
@@ -243,15 +253,15 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected int hash = -1;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getHash() {
@@ -263,8 +273,8 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setHash(int hash) {
@@ -272,8 +282,8 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object getKey() {
@@ -281,17 +291,17 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setKey(Object key) {
-		setTypedKey((String)key);
+		setTypedKey((String) key);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object getValue() {
@@ -299,24 +309,24 @@ public class StringToPropertyValueMapEntryImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object setValue(Object value) {
 		Object oldValue = getValue();
-		setTypedValue((PropertyValue)value);
+		setTypedValue((PropertyValue) value);
 		return oldValue;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EMap getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap) container.eGet(eContainmentFeature());
 	}
 
-} //StringToPropertyValueMapEntryImpl
+} // StringToPropertyValueMapEntryImpl

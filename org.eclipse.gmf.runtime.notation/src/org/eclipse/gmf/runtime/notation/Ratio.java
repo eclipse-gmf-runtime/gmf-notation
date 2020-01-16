@@ -12,10 +12,9 @@
 
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Ratio</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Ratio</b></em>'.
  * <p>
  * The ratio constraint specifies the size ratio of a node in its container
  * </p>
@@ -23,10 +22,11 @@ package org.eclipse.gmf.runtime.notation;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.Ratio#getValue <em>Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.Ratio#getValue
+ * <em>Value</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRatio()
  * @model
@@ -36,14 +36,14 @@ package org.eclipse.gmf.runtime.notation;
  * @canBeSeenBy %partners
  */
 public interface Ratio extends LayoutConstraint {
-    /**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * The default value is <code>"-1"</code>.
-	 * <!-- begin-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute. The default value
+	 * is <code>"-1"</code>. <!-- begin-user-doc -->
 	 * <p>
 	 * The value is the ratio of the view to its container
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getRatio_Value()
@@ -52,11 +52,11 @@ public interface Ratio extends LayoutConstraint {
 	 */
 	double getValue();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Ratio#getValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * The value is the ratio of the view to its container
-	 * <!-- end-user-doc -->
+	/**
+	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.Ratio#getValue
+	 * <em>Value</em>}' attribute. <!-- begin-user-doc --> The value is the ratio of
+	 * the view to its container <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Value</em>' attribute.
 	 * @see #getValue()
 	 * @generated

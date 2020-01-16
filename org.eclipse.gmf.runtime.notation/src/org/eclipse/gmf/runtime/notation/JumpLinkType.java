@@ -19,10 +19,10 @@ import java.util.List;
 import org.eclipse.emf.common.util.AbstractEnumerator;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Jump Link Type</b></em>',
- * and utility methods for working with them.
+ * <!-- begin-user-doc --> A representation of the literals of the enumeration
+ * '<em><b>Jump Link Type</b></em>', and utility methods for working with them.
  * <!-- end-user-doc -->
+ * 
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getJumpLinkType()
  * @model
  * @generated
@@ -31,10 +31,10 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  * @canBeSeenBy %partners
  */
 public final class JumpLinkType extends AbstractEnumerator {
-    /**
-	 * The '<em><b>Semicircle</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Semicircle</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #SEMICIRCLE_LITERAL
 	 * @model name="Semicircle"
 	 * @generated
@@ -42,10 +42,10 @@ public final class JumpLinkType extends AbstractEnumerator {
 	 */
 	public static final int SEMICIRCLE = 0;
 
-    /**
-	 * The '<em><b>Square</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Square</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #SQUARE_LITERAL
 	 * @model name="Square"
 	 * @generated
@@ -53,10 +53,10 @@ public final class JumpLinkType extends AbstractEnumerator {
 	 */
 	public static final int SQUARE = 1;
 
-    /**
-	 * The '<em><b>Chamfered</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Chamfered</b></em>' literal value. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #CHAMFERED_LITERAL
 	 * @model name="Chamfered"
 	 * @generated
@@ -64,61 +64,59 @@ public final class JumpLinkType extends AbstractEnumerator {
 	 */
 	public static final int CHAMFERED = 2;
 
-    /**
-	 * The '<em><b>Semicircle</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Semicircle</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #SEMICIRCLE
 	 * @generated
 	 * @ordered
 	 */
 	public static final JumpLinkType SEMICIRCLE_LITERAL = new JumpLinkType(SEMICIRCLE, "Semicircle", "Semicircle"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * The '<em><b>Square</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Square</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #SQUARE
 	 * @generated
 	 * @ordered
 	 */
 	public static final JumpLinkType SQUARE_LITERAL = new JumpLinkType(SQUARE, "Square", "Square"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * The '<em><b>Chamfered</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Chamfered</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #CHAMFERED
 	 * @generated
 	 * @ordered
 	 */
 	public static final JumpLinkType CHAMFERED_LITERAL = new JumpLinkType(CHAMFERED, "Chamfered", "Chamfered"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * An array of all the '<em><b>Jump Link Type</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * An array of all the '<em><b>Jump Link Type</b></em>' enumerators. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	private static final JumpLinkType[] VALUES_ARRAY =
-        new JumpLinkType[] {
-			SEMICIRCLE_LITERAL,
-			SQUARE_LITERAL,
-			CHAMFERED_LITERAL,
-		};
+	private static final JumpLinkType[] VALUES_ARRAY = new JumpLinkType[] { SEMICIRCLE_LITERAL, SQUARE_LITERAL,
+			CHAMFERED_LITERAL, };
 
-    /**
-	 * A public read-only list of all the '<em><b>Jump Link Type</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * A public read-only list of all the '<em><b>Jump Link Type</b></em>'
+	 * enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-    /**
-	 * Returns the '<em><b>Jump Link Type</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Jump Link Type</b></em>' literal with the specified
+	 * literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static JumpLinkType get(String literal) {
@@ -131,13 +129,15 @@ public final class JumpLinkType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the '<em><b>Jump Link Type</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-    public static JumpLinkType getByName(String name) {
+	public static JumpLinkType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			JumpLinkType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
@@ -147,29 +147,34 @@ public final class JumpLinkType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
-	 * Returns the '<em><b>Jump Link Type</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Jump Link Type</b></em>' literal with the specified
+	 * integer value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static JumpLinkType get(int value) {
 		switch (value) {
-			case SEMICIRCLE: return SEMICIRCLE_LITERAL;
-			case SQUARE: return SQUARE_LITERAL;
-			case CHAMFERED: return CHAMFERED_LITERAL;
+		case SEMICIRCLE:
+			return SEMICIRCLE_LITERAL;
+		case SQUARE:
+			return SQUARE_LITERAL;
+		case CHAMFERED:
+			return CHAMFERED_LITERAL;
 		}
 		return null;
 	}
 
-    /**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * Only this class can construct instances. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    private JumpLinkType(int value, String name, String literal) {
+	private JumpLinkType(int value, String name, String literal) {
 		super(value, name, literal);
 	}
 
-} //JumpLinkType
+} // JumpLinkType

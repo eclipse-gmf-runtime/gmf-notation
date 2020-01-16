@@ -14,15 +14,16 @@ package org.eclipse.gmf.runtime.notation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Node Entry</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Node
+ * Entry</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.NodeEntry#getValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.NodeEntry#getKey <em>Key</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.NodeEntry#getValue
+ * <em>Value</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.NodeEntry#getKey
+ * <em>Key</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,15 +33,15 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface NodeEntry extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * The default value is <code>"Center"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.Alignment}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Value</b></em>' attribute. The default value
+	 * is <code>"Center"</code>. The literals are from the enumeration
+	 * {@link org.eclipse.gmf.runtime.notation.Alignment}. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Value</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.Alignment
 	 * @see #setValue(Alignment)
@@ -51,9 +52,10 @@ public interface NodeEntry extends EObject {
 	Alignment getValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.NodeEntry#getValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.NodeEntry#getValue <em>Value</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Value</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.Alignment
 	 * @see #getValue()
@@ -62,13 +64,14 @@ public interface NodeEntry extends EObject {
 	void setValue(Alignment value);
 
 	/**
-	 * Returns the value of the '<em><b>Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Key</b></em>' reference. <!-- begin-user-doc
+	 * -->
 	 * <p>
-	 * If the meaning of the '<em>Key</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Key</em>' reference isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Key</em>' reference.
 	 * @see #setKey(Node)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getNodeEntry_Key()
@@ -78,9 +81,10 @@ public interface NodeEntry extends EObject {
 	Node getKey();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.NodeEntry#getKey <em>Key</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.NodeEntry#getKey <em>Key</em>}'
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Key</em>' reference.
 	 * @see #getKey()
 	 * @generated

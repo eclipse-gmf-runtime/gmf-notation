@@ -18,23 +18,23 @@ import java.util.List;
 import org.eclipse.emf.common.util.AbstractEnumerator;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Measurement Unit</b></em>',
- * and utility methods for working with them.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the literals of the enumeration
+ * '<em><b>Measurement Unit</b></em>', and utility methods for working with
+ * them. <!-- end-user-doc -->
+ * 
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getMeasurementUnit()
  * @model
  * @generated
  */
 public final class MeasurementUnit extends AbstractEnumerator {
-    /**
-	 * The '<em><b>Himetric</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+	/**
+	 * The '<em><b>Himetric</b></em>' literal value. <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Himetric</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #HIMETRIC_LITERAL
 	 * @model name="Himetric"
 	 * @generated
@@ -42,14 +42,14 @@ public final class MeasurementUnit extends AbstractEnumerator {
 	 */
 	public static final int HIMETRIC = 0;
 
-    /**
-	 * The '<em><b>Pixel</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+	/**
+	 * The '<em><b>Pixel</b></em>' literal value. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Pixel</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of '<em><b>Pixel</b></em>' literal object isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #PIXEL_LITERAL
 	 * @model name="Pixel"
 	 * @generated
@@ -57,50 +57,48 @@ public final class MeasurementUnit extends AbstractEnumerator {
 	 */
 	public static final int PIXEL = 1;
 
-    /**
-	 * The '<em><b>Himetric</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Himetric</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #HIMETRIC
 	 * @generated
 	 * @ordered
 	 */
 	public static final MeasurementUnit HIMETRIC_LITERAL = new MeasurementUnit(HIMETRIC, "Himetric", "Himetric"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * The '<em><b>Pixel</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The '<em><b>Pixel</b></em>' literal object. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #PIXEL
 	 * @generated
 	 * @ordered
 	 */
 	public static final MeasurementUnit PIXEL_LITERAL = new MeasurementUnit(PIXEL, "Pixel", "Pixel"); //$NON-NLS-2$//$NON-NLS-1$
 
-    /**
-	 * An array of all the '<em><b>Measurement Unit</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * An array of all the '<em><b>Measurement Unit</b></em>' enumerators. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	private static final MeasurementUnit[] VALUES_ARRAY =
-        new MeasurementUnit[] {
-			HIMETRIC_LITERAL,
-			PIXEL_LITERAL,
-		};
+	private static final MeasurementUnit[] VALUES_ARRAY = new MeasurementUnit[] { HIMETRIC_LITERAL, PIXEL_LITERAL, };
 
-    /**
-	 * A public read-only list of all the '<em><b>Measurement Unit</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * A public read-only list of all the '<em><b>Measurement Unit</b></em>'
+	 * enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-    /**
-	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified
+	 * literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MeasurementUnit get(String literal) {
@@ -113,13 +111,15 @@ public final class MeasurementUnit extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
-	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified
+	 * name. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-    public static MeasurementUnit getByName(String name) {
+	public static MeasurementUnit getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			MeasurementUnit result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
@@ -129,28 +129,32 @@ public final class MeasurementUnit extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
-	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the '<em><b>Measurement Unit</b></em>' literal with the specified
+	 * integer value. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MeasurementUnit get(int value) {
 		switch (value) {
-			case HIMETRIC: return HIMETRIC_LITERAL;
-			case PIXEL: return PIXEL_LITERAL;
+		case HIMETRIC:
+			return HIMETRIC_LITERAL;
+		case PIXEL:
+			return PIXEL_LITERAL;
 		}
 		return null;
 	}
 
-    /**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * Only this class can construct instances. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    private MeasurementUnit(int value, String name, String literal) {
+	private MeasurementUnit(int value, String name, String literal) {
 		super(value, name, literal);
 	}
 
-} //MeasurementUnit
+} // MeasurementUnit

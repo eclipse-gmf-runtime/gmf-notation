@@ -11,17 +11,17 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>List Compartment</b></em>'.
- * <p><b>
- * Does not support addition/removal of:
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>List
+ * Compartment</b></em>'.
+ * <p>
+ * <b> Does not support addition/removal of:
  * <ul>
  * <li>Source Edges
- * <li>Target Edges 
+ * <li>Target Edges
  * </ul>
- * </b></p> 
+ * </b>
+ * </p>
  * <!-- end-user-doc -->
  *
  *

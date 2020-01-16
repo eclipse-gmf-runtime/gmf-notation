@@ -13,9 +13,8 @@
 package org.eclipse.gmf.runtime.notation;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Diagram Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Diagram
+ * Style</b></em>'. <!-- end-user-doc -->
  *
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDiagramStyle()

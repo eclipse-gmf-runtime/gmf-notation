@@ -12,10 +12,9 @@
 
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Description Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Description Style</b></em>'.
  * <p>
  * A style to be installed on views to give them description texts
  * </p>
@@ -23,10 +22,11 @@ package org.eclipse.gmf.runtime.notation;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription <em>Description</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription
+ * <em>Description</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDescriptionStyle()
  * @model
@@ -36,11 +36,10 @@ package org.eclipse.gmf.runtime.notation;
  * @canBeSeenBy %partners
  */
 public interface DescriptionStyle extends Style {
-    /**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute. The default
+	 * value is <code>""</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.eclipse.gmf.runtime.notation.NotationPackage#getDescriptionStyle_Description()
@@ -49,10 +48,12 @@ public interface DescriptionStyle extends Style {
 	 */
 	String getDescription();
 
-    /**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.DescriptionStyle#getDescription
+	 * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated

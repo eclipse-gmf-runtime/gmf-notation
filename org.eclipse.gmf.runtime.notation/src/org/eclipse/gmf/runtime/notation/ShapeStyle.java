@@ -13,12 +13,12 @@
 package org.eclipse.gmf.runtime.notation;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Shape Style</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Shape
+ * Style</b></em>'.
  * <p>
- * A shape style is a typical style to be installed on shape nodes that 
- * own a description (like note shapes). It gives the node fill, line, 
- * font and description style properties 
+ * A shape style is a typical style to be installed on shape nodes that own a
+ * description (like note shapes). It gives the node fill, line, font and
+ * description style properties
  * </p>
  * <!-- end-user-doc -->
  *

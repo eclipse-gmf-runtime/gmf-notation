@@ -15,7 +15,6 @@ package org.eclipse.gmf.runtime.notation.datatype;
 
 import org.eclipse.gmf.runtime.notation.GradientStyle;
 
-
 /**
  * Class defining gradient data
  * 
@@ -23,26 +22,25 @@ import org.eclipse.gmf.runtime.notation.GradientStyle;
  * @since 1.2
  */
 public class GradientData {
-	protected static final int GRADIENT_COLOR1_DEFFAULT = 8421504; //dark grey
-	
+	protected static final int GRADIENT_COLOR1_DEFFAULT = 8421504; // dark grey
+
 	protected static final int GRADIENT_COLOR2_DEFFAULT = 16777215; // white
-	
-	protected static final int GRADIENT_STYLE_DEFAULT = GradientStyle.VERTICAL;			
-	
+
+	protected static final int GRADIENT_STYLE_DEFAULT = GradientStyle.VERTICAL;
+
 	private int gradientColor1 = GRADIENT_COLOR1_DEFFAULT;
-	
+
 	private int gradientColor2 = GRADIENT_COLOR2_DEFFAULT;
-	
+
 	private int gradientStyle = GRADIENT_STYLE_DEFAULT;
-	
-	private static final GradientData defaultGradientData = 
-		new GradientData(GRADIENT_COLOR1_DEFFAULT, GRADIENT_COLOR2_DEFFAULT, GRADIENT_STYLE_DEFAULT);
-	
-	
+
+	private static final GradientData defaultGradientData = new GradientData(GRADIENT_COLOR1_DEFFAULT,
+			GRADIENT_COLOR2_DEFFAULT, GRADIENT_STYLE_DEFAULT);
+
 	public GradientData() {
 		super();
 	}
-	
+
 	public GradientData(int color1, int color2, int style) {
 		gradientColor1 = color1;
 		gradientColor2 = color2;
@@ -50,7 +48,7 @@ public class GradientData {
 			gradientStyle = style;
 		}
 	}
-	
+
 	public GradientData(GradientData data) {
 		if (data != null) {
 			gradientColor1 = data.getGradientColor1();
@@ -58,11 +56,11 @@ public class GradientData {
 			gradientStyle = data.getGradientStyle();
 		}
 	}
-	
+
 	public static GradientData getDefaultGradientData() {
 		return defaultGradientData;
 	}
-		
+
 	/**
 	 * @return the gradientColor1
 	 */
@@ -99,15 +97,16 @@ public class GradientData {
 	}
 
 	/**
-	 * @param gradientStyle the gradientStyle to set. true is for vertical, false is for horizontal 
+	 * @param gradientStyle the gradientStyle to set. true is for vertical, false is
+	 *                      for horizontal
 	 */
 	public void setGradientStyle(int gradientStyle) {
-		//TEMP code: temporarily commented; replace when new notation is in place 
-		//if (GradientStyle.get(gradientStyle) != null) {
-			this.gradientStyle = gradientStyle;
-		//}
+		// TEMP code: temporarily commented; replace when new notation is in place
+		// if (GradientStyle.get(gradientStyle) != null) {
+		this.gradientStyle = gradientStyle;
+		// }
 	}
-		
+
 	public String toString() {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (gradientColor1: "); //$NON-NLS-1$
@@ -120,7 +119,9 @@ public class GradientData {
 		return result.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	public int hashCode() {
@@ -132,7 +133,9 @@ public class GradientData {
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj) {
@@ -151,7 +154,5 @@ public class GradientData {
 			return false;
 		return true;
 	}
-	
-	
-}
 
+}

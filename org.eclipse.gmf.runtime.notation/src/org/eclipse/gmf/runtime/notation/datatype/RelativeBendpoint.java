@@ -16,20 +16,24 @@ package org.eclipse.gmf.runtime.notation.datatype;
 import java.util.StringTokenizer;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Relative Bendpoint</b></em>'.
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Relative Bendpoint</b></em>'.
  * <p>
- * A type of bendpoints representing a collection of points with relative distances 
- * along the x- and y-axis to the source and target views of an edge
+ * A type of bendpoints representing a collection of points with relative
+ * distances along the x- and y-axis to the source and target views of an edge
  * </p>
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getSourceX <em>Source X</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getSourceY <em>Source Y</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getTargetX <em>Target X</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getTargetY <em>Target Y</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getSourceX
+ * <em>Source X</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getSourceY
+ * <em>Source Y</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getTargetX
+ * <em>Target X</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.RelativeBendpointImpl#getTargetY
+ * <em>Target Y</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,8 +45,8 @@ import java.util.StringTokenizer;
 public class RelativeBendpoint {
 	/**
 	 * The default value of the '{@link #getSourceX() <em>Source X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getSourceX()
 	 * @generated
 	 * @ordered
@@ -51,8 +55,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The cached value of the '{@link #getSourceX() <em>Source X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getSourceX()
 	 * @generated
 	 * @ordered
@@ -61,8 +65,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The default value of the '{@link #getSourceY() <em>Source Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getSourceY()
 	 * @generated
 	 * @ordered
@@ -71,8 +75,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The cached value of the '{@link #getSourceY() <em>Source Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getSourceY()
 	 * @generated
 	 * @ordered
@@ -81,8 +85,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The default value of the '{@link #getTargetX() <em>Target X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTargetX()
 	 * @generated
 	 * @ordered
@@ -91,8 +95,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The cached value of the '{@link #getTargetX() <em>Target X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTargetX()
 	 * @generated
 	 * @ordered
@@ -101,8 +105,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The default value of the '{@link #getTargetY() <em>Target Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTargetY()
 	 * @generated
 	 * @ordered
@@ -111,8 +115,8 @@ public class RelativeBendpoint {
 
 	/**
 	 * The cached value of the '{@link #getTargetY() <em>Target Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getTargetY()
 	 * @generated
 	 * @ordered
@@ -120,12 +124,12 @@ public class RelativeBendpoint {
 	protected int targetY = TARGET_Y_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RelativeBendpoint(String string) {
-		StringTokenizer t = new StringTokenizer(string.substring(1, string.length()-1), ","); //$NON-NLS-1$
+		StringTokenizer t = new StringTokenizer(string.substring(1, string.length() - 1), ","); //$NON-NLS-1$
 		setSourceX(Integer.parseInt(t.nextToken().trim()));
 		setSourceY(Integer.parseInt(t.nextToken().trim()));
 		setTargetX(Integer.parseInt(t.nextToken().trim()));
@@ -133,8 +137,8 @@ public class RelativeBendpoint {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RelativeBendpoint() {
@@ -142,8 +146,8 @@ public class RelativeBendpoint {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public RelativeBendpoint(int sourceX, int sourceY, int targetX, int targetY) {
@@ -156,10 +160,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Returns the x-distance from the bendpoint to 
-	 * the attach point with the source view
+	 * Returns the x-distance from the bendpoint to the attach point with the source
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getSourceX() {
@@ -169,10 +174,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Sets the x-distance from the bendpoint to 
-	 * the attach point with the source view
+	 * Sets the x-distance from the bendpoint to the attach point with the source
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void setSourceX(int newSourceX) {
@@ -182,10 +188,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Returns the y-distance from the bendpoint to 
-	 * the attach point with the source view
+	 * Returns the y-distance from the bendpoint to the attach point with the source
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getSourceY() {
@@ -195,10 +202,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Sets the y-distance from the bendpoint to 
-	 * the attach point with the source view
+	 * Sets the y-distance from the bendpoint to the attach point with the source
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void setSourceY(int newSourceY) {
@@ -208,10 +216,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Returns the x-distance from the bendpoint to 
-	 * the attach point with the target view
+	 * Returns the x-distance from the bendpoint to the attach point with the target
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getTargetX() {
@@ -221,10 +230,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Sets the x-distance from the bendpoint to 
-	 * the attach point with the target view
+	 * Sets the x-distance from the bendpoint to the attach point with the target
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void setTargetX(int newTargetX) {
@@ -234,10 +244,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Returns the y-distance from the bendpoint to 
-	 * the attach point with the target view
+	 * Returns the y-distance from the bendpoint to the attach point with the target
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getTargetY() {
@@ -247,10 +258,11 @@ public class RelativeBendpoint {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * Sets the y-distance from the bendpoint to 
-	 * the attach point with the target view
+	 * Sets the y-distance from the bendpoint to the attach point with the target
+	 * view
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void setTargetY(int newTargetY) {
@@ -258,8 +270,8 @@ public class RelativeBendpoint {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
@@ -277,8 +289,8 @@ public class RelativeBendpoint {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String convertToString() {
@@ -295,7 +307,9 @@ public class RelativeBendpoint {
 		return result.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	public int hashCode() {
@@ -308,7 +322,9 @@ public class RelativeBendpoint {
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj) {
@@ -329,5 +345,5 @@ public class RelativeBendpoint {
 			return false;
 		return true;
 	}
-	
-} //RelativeBendpointImpl
+
+} // RelativeBendpointImpl

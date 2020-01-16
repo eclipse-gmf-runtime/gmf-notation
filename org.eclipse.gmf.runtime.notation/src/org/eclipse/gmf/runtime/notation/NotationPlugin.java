@@ -24,38 +24,35 @@ import org.eclipse.emf.common.util.ResourceLocator;
 /*
  * @canBeSeenBy org.eclipse.gmf.runtime.notation.*
  */
-public final class NotationPlugin
-	extends EMFPlugin {
+public final class NotationPlugin extends EMFPlugin {
 
 	/**
-	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc
-	 * -->
+	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
 	public static final NotationPlugin INSTANCE = new NotationPlugin();
 
 	/**
-	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc
-	 * -->
+	 * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
 	private static Implementation plugin;
 
-    /**
-	 * Create the instance.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	/**
+	 * Create the instance. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotationPlugin() {
-		super(new ResourceLocator [] {});
+		super(new ResourceLocator[] {});
 	}
 
-    /**
-	 * Returns the singleton instance of the Eclipse plugin.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
+	/**
+	 * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
 	 * @return the singleton instance.
 	 * @generated
 	 */
@@ -63,10 +60,10 @@ public final class NotationPlugin
 		return plugin;
 	}
 
-    /**
-	 * Returns the singleton instance of the Eclipse plugin.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
+	/**
+	 * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * 
 	 * @return the singleton instance.
 	 * @generated
 	 */
@@ -75,18 +72,16 @@ public final class NotationPlugin
 	}
 
 	/**
-	 * The actual implementation of the Eclipse <b>Plugin </b>. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
+	 * The actual implementation of the Eclipse <b>Plugin </b>. <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	public static class Implementation
-		extends EclipsePlugin {
+	public static class Implementation extends EclipsePlugin {
 
-        /**
-		 * Creates an instance.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+		/**
+		 * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * 
 		 * @generated
 		 */
 		public Implementation() {
@@ -96,5 +91,5 @@ public final class NotationPlugin
 			//
 			plugin = this;
 		}
-    }
+	}
 }

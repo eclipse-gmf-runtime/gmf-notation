@@ -11,19 +11,19 @@
  ****************************************************************************/
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Arrow Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Arrow
+ * Style</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource <em>Arrow Source</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget <em>Arrow Target</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource
+ * <em>Arrow Source</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget
+ * <em>Arrow Target</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.gmf.runtime.notation.NotationPackage#getArrowStyle()
  * @model
@@ -31,15 +31,15 @@ package org.eclipse.gmf.runtime.notation;
  */
 public interface ArrowStyle extends Style {
 	/**
-	 * Returns the value of the '<em><b>Arrow Source</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.ArrowType}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Arrow Source</b></em>' attribute. The
+	 * default value is <code>"None"</code>. The literals are from the enumeration
+	 * {@link org.eclipse.gmf.runtime.notation.ArrowType}. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Arrow Source</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Arrow Source</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Arrow Source</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.ArrowType
 	 * @see #setArrowSource(ArrowType)
@@ -50,9 +50,10 @@ public interface ArrowStyle extends Style {
 	ArrowType getArrowSource();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource <em>Arrow Source</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowSource <em>Arrow
+	 * Source</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Arrow Source</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.ArrowType
 	 * @see #getArrowSource()
@@ -61,15 +62,15 @@ public interface ArrowStyle extends Style {
 	void setArrowSource(ArrowType value);
 
 	/**
-	 * Returns the value of the '<em><b>Arrow Target</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.gmf.runtime.notation.ArrowType}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Arrow Target</b></em>' attribute. The
+	 * default value is <code>"None"</code>. The literals are from the enumeration
+	 * {@link org.eclipse.gmf.runtime.notation.ArrowType}. <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Arrow Target</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Arrow Target</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Arrow Target</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.ArrowType
 	 * @see #setArrowTarget(ArrowType)
@@ -80,9 +81,10 @@ public interface ArrowStyle extends Style {
 	ArrowType getArrowTarget();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget <em>Arrow Target</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the
+	 * '{@link org.eclipse.gmf.runtime.notation.ArrowStyle#getArrowTarget <em>Arrow
+	 * Target</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Arrow Target</em>' attribute.
 	 * @see org.eclipse.gmf.runtime.notation.ArrowType
 	 * @see #getArrowTarget()

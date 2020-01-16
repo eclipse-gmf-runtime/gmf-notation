@@ -12,10 +12,9 @@
 
 package org.eclipse.gmf.runtime.notation;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Bounds</b></em>'.
+ * <!-- begin-user-doc --> A representation of the model object
+ * '<em><b>Bounds</b></em>'.
  * <p>
  * Bounds are layout constraints for nodes to specify their location and size
  * </p>
@@ -29,6 +28,6 @@ package org.eclipse.gmf.runtime.notation;
 /*
  * @canBeSeenBy %partners
  */
-public interface Bounds extends Location, Size{
+public interface Bounds extends Location, Size {
 	// no default API
 } // Bounds

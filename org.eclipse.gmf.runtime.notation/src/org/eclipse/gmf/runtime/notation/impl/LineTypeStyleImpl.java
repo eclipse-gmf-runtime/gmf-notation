@@ -20,30 +20,31 @@ import org.eclipse.gmf.runtime.notation.LineTypeStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Line Type Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Line
+ * Type Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl#getLineType <em>Line Type</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.LineTypeStyleImpl#getLineType
+ * <em>Line Type</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements LineTypeStyle {
-	
+
 	/**
 	 * int field to store booleans and enums
-	 * @since 1.2 
+	 * 
+	 * @since 1.2
 	 */
 	protected int eFlags = 0;
-	
+
 	/**
-	 * The default value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getLineType() <em>Line Type</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getLineType()
 	 * @generated
 	 * @ordered
@@ -51,36 +52,38 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 	protected static final LineType LINE_TYPE_EDEFAULT = LineType.SOLID_LITERAL;
 
 	/**
-	 * The offset of the flags representing the value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The offset of the flags representing the value of the '{@link #getLineType()
+	 * <em>Line Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int LINE_TYPE_EFLAG_OFFSET = 8;
 
 	/**
-	 * The flags representing the default value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The flags representing the default value of the '{@link #getLineType()
+	 * <em>Line Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int LINE_TYPE_EFLAG_DEFAULT = LineType.VALUES.indexOf(LINE_TYPE_EDEFAULT) << LINE_TYPE_EFLAG_OFFSET;
+	protected static final int LINE_TYPE_EFLAG_DEFAULT = LineType.VALUES
+			.indexOf(LINE_TYPE_EDEFAULT) << LINE_TYPE_EFLAG_OFFSET;
 
 	/**
-	 * The array of enumeration values for '{@link LineType Line Type}'
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The array of enumeration values for '{@link LineType Line Type}' <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 * @ordered
 	 */
-	private static final LineType[] LINE_TYPE_EFLAG_VALUES = (LineType[])LineType.VALUES.toArray(new LineType[LineType.VALUES.size()]);
+	private static final LineType[] LINE_TYPE_EFLAG_VALUES = (LineType[]) LineType.VALUES
+			.toArray(new LineType[LineType.VALUES.size()]);
 
 	/**
-	 * The flags representing the value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The flags representing the value of the '{@link #getLineType() <em>Line
+	 * Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getLineType()
 	 * @generated
 	 * @ordered
@@ -88,8 +91,8 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 	protected static final int LINE_TYPE_EFLAG = 0x7 << LINE_TYPE_EFLAG_OFFSET;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected LineTypeStyleImpl() {
@@ -97,8 +100,8 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -106,8 +109,8 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public LineType getLineType() {
@@ -115,79 +118,82 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setLineType(LineType newLineType) {
 		LineType oldLineType = LINE_TYPE_EFLAG_VALUES[(eFlags & LINE_TYPE_EFLAG) >>> LINE_TYPE_EFLAG_OFFSET];
-		if (newLineType == null) newLineType = LINE_TYPE_EDEFAULT;
+		if (newLineType == null)
+			newLineType = LINE_TYPE_EDEFAULT;
 		eFlags = eFlags & ~LINE_TYPE_EFLAG | LineType.VALUES.indexOf(newLineType) << LINE_TYPE_EFLAG_OFFSET;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_TYPE_STYLE__LINE_TYPE, oldLineType, newLineType));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LINE_TYPE_STYLE__LINE_TYPE,
+					oldLineType, newLineType));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
-				return getLineType();
+		case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
+			return getLineType();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
-				setLineType((LineType)newValue);
-				return;
+		case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
+			setLineType((LineType) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
-				setLineType(LINE_TYPE_EDEFAULT);
-				return;
+		case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
+			setLineType(LINE_TYPE_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
-				return (eFlags & LINE_TYPE_EFLAG) != LINE_TYPE_EFLAG_DEFAULT;
+		case NotationPackage.LINE_TYPE_STYLE__LINE_TYPE:
+			return (eFlags & LINE_TYPE_EFLAG) != LINE_TYPE_EFLAG_DEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (lineType: "); //$NON-NLS-1$
@@ -196,4 +202,4 @@ public class LineTypeStyleImpl extends MinimalEObjectImpl.Container implements L
 		return result.toString();
 	}
 
-} //LineTypeStyleImpl
+} // LineTypeStyleImpl

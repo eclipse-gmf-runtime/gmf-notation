@@ -20,16 +20,17 @@ import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Location</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Location</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.LocationImpl#getX <em>X</em>}</li>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.LocationImpl#getY <em>Y</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.LocationImpl#getX
+ * <em>X</em>}</li>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.LocationImpl#getY
+ * <em>Y</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -37,76 +38,76 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
  * @canBeSeenBy %partners
  */
 public class LocationImpl extends MinimalEObjectImpl.Container implements Location {
-    /**
-	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The default value of the '{@link #getX() <em>X</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int X_EDEFAULT = 0;
 
-    /**
-	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The cached value of the '{@link #getX() <em>X</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
 	protected int x = X_EDEFAULT;
 
-    /**
-	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The default value of the '{@link #getY() <em>Y</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final int Y_EDEFAULT = 0;
 
-    /**
-	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
 	protected int y = Y_EDEFAULT;
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected LocationImpl() {
 		super();
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
 		return NotationPackage.Literals.LOCATION;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getX() {
 		return x;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setX(int newX) {
@@ -116,18 +117,18 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LOCATION__X, oldX, x));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public int getY() {
 		return y;
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setY(int newY) {
@@ -137,77 +138,78 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.LOCATION__Y, oldY, y));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.LOCATION__X:
-				return new Integer(getX());
-			case NotationPackage.LOCATION__Y:
-				return new Integer(getY());
+		case NotationPackage.LOCATION__X:
+			return new Integer(getX());
+		case NotationPackage.LOCATION__Y:
+			return new Integer(getY());
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.LOCATION__X:
-				setX(((Integer)newValue).intValue());
-				return;
-			case NotationPackage.LOCATION__Y:
-				setY(((Integer)newValue).intValue());
-				return;
+		case NotationPackage.LOCATION__X:
+			setX(((Integer) newValue).intValue());
+			return;
+		case NotationPackage.LOCATION__Y:
+			setY(((Integer) newValue).intValue());
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LOCATION__X:
-				setX(X_EDEFAULT);
-				return;
-			case NotationPackage.LOCATION__Y:
-				setY(Y_EDEFAULT);
-				return;
+		case NotationPackage.LOCATION__X:
+			setX(X_EDEFAULT);
+			return;
+		case NotationPackage.LOCATION__Y:
+			setY(Y_EDEFAULT);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.LOCATION__X:
-				return x != X_EDEFAULT;
-			case NotationPackage.LOCATION__Y:
-				return y != Y_EDEFAULT;
+		case NotationPackage.LOCATION__X:
+			return x != X_EDEFAULT;
+		case NotationPackage.LOCATION__Y:
+			return y != Y_EDEFAULT;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (x: "); //$NON-NLS-1$
@@ -218,4 +220,4 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		return result.toString();
 	}
 
-} //LocationImpl
+} // LocationImpl

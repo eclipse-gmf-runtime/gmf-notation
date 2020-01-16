@@ -21,23 +21,23 @@ import org.eclipse.gmf.runtime.notation.DataTypeStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Data Type Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Data
+ * Type Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.DataTypeStyleImpl#getInstanceType <em>Instance Type</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.DataTypeStyleImpl#getInstanceType
+ * <em>Instance Type</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	/**
-	 * The cached value of the '{@link #getInstanceType() <em>Instance Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getInstanceType() <em>Instance Type</em>}'
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getInstanceType()
 	 * @generated
 	 * @ordered
@@ -45,8 +45,8 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	protected EDataType instanceType;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected DataTypeStyleImpl() {
@@ -54,8 +54,8 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -63,25 +63,26 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EDataType getInstanceType() {
 		if (instanceType != null && instanceType.eIsProxy()) {
-			InternalEObject oldInstanceType = (InternalEObject)instanceType;
-			instanceType = (EDataType)eResolveProxy(oldInstanceType);
+			InternalEObject oldInstanceType = (InternalEObject) instanceType;
+			instanceType = (EDataType) eResolveProxy(oldInstanceType);
 			if (instanceType != oldInstanceType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE, oldInstanceType, instanceType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE, oldInstanceType, instanceType));
 			}
 		}
 		return instanceType;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EDataType basicGetInstanceType() {
@@ -89,31 +90,32 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setInstanceType(EDataType newInstanceType) {
 		EDataType oldInstanceType = instanceType;
 		instanceType = newInstanceType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE, oldInstanceType, instanceType));
+			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE,
+					oldInstanceType, instanceType));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public String getStringFromObject(Object objectValue) {
 		if (getInstanceType() == null && objectValue instanceof String)
-			return (String)objectValue;
+			return (String) objectValue;
 		return EcoreUtil.convertToString(getInstanceType(), objectValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public Object getObjectFromString(String stringValue) {
@@ -123,68 +125,69 @@ public class DataTypeStyleImpl extends NamedStyleImpl implements DataTypeStyle {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__NAME:
-				return getName();
-			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
-				if (resolve) return getInstanceType();
-				return basicGetInstanceType();
+		case NotationPackage.DATA_TYPE_STYLE__NAME:
+			return getName();
+		case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
+			if (resolve)
+				return getInstanceType();
+			return basicGetInstanceType();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
-				setInstanceType((EDataType)newValue);
-				return;
+		case NotationPackage.DATA_TYPE_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
+			setInstanceType((EDataType) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
-				setInstanceType((EDataType)null);
-				return;
+		case NotationPackage.DATA_TYPE_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
+			setInstanceType((EDataType) null);
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.DATA_TYPE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
-				return instanceType != null;
+		case NotationPackage.DATA_TYPE_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.DATA_TYPE_STYLE__INSTANCE_TYPE:
+			return instanceType != null;
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-} //DataTypeStyleImpl
+} // DataTypeStyleImpl

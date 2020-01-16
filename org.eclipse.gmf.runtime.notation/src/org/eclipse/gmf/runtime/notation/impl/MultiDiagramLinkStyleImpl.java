@@ -22,23 +22,23 @@ import org.eclipse.gmf.runtime.notation.MultiDiagramLinkStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Multi Diagram Link Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Multi
+ * Diagram Link Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.MultiDiagramLinkStyleImpl#getDiagramLinks <em>Diagram Links</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.MultiDiagramLinkStyleImpl#getDiagramLinks
+ * <em>Diagram Links</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container implements MultiDiagramLinkStyle {
 	/**
-	 * The cached value of the '{@link #getDiagramLinks() <em>Diagram Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getDiagramLinks() <em>Diagram Links</em>}'
+	 * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getDiagramLinks()
 	 * @generated
 	 * @ordered
@@ -46,8 +46,8 @@ public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container impl
 	protected EList diagramLinks;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected MultiDiagramLinkStyleImpl() {
@@ -55,8 +55,8 @@ public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container impl
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -64,70 +64,71 @@ public class MultiDiagramLinkStyleImpl extends MinimalEObjectImpl.Container impl
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EList getDiagramLinks() {
 		if (diagramLinks == null) {
-			diagramLinks = new EObjectResolvingEList(Diagram.class, this, NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
+			diagramLinks = new EObjectResolvingEList(Diagram.class, this,
+					NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS);
 		}
 		return diagramLinks;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
-				return getDiagramLinks();
+		case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
+			return getDiagramLinks();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
-				getDiagramLinks().clear();
-				getDiagramLinks().addAll((Collection)newValue);
-				return;
+		case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
+			getDiagramLinks().clear();
+			getDiagramLinks().addAll((Collection) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
-				getDiagramLinks().clear();
-				return;
+		case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
+			getDiagramLinks().clear();
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
-				return diagramLinks != null && !diagramLinks.isEmpty();
+		case NotationPackage.MULTI_DIAGRAM_LINK_STYLE__DIAGRAM_LINKS:
+			return diagramLinks != null && !diagramLinks.isEmpty();
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-} //MultiDiagramLinkStyleImpl
+} // MultiDiagramLinkStyleImpl

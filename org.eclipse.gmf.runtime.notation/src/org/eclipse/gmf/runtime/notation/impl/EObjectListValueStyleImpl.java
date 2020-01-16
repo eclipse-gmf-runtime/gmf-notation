@@ -14,33 +14,30 @@ package org.eclipse.gmf.runtime.notation.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.eclipse.gmf.runtime.notation.EObjectListValueStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EObject List Value Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>EObject
+ * List Value Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.EObjectListValueStyleImpl#getEObjectListValue <em>EObject List Value</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.EObjectListValueStyleImpl#getEObjectListValue
+ * <em>EObject List Value</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class EObjectListValueStyleImpl extends NamedStyleImpl implements EObjectListValueStyle {
 	/**
-	 * The cached value of the '{@link #getEObjectListValue() <em>EObject List Value</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getEObjectListValue() <em>EObject List
+	 * Value</em>}' reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getEObjectListValue()
 	 * @generated
 	 * @ordered
@@ -48,8 +45,8 @@ public class EObjectListValueStyleImpl extends NamedStyleImpl implements EObject
 	protected EList eObjectListValue;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EObjectListValueStyleImpl() {
@@ -57,8 +54,8 @@ public class EObjectListValueStyleImpl extends NamedStyleImpl implements EObject
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -66,80 +63,81 @@ public class EObjectListValueStyleImpl extends NamedStyleImpl implements EObject
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EList getEObjectListValue() {
 		if (eObjectListValue == null) {
-			eObjectListValue = new EObjectResolvingEList(EObject.class, this, NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE);
+			eObjectListValue = new EObjectResolvingEList(EObject.class, this,
+					NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE);
 		}
 		return eObjectListValue;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
-				return getName();
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
-				return getEObjectListValue();
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
+			return getName();
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
+			return getEObjectListValue();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
-				getEObjectListValue().clear();
-				getEObjectListValue().addAll((Collection)newValue);
-				return;
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
+			getEObjectListValue().clear();
+			getEObjectListValue().addAll((Collection) newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
-				getEObjectListValue().clear();
-				return;
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
+			getEObjectListValue().clear();
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
-				return eObjectListValue != null && !eObjectListValue.isEmpty();
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.EOBJECT_LIST_VALUE_STYLE__EOBJECT_LIST_VALUE:
+			return eObjectListValue != null && !eObjectListValue.isEmpty();
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-} //EObjectListValueStyleImpl
+} // EObjectListValueStyleImpl

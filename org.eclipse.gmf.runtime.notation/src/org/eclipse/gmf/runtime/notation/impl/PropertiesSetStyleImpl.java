@@ -25,31 +25,32 @@ import org.eclipse.gmf.runtime.notation.PropertiesSetStyle;
 import org.eclipse.gmf.runtime.notation.PropertyValue;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Properties Set Style</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Properties Set Style</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.eclipse.gmf.runtime.notation.impl.PropertiesSetStyleImpl#getPropertiesMap <em>Properties Map</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.eclipse.gmf.runtime.notation.impl.PropertiesSetStyleImpl#getPropertiesMap
+ * <em>Properties Map</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class PropertiesSetStyleImpl extends NamedStyleImpl implements PropertiesSetStyle {
 	/**
-	 * The cached value of the '{@link #getPropertiesMap() <em>Properties Map</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getPropertiesMap() <em>Properties Map</em>}'
+	 * map. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getPropertiesMap()
 	 * @generated
 	 * @ordered
 	 */
 	protected EMap propertiesMap;
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected PropertiesSetStyleImpl() {
@@ -57,8 +58,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected EClass eStaticClass() {
@@ -66,24 +67,26 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EMap getPropertiesMap() {
 		if (propertiesMap == null) {
-			propertiesMap = new EcoreEMap(NotationPackage.Literals.STRING_TO_PROPERTY_VALUE_MAP_ENTRY, StringToPropertyValueMapEntryImpl.class, this, NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP);
+			propertiesMap = new EcoreEMap(NotationPackage.Literals.STRING_TO_PROPERTY_VALUE_MAP_ENTRY,
+					StringToPropertyValueMapEntryImpl.class, this,
+					NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP);
 		}
 		return propertiesMap;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public Object getProperty(String propertyName) {
-		PropertyValue propertyValue = (PropertyValue)getPropertiesMap().get(propertyName);
+		PropertyValue propertyValue = (PropertyValue) getPropertiesMap().get(propertyName);
 		if (propertyValue != null) {
 			return propertyValue.getValue();
 		}
@@ -91,12 +94,12 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public boolean setProperty(String propertyName, Object newValue) {
-		PropertyValue propertyValue = (PropertyValue)getPropertiesMap().get(propertyName);
+		PropertyValue propertyValue = (PropertyValue) getPropertiesMap().get(propertyName);
 		if (propertyValue != null) {
 			propertyValue.setValue(newValue);
 			return true;
@@ -105,8 +108,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public boolean createProperty(String propertyName, EDataType instanceType, Object initialValue) {
@@ -114,7 +117,7 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 			PropertyValue value = NotationFactory.eINSTANCE.createPropertyValue();
 			if (instanceType == null) {
 				if (initialValue instanceof String)
-					value.setRawValue((String)initialValue);
+					value.setRawValue((String) initialValue);
 				else
 					return false;
 			} else {
@@ -127,8 +130,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public boolean removeProperty(String propertyName) {
@@ -136,8 +139,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public boolean hasProperty(String propertyName) {
@@ -145,8 +148,8 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public boolean createProperty(String propertyName, String initialValue) {
@@ -159,81 +162,83 @@ public class PropertiesSetStyleImpl extends NamedStyleImpl implements Properties
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
-				return ((InternalEList)getPropertiesMap()).basicRemove(otherEnd, msgs);
+		case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
+			return ((InternalEList) getPropertiesMap()).basicRemove(otherEnd, msgs);
 		}
 		return eDynamicInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
-				return getName();
-			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
-				if (coreType) return getPropertiesMap();
-				else return getPropertiesMap().map();
+		case NotationPackage.PROPERTIES_SET_STYLE__NAME:
+			return getName();
+		case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
+			if (coreType)
+				return getPropertiesMap();
+			else
+				return getPropertiesMap().map();
 		}
 		return eDynamicGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
-				setName((String)newValue);
-				return;
-			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
-				((EStructuralFeature.Setting)getPropertiesMap()).set(newValue);
-				return;
+		case NotationPackage.PROPERTIES_SET_STYLE__NAME:
+			setName((String) newValue);
+			return;
+		case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
+			((EStructuralFeature.Setting) getPropertiesMap()).set(newValue);
+			return;
 		}
 		eDynamicSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
-				getPropertiesMap().clear();
-				return;
+		case NotationPackage.PROPERTIES_SET_STYLE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
+			getPropertiesMap().clear();
+			return;
 		}
 		eDynamicUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NotationPackage.PROPERTIES_SET_STYLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
-				return propertiesMap != null && !propertiesMap.isEmpty();
+		case NotationPackage.PROPERTIES_SET_STYLE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case NotationPackage.PROPERTIES_SET_STYLE__PROPERTIES_MAP:
+			return propertiesMap != null && !propertiesMap.isEmpty();
 		}
 		return eDynamicIsSet(featureID);
 	}
 
-} //PropertiesSetStyleImpl
+} // PropertiesSetStyleImpl
