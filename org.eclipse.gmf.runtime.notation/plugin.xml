@@ -12,24 +12,19 @@
      IBM Corporation - initial API and implementation
 -->
 <plugin>
-   
-   <extension
-     point="org.eclipse.emf.ecore.generated_package">
-    <package
-          class="org.eclipse.gmf.runtime.notation.NotationPackage"
-          genModel="model/notation.genmodel"
-          uri="http://www.eclipse.org/gmf/runtime/1.0.0/notation">
-    </package>
-    <package
-          class="org.eclipse.gmf.runtime.notation.NotationPackage"
-          genModel="model/notation.genmodel"
-          uri="http://www.eclipse.org/gmf/runtime/1.0.1/notation">
-    </package>
-      <package
-            class="org.eclipse.gmf.runtime.notation.NotationPackage"
-            genModel="model/notation.genmodel"
-            uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
-      </package>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+    <package class="org.eclipse.gmf.runtime.notation.NotationPackage"
+             genModel="model/notation.genmodel"
+             uri="http://www.eclipse.org/gmf/runtime/1.0.0/notation" />
+    <package class="org.eclipse.gmf.runtime.notation.NotationPackage"
+             genModel="model/notation.genmodel"
+             uri="http://www.eclipse.org/gmf/runtime/1.0.1/notation" />
+    <package class="org.eclipse.gmf.runtime.notation.NotationPackage"
+             genModel="model/notation.genmodel"
+             uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation" />
+    <package class="org.eclipse.gmf.runtime.notation.NotationPackage"
+             genModel="model/notation.genmodel"
+             uri="http://www.eclipse.org/gmf/runtime/1.0.3/notation" />
   </extension>
 
 </plugin>
