@@ -253,7 +253,11 @@ public interface <%=genPackage.getPackageInterfaceName()%> extends <%=genModel.g
 		if (isInited) return (<%=genPackage.getImportedPackageInterfaceName()%>)<%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>.Registry.INSTANCE.getEPackage(<%=genPackage.getImportedPackageInterfaceName()%>.eNS_URI);
 
 		// Obtain or create and register package
-		<%=genPackage.getPackageClassName()%> the<%=genPackage.getPackageInterfaceName()%> = (<%=genPackage.getPackageClassName()%>)(<%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>.Registry.INSTANCE.getEPackage(eNS_URI) instanceof <%=genPackage.getPackageClassName()%> ? <%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>.Registry.INSTANCE.getEPackage(eNS_URI) : new <%=genPackage.getPackageClassName()%>());
+		Object registered<%=genPackage.getBasicPackageName()%> = <%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>.Registry.INSTANCE.get(eNS_URI);
+		<%=genPackage.getPackageClassName()%> the<%=genPackage.getBasicPackageName()%> = registered<%=genPackage.getBasicPackageName()%> instanceof <%=genPackage.getPackageClassName()%> ? (<%=genPackage.getPackageClassName()%>)registered<%=genPackage.getBasicPackageName()%> : new <%=genPackage.getPackageClassName()%>();
+
+
+
 
 		isInited = true;
 
@@ -329,6 +333,8 @@ public interface <%=genPackage.getPackageInterfaceName()%> extends <%=genModel.g
 		the<%=genPackage.getPackageInterfaceName()%>.freeze();
 
   <%}%>
+		// Update the registry and return the package
+		<%=genModel.getImportedName("org.eclipse.emf.ecore.EPackage")%>.Registry.INSTANCE.put(<%=genPackage.getImportedPackageInterfaceName()%>.eNS_URI, the<%=genPackage.getPackageInterfaceName()%>);
 		return the<%=genPackage.getPackageInterfaceName()%>;
 	}
 

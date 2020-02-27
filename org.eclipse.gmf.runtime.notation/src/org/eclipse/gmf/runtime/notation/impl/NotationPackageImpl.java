@@ -780,9 +780,10 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 			return (NotationPackage) EPackage.Registry.INSTANCE.getEPackage(NotationPackage.eNS_URI);
 
 		// Obtain or create and register package
-		NotationPackageImpl theNotationPackage = (NotationPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(eNS_URI) instanceof NotationPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(eNS_URI)
-						: new NotationPackageImpl());
+		Object registeredNotationPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		NotationPackageImpl theNotationPackage = registeredNotationPackage instanceof NotationPackageImpl
+				? (NotationPackageImpl) registeredNotationPackage
+				: new NotationPackageImpl();
 
 		isInited = true;
 
@@ -798,6 +799,8 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		// Mark meta-data to indicate it can't be changed
 		theNotationPackage.freeze();
 
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(NotationPackage.eNS_URI, theNotationPackage);
 		return theNotationPackage;
 	}
 
