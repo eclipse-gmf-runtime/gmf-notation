@@ -756,19 +756,13 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and
-	 * for any others upon which it depends. Simple dependencies are satisfied by
-	 * calling this method on all dependent packages before doing anything else.
-	 * This method drives initialization for interdependent packages directly, in
-	 * parallel with this package, itself.
+	 * for any others upon which it depends.
+	 *
 	 * <p>
-	 * Of this package and its interdependencies, all packages which have not yet
-	 * been registered by their URI values are first created and registered. The
-	 * packages are then initialized in two steps: meta-model objects for all of the
-	 * packages are created before any are initialized, since one package's
-	 * meta-model objects may refer to those of another.
-	 * <p>
-	 * Invocation of this method will not affect any packages that have already been
-	 * initialized. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * This method is used to initialize {@link NotationPackage#eINSTANCE} when that
+	 * field is accessed. Clients should not invoke it directly. Instead, they
+	 * should simply access that field to obtain the package. <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * 
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
@@ -2895,23 +2889,18 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-
 		initEReference(getEdge_Source(), this.getView(), this.getView_SourceEdges(), "source", null, 1, 1, Edge.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getEdge_Target(), this.getView(), this.getView_TargetEdges(), "target", null, 1, 1, Edge.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getEdge_Bendpoints(), this.getBendpoints(), null, "bendpoints", null, 0, 1, Edge.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getEdge_SourceAnchor(), this.getAnchor(), null, "sourceAnchor", null, 0, 1, Edge.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getEdge_TargetAnchor(), this.getAnchor(), null, "targetAnchor", null, 0, 1, Edge.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2926,7 +2915,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		addEParameter(op, theEcorePackage.getEClass(), "eClass", 0, 1); //$NON-NLS-1$
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
-
 		initEReference(getNode_LayoutConstraint(), this.getLayoutConstraint(), null, "layoutConstraint", null, 0, 1, //$NON-NLS-1$
 				Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2984,7 +2972,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getSortingStyle_SortingKeys(), this.getSortKeyMap(), "sortingKeys", null, 0, 1, //$NON-NLS-1$
 				SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getSortingStyle_SortedObjects(), theEcorePackage.getEObject(), null, "sortedObjects", null, 0, //$NON-NLS-1$
 				-1, SortingStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3057,34 +3044,27 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getView_Mutable(), ecorePackage.getEBoolean(), "mutable", "false", 0, 1, View.class, //$NON-NLS-1$ //$NON-NLS-2$
 				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getView_SourceEdges(), this.getEdge(), this.getEdge_Source(), "sourceEdges", null, 0, -1, //$NON-NLS-1$
 				View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getView_TargetEdges(), this.getEdge(), this.getEdge_Target(), "targetEdges", null, 0, -1, //$NON-NLS-1$
 				View.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getView_PersistedChildren(), this.getNode(), null, "children", null, 0, -1, View.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getView_PersistedChildren(), this.getNode(), null, "children", null, 0, -1, View.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getView_Styles(), this.getStyle(), null, "styles", null, 0, -1, View.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
 		initEReference(getView_Element(), theEcorePackage.getEObject(), null, "element", null, 0, 1, View.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getView_Diagram(), this.getDiagram(), null, "diagram", null, 1, 1, View.class, IS_TRANSIENT, //$NON-NLS-1$
 				IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
 		initEReference(getView_TransientChildren(), this.getNode(), null, "transientChildren", null, 0, -1, View.class, //$NON-NLS-1$
 				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -3114,11 +3094,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getDiagram_MeasurementUnit(), this.getMeasurementUnit(), "measurementUnit", "Himetric", 0, 1, //$NON-NLS-1$ //$NON-NLS-2$
 				Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getDiagram_PersistedEdges(), this.getEdge(), null, "edges", null, 0, -1, Diagram.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getDiagram_TransientEdges(), this.getEdge(), null, "TransientEdges", null, 0, -1, Diagram.class, //$NON-NLS-1$
 				IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -3161,11 +3139,9 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(guideStyleEClass, GuideStyle.class, "GuideStyle", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getGuideStyle_HorizontalGuides(), this.getGuide(), null, "horizontalGuides", null, 0, -1, //$NON-NLS-1$
 				GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getGuideStyle_VerticalGuides(), this.getGuide(), null, "verticalGuides", null, 0, -1, //$NON-NLS-1$
 				GuideStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3173,7 +3149,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEClass(guideEClass, Guide.class, "Guide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getGuide_Position(), ecorePackage.getEInt(), "position", "0", 0, 1, Guide.class, !IS_TRANSIENT, //$NON-NLS-1$ //$NON-NLS-2$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getGuide_NodeMap(), this.getNodeEntry(), null, "nodeMap", null, 0, -1, Guide.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3182,7 +3157,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 				!IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNodeEntry_Value(), this.getAlignment(), "value", "Center", 0, 1, Map.Entry.class, //$NON-NLS-1$ //$NON-NLS-2$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getNodeEntry_Key(), this.getNode(), null, "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, //$NON-NLS-1$
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -3195,7 +3169,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getFilteringStyle_FilteringKeys(), this.getFilterKeyList(), "filteringKeys", null, 0, 1, //$NON-NLS-1$
 				FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getFilteringStyle_FilteredObjects(), theEcorePackage.getEObject(), null, "filteredObjects", null, //$NON-NLS-1$
 				0, -1, FilteringStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3211,21 +3184,18 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getImageStyle_MaintainAspectRatio(), ecorePackage.getEBooleanObject(), "maintainAspectRatio", //$NON-NLS-1$
 				"true", 0, 1, ImageStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, //$NON-NLS-1$
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEReference(getImageStyle_CropBound(), this.getBounds(), null, "cropBound", null, 1, 1, ImageStyle.class, //$NON-NLS-1$
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageBufferStyleEClass, ImageBufferStyle.class, "ImageBufferStyle", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getImageBufferStyle_ImageBuffer(), this.getImage(), null, "imageBuffer", null, 1, 1, //$NON-NLS-1$
 				ImageBufferStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertiesSetStyleEClass, PropertiesSetStyle.class, "PropertiesSetStyle", !IS_ABSTRACT, //$NON-NLS-1$
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getPropertiesSetStyle_PropertiesMap(), this.getStringToPropertyValueMapEntry(), null,
 				"propertiesMap", null, 0, -1, PropertiesSetStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, //$NON-NLS-1$
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3257,7 +3227,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getStringToPropertyValueMapEntry_Key(), theEcorePackage.getEString(), "key", null, 0, 1, //$NON-NLS-1$
 				Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getStringToPropertyValueMapEntry_Value(), this.getPropertyValue(), null, "value", null, 0, 1, //$NON-NLS-1$
 				Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3267,7 +3236,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 		initEAttribute(getPropertyValue_RawValue(), ecorePackage.getEString(), "rawValue", null, 0, 1, //$NON-NLS-1$
 				PropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-
 		initEReference(getPropertyValue_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, //$NON-NLS-1$
 				1, PropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3310,7 +3278,6 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(dataTypeStyleEClass, DataTypeStyle.class, "DataTypeStyle", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getDataTypeStyle_InstanceType(), theEcorePackage.getEDataType(), null, "instanceType", null, 0, //$NON-NLS-1$
 				1, DataTypeStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3359,14 +3326,12 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(eObjectValueStyleEClass, EObjectValueStyle.class, "EObjectValueStyle", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getEObjectValueStyle_EObjectValue(), theEcorePackage.getEObject(), null, "eObjectValue", null, 0, //$NON-NLS-1$
 				1, EObjectValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eObjectListValueStyleEClass, EObjectListValueStyle.class, "EObjectListValueStyle", !IS_ABSTRACT, //$NON-NLS-1$
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getEObjectListValueStyle_EObjectListValue(), theEcorePackage.getEObject(), null,
 				"eObjectListValue", null, 0, -1, EObjectListValueStyle.class, !IS_TRANSIENT, !IS_VOLATILE, //$NON-NLS-1$
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3391,14 +3356,12 @@ public class NotationPackageImpl extends EPackageImpl implements NotationPackage
 
 		initEClass(diagramLinkStyleEClass, DiagramLinkStyle.class, "DiagramLinkStyle", !IS_ABSTRACT, !IS_INTERFACE, //$NON-NLS-1$
 				IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getDiagramLinkStyle_DiagramLink(), this.getDiagram(), null, "diagramLink", null, 0, 1, //$NON-NLS-1$
 				DiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multiDiagramLinkStyleEClass, MultiDiagramLinkStyle.class, "MultiDiagramLinkStyle", !IS_ABSTRACT, //$NON-NLS-1$
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEReference(getMultiDiagramLinkStyle_DiagramLinks(), this.getDiagram(), null, "diagramLinks", null, 0, -1, //$NON-NLS-1$
 				MultiDiagramLinkStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
