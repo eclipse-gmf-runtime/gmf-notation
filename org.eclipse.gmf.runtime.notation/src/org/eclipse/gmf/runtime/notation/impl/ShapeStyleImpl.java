@@ -224,13 +224,17 @@ public class ShapeStyleImpl extends FontStyleImpl implements ShapeStyle {
 		setFontNameGen(newFontName == null ? null : newFontName.intern());
 	}
 
-	public void setFontNameGen(String newFontName) {
-		String oldFontName = fontName;
-		fontName = newFontName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_NAME, oldFontName,
-					fontName));
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setFontNameGen(String newFontName) {
+        String oldFontName = fontName;
+        fontName = newFontName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, NotationPackage.SHAPE_STYLE__FONT_NAME, oldFontName, fontName));
+    }
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
