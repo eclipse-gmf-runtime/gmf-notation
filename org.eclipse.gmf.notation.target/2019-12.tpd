@@ -1,0 +1,25 @@
+target "gmf-notation-2019-12" with source, requirements
+
+location Eclipse-Shared-License "http://download.eclipse.org/cbi/updates/license" {
+    org.eclipse.license.feature.group [2.0.2.v20181016-2210,2.0.2.v20181016-2210]
+}
+
+location Eclipse-4.14 "http://download.eclipse.org/eclipse/updates/4.14/R-4.14-201912100610/" {
+    org.eclipse.sdk.ide [4.14.0.I20191210-0610,4.14.0.I20191210-0610]
+    org.eclipse.test.feature.group [3.7.900.v20191120-0245,3.7.900.v20191120-0245]
+    org.eclipse.sdk.tests.feature.group [4.14.0.v20191210-0610,4.14.0.v20191210-0610]
+    org.eclipse.platform.ide [4.14.0.I20191210-0610,4.14.0.I20191210-0610]
+}
+
+location EMF-2.20 "http://download.eclipse.org/modeling/emf/emf/builds/release/2.20" {
+    org.eclipse.emf.edit.feature.group [2.16.0.v20190920-0401,2.16.0.v20190920-0401]
+    org.eclipse.emf.examples.feature.group [2.17.0.v20191028-0905,2.17.0.v20191028-0905]
+    org.eclipse.emf.sdk.feature.group [2.20.0.v20191028-0905,2.20.0.v20191028-0905]
+    org.eclipse.emf.ecore.edit.feature.group [2.14.0.v20190822-1451,2.14.0.v20190822-1451]
+}
+
+location Orbit-2019-12 "https://download.eclipse.org/tools/orbit/downloads/drops/R20191126223242/repository" {
+    org.hamcrest [1.1.0.v20090501071000,1.1.0.v20090501071000]
+    org.hamcrest.text.source [1.1.0.v20090501071000,1.1.0.v20090501071000]
+    org.hamcrest.text [1.1.0.v20090501071000,1.1.0.v20090501071000]
+}

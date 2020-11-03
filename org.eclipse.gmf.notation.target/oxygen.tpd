@@ -1,4 +1,4 @@
-target "gmf-notation" with source, requirements
+target "gmf-notation-oxygen" with source, requirements
 
 location Eclipse-Shared-License "http://download.eclipse.org/cbi/updates/license" {
     org.eclipse.license.feature.group [2.0.2.v20181016-2210,2.0.2.v20181016-2210]
