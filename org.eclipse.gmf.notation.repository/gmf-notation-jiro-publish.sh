@@ -20,7 +20,7 @@ set -e
 
 export PROJECT_NAME="GMF Notation"
 export PROJECT_PREFIX="org.eclipse.gmf.notation"
-export SSH_ACCOUNT="genie.gmf-runtime@projects-storage.eclipse.org"
+export SSH_ACCOUNT="genie.gmf-runtime@git.eclipse.org"
 
 if [ -z "$JOB_NAME" ]; then
     echo "Error there is no Hudson JOB_NAME defined";
