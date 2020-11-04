@@ -75,7 +75,7 @@ case $buildType in
 esac
 
 message "Publishing as $remoteSite (${buildType}) build"
-remoteUpdateSiteBase="modeling/gmp/gmf-notation/updates/staging/$remoteSite"
+remoteUpdateSiteBase="modeling/gmp/gmf-notation/updates/$remoteSite"
 remoteUpdateSite="/home/data/httpd/download.eclipse.org/$remoteUpdateSiteBase"
 message "Publishing to remote update-site: $remoteUpdateSite"
 
