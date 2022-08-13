@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
-<target name="gmf-notation-next" sequenceNumber="1604388640">
+<target name="gmf-notation-2021-09" sequenceNumber="1655491694">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.license.feature.group" version="2.0.2.v20181016-2210"/>
-      <repository id="Eclipse-Shared-License" location="http://download.eclipse.org/cbi/updates/license"/>
+      <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
+      <repository id="Eclipse-Shared-License" location="https://download.eclipse.org/cbi/updates/license"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
       <unit id="org.eclipse.test.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.sdk.tests.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.platform.ide" version="0.0.0"/>
-      <repository id="Eclipse-I" location="https://download.eclipse.org/eclipse/updates/I-builds/"/>
+      <repository id="Eclipse-4.21" location="https://download.eclipse.org/eclipse/updates/4.21/R-4.21-202109060500/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.edit.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.examples.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.ecore.edit.feature.group" version="0.0.0"/>
-      <repository id="EMF-M" location="http://download.eclipse.org/modeling/emf/emf/builds/milestone/latest"/>
+      <repository id="EMF-2.27" location="https://download.eclipse.org/modeling/emf/emf/builds/release/2.27"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
-      <unit id="org.hamcrest.text.source" version="1.1.0.v20090501071000"/>
       <unit id="org.hamcrest.text" version="1.1.0.v20090501071000"/>
-      <repository id="Orbit-I" location="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+      <unit id="org.hamcrest.text.source" version="1.1.0.v20090501071000"/>
+      <repository id="Orbit-2021-09" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository/"/>
     </location>
   </locations>
 </target>
