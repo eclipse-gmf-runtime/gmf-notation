@@ -20,11 +20,5 @@
       <unit id="org.eclipse.emf.ecore.edit.feature.group" version="0.0.0"/>
       <repository id="EMF-2.27" location="https://download.eclipse.org/modeling/emf/emf/builds/release/2.27"/>
     </location>
-    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
-      <unit id="org.hamcrest.text" version="1.1.0.v20090501071000"/>
-      <unit id="org.hamcrest.text.source" version="1.1.0.v20090501071000"/>
-      <repository id="Orbit-2021-09" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository/"/>
-    </location>
   </locations>
 </target>
