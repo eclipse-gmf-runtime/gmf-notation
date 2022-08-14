@@ -49,6 +49,21 @@ Update Sites (p2 repositories) are available at:
 * <https://download.eclipse.org/modeling/gmp/gmf-notation/updates/milestones>: milestone builds
 * <https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases>: official releases
 
+| Version | Repository URL                                                                        |
+|:--------|:--------------------------------------------------------------------------------------|
+| 1.7.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201306101425 |
+| 1.8.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201405281433 |
+| 1.9.0   | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201505312221 |
+| 1.10.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201606071631 |
+| 1.11.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201706061354 |
+| 1.12.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201805221301 |
+| 1.13.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913 |
+
 ### License
 
 [Eclipse Public License 2.0](https://www.eclipse.org/legal/epl-2.0/)
