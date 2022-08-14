@@ -10,6 +10,13 @@ This repository contains the EMF-based Notation metamodel which is used by GMF R
 
 * Clone: https://github.com/eclipse/gmf-notation
 
+### Requirements
+
+* Java 8 (will probably move to Java 11 soon to be more consistent with GMF Runtime).
+* Eclipse 2020-09 (Eclipse Platform 4.17, EMF 2.23) or later.
+
+The general rule is to stay compatible with the current Java LTS version and the previous one, and about 2 years old Eclipse versions, as long as it does not create too much maintenance burden.
+
 ### Issues
 
 Issues are tracked in the Eclipse Bugzilla under the _GMF-Runtime_ product:
@@ -30,7 +37,10 @@ For example:
 
 ### CI
 
-The official builds are executed on the Eclipse-provided Jenkins instance at <https://ci.eclipse.org/gmf-runtime/job/gmf-notation-master/>
+The official builds are executed on the Eclipse-provided Jenkins instance at <https://ci.eclipse.org/gmf-runtime/> (shared with [GMF Runtime](https://github.com/eclipse/gmf-runtime)).
+The two jobs which convern GMF Notation are:
+* <https://ci.eclipse.org/gmf-runtime/job/gmf-notation-all/>: build and run the tests against all supported target platforms, including a "canary" one which depends on the latest nightlies of all dependencies. The results are not published, the job is only there to check compatibility with different versions of Eclipse.
+* <https://ci.eclipse.org/gmf-runtime/job/gmf-notation/>: build and run the tests against the "reference" target platform (typically the oldest of the supported ones) and publishes the result (as an **I**nterim, **M**ilestone or **R**elease depending on how the job was launched.
 
 ### Update Sites
 
