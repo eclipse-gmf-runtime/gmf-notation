@@ -19,4 +19,3 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Eclipse-ExtensibleAPI: true
 Bundle-ClassPath: .
-Automatic-Module-Name: org.eclipse.gmf.runtime.notation
