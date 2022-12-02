@@ -28,7 +28,7 @@ Issues are tracked in the Eclipse Bugzilla under the _GMF-Runtime_ product:
 From the top-level directory:
 
     mvn clean verify
-    
+
 You can build against a specific Target Platform using `-Dplatform=$PLATFORM_NAME`.
 The supported platforms are available in the `org.eclipse.gmf.runtime.target` directory.
 For example:
@@ -63,6 +63,7 @@ Update Sites (p2 repositories) are available at:
 | 1.11.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201706061354 |
 | 1.12.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R201805221301 |
 | 1.13.0  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913 |
+| 1.13.1  | https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202211151334 |
 
 ### License
 
