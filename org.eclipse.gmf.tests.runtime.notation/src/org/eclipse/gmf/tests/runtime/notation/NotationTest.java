@@ -129,7 +129,6 @@ public class NotationTest extends TestCase {
 
 		// Add a style to the test notation model.
 		ShapeStyle style = NotationFactory.eINSTANCE.createShapeStyle();
-		@SuppressWarnings("unchecked")
 		EList<Style> styles = diagram.getStyles();
 		styles.add(style);
 
@@ -233,7 +232,6 @@ public class NotationTest extends TestCase {
 		assertSame(rawValuesList, rawValuesList2);
 	}
 
-	@SuppressWarnings("unchecked")
 	public void test_ViewImpl_getElement() throws Exception {
 		String fullPath1 = "/" + getTestProjectName() + "/test1.notation";
 		String fullPath2 = "/" + getTestProjectName() + "/test2.ecore";
