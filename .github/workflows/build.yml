@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          cache: 'maven'
+      - name: Setup Display
+        run: |
+          sudo apt-get install mutter dbus-x11
+          dbus-launch --auto-syntax > dbus-env
+          . dbus-env
+          mutter --no-x11 --headless --virtual-monitor 1920x1080 &
+      - name: Build
+        run: ./mvnw -B -ntp clean verify
