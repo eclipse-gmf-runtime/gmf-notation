@@ -92,7 +92,7 @@ if [ ! -d "eclipse" ]; then
 fi
 # Prepare Eclipse SDK to provide WTP releng tools (used to postprocess repository, i.e set p2.mirrorsURL property)
 echo "`date +%Y-%m-%d-%H:%M:%S` Installing WTP Releng tools"
-./eclipse/eclipse -nosplash --launcher.suppressErrors -clean -debug -application org.eclipse.equinox.p2.director -repository http://download.eclipse.org/webtools/releng/repository/ -installIUs org.eclipse.wtp.releng.tools.feature.feature.group
+./eclipse/eclipse -nosplash --launcher.suppressErrors -clean -debug -application org.eclipse.equinox.p2.director -repository https://download.eclipse.org/webtools/releng/repository/ -installIUs org.eclipse.wtp.releng.tools.feature.feature.group
 # Clean up
 rm eclipse-SDK-4.12-linux-gtk-x86_64.tar.gz
 
