@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.gmf.runtime.notation.edit; singleton:=true
 Automatic-Module-Name: org.eclipse.gmf.runtime.notation.edit
-Bundle-Version: 1.8.0.qualifier
+Bundle-Version: 1.8.1.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.gmf.runtime.notation.NotationEditPlugin$Implementation
 Bundle-Vendor: %providerName

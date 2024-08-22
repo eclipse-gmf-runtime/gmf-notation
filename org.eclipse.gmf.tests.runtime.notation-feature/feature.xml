@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.gmf.tests.runtime.notation"
       label="%featureName"
-      version="1.13.1.qualifier"
+      version="1.13.2.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmf.tests.runtime.notation"
       image="modeling32.png"
@@ -31,7 +31,7 @@ SPDX-License-Identifier: EPL-2.0
    </url>
 
    <requires>
-      <import feature="org.eclipse.gmf.runtime.notation" version="1.8.0" match="compatible"/>
+      <import feature="org.eclipse.gmf.runtime.notation" version="1.8.1" match="compatible"/>
    </requires>
 
    <plugin
