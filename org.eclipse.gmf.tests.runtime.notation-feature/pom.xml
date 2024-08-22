@@ -5,11 +5,10 @@
   <parent>
     <groupId>org.eclipse.gmf.notation</groupId>
     <artifactId>org.eclipse.gmf.notation.releng</artifactId>
-    <version>1.13.1-SNAPSHOT</version>
+    <version>1.13.2-SNAPSHOT</version>
     <relativePath>../org.eclipse.gmf.notation.releng/pom.xml</relativePath>
   </parent>
   <groupId>org.eclipse.gmf.notation.features</groupId>
   <artifactId>org.eclipse.gmf.tests.runtime.notation</artifactId>
-  <version>1.13.1-SNAPSHOT</version>
   <packaging>eclipse-feature</packaging>
 </project>
