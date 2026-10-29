@@ -13,7 +13,7 @@
 	<properties>
 		<tycho-version>5.0.4</tycho-version>
 		<cbi-plugins.version>1.5.2</cbi-plugins.version>
-		<platform>2025-03</platform>
+		<platform>2025-06</platform>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tycho.scmUrl>
 			scm:git:https://github.com/eclipse-gmf-runtime/gmf-notation.git</tycho.scmUrl>
