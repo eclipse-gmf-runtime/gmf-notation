@@ -12,8 +12,12 @@
 
 package org.eclipse.gmf.tests.runtime.notation;
 
-import static org.junit.Assume.assumeFalse;
-import static org.junit.Assume.assumeTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -47,36 +51,23 @@ import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-import junit.textui.TestRunner;
 
 /**
  * A minimal smoke test to verify that the GMF Notation build works.
  * 
  * @author Anthony Hunter
  */
-public class NotationTest extends TestCase {
+public class NotationTest {
 
-	public static void main(String[] args) {
-		TestRunner.run(suite());
-	}
+	private String testName;
 
-	public static Test suite() {
-		return new TestSuite(NotationTest.class);
-	}
-
-	public NotationTest(String name) {
-		super(name);
-	}
-
-	
-	
-	@Override
-	protected void setUp() throws Exception {
-		super.setUp();
+	@BeforeEach
+	void setUp(TestInfo testInfo) {
+		testName = testInfo.getTestMethod().get().getName();
 
 		// Close the annoying "Welcome to Eclipse" view.
 		IWorkbenchPage[] pages = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getPages();
@@ -90,7 +81,7 @@ public class NotationTest extends TestCase {
 	}
 
 	private IProject getTestProject() throws CoreException {
-		String projectName = getName();
+		String projectName = testName;
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
 		if (!project.exists()) {
 			project.create(null);
@@ -112,6 +103,7 @@ public class NotationTest extends TestCase {
 	 * 
 	 * @throws Exception
 	 */
+	@Test
 	public void test_notation() throws Exception {
 		IProject project = getTestProject();
 
@@ -124,7 +116,7 @@ public class NotationTest extends TestCase {
 
 		// Create the diagram in the test notation model.
 		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
-		diagram.setName(getName());
+		diagram.setName(testName);
 		resource.getContents().add(diagram);
 
 		// Add a style to the test notation model.
@@ -144,18 +136,19 @@ public class NotationTest extends TestCase {
 
 		// Open the new file in a text editor.
 		IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-		assertNotNull("Workbench page is null", page);
-		assertNotNull("Workspace file is null", file);
+		assertNotNull(page, "Workbench page is null");
+		assertNotNull(file, "Workspace file is null");
 		IEditorDescriptor defaultEditor = PlatformUI.getWorkbench().getEditorRegistry()
 				.findEditor("org.eclipse.ui.DefaultTextEditor");
-		assertNotNull("Default Editor is null", defaultEditor);
+		assertNotNull(defaultEditor, "Default Editor is null");
 		page.openEditor(new FileEditorInput(file), defaultEditor.getId());
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Test
 	public void test_ListValueStyleImpl_getRawValuesList() throws Exception {
 		ListValueStyle listValueStyle = NotationFactory.eINSTANCE.createListValueStyle();
-		listValueStyle.setName(getName());
+		listValueStyle.setName(testName);
 		
 		EList rawValuesList = listValueStyle.getRawValuesList();
 	
@@ -232,6 +225,7 @@ public class NotationTest extends TestCase {
 		assertSame(rawValuesList, rawValuesList2);
 	}
 
+	@Test
 	public void test_ViewImpl_getElement() throws Exception {
 		String fullPath1 = "/" + getTestProjectName() + "/test1.notation";
 		String fullPath2 = "/" + getTestProjectName() + "/test2.ecore";
@@ -245,7 +239,7 @@ public class NotationTest extends TestCase {
 		// ===========================================
 		
 		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
-		diagram.setName(getName());
+		diagram.setName(testName);
 		resource1.getContents().add(diagram);
 
 		Node node = NotationFactory.eINSTANCE.createNode();
