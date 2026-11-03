@@ -20,8 +20,7 @@
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<testSuite>org.eclipse.gmf.tests.runtime.notation</testSuite>
-					<testClass>org.eclipse.gmf.tests.runtime.notation.AllTests</testClass>
+					<providerHint>junit5</providerHint>
 					<useUIHarness>true</useUIHarness>
 					<useUIThread>true</useUIThread>
 					<argLine>-ea -Xmx1024m</argLine>
