@@ -1,0 +1,37 @@
+name: Generate and ingest SBOM into sbom.eclipse.org
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Setup Java
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: 'temurin'
+          java-version: 25
+          cache: 'maven'
+      - name: Build
+        id: build
+        run: |
+          ./mvnw -B -ntp -DskipTests -Dplatform=2026-09 -Psbom clean package
+          VERSION=$(./mvnw -q help:evaluate -Dexpression=project.version -DforceStdout 2> /dev/null | sed -e 's/-SNAPSHOT//')
+          if [[ "$GITHUB_REF_TYPE" != "tag" ]]; then
+            VERSION="${VERSION}@dev"
+          fi
+          echo "PROJECT_VERSION=$VERSION" >> $GITHUB_OUTPUT
+          mv org.eclipse.gmf.notation.repository/target/bom.json gmf-notation-bom.json
+      - name: Upload sbom
+        uses: eclipse-csi/workflows/upload-sbom@3d34535001cf5d48ba1e763e9b2a6fa79013d4d5 # main
+        with:
+          sbom-file: gmf-notation-bom.json
+          product-name: 'gmf-notation'
+          product-version: ${{ steps.build.outputs.PROJECT_VERSION }}
